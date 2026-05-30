@@ -55,6 +55,11 @@ switch kind
         data.groups = ["Baseline", "Method A", "Method B", "Method C"];
         data.series = ["Dataset 1", "Dataset 2", "Dataset 3"];
 
+    case "waffle"
+        data.labels = ["Completed", "In progress", "Queued", "Blocked"];
+        data.counts = [42 27 19 12];
+        data.colors = sftPalette('main', numel(data.counts));
+
     case "positive_negative_area"
         x = linspace(0, 18, 160);
         y = 0.38 * sin(0.75 * x) + 0.18 * cos(1.65 * x + 0.4) ...

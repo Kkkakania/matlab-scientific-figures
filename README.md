@@ -11,7 +11,7 @@ PDF from the same script.
 
 ## Gallery
 
-The gallery currently contains 16 examples.
+The gallery currently contains 17 examples.
 
 <table>
   <tr>
@@ -26,15 +26,21 @@ The gallery currently contains 16 examples.
     <td><img src="gallery/positive_negative_area.png" width="210" alt="Positive-negative area"><br>Signed area</td>
     <td><img src="gallery/lollipop_ranking.png" width="210" alt="Lollipop ranking"><br>Lollipop ranking</td>
   </tr>
+  <tr>
+    <td><img src="gallery/waffle_chart.png" width="210" alt="Waffle chart"><br>Waffle chart</td>
+    <td><img src="gallery/grouped_bar.png" width="210" alt="Grouped bar"><br>Grouped bar</td>
+    <td><img src="gallery/box_jitter.png" width="210" alt="Box plot with jitter"><br>Box + jitter</td>
+    <td><img src="gallery/surface_3d.png" width="210" alt="3D surface"><br>3D surface</td>
+  </tr>
 </table>
 
 Run `runAllExamples` to generate all previews locally.
 
 The full gallery includes line plots, confidence intervals, scatter plots,
-density scatter plots, grouped bars, error bars, signed area charts, heatmaps,
-double-triangle heatmaps, zoomed inset lines, correlation bubbles, bubble
-matrices, box plots with jittered observations, lollipop rankings, multi-panel
-layouts, and 3D surfaces.
+density scatter plots, grouped bars, error bars, waffle charts, signed area
+charts, heatmaps, double-triangle heatmaps, zoomed inset lines, correlation
+bubbles, bubble matrices, box plots with jittered observations, lollipop
+rankings, multi-panel layouts, and 3D surfaces.
 
 ## Quick Start
 

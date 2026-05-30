@@ -95,6 +95,16 @@ verifyEqual(testCase, numel(data.groups), size(data.values, 1));
 verifyEqual(testCase, numel(data.series), size(data.values, 2));
 end
 
+function testWaffleDataUsesHundredCells(testCase)
+data = sftExampleData('waffle');
+
+verifyEqual(testCase, sum(data.counts), 100);
+verifyEqual(testCase, numel(data.labels), numel(data.counts));
+verifyEqual(testCase, size(data.colors, 1), numel(data.counts));
+verifyEqual(testCase, size(data.colors, 2), 3);
+verifyTrue(testCase, all(data.counts > 0));
+end
+
 function testExportCreatesRequestedFiles(testCase)
 outDir = fullfile(tempdir, 'sft-core-test');
 if exist(outDir, 'dir')

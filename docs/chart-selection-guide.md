@@ -11,6 +11,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show dense relationship | `density_scatter` | Many points overlap and local density matters |
 | Compare methods | `grouped_bar` | A few methods are compared across a few metrics |
 | Compare methods with uncertainty | `grouped_error_bar` | Group means need visible uncertainty or variability |
+| Show composition | `waffle_chart` | Percent shares or progress counts should be compact and countable |
 | Show matrix pattern | `heatmap` | Pairwise relations or sample-by-feature values matter |
 | Show correlation strength | `correlation_bubble` | Positive and negative pairwise correlations both matter |
 | Compare two matrices | `double_triangle_heatmap` | Two methods or conditions share the same pairwise layout |
@@ -26,3 +27,11 @@ Choose the figure by the communication task first, not by decoration.
 The first release intentionally avoids specialized maps, flow diagrams, and
 domain-specific templates. Those should be added only after the core rendering,
 testing, and provenance workflow is stable.
+
+## Waffle Charts Versus Pie Charts
+
+Use `waffle_chart` when the audience needs to compare a small number of
+percentage shares and the countable 10 x 10 grid adds clarity. A waffle chart is
+often easier to scan than a pie chart when the parts are close in size, but it
+is not a good fit for many tiny categories or values that do not naturally sum
+to a meaningful whole.

@@ -11,6 +11,7 @@ expected=(
   density_scatter
   grouped_bar
   grouped_error_bar
+  waffle_chart
   positive_negative_area
   heatmap
   correlation_bubble

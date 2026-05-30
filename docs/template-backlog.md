@@ -16,6 +16,7 @@ choice of chart type, but source files are not copied into the repo.
 | Uncertainty band | `confidence_interval` |
 | Dense x-y relationship | `density_scatter` |
 | Method comparison | `grouped_bar`, `grouped_error_bar` |
+| Composition | `waffle_chart` |
 | Matrix values | `heatmap`, `bubble_matrix` |
 | Correlation matrix | `correlation_bubble`, `double_triangle_heatmap` |
 | Distribution comparison | `box_jitter` |
@@ -29,7 +30,6 @@ choice of chart type, but source files are not copied into the repo.
 | Priority | Template | Why it is useful |
 |---|---|---|
 | High | Butterfly comparison | Good for two-sided before/after or group A/B comparisons |
-| High | Waffle chart | Clean way to show composition without overusing pie charts |
 | Medium | Ridgeline plot | Compact distribution comparison across many groups |
 | Medium | Parallel coordinates | Useful for multivariate samples and model comparison |
 | Medium | Radar chart | Good for a small number of normalized metrics |

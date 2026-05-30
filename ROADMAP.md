@@ -28,7 +28,6 @@ Quality goals:
 Candidates that need careful design before inclusion:
 
 - Butterfly comparison for two-sided group comparison.
-- Waffle chart for compact composition summaries.
 - Ridge plot for distribution comparison.
 - Radar chart for small metric sets.
 - Parallel coordinates for multivariate samples.

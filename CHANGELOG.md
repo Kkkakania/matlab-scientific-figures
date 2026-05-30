@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-- Planned: high-value clean-room templates tracked in the public issue backlog.
+- Add waffle chart example, deterministic composition data, gallery output,
+  tests, and chart-selection guidance.
 
 ## v0.3.0 - 2026-05-30
 

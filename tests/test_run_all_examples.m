@@ -8,7 +8,7 @@ addpath(genpath(fullfile(projectRoot, 'src')));
 addpath(genpath(fullfile(projectRoot, 'examples')));
 end
 
-function testRunAllExamplesCreatesSixteenPngFiles(testCase)
+function testRunAllExamplesCreatesSeventeenPngFiles(testCase)
 outDir = fullfile(tempdir, 'sft-gallery-test');
 if exist(outDir, 'dir')
     rmdir(outDir, 's');
@@ -17,8 +17,9 @@ end
 result = runAllExamples(outDir, ["png"]);
 pngFiles = dir(fullfile(outDir, '*.png'));
 
-verifyEqual(testCase, numel(result), 16);
-verifyEqual(testCase, numel(pngFiles), 16);
+verifyEqual(testCase, numel(result), 17);
+verifyEqual(testCase, numel(pngFiles), 17);
+verifyTrue(testCase, isfile(fullfile(outDir, 'waffle_chart.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'correlation_bubble.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'double_triangle_heatmap.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'zoomed_inset_line.png')));
@@ -36,8 +37,9 @@ end
 
 report = sftGalleryReport(outDir, ["png"]);
 
-verifyEqual(testCase, height(report), 16);
+verifyEqual(testCase, height(report), 17);
 verifyTrue(testCase, all(report.Passed));
+verifyTrue(testCase, any(report.Example == "waffle_chart"));
 verifyTrue(testCase, any(report.Example == "double_triangle_heatmap"));
 verifyTrue(testCase, any(report.Example == "zoomed_inset_line"));
 verifyTrue(testCase, any(report.Example == "multi_panel_overview"));

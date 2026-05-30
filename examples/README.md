@@ -14,6 +14,7 @@ designed for headless batch rendering through `runAllExamples`.
 | `density_scatter` | `renderDensityScatter` | Show dense point clouds without overplotting |
 | `grouped_bar` | `renderGroupedBar` | Compare methods across a few metrics |
 | `grouped_error_bar` | `renderGroupedErrorBar` | Compare methods with uncertainty bars |
+| `waffle_chart` | `renderWaffleChart` | Show composition or progress as countable cells |
 | `positive_negative_area` | `renderPositiveNegativeArea` | Show signed change around a baseline |
 | `heatmap` | `renderHeatmap` | Show a matrix pattern |
 | `correlation_bubble` | `renderCorrelationBubble` | Show positive and negative pairwise correlations |
