@@ -16,6 +16,8 @@
   historical snapshots rather than the current project state.
 - Add chart-selection guidance comparing box jitter with ridgelines and radar
   charts with parallel coordinates.
+- Add a timeout-helper regression check and wire it into local and GitHub
+  quality gates.
 
 ## v3.2.0 - 2026-05-30
 

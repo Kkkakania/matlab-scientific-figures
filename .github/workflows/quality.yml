@@ -23,6 +23,9 @@ jobs:
       - name: Check documentation links
         run: ./scripts/check_docs_links.sh
 
+      - name: Check timeout helper
+        run: ./scripts/check_timeout_helper.sh
+
       - name: Check forbidden public files
         run: ./scripts/check_forbidden_files.sh
 
