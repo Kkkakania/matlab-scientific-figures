@@ -29,6 +29,7 @@ run_step "gallery outputs" ./scripts/check_gallery_outputs.sh
 run_step "gallery metadata consistency" ./scripts/check_gallery_consistency.sh
 run_step "version metadata consistency" ./scripts/check_version_consistency.sh
 run_step "documentation links" ./scripts/check_docs_links.sh
+run_step "README gallery preview" ./scripts/check_readme_gallery.sh
 run_step "timeout helper" ./scripts/check_timeout_helper.sh
 run_step "forbidden file scan" ./scripts/check_forbidden_files.sh
 run_step "privacy scan" ./scripts/check_privacy.sh
