@@ -163,6 +163,18 @@ verifyEqual(testCase, days(diff(data.table.Date(1:2))), 1);
 verifyGreaterThan(testCase, max(data.table.Value), min(data.table.Value));
 end
 
+function testPairedSlopegraphDataHasMatchedBeforeAfterValues(testCase)
+data = sftExampleData('paired_slopegraph');
+
+verifyEqual(testCase, numel(data.labels), numel(data.before));
+verifyEqual(testCase, numel(data.labels), numel(data.after));
+verifyTrue(testCase, all(isfinite(data.before)));
+verifyTrue(testCase, all(isfinite(data.after)));
+verifyGreaterThan(testCase, max(abs(data.after - data.before)), 0);
+verifyGreaterThan(testCase, strlength(data.beforeLabel), 0);
+verifyGreaterThan(testCase, strlength(data.afterLabel), 0);
+end
+
 function testContourScatterDataHasDensePairedCoordinates(testCase)
 data = sftExampleData('contour_scatter');
 
@@ -176,12 +188,13 @@ function testTemplateRegistryDefinesGalleryExamples(testCase)
 registry = sftTemplateRegistry();
 names = string({registry.Name}).';
 
-verifyEqual(testCase, numel(registry), 24);
+verifyEqual(testCase, numel(registry), 25);
 verifyEqual(testCase, numel(unique(names)), numel(names));
 verifyTrue(testCase, any(names == "contour_scatter"));
 verifyTrue(testCase, any(names == "parallel_coordinates"));
 verifyTrue(testCase, any(names == "sankey_flow"));
 verifyTrue(testCase, any(names == "calendar_heatmap"));
+verifyTrue(testCase, any(names == "paired_slopegraph"));
 verifyTrue(testCase, all(arrayfun(@(item) isa(item.Renderer, 'function_handle'), registry)));
 verifyTrue(testCase, all(arrayfun(@(item) strlength(item.Task) > 0, registry)));
 verifyTrue(testCase, all(arrayfun(@(item) ~isempty(item.Tags), registry)));
@@ -218,7 +231,7 @@ end
 function testTemplateManifestIncludesFilesAndTags(testCase)
 manifest = sftTemplateManifest();
 
-verifyEqual(testCase, numel(manifest), 24);
+verifyEqual(testCase, numel(manifest), 25);
 verifyTrue(testCase, isfield(manifest, 'Name'));
 verifyTrue(testCase, isfield(manifest, 'RendererName'));
 verifyTrue(testCase, isfield(manifest, 'ExampleFile'));

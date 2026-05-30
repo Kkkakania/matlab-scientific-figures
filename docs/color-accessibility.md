@@ -27,6 +27,7 @@ thumbnails.
 | `grouped_bar` | Medium | Series rely on hue; legend and grouped position reduce risk. |
 | `grouped_error_bar` | Medium | Series rely on hue; grouped position and error bars help. |
 | `butterfly_comparison` | Low | Side and direction encode the main distinction; color is secondary. |
+| `paired_slopegraph` | Low | Direction, slope, labels, and endpoint position carry the comparison. |
 | `waffle_chart` | Medium | Category shares rely on hue and legend; keep category count small. |
 | `sankey_flow` | Medium | Flow thickness carries magnitude, but node color and direct labels need review. |
 | `ridgeline_plot` | Medium | Group color helps, but vertical position and labels carry the comparison. |

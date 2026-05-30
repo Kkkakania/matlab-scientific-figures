@@ -2,7 +2,12 @@
 
 ## Unreleased
 
+- No changes yet.
+
+## v3.4.0 - 2026-05-31
+
 - Add a clean-room `calendar_heatmap` template for daily values over weeks.
+- Add a clean-room `paired_slopegraph` template for before-after comparisons.
 
 ## v3.3.0 - 2026-05-31
 

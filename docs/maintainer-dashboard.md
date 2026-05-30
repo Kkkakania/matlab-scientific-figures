@@ -6,8 +6,8 @@ scope, and where feedback should go.
 
 ## Current Public State
 
-- Current released line: `v3.3.0`.
-- Main branch gallery: 24 clean-room examples with committed PNG and SVG
+- Current released line: `v3.4.0`.
+- Main branch gallery: 25 clean-room examples with committed PNG and SVG
   outputs.
 - Companion CI tool: `matlab-figure-ci` is dogfooded at `v2.4.5`.
 - MATLAB rendering in GitHub Actions: disabled by default because public

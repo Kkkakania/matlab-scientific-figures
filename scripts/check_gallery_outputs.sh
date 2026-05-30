@@ -13,6 +13,7 @@ expected=(
   grouped_bar
   grouped_error_bar
   butterfly_comparison
+  paired_slopegraph
   waffle_chart
   sankey_flow
   positive_negative_area

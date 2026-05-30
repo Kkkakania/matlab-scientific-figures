@@ -14,6 +14,7 @@ Choose the figure by the communication task first, not by decoration.
 | Compare methods | `grouped_bar` | A few methods are compared across a few metrics |
 | Compare methods with uncertainty | `grouped_error_bar` | Group means need visible uncertainty or variability |
 | Compare two sides | `butterfly_comparison` | Two groups should be read from a shared zero baseline |
+| Compare paired change | `paired_slopegraph` | The same items are measured before and after a change |
 | Show composition | `waffle_chart` | Percent shares or progress counts should be compact and countable |
 | Show flow structure | `sankey_flow` | Weighted movement across stages needs direct labels |
 | Show matrix pattern | `heatmap` | Pairwise relations or sample-by-feature values matter |
@@ -64,6 +65,13 @@ Use `butterfly_comparison` when the contrast between two sides matters more
 than their absolute positions in separate panels. Keep the left and right
 values positive in the input data; the renderer mirrors the left side around
 zero so the sign convention is visible without changing the underlying values.
+
+## Paired Slopegraphs
+
+Use `paired_slopegraph` when each item appears in both conditions and the
+direction of change is the story. It is a better fit than grouped bars when the
+pairing matters more than the absolute rank, but it should stay small enough
+for direct labels to remain readable.
 
 ## Box Jitter Versus Ridgeline
 

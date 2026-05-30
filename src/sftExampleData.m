@@ -161,6 +161,14 @@ switch kind
         data.weekLabels = "W" + string(1:12);
         data.dayLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
+    case "paired_slopegraph"
+        data.labels = ["Efficiency", "Reliability", "Response time", ...
+            "Coverage", "Safety", "Maintainability", "Setup effort"];
+        data.before = [0.62 0.71 0.78 0.66 0.74 0.57 0.52];
+        data.after = [0.78 0.83 0.64 0.72 0.82 0.69 0.46];
+        data.beforeLabel = "Baseline";
+        data.afterLabel = "Updated";
+
     case "heatmap"
         m = randn(10, 10);
         data.matrix = corr(m + linspace(-1, 1, 10));

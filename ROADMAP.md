@@ -5,11 +5,10 @@ It should agree with README, CHANGELOG, and GitHub releases.
 
 ## Current State
 
-- Current public release: `v3.3.0`.
+- Current public release: `v3.4.0`.
 - Maturity: early public project; the gallery is usable, but adoption claims
   should stay conservative until real external use appears.
-- Gallery size on `main`: 24 clean-room templates. The current public release
-  `v3.3.0` shipped 23 templates.
+- Gallery size: 25 clean-room templates.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
   privacy/provenance scans, and figure-quality CI.
 - Companion checker: `matlab-figure-ci` is dogfooded through
@@ -74,6 +73,17 @@ Delivered:
 - Chart-selection, color-accessibility, gallery, template, manifest, and
   backlog documentation updates.
 - MATLAB tests and gallery checks covering the 23-template gallery.
+
+### v3.4.0: Calendar And Paired Comparison Templates
+
+Delivered:
+
+- `calendar_heatmap` clean-room synthetic daily data and renderer.
+- `paired_slopegraph` clean-room synthetic before-after data and renderer.
+- Committed PNG/SVG gallery outputs for both templates.
+- Chart-selection, color-accessibility, gallery, template, manifest, dashboard,
+  backlog, and dogfooding configuration updates.
+- MATLAB tests and gallery checks covering the 25-template gallery.
 
 ## Next Candidates
 

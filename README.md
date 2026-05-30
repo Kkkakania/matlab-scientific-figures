@@ -48,8 +48,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ma
 
 ## Gallery
 
-The gallery on `main` contains 24 examples. These 8 are a quick scan of the
-range.
+The gallery contains 25 examples. These 8 are a quick scan of the range.
 
 <table>
   <tr>
@@ -59,7 +58,7 @@ range.
     <td><img src="gallery/parallel_coordinates.png" width="210" alt="Parallel coordinates"><br>Parallel coordinates</td>
   </tr>
   <tr>
-    <td><img src="gallery/grouped_error_bar.png" width="210" alt="Grouped error bar"><br>Grouped error bar</td>
+    <td><img src="gallery/paired_slopegraph.png" width="210" alt="Paired slopegraph"><br>Paired slopegraph</td>
     <td><img src="gallery/ridgeline_plot.png" width="210" alt="Ridgeline plot"><br>Ridgeline plot</td>
     <td><img src="gallery/calendar_heatmap.png" width="210" alt="Calendar heatmap"><br>Calendar heatmap</td>
     <td><img src="gallery/double_triangle_heatmap.png" width="210" alt="Double-triangle heatmap"><br>Double-triangle heatmap</td>
@@ -70,11 +69,11 @@ Run `runAllExamples` to regenerate the full gallery locally.
 
 The full gallery includes line plots, confidence intervals, scatter plots,
 density scatter plots, contour scatter plots, grouped bars, error bars,
-butterfly comparisons, waffle charts, ridgeline plots, signed area charts,
-heatmaps, double-triangle heatmaps, zoomed inset lines, correlation bubbles,
-bubble matrices, calendar heatmaps, box plots with jittered observations, radar
-charts, lollipop rankings, Sankey-style flows, multi-panel layouts, parallel
-coordinates, and 3D surfaces.
+butterfly comparisons, paired slopegraphs, waffle charts, ridgeline plots,
+signed area charts, heatmaps, double-triangle heatmaps, zoomed inset lines,
+correlation bubbles, bubble matrices, calendar heatmaps, box plots with
+jittered observations, radar charts, lollipop rankings, Sankey-style flows,
+multi-panel layouts, parallel coordinates, and 3D surfaces.
 
 ## Quick Start
 
@@ -217,7 +216,7 @@ through CI artifacts without blocking gallery checks.
 
 ## Project Status
 
-Current public release: `v3.3.0`.
+Current public release: `v3.4.0`.
 
 Project maturity: early public project. The examples, CLI workflow, and checks
 are usable today, but the repository is still collecting feedback before

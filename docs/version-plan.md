@@ -6,8 +6,8 @@ together.
 
 ## Current State
 
-- `v3.3.0` is the current release.
-- The gallery has 24 examples on `main`.
+- `v3.4.0` is the current release.
+- The gallery has 25 examples.
 - Open work is tracked in GitHub issues and milestones.
 - Future tags should follow `docs/release-cadence.md`; small maintenance
   changes can land on `main` without a release.
@@ -127,5 +127,26 @@ Delivered changes:
 Release conditions:
 
 - MATLAB-enabled release gate passes locally.
-- `mfigci` dogfooding checks pass locally and in GitHub Actions.
+- Figure-quality dogfooding checks pass in GitHub Actions.
 - GitHub issue #16 is closed with implementation and verification notes.
+
+## v3.4.0 Released
+
+Goal: add compact daily-pattern and before-after comparison templates without
+changing the public API.
+
+Delivered changes:
+
+- `calendar_heatmap` synthetic daily data and a clean-room MATLAB renderer.
+- `paired_slopegraph` synthetic before-after data and a clean-room MATLAB
+  renderer.
+- Committed PNG/SVG gallery outputs for the new templates.
+- Gallery, template, chart-selection, color-accessibility, backlog, manifest,
+  README, dashboard, and dogfooding configuration updates.
+- MATLAB tests covering the 25-template registry, manifest, gallery report,
+  calendar data shape, and paired before-after data shape.
+
+Release conditions:
+
+- MATLAB-enabled release gate passes locally.
+- `mfigci` dogfooding checks pass locally and in GitHub Actions.
