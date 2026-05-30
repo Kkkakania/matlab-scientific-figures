@@ -22,6 +22,27 @@ files = sftExport(gcf, fullfile('outputs', 'my_figure'), ["png", "svg"]);
 PNG is convenient for quick review. SVG is better when the figure needs to stay
 sharp in slides, docs, or web pages.
 
+## Render One Example Only
+
+When you are adapting one chart type, call its renderer directly instead of
+running the whole gallery.
+
+```matlab
+addpath(genpath('src'));
+addpath(genpath('examples'));
+
+renderButterflyComparison('gallery', ["png", "svg"]);
+renderZoomedInsetLine('gallery', ["png", "svg"]);
+```
+
+Every renderer uses the same two arguments:
+
+- output folder
+- export formats
+
+Use `runAllExamples` when you want to rebuild the public gallery. Use a direct
+renderer call when you are iterating on one figure.
+
 ## Use The Same Colors Across Figures
 
 ```matlab

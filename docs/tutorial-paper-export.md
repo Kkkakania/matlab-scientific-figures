@@ -52,11 +52,24 @@ theme = sftTheme('FigureSize', [8.5 6.2], 'FontSize', 8.5);
 
 Common starting points:
 
-| Target | Width |
-|---|---:|
-| Single column | 8 to 9 cm |
-| Double column | 17 to 18 cm |
-| Slide or report | 13 to 16 cm |
+| Target | Suggested size | Font |
+|---|---:|---:|
+| Single column | `[8.5 6.2]` cm | 8 to 9 pt |
+| Double column | `[17.5 8.5]` cm | 9 to 10 pt |
+| Half-page report | `[14 8]` cm | 10 pt |
+| Slide or screen | `[16 9]` cm | 10 to 12 pt |
+
+Copyable presets:
+
+```matlab
+singleColumn = sftTheme('FigureSize', [8.5 6.2], 'FontSize', 8.5);
+doubleColumn = sftTheme('FigureSize', [17.5 8.5], 'FontSize', 9.5);
+reportFigure = sftTheme('FigureSize', [14 8], 'FontSize', 10);
+slideFigure = sftTheme('FigureSize', [16 9], 'FontSize', 11);
+```
+
+These are starting points, not journal rules. Always check the target journal
+or conference instructions before final submission.
 
 ## Before Submission
 
