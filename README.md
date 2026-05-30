@@ -207,7 +207,11 @@ through CI artifacts without blocking gallery checks.
 
 ## Project Status
 
-Current stable release: `v3.2.0`.
+Current public release: `v3.2.0`.
+
+Project maturity: early public project. The examples, CLI workflow, and checks
+are usable today, but the repository is still collecting feedback before
+claiming broad adoption or long-term ecosystem maturity.
 
 The project is intentionally focused. New templates should arrive with
 examples, deterministic data, documentation, and provenance checks.

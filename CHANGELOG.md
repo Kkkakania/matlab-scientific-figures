@@ -9,6 +9,9 @@
   stabilization day.
 - Add a version consistency check for README, ROADMAP, version plan, and
   changelog release metadata.
+- Reword release status from "stable" to "current public release" and document
+  the project as early-stage to avoid overstating maturity.
+- Update the dogfooded `matlab-figure-ci` install tag to `v2.4.1`.
 
 ## v3.2.0 - 2026-05-30
 

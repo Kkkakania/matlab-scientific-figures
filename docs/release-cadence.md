@@ -8,7 +8,7 @@ Going forward, releases should slow down.
 
 ## Current Policy
 
-- Keep `v3.2.0` as the current stable release until a user-visible reason
+- Keep `v3.2.0` as the current public release until a user-visible reason
   justifies another tag.
 - Use patch releases, such as `v3.2.1`, for documentation fixes, CI checks,
   typo fixes, and small maintenance work.
@@ -43,7 +43,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts
 
 Then check:
 
-- `README.md` current stable release matches the tag.
+- `README.md` current public release matches the tag.
 - `CHANGELOG.md` has a dated entry.
 - `ROADMAP.md` describes the current state, not old planned work.
 - GitHub Actions pass on `main`.

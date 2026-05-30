@@ -5,7 +5,9 @@ It should agree with README, CHANGELOG, and GitHub releases.
 
 ## Current State
 
-- Current stable release: `v3.2.0`.
+- Current public release: `v3.2.0`.
+- Maturity: early public project; the gallery is usable, but adoption claims
+  should stay conservative until real external use appears.
 - Gallery size: 22 clean-room templates.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
   privacy/provenance scans, and figure-quality CI.
@@ -75,9 +77,10 @@ Candidates that need careful design before inclusion:
 ## Versioning Pace
 
 The fast `v3.x` stabilization happened during the first public hardening pass.
-Future releases should follow [Release cadence](docs/release-cadence.md):
-patch tags for small fixes, minor tags for user-visible workflows, and no major
-tag unless the public compatibility boundary changes.
+It should not become the normal release rhythm. Future releases should follow
+[Release cadence](docs/release-cadence.md): patch tags for small fixes, minor
+tags for user-visible workflows, and no major tag unless the public
+compatibility boundary changes.
 
 ## Non-Goals
 

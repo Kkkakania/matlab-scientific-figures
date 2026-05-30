@@ -35,7 +35,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
 ## Version Files
 
 - Update `CHANGELOG.md`.
-- Update `README.md` current stable release.
+- Update `README.md` current public release.
 - Update `docs/version-plan.md` when the release changes the public direction.
 - Add a maintenance report for major releases.
 

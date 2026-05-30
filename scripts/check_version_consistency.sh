@@ -9,8 +9,8 @@ extract_first() {
   sed -nE "$pattern" "$ROOT_DIR/$file" | head -n 1
 }
 
-readme_version="$(extract_first 's/^Current stable release: `(v[0-9]+\.[0-9]+\.[0-9]+)`\.$/\1/p' README.md)"
-roadmap_version="$(extract_first 's/^- Current stable release: `(v[0-9]+\.[0-9]+\.[0-9]+)`\.$/\1/p' ROADMAP.md)"
+readme_version="$(extract_first 's/^Current public release: `(v[0-9]+\.[0-9]+\.[0-9]+)`\.$/\1/p' README.md)"
+roadmap_version="$(extract_first 's/^- Current public release: `(v[0-9]+\.[0-9]+\.[0-9]+)`\.$/\1/p' ROADMAP.md)"
 version_plan_version="$(extract_first 's/^- `(v[0-9]+\.[0-9]+\.[0-9]+)` is the current release\.$/\1/p' docs/version-plan.md)"
 changelog_version="$(extract_first 's/^## (v[0-9]+\.[0-9]+\.[0-9]+) - [0-9]{4}-[0-9]{2}-[0-9]{2}$/\1/p' CHANGELOG.md)"
 
