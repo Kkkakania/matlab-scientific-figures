@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Planned: high-value clean-room templates tracked in the public issue backlog.
+
+## v0.2.0 - 2026-05-30
+
 - Add correlation bubble heatmap example and gallery output.
 - Add multi-panel layout helper and paper-style overview example.
 - Add grouped bar with error bars and positive-negative area examples.
