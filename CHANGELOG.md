@@ -18,6 +18,8 @@
   status.
 - Add a README badge for the dogfooded figure-quality workflow.
 - Rename the README provenance section to reduce expected scan noise.
+- Exclude the reviewed project `LICENSE` file from `mfigci` scans so reports
+  focus on unexpected provenance findings.
 - Link the Sankey-style backlog item to its public design issue.
 - Clarify README documentation labels so older maintenance reports read as
   historical snapshots rather than the current project state.

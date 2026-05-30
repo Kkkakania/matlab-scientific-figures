@@ -15,6 +15,7 @@ scan:
     - "dist"
     - "build"
     - ".pytest_cache"
+    - "LICENSE"
     - "scripts/check_privacy.sh"
     - "scripts/check_provenance.sh"
 
