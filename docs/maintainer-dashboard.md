@@ -6,7 +6,7 @@ scope, and where feedback should go.
 
 ## Current Public State
 
-- Current released line: `v3.4.0`.
+- Current released line: `v3.5.0`.
 - Main branch gallery: 30 clean-room examples with committed PNG and SVG
   outputs.
 - Companion CI tool: `matlab-figure-ci` is dogfooded at `v2.4.5`.

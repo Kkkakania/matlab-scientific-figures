@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v3.4.0` is the current release.
+- `v3.5.0` is the current release.
 - The gallery has 30 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 - Future tags should follow `docs/release-cadence.md`; small maintenance
@@ -150,3 +150,24 @@ Release conditions:
 
 - MATLAB-enabled release gate passes locally.
 - `mfigci` dogfooding checks pass locally and in GitHub Actions.
+
+## v3.5.0 Released
+
+Goal: publish the 30-template gallery as a coherent release rather than leaving
+the main branch ahead of the public release page.
+
+Delivered changes:
+
+- `uncertainty_fan_chart` for widening forecast intervals.
+- `ternary_scatter` for three-part compositions.
+- `forest_plot` for estimates with intervals.
+- `waterfall_chart` for cumulative contribution steps.
+- `bland_altman_plot` for method-agreement review.
+- README gallery preview checks in the local release gate and GitHub Actions.
+- Documentation, manifest, gallery outputs, mfigci config, and MATLAB tests
+  updated for the 30-template gallery.
+
+Release conditions:
+
+- MATLAB-enabled release gate passes locally.
+- `Quality checks` and `Figure quality` pass on `main` and the release tag.

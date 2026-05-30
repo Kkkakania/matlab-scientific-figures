@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+No unreleased changes.
+
+## v3.5.0 - 2026-05-31
+
 - Add a clean-room `uncertainty_fan_chart` template for widening forecast
   intervals.
 - Add a clean-room `ternary_scatter` template for three-part compositions.
@@ -9,6 +13,8 @@
 - Add a clean-room `waterfall_chart` template for cumulative contribution
   steps.
 - Add a clean-room `bland_altman_plot` template for method-agreement review.
+- Add a README gallery preview check so the first-screen images, registry
+  count, and committed gallery outputs stay aligned.
 
 ## v3.4.0 - 2026-05-31
 

@@ -5,11 +5,11 @@ It should agree with README, CHANGELOG, and GitHub releases.
 
 ## Current State
 
-- Current public release: `v3.4.0`.
+- Current public release: `v3.5.0`.
 - Maturity: early public project; the gallery is usable, but adoption claims
   should stay conservative until real external use appears.
 - Gallery size on `main`: 30 clean-room templates. The current public release
-  `v3.4.0` shipped 25 templates.
+  `v3.5.0` shipped 30 templates.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
   privacy/provenance scans, and figure-quality CI.
 - Companion checker: `matlab-figure-ci` is dogfooded through
@@ -85,6 +85,19 @@ Delivered:
 - Chart-selection, color-accessibility, gallery, template, manifest, dashboard,
   backlog, and dogfooding configuration updates.
 - MATLAB tests and gallery checks covering the 25-template gallery.
+
+### v3.5.0: Thirty-Template Gallery
+
+Delivered:
+
+- `uncertainty_fan_chart` for widening forecast intervals.
+- `ternary_scatter` for three-part compositions.
+- `forest_plot` for interval estimates.
+- `waterfall_chart` for cumulative contribution steps.
+- `bland_altman_plot` for method-agreement review.
+- README gallery preview checks covering the first-screen images and registry
+  count.
+- MATLAB release-gate coverage for the 30-template gallery.
 
 ## Next Candidates
 

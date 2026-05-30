@@ -219,7 +219,7 @@ through CI artifacts without blocking gallery checks.
 
 ## Project Status
 
-Current public release: `v3.4.0`.
+Current public release: `v3.5.0`.
 
 Project maturity: early public project. The examples, CLI workflow, and checks
 are usable today, but the repository is still collecting feedback before
