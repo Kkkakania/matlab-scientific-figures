@@ -27,7 +27,6 @@ Quality goals:
 
 Candidates that need careful design before inclusion:
 
-- Radar chart for small metric sets.
 - Parallel coordinates for multivariate samples.
 - Sankey-style flow diagram.
 - Color accessibility checks.

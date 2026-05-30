@@ -56,6 +56,8 @@ gallery:
     - "multi_panel_overview.svg"
     - "positive_negative_area.png"
     - "positive_negative_area.svg"
+    - "radar_chart.png"
+    - "radar_chart.svg"
     - "ridgeline_plot.png"
     - "ridgeline_plot.svg"
     - "scatter_plot.png"

@@ -34,6 +34,7 @@ renderers = {
     'waffle_chart', @renderWaffleChart
     'positive_negative_area', @renderPositiveNegativeArea
     'ridgeline_plot', @renderRidgelinePlot
+    'radar_chart', @renderRadarChart
     'heatmap', @renderHeatmap
     'correlation_bubble', @renderCorrelationBubble
     'double_triangle_heatmap', @renderDoubleTriangleHeatmap

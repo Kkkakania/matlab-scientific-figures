@@ -80,6 +80,15 @@ switch kind
         data.values = values;
         data.labels = ["Group A", "Group B", "Group C", "Group D", "Group E"];
 
+    case "radar"
+        data.metrics = ["Accuracy", "Speed", "Memory", "Stability", "Setup", "Cost"];
+        data.series = ["Baseline", "Method A", "Method B"];
+        data.values = [
+            0.72 0.66 0.58 0.76 0.62 0.55
+            0.84 0.73 0.64 0.82 0.70 0.61
+            0.78 0.82 0.71 0.74 0.80 0.68
+        ];
+
     case "positive_negative_area"
         x = linspace(0, 18, 160);
         y = 0.38 * sin(0.75 * x) + 0.18 * cos(1.65 * x + 0.4) ...

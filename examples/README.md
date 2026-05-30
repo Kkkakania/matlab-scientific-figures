@@ -18,6 +18,7 @@ designed for headless batch rendering through `runAllExamples`.
 | `waffle_chart` | `renderWaffleChart` | Show composition or progress as countable cells |
 | `positive_negative_area` | `renderPositiveNegativeArea` | Show signed change around a baseline |
 | `ridgeline_plot` | `renderRidgelinePlot` | Compare distributions across many groups |
+| `radar_chart` | `renderRadarChart` | Compare a few normalized metrics across methods |
 | `heatmap` | `renderHeatmap` | Show a matrix pattern |
 | `correlation_bubble` | `renderCorrelationBubble` | Show positive and negative pairwise correlations |
 | `double_triangle_heatmap` | `renderDoubleTriangleHeatmap` | Compare two metrics in one pairwise matrix |

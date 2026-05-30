@@ -5,6 +5,8 @@
 - Add gallery color-accessibility documentation and release checklist guidance.
 - Add ridgeline plot example, deterministic distribution data, gallery output,
   tests, and documentation updates.
+- Add radar chart example for compact metric-profile comparisons, including
+  deterministic normalized data, gallery output, tests, and documentation.
 
 ## v0.4.0 - 2026-05-30
 

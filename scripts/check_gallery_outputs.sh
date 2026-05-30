@@ -15,6 +15,7 @@ expected=(
   waffle_chart
   positive_negative_area
   ridgeline_plot
+  radar_chart
   heatmap
   correlation_bubble
   double_triangle_heatmap

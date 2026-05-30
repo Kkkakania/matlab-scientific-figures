@@ -122,6 +122,15 @@ verifyGreaterThan(testCase, size(data.values, 1), 50);
 verifyTrue(testCase, all(isfinite(data.values(:))));
 end
 
+function testRadarDataIsNormalized(testCase)
+data = sftExampleData('radar');
+
+verifyEqual(testCase, size(data.values, 1), numel(data.series));
+verifyEqual(testCase, size(data.values, 2), numel(data.metrics));
+verifyGreaterThanOrEqual(testCase, data.values, 0);
+verifyLessThanOrEqual(testCase, data.values, 1);
+end
+
 function testExportCreatesRequestedFiles(testCase)
 outDir = fullfile(tempdir, 'sft-core-test');
 if exist(outDir, 'dir')

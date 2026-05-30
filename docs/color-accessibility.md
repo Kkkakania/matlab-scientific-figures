@@ -28,6 +28,7 @@ thumbnails.
 | `butterfly_comparison` | Low | Side and direction encode the main distinction; color is secondary. |
 | `waffle_chart` | Medium | Category shares rely on hue and legend; keep category count small. |
 | `ridgeline_plot` | Medium | Group color helps, but vertical position and labels carry the comparison. |
+| `radar_chart` | Medium | Series use color, but polygon shape, metric labels, and legend support reading. |
 | `positive_negative_area` | Low | Sign and baseline encode the main distinction. |
 | `heatmap` | Low | Sequential scale is supported by colorbar. |
 | `correlation_bubble` | Low | Sign and size help beyond hue. |
