@@ -11,6 +11,7 @@
 - Add `CITATION.cff` and a CI check so citation metadata stays aligned with the
   current public release.
 - Add a first-use smoke test for list, info, and selected-template rendering.
+- Add a documented template-manifest schema and a non-MATLAB schema check.
 
 ## v3.5.0 - 2026-05-31
 

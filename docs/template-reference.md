@@ -29,7 +29,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ma
 ```
 
 For tools that need metadata without running MATLAB, use
-`docs/template-manifest.json`. Regenerate it with:
+`docs/template-manifest.json`; its field contract is documented in
+`docs/template-manifest-schema.md`. Regenerate it with:
 
 ```matlab
 sftWriteTemplateManifest()

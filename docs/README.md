@@ -11,6 +11,7 @@ docs if you want to change the project.
 - [Tag reference](tag-reference.md)
 - [API reference](api-reference.md)
 - [Template manifest JSON](template-manifest.json)
+- [Template manifest schema](template-manifest-schema.md)
 - [Chart selection guide](chart-selection-guide.md)
 - [Use with your data](use-with-your-data.md)
 - [Recipes](recipes.md)

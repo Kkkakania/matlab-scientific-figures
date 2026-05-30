@@ -31,6 +31,7 @@ run_step "version metadata consistency" ./scripts/check_version_consistency.sh
 run_step "citation metadata" ./scripts/check_citation.sh
 run_step "documentation links" ./scripts/check_docs_links.sh
 run_step "API reference coverage" ./scripts/check_api_reference.sh
+run_step "template manifest schema" ./scripts/check_template_manifest_schema.sh
 run_step "MATLAB help text" ./scripts/check_matlab_help.sh
 run_step "README gallery preview" ./scripts/check_readme_gallery.sh
 run_step "timeout helper" ./scripts/check_timeout_helper.sh
