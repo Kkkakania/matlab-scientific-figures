@@ -9,6 +9,7 @@ expected=(
   confidence_interval
   scatter_plot
   density_scatter
+  contour_scatter
   grouped_bar
   grouped_error_bar
   butterfly_comparison

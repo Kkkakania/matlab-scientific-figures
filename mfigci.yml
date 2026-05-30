@@ -32,6 +32,8 @@ gallery:
     - "bubble_matrix.svg"
     - "confidence_interval.png"
     - "confidence_interval.svg"
+    - "contour_scatter.png"
+    - "contour_scatter.svg"
     - "correlation_bubble.png"
     - "correlation_bubble.svg"
     - "density_scatter.png"

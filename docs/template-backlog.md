@@ -14,7 +14,7 @@ choice of chart type, but source files are not copied into the repo.
 |---|---|
 | Time trend | `line_plot` |
 | Uncertainty band | `confidence_interval` |
-| Dense x-y relationship | `density_scatter` |
+| Dense x-y relationship | `density_scatter`, `contour_scatter` |
 | Method comparison | `grouped_bar`, `grouped_error_bar`, `butterfly_comparison` |
 | Composition | `waffle_chart` |
 | Matrix values | `heatmap`, `bubble_matrix` |
@@ -32,7 +32,6 @@ choice of chart type, but source files are not copied into the repo.
 | Priority | Template | Why it is useful |
 |---|---|---|
 | Medium | Sankey-style flow | Useful for flow or contribution structure, but needs careful API design |
-| Medium | Contour scatter | Good for dense relationships where local structure matters |
 | Later | 3D density scatter | Attractive, but only worth adding if the 2D version is not enough |
 | Later | Texture-filled bars | Useful for grayscale printing, but easy to overdo |
 

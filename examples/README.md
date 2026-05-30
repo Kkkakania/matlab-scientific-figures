@@ -12,6 +12,7 @@ designed for headless batch rendering through `runAllExamples`.
 | `confidence_interval` | `renderConfidenceInterval` | Show uncertainty around an estimate |
 | `scatter_plot` | `renderScatterPlot` | Show relationships across groups |
 | `density_scatter` | `renderDensityScatter` | Show dense point clouds without overplotting |
+| `contour_scatter` | `renderContourScatter` | Show dense point clouds with local density contours |
 | `grouped_bar` | `renderGroupedBar` | Compare methods across a few metrics |
 | `grouped_error_bar` | `renderGroupedErrorBar` | Compare methods with uncertainty bars |
 | `butterfly_comparison` | `renderButterflyComparison` | Compare two sides around a shared baseline |

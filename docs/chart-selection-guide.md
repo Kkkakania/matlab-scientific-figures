@@ -9,6 +9,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show signed change | `positive_negative_area` | Positive and negative deviations from a baseline both matter |
 | Show group relationship | `scatter_plot` | Points belong to categories or operating states |
 | Show dense relationship | `density_scatter` | Many points overlap and local density matters |
+| Show local density structure | `contour_scatter` | Points matter, but clusters and ridges also matter |
 | Compare methods | `grouped_bar` | A few methods are compared across a few metrics |
 | Compare methods with uncertainty | `grouped_error_bar` | Group means need visible uncertainty or variability |
 | Compare two sides | `butterfly_comparison` | Two groups should be read from a shared zero baseline |

@@ -28,6 +28,7 @@ renderers = {
     'confidence_interval', @renderConfidenceInterval
     'scatter_plot', @renderScatterPlot
     'density_scatter', @renderDensityScatter
+    'contour_scatter', @renderContourScatter
     'grouped_bar', @renderGroupedBar
     'grouped_error_bar', @renderGroupedErrorBar
     'butterfly_comparison', @renderButterflyComparison

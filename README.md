@@ -11,11 +11,11 @@ PDF from the same script.
 
 ## Gallery
 
-The gallery currently contains 21 examples.
+The gallery currently contains 22 examples.
 
 <table>
   <tr>
-    <td><img src="gallery/density_scatter.png" width="210" alt="Density scatter"><br>Density scatter</td>
+    <td><img src="gallery/contour_scatter.png" width="210" alt="Contour scatter"><br>Contour scatter</td>
     <td><img src="gallery/double_triangle_heatmap.png" width="210" alt="Double-triangle heatmap"><br>Double-triangle heatmap</td>
     <td><img src="gallery/zoomed_inset_line.png" width="210" alt="Zoomed inset line"><br>Zoomed inset line</td>
     <td><img src="gallery/multi_panel_overview.png" width="210" alt="Multi-panel overview"><br>Multi-panel overview</td>
@@ -37,11 +37,11 @@ The gallery currently contains 21 examples.
 Run `runAllExamples` to generate all previews locally.
 
 The full gallery includes line plots, confidence intervals, scatter plots,
-density scatter plots, grouped bars, error bars, butterfly comparisons, waffle
-charts, ridgeline plots, signed area charts, heatmaps, double-triangle
-heatmaps, zoomed inset lines, correlation bubbles, bubble matrices, box plots
-with jittered observations, radar charts, lollipop rankings, multi-panel
-layouts, parallel coordinates, and 3D surfaces.
+density scatter plots, contour scatter plots, grouped bars, error bars,
+butterfly comparisons, waffle charts, ridgeline plots, signed area charts,
+heatmaps, double-triangle heatmaps, zoomed inset lines, correlation bubbles,
+bubble matrices, box plots with jittered observations, radar charts, lollipop
+rankings, multi-panel layouts, parallel coordinates, and 3D surfaces.
 
 ## Quick Start
 

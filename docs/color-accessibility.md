@@ -23,6 +23,7 @@ thumbnails.
 | `confidence_interval` | Medium | Bands are color-coded; line identity should stay clear in legend. |
 | `scatter_plot` | Medium | Group color carries meaning; marker overlap should be checked. |
 | `density_scatter` | Low | Sequential color is supported by density structure. |
+| `contour_scatter` | Low | Density color is reinforced by contour lines and overlaid points. |
 | `grouped_bar` | Medium | Series rely on hue; legend and grouped position reduce risk. |
 | `grouped_error_bar` | Medium | Series rely on hue; grouped position and error bars help. |
 | `butterfly_comparison` | Low | Side and direction encode the main distinction; color is secondary. |

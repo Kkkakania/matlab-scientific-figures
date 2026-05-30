@@ -29,6 +29,7 @@ Candidates that need careful design before inclusion:
 
 - Sankey-style flow diagram.
 - Color accessibility checks.
+- 3D density scatter if a real use case needs depth.
 
 ## Non-Goals
 

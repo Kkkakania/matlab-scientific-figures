@@ -9,6 +9,8 @@
   deterministic normalized data, gallery output, tests, and documentation.
 - Add parallel coordinates example for multivariate sample comparisons,
   including deterministic grouped data, gallery output, tests, and docs.
+- Add contour scatter example for dense x-y relationships, including smoothed
+  local density contours, gallery output, tests, and docs.
 
 ## v0.4.0 - 2026-05-30
 

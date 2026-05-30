@@ -44,6 +44,16 @@ switch kind
         data.x = [x1; x2];
         data.y = [y1; y2];
 
+    case "contour_scatter"
+        n = 640;
+        firstCount = round(n * 0.58);
+        x1 = randn(firstCount, 1) * 0.72 - 0.35;
+        y1 = 0.52 * x1 + randn(firstCount, 1) * 0.34 + 0.10;
+        x2 = randn(n - firstCount, 1) * 0.52 + 1.18;
+        y2 = -0.38 * x2 + randn(n - firstCount, 1) * 0.30 + 1.18;
+        data.x = [x1; x2];
+        data.y = [y1; y2];
+
     case "grouped_bar"
         data.values = [4.2 3.1 3.7; 5.0 4.1 4.4; 3.6 4.7 4.2; 4.8 3.9 5.1];
         data.groups = ["Baseline", "Method A", "Method B", "Method C"];

@@ -141,6 +141,15 @@ verifyGreaterThanOrEqual(testCase, data.values, 0);
 verifyLessThanOrEqual(testCase, data.values, 1);
 end
 
+function testContourScatterDataHasDensePairedCoordinates(testCase)
+data = sftExampleData('contour_scatter');
+
+verifyEqual(testCase, numel(data.x), numel(data.y));
+verifyGreaterThan(testCase, numel(data.x), 300);
+verifyTrue(testCase, all(isfinite(data.x)));
+verifyTrue(testCase, all(isfinite(data.y)));
+end
+
 function testExportCreatesRequestedFiles(testCase)
 outDir = fullfile(tempdir, 'sft-core-test');
 if exist(outDir, 'dir')
