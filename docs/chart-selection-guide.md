@@ -47,3 +47,25 @@ Use `butterfly_comparison` when the contrast between two sides matters more
 than their absolute positions in separate panels. Keep the left and right
 values positive in the input data; the renderer mirrors the left side around
 zero so the sign convention is visible without changing the underlying values.
+
+## Box Jitter Versus Ridgeline
+
+Use `box_jitter` when individual observations matter and each group has a
+moderate number of samples. It keeps outliers and sample density visible, which
+is useful during exploratory analysis or when reviewers may ask how much data
+supports each group.
+
+Use `ridgeline_plot` when the main question is how several distributions shift,
+overlap, or change shape. It is better for scanning many groups in one compact
+panel, especially when individual points would clutter the figure.
+
+## Radar Charts Versus Parallel Coordinates
+
+Use `radar_chart` for a small number of methods and metrics when the goal is a
+quick profile comparison. It works best when values are normalized and the
+audience only needs the broad shape.
+
+Use `parallel_coordinates` when each sample or scenario matters across several
+features. It is better than a radar chart when there are multiple observations
+per group, when group medians should be compared against sample spread, or when
+the reader needs to see tradeoffs across dimensions.

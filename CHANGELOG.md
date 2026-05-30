@@ -14,6 +14,8 @@
 - Update the dogfooded `matlab-figure-ci` install tag to `v2.4.1`.
 - Clarify README documentation labels so older maintenance reports read as
   historical snapshots rather than the current project state.
+- Add chart-selection guidance comparing box jitter with ridgelines and radar
+  charts with parallel coordinates.
 
 ## v3.2.0 - 2026-05-30
 
