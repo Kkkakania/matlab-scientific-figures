@@ -11,7 +11,7 @@
   changelog release metadata.
 - Reword release status from "stable" to "current public release" and document
   the project as early-stage to avoid overstating maturity.
-- Update the dogfooded `matlab-figure-ci` install tag to `v2.4.3`.
+- Update the dogfooded `matlab-figure-ci` install tag to `v2.4.4`.
 - Add issue intake links and first-use feedback labels for cleaner public
   collaboration.
 - Add a maintainer dashboard for current release, CI, feedback, and maintenance
