@@ -12,6 +12,8 @@
 - Reword release status from "stable" to "current public release" and document
   the project as early-stage to avoid overstating maturity.
 - Update the dogfooded `matlab-figure-ci` install tag to `v2.4.3`.
+- Add issue intake links and first-use feedback labels for cleaner public
+  collaboration.
 - Clarify README documentation labels so older maintenance reports read as
   historical snapshots rather than the current project state.
 - Add chart-selection guidance comparing box jitter with ridgelines and radar
