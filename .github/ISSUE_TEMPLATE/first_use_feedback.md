@@ -2,7 +2,7 @@
 name: First-use feedback
 about: Share results from trying the project from a fresh clone
 title: "[First-use]: "
-labels: question
+labels: question, help wanted, good first issue
 assignees: ""
 ---
 

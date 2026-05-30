@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security and provenance policy
+    url: https://github.com/Kkkakania/matlab-scientific-figures/blob/main/SECURITY.md
+    about: Read how to report sensitive security, privacy, or provenance concerns.
+  - name: First-use test guide
+    url: https://github.com/Kkkakania/matlab-scientific-figures/blob/main/docs/first-use-test.md
+    about: Try the reproducible first-use checklist before opening feedback.
