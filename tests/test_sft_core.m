@@ -114,6 +114,14 @@ verifyTrue(testCase, all(data.left > 0));
 verifyTrue(testCase, all(data.right > 0));
 end
 
+function testRidgelineDataHasOneColumnPerLabel(testCase)
+data = sftExampleData('ridgeline');
+
+verifyEqual(testCase, size(data.values, 2), numel(data.labels));
+verifyGreaterThan(testCase, size(data.values, 1), 50);
+verifyTrue(testCase, all(isfinite(data.values(:))));
+end
+
 function testExportCreatesRequestedFiles(testCase)
 outDir = fullfile(tempdir, 'sft-core-test');
 if exist(outDir, 'dir')

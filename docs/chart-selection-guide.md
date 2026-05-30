@@ -19,6 +19,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show matrix magnitude | `bubble_matrix` | Matrix values need both position and magnitude cues |
 | Show a local event | `zoomed_inset_line` | The full trend matters, but one interval needs detail |
 | Compare distributions | `box_jitter` | Group spread and individual points both matter |
+| Compare many distributions | `ridgeline_plot` | Several groups need compact distribution comparison |
 | Rank factors | `lollipop_ranking` | Ordered importance is more important than exact area |
 | Combine panels | `multi_panel_overview` | Several small plots belong in one paper or slide figure |
 | Show 3D field | `surface_3d` | A smooth response varies over two numeric inputs |

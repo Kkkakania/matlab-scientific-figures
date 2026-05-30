@@ -67,6 +67,19 @@ switch kind
         data.leftLabel = "Scenario A";
         data.rightLabel = "Scenario B";
 
+    case "ridgeline"
+        groupCount = 5;
+        sampleCount = 180;
+        values = zeros(sampleCount, groupCount);
+        centers = [-1.1 -0.35 0.25 0.85 1.25];
+        spreads = [0.42 0.35 0.50 0.38 0.45];
+        for k = 1:groupCount
+            values(:, k) = centers(k) + spreads(k) * randn(sampleCount, 1) ...
+                + 0.12 * sin(randn(sampleCount, 1) + k);
+        end
+        data.values = values;
+        data.labels = ["Group A", "Group B", "Group C", "Group D", "Group E"];
+
     case "positive_negative_area"
         x = linspace(0, 18, 160);
         y = 0.38 * sin(0.75 * x) + 0.18 * cos(1.65 * x + 0.4) ...

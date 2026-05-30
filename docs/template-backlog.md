@@ -19,7 +19,7 @@ choice of chart type, but source files are not copied into the repo.
 | Composition | `waffle_chart` |
 | Matrix values | `heatmap`, `bubble_matrix` |
 | Correlation matrix | `correlation_bubble`, `double_triangle_heatmap` |
-| Distribution comparison | `box_jitter` |
+| Distribution comparison | `box_jitter`, `ridgeline_plot` |
 | Ranking | `lollipop_ranking` |
 | Signed change and local events | `positive_negative_area`, `zoomed_inset_line` |
 | Multi-panel layout | `multi_panel_overview` |
@@ -29,7 +29,6 @@ choice of chart type, but source files are not copied into the repo.
 
 | Priority | Template | Why it is useful |
 |---|---|---|
-| Medium | Ridgeline plot | Compact distribution comparison across many groups |
 | Medium | Parallel coordinates | Useful for multivariate samples and model comparison |
 | Medium | Radar chart | Good for a small number of normalized metrics |
 | Medium | Sankey-style flow | Useful for flow or contribution structure, but needs careful API design |

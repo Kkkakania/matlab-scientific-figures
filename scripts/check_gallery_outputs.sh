@@ -14,6 +14,7 @@ expected=(
   butterfly_comparison
   waffle_chart
   positive_negative_area
+  ridgeline_plot
   heatmap
   correlation_bubble
   double_triangle_heatmap

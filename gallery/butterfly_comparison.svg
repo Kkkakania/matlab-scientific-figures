@@ -9,188 +9,188 @@
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
 <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(0.5,0,0,0.5,-0.528179,-2.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M0,4 L672,4 L672,477 L0,477 L0,4"/>
 </g>
 
 <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M1.09e+06,330000 L1.09e+06,3.75e+06 L6.67e+06,3.75e+06 L6.67e+06,330000 L1.09e+06,330000"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,132.222,10)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.28125" font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.28125" font-family="Arial" font-size="24" font-weight="700" font-style="normal"
  >Butterfly Comparison</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="388,375 388,33 " />
 </g>
 
 <g fill="#052e54" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M3.88e+06,487428 L1.51559e+06,487428 L1.51559e+06,878285 L3.88e+06,878285 L3.88e+06,487428"/>
 </g>
 
 <g fill="#052e54" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M3.88e+06,1.03029e+06 L1.95114e+06,1.03029e+06 L1.95114e+06,1.42114e+06 L3.88e+06,1.42114e+06 L3.88e+06,1.03029e+06"/>
 </g>
 
 <g fill="#052e54" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M3.88e+06,1.57314e+06 L2.13781e+06,1.57314e+06 L2.13781e+06,1.964e+06 L3.88e+06,1.964e+06 L3.88e+06,1.57314e+06"/>
 </g>
 
 <g fill="#052e54" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M3.88e+06,2.116e+06 L2.38669e+06,2.116e+06 L2.38669e+06,2.50686e+06 L3.88e+06,2.50686e+06 L3.88e+06,2.116e+06"/>
 </g>
 
 <g fill="#052e54" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M3.88e+06,2.65886e+06 L2.63558e+06,2.65886e+06 L2.63558e+06,3.04971e+06 L3.88e+06,3.04971e+06 L3.88e+06,2.65886e+06"/>
 </g>
 
 <g fill="#052e54" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M3.88e+06,3.20171e+06 L2.82224e+06,3.20171e+06 L2.82224e+06,3.59257e+06 L3.88e+06,3.59257e+06 L3.88e+06,3.20171e+06"/>
 </g>
 
 <g fill="#f29e1f" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M5.99552e+06,487428 L3.88e+06,487428 L3.88e+06,878285 L5.99552e+06,878285 L5.99552e+06,487428"/>
 </g>
 
 <g fill="#f29e1f" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M6.11996e+06,1.03029e+06 L3.88e+06,1.03029e+06 L3.88e+06,1.42114e+06 L6.11996e+06,1.42114e+06 L6.11996e+06,1.03029e+06"/>
 </g>
 
 <g fill="#f29e1f" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M5.74664e+06,1.57314e+06 L3.88e+06,1.57314e+06 L3.88e+06,1.964e+06 L5.74664e+06,1.964e+06 L5.74664e+06,1.57314e+06"/>
 </g>
 
 <g fill="#f29e1f" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M5.68442e+06,2.116e+06 L3.88e+06,2.116e+06 L3.88e+06,2.50686e+06 L5.68442e+06,2.50686e+06 L5.68442e+06,2.116e+06"/>
 </g>
 
 <g fill="#f29e1f" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M5.43553e+06,2.65886e+06 L3.88e+06,2.65886e+06 L3.88e+06,3.04971e+06 L5.43553e+06,3.04971e+06 L5.43553e+06,2.65886e+06"/>
 </g>
 
 <g fill="#f29e1f" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M5.18665e+06,3.20171e+06 L3.88e+06,3.20171e+06 L3.88e+06,3.59257e+06 L5.18665e+06,3.59257e+06 L5.18665e+06,3.20171e+06"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,60.369,34.6429)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >38</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,304.13,34.6429)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >34</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,82.1464,61.7857)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >31</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,310.353,61.7857)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >36</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,91.4796,88.9286)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >28</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,291.686,88.9286)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >30</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,103.924,116.071)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >24</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,288.575,116.071)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >29</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,116.368,143.214)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >20</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,276.131,143.214)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >25</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,125.701,170.357)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >17</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,263.687,170.357)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.28125" font-family="Arial" font-size="18" font-weight="400" font-style="normal"
  >21</text>
 </g>
 
 <g fill="#dbdbdb" fill-opacity="0.25098" stroke="#dbdbdb" stroke-opacity="0.25098" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-0.528179,-2.5)"
-font-family="Arial" font-size="18" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="139.115,375 139.115,33 " />
 <polyline fill="none" vector-effect="none" points="263.558,375 263.558,33 " />
@@ -206,14 +206,14 @@ font-family="Arial" font-size="18" font-weight="400" font-style="normal"
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,114.972,212.426)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal"
  >Magnitude from shared baseline</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-0.528179,-2.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="109,375 667,375 " />
 <polyline fill="none" vector-effect="none" points="139.115,380.58 139.115,375 " />
@@ -224,49 +224,49 @@ font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,63.5294,199.881)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >40</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,125.751,199.881)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >20</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,190.722,199.881)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,250.193,199.881)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >20</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,312.414,199.881)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >40</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-0.5,0.5,0,9.5,114.75)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal"
  >Group</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-0.528179,-2.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="109,33 109,375 " />
 <polyline fill="none" vector-effect="none" points="103.42,68.2857 109,68.2857 " />
@@ -278,76 +278,76 @@ font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,23.5909,35.1429)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >North</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,28.0909,62.2857)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >East</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,22.0909,89.4286)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >South</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,25.5909,116.571)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >West</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,16.0909,143.714)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >Central</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,14.0909,170.857)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >Coastal</text>
 </g>
 
 <g fill="#474747" fill-opacity="0.701961" stroke="#474747" stroke-opacity="0.701961" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-0.528179,-2.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="388,375 388,33 " />
 </g>
 
 <g fill="#052e54" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M2.19e+06,4.5675e+06 L2.19e+06,4.7325e+06 L2.79e+06,4.7325e+06 L2.79e+06,4.5675e+06 L2.19e+06,4.5675e+06"/>
 </g>
 
 <g fill="#f29e1f" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-0.528179,-2.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M3.935e+06,4.5675e+06 L3.935e+06,4.7325e+06 L4.535e+06,4.7325e+06 L4.535e+06,4.5675e+06 L3.935e+06,4.5675e+06"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,141.222,233.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >Scenario A</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,228.472,233.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >Scenario B</text>
 </g>
 </g>

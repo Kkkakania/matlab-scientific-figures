@@ -3,6 +3,8 @@
 ## Unreleased
 
 - Add gallery color-accessibility documentation and release checklist guidance.
+- Add ridgeline plot example, deterministic distribution data, gallery output,
+  tests, and documentation updates.
 
 ## v0.4.0 - 2026-05-30
 

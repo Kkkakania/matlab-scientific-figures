@@ -33,6 +33,7 @@ renderers = {
     'butterfly_comparison', @renderButterflyComparison
     'waffle_chart', @renderWaffleChart
     'positive_negative_area', @renderPositiveNegativeArea
+    'ridgeline_plot', @renderRidgelinePlot
     'heatmap', @renderHeatmap
     'correlation_bubble', @renderCorrelationBubble
     'double_triangle_heatmap', @renderDoubleTriangleHeatmap

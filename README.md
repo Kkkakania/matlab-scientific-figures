@@ -11,7 +11,7 @@ PDF from the same script.
 
 ## Gallery
 
-The gallery currently contains 18 examples.
+The gallery currently contains 19 examples.
 
 <table>
   <tr>
@@ -29,7 +29,7 @@ The gallery currently contains 18 examples.
   <tr>
     <td><img src="gallery/waffle_chart.png" width="210" alt="Waffle chart"><br>Waffle chart</td>
     <td><img src="gallery/butterfly_comparison.png" width="210" alt="Butterfly comparison"><br>Butterfly comparison</td>
-    <td><img src="gallery/grouped_bar.png" width="210" alt="Grouped bar"><br>Grouped bar</td>
+    <td><img src="gallery/ridgeline_plot.png" width="210" alt="Ridgeline plot"><br>Ridgeline plot</td>
     <td><img src="gallery/box_jitter.png" width="210" alt="Box plot with jitter"><br>Box + jitter</td>
   </tr>
 </table>
@@ -38,9 +38,10 @@ Run `runAllExamples` to generate all previews locally.
 
 The full gallery includes line plots, confidence intervals, scatter plots,
 density scatter plots, grouped bars, error bars, butterfly comparisons, waffle
-charts, signed area charts, heatmaps, double-triangle heatmaps, zoomed inset
-lines, correlation bubbles, bubble matrices, box plots with jittered
-observations, lollipop rankings, multi-panel layouts, and 3D surfaces.
+charts, ridgeline plots, signed area charts, heatmaps, double-triangle
+heatmaps, zoomed inset lines, correlation bubbles, bubble matrices, box plots
+with jittered observations, lollipop rankings, multi-panel layouts, and 3D
+surfaces.
 
 ## Quick Start
 
