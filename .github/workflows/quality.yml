@@ -26,6 +26,9 @@ jobs:
       - name: Check documentation links
         run: ./scripts/check_docs_links.sh
 
+      - name: Check API reference coverage
+        run: ./scripts/check_api_reference.sh
+
       - name: Check README gallery preview
         run: ./scripts/check_readme_gallery.sh
 

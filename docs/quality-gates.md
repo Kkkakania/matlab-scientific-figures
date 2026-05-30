@@ -28,6 +28,7 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | Metadata consistency | `./scripts/check_gallery_consistency.sh` | Drift between registry, examples docs, gallery files, and CI config |
 | Version metadata | `./scripts/check_version_consistency.sh` | README, ROADMAP, version plan, maintainer dashboard, release cadence, and changelog release mismatch |
 | Documentation links | `./scripts/check_docs_links.sh` | Broken local Markdown links and gallery image references |
+| API reference | `./scripts/check_api_reference.sh` | Public MATLAB functions missing from the API reference |
 | README gallery | `./scripts/check_readme_gallery.sh` | README gallery count or first-screen preview drift |
 | Timeout helper | `./scripts/check_timeout_helper.sh` | Timeout wrapper regressions before MATLAB checks rely on it |
 | Forbidden files | `./scripts/check_forbidden_files.sh` | `.p`, `.fig`, `.mat`, Office files, PDFs, archives, raw/OCR/tmp folders |
