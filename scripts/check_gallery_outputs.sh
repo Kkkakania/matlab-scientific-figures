@@ -16,6 +16,7 @@ expected=(
   positive_negative_area
   ridgeline_plot
   radar_chart
+  parallel_coordinates
   heatmap
   correlation_bubble
   double_triangle_heatmap

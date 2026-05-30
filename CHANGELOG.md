@@ -7,6 +7,8 @@
   tests, and documentation updates.
 - Add radar chart example for compact metric-profile comparisons, including
   deterministic normalized data, gallery output, tests, and documentation.
+- Add parallel coordinates example for multivariate sample comparisons,
+  including deterministic grouped data, gallery output, tests, and docs.
 
 ## v0.4.0 - 2026-05-30
 

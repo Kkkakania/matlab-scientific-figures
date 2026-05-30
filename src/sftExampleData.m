@@ -89,6 +89,26 @@ switch kind
             0.78 0.82 0.71 0.74 0.80 0.68
         ];
 
+    case "parallel_coordinates"
+        data.features = ["Accuracy", "Throughput", "Stability", ...
+            "Efficiency", "Scalability", "Usability"];
+        groupNames = ["Baseline", "Tuned", "Robust"];
+        profiles = [
+            0.64 0.58 0.66 0.62 0.56 0.70
+            0.78 0.76 0.70 0.72 0.68 0.74
+            0.72 0.64 0.82 0.78 0.76 0.68
+        ];
+        samplesPerGroup = 8;
+        data.values = zeros(numel(groupNames) * samplesPerGroup, numel(data.features));
+        data.groups = strings(numel(groupNames) * samplesPerGroup, 1);
+        for k = 1:numel(groupNames)
+            rows = (1:samplesPerGroup) + (k - 1) * samplesPerGroup;
+            offsets = 0.045 * randn(samplesPerGroup, numel(data.features));
+            data.values(rows, :) = profiles(k, :) + offsets;
+            data.groups(rows) = groupNames(k);
+        end
+        data.values = max(0, min(1, data.values));
+
     case "positive_negative_area"
         x = linspace(0, 18, 160);
         y = 0.38 * sin(0.75 * x) + 0.18 * cos(1.65 * x + 0.4) ...

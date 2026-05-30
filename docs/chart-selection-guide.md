@@ -21,6 +21,7 @@ Choose the figure by the communication task first, not by decoration.
 | Compare distributions | `box_jitter` | Group spread and individual points both matter |
 | Compare many distributions | `ridgeline_plot` | Several groups need compact distribution comparison |
 | Compare metric profiles | `radar_chart` | A few normalized metrics need one compact shape per method |
+| Compare multivariate samples | `parallel_coordinates` | Several normalized features need comparison across groups |
 | Rank factors | `lollipop_ranking` | Ordered importance is more important than exact area |
 | Combine panels | `multi_panel_overview` | Several small plots belong in one paper or slide figure |
 | Show 3D field | `surface_3d` | A smooth response varies over two numeric inputs |

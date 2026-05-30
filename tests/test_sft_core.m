@@ -131,6 +131,16 @@ verifyGreaterThanOrEqual(testCase, data.values, 0);
 verifyLessThanOrEqual(testCase, data.values, 1);
 end
 
+function testParallelCoordinatesDataHasNamedFeaturesAndClasses(testCase)
+data = sftExampleData('parallel_coordinates');
+
+verifyEqual(testCase, size(data.values, 2), numel(data.features));
+verifyEqual(testCase, size(data.values, 1), numel(data.groups));
+verifyGreaterThan(testCase, numel(unique(data.groups)), 1);
+verifyGreaterThanOrEqual(testCase, data.values, 0);
+verifyLessThanOrEqual(testCase, data.values, 1);
+end
+
 function testExportCreatesRequestedFiles(testCase)
 outDir = fullfile(tempdir, 'sft-core-test');
 if exist(outDir, 'dir')

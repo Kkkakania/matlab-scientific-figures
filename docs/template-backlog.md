@@ -21,6 +21,7 @@ choice of chart type, but source files are not copied into the repo.
 | Correlation matrix | `correlation_bubble`, `double_triangle_heatmap` |
 | Distribution comparison | `box_jitter`, `ridgeline_plot` |
 | Metric profile comparison | `radar_chart` |
+| Multivariate sample comparison | `parallel_coordinates` |
 | Ranking | `lollipop_ranking` |
 | Signed change and local events | `positive_negative_area`, `zoomed_inset_line` |
 | Multi-panel layout | `multi_panel_overview` |
@@ -30,7 +31,6 @@ choice of chart type, but source files are not copied into the repo.
 
 | Priority | Template | Why it is useful |
 |---|---|---|
-| Medium | Parallel coordinates | Useful for multivariate samples and model comparison |
 | Medium | Sankey-style flow | Useful for flow or contribution structure, but needs careful API design |
 | Medium | Contour scatter | Good for dense relationships where local structure matters |
 | Later | 3D density scatter | Attractive, but only worth adding if the 2D version is not enough |

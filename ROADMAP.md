@@ -27,7 +27,6 @@ Quality goals:
 
 Candidates that need careful design before inclusion:
 
-- Parallel coordinates for multivariate samples.
 - Sankey-style flow diagram.
 - Color accessibility checks.
 

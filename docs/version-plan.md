@@ -7,7 +7,7 @@ together.
 ## Current State
 
 - `v0.4.0` is the latest public release.
-- The gallery has 20 examples on `main`.
+- The gallery has 21 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 
 ## v0.5.0

@@ -35,6 +35,7 @@ renderers = {
     'positive_negative_area', @renderPositiveNegativeArea
     'ridgeline_plot', @renderRidgelinePlot
     'radar_chart', @renderRadarChart
+    'parallel_coordinates', @renderParallelCoordinates
     'heatmap', @renderHeatmap
     'correlation_bubble', @renderCorrelationBubble
     'double_triangle_heatmap', @renderDoubleTriangleHeatmap
