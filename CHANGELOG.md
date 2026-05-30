@@ -4,6 +4,10 @@
 
 - Add the v0.5.0 maintenance report.
 - Add v2 API design notes for the registry and selected-rendering boundary.
+- Add `sftTemplateRegistry` and `sftRenderExamples` for template discovery and
+  selected rendering.
+- Let `scripts/render_all.sh` render selected template names from the shell.
+- Add v2 migration notes for direct renderer calls and selected rendering.
 
 ## v0.5.0 - 2026-05-30
 

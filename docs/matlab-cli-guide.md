@@ -18,6 +18,12 @@ Or run:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
 ```
 
+Render only selected templates:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap radar_chart
+```
+
 ## Working Notes
 
 - Prefer `-batch` for automation.

@@ -56,3 +56,26 @@ verifyTrue(testCase, any(report.Example == "multi_panel_overview"));
 verifyTrue(testCase, any(report.Example == "positive_negative_area"));
 verifyTrue(testCase, any(report.Example == "grouped_error_bar"));
 end
+
+function testRenderExamplesCreatesOnlySelectedOutputs(testCase)
+outDir = fullfile(tempdir, 'sft-selected-gallery-test');
+if exist(outDir, 'dir')
+    rmdir(outDir, 's');
+end
+
+result = sftRenderExamples(["heatmap", "radar_chart"], outDir, ["png"]);
+pngFiles = dir(fullfile(outDir, '*.png'));
+
+verifyEqual(testCase, numel(result), 2);
+verifyEqual(testCase, numel(pngFiles), 2);
+verifyTrue(testCase, isfile(fullfile(outDir, 'heatmap.png')));
+verifyTrue(testCase, isfile(fullfile(outDir, 'radar_chart.png')));
+verifyFalse(testCase, isfile(fullfile(outDir, 'line_plot.png')));
+verifyTrue(testCase, all(arrayfun(@(item) item.report.Passed, result)));
+end
+
+function testRenderExamplesRejectsUnknownNames(testCase)
+outDir = fullfile(tempdir, 'sft-selected-gallery-error-test');
+verifyError(testCase, @() sftRenderExamples("not_a_template", outDir, ["png"]), ...
+    'sftRenderExamples:UnknownTemplate');
+end

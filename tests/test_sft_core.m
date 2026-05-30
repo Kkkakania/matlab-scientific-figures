@@ -150,6 +150,19 @@ verifyTrue(testCase, all(isfinite(data.x)));
 verifyTrue(testCase, all(isfinite(data.y)));
 end
 
+function testTemplateRegistryDefinesGalleryExamples(testCase)
+registry = sftTemplateRegistry();
+names = string({registry.Name}).';
+
+verifyEqual(testCase, numel(registry), 22);
+verifyEqual(testCase, numel(unique(names)), numel(names));
+verifyTrue(testCase, any(names == "contour_scatter"));
+verifyTrue(testCase, any(names == "parallel_coordinates"));
+verifyTrue(testCase, all(arrayfun(@(item) isa(item.Renderer, 'function_handle'), registry)));
+verifyTrue(testCase, all(arrayfun(@(item) strlength(item.Task) > 0, registry)));
+verifyTrue(testCase, all(arrayfun(@(item) ~isempty(item.Tags), registry)));
+end
+
 function testExportCreatesRequestedFiles(testCase)
 outDir = fullfile(tempdir, 'sft-core-test');
 if exist(outDir, 'dir')

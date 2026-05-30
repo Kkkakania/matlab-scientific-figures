@@ -59,6 +59,13 @@ The preferred v2 call is:
 sftRenderExamples("heatmap", "gallery", ["png", "svg"]);
 ```
 
+To discover templates:
+
+```matlab
+registry = sftTemplateRegistry();
+disp(string({registry.Name})')
+```
+
 To render everything:
 
 ```matlab

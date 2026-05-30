@@ -9,6 +9,7 @@ Start with the task you have, not with the chart name.
 | Load CSV or Excel files | [CSV and Excel tutorial](tutorial-csv-excel-data.md) |
 | Export figures for a paper | [Paper export tutorial](tutorial-paper-export.md) |
 | Render a whole experiment folder | [Batch rendering tutorial](tutorial-batch-rendering.md) |
+| Render only a few gallery templates | [MATLAB CLI guide](matlab-cli-guide.md) |
 | Make a quick local edit | [Recipes](recipes.md) |
 | Check whether a figure is ready to publish | [Figure quality checklist](figure-quality-checklist.md) |
 

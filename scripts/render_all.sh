@@ -17,4 +17,21 @@ elif ! command -v "$MATLAB_BIN" >/dev/null 2>&1; then
 fi
 
 cd "$ROOT_DIR"
-"$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('gallery')"
+
+if [[ "$#" -eq 0 ]]; then
+  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('gallery')"
+  exit 0
+fi
+
+names=()
+for name in "$@"; do
+  if [[ ! "$name" =~ ^[a-z0-9_]+$ ]]; then
+    echo "Invalid template name: $name" >&2
+    echo "Template names may contain lowercase letters, numbers, and underscores." >&2
+    exit 2
+  fi
+  names+=("\"$name\"")
+done
+
+name_expr="[$(IFS=,; echo "${names[*]}")]"
+"$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); sftRenderExamples($name_expr, 'gallery')"
