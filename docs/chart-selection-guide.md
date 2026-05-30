@@ -15,6 +15,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show local density structure | `contour_scatter` | Points matter, but clusters and ridges also matter |
 | Compare methods | `grouped_bar` | A few methods are compared across a few metrics |
 | Compare methods with uncertainty | `grouped_error_bar` | Group means need visible uncertainty or variability |
+| Compare estimates with intervals | `forest_plot` | Several point estimates need interval context and a reference line |
 | Compare two sides | `butterfly_comparison` | Two groups should be read from a shared zero baseline |
 | Compare paired change | `paired_slopegraph` | The same items are measured before and after a change |
 | Show composition | `waffle_chart` | Percent shares or progress counts should be compact and countable |
@@ -73,6 +74,13 @@ Use `ternary_scatter` when each observation is a composition of three parts
 that sum to one. It is useful for mixtures, portfolios, operating modes, or
 energy shares. Do not use it when the three variables are independent; a
 regular scatter or parallel-coordinates view will be easier to read.
+
+## Forest Plots
+
+Use `forest_plot` when the main comparison is a set of estimates with
+intervals and a meaningful reference line. It is more compact than separate
+error-bar panels and works well when labels are more important than categories
+on an x-axis.
 
 ## Butterfly Comparisons
 

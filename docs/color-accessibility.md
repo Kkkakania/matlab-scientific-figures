@@ -28,6 +28,7 @@ thumbnails.
 | `contour_scatter` | Low | Density color is reinforced by contour lines and overlaid points. |
 | `grouped_bar` | Medium | Series rely on hue; legend and grouped position reduce risk. |
 | `grouped_error_bar` | Medium | Series rely on hue; grouped position and error bars help. |
+| `forest_plot` | Low | Position, interval length, and the reference line carry the comparison. |
 | `butterfly_comparison` | Low | Side and direction encode the main distinction; color is secondary. |
 | `paired_slopegraph` | Low | Direction, slope, labels, and endpoint position carry the comparison. |
 | `waffle_chart` | Medium | Category shares rely on hue and legend; keep category count small. |

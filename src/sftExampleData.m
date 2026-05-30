@@ -97,6 +97,15 @@ switch kind
         data.groups = ["Baseline", "Method A", "Method B", "Method C"];
         data.series = ["Dataset 1", "Dataset 2", "Dataset 3"];
 
+    case "forest_plot"
+        data.labels = ["Baseline adjustment", "Sensor fusion", "Load control", ...
+            "Thermal margin", "Forecast update", "Voltage support", "Safety filter"];
+        data.estimate = [-0.18 0.12 0.28 -0.06 0.21 0.34 0.08];
+        widths = [0.16 0.20 0.13 0.18 0.12 0.16 0.17];
+        data.lower = data.estimate - widths;
+        data.upper = data.estimate + widths;
+        data.reference = 0;
+
     case "waffle"
         data.labels = ["Completed", "In progress", "Queued", "Blocked"];
         data.counts = [42 27 19 12];

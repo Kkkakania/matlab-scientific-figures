@@ -48,7 +48,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ma
 
 ## Gallery
 
-The gallery on `main` contains 27 examples. These 8 are a quick scan of the
+The gallery on `main` contains 28 examples. These 8 are a quick scan of the
 range.
 
 <table>
@@ -71,7 +71,7 @@ Run `runAllExamples` to regenerate the full gallery locally.
 The full gallery includes line plots, confidence intervals, uncertainty fan
 charts, scatter plots, ternary scatter plots, density scatter plots, contour
 scatter plots, grouped bars, error bars, butterfly comparisons, paired
-slopegraphs, waffle charts, ridgeline plots, signed area charts, heatmaps,
+slopegraphs, forest plots, waffle charts, ridgeline plots, signed area charts, heatmaps,
 double-triangle heatmaps, zoomed inset lines, correlation bubbles, bubble
 matrices, calendar heatmaps, box plots with jittered observations, radar
 charts, lollipop rankings, Sankey-style flows, multi-panel layouts, parallel

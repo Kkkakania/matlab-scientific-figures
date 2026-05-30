@@ -51,6 +51,8 @@ gallery:
     - "grouped_bar.svg"
     - "grouped_error_bar.png"
     - "grouped_error_bar.svg"
+    - "forest_plot.png"
+    - "forest_plot.svg"
     - "butterfly_comparison.png"
     - "butterfly_comparison.svg"
     - "waffle_chart.png"

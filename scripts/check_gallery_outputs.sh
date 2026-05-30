@@ -14,6 +14,7 @@ expected=(
   contour_scatter
   grouped_bar
   grouped_error_bar
+  forest_plot
   butterfly_comparison
   paired_slopegraph
   waffle_chart

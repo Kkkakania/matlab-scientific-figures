@@ -8,7 +8,7 @@ addpath(genpath(fullfile(projectRoot, 'src')));
 addpath(genpath(fullfile(projectRoot, 'examples')));
 end
 
-function testRunAllExamplesCreatesTwentySevenPngFiles(testCase)
+function testRunAllExamplesCreatesTwentyEightPngFiles(testCase)
 outDir = fullfile(tempdir, 'sft-gallery-test');
 if exist(outDir, 'dir')
     rmdir(outDir, 's');
@@ -17,8 +17,8 @@ end
 result = runAllExamples(outDir, ["png"]);
 pngFiles = dir(fullfile(outDir, '*.png'));
 
-verifyEqual(testCase, numel(result), 27);
-verifyEqual(testCase, numel(pngFiles), 27);
+verifyEqual(testCase, numel(result), 28);
+verifyEqual(testCase, numel(pngFiles), 28);
 verifyTrue(testCase, isfile(fullfile(outDir, 'contour_scatter.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'parallel_coordinates.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'sankey_flow.png')));
@@ -26,6 +26,7 @@ verifyTrue(testCase, isfile(fullfile(outDir, 'calendar_heatmap.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'paired_slopegraph.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'uncertainty_fan_chart.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'ternary_scatter.png')));
+verifyTrue(testCase, isfile(fullfile(outDir, 'forest_plot.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'radar_chart.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'ridgeline_plot.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'butterfly_comparison.png')));
@@ -47,7 +48,7 @@ end
 
 report = sftGalleryReport(outDir, ["png"]);
 
-verifyEqual(testCase, height(report), 27);
+verifyEqual(testCase, height(report), 28);
 verifyTrue(testCase, all(report.Passed));
 verifyTrue(testCase, any(report.Example == "contour_scatter"));
 verifyTrue(testCase, any(report.Example == "parallel_coordinates"));
@@ -56,6 +57,7 @@ verifyTrue(testCase, any(report.Example == "calendar_heatmap"));
 verifyTrue(testCase, any(report.Example == "paired_slopegraph"));
 verifyTrue(testCase, any(report.Example == "uncertainty_fan_chart"));
 verifyTrue(testCase, any(report.Example == "ternary_scatter"));
+verifyTrue(testCase, any(report.Example == "forest_plot"));
 verifyTrue(testCase, any(report.Example == "radar_chart"));
 verifyTrue(testCase, any(report.Example == "ridgeline_plot"));
 verifyTrue(testCase, any(report.Example == "butterfly_comparison"));
