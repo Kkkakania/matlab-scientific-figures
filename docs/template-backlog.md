@@ -10,11 +10,10 @@ choice of chart type, but source files are not copied into the repo.
 
 ## Current Coverage
 
-The v0.5.0 line has enough breadth for a first serious public version: 22
-examples covering trends, uncertainty, dense x-y structure, grouped comparison,
-distributions, matrices, rankings, multivariate profiles, multi-panel figures,
-and one 3D surface. New work should improve real user workflows before adding
-more chart types.
+The current public gallery has 22 examples covering trends, uncertainty, dense
+x-y structure, grouped comparison, distributions, matrices, rankings,
+multivariate profiles, multi-panel figures, and one 3D surface. New work should
+improve real user workflows before adding more chart types.
 
 ## Already Covered
 
@@ -45,12 +44,23 @@ more chart types.
 
 ## Workflow Work Before More Templates
 
-- A template registry for discovery and selected rendering.
-- A one-template render command that does not require calling renderer names by
-  hand.
-- A documentation page for adapting figure size, font, and export format.
-- More consistency checks between `runAllExamples`, `examples/README.md`,
-  `mfigci.yml`, and the committed gallery.
+Completed workflow foundations:
+
+- Template registry for discovery and selected rendering.
+- One-template and query-based render commands that do not require calling
+  renderer names by hand.
+- Documentation for adapting figure size, font, data inputs, and export format.
+- Consistency checks between `runAllExamples`, `examples/README.md`,
+  `docs/template-reference.md`, `mfigci.yml`, the manifest, and the committed
+  gallery.
+
+Next workflow improvements should focus on:
+
+- First-use testing from a fresh clone.
+- Windows/Linux MATLAB CLI notes.
+- Generated documentation tables from `docs/template-manifest.json`.
+- Lightweight color-accessibility checks for changed gallery images.
+- Better examples for real CSV/Excel data while keeping public data synthetic.
 
 ## What Not To Add Yet
 

@@ -18,6 +18,8 @@
   charts with parallel coordinates.
 - Add a timeout-helper regression check and wire it into local and GitHub
   quality gates.
+- Refresh the template backlog so it reflects the current 22-template gallery
+  and completed workflow foundations.
 
 ## v3.2.0 - 2026-05-30
 
