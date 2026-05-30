@@ -17,6 +17,8 @@
   PNGs, gallery checks, and `mfigci.yml`.
 - Expand privacy and provenance scans to SVG and workflow/config files, and
   keep committed SVG metadata neutral.
+- Simplify the README first screen around eight representative gallery images
+  and copyable-script usage.
 
 ## v0.4.0 - 2026-05-30
 

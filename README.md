@@ -4,37 +4,32 @@
 [![Release](https://img.shields.io/github/v/release/Kkkakania/matlab-scientific-figures)](https://github.com/Kkkakania/matlab-scientific-figures/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Clean-room MATLAB templates for publication-style scientific figures.
+A small clean-room gallery of MATLAB figure scripts.
 
-Pick the closest example, replace the synthetic data, and export PNG, SVG, or
-PDF from the same script.
+Each example is meant to be copied: synthetic data in, publication-style PNG,
+SVG, or PDF out. No private source packs, no journal screenshots, no hidden
+helper archive.
 
 ## Gallery
 
-The gallery currently contains 22 examples.
+The gallery contains 22 examples. These 8 are a quick scan of the range.
 
 <table>
   <tr>
     <td><img src="gallery/contour_scatter.png" width="210" alt="Contour scatter"><br>Contour scatter</td>
     <td><img src="gallery/double_triangle_heatmap.png" width="210" alt="Double-triangle heatmap"><br>Double-triangle heatmap</td>
     <td><img src="gallery/zoomed_inset_line.png" width="210" alt="Zoomed inset line"><br>Zoomed inset line</td>
-    <td><img src="gallery/multi_panel_overview.png" width="210" alt="Multi-panel overview"><br>Multi-panel overview</td>
-  </tr>
-  <tr>
-    <td><img src="gallery/grouped_error_bar.png" width="210" alt="Grouped error bar"><br>Grouped error bar</td>
-    <td><img src="gallery/correlation_bubble.png" width="210" alt="Correlation bubble heatmap"><br>Correlation bubble</td>
-    <td><img src="gallery/positive_negative_area.png" width="210" alt="Positive-negative area"><br>Signed area</td>
     <td><img src="gallery/parallel_coordinates.png" width="210" alt="Parallel coordinates"><br>Parallel coordinates</td>
   </tr>
   <tr>
-    <td><img src="gallery/waffle_chart.png" width="210" alt="Waffle chart"><br>Waffle chart</td>
-    <td><img src="gallery/butterfly_comparison.png" width="210" alt="Butterfly comparison"><br>Butterfly comparison</td>
+    <td><img src="gallery/grouped_error_bar.png" width="210" alt="Grouped error bar"><br>Grouped error bar</td>
     <td><img src="gallery/ridgeline_plot.png" width="210" alt="Ridgeline plot"><br>Ridgeline plot</td>
     <td><img src="gallery/radar_chart.png" width="210" alt="Radar chart"><br>Radar chart</td>
+    <td><img src="gallery/multi_panel_overview.png" width="210" alt="Multi-panel overview"><br>Multi-panel overview</td>
   </tr>
 </table>
 
-Run `runAllExamples` to generate all previews locally.
+Run `runAllExamples` to regenerate the full gallery locally.
 
 The full gallery includes line plots, confidence intervals, scatter plots,
 density scatter plots, contour scatter plots, grouped bars, error bars,
