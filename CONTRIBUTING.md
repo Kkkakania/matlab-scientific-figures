@@ -46,6 +46,15 @@ Avoid broad refactors in template pull requests; they are harder to review.
 
 ## Local Checks
 
+Run the fast static bundle first:
+
+```bash
+./scripts/check_static_quality.sh
+```
+
+It does not start MATLAB, so it is useful for documentation, metadata, and
+policy changes.
+
 ```bash
 ./scripts/check_release_ready.sh
 ```
@@ -64,6 +73,8 @@ Individual checks are still useful while iterating:
 ./scripts/check_provenance.sh
 ./scripts/check_gallery_outputs.sh
 ./scripts/check_gallery_consistency.sh
+./scripts/check_template_manifest_schema.sh
+./scripts/check_toolbox_independence.sh
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery.sh
 ```
 

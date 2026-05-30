@@ -39,6 +39,7 @@ Use this checklist before merging a new or changed figure template.
 Run:
 
 ```bash
+./scripts/check_static_quality.sh
 ./scripts/check_release_ready.sh
 ```
 

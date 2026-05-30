@@ -17,6 +17,7 @@ docs if you want to change the project.
 - [Recipes](recipes.md)
 - [MATLAB CLI guide](matlab-cli-guide.md)
 - [Compatibility](compatibility.md)
+- [Local checks](local-checks.md)
 
 ## Tutorials
 

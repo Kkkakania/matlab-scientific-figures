@@ -15,6 +15,7 @@
 - Make selected-template CLI rendering print the rendered template names.
 - Add compatibility documentation and a guard against accidental toolbox-only
   MATLAB calls.
+- Add a non-MATLAB static quality bundle for contributor preflight checks.
 
 ## v3.5.0 - 2026-05-31
 

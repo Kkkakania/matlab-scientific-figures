@@ -7,6 +7,12 @@ Run the combined gate before tagging:
 ./scripts/check_release_ready.sh
 ```
 
+For a fast non-MATLAB pass while editing docs or metadata:
+
+```bash
+./scripts/check_static_quality.sh
+```
+
 Run it with MATLAB enforced when MATLAB is installed:
 
 ```bash

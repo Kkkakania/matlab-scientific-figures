@@ -89,6 +89,7 @@ disp(report)
 Then run:
 
 ```bash
+./scripts/check_static_quality.sh
 ./scripts/check_release_ready.sh
 ```
 
