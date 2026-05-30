@@ -41,6 +41,8 @@ gallery:
     - "ternary_scatter.svg"
     - "contour_scatter.png"
     - "contour_scatter.svg"
+    - "bland_altman_plot.png"
+    - "bland_altman_plot.svg"
     - "correlation_bubble.png"
     - "correlation_bubble.svg"
     - "density_scatter.png"

@@ -13,6 +13,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show three-part composition | `ternary_scatter` | Three components sum to a whole for each observation |
 | Show dense relationship | `density_scatter` | Many points overlap and local density matters |
 | Show local density structure | `contour_scatter` | Points matter, but clusters and ridges also matter |
+| Check method agreement | `bland_altman_plot` | Two measurement methods or models should be compared by bias and agreement limits |
 | Compare methods | `grouped_bar` | A few methods are compared across a few metrics |
 | Compare methods with uncertainty | `grouped_error_bar` | Group means need visible uncertainty or variability |
 | Compare estimates with intervals | `forest_plot` | Several point estimates need interval context and a reference line |
@@ -75,6 +76,14 @@ Use `ternary_scatter` when each observation is a composition of three parts
 that sum to one. It is useful for mixtures, portfolios, operating modes, or
 energy shares. Do not use it when the three variables are independent; a
 regular scatter or parallel-coordinates view will be easier to read.
+
+## Bland-Altman Agreement Plots
+
+Use `bland_altman_plot` when the question is whether two measurement methods,
+models, or instruments agree closely enough for practical use. The x-axis shows
+the pairwise mean, the y-axis shows the difference, and the horizontal lines
+show bias plus limits of agreement. Use a normal scatter plot instead when the
+main question is correlation rather than agreement.
 
 ## Forest Plots
 

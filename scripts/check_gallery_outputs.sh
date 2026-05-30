@@ -12,6 +12,7 @@ expected=(
   ternary_scatter
   density_scatter
   contour_scatter
+  bland_altman_plot
   grouped_bar
   grouped_error_bar
   forest_plot

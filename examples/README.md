@@ -31,6 +31,7 @@ The `Name` column is the value to pass into `sftRenderExamples` or
 | `ternary_scatter` | `renderTernaryScatter` | Show three-part compositions |
 | `density_scatter` | `renderDensityScatter` | Show dense point clouds without overplotting |
 | `contour_scatter` | `renderContourScatter` | Show dense point clouds with local density contours |
+| `bland_altman_plot` | `renderBlandAltmanPlot` | Check agreement between two measurement methods |
 | `grouped_bar` | `renderGroupedBar` | Compare methods across a few metrics |
 | `grouped_error_bar` | `renderGroupedErrorBar` | Compare methods with uncertainty bars |
 | `forest_plot` | `renderForestPlot` | Compare estimates with intervals |

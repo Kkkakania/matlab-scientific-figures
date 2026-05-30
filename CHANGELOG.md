@@ -8,6 +8,7 @@
 - Add a clean-room `forest_plot` template for estimates with intervals.
 - Add a clean-room `waterfall_chart` template for cumulative contribution
   steps.
+- Add a clean-room `bland_altman_plot` template for method-agreement review.
 
 ## v3.4.0 - 2026-05-31
 

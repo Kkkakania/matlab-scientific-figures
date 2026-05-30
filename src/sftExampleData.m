@@ -86,6 +86,22 @@ switch kind
         data.x = [x1; x2];
         data.y = [y1; y2];
 
+    case "bland_altman_plot"
+        n = 96;
+        baseline = linspace(24, 118, n).' + 5.5 * randn(n, 1);
+        methodA = baseline + 1.8 * randn(n, 1);
+        proportionalBias = 0.018 * (baseline - mean(baseline));
+        difference = 1.15 + proportionalBias + 3.1 * randn(n, 1);
+        methodB = methodA + difference;
+        data.methodA = methodA;
+        data.methodB = methodB;
+        data.meanValues = (methodA + methodB) ./ 2;
+        data.differences = methodB - methodA;
+        data.bias = mean(data.differences);
+        spread = 1.96 * std(data.differences, 0);
+        data.upperLimit = data.bias + spread;
+        data.lowerLimit = data.bias - spread;
+
     case "grouped_bar"
         data.values = [4.2 3.1 3.7; 5.0 4.1 4.4; 3.6 4.7 4.2; 4.8 3.9 5.1];
         data.groups = ["Baseline", "Method A", "Method B", "Method C"];

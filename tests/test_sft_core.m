@@ -219,6 +219,18 @@ verifyEqual(testCase, data.final, data.start + sum(data.steps), 'AbsTol', 1e-12)
 verifyGreaterThan(testCase, data.final, 0);
 end
 
+function testBlandAltmanDataHasAgreementStatistics(testCase)
+data = sftExampleData('bland_altman_plot');
+
+verifyEqual(testCase, numel(data.methodA), numel(data.methodB));
+verifyGreaterThan(testCase, numel(data.methodA), 50);
+verifyEqual(testCase, data.meanValues, (data.methodA + data.methodB) ./ 2, 'AbsTol', 1e-12);
+verifyEqual(testCase, data.differences, data.methodB - data.methodA, 'AbsTol', 1e-12);
+verifyEqual(testCase, data.bias, mean(data.differences), 'AbsTol', 1e-12);
+verifyGreaterThan(testCase, data.upperLimit, data.bias);
+verifyLessThan(testCase, data.lowerLimit, data.bias);
+end
+
 function testContourScatterDataHasDensePairedCoordinates(testCase)
 data = sftExampleData('contour_scatter');
 
@@ -232,7 +244,7 @@ function testTemplateRegistryDefinesGalleryExamples(testCase)
 registry = sftTemplateRegistry();
 names = string({registry.Name}).';
 
-verifyEqual(testCase, numel(registry), 29);
+verifyEqual(testCase, numel(registry), 30);
 verifyEqual(testCase, numel(unique(names)), numel(names));
 verifyTrue(testCase, any(names == "contour_scatter"));
 verifyTrue(testCase, any(names == "parallel_coordinates"));
@@ -243,6 +255,7 @@ verifyTrue(testCase, any(names == "uncertainty_fan_chart"));
 verifyTrue(testCase, any(names == "ternary_scatter"));
 verifyTrue(testCase, any(names == "forest_plot"));
 verifyTrue(testCase, any(names == "waterfall_chart"));
+verifyTrue(testCase, any(names == "bland_altman_plot"));
 verifyTrue(testCase, all(arrayfun(@(item) isa(item.Renderer, 'function_handle'), registry)));
 verifyTrue(testCase, all(arrayfun(@(item) strlength(item.Task) > 0, registry)));
 verifyTrue(testCase, all(arrayfun(@(item) ~isempty(item.Tags), registry)));
@@ -279,7 +292,7 @@ end
 function testTemplateManifestIncludesFilesAndTags(testCase)
 manifest = sftTemplateManifest();
 
-verifyEqual(testCase, numel(manifest), 29);
+verifyEqual(testCase, numel(manifest), 30);
 verifyTrue(testCase, isfield(manifest, 'Name'));
 verifyTrue(testCase, isfield(manifest, 'RendererName'));
 verifyTrue(testCase, isfield(manifest, 'ExampleFile'));

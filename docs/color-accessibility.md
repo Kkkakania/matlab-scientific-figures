@@ -26,6 +26,7 @@ thumbnails.
 | `ternary_scatter` | Medium | Group hue matters; triangular position still carries the composition. |
 | `density_scatter` | Low | Sequential color is supported by density structure. |
 | `contour_scatter` | Low | Density color is reinforced by contour lines and overlaid points. |
+| `bland_altman_plot` | Low | Bias and agreement limits use line position and labels, not hue alone. |
 | `grouped_bar` | Medium | Series rely on hue; legend and grouped position reduce risk. |
 | `grouped_error_bar` | Medium | Series rely on hue; grouped position and error bars help. |
 | `forest_plot` | Low | Position, interval length, and the reference line carry the comparison. |

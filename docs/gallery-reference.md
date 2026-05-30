@@ -22,6 +22,7 @@ renderer in `examples/` and a name accepted by `sftRenderExamples`.
 | `ternary_scatter` | <img src="../gallery/ternary_scatter.png" width="220" alt="Ternary scatter"> | Three components sum to one composition |
 | `density_scatter` | <img src="../gallery/density_scatter.png" width="220" alt="Density scatter"> | Many points overlap |
 | `contour_scatter` | <img src="../gallery/contour_scatter.png" width="220" alt="Contour scatter"> | Local density shape matters as much as points |
+| `bland_altman_plot` | <img src="../gallery/bland_altman_plot.png" width="220" alt="Bland-Altman plot"> | Two measurement methods need agreement review |
 
 ## Comparisons And Rankings
 

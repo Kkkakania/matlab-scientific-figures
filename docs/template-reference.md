@@ -37,6 +37,7 @@ sftWriteTemplateManifest()
 | `ternary_scatter` | `renderTernaryScatter` | Show three-part compositions | `composition`, `scatter` |
 | `density_scatter` | `renderDensityScatter` | Show dense x-y relationship | `scatter`, `density` |
 | `contour_scatter` | `renderContourScatter` | Show local density structure | `scatter`, `density`, `contour` |
+| `bland_altman_plot` | `renderBlandAltmanPlot` | Check agreement between two methods | `agreement`, `comparison` |
 | `grouped_bar` | `renderGroupedBar` | Compare grouped values | `bar`, `comparison` |
 | `grouped_error_bar` | `renderGroupedErrorBar` | Compare grouped values with uncertainty | `bar`, `uncertainty` |
 | `forest_plot` | `renderForestPlot` | Compare estimates with intervals | `interval`, `comparison` |
