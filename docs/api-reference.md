@@ -11,6 +11,7 @@ live scripts, and batch rendering jobs.
 | `sftListTags()` | Show every tag and how many templates use it. |
 | `sftFindTemplates(query)` | Search names, tasks, output names, and tags with loose text matching. |
 | `sftFindTemplatesByTag(tags)` | Find templates that use exact tags such as `matrix` or `agreement`. |
+| `sftTemplateInfo(name)` | Inspect one template's renderer, files, task, and tags. |
 | `sftTemplateManifest()` | Return machine-readable template metadata as a struct array. |
 | `sftWriteTemplateManifest(file)` | Write the metadata JSON used by docs and checks. |
 
@@ -19,6 +20,7 @@ Example:
 ```matlab
 templates = sftFindTemplatesByTag("matrix");
 disp(templates(:, ["Name", "Task"]))
+info = sftTemplateInfo("heatmap")
 ```
 
 ## Rendering

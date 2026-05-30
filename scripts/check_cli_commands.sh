@@ -20,6 +20,10 @@ search_output="$(MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh search matrix)
 grep -q "heatmap" <<<"$search_output"
 grep -q "correlation_bubble" <<<"$search_output"
 
+info_output="$(MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh info heatmap)"
+grep -q "renderHeatmap" <<<"$info_output"
+grep -q "gallery/heatmap.png" <<<"$info_output"
+
 SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh match inset
 test -s "$TMP_DIR/zoomed_inset_line.png"
 

@@ -313,6 +313,21 @@ verifyTrue(testCase, any(combinedTemplates.Name == "waterfall_chart"));
 verifyTrue(testCase, any(combinedTemplates.Name == "bland_altman_plot"));
 end
 
+function testTemplateInfoReturnsSingleTemplateMetadata(testCase)
+info = sftTemplateInfo("heatmap");
+
+verifyEqual(testCase, info.Name, "heatmap");
+verifyEqual(testCase, info.RendererName, "renderHeatmap");
+verifyEqual(testCase, info.ExampleFile, "examples/renderHeatmap.m");
+verifyEqual(testCase, info.PngFile, "gallery/heatmap.png");
+verifyTrue(testCase, any(info.Tags == "matrix"));
+end
+
+function testTemplateInfoRejectsUnknownTemplate(testCase)
+verifyError(testCase, @() sftTemplateInfo("not_a_template"), ...
+    'sft:UnknownTemplate');
+end
+
 function testTemplateManifestIncludesFilesAndTags(testCase)
 manifest = sftTemplateManifest();
 

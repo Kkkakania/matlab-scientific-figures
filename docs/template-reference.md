@@ -10,6 +10,7 @@ sftListTemplates()
 sftListTags()
 sftFindTemplates("matrix")
 sftFindTemplatesByTag("matrix")
+sftTemplateInfo("heatmap")
 sftTemplateManifest()
 sftRenderExamples(["heatmap", "double_triangle_heatmap"], "gallery")
 sftRenderTags("matrix", "gallery")
@@ -22,6 +23,7 @@ From a shell:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tags
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search matrix
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh info heatmap
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tag matrix
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match matrix
 ```

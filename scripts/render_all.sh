@@ -62,6 +62,24 @@ if [[ "${1:-}" == "search" ]]; then
   exit 0
 fi
 
+if [[ "${1:-}" == "info" ]]; then
+  shift
+  if [[ "$#" -ne 1 ]]; then
+    echo "Usage: ./scripts/render_all.sh info <template>" >&2
+    exit 2
+  fi
+
+  name="$1"
+  if [[ ! "$name" =~ ^[a-z0-9_]+$ ]]; then
+    echo "Invalid template name: $name" >&2
+    echo "Template names may contain lowercase letters, numbers, and underscores." >&2
+    exit 2
+  fi
+
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); disp(sftTemplateInfo(\"$name\"))"
+  exit 0
+fi
+
 if [[ "${1:-}" == "tag" ]]; then
   shift
   if [[ "$#" -eq 0 ]]; then
