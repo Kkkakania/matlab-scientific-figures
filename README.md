@@ -142,7 +142,7 @@ is available. The project uses the `matlab-figures` preset from
 
 ## Project Status
 
-Current stable release: `v0.3.0`.
+Current stable release: `v0.4.0`.
 
 The project is intentionally focused. New templates should arrive with
 examples, deterministic data, documentation, and provenance checks.

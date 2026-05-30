@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Planned: next templates and workflow improvements tracked in the public issue
+  backlog.
+
+## v0.4.0 - 2026-05-30
+
 - Add waffle chart example, deterministic composition data, gallery output,
   tests, and chart-selection guidance.
 - Add butterfly comparison example for two-sided baseline comparisons.
