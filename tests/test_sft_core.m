@@ -163,6 +163,34 @@ verifyTrue(testCase, all(arrayfun(@(item) strlength(item.Task) > 0, registry)));
 verifyTrue(testCase, all(arrayfun(@(item) ~isempty(item.Tags), registry)));
 end
 
+function testListTemplatesReturnsUserFacingTable(testCase)
+registry = sftTemplateRegistry();
+
+templates = sftListTemplates();
+
+verifyEqual(testCase, height(templates), numel(registry));
+verifyEqual(testCase, templates.Properties.VariableNames, ...
+    {'Name', 'OutputName', 'Task', 'Tags'});
+verifyTrue(testCase, all(strlength(templates.Name) > 0));
+verifyTrue(testCase, all(strlength(templates.Task) > 0));
+verifyTrue(testCase, any(templates.Name == "double_triangle_heatmap"));
+verifyTrue(testCase, any(contains(templates.Tags, "matrix")));
+end
+
+function testFindTemplatesSearchesNamesTasksAndTags(testCase)
+matrixTemplates = sftFindTemplates("matrix");
+denseTemplates = sftFindTemplates(["density", "contour"]);
+insetTemplates = sftFindTemplates("inset");
+
+verifyTrue(testCase, all(contains(lower(matrixTemplates.Tags), "matrix") | ...
+    contains(lower(matrixTemplates.Task), "matrix") | ...
+    contains(lower(matrixTemplates.Name), "matrix")));
+verifyTrue(testCase, any(matrixTemplates.Name == "double_triangle_heatmap"));
+verifyTrue(testCase, any(denseTemplates.Name == "density_scatter"));
+verifyTrue(testCase, any(denseTemplates.Name == "contour_scatter"));
+verifyEqual(testCase, insetTemplates.Name, "zoomed_inset_line");
+end
+
 function testExportCreatesRequestedFiles(testCase)
 outDir = fullfile(tempdir, 'sft-core-test');
 if exist(outDir, 'dir')
