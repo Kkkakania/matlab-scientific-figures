@@ -59,6 +59,14 @@ done < <(find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type f -name '*.md' 
 
 require_link "docs/README.md" "../ROADMAP.md"
 
+while IFS= read -r doc_file; do
+  doc_name="$(basename "$doc_file")"
+  if [[ "$doc_name" == "README.md" ]]; then
+    continue
+  fi
+  require_link "docs/README.md" "$doc_name"
+done < <(find "$ROOT_DIR/docs" -maxdepth 1 -type f -name '*.md' -print | sort)
+
 if [[ "$found" -ne 0 ]]; then
   exit 1
 fi

@@ -22,6 +22,8 @@
   API credit planning.
 - Add the roadmap to the documentation index and require that entry in the
   documentation link check.
+- Require every top-level documentation Markdown file to be listed in the
+  documentation index.
 - Rename the README provenance section to reduce expected scan noise.
 - Exclude the reviewed project `LICENSE` file from `mfigci` scans so reports
   focus on unexpected provenance findings.
