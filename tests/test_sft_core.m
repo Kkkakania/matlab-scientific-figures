@@ -105,6 +105,15 @@ verifyEqual(testCase, size(data.colors, 2), 3);
 verifyTrue(testCase, all(data.counts > 0));
 end
 
+function testButterflyDataHasMatchedPositiveSides(testCase)
+data = sftExampleData('butterfly');
+
+verifyEqual(testCase, size(data.left), size(data.right));
+verifyEqual(testCase, numel(data.labels), numel(data.left));
+verifyTrue(testCase, all(data.left > 0));
+verifyTrue(testCase, all(data.right > 0));
+end
+
 function testExportCreatesRequestedFiles(testCase)
 outDir = fullfile(tempdir, 'sft-core-test');
 if exist(outDir, 'dir')

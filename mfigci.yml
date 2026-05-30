@@ -42,6 +42,8 @@ gallery:
     - "grouped_bar.svg"
     - "grouped_error_bar.png"
     - "grouped_error_bar.svg"
+    - "butterfly_comparison.png"
+    - "butterfly_comparison.svg"
     - "waffle_chart.png"
     - "waffle_chart.svg"
     - "heatmap.png"

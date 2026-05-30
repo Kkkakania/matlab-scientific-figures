@@ -4,6 +4,7 @@
 
 - Add waffle chart example, deterministic composition data, gallery output,
   tests, and chart-selection guidance.
+- Add butterfly comparison example for two-sided baseline comparisons.
 
 ## v0.3.0 - 2026-05-30
 

@@ -30,6 +30,7 @@ renderers = {
     'density_scatter', @renderDensityScatter
     'grouped_bar', @renderGroupedBar
     'grouped_error_bar', @renderGroupedErrorBar
+    'butterfly_comparison', @renderButterflyComparison
     'waffle_chart', @renderWaffleChart
     'positive_negative_area', @renderPositiveNegativeArea
     'heatmap', @renderHeatmap

@@ -11,6 +11,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show dense relationship | `density_scatter` | Many points overlap and local density matters |
 | Compare methods | `grouped_bar` | A few methods are compared across a few metrics |
 | Compare methods with uncertainty | `grouped_error_bar` | Group means need visible uncertainty or variability |
+| Compare two sides | `butterfly_comparison` | Two groups should be read from a shared zero baseline |
 | Show composition | `waffle_chart` | Percent shares or progress counts should be compact and countable |
 | Show matrix pattern | `heatmap` | Pairwise relations or sample-by-feature values matter |
 | Show correlation strength | `correlation_bubble` | Positive and negative pairwise correlations both matter |
@@ -35,3 +36,10 @@ percentage shares and the countable 10 x 10 grid adds clarity. A waffle chart is
 often easier to scan than a pie chart when the parts are close in size, but it
 is not a good fit for many tiny categories or values that do not naturally sum
 to a meaningful whole.
+
+## Butterfly Comparisons
+
+Use `butterfly_comparison` when the contrast between two sides matters more
+than their absolute positions in separate panels. Keep the left and right
+values positive in the input data; the renderer mirrors the left side around
+zero so the sign convention is visible without changing the underlying values.

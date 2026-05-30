@@ -60,6 +60,13 @@ switch kind
         data.counts = [42 27 19 12];
         data.colors = sftPalette('main', numel(data.counts));
 
+    case "butterfly"
+        data.labels = ["North", "East", "South", "West", "Central", "Coastal"];
+        data.left = [38 31 28 24 20 17];
+        data.right = [34 36 30 29 25 21];
+        data.leftLabel = "Scenario A";
+        data.rightLabel = "Scenario B";
+
     case "positive_negative_area"
         x = linspace(0, 18, 160);
         y = 0.38 * sin(0.75 * x) + 0.18 * cos(1.65 * x + 0.4) ...
