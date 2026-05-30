@@ -17,6 +17,9 @@ jobs:
       - name: Verify gallery metadata is consistent
         run: ./scripts/check_gallery_consistency.sh
 
+      - name: Check forbidden public files
+        run: ./scripts/check_forbidden_files.sh
+
       - name: Run privacy scan
         run: ./scripts/check_privacy.sh
 
