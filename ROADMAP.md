@@ -102,24 +102,31 @@ Delivered:
   count.
 - MATLAB release-gate coverage for the 30-template gallery.
 
+## Post-v3.5.0 Hardening On Main
+
+These changes are already on `main` after the `v3.5.0` tag. They improve
+maintainability and first-use confidence, but they are intentionally not tagged
+yet because the project is slowing its release pace.
+
+- Generated tag-based gallery subsets from the manifest
+  ([#18](https://github.com/Kkkakania/matlab-scientific-figures/issues/18)).
+- Color-accessibility audit coverage checks
+  ([#19](https://github.com/Kkkakania/matlab-scientific-figures/issues/19)).
+- MATLAB compatibility documentation and release-gate coverage
+  ([#20](https://github.com/Kkkakania/matlab-scientific-figures/issues/20)).
+
 ## Next Candidates
 
-Candidates that need careful design before inclusion:
+Candidates that need real feedback or careful design before inclusion:
 
-- Generated docs pages from tag-based gallery subsets.
-- Automated color accessibility checks.
-- Optional local check for MATLAB version compatibility.
+- First-use reports from a fresh clone
+  ([#9](https://github.com/Kkkakania/matlab-scientific-figures/issues/9)).
 - A small number of domain examples that still use synthetic data.
-- PyPI or package-manager guidance if users ask for easier installation.
-
-Tracked candidates:
-
-- [#18](https://github.com/Kkkakania/matlab-scientific-figures/issues/18):
-  Generate tag-based gallery subset docs from the manifest.
-- [#19](https://github.com/Kkkakania/matlab-scientific-figures/issues/19):
-  Evaluate automated color-accessibility checks for gallery outputs.
-- [#20](https://github.com/Kkkakania/matlab-scientific-figures/issues/20):
-  Improve MATLAB version compatibility evidence.
+- Clearer guidance for adapting examples to lab CSV/Excel tables.
+- Optional package-manager or release-asset guidance if users ask for easier
+  installation.
+- One focused template only when a request has a reproducible use case,
+  synthetic data, docs, gallery outputs, and checks.
 
 ## Versioning Pace
 

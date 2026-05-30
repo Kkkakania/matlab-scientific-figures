@@ -171,3 +171,20 @@ Release conditions:
 
 - MATLAB-enabled release gate passes locally.
 - `Quality checks` and `Figure quality` pass on `main` and the release tag.
+
+## Post-v3.5.0 Main-Branch Hardening
+
+Goal: improve contributor confidence without creating version churn.
+
+Delivered on `main` after `v3.5.0`:
+
+- Tag-based gallery documentation generated from the template manifest.
+- Color-accessibility audit coverage checks.
+- MATLAB compatibility documentation and local release-gate coverage.
+
+Release policy:
+
+- Do not tag these changes by themselves unless users need a packaged release.
+- Use `v3.5.1` for small documentation or CI fixes if a tag is needed.
+- Use `v3.6.0` only when there is a user-visible workflow, template, or API
+  addition that justifies a new minor release.

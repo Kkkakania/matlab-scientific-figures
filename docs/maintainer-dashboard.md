@@ -74,8 +74,8 @@ notes agree. It should not look maintained because tags are produced quickly.
    palette, export, and manifest system.
 3. Use the static preflight bundle for documentation and metadata pull
    requests.
-4. Track the `v3.6.0 usability hardening` milestone for tag-subset docs,
-   color-accessibility checks, and compatibility evidence.
+4. Treat the completed `v3.6.0 usability hardening` milestone as unreleased
+   main-branch hardening until there is a user-visible reason to tag.
 5. Keep `matlab-figure-ci` dogfooding aligned with the latest released tag.
 6. Prepare the next release only when examples, docs, gallery outputs, and
    checks all move together.
