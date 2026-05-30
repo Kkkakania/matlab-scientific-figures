@@ -151,6 +151,7 @@ See [docs/README.md](docs/README.md) for the grouped documentation index.
 | Guide | Purpose |
 |---|---|
 | [Tutorials](docs/tutorials.md) | Start from a concrete figure workflow |
+| [First-use test](docs/first-use-test.md) | Try the project from a fresh clone and report useful feedback |
 | [Gallery reference](docs/gallery-reference.md) | Pick a template by sight |
 | [Template reference](docs/template-reference.md) | List every template, renderer, task, and tag |
 | [Template manifest JSON](docs/template-manifest.json) | Machine-readable template metadata |

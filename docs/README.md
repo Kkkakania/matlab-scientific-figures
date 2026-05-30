@@ -6,6 +6,7 @@ docs if you want to change the project.
 ## Use The Library
 
 - [Gallery reference](gallery-reference.md)
+- [First-use test](first-use-test.md)
 - [Template reference](template-reference.md)
 - [Template manifest JSON](template-manifest.json)
 - [Chart selection guide](chart-selection-guide.md)

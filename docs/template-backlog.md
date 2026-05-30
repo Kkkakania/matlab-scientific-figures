@@ -56,7 +56,9 @@ Completed workflow foundations:
 
 Next workflow improvements should focus on:
 
-- First-use testing from a fresh clone.
+- First-use testing from a fresh clone. See
+  [First-use test](first-use-test.md) for the current reproducible feedback
+  checklist.
 - Windows/Linux MATLAB CLI notes.
 - Generated documentation tables from `docs/template-manifest.json`.
 - Lightweight color-accessibility checks for changed gallery images.
