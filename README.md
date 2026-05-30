@@ -98,6 +98,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 
 | Guide | Purpose |
 |---|---|
+| [Tutorials](docs/tutorials.md) | Start from a concrete figure workflow |
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
 | [Use with your data](docs/use-with-your-data.md) | Turn a gallery example into your own figure |
 | [Recipes](docs/recipes.md) | Common copy-paste edits |

@@ -8,6 +8,14 @@ The rule is simple: the public repo gets original MATLAB code, synthetic data,
 gallery output, tests, and documentation. Reference material can guide the
 choice of chart type, but source files are not copied into the repo.
 
+## Current Coverage
+
+The v0.5.0 line has enough breadth for a first serious public version: 22
+examples covering trends, uncertainty, dense x-y structure, grouped comparison,
+distributions, matrices, rankings, multivariate profiles, multi-panel figures,
+and one 3D surface. New work should improve real user workflows before adding
+more chart types.
+
 ## Already Covered
 
 | Need | Example |
@@ -32,8 +40,17 @@ choice of chart type, but source files are not copied into the repo.
 | Priority | Template | Why it is useful |
 |---|---|---|
 | Medium | Sankey-style flow | Useful for flow or contribution structure, but needs careful API design |
-| Later | 3D density scatter | Attractive, but only worth adding if the 2D version is not enough |
+| Later | 3D density scatter | Attractive, but only worth adding if users need depth |
 | Later | Texture-filled bars | Useful for grayscale printing, but easy to overdo |
+
+## Workflow Work Before More Templates
+
+- A template registry for discovery and selected rendering.
+- A one-template render command that does not require calling renderer names by
+  hand.
+- A documentation page for adapting figure size, font, and export format.
+- More consistency checks between `runAllExamples`, `examples/README.md`,
+  `mfigci.yml`, and the committed gallery.
 
 ## What Not To Add Yet
 

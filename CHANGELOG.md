@@ -11,6 +11,8 @@
   including deterministic grouped data, gallery output, tests, and docs.
 - Add contour scatter example for dense x-y relationships, including smoothed
   local density contours, gallery output, tests, and docs.
+- Add a tutorials index and refresh the template backlog around the 22-example
+  v0.5.0 gallery.
 
 ## v0.4.0 - 2026-05-30
 
