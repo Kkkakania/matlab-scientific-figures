@@ -16,6 +16,7 @@ docs if you want to change the project.
 - [Use with your data](use-with-your-data.md)
 - [Recipes](recipes.md)
 - [MATLAB CLI guide](matlab-cli-guide.md)
+- [Compatibility](compatibility.md)
 
 ## Tutorials
 

@@ -175,6 +175,7 @@ See [docs/README.md](docs/README.md) for the grouped documentation index.
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
 | [Use with your data](docs/use-with-your-data.md) | Turn a gallery example into your own figure |
 | [Recipes](docs/recipes.md) | Common copy-paste edits |
+| [Compatibility](docs/compatibility.md) | Check MATLAB version and toolbox expectations |
 | [CSV and Excel tutorial](docs/tutorial-csv-excel-data.md) | Connect real tables to templates |
 | [Paper export tutorial](docs/tutorial-paper-export.md) | Export SVG, PDF, and PNG for papers |
 | [Batch rendering tutorial](docs/tutorial-batch-rendering.md) | Render many experiment figures at once |

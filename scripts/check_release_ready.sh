@@ -34,6 +34,7 @@ run_step "API reference coverage" ./scripts/check_api_reference.sh
 run_step "template manifest schema" ./scripts/check_template_manifest_schema.sh
 run_step "MATLAB help text" ./scripts/check_matlab_help.sh
 run_step "README gallery preview" ./scripts/check_readme_gallery.sh
+run_step "toolbox independence" ./scripts/check_toolbox_independence.sh
 run_step "timeout helper" ./scripts/check_timeout_helper.sh
 run_step "forbidden file scan" ./scripts/check_forbidden_files.sh
 run_step "privacy scan" ./scripts/check_privacy.sh

@@ -13,6 +13,8 @@
 - Add a first-use smoke test for list, info, and selected-template rendering.
 - Add a documented template-manifest schema and a non-MATLAB schema check.
 - Make selected-template CLI rendering print the rendered template names.
+- Add compatibility documentation and a guard against accidental toolbox-only
+  MATLAB calls.
 
 ## v3.5.0 - 2026-05-31
 

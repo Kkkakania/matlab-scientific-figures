@@ -41,6 +41,9 @@ jobs:
       - name: Check README gallery preview
         run: ./scripts/check_readme_gallery.sh
 
+      - name: Check toolbox independence
+        run: ./scripts/check_toolbox_independence.sh
+
       - name: Check timeout helper
         run: ./scripts/check_timeout_helper.sh
 
