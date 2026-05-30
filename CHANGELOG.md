@@ -18,6 +18,7 @@
   status.
 - Add a README badge for the dogfooded figure-quality workflow.
 - Rename the README provenance section to reduce expected scan noise.
+- Link the Sankey-style backlog item to its public design issue.
 - Clarify README documentation labels so older maintenance reports read as
   historical snapshots rather than the current project state.
 - Add chart-selection guidance comparing box jitter with ridgelines and radar

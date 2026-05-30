@@ -38,7 +38,7 @@ improve real user workflows before adding more chart types.
 
 | Priority | Template | Why it is useful |
 |---|---|---|
-| Medium | Sankey-style flow | Useful for flow or contribution structure, but needs careful API design |
+| Medium | [Sankey-style flow](https://github.com/Kkkakania/matlab-scientific-figures/issues/16) | Useful for flow or contribution structure, but needs careful API design |
 | Later | 3D density scatter | Attractive, but only worth adding if users need depth |
 | Later | Texture-filled bars | Useful for grayscale printing, but easy to overdo |
 
