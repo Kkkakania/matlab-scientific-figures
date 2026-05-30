@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v3.2.0` is the current release.
+- `v3.3.0` is the current release.
 - The gallery has 23 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 - Future tags should follow `docs/release-cadence.md`; small maintenance
@@ -109,3 +109,23 @@ Release conditions:
 - Manifest tests pass.
 - The MATLAB-enabled release gate checks manifest consistency.
 - GitHub Actions pass on tag and main.
+
+## v3.3.0 Released
+
+Goal: add one carefully scoped flow template now that the registry, manifest,
+gallery checks, and documentation workflow can keep template changes coherent.
+
+Delivered changes:
+
+- `sankey_flow` synthetic edge/node data and a clean-room MATLAB renderer.
+- Committed PNG/SVG gallery outputs for the new template.
+- Gallery, template, chart-selection, color-accessibility, backlog, manifest,
+  README, and status documentation updates.
+- MATLAB tests covering the 23-template registry, manifest, gallery report, and
+  Sankey edge-table shape.
+
+Release conditions:
+
+- MATLAB-enabled release gate passes locally.
+- `mfigci` dogfooding checks pass locally and in GitHub Actions.
+- GitHub issue #16 is closed with implementation and verification notes.

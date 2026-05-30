@@ -8,11 +8,11 @@ Going forward, releases should slow down.
 
 ## Current Policy
 
-- Keep `v3.2.0` as the current public release until a user-visible reason
+- Keep `v3.3.0` as the current public release until a user-visible reason
   justifies another tag.
-- Use patch releases, such as `v3.2.1`, for documentation fixes, CI checks,
+- Use patch releases, such as `v3.3.1`, for documentation fixes, CI checks,
   typo fixes, and small maintenance work.
-- Use minor releases, such as `v3.3.0`, only when users get a new workflow,
+- Use minor releases, such as `v3.4.0`, only when users get a new workflow,
   helper API, template, or documented behavior.
 - Do not use another major release unless the public API or compatibility
   boundary changes in a way users must notice.

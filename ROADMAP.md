@@ -5,7 +5,7 @@ It should agree with README, CHANGELOG, and GitHub releases.
 
 ## Current State
 
-- Current public release: `v3.2.0`.
+- Current public release: `v3.3.0`.
 - Maturity: early public project; the gallery is usable, but adoption claims
   should stay conservative until real external use appears.
 - Gallery size: 23 clean-room templates.
@@ -63,6 +63,16 @@ Delivered:
 - `sftWriteTemplateManifest`.
 - `docs/template-manifest.json`.
 - Manifest consistency checks in the MATLAB-enabled release gate.
+
+### v3.3.0: Sankey Flow Template
+
+Delivered:
+
+- `sankey_flow` clean-room synthetic data and renderer.
+- Committed PNG/SVG gallery outputs for the flow template.
+- Chart-selection, color-accessibility, gallery, template, manifest, and
+  backlog documentation updates.
+- MATLAB tests and gallery checks covering the 23-template gallery.
 
 ## Next Candidates
 

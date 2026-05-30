@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- No changes yet.
+
+## v3.3.0 - 2026-05-31
+
 - Add a clean-room `sankey_flow` template for weighted flow structures.
 - Add a documentation link checker for local Markdown links and gallery image
   references.
