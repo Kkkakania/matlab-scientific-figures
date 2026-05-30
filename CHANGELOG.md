@@ -20,6 +20,8 @@
   quality gates.
 - Refresh the template backlog so it reflects the current 22-template gallery
   and completed workflow foundations.
+- Set explicit read-only GitHub Actions permissions for repository quality
+  workflows.
 
 ## v3.2.0 - 2026-05-30
 
