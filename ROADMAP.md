@@ -106,7 +106,6 @@ Delivered:
 
 Candidates that need careful design before inclusion:
 
-- Generated Markdown table from `docs/template-manifest.json`.
 - Generated docs pages from tag-based gallery subsets.
 - Automated color accessibility checks.
 - Optional local check for MATLAB version compatibility.

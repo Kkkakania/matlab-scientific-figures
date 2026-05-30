@@ -37,6 +37,7 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | Documentation links | `./scripts/check_docs_links.sh` | Broken local Markdown links and gallery image references |
 | API reference | `./scripts/check_api_reference.sh` | Public MATLAB functions missing from the API reference |
 | Template manifest schema | `./scripts/check_template_manifest_schema.sh` | JSON field, uniqueness, and referenced-file drift |
+| Template reference table | `./scripts/check_template_reference_table.sh` | Drift between manifest metadata and the template reference table |
 | MATLAB help text | `./scripts/check_matlab_help.sh` | Public MATLAB functions missing a one-line help summary |
 | README gallery | `./scripts/check_readme_gallery.sh` | README gallery count or first-screen preview drift |
 | Toolbox independence | `./scripts/check_toolbox_independence.sh` | Accidental toolbox-only calls in public MATLAB examples |

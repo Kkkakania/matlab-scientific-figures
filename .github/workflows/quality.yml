@@ -35,6 +35,9 @@ jobs:
       - name: Check template manifest schema
         run: ./scripts/check_template_manifest_schema.sh
 
+      - name: Check template reference table
+        run: ./scripts/check_template_reference_table.sh
+
       - name: Check MATLAB help text
         run: ./scripts/check_matlab_help.sh
 
