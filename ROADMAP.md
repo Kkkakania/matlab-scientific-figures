@@ -8,10 +8,10 @@ just add visual variety.
 
 Planned additions:
 
-- Correlation bubble heatmap for pairwise relationships.
 - Multi-panel layout helper for compact paper figures.
 - Grouped bar chart with error bars.
 - Positive-negative area plot for signed time-series changes.
+- Cleaner examples for using the gallery with user data.
 
 Quality goals:
 

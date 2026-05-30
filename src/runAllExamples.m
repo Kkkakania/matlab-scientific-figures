@@ -30,6 +30,7 @@ renderers = {
     'density_scatter', @renderDensityScatter
     'grouped_bar', @renderGroupedBar
     'heatmap', @renderHeatmap
+    'correlation_bubble', @renderCorrelationBubble
     'bubble_matrix', @renderBubbleMatrix
     'box_jitter', @renderBoxJitter
     'lollipop_ranking', @renderLollipopRanking

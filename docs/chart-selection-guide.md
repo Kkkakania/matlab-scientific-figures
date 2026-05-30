@@ -10,6 +10,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show dense relationship | `density_scatter` | Many points overlap and local density matters |
 | Compare methods | `grouped_bar` | A few methods are compared across a few metrics |
 | Show matrix pattern | `heatmap` | Pairwise relations or sample-by-feature values matter |
+| Show correlation strength | `correlation_bubble` | Positive and negative pairwise correlations both matter |
 | Show matrix magnitude | `bubble_matrix` | Matrix values need both position and magnitude cues |
 | Compare distributions | `box_jitter` | Group spread and individual points both matter |
 | Rank factors | `lollipop_ranking` | Ordered importance is more important than exact area |

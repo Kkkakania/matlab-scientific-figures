@@ -14,9 +14,27 @@ verifyGreaterThan(testCase, theme.LineWidth, 0);
 verifyEqual(testCase, numel(theme.FigureSize), 2);
 end
 
+function testApplyThemeUsesWhiteAxesBackground(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+set(ax, 'Color', [0 0 0]);
+
+sftApplyTheme(ax, sftTheme());
+
+verifyEqual(testCase, get(ax, 'Color'), [1 1 1]);
+end
+
 function testPaletteReturnsRequestedNumberOfRgbRows(testCase)
 colors = sftPalette('main', 7);
 verifySize(testCase, colors, [7 3]);
+verifyGreaterThanOrEqual(testCase, colors, 0);
+verifyLessThanOrEqual(testCase, colors, 1);
+end
+
+function testDivergingPaletteReturnsRequestedNumberOfRgbRows(testCase)
+colors = sftPalette('diverging', 11);
+verifySize(testCase, colors, [11 3]);
 verifyGreaterThanOrEqual(testCase, colors, 0);
 verifyLessThanOrEqual(testCase, colors, 1);
 end
@@ -26,6 +44,15 @@ a = sftExampleData('line');
 b = sftExampleData('line');
 verifyEqual(testCase, a.x, b.x);
 verifyEqual(testCase, a.y, b.y);
+end
+
+function testCorrelationBubbleDataIsSymmetric(testCase)
+data = sftExampleData('correlation_bubble');
+
+verifyEqual(testCase, size(data.matrix), [9 9]);
+verifyEqual(testCase, data.matrix, data.matrix.', 'AbsTol', 1e-12);
+verifyEqual(testCase, diag(data.matrix), ones(9, 1), 'AbsTol', 1e-12);
+verifyEqual(testCase, numel(data.labels), 9);
 end
 
 function testExportCreatesRequestedFiles(testCase)

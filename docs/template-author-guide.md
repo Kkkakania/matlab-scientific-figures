@@ -20,13 +20,13 @@ a near-duplicate.
 
 ## 2. Use The Repository Structure
 
-For a new template named `correlation_bubble`:
+For a new template named `example_name`:
 
 - Add or extend deterministic data in `src/sftExampleData.m`.
-- Add `examples/renderCorrelationBubble.m`.
+- Add `examples/renderExampleName.m`.
 - Add the renderer to `src/runAllExamples.m`.
-- Add `gallery/correlation_bubble.png`.
-- Add `gallery/correlation_bubble.svg`.
+- Add `gallery/example_name.png`.
+- Add `gallery/example_name.svg`.
 - Update `README.md`, `examples/README.md`, and
   `docs/chart-selection-guide.md`.
 

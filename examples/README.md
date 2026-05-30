@@ -14,6 +14,7 @@ designed for headless batch rendering through `runAllExamples`.
 | `density_scatter` | `renderDensityScatter` | Show dense point clouds without overplotting |
 | `grouped_bar` | `renderGroupedBar` | Compare methods across a few metrics |
 | `heatmap` | `renderHeatmap` | Show a matrix pattern |
+| `correlation_bubble` | `renderCorrelationBubble` | Show positive and negative pairwise correlations |
 | `bubble_matrix` | `renderBubbleMatrix` | Show matrix magnitude with position and area |
 | `box_jitter` | `renderBoxJitter` | Compare group distributions and observations |
 | `lollipop_ranking` | `renderLollipopRanking` | Rank factors or features |

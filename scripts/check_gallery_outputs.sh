@@ -11,6 +11,7 @@ expected=(
   density_scatter
   grouped_bar
   heatmap
+  correlation_bubble
   bubble_matrix
   box_jitter
   lollipop_ranking

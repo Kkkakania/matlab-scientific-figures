@@ -51,6 +51,16 @@ switch name
         ];
         colors = interpolatePalette(anchors, n);
         return
+    case "diverging"
+        anchors = [
+            0.20 0.32 0.55
+            0.57 0.70 0.84
+            0.96 0.96 0.94
+            0.87 0.57 0.43
+            0.62 0.20 0.18
+        ];
+        colors = interpolatePalette(anchors, n);
+        return
     otherwise
         error('sftPalette:UnknownPalette', 'Unknown palette "%s".', name);
 end

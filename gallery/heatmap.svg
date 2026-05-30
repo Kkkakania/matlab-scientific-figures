@@ -20,7 +20,7 @@ font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="no
 <path vector-effect="none" fill-rule="evenodd" d="M30,15 L630,15 L630,554 L30,554 L30,15"/>
 </g>
 
-<g fill="#121212" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-15.6091,-8)"
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-15.6091,-8)"
 font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M770000,440000 L770000,5.04e+06 L5.37e+06,5.04e+06 L5.37e+06,440000 L770000,440000"/>
