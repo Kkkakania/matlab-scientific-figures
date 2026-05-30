@@ -15,6 +15,7 @@ expected=(
   grouped_bar
   grouped_error_bar
   forest_plot
+  waterfall_chart
   butterfly_comparison
   paired_slopegraph
   waffle_chart

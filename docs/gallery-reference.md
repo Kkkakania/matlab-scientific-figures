@@ -30,6 +30,7 @@ renderer in `examples/` and a name accepted by `sftRenderExamples`.
 | `grouped_bar` | <img src="../gallery/grouped_bar.png" width="220" alt="Grouped bar"> | A few methods are compared across metrics |
 | `grouped_error_bar` | <img src="../gallery/grouped_error_bar.png" width="220" alt="Grouped error bar"> | The comparison needs visible uncertainty |
 | `forest_plot` | <img src="../gallery/forest_plot.png" width="220" alt="Forest plot"> | Point estimates need interval context |
+| `waterfall_chart` | <img src="../gallery/waterfall_chart.png" width="220" alt="Waterfall chart"> | Additive positive and negative contributions explain a final value |
 | `butterfly_comparison` | <img src="../gallery/butterfly_comparison.png" width="220" alt="Butterfly comparison"> | Two sides should share one baseline |
 | `paired_slopegraph` | <img src="../gallery/paired_slopegraph.png" width="220" alt="Paired slopegraph"> | The same items change between two conditions |
 | `lollipop_ranking` | <img src="../gallery/lollipop_ranking.png" width="220" alt="Lollipop ranking"> | Ordered importance is the main message |

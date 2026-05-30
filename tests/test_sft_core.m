@@ -210,6 +210,15 @@ verifyTrue(testCase, all(data.estimate <= data.upper));
 verifyTrue(testCase, any(data.lower < data.reference & data.upper > data.reference));
 end
 
+function testWaterfallDataHasStartStepsAndFinalValue(testCase)
+data = sftExampleData('waterfall_chart');
+
+verifyEqual(testCase, numel(data.labels), numel(data.steps));
+verifyTrue(testCase, all(isfinite(data.steps)));
+verifyEqual(testCase, data.final, data.start + sum(data.steps), 'AbsTol', 1e-12);
+verifyGreaterThan(testCase, data.final, 0);
+end
+
 function testContourScatterDataHasDensePairedCoordinates(testCase)
 data = sftExampleData('contour_scatter');
 
@@ -223,7 +232,7 @@ function testTemplateRegistryDefinesGalleryExamples(testCase)
 registry = sftTemplateRegistry();
 names = string({registry.Name}).';
 
-verifyEqual(testCase, numel(registry), 28);
+verifyEqual(testCase, numel(registry), 29);
 verifyEqual(testCase, numel(unique(names)), numel(names));
 verifyTrue(testCase, any(names == "contour_scatter"));
 verifyTrue(testCase, any(names == "parallel_coordinates"));
@@ -233,6 +242,7 @@ verifyTrue(testCase, any(names == "paired_slopegraph"));
 verifyTrue(testCase, any(names == "uncertainty_fan_chart"));
 verifyTrue(testCase, any(names == "ternary_scatter"));
 verifyTrue(testCase, any(names == "forest_plot"));
+verifyTrue(testCase, any(names == "waterfall_chart"));
 verifyTrue(testCase, all(arrayfun(@(item) isa(item.Renderer, 'function_handle'), registry)));
 verifyTrue(testCase, all(arrayfun(@(item) strlength(item.Task) > 0, registry)));
 verifyTrue(testCase, all(arrayfun(@(item) ~isempty(item.Tags), registry)));
@@ -269,7 +279,7 @@ end
 function testTemplateManifestIncludesFilesAndTags(testCase)
 manifest = sftTemplateManifest();
 
-verifyEqual(testCase, numel(manifest), 28);
+verifyEqual(testCase, numel(manifest), 29);
 verifyTrue(testCase, isfield(manifest, 'Name'));
 verifyTrue(testCase, isfield(manifest, 'RendererName'));
 verifyTrue(testCase, isfield(manifest, 'ExampleFile'));

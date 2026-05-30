@@ -16,6 +16,7 @@ Choose the figure by the communication task first, not by decoration.
 | Compare methods | `grouped_bar` | A few methods are compared across a few metrics |
 | Compare methods with uncertainty | `grouped_error_bar` | Group means need visible uncertainty or variability |
 | Compare estimates with intervals | `forest_plot` | Several point estimates need interval context and a reference line |
+| Explain cumulative change | `waterfall_chart` | Positive and negative contributions build from a starting value to a final value |
 | Compare two sides | `butterfly_comparison` | Two groups should be read from a shared zero baseline |
 | Compare paired change | `paired_slopegraph` | The same items are measured before and after a change |
 | Show composition | `waffle_chart` | Percent shares or progress counts should be compact and countable |
@@ -81,6 +82,14 @@ Use `forest_plot` when the main comparison is a set of estimates with
 intervals and a meaningful reference line. It is more compact than separate
 error-bar panels and works well when labels are more important than categories
 on an x-axis.
+
+## Waterfall Charts
+
+Use `waterfall_chart` when the story is how a starting value becomes a final
+value through positive and negative contributions. It is useful for ablation
+studies, efficiency budgets, error budgets, and stepwise performance changes.
+Avoid it when the steps are independent categories that do not form a real
+cumulative sequence.
 
 ## Butterfly Comparisons
 

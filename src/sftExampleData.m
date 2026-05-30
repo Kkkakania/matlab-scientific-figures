@@ -106,6 +106,12 @@ switch kind
         data.upper = data.estimate + widths;
         data.reference = 0;
 
+    case "waterfall_chart"
+        data.start = 100;
+        data.labels = ["Efficiency", "Storage", "Curtailment", "Forecast", "Control"];
+        data.steps = [18 12 -9 15 -6];
+        data.final = data.start + sum(data.steps);
+
     case "waffle"
         data.labels = ["Completed", "In progress", "Queued", "Blocked"];
         data.counts = [42 27 19 12];

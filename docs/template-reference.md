@@ -40,6 +40,7 @@ sftWriteTemplateManifest()
 | `grouped_bar` | `renderGroupedBar` | Compare grouped values | `bar`, `comparison` |
 | `grouped_error_bar` | `renderGroupedErrorBar` | Compare grouped values with uncertainty | `bar`, `uncertainty` |
 | `forest_plot` | `renderForestPlot` | Compare estimates with intervals | `interval`, `comparison` |
+| `waterfall_chart` | `renderWaterfallChart` | Show cumulative contribution steps | `waterfall`, `change` |
 | `butterfly_comparison` | `renderButterflyComparison` | Compare two sides around a baseline | `bar`, `comparison` |
 | `paired_slopegraph` | `renderPairedSlopegraph` | Compare paired before-after values | `comparison`, `paired` |
 | `waffle_chart` | `renderWaffleChart` | Show countable composition | `composition`, `percentage` |

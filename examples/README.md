@@ -34,6 +34,7 @@ The `Name` column is the value to pass into `sftRenderExamples` or
 | `grouped_bar` | `renderGroupedBar` | Compare methods across a few metrics |
 | `grouped_error_bar` | `renderGroupedErrorBar` | Compare methods with uncertainty bars |
 | `forest_plot` | `renderForestPlot` | Compare estimates with intervals |
+| `waterfall_chart` | `renderWaterfallChart` | Explain a final value through cumulative contribution steps |
 | `butterfly_comparison` | `renderButterflyComparison` | Compare two sides around a shared baseline |
 | `paired_slopegraph` | `renderPairedSlopegraph` | Compare paired before-after values |
 | `waffle_chart` | `renderWaffleChart` | Show composition or progress as countable cells |

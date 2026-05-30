@@ -6,6 +6,8 @@
   intervals.
 - Add a clean-room `ternary_scatter` template for three-part compositions.
 - Add a clean-room `forest_plot` template for estimates with intervals.
+- Add a clean-room `waterfall_chart` template for cumulative contribution
+  steps.
 
 ## v3.4.0 - 2026-05-31
 
