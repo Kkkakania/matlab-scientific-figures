@@ -7,6 +7,7 @@ docs if you want to change the project.
 
 - [Gallery reference](gallery-reference.md)
 - [Template reference](template-reference.md)
+- [Template manifest JSON](template-manifest.json)
 - [Chart selection guide](chart-selection-guide.md)
 - [Use with your data](use-with-your-data.md)
 - [Recipes](recipes.md)

@@ -191,6 +191,40 @@ verifyTrue(testCase, any(denseTemplates.Name == "contour_scatter"));
 verifyEqual(testCase, insetTemplates.Name, "zoomed_inset_line");
 end
 
+function testTemplateManifestIncludesFilesAndTags(testCase)
+manifest = sftTemplateManifest();
+
+verifyEqual(testCase, numel(manifest), 22);
+verifyTrue(testCase, isfield(manifest, 'Name'));
+verifyTrue(testCase, isfield(manifest, 'RendererName'));
+verifyTrue(testCase, isfield(manifest, 'ExampleFile'));
+verifyTrue(testCase, isfield(manifest, 'PngFile'));
+verifyTrue(testCase, isfield(manifest, 'SvgFile'));
+
+names = string({manifest.Name});
+linePlot = manifest(names == "line_plot");
+
+verifyEqual(testCase, string(linePlot.RendererName), "renderLinePlot");
+verifyEqual(testCase, string(linePlot.ExampleFile), "examples/renderLinePlot.m");
+verifyEqual(testCase, string(linePlot.PngFile), "gallery/line_plot.png");
+verifyEqual(testCase, string(linePlot.SvgFile), "gallery/line_plot.svg");
+verifyTrue(testCase, any(string(linePlot.Tags) == "trend"));
+end
+
+function testWriteTemplateManifestCreatesJsonFile(testCase)
+outFile = fullfile(tempdir, 'sft-template-manifest-test.json');
+if isfile(outFile)
+    delete(outFile);
+end
+
+writtenFile = sftWriteTemplateManifest(outFile);
+text = fileread(writtenFile);
+
+verifyTrue(testCase, isfile(outFile));
+verifyTrue(testCase, contains(text, '"Name":"line_plot"'));
+verifyTrue(testCase, contains(text, '"PngFile":"gallery/line_plot.png"'));
+end
+
 function testExportCreatesRequestedFiles(testCase)
 outDir = fullfile(tempdir, 'sft-core-test');
 if exist(outDir, 'dir')

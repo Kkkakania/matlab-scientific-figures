@@ -4,6 +4,16 @@
 
 - No unreleased changes.
 
+## v3.2.0 - 2026-05-30
+
+- Add `sftTemplateManifest` for machine-readable template metadata.
+- Add `sftWriteTemplateManifest` for writing the manifest as JSON.
+- Add `docs/template-manifest.json` for downstream tooling and docs automation.
+- Add `scripts/check_template_manifest.sh` and wire it into the MATLAB-enabled
+  release gate.
+- Document the manifest in README, docs index, template reference, and quality
+  gates.
+
 ## v3.1.0 - 2026-05-30
 
 - Add `sftRenderMatches` for rendering every template that matches a search

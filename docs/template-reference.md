@@ -8,6 +8,7 @@ From MATLAB:
 ```matlab
 sftListTemplates()
 sftFindTemplates("matrix")
+sftTemplateManifest()
 sftRenderExamples(["heatmap", "double_triangle_heatmap"], "gallery")
 sftRenderMatches("matrix", "gallery")
 ```
@@ -18,6 +19,13 @@ From a shell:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search matrix
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match matrix
+```
+
+For tools that need metadata without running MATLAB, use
+`docs/template-manifest.json`. Regenerate it with:
+
+```matlab
+sftWriteTemplateManifest()
 ```
 
 | Template | Renderer | Task | Tags |

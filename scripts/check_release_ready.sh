@@ -29,6 +29,7 @@ run_step "privacy scan" ./scripts/check_privacy.sh
 run_step "provenance scan" ./scripts/check_provenance.sh
 
 if matlab_available; then
+  run_step "template manifest consistency" env MATLAB_BIN="$MATLAB_BIN" ./scripts/check_template_manifest.sh
   run_step "MATLAB core tests" "$MATLAB_BIN" -batch \
     "addpath(genpath('src')); addpath(genpath('examples')); results = [runtests('tests/test_sft_core.m'), runtests('tests/test_run_all_examples.m')]; assertSuccess(results);"
   run_step "MATLAB CLI commands" env MATLAB_BIN="$MATLAB_BIN" ./scripts/check_cli_commands.sh

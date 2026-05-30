@@ -18,6 +18,7 @@ Start by listing the gallery:
 addpath(genpath('src'));
 addpath(genpath('examples'));
 templates = sftListTemplates()
+manifest = sftTemplateManifest()
 ```
 
 Search by the chart job you have in mind:
@@ -135,6 +136,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 - `sftListTemplates` and `sftFindTemplates` help users discover examples.
 - `sftRenderExamples` renders all examples or a selected subset by name.
 - `sftRenderMatches` renders every template that matches a search query.
+- `sftTemplateManifest` exports machine-readable metadata for tools.
 - `runAllExamples` remains as the full-gallery compatibility entry point.
 
 ## Documentation
@@ -146,6 +148,7 @@ See [docs/README.md](docs/README.md) for the grouped documentation index.
 | [Tutorials](docs/tutorials.md) | Start from a concrete figure workflow |
 | [Gallery reference](docs/gallery-reference.md) | Pick a template by sight |
 | [Template reference](docs/template-reference.md) | List every template, renderer, task, and tag |
+| [Template manifest JSON](docs/template-manifest.json) | Machine-readable template metadata |
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
 | [Use with your data](docs/use-with-your-data.md) | Turn a gallery example into your own figure |
 | [Recipes](docs/recipes.md) | Common copy-paste edits |
@@ -203,7 +206,7 @@ documented through CI artifacts.
 
 ## Project Status
 
-Current stable release: `v3.1.0`.
+Current stable release: `v3.2.0`.
 
 The project is intentionally focused. New templates should arrive with
 examples, deterministic data, documentation, and provenance checks.

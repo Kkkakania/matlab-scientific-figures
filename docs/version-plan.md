@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v3.1.0` is the current release.
+- `v3.2.0` is the current release.
 - The gallery has 22 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 
@@ -88,4 +88,22 @@ Release conditions:
 
 - MATLAB tests and `checkcode` pass locally.
 - `REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh` passes.
+- GitHub Actions pass on tag and main.
+
+## v3.2.0 Released
+
+Goal: make template metadata reusable outside MATLAB.
+
+Delivered changes:
+
+- `sftTemplateManifest` exposes stable machine-readable metadata.
+- `sftWriteTemplateManifest` writes the manifest as JSON.
+- `docs/template-manifest.json` gives external tools a no-MATLAB metadata file.
+- `scripts/check_template_manifest.sh` keeps the committed JSON in sync with
+  the registry.
+
+Release conditions:
+
+- Manifest tests pass.
+- The MATLAB-enabled release gate checks manifest consistency.
 - GitHub Actions pass on tag and main.

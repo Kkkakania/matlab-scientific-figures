@@ -23,6 +23,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts
 | Privacy scan | `./scripts/check_privacy.sh` | Emails, local paths, personal identifiers, and platform traces |
 | Provenance scan | `./scripts/check_provenance.sh` | Third-party author, license, platform, or source-pack traces |
 | CLI discovery | `./scripts/check_cli_commands.sh` | Broken `render_all.sh list`, `search`, or `match` commands |
+| Template manifest | `./scripts/check_template_manifest.sh` | Stale `docs/template-manifest.json` after registry changes |
 
 ## MATLAB Checks
 
@@ -34,7 +35,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/check_cli_comman
 ```
 
 The MATLAB unit tests cover shared helpers, deterministic data, SVG metadata
-sanitizing, figure validation, registry integrity, and selected rendering.
+sanitizing, figure validation, registry integrity, selected rendering, and
+machine-readable manifest generation.
 
 ## GitHub Actions
 
