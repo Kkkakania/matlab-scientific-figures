@@ -125,7 +125,8 @@ CLI/CI tool for MATLAB scientific figure repositories.
 The workflow checks that gallery outputs exist and are non-empty, risky binary
 or source files are not committed, privacy and provenance traces are flagged
 before release, and optional MATLAB batch rendering can be enabled when MATLAB
-is available.
+is available. The project uses the `matlab-figures` preset from
+`matlab-figure-ci` for gallery-oriented checks.
 
 ## Requirements
 

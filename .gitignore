@@ -11,6 +11,7 @@
 *.pdf~
 gallery/*.pdf
 mfigci-report.md
+mfigci-report.json
 .mfigci-results.json
 work/
 tmp/

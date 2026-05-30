@@ -1,6 +1,9 @@
 project:
   name: matlab-scientific-figures
 
+presets:
+  - matlab-figures
+
 scan:
   include:
     - "."
