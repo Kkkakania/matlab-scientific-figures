@@ -23,6 +23,9 @@ jobs:
       - name: Verify release metadata is consistent
         run: ./scripts/check_version_consistency.sh
 
+      - name: Check citation metadata
+        run: ./scripts/check_citation.sh
+
       - name: Check documentation links
         run: ./scripts/check_docs_links.sh
 

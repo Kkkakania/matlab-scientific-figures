@@ -8,6 +8,8 @@
   rendering.
 - Add an API reference page for discovery, rendering, styling, export, and
   maintainer helper functions.
+- Add `CITATION.cff` and a CI check so citation metadata stays aligned with the
+  current public release.
 
 ## v3.5.0 - 2026-05-31
 

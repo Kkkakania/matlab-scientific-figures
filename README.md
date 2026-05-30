@@ -236,5 +236,12 @@ Project maturity: early public project. The examples, CLI workflow, and checks
 are usable today, but the repository is still collecting feedback before
 claiming broad adoption or long-term ecosystem maturity.
 
+## Citation
+
+If the templates help a paper, report, thesis, or reproducible plotting
+workflow, cite the repository using [`CITATION.cff`](CITATION.cff). The citation
+file tracks the current public release and is checked by CI so it does not drift
+from the README release metadata.
+
 The project is intentionally focused. New templates should arrive with
 examples, deterministic data, documentation, and provenance checks.
