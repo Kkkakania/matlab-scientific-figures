@@ -28,7 +28,7 @@ jobs:
           mfigci check --config mfigci.yml --report mfigci-report.md
 
       - name: Upload mfigci report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: mfigci-report
