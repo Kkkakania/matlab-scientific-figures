@@ -51,6 +51,7 @@ Each renderer should:
 - create a hidden figure
 - use `sftTheme`, `sftPalette`, and `sftExport`
 - apply stable labels and titles
+- avoid relying on color alone for important distinctions
 - close the figure after export
 - return the exported file list
 
@@ -108,6 +109,7 @@ data only.
 
 - The chart has a clear task in `docs/chart-selection-guide.md`.
 - The gallery includes PNG and SVG output.
+- Color choices have been reviewed with `docs/color-accessibility.md`.
 - `runAllExamples` renders the new template.
 - Tests pass.
 - Privacy and provenance checks pass.

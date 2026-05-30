@@ -15,6 +15,7 @@ figure fails one of these checks, fix the figure before adding more style.
 - Line widths and marker sizes are consistent.
 - Legends do not cover important data.
 - Color is used to encode information, not decoration.
+- Important distinctions do not rely on hue alone.
 - Figure size is stable and export-friendly.
 
 ## Automated Preflight
@@ -35,6 +36,8 @@ part is still on you.
 - PNG export is high resolution.
 - PDF or SVG export preserves vector content when possible.
 - Output filenames are stable and script-friendly.
+- Changed gallery images pass the color-accessibility review in
+  `docs/color-accessibility.md`.
 
 ## Maintenance Quality
 

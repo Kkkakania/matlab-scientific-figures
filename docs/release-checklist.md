@@ -26,6 +26,7 @@ assertSuccess(results);
 
 - Open the changed gallery images.
 - Check long labels and legends.
+- Check color accessibility with `docs/color-accessibility.md`.
 - Check that SVG files render in the browser.
 - Make sure new examples use synthetic data.
 - Make sure docs explain when to use the new figure.

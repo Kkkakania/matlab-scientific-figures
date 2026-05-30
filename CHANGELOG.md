@@ -2,8 +2,7 @@
 
 ## Unreleased
 
-- Planned: next templates and workflow improvements tracked in the public issue
-  backlog.
+- Add gallery color-accessibility documentation and release checklist guidance.
 
 ## v0.4.0 - 2026-05-30
 

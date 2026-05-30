@@ -104,6 +104,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 | [Paper export tutorial](docs/tutorial-paper-export.md) | Export SVG, PDF, and PNG for papers |
 | [Batch rendering tutorial](docs/tutorial-batch-rendering.md) | Render many experiment figures at once |
 | [Figure quality checklist](docs/figure-quality-checklist.md) | Review a figure before release |
+| [Color accessibility](docs/color-accessibility.md) | Check hue, contrast, and grayscale risks |
 | [Template author guide](docs/template-author-guide.md) | Add a new clean-room example |
 | [Template backlog](docs/template-backlog.md) | See which high-value charts are planned |
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
