@@ -5,7 +5,7 @@
 <title>Qt SVG Document</title>
 <desc>Clean-room gallery output</desc>
 <defs>
-<pattern id="fillPattern24_" x="597" y="53" width="32" height="486" patternUnits="userSpaceOnUse" >
+<pattern id="fillPattern29_" x="597" y="53" width="32" height="486" patternUnits="userSpaceOnUse" >
 <image xlink:href="data:image/png;base64, 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" x="0" y="0" width="32" height="486" />
 </pattern>
 </defs>
@@ -1736,7 +1736,7 @@ font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 <polyline fill="none" vector-effect="none" points="629,539 629,53 " />
 </g>
 
-<g fill="url(#fillPattern24_)" stroke="none" transform="matrix(0.5,0,0,0.5,-3.63818,-0.125)"
+<g fill="url(#fillPattern29_)" stroke="none" transform="matrix(0.5,0,0,0.5,-3.63818,-0.125)"
 font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M597,539 L629,539 L629,53 L597,53 L597,539"/>

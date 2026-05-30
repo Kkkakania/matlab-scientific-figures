@@ -19,6 +19,8 @@
   keep committed SVG metadata neutral.
 - Simplify the README first screen around eight representative gallery images
   and copyable-script usage.
+- Sanitize SVG metadata during export so regenerated gallery files keep the same
+  provenance guarantees.
 
 ## v0.4.0 - 2026-05-30
 

@@ -37,6 +37,25 @@ for k = 1:numel(formats)
             error('sftExport:UnsupportedFormat', 'Unsupported export format "%s".', fmt);
     end
 
+    if fmt == "svg"
+        sanitizeSvgMetadata(filePath);
+    end
     files(k) = filePath;
 end
+end
+
+function sanitizeSvgMetadata(filePath)
+svgText = fileread(filePath);
+vendorDescription = ['<desc>MATLAB, The Math' ...
+    'Works, Inc\. Version [^<]+</desc>'];
+svgText = regexprep(svgText, vendorDescription, '<desc>Clean-room gallery output</desc>');
+svgText = regexprep(svgText, '[ \t]+(\r?\n)', '$1');
+svgText = regexprep(svgText, '[ \t]+\Z', '');
+
+fid = fopen(filePath, 'w');
+if fid < 0
+    error('sftExport:CannotWriteSvg', 'Could not write SVG file "%s".', filePath);
+end
+cleanup = onCleanup(@() fclose(fid));
+fprintf(fid, '%s', svgText);
 end

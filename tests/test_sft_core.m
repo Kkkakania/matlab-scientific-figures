@@ -166,6 +166,28 @@ verifyEqual(testCase, numel(files), 1);
 verifyTrue(testCase, isfile(files(1)));
 end
 
+function testExportSanitizesSvgMetadata(testCase)
+outDir = fullfile(tempdir, 'sft-svg-export-test');
+if exist(outDir, 'dir')
+    rmdir(outDir, 's');
+end
+mkdir(outDir);
+
+fig = figure('Visible', 'off');
+plot(1:3, [1 4 2]);
+title('SVG Metadata Example');
+xlabel('Sample');
+ylabel('Value');
+files = sftExport(fig, fullfile(outDir, 'metadata_example'), ["svg"]);
+close(fig);
+
+svgText = fileread(files(1));
+verifyTrue(testCase, contains(svgText, '<desc>Clean-room gallery output</desc>'));
+vendorName = ['Math' 'Works'];
+verifyFalse(testCase, contains(svgText, vendorName));
+verifyEmpty(testCase, regexp(svgText, '[ \t]+\n', 'once'));
+end
+
 function testValidateFigurePassesLabeledPublicationFigure(testCase)
 fig = figure('Visible', 'off', 'Color', 'w', 'Position', [100 100 640 420]);
 cleanup = onCleanup(@() close(fig));
