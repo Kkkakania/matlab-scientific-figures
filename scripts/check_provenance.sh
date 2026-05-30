@@ -10,12 +10,15 @@ while IFS= read -r file; do
     */.git/*|*/LICENSE|*/scripts/check_provenance.sh|*/scripts/check_privacy.sh) continue ;;
   esac
 
-  if grep -nE "$PATTERN" "$file" >/tmp/sft_provenance_match.$$ 2>/dev/null; then
+  if grep -nE "$PATTERN" "$file" 2>/dev/null \
+      | grep -v 'data:image/' >/tmp/sft_provenance_match.$$; then
     echo "Provenance-risk pattern found in ${file#$ROOT_DIR/}:" >&2
     cat /tmp/sft_provenance_match.$$ >&2
     found=1
   fi
-done < <(find "$ROOT_DIR" -type f \( -name '*.m' -o -name '*.md' -o -name '*.sh' -o -name 'README' \))
+done < <(find "$ROOT_DIR" -type f \( \
+  -name '*.m' -o -name '*.md' -o -name '*.sh' -o -name '*.svg' -o \
+  -name '*.yml' -o -name '*.yaml' -o -name '*.json' -o -name 'README' \))
 
 rm -f /tmp/sft_provenance_match.$$
 if [[ "$found" -ne 0 ]]; then

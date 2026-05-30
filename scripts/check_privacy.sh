@@ -10,12 +10,16 @@ while IFS= read -r file; do
     */.git/*|*/scripts/check_privacy.sh|*/scripts/check_provenance.sh) continue ;;
   esac
 
-  if grep -nE "$PATTERN" "$file" >/tmp/sft_privacy_match.$$ 2>/dev/null; then
+  if grep -nE "$PATTERN" "$file" 2>/dev/null \
+      | grep -v 'data:image/' >/tmp/sft_privacy_match.$$; then
     echo "Privacy-sensitive pattern found in ${file#$ROOT_DIR/}:" >&2
     cat /tmp/sft_privacy_match.$$ >&2
     found=1
   fi
-done < <(find "$ROOT_DIR" -type f \( -name '*.m' -o -name '*.md' -o -name '*.sh' -o -name 'README' -o -name 'LICENSE' \))
+done < <(find "$ROOT_DIR" -type f \( \
+  -name '*.m' -o -name '*.md' -o -name '*.sh' -o -name '*.svg' -o \
+  -name '*.yml' -o -name '*.yaml' -o -name '*.json' -o -name 'README' -o \
+  -name 'LICENSE' \))
 
 rm -f /tmp/sft_privacy_match.$$
 if [[ "$found" -ne 0 ]]; then

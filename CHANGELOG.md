@@ -15,6 +15,8 @@
   v0.5.0 gallery.
 - Add a gallery consistency check for renderer names, example docs, committed
   PNGs, gallery checks, and `mfigci.yml`.
+- Expand privacy and provenance scans to SVG and workflow/config files, and
+  keep committed SVG metadata neutral.
 
 ## v0.4.0 - 2026-05-30
 
