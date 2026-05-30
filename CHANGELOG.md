@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Add `sftValidateFigure` for lightweight figure quality checks.
+- Add roadmap, examples index, and template author guide.
+- Improve README with project badges, gallery previews, and documentation map.
+
 ## v0.1.0 - 2026-05-30
 
 - Add clean-room MATLAB figure toolkit core functions.

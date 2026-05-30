@@ -16,6 +16,19 @@ Use this checklist before adding or changing a template.
 - Color is used to encode information, not decoration.
 - Figure size is stable and export-friendly.
 
+## Automated Preflight
+
+For a single figure, run:
+
+```matlab
+report = sftValidateFigure(gcf);
+disp(report.Passed)
+```
+
+The validator checks for plot axes, a clean canvas, readable fonts, and basic
+label completeness. It is intentionally lightweight, so a passing report is a
+starting point rather than a substitute for human review.
+
 ## Export Quality
 
 - PNG export is high resolution.

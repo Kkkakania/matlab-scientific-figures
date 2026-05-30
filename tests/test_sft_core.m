@@ -43,3 +43,47 @@ close(fig);
 verifyEqual(testCase, numel(files), 1);
 verifyTrue(testCase, isfile(files(1)));
 end
+
+function testValidateFigurePassesLabeledPublicationFigure(testCase)
+fig = figure('Visible', 'off', 'Color', 'w', 'Position', [100 100 640 420]);
+cleanup = onCleanup(@() close(fig));
+
+plot(1:4, [1 3 2 5], 'LineWidth', 1.5);
+title('Validation Example');
+xlabel('Sample');
+ylabel('Response');
+
+report = sftValidateFigure(fig);
+verifyTrue(testCase, report.Passed);
+verifyTrue(testCase, any(string({report.Checks.Name}) == "HasAxes"));
+end
+
+function testValidateFigureFlagsMissingLabels(testCase)
+fig = figure('Visible', 'off', 'Color', 'w', 'Position', [100 100 640 420]);
+cleanup = onCleanup(@() close(fig));
+plot(1:4, [1 3 2 5]);
+
+report = sftValidateFigure(fig);
+failedNames = string({report.Checks(~[report.Checks.Passed]).Name});
+
+verifyFalse(testCase, report.Passed);
+verifyTrue(testCase, any(failedNames == "HasTitle"));
+verifyTrue(testCase, any(failedNames == "HasAxisLabels"));
+end
+
+function testValidateFigureHandlesCentimeterSizedFigures(testCase)
+fig = figure('Visible', 'off', 'Color', 'w', ...
+    'Units', 'centimeters', 'Position', [1 1 15 9]);
+cleanup = onCleanup(@() close(fig));
+
+plot(1:4, [1 3 2 5], 'LineWidth', 1.5);
+title('Centimeter Figure');
+xlabel('Sample');
+ylabel('Response');
+
+report = sftValidateFigure(fig);
+failedNames = string({report.Checks(~[report.Checks.Passed]).Name});
+
+verifyTrue(testCase, report.Passed);
+verifyFalse(testCase, any(failedNames == "FigureSize"));
+end

@@ -10,6 +10,7 @@ useful for scientific work.
   collections, screenshots, or watermarked assets.
 - Use deterministic synthetic data for examples.
 - Add or update a gallery example for every new template.
+- Follow `docs/template-author-guide.md` for new renderers.
 - Run the local checks before opening a pull request.
 
 ## Local Checks
@@ -24,4 +25,11 @@ For MATLAB rendering:
 
 ```bash
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
+```
+
+For figure quality preflight:
+
+```matlab
+report = sftValidateFigure(gcf);
+disp(report.Passed)
 ```
