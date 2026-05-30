@@ -13,6 +13,13 @@ Run it with MATLAB enforced when MATLAB is installed:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh
 ```
 
+MATLAB invocations use a timeout guard so failed local runs do not linger in the
+background. Override the default 600-second limit when needed:
+
+```bash
+SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh
+```
+
 ## Repository Checks
 
 | Gate | Command | What It Catches |

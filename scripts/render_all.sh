@@ -4,6 +4,9 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MATLAB_BIN="${MATLAB_BIN:-matlab}"
 SFT_OUTPUT_DIR="${SFT_OUTPUT_DIR:-gallery}"
+SFT_MATLAB_TIMEOUT_SECONDS="${SFT_MATLAB_TIMEOUT_SECONDS:-600}"
+
+source "$ROOT_DIR/scripts/_run_with_timeout.sh"
 
 if [[ "$MATLAB_BIN" == */* ]]; then
   if [[ ! -x "$MATLAB_BIN" ]]; then
@@ -24,7 +27,7 @@ if [[ "${1:-}" == "list" ]]; then
     echo "Usage: ./scripts/render_all.sh list" >&2
     exit 2
   fi
-  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); disp(sftListTemplates())"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); disp(sftListTemplates())"
   exit 0
 fi
 
@@ -46,7 +49,7 @@ if [[ "${1:-}" == "search" ]]; then
   done
 
   query_expr="[$(IFS=,; echo "${queries[*]}")]"
-  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); disp(sftFindTemplates($query_expr))"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); disp(sftFindTemplates($query_expr))"
   exit 0
 fi
 
@@ -68,12 +71,12 @@ if [[ "${1:-}" == "match" ]]; then
   done
 
   query_expr="[$(IFS=,; echo "${queries[*]}")]"
-  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderMatches($query_expr, '$SFT_OUTPUT_DIR'); disp('Rendered templates:'); disp(string({result.name})')"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderMatches($query_expr, '$SFT_OUTPUT_DIR'); disp('Rendered templates:'); disp(string({result.name})')"
   exit 0
 fi
 
 if [[ "$#" -eq 0 ]]; then
-  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('$SFT_OUTPUT_DIR')"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('$SFT_OUTPUT_DIR')"
   exit 0
 fi
 
@@ -88,4 +91,4 @@ for name in "$@"; do
 done
 
 name_expr="[$(IFS=,; echo "${names[*]}")]"
-"$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); sftRenderExamples($name_expr, '$SFT_OUTPUT_DIR')"
+run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); sftRenderExamples($name_expr, '$SFT_OUTPUT_DIR')"

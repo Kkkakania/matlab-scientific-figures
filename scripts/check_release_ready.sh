@@ -4,6 +4,9 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MATLAB_BIN="${MATLAB_BIN:-matlab}"
 REQUIRE_MATLAB="${REQUIRE_MATLAB:-0}"
+SFT_MATLAB_TIMEOUT_SECONDS="${SFT_MATLAB_TIMEOUT_SECONDS:-600}"
+
+source "$ROOT_DIR/scripts/_run_with_timeout.sh"
 
 cd "$ROOT_DIR"
 
@@ -32,7 +35,7 @@ run_step "provenance scan" ./scripts/check_provenance.sh
 
 if matlab_available; then
   run_step "template manifest consistency" env MATLAB_BIN="$MATLAB_BIN" ./scripts/check_template_manifest.sh
-  run_step "MATLAB core tests" "$MATLAB_BIN" -batch \
+  run_step "MATLAB core tests" run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch \
     "addpath(genpath('src')); addpath(genpath('examples')); results = [runtests('tests/test_sft_core.m'), runtests('tests/test_run_all_examples.m')]; assertSuccess(results);"
   run_step "MATLAB CLI commands" env MATLAB_BIN="$MATLAB_BIN" ./scripts/check_cli_commands.sh
 else

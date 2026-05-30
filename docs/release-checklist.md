@@ -14,6 +14,13 @@ Run the full local gate when MATLAB is installed:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh
 ```
 
+MATLAB steps are timeout guarded. If a legitimate full-gallery render needs
+more time, raise the default 600-second limit explicitly:
+
+```bash
+SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh
+```
+
 Regenerate the committed gallery only when examples changed:
 
 ```bash
