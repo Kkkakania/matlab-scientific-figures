@@ -111,6 +111,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 | [Maintainer workflow](docs/openai-codex-workflow.md) | Review PRs, issues, and releases consistently |
 | [Roadmap](ROADMAP.md) | Track planned template and workflow milestones |
 | [Version plan](docs/version-plan.md) | Understand the v0.5.0 and v2.0.0 release path |
+| [v2 API design](docs/v2-api-design.md) | See the planned registry and selected-rendering API |
 
 ## Copyright And Provenance
 

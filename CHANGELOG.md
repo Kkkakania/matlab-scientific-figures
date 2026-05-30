@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Add the v0.5.0 maintenance report.
+- Add v2 API design notes for the registry and selected-rendering boundary.
 
 ## v0.5.0 - 2026-05-30
 
