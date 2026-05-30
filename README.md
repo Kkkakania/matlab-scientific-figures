@@ -4,41 +4,37 @@
 [![Release](https://img.shields.io/github/v/release/Kkkakania/matlab-scientific-figures)](https://github.com/Kkkakania/matlab-scientific-figures/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-MATLAB templates for clean, repeatable scientific figures.
+Clean-room MATLAB templates for publication-style scientific figures.
 
-Clone the repo, run the gallery, then copy the closest example and replace the
-demo data with your own arrays. The examples are plain MATLAB files, so you can
-read them quickly and change them without learning a framework.
-
-## Why This Project Exists
-
-Most research figures start as a one-off script. Then the font changes, the
-legend covers the data, the export is blurry, or the same plot has to be made
-again for a paper, slide deck, and report. This repo keeps those boring parts in
-one place: theme, colors, export, example data, and a gallery you can rerun.
+Pick the closest example, replace the synthetic data, and export PNG, SVG, or
+PDF from the same script.
 
 ## Gallery
 
-Run `runAllExamples` to generate the gallery locally. The examples cover:
+The gallery currently contains 16 examples.
 
-| Task | Preview |
-|---|---|
-| Time trend | <img src="gallery/line_plot.png" width="260" alt="Line plot"> |
-| Uncertainty | <img src="gallery/confidence_interval.png" width="260" alt="Confidence interval"> |
-| Dense relationship | <img src="gallery/density_scatter.png" width="260" alt="Density scatter"> |
-| Method comparison | <img src="gallery/grouped_bar.png" width="260" alt="Grouped bar"> |
-| Method uncertainty | <img src="gallery/grouped_error_bar.png" width="260" alt="Grouped bar with error bars"> |
-| Signed change | <img src="gallery/positive_negative_area.png" width="260" alt="Positive-negative area"> |
-| Matrix pattern | <img src="gallery/heatmap.png" width="260" alt="Heatmap"> |
-| Correlation matrix | <img src="gallery/correlation_bubble.png" width="260" alt="Correlation bubble heatmap"> |
-| Paper layout | <img src="gallery/multi_panel_overview.png" width="260" alt="Multi-panel overview"> |
-| Ranking | <img src="gallery/lollipop_ranking.png" width="260" alt="Lollipop ranking"> |
+<table>
+  <tr>
+    <td><img src="gallery/density_scatter.png" width="210" alt="Density scatter"><br>Density scatter</td>
+    <td><img src="gallery/double_triangle_heatmap.png" width="210" alt="Double-triangle heatmap"><br>Double-triangle heatmap</td>
+    <td><img src="gallery/zoomed_inset_line.png" width="210" alt="Zoomed inset line"><br>Zoomed inset line</td>
+    <td><img src="gallery/multi_panel_overview.png" width="210" alt="Multi-panel overview"><br>Multi-panel overview</td>
+  </tr>
+  <tr>
+    <td><img src="gallery/grouped_error_bar.png" width="210" alt="Grouped error bar"><br>Grouped error bar</td>
+    <td><img src="gallery/correlation_bubble.png" width="210" alt="Correlation bubble heatmap"><br>Correlation bubble</td>
+    <td><img src="gallery/positive_negative_area.png" width="210" alt="Positive-negative area"><br>Signed area</td>
+    <td><img src="gallery/lollipop_ranking.png" width="210" alt="Lollipop ranking"><br>Lollipop ranking</td>
+  </tr>
+</table>
+
+Run `runAllExamples` to generate all previews locally.
 
 The full gallery includes line plots, confidence intervals, scatter plots,
 density scatter plots, grouped bars, error bars, signed area charts, heatmaps,
-correlation bubbles, bubble matrices, box plots with jittered observations,
-lollipop rankings, and 3D surfaces. There is also a compact multi-panel example
-for paper and slide figures.
+double-triangle heatmaps, zoomed inset lines, correlation bubbles, bubble
+matrices, box plots with jittered observations, lollipop rankings, multi-panel
+layouts, and 3D surfaces.
 
 ## Quick Start
 
@@ -98,6 +94,9 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
 | [Use with your data](docs/use-with-your-data.md) | Turn a gallery example into your own figure |
 | [Recipes](docs/recipes.md) | Common copy-paste edits |
+| [CSV and Excel tutorial](docs/tutorial-csv-excel-data.md) | Connect real tables to templates |
+| [Paper export tutorial](docs/tutorial-paper-export.md) | Export SVG, PDF, and PNG for papers |
+| [Batch rendering tutorial](docs/tutorial-batch-rendering.md) | Render many experiment figures at once |
 | [Figure quality checklist](docs/figure-quality-checklist.md) | Review a figure before release |
 | [Template author guide](docs/template-author-guide.md) | Add a new clean-room example |
 | [Template backlog](docs/template-backlog.md) | See which high-value charts are planned |
@@ -136,7 +135,7 @@ is available.
 
 ## Project Status
 
-Current stable release: `v0.1.0`.
+Current stable release: `v0.3.0`.
 
-The project is intentionally small. New templates should arrive with examples,
-deterministic data, documentation, and provenance checks.
+The project is intentionally focused. New templates should arrive with
+examples, deterministic data, documentation, and provenance checks.

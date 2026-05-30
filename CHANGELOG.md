@@ -4,6 +4,15 @@
 
 - Planned: high-value clean-room templates tracked in the public issue backlog.
 
+## v0.3.0 - 2026-05-30
+
+- Add double-triangle heatmap example and gallery output.
+- Add zoomed inset line example and gallery output.
+- Add tutorials for CSV/Excel data, paper export, and batch rendering.
+- Improve the README first screen with a compact visual gallery.
+- Update chart selection, template backlog, roadmap, examples index, and CI
+  gallery expectations for the new templates.
+
 ## v0.2.0 - 2026-05-30
 
 - Add correlation bubble heatmap example and gallery output.

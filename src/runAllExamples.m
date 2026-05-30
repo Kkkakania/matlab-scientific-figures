@@ -33,6 +33,8 @@ renderers = {
     'positive_negative_area', @renderPositiveNegativeArea
     'heatmap', @renderHeatmap
     'correlation_bubble', @renderCorrelationBubble
+    'double_triangle_heatmap', @renderDoubleTriangleHeatmap
+    'zoomed_inset_line', @renderZoomedInsetLine
     'bubble_matrix', @renderBubbleMatrix
     'box_jitter', @renderBoxJitter
     'lollipop_ranking', @renderLollipopRanking

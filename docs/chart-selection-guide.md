@@ -13,7 +13,9 @@ Choose the figure by the communication task first, not by decoration.
 | Compare methods with uncertainty | `grouped_error_bar` | Group means need visible uncertainty or variability |
 | Show matrix pattern | `heatmap` | Pairwise relations or sample-by-feature values matter |
 | Show correlation strength | `correlation_bubble` | Positive and negative pairwise correlations both matter |
+| Compare two matrices | `double_triangle_heatmap` | Two methods or conditions share the same pairwise layout |
 | Show matrix magnitude | `bubble_matrix` | Matrix values need both position and magnitude cues |
+| Show a local event | `zoomed_inset_line` | The full trend matters, but one interval needs detail |
 | Compare distributions | `box_jitter` | Group spread and individual points both matter |
 | Rank factors | `lollipop_ranking` | Ordered importance is more important than exact area |
 | Combine panels | `multi_panel_overview` | Several small plots belong in one paper or slide figure |

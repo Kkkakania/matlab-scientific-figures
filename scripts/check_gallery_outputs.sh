@@ -14,6 +14,8 @@ expected=(
   positive_negative_area
   heatmap
   correlation_bubble
+  double_triangle_heatmap
+  zoomed_inset_line
   bubble_matrix
   box_jitter
   lollipop_ranking

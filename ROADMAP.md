@@ -4,14 +4,16 @@ This roadmap keeps the project focused on a small set of high-value scientific
 plotting workflows. New templates should improve communication quality, not
 just add visual variety.
 
-## v0.2.0: Stronger Template Coverage
+## v0.3.0: Paper-Ready Templates And Tutorials
 
 Planned additions:
 
-- Multi-panel layout helper for compact paper figures. Done in `Unreleased`.
-- Grouped bar chart with error bars.
-- Positive-negative area plot for signed time-series changes.
-- Cleaner examples for using the gallery with user data. Done in `Unreleased`.
+- Double-triangle heatmap for comparing two pairwise matrices.
+- Zoomed inset line plot for trend figures with one important interval.
+- CSV and Excel tutorial for using real tabular data.
+- Paper export tutorial for PNG, SVG, and PDF workflows.
+- Batch rendering tutorial for repeated experiment figures.
+- Cleaner README gallery preview for first-time users.
 
 Quality goals:
 
@@ -19,20 +21,14 @@ Quality goals:
 - Each new template has PNG and SVG gallery output.
 - Each new template is referenced in the chart selection guide.
 - `runAllExamples` remains headless and script-friendly.
-
-## v0.3.0: Review And Maintenance Workflow
-
-Planned additions:
-
-- Batch figure validation report across the gallery. Done in `Unreleased`.
-- Release checklist for maintainers. Done in `Unreleased`.
-- More complete examples documentation.
-- Optional command-line wrapper for rendering selected examples only.
+- Documentation favors copyable workflows over broad claims.
 
 ## Later Candidates
 
 Candidates that need careful design before inclusion:
 
+- Butterfly comparison for two-sided group comparison.
+- Waffle chart for compact composition summaries.
 - Ridge plot for distribution comparison.
 - Radar chart for small metric sets.
 - Parallel coordinates for multivariate samples.

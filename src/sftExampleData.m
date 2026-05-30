@@ -63,6 +63,16 @@ switch kind
         data.y = y;
         data.baseline = zeros(size(x));
 
+    case "zoomed_inset_line"
+        x = linspace(0, 24, 260);
+        slowTrend = 0.055 * x + 0.28 * sin(0.45 * x);
+        event = 0.58 * exp(-0.5 * ((x - 12.4) / 0.55) .^ 2);
+        recovery = -0.32 * exp(-0.5 * ((x - 14.0) / 0.75) .^ 2);
+        y = slowTrend + event + recovery + 0.035 * randn(size(x));
+        data.x = x;
+        data.y = y;
+        data.zoomRange = [10.9 14.8];
+
     case "heatmap"
         m = randn(10, 10);
         data.matrix = corr(m + linspace(-1, 1, 10));
@@ -88,6 +98,37 @@ switch kind
         data.matrix = corrcoef(x);
         data.labels = ["Load", "Voltage", "Current", "Temp", "Loss", ...
             "Power", "Vibration", "Efficiency", "Delay"];
+
+    case "double_triangle_heatmap"
+        n = 220;
+        common = randn(n, 1);
+        thermal = randn(n, 1);
+        control = randn(n, 1);
+        noiseA = 0.42 * randn(n, 8);
+        noiseB = 0.46 * randn(n, 8);
+        conditionA = [
+            common + 0.36 * control, ...
+            0.72 * common + 0.30 * thermal, ...
+            -0.54 * common + 0.70 * thermal, ...
+            0.62 * control + 0.24 * common, ...
+            -0.42 * thermal + 0.52 * control, ...
+            0.45 * common - 0.35 * control, ...
+            0.58 * thermal + 0.18 * common, ...
+            -0.32 * common + 0.65 * randn(n, 1)
+        ] + noiseA;
+        conditionB = [
+            0.84 * common + 0.42 * control, ...
+            0.62 * common + 0.44 * thermal, ...
+            -0.46 * common + 0.76 * thermal, ...
+            0.54 * control + 0.36 * common, ...
+            -0.34 * thermal + 0.58 * control, ...
+            0.38 * common - 0.46 * control, ...
+            0.64 * thermal + 0.12 * common, ...
+            -0.26 * common + 0.72 * randn(n, 1)
+        ] + noiseB;
+        data.upper = corrcoef(conditionA);
+        data.lower = corrcoef(conditionB);
+        data.labels = ["Load", "Volt", "Temp", "Ctrl", "Loss", "Resp", "Heat", "Drift"];
 
     case "bubble_matrix"
         raw = abs(randn(8, 8));

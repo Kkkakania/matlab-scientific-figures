@@ -33,6 +33,8 @@ gallery:
     - "correlation_bubble.svg"
     - "density_scatter.png"
     - "density_scatter.svg"
+    - "double_triangle_heatmap.png"
+    - "double_triangle_heatmap.svg"
     - "grouped_bar.png"
     - "grouped_bar.svg"
     - "grouped_error_bar.png"
@@ -51,6 +53,8 @@ gallery:
     - "scatter_plot.svg"
     - "surface_3d.png"
     - "surface_3d.svg"
+    - "zoomed_inset_line.png"
+    - "zoomed_inset_line.svg"
 
 matlab:
   enabled: false

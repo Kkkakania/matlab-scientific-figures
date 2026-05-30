@@ -17,10 +17,10 @@ choice of chart type, but source files are not copied into the repo.
 | Dense x-y relationship | `density_scatter` |
 | Method comparison | `grouped_bar`, `grouped_error_bar` |
 | Matrix values | `heatmap`, `bubble_matrix` |
-| Correlation matrix | `correlation_bubble` |
+| Correlation matrix | `correlation_bubble`, `double_triangle_heatmap` |
 | Distribution comparison | `box_jitter` |
 | Ranking | `lollipop_ranking` |
-| Signed change | `positive_negative_area` |
+| Signed change and local events | `positive_negative_area`, `zoomed_inset_line` |
 | Multi-panel layout | `multi_panel_overview` |
 | Smooth 3D response | `surface_3d` |
 
@@ -29,8 +29,6 @@ choice of chart type, but source files are not copied into the repo.
 | Priority | Template | Why it is useful |
 |---|---|---|
 | High | Butterfly comparison | Good for two-sided before/after or group A/B comparisons |
-| High | Double-triangle heatmap | Useful when two matrices or methods need to share one square layout |
-| High | Zoomed inset line plot | Very common in papers when one local region matters |
 | High | Waffle chart | Clean way to show composition without overusing pie charts |
 | Medium | Ridgeline plot | Compact distribution comparison across many groups |
 | Medium | Parallel coordinates | Useful for multivariate samples and model comparison |
