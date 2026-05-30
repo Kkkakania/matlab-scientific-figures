@@ -29,6 +29,9 @@ jobs:
       - name: Check API reference coverage
         run: ./scripts/check_api_reference.sh
 
+      - name: Check MATLAB help text
+        run: ./scripts/check_matlab_help.sh
+
       - name: Check README gallery preview
         run: ./scripts/check_readme_gallery.sh
 
