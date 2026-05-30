@@ -1,0 +1,14 @@
+.DS_Store
+*.asv
+*.m~
+*.tmp
+*.log
+*.p
+*.fig
+*.mat
+*.doc
+*.docx
+*.pdf~
+gallery/*.pdf
+work/
+tmp/

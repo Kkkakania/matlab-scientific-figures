@@ -1,0 +1,83 @@
+function data = sftExampleData(kind)
+%SFTEXAMPLEDATA Generate deterministic synthetic data for examples.
+
+if nargin < 1 || isempty(kind)
+    kind = 'line';
+end
+
+kind = lower(string(kind));
+rng(20260530, 'twister');
+
+switch kind
+    case "line"
+        x = linspace(0, 12, 80);
+        data.x = x;
+        data.y = [
+            sin(x) + 0.05 * randn(size(x))
+            0.75 * cos(0.8 * x + 0.4) + 0.04 * randn(size(x))
+            0.05 * x + 0.45 * sin(0.5 * x) + 0.04 * randn(size(x))
+        ];
+        data.labels = ["Sensor A", "Sensor B", "Sensor C"];
+
+    case "confidence"
+        x = linspace(0, 10, 100);
+        center = [sin(x); cos(0.8 * x); 0.22 * x - 0.7];
+        spread = [0.18 + 0.04 * cos(x); 0.16 + 0.03 * sin(x); 0.14 + 0.02 * cos(0.5 * x)];
+        data.x = x;
+        data.center = center;
+        data.lower = center - abs(spread);
+        data.upper = center + abs(spread);
+        data.labels = ["Model A", "Model B", "Model C"];
+
+    case "scatter"
+        n = 180;
+        data.x = randn(n, 1);
+        data.y = 0.65 * data.x + 0.55 * randn(n, 1);
+        data.group = categorical(repmat(["A"; "B"; "C"], n / 3, 1));
+
+    case "density_scatter"
+        n = 520;
+        x1 = randn(round(n * 0.65), 1) * 0.65 - 0.4;
+        y1 = 0.7 * x1 + randn(size(x1)) * 0.35;
+        x2 = randn(n - numel(x1), 1) * 0.45 + 1.1;
+        y2 = -0.5 * x2 + randn(size(x2)) * 0.28 + 1.2;
+        data.x = [x1; x2];
+        data.y = [y1; y2];
+
+    case "grouped_bar"
+        data.values = [4.2 3.1 3.7; 5.0 4.1 4.4; 3.6 4.7 4.2; 4.8 3.9 5.1];
+        data.groups = ["Baseline", "Method A", "Method B", "Method C"];
+        data.series = ["Precision", "Recall", "Robustness"];
+
+    case "heatmap"
+        m = randn(10, 10);
+        data.matrix = corr(m + linspace(-1, 1, 10));
+        data.labels = "F" + string(1:10);
+
+    case "bubble_matrix"
+        raw = abs(randn(8, 8));
+        data.matrix = raw ./ max(raw(:));
+        data.rows = "R" + string(1:8);
+        data.cols = "C" + string(1:8);
+
+    case "box_jitter"
+        groups = repelem(1:4, 35).';
+        offsets = [0.0 0.35 0.65 1.05];
+        data.group = categorical(groups, 1:4, ["G1", "G2", "G3", "G4"]);
+        data.value = randn(numel(groups), 1) * 0.36 + offsets(groups).';
+
+    case "lollipop"
+        data.labels = ["Grid", "Storage", "Sensing", "Forecast", "Control", "Safety", "Cost", "Latency"];
+        data.values = [0.91 0.83 0.78 0.72 0.68 0.61 0.55 0.49];
+
+    case "surface"
+        [x, y] = meshgrid(linspace(-3, 3, 70), linspace(-3, 3, 70));
+        z = peaks(x, y) / 8 + 0.12 * sin(2 * x) .* cos(1.2 * y);
+        data.x = x;
+        data.y = y;
+        data.z = z;
+
+    otherwise
+        error('sftExampleData:UnknownKind', 'Unknown example data kind "%s".', kind);
+end
+end
