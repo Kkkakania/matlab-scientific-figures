@@ -135,6 +135,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 
 ## Documentation
 
+See [docs/README.md](docs/README.md) for the grouped documentation index.
+
 | Guide | Purpose |
 |---|---|
 | [Tutorials](docs/tutorials.md) | Start from a concrete figure workflow |

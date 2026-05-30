@@ -21,7 +21,7 @@ Use this checklist before merging a new or changed figure template.
 - The renderer accepts `outputDir` and `formats`.
 - The figure is hidden during batch rendering.
 - Labels, title, legend, and units are readable at gallery size.
-- Color is not the only way to read an important distinction.
+- Color is not the only way to read a must-see distinction.
 - The renderer closes its figure after export.
 - PNG and SVG outputs are regenerated and committed.
 

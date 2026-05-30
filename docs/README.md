@@ -1,0 +1,42 @@
+# Documentation
+
+Start with the gallery if you want to copy a figure. Start with the maintainer
+docs if you want to change the project.
+
+## Use The Library
+
+- [Gallery reference](gallery-reference.md)
+- [Template reference](template-reference.md)
+- [Chart selection guide](chart-selection-guide.md)
+- [Use with your data](use-with-your-data.md)
+- [Recipes](recipes.md)
+- [MATLAB CLI guide](matlab-cli-guide.md)
+
+## Tutorials
+
+- [Tutorials overview](tutorials.md)
+- [CSV and Excel data](tutorial-csv-excel-data.md)
+- [Paper export](tutorial-paper-export.md)
+- [Batch rendering](tutorial-batch-rendering.md)
+
+## Review Figures
+
+- [Figure quality checklist](figure-quality-checklist.md)
+- [Color accessibility](color-accessibility.md)
+- [Quality gates](quality-gates.md)
+
+## Contribute And Maintain
+
+- [Template author guide](template-author-guide.md)
+- [Template review checklist](template-review-checklist.md)
+- [Template backlog](template-backlog.md)
+- [Release checklist](release-checklist.md)
+- [Provenance policy](provenance-policy.md)
+- [Maintainer workflow](openai-codex-workflow.md)
+- [Version plan](version-plan.md)
+
+## API Notes
+
+- [v2 API design](v2-api-design.md)
+- [v2 migration notes](v2-migration.md)
+- [v0.5.0 maintenance report](maintenance-report-v0.5.0.md)
