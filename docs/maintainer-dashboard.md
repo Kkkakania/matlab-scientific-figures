@@ -9,7 +9,7 @@ scope, and where feedback should go.
 - Current released line: `v3.2.0`.
 - Main branch gallery: 22 clean-room examples with committed PNG and SVG
   outputs.
-- Companion CI tool: `matlab-figure-ci` is dogfooded at `v2.4.4`.
+- Companion CI tool: `matlab-figure-ci` is dogfooded at `v2.4.5`.
 - MATLAB rendering in GitHub Actions: disabled by default because public
   runners normally do not include MATLAB.
 - Public feedback channel: issue
