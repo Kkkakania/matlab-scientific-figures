@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v0.5.0` is the latest public release.
+- `v2.0.0` is the latest public release.
 - The gallery has 22 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 
@@ -30,19 +30,19 @@ Release condition:
 - First-use documentation is shorter and more practical.
 - Changelog, local verification, and GitHub Actions are in place.
 
-## v2.0.0
+## v2.0.0 Released
 
-Goal: introduce a stable public API for template discovery and selected
-rendering.
+Goal met: introduce a public API for template discovery and selected rendering.
 
-This project may jump from `v0.5.0` to `v2.0.0` only if the release introduces a
-real API boundary, not only more templates.
+The project jumped from `v0.5.0` to `v2.0.0` because the release introduced a
+registry-backed API boundary, not just more templates.
 
-Expected changes:
+Delivered changes:
 
 - A template registry with names, functions, tags, output names, and
   communication tasks.
 - A selected-rendering API built on that registry.
+- Shell selected rendering through `scripts/render_all.sh`.
 - Migration notes explaining how users should move from direct calls to the new
   API.
 - Backward-compatible direct renderer functions where practical.

@@ -4,7 +4,7 @@ v0.5.0 proved that the gallery can be maintained. The weak spot is discovery:
 users still need to read `runAllExamples.m` or `examples/README.md` to know what
 can be rendered.
 
-v2.0.0 should make templates discoverable from MATLAB.
+v2.0.0 makes templates discoverable from MATLAB.
 
 ## Problems To Fix
 

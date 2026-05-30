@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- No unreleased changes.
+
+## v2.0.0 - 2026-05-30
+
 - Add the v0.5.0 maintenance report.
 - Add v2 API design notes for the registry and selected-rendering boundary.
 - Add `sftTemplateRegistry` and `sftRenderExamples` for template discovery and
