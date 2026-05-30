@@ -27,8 +27,9 @@ Quality goals:
 
 Candidates that need careful design before inclusion:
 
+- Tag-based rendering for groups such as `matrix` or `density`.
 - Sankey-style flow diagram.
-- Color accessibility checks.
+- Automated color accessibility checks.
 - 3D density scatter if a real use case needs depth.
 
 ## Non-Goals

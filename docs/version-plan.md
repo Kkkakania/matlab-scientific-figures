@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v2.0.0` is the latest public release.
+- `v3.0.0` is the current release.
 - The gallery has 22 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 
@@ -53,3 +53,22 @@ Non-goals:
 - No copied third-party plotting files.
 - No inflated adoption claims.
 - No version jump without matching documentation and tests.
+
+## v3.0.0 Released
+
+Goal: make the project easier to use and maintain without adding chart volume.
+
+Delivered changes:
+
+- User-facing discovery helpers: `sftListTemplates` and `sftFindTemplates`.
+- CLI discovery commands: `render_all.sh list` and `render_all.sh search`.
+- Template and gallery references that help users pick by task or by sight.
+- A release-ready gate for local checks, with optional MATLAB enforcement.
+- A forbidden-file scan for source packs, binaries, archives, and raw material.
+- Stronger contribution, issue, PR, template-review, and release workflows.
+
+Release conditions:
+
+- All repository checks pass.
+- MATLAB tests pass locally with `REQUIRE_MATLAB=1`.
+- `CHANGELOG.md`, README release status, and GitHub release notes agree.

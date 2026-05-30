@@ -163,6 +163,7 @@ See [docs/README.md](docs/README.md) for the grouped documentation index.
 | [Version plan](docs/version-plan.md) | Understand the v0.5.0 and v2.0.0 release path |
 | [v2 API design](docs/v2-api-design.md) | See the registry and selected-rendering API |
 | [v2 migration notes](docs/v2-migration.md) | Move from direct renderer calls to the registry API |
+| [v3.0.0 maintenance report](docs/maintenance-report-v3.0.0.md) | Review the v3 maintenance and usability scope |
 
 ## Copyright And Provenance
 
@@ -194,7 +195,7 @@ is available. The project uses the `matlab-figures` preset from
 
 ## Project Status
 
-Current stable release: `v2.0.0`.
+Current stable release: `v3.0.0`.
 
 The project is intentionally focused. New templates should arrive with
 examples, deterministic data, documentation, and provenance checks.

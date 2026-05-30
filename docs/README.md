@@ -40,3 +40,4 @@ docs if you want to change the project.
 - [v2 API design](v2-api-design.md)
 - [v2 migration notes](v2-migration.md)
 - [v0.5.0 maintenance report](maintenance-report-v0.5.0.md)
+- [v3.0.0 maintenance report](maintenance-report-v3.0.0.md)

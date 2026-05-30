@@ -4,6 +4,20 @@
 
 - No unreleased changes.
 
+## v3.0.0 - 2026-05-30
+
+- Add `sftListTemplates` for a user-facing table of public templates.
+- Add `sftFindTemplates` for searching templates by name, task, output name, or
+  tag.
+- Add `render_all.sh list` and `render_all.sh search` for CLI template
+  discovery.
+- Add template reference, gallery reference, quality gates, documentation index,
+  and template review checklist.
+- Add `check_release_ready.sh` as the combined local release gate.
+- Add `check_forbidden_files.sh` and wire it into GitHub Actions.
+- Improve contribution, issue, PR, release, and maintainer workflow docs.
+- Add the v3.0.0 maintenance report.
+
 ## v2.0.0 - 2026-05-30
 
 - Add the v0.5.0 maintenance report.
