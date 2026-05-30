@@ -18,6 +18,37 @@ fi
 
 cd "$ROOT_DIR"
 
+if [[ "${1:-}" == "list" ]]; then
+  if [[ "$#" -ne 1 ]]; then
+    echo "Usage: ./scripts/render_all.sh list" >&2
+    exit 2
+  fi
+  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); disp(sftListTemplates())"
+  exit 0
+fi
+
+if [[ "${1:-}" == "search" ]]; then
+  shift
+  if [[ "$#" -eq 0 ]]; then
+    echo "Usage: ./scripts/render_all.sh search <keyword> [keyword...]" >&2
+    exit 2
+  fi
+
+  queries=()
+  for query in "$@"; do
+    if [[ ! "$query" =~ ^[A-Za-z0-9_-]+$ ]]; then
+      echo "Invalid search keyword: $query" >&2
+      echo "Search keywords may contain letters, numbers, hyphens, and underscores." >&2
+      exit 2
+    fi
+    queries+=("\"$query\"")
+  done
+
+  query_expr="[$(IFS=,; echo "${queries[*]}")]"
+  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); disp(sftFindTemplates($query_expr))"
+  exit 0
+fi
+
 if [[ "$#" -eq 0 ]]; then
   "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('gallery')"
   exit 0
