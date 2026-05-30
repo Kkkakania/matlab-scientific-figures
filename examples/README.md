@@ -4,6 +4,22 @@ Each example is a small rendering function that uses synthetic data, applies a
 shared theme, exports stable files, and closes its figure. The examples are
 designed for headless batch rendering through `runAllExamples`.
 
+## Find An Example
+
+Use the registry helpers when you know the kind of chart you need but not the
+file name:
+
+```matlab
+addpath(genpath('src'));
+addpath(genpath('examples'));
+sftListTemplates()
+sftFindTemplates("matrix")
+sftFindTemplates(["density", "contour"])
+```
+
+The `Name` column is the value to pass into `sftRenderExamples` or
+`scripts/render_all.sh`.
+
 ## Gallery Map
 
 | Output name | Function | Communication task |
@@ -45,6 +61,14 @@ renderHeatmap('gallery', ["png", "svg"]);
 addpath(genpath('src'));
 addpath(genpath('examples'));
 runAllExamples('gallery', ["png", "svg"]);
+```
+
+## Run Selected Examples
+
+```matlab
+addpath(genpath('src'));
+addpath(genpath('examples'));
+sftRenderExamples(["heatmap", "zoomed_inset_line"], "gallery", ["png", "svg"]);
 ```
 
 ## Add A New Example

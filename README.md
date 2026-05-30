@@ -4,11 +4,43 @@
 [![Release](https://img.shields.io/github/v/release/Kkkakania/matlab-scientific-figures)](https://github.com/Kkkakania/matlab-scientific-figures/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A small clean-room gallery of MATLAB figure scripts.
+A clean-room gallery of MATLAB figure scripts.
 
 Each example is meant to be copied: synthetic data in, publication-style PNG,
 SVG, or PDF out. No private source packs, no journal screenshots, no hidden
 helper archive.
+
+## Find The Right Template
+
+Start by listing the gallery:
+
+```matlab
+addpath(genpath('src'));
+addpath(genpath('examples'));
+templates = sftListTemplates()
+```
+
+Search by the chart job you have in mind:
+
+```matlab
+sftFindTemplates("matrix")
+sftFindTemplates(["density", "contour"])
+sftFindTemplates("inset")
+```
+
+Then render only those figures:
+
+```matlab
+sftRenderExamples(["heatmap", "double_triangle_heatmap"], "gallery", ["png", "svg"]);
+```
+
+From a shell:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search matrix
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap double_triangle_heatmap
+```
 
 ## Gallery
 
@@ -48,11 +80,11 @@ addpath(genpath('examples'));
 runAllExamples('gallery', ["png", "svg"]);
 ```
 
-List templates and render only the ones you need:
+List, search, and render only the templates you need:
 
 ```matlab
-registry = sftTemplateRegistry();
-disp(string({registry.Name})')
+templates = sftListTemplates();
+matrixTemplates = sftFindTemplates("matrix");
 sftRenderExamples(["heatmap", "radar_chart"], "gallery", ["png", "svg"]);
 ```
 
@@ -78,6 +110,8 @@ Or use the helper script:
 
 ```bash
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search density
 ```
 
 Check the examples without touching the committed gallery:
@@ -95,13 +129,16 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 - `sftTiledFigure` creates a clean tiled layout without hand-tuning positions.
 - `sftValidateFigure` catches a few common figure problems before export.
 - `sftGalleryReport` batch-checks every gallery example.
-- `runAllExamples` renders the full gallery in headless mode.
+- `sftListTemplates` and `sftFindTemplates` help users discover examples.
+- `sftRenderExamples` renders all examples or a selected subset.
+- `runAllExamples` remains as the full-gallery compatibility entry point.
 
 ## Documentation
 
 | Guide | Purpose |
 |---|---|
 | [Tutorials](docs/tutorials.md) | Start from a concrete figure workflow |
+| [Template reference](docs/template-reference.md) | List every template, renderer, task, and tag |
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
 | [Use with your data](docs/use-with-your-data.md) | Turn a gallery example into your own figure |
 | [Recipes](docs/recipes.md) | Common copy-paste edits |
