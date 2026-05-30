@@ -1,4 +1,4 @@
-function files = renderLinePlot(outputDir, formats)
+function [files, report] = renderLinePlot(outputDir, formats)
 data = sftExampleData('line');
 theme = sftTheme();
 colors = sftPalette('main', 3);
@@ -12,9 +12,8 @@ grid on
 xlabel('Time');
 ylabel('Response');
 title('Line Plot');
-legend(data.labels, 'Location', 'best', 'Box', 'off');
+sftStyleLegend(legend(data.labels, 'Location', 'best'), theme);
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'line_plot'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'line_plot'), formats);
 end

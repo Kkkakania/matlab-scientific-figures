@@ -1,4 +1,4 @@
-function files = renderConfidenceInterval(outputDir, formats)
+function [files, report] = renderConfidenceInterval(outputDir, formats)
 data = sftExampleData('confidence');
 theme = sftTheme('FigureSize', [15 9]);
 colors = sftPalette('main', 3);
@@ -15,9 +15,8 @@ grid on
 xlabel('Input');
 ylabel('Estimate');
 title('Line Chart With Confidence Interval');
-legend(data.labels, 'Location', 'best', 'Box', 'off');
+sftStyleLegend(legend(data.labels, 'Location', 'best'), theme);
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'confidence_interval'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'confidence_interval'), formats);
 end

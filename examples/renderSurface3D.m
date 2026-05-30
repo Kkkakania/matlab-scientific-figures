@@ -1,4 +1,4 @@
-function files = renderSurface3D(outputDir, formats)
+function [files, report] = renderSurface3D(outputDir, formats)
 data = sftExampleData('surface');
 theme = sftTheme('FigureSize', [13 10]);
 
@@ -17,6 +17,5 @@ zlabel('Z');
 title('3D Surface');
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'surface_3d'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'surface_3d'), formats);
 end

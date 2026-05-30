@@ -27,14 +27,18 @@ Run `runAllExamples` to generate the gallery locally. The examples cover:
 | Uncertainty | <img src="gallery/confidence_interval.png" width="260" alt="Confidence interval"> |
 | Dense relationship | <img src="gallery/density_scatter.png" width="260" alt="Density scatter"> |
 | Method comparison | <img src="gallery/grouped_bar.png" width="260" alt="Grouped bar"> |
+| Method uncertainty | <img src="gallery/grouped_error_bar.png" width="260" alt="Grouped bar with error bars"> |
+| Signed change | <img src="gallery/positive_negative_area.png" width="260" alt="Positive-negative area"> |
 | Matrix pattern | <img src="gallery/heatmap.png" width="260" alt="Heatmap"> |
 | Correlation matrix | <img src="gallery/correlation_bubble.png" width="260" alt="Correlation bubble heatmap"> |
+| Paper layout | <img src="gallery/multi_panel_overview.png" width="260" alt="Multi-panel overview"> |
 | Ranking | <img src="gallery/lollipop_ranking.png" width="260" alt="Lollipop ranking"> |
 
 The full gallery includes line plots, confidence intervals, scatter plots,
-density scatter plots, grouped bars, heatmaps, correlation bubbles, bubble
-matrices, box plots with jittered observations, lollipop rankings, and 3D
-surfaces.
+density scatter plots, grouped bars, error bars, signed area charts, heatmaps,
+correlation bubbles, bubble matrices, box plots with jittered observations,
+lollipop rankings, and 3D surfaces. There is also a compact multi-panel example
+for paper and slide figures.
 
 ## Quick Start
 
@@ -70,13 +74,21 @@ Or use the helper script:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
 ```
 
+Check the examples without touching the committed gallery:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery.sh
+```
+
 ## Design
 
 - `sftTheme` keeps figure size, font, grid, and line defaults in one place.
 - `sftPalette` provides categorical, sequential, and diverging palettes.
 - `sftExampleData` generates deterministic synthetic data for the gallery.
 - `sftExport` writes PNG, PDF, and SVG outputs from one call.
+- `sftTiledFigure` creates a clean tiled layout without hand-tuning positions.
 - `sftValidateFigure` catches a few common figure problems before export.
+- `sftGalleryReport` batch-checks every gallery example.
 - `runAllExamples` renders the full gallery in headless mode.
 
 ## Documentation
@@ -85,9 +97,12 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
 |---|---|
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
 | [Use with your data](docs/use-with-your-data.md) | Turn a gallery example into your own figure |
+| [Recipes](docs/recipes.md) | Common copy-paste edits |
 | [Figure quality checklist](docs/figure-quality-checklist.md) | Review a figure before release |
 | [Template author guide](docs/template-author-guide.md) | Add a new clean-room example |
+| [Template backlog](docs/template-backlog.md) | See which high-value charts are planned |
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
+| [Release checklist](docs/release-checklist.md) | Check a release before tagging |
 | [Provenance policy](docs/provenance-policy.md) | Keep public releases clean and auditable |
 | [Maintainer workflow](docs/openai-codex-workflow.md) | Review PRs, issues, and releases consistently |
 | [Roadmap](ROADMAP.md) | Track planned template and workflow milestones |

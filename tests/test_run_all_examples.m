@@ -8,7 +8,7 @@ addpath(genpath(fullfile(projectRoot, 'src')));
 addpath(genpath(fullfile(projectRoot, 'examples')));
 end
 
-function testRunAllExamplesCreatesElevenPngFiles(testCase)
+function testRunAllExamplesCreatesFourteenPngFiles(testCase)
 outDir = fullfile(tempdir, 'sft-gallery-test');
 if exist(outDir, 'dir')
     rmdir(outDir, 's');
@@ -17,7 +17,26 @@ end
 result = runAllExamples(outDir, ["png"]);
 pngFiles = dir(fullfile(outDir, '*.png'));
 
-verifyEqual(testCase, numel(result), 11);
-verifyEqual(testCase, numel(pngFiles), 11);
+verifyEqual(testCase, numel(result), 14);
+verifyEqual(testCase, numel(pngFiles), 14);
 verifyTrue(testCase, isfile(fullfile(outDir, 'correlation_bubble.png')));
+verifyTrue(testCase, isfile(fullfile(outDir, 'multi_panel_overview.png')));
+verifyTrue(testCase, isfile(fullfile(outDir, 'positive_negative_area.png')));
+verifyTrue(testCase, isfile(fullfile(outDir, 'grouped_error_bar.png')));
+verifyTrue(testCase, all(arrayfun(@(item) item.report.Passed, result)));
+end
+
+function testGalleryReportMarksAllExamplesPassed(testCase)
+outDir = fullfile(tempdir, 'sft-gallery-report-test');
+if exist(outDir, 'dir')
+    rmdir(outDir, 's');
+end
+
+report = sftGalleryReport(outDir, ["png"]);
+
+verifyEqual(testCase, height(report), 14);
+verifyTrue(testCase, all(report.Passed));
+verifyTrue(testCase, any(report.Example == "multi_panel_overview"));
+verifyTrue(testCase, any(report.Example == "positive_negative_area"));
+verifyTrue(testCase, any(report.Example == "grouped_error_bar"));
 end

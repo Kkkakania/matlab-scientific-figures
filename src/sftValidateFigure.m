@@ -13,6 +13,8 @@ arguments
     options.RequireWhiteBackground (1, 1) logical = true
     options.MinimumWidth (1, 1) double = 480
     options.MinimumHeight (1, 1) double = 320
+    options.MinimumWidthCentimeters (1, 1) double = 10
+    options.MinimumHeightCentimeters (1, 1) double = 6
     options.MinimumFontSize (1, 1) double = 8
 end
 
@@ -28,15 +30,13 @@ checks(end + 1) = makeCheck( ...
     ~isempty(axesList), ...
     'Figure contains at least one plot axes.');
 
-pixelPosition = getpixelposition(fig);
-hasEnoughPixels = numel(pixelPosition) >= 4 ...
-    && pixelPosition(3) >= options.MinimumWidth ...
-    && pixelPosition(4) >= options.MinimumHeight;
+hasEnoughPixels = hasEnoughCanvasSize(fig, options);
 checks(end + 1) = makeCheck( ...
     'FigureSize', ...
     hasEnoughPixels, ...
-    sprintf('Figure canvas is at least %.0f x %.0f pixels.', ...
-    options.MinimumWidth, options.MinimumHeight));
+    sprintf('Figure canvas is at least %.0f x %.0f pixels or %.0f x %.0f cm.', ...
+    options.MinimumWidth, options.MinimumHeight, ...
+    options.MinimumWidthCentimeters, options.MinimumHeightCentimeters));
 
 if options.RequireWhiteBackground
     figColor = get(fig, 'Color');
@@ -94,6 +94,34 @@ check = struct( ...
     'Name', char(name), ...
     'Passed', logical(passed), ...
     'Message', char(message));
+end
+
+function tf = hasEnoughCanvasSize(fig, options)
+units = string(get(fig, 'Units'));
+position = get(fig, 'Position');
+if numel(position) < 4
+    tf = false;
+    return
+end
+
+switch units
+    case "pixels"
+        tf = position(3) >= options.MinimumWidth && position(4) >= options.MinimumHeight;
+    case "centimeters"
+        tf = position(3) >= options.MinimumWidthCentimeters ...
+            && position(4) >= options.MinimumHeightCentimeters;
+    case "inches"
+        tf = position(3) * 2.54 >= options.MinimumWidthCentimeters ...
+            && position(4) * 2.54 >= options.MinimumHeightCentimeters;
+    case "points"
+        tf = position(3) / 72 * 2.54 >= options.MinimumWidthCentimeters ...
+            && position(4) / 72 * 2.54 >= options.MinimumHeightCentimeters;
+    otherwise
+        pixelPosition = getpixelposition(fig);
+        tf = numel(pixelPosition) >= 4 ...
+            && pixelPosition(3) >= options.MinimumWidth ...
+            && pixelPosition(4) >= options.MinimumHeight;
+end
 end
 
 function tf = hasText(textHandle)

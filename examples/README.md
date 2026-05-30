@@ -13,11 +13,14 @@ designed for headless batch rendering through `runAllExamples`.
 | `scatter_plot` | `renderScatterPlot` | Show relationships across groups |
 | `density_scatter` | `renderDensityScatter` | Show dense point clouds without overplotting |
 | `grouped_bar` | `renderGroupedBar` | Compare methods across a few metrics |
+| `grouped_error_bar` | `renderGroupedErrorBar` | Compare methods with uncertainty bars |
+| `positive_negative_area` | `renderPositiveNegativeArea` | Show signed change around a baseline |
 | `heatmap` | `renderHeatmap` | Show a matrix pattern |
 | `correlation_bubble` | `renderCorrelationBubble` | Show positive and negative pairwise correlations |
 | `bubble_matrix` | `renderBubbleMatrix` | Show matrix magnitude with position and area |
 | `box_jitter` | `renderBoxJitter` | Compare group distributions and observations |
 | `lollipop_ranking` | `renderLollipopRanking` | Rank factors or features |
+| `multi_panel_overview` | `renderMultiPanelOverview` | Combine small plots in one paper-style figure |
 | `surface_3d` | `renderSurface3D` | Show a smooth response over two variables |
 
 ## Run One Example

@@ -49,6 +49,20 @@ switch kind
         data.groups = ["Baseline", "Method A", "Method B", "Method C"];
         data.series = ["Precision", "Recall", "Robustness"];
 
+    case "grouped_error_bar"
+        data.values = [4.4 3.8 4.1; 5.2 4.7 4.9; 3.9 4.3 4.0; 4.8 5.1 4.6];
+        data.errors = [0.28 0.22 0.25; 0.31 0.26 0.29; 0.24 0.27 0.22; 0.30 0.25 0.28];
+        data.groups = ["Baseline", "Method A", "Method B", "Method C"];
+        data.series = ["Dataset 1", "Dataset 2", "Dataset 3"];
+
+    case "positive_negative_area"
+        x = linspace(0, 18, 160);
+        y = 0.38 * sin(0.75 * x) + 0.18 * cos(1.65 * x + 0.4) ...
+            + 0.035 * randn(size(x));
+        data.x = x;
+        data.y = y;
+        data.baseline = zeros(size(x));
+
     case "heatmap"
         m = randn(10, 10);
         data.matrix = corr(m + linspace(-1, 1, 10));

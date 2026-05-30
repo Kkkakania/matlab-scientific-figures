@@ -1,6 +1,7 @@
 # Figure Quality Checklist
 
-Use this checklist before adding or changing a template.
+Use this before adding or changing a template. It is short on purpose; if the
+figure fails one of these checks, fix the figure before adding more style.
 
 ## Data And Purpose
 
@@ -26,8 +27,8 @@ disp(report.Passed)
 ```
 
 The validator checks for plot axes, a clean canvas, readable fonts, and basic
-label completeness. It is intentionally lightweight, so a passing report is a
-starting point rather than a substitute for human review.
+label completeness. It will not judge whether the chart is the right chart. That
+part is still on you.
 
 ## Export Quality
 
@@ -40,4 +41,4 @@ starting point rather than a substitute for human review.
 - The example can run headlessly.
 - The template does not depend on local files.
 - Privacy and provenance checks pass.
-- The README or docs explain when to use the figure.
+- The docs say when the figure is useful.

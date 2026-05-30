@@ -1,9 +1,10 @@
-# OpenAI Codex Workflow
+# Maintainer Workflow
 
-This project is designed so AI assistance can help maintain quality without
-becoming the source of truth.
+Automation can help with review chores, but it should not decide what belongs
+in the project. A maintainer still checks the code, the figure, and the source
+history.
 
-## Useful Maintainer Workflows
+## Useful Automation
 
 - Review pull requests for MATLAB syntax, example coverage, and export behavior.
 - Triage issues into rendering bugs, documentation gaps, template requests, and
@@ -12,10 +13,10 @@ becoming the source of truth.
 - Suggest chart-selection documentation for new examples.
 - Check whether new templates include deterministic data and gallery output.
 
-## Guardrails
+## Rules
 
-- AI-generated code must pass the same tests and provenance checks.
-- AI suggestions must not introduce copied third-party material.
+- Generated code must pass the same tests and provenance checks as human code.
+- Suggestions must not introduce copied third-party material.
 - Maintainers should reject changes that add raw data packs or unclear assets.
 
 ## Candidate API Credit Uses

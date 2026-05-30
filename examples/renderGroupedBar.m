@@ -1,4 +1,4 @@
-function files = renderGroupedBar(outputDir, formats)
+function [files, report] = renderGroupedBar(outputDir, formats)
 data = sftExampleData('grouped_bar');
 theme = sftTheme('FigureSize', [14 9]);
 colors = sftPalette('main', size(data.values, 2));
@@ -14,9 +14,8 @@ set(gca, 'XTickLabel', data.groups);
 xlabel('Scenario');
 ylabel('Score');
 title('Grouped Bar Chart');
-legend(data.series, 'Location', 'northoutside', 'Orientation', 'horizontal', 'Box', 'off');
+sftStyleLegend(legend(data.series, 'Location', 'northoutside', 'Orientation', 'horizontal'), theme);
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'grouped_bar'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'grouped_bar'), formats);
 end

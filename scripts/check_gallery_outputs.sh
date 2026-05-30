@@ -10,11 +10,14 @@ expected=(
   scatter_plot
   density_scatter
   grouped_bar
+  grouped_error_bar
+  positive_negative_area
   heatmap
   correlation_bubble
   bubble_matrix
   box_jitter
   lollipop_ranking
+  multi_panel_overview
   surface_3d
 )
 
@@ -22,6 +25,10 @@ missing=0
 for name in "${expected[@]}"; do
   if [[ ! -s "$GALLERY_DIR/$name.png" ]]; then
     echo "Missing gallery output: gallery/$name.png" >&2
+    missing=1
+  fi
+  if [[ ! -s "$GALLERY_DIR/$name.svg" ]]; then
+    echo "Missing gallery output: gallery/$name.svg" >&2
     missing=1
   fi
 done

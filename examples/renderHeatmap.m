@@ -1,4 +1,4 @@
-function files = renderHeatmap(outputDir, formats)
+function [files, report] = renderHeatmap(outputDir, formats)
 data = sftExampleData('heatmap');
 theme = sftTheme('FigureSize', [12 10]);
 
@@ -13,9 +13,10 @@ cb.FontSize = theme.FontSize;
 set(gca, 'XTick', 1:numel(data.labels), 'XTickLabel', data.labels, ...
     'YTick', 1:numel(data.labels), 'YTickLabel', data.labels);
 xtickangle(45);
+xlabel('Feature');
+ylabel('Feature');
 title('Matrix Heatmap');
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'heatmap'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'heatmap'), formats);
 end

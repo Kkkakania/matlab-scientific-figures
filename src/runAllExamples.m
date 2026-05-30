@@ -29,20 +29,26 @@ renderers = {
     'scatter_plot', @renderScatterPlot
     'density_scatter', @renderDensityScatter
     'grouped_bar', @renderGroupedBar
+    'grouped_error_bar', @renderGroupedErrorBar
+    'positive_negative_area', @renderPositiveNegativeArea
     'heatmap', @renderHeatmap
     'correlation_bubble', @renderCorrelationBubble
     'bubble_matrix', @renderBubbleMatrix
     'box_jitter', @renderBoxJitter
     'lollipop_ranking', @renderLollipopRanking
+    'multi_panel_overview', @renderMultiPanelOverview
     'surface_3d', @renderSurface3D
 };
 
-result = repmat(struct('name', "", 'files', strings(0, 1)), size(renderers, 1), 1);
+emptyReport = struct('Passed', false, 'Checks', struct('Name', {}, 'Passed', {}, 'Message', {}));
+result = repmat(struct('name', "", 'files', strings(0, 1), 'report', emptyReport), ...
+    size(renderers, 1), 1);
 for k = 1:size(renderers, 1)
     name = renderers{k, 1};
     fn = renderers{k, 2};
-    files = fn(outputDir, formats);
+    [files, report] = fn(outputDir, formats);
     result(k).name = string(name);
     result(k).files = files;
+    result(k).report = report;
 end
 end

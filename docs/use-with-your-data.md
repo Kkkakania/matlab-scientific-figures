@@ -8,10 +8,13 @@ section. You do not need to keep the synthetic data helper in your own work.
 Start from the chart, not the code:
 
 - time series: `examples/renderLinePlot.m`
+- signed change: `examples/renderPositiveNegativeArea.m`
 - uncertainty band: `examples/renderConfidenceInterval.m`
+- method comparison with uncertainty: `examples/renderGroupedErrorBar.m`
 - dense x-y relationship: `examples/renderDensityScatter.m`
 - correlation matrix: `examples/renderCorrelationBubble.m`
 - ranked factors: `examples/renderLollipopRanking.m`
+- small paper figure: `examples/renderMultiPanelOverview.m`
 
 If two examples feel close, choose the simpler one first. It is easier to add a
 label or color later than to unwind a complicated plot.

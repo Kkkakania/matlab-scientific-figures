@@ -19,6 +19,7 @@ useful for scientific work.
 ./scripts/check_privacy.sh
 ./scripts/check_provenance.sh
 ./scripts/check_gallery_outputs.sh
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery.sh
 ```
 
 For MATLAB rendering:

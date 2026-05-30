@@ -1,4 +1,4 @@
-function files = renderDensityScatter(outputDir, formats)
+function [files, report] = renderDensityScatter(outputDir, formats)
 data = sftExampleData('density_scatter');
 theme = sftTheme('FigureSize', [12 10]);
 
@@ -24,6 +24,5 @@ ylabel('Variable Y');
 title('Density Scatter Plot');
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'density_scatter'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'density_scatter'), formats);
 end

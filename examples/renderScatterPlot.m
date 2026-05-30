@@ -1,4 +1,4 @@
-function files = renderScatterPlot(outputDir, formats)
+function [files, report] = renderScatterPlot(outputDir, formats)
 data = sftExampleData('scatter');
 theme = sftTheme('FigureSize', [12 10]);
 colors = sftPalette('main', 3);
@@ -18,6 +18,5 @@ title('Grouped Scatter Plot');
 legend(groups, 'Location', 'best', 'Box', 'off');
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'scatter_plot'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'scatter_plot'), formats);
 end

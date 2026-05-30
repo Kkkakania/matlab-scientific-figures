@@ -1,4 +1,4 @@
-function files = renderLollipopRanking(outputDir, formats)
+function [files, report] = renderLollipopRanking(outputDir, formats)
 data = sftExampleData('lollipop');
 theme = sftTheme('FigureSize', [13 9]);
 colors = sftPalette('contrast', numel(data.values));
@@ -17,9 +17,9 @@ grid on
 xlim([0 1]);
 set(gca, 'YTick', y, 'YTickLabel', labels);
 xlabel('Relative score');
+ylabel('Factor');
 title('Lollipop Ranking');
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'lollipop_ranking'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'lollipop_ranking'), formats);
 end

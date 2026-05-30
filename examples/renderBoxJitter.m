@@ -1,4 +1,4 @@
-function files = renderBoxJitter(outputDir, formats)
+function [files, report] = renderBoxJitter(outputDir, formats)
 data = sftExampleData('box_jitter');
 theme = sftTheme('FigureSize', [12 9]);
 colors = sftPalette('main', 4);
@@ -20,6 +20,5 @@ ylabel('Measurement');
 title('Box Plot With Jittered Points');
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'box_jitter'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'box_jitter'), formats);
 end

@@ -25,6 +25,29 @@ sftApplyTheme(ax, sftTheme());
 verifyEqual(testCase, get(ax, 'Color'), [1 1 1]);
 end
 
+function testTiledFigureCreatesCompactWhiteLayout(testCase)
+[fig, layout] = sftTiledFigure(2, 2);
+cleanup = onCleanup(@() close(fig));
+
+verifyEqual(testCase, get(fig, 'Visible'), matlab.lang.OnOffSwitchState.off);
+verifyEqual(testCase, get(fig, 'Color'), [1 1 1]);
+verifyEqual(testCase, layout.GridSize, [2 2]);
+verifyEqual(testCase, string(layout.TileSpacing), "compact");
+verifyEqual(testCase, string(layout.Padding), "compact");
+end
+
+function testStyleLegendUsesReadableTextColor(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+plot(1:3, [1 3 2], 'DisplayName', 'Series A');
+leg = legend('Location', 'best');
+
+leg = sftStyleLegend(leg, sftTheme());
+
+verifyEqual(testCase, leg.TextColor, [0.12 0.12 0.12]);
+verifyEqual(testCase, string(leg.Box), "off");
+end
+
 function testPaletteReturnsRequestedNumberOfRgbRows(testCase)
 colors = sftPalette('main', 7);
 verifySize(testCase, colors, [7 3]);
@@ -53,6 +76,23 @@ verifyEqual(testCase, size(data.matrix), [9 9]);
 verifyEqual(testCase, data.matrix, data.matrix.', 'AbsTol', 1e-12);
 verifyEqual(testCase, diag(data.matrix), ones(9, 1), 'AbsTol', 1e-12);
 verifyEqual(testCase, numel(data.labels), 9);
+end
+
+function testPositiveNegativeAreaDataCrossesZero(testCase)
+data = sftExampleData('positive_negative_area');
+
+verifyEqual(testCase, numel(data.x), numel(data.y));
+verifyGreaterThan(testCase, max(data.y), 0);
+verifyLessThan(testCase, min(data.y), 0);
+end
+
+function testGroupedErrorBarDataHasMatchingErrorShape(testCase)
+data = sftExampleData('grouped_error_bar');
+
+verifyEqual(testCase, size(data.values), size(data.errors));
+verifyGreaterThan(testCase, min(data.errors(:)), 0);
+verifyEqual(testCase, numel(data.groups), size(data.values, 1));
+verifyEqual(testCase, numel(data.series), size(data.values, 2));
 end
 
 function testExportCreatesRequestedFiles(testCase)

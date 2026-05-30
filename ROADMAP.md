@@ -8,10 +8,10 @@ just add visual variety.
 
 Planned additions:
 
-- Multi-panel layout helper for compact paper figures.
+- Multi-panel layout helper for compact paper figures. Done in `Unreleased`.
 - Grouped bar chart with error bars.
 - Positive-negative area plot for signed time-series changes.
-- Cleaner examples for using the gallery with user data.
+- Cleaner examples for using the gallery with user data. Done in `Unreleased`.
 
 Quality goals:
 
@@ -24,8 +24,8 @@ Quality goals:
 
 Planned additions:
 
-- Batch figure validation report across the gallery.
-- Release checklist for maintainers.
+- Batch figure validation report across the gallery. Done in `Unreleased`.
+- Release checklist for maintainers. Done in `Unreleased`.
 - More complete examples documentation.
 - Optional command-line wrapper for rendering selected examples only.
 

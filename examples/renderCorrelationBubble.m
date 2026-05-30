@@ -1,4 +1,4 @@
-function files = renderCorrelationBubble(outputDir, formats)
+function [files, report] = renderCorrelationBubble(outputDir, formats)
 data = sftExampleData('correlation_bubble');
 theme = sftTheme('FigureSize', [13 11]);
 
@@ -48,11 +48,12 @@ for k = 1:numel(values)
     end
 end
 
+xlabel('Variable');
+ylabel('Variable');
 title('Correlation Bubble Heatmap');
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'correlation_bubble'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'correlation_bubble'), formats);
 end
 
 function color = textColorForValue(value)

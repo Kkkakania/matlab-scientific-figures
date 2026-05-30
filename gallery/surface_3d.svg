@@ -267,19 +267,19 @@
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
 <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M1,14 L684,14 L684,534 L1,534 L1,14"/>
 </g>
 
 <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M790000,4.11123e+06 L3.27368e+06,5.05e+06 L5.51e+06,4.00739e+06 L5.51e+06,1.36877e+06 L3.02632e+06,430000 L790000,1.47261e+06 L790000,4.11123e+06"/>
 </g>
 
 <g fill="none" stroke="#dbdbdb" stroke-opacity="0.25098" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="344.026,58.6462 344.026,322.507 120.395,426.769 " />
 <polyline fill="none" vector-effect="none" points="426.816,89.9387 426.816,353.8 203.184,458.061 " />
@@ -295,701 +295,701 @@ font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="no
 </g>
 
 <g fill="url(#fillPattern29_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M306.231,183.442 L302.632,179.799 L299.391,181.491 L296.15,183.138 L292.909,184.738 L289.668,186.292 L286.427,187.797 L283.186,189.255 L279.944,190.666 L276.703,192.03 L273.462,193.351 L270.221,194.63 L266.98,195.87 L263.739,197.074 L260.498,198.246 L257.257,199.39 L254.016,200.511 L250.775,201.614 L247.534,202.703 L244.293,203.785 L241.052,204.863 L237.811,205.943 L234.57,207.031 L231.329,208.13 L228.088,209.247 L224.847,210.383 L221.606,211.544 L218.365,212.732 L215.124,213.95 L211.883,215.2 L208.642,216.485 L205.401,217.804 L202.16,219.16 L198.918,220.552 L195.677,221.982 L192.436,223.449 L189.195,224.954 L185.954,226.496 L182.713,228.077 L186.313,227.254 L189.554,225.632 L193.153,225.099 L196.394,223.525 L199.994,223.429 L203.235,221.942 L206.835,222.422 L210.076,221.042 L213.675,222.214 L216.916,220.935 L220.516,222.881 L223.757,221.671 L227.356,224.428 L230.597,223.226 L234.197,226.774 L237.796,231.232 L241.396,236.611 L244.637,234.872 L248.237,240.829 L251.836,247.537 L252.195,257.643 L255.794,265.759 L256.153,277.044 L259.752,285.286 L260.111,295.416 L263.71,301.801 L267.31,306.543 L270.551,304.074 L274.15,307.018 L277.391,303.486 L280.991,304.51 L284.232,299.887 L287.473,294.008 L290.714,286.944 L293.955,278.806 L297.196,269.761 L296.838,260.631 L300.079,251.316 L303.32,242.035 L302.961,235.027 L306.202,227.572 L309.443,220.893 L312.684,215.134 L316.284,210.961 L319.525,205.744 L315.925,210.372 L319.166,206.615 L315.567,210.601 L311.967,213.724 L315.208,211.336 L311.609,213.956 L308.009,215.909 L311.25,214.462 L307.651,216.046 L304.051,217.112 L307.292,216.262 L303.693,217.022 L306.934,216.379 L310.175,215.736 L313.416,215.057 L316.657,214.307 L319.898,213.46 L323.497,212.43 L326.738,211.476 L329.98,210.406 L333.221,209.21 L336.82,207.915 L340.061,206.654 L343.661,205.166 L346.902,203.885 L350.143,202.504 L353.742,201.068 L356.983,199.734 L360.583,198.368 L364.182,197.007 L363.824,197.131 L360.224,198.334 L356.625,199.481 L353.025,200.503 L349.426,201.334 L345.826,201.912 L342.227,202.183 L338.627,202.1 L335.028,201.629 L331.428,200.743 L327.829,199.432 L324.229,197.693 L320.629,195.54 L317.03,192.997 L313.43,190.101 L309.831,186.897 L306.231,183.442"/>
 </g>
 
 <g fill="url(#fillPattern30_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M346.902,203.885 L350.143,202.504 L353.742,201.068 L356.983,199.734 L360.583,198.368 L364.182,197.007 L363.824,197.131 L367.423,195.943 L371.023,194.84 L374.623,193.888 L378.222,193.151 L381.822,192.683 L378.581,192.997 L382.18,192.66 L381.822,192.683 L385.421,192.535 L382.18,192.66 L381.822,192.683 L378.581,192.997 L382.18,192.66 L385.78,192.687 L389.379,193.114 L386.138,192.656 L389.738,193.288 L393.337,194.371 L396.937,195.912 L400.536,197.909 L397.295,196.064 L400.895,198.294 L404.494,200.982 L408.094,204.095 L411.693,207.589 L415.293,211.403 L412.052,207.896 L408.452,204.131 L405.211,199.456 L401.612,196.272 L398.012,193.617 L394.413,191.519 L391.172,186.562 L387.572,185.532 L383.973,185.104 L380.732,180.315 L377.132,181.14 L373.533,182.472 L370.291,178.462 L366.692,181.006 L363.451,177.374 L359.851,181.04 L356.61,178.069 L353.011,182.662 L349.77,180.585 L346.17,185.82 L342.929,184.786 L339.688,184.325 L336.089,190.365 L332.848,191.16 L329.607,192.924 L326.007,198.795 L322.766,201.708 L319.525,205.744 L315.925,210.372 L319.166,206.615 L315.567,210.601 L311.967,213.724 L315.208,211.336 L311.609,213.956 L308.009,215.909 L304.41,217.268 L307.651,216.046 L304.051,217.112 L307.292,216.262 L303.693,217.022 L306.934,216.379 L310.175,215.736 L313.416,215.057 L316.657,214.307 L319.898,213.46 L323.497,212.43 L326.738,211.476 L329.98,210.406 L333.221,209.21 L336.82,207.915 L340.061,206.654 L343.661,205.166 L346.902,203.885"/>
 </g>
 
 <g fill="url(#fillPattern31_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M389.021,192.746 L385.421,192.535 L382.18,192.66 L385.78,192.687 L389.379,193.114 L386.138,192.656 L389.738,193.288 L393.337,194.371 L396.937,195.912 L400.536,197.909 L397.295,196.064 L400.895,198.294 L404.494,200.982 L408.094,204.095 L411.693,207.589 L415.293,211.403 L412.052,207.896 L415.651,211.987 L419.251,216.321 L422.851,220.802 L426.45,225.328 L429.691,228.298 L433.291,232.476 L436.89,236.447 L440.49,240.125 L443.731,241.151 L447.33,244.157 L450.93,246.734 L454.171,246.447 L457.77,248.342 L461.37,249.775 L464.611,248.587 L461.012,247.289 L457.412,245.554 L453.812,243.392 L450.213,240.826 L446.613,237.896 L443.014,234.649 L439.414,231.146 L435.815,227.455 L432.215,223.649 L428.616,219.803 L425.016,215.993 L421.417,212.295 L417.817,208.776 L414.217,205.5 L410.618,202.523 L407.018,199.89 L403.419,197.637 L399.819,195.789 L396.22,194.358 L392.62,193.347 L389.021,192.746"/>
 </g>
 
 <g fill="url(#fillPattern32_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M311.25,214.462 L307.651,216.046 L308.009,215.909 L304.41,217.268 L307.651,216.046 L308.009,215.909 L311.25,214.462"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="327.368,505 551,400.739 " />
 </g>
 
 <g fill="url(#fillPattern33_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M251.836,247.537 L248.237,240.829 L244.637,234.872 L241.396,236.611 L237.796,231.232 L234.197,226.774 L230.597,223.226 L227.356,224.428 L223.757,221.671 L220.516,222.881 L216.916,220.935 L213.675,222.214 L210.076,221.042 L206.835,222.422 L203.235,221.942 L199.994,223.429 L196.394,223.525 L193.153,225.099 L189.554,225.632 L186.313,227.254 L182.713,228.077 L179.472,229.695 L176.231,231.351 L172.99,233.044 L169.749,234.774 L166.508,236.539 L163.267,238.339 L160.026,240.171 L156.785,242.032 L160.385,242.314 L163.626,240.247 L166.867,238.225 L170.466,238.298 L173.707,236.184 L177.307,236.397 L180.548,234.267 L184.147,234.785 L187.388,232.716 L190.988,233.718 L194.229,231.781 L197.828,233.449 L201.069,231.696 L204.669,234.203 L207.91,232.659 L211.51,236.149 L215.109,240.534 L218.35,239.37 L221.95,244.874 L225.549,251.253 L229.149,258.381 L229.507,265.901 L233.107,273.362 L236.706,280.687 L240.306,287.472 L243.905,293.279 L247.505,297.674 L250.746,300.706 L254.346,303.921 L257.587,306.459 L261.186,308.07 L264.427,309.834 L267.668,310.238 L271.268,310.387 L274.509,309.8 L278.108,308.011 L281.349,306.427 L284.59,303.438 L288.19,300.358 L291.431,296.331 L295.031,291.962 L298.63,286.346 L301.871,281.579 L305.112,275.015 L308.353,266.631 L311.594,256.534 L311.236,250.349 L314.477,238.311 L317.718,225.93 L317.359,220.223 L320.6,209.55 L323.841,200.066 L327.082,192.107 L323.483,199.411 L319.883,205.719 L323.124,200.101 L319.525,205.744 L322.766,201.708 L326.007,198.795 L329.607,192.924 L332.848,191.16 L336.089,190.365 L339.688,184.325 L342.929,184.786 L346.17,185.82 L349.77,180.585 L353.011,182.662 L356.61,178.069 L359.851,181.04 L363.451,177.374 L366.692,181.006 L370.291,178.462 L373.533,182.472 L377.132,181.14 L380.732,180.315 L383.973,185.104 L387.572,185.532 L391.172,186.562 L394.413,191.519 L398.012,193.617 L401.612,196.272 L405.211,199.456 L408.452,204.131 L412.052,207.896 L415.651,211.987 L419.251,216.321 L422.851,220.802 L426.45,225.328 L423.209,221.093 L426.809,225.892 L430.408,230.581 L434.008,235.045 L434.366,235.468 L430.767,230.79 L427.167,225.816 L423.926,219.765 L420.327,214.094 L416.727,208.472 L413.127,203.054 L409.528,197.985 L405.928,193.397 L402.329,189.398 L398.729,186.07 L395.13,183.466 L391.889,175.164 L388.289,173.83 L384.69,173.346 L381.449,165.304 L377.849,166.432 L374.25,168.337 L371.008,161.541 L367.409,165.084 L364.168,159.237 L360.568,164.312 L357.327,159.878 L353.728,166.226 L350.487,163.544 L346.887,170.771 L343.646,170.011 L340.405,170.695 L336.806,178.768 L333.565,181.46 L330.323,185.884 L327.082,192.107 L323.483,199.411 L319.883,205.719 L323.124,200.101 L319.525,205.744 L316.284,210.961 L312.684,215.134 L309.443,220.893 L306.202,227.572 L302.961,235.027 L303.32,242.035 L300.079,251.316 L296.838,260.631 L297.196,269.761 L293.955,278.806 L290.714,286.944 L287.473,294.008 L284.232,299.887 L280.991,304.51 L277.391,303.486 L274.15,307.018 L270.551,304.074 L267.31,306.543 L263.71,301.801 L260.111,295.416 L259.752,285.286 L256.153,277.044 L255.794,265.759 L252.195,257.643 L251.836,247.537"/>
 </g>
 
 <g fill="url(#fillPattern34_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M447.33,244.157 L443.731,241.151 L440.49,240.125 L436.89,236.447 L433.291,232.476 L429.691,228.298 L426.45,225.328 L423.209,221.093 L426.809,225.892 L430.408,230.581 L434.008,235.045 L434.366,235.468 L437.966,239.743 L441.565,243.526 L445.165,246.754 L448.406,248.8 L452.005,250.916 L455.605,252.465 L458.846,252.928 L462.445,253.586 L465.687,253.248 L469.286,253.223 L472.527,252.331 L476.127,251.829 L479.368,250.594 L482.967,249.805 L486.208,248.402 L482.609,249.162 L479.009,249.708 L475.41,249.973 L471.81,249.903 L468.211,249.451 L464.611,248.587 L461.37,249.775 L457.77,248.342 L454.171,246.447 L450.93,246.734 L447.33,244.157"/>
 </g>
 
 <g fill="url(#fillPattern35_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal" 
+font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M281.349,306.427 L284.59,303.438 L288.19,300.358 L291.431,296.331 L295.031,291.962 L298.63,286.346 L295.389,289.42 L292.148,290.94 L288.548,297.6 L285.307,298.212 L282.066,297.428 L278.467,303.739 L275.226,302.02 L271.626,306.905 L268.385,304.219 L264.786,307.332 L261.545,303.755 L257.945,304.999 L254.704,300.749 L251.105,300.263 L247.505,297.674 L250.746,300.706 L254.346,303.921 L257.587,306.459 L261.186,308.07 L264.427,309.834 L267.668,310.238 L271.268,310.387 L274.509,309.8 L278.108,308.011 L281.349,306.427"/>
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,23.0049,199.295)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >-1</text>
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="72.7908,408.776 79,411.123 " />
 <polyline fill="none" vector-effect="none" points="79,411.123 79,147.261 " />
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="79,411.123 327.368,505 " />
 </g>
 
 <g fill="url(#fillPattern36_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M271.626,306.905 L275.226,302.02 L278.467,303.739 L282.066,297.428 L285.307,298.212 L288.548,297.6 L292.148,290.94 L295.389,289.42 L298.63,286.346 L301.871,281.579 L305.471,275.672 L309.07,269.604 L312.311,263.616 L315.552,255.442 L318.793,245.138 L322.034,232.972 L321.676,226.006 L324.917,212.362 L324.558,206.544 L327.799,194.514 L331.04,183.898 L330.682,183.951 L327.082,192.107 L323.841,200.066 L320.6,209.55 L317.359,220.223 L317.718,225.93 L314.477,238.311 L311.236,250.349 L311.594,256.534 L308.353,266.631 L305.112,275.015 L301.871,281.579 L305.471,275.672 L309.07,269.604 L305.829,273.525 L302.588,275.604 L299.347,276.103 L295.748,283.547 L292.507,283.137 L289.265,281.46 L285.666,289.775 L282.425,287.233 L279.184,283.451 L275.584,291.793 L272.343,287.059 L268.744,294.48 L265.503,288.893 L261.903,294.944 L258.662,288.758 L255.063,293.21 L251.463,295.53 L248.222,289.643 L244.622,290.425 L241.023,289.248 L237.782,284.376 L234.182,282.263 L230.583,278.791 L233.824,282.053 L237.423,286.348 L240.664,290.102 L244.264,293.776 L247.505,297.674 L243.905,293.279 L240.306,287.472 L236.706,280.687 L233.107,273.362 L229.507,265.901 L229.149,258.381 L225.549,251.253 L221.95,244.874 L218.35,239.37 L215.109,240.534 L211.51,236.149 L207.91,232.659 L204.669,234.203 L201.069,231.696 L197.828,233.449 L194.229,231.781 L190.988,233.718 L187.388,232.716 L184.147,234.785 L180.548,234.267 L177.307,236.397 L173.707,236.184 L170.466,238.298 L166.867,238.225 L163.626,240.247 L160.385,242.314 L156.785,242.032 L153.544,243.92 L150.303,245.83 L147.062,247.758 L143.821,249.699 L140.58,251.649 L144.179,253.138 L147.42,250.933 L151.02,252.184 L154.261,249.766 L157.502,247.377 L161.102,248.279 L164.343,245.761 L167.942,246.652 L171.183,244.089 L174.783,245.111 L178.024,242.603 L181.623,243.916 L184.864,241.571 L188.464,243.353 L191.705,241.28 L195.304,243.714 L198.545,242.009 L202.145,245.266 L205.745,249.076 L208.986,248.223 L212.585,253.012 L216.185,258.235 L219.784,263.701 L223.384,269.158 L226.983,274.303 L230.583,278.791 L233.824,282.053 L237.423,286.348 L240.664,290.102 L244.264,293.776 L247.505,297.674 L251.105,300.263 L254.704,300.749 L257.945,304.999 L261.545,303.755 L264.786,307.332 L268.385,304.219 L271.626,306.905"/>
 </g>
 
 <g fill="url(#fillPattern37_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M395.13,183.466 L398.729,186.07 L402.329,189.398 L405.928,193.397 L409.528,197.985 L413.127,203.054 L416.727,208.472 L420.327,214.094 L423.926,219.765 L427.167,225.816 L430.767,230.79 L434.366,235.468 L437.966,239.743 L441.565,243.526 L441.924,243.903 L442.282,244.247 L438.683,240.273 L435.083,235.649 L431.484,230.443 L427.884,224.756 L424.285,218.718 L420.685,212.483 L417.085,206.221 L413.486,200.11 L409.886,194.326 L406.287,189.033 L403.046,178.881 L399.446,174.158 L395.847,170.358 L392.247,167.56 L388.648,165.799 L385.048,165.064 L381.807,155.627 L378.208,156.657 L374.608,158.677 L371.367,150.796 L367.767,154.662 L364.526,148.178 L360.927,153.783 L357.686,149.227 L354.086,156.281 L350.845,154.006 L347.246,162.063 L344.005,162.196 L340.764,164.292 L337.523,168.586 L333.923,177.523 L330.682,183.951 L327.082,192.107 L330.323,185.884 L333.565,181.46 L336.806,178.768 L340.405,170.695 L343.646,170.011 L346.887,170.771 L350.487,163.544 L353.728,166.226 L357.327,159.878 L360.568,164.312 L364.168,159.237 L367.409,165.084 L371.008,161.541 L374.25,168.337 L377.849,166.432 L381.449,165.304 L384.69,173.346 L388.289,173.83 L391.889,175.164 L395.13,183.466"/>
 </g>
 
 <g fill="url(#fillPattern38_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M448.406,248.8 L445.165,246.754 L441.565,243.526 L441.924,243.903 L442.282,244.247 L445.882,247.538 L449.123,249.771 L452.722,251.75 L456.322,253.129 L459.563,253.755 L463.163,254.161 L466.404,254.026 L470.003,253.721 L473.244,253.046 L476.844,252.276 L480.085,251.262 L483.684,250.252 L486.925,249.067 L490.525,248.007 L493.766,246.789 L497.007,245.564 L493.407,246.527 L489.808,247.499 L486.208,248.402 L482.967,249.805 L479.368,250.594 L476.127,251.829 L472.527,252.331 L469.286,253.223 L465.687,253.248 L462.445,253.586 L458.846,252.928 L455.605,252.465 L452.005,250.916 L448.406,248.8"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="519.937,420.462 513.728,418.116 " />
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,261.361,212.824)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >2</text>
 </g>
 
 <g fill="url(#fillPattern39_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M334.282,175.157 L330.682,183.951 L333.923,177.523 L337.523,168.586 L340.764,164.292 L344.005,162.196 L347.246,162.063 L350.845,154.006 L354.086,156.281 L357.686,149.227 L360.927,153.783 L364.526,148.178 L367.767,154.662 L371.367,150.796 L374.608,158.677 L378.208,156.657 L381.807,155.627 L385.048,165.064 L388.648,165.799 L392.247,167.56 L395.847,170.358 L399.446,174.158 L403.046,178.881 L406.287,189.033 L409.886,194.326 L413.486,200.11 L417.085,206.221 L420.685,212.483 L424.285,218.718 L427.884,224.756 L431.484,230.443 L435.083,235.649 L438.683,240.273 L439.041,240.721 L435.442,235.945 L431.842,230.491 L432.201,231.07 L428.601,224.731 L425.002,217.793 L421.761,210.785 L421.402,210.398 L417.802,202.728 L414.203,194.99 L410.603,187.41 L407.004,180.22 L403.404,173.642 L399.805,167.88 L396.205,163.104 L392.606,159.44 L389.365,148.222 L385.765,146.097 L382.166,145.366 L378.566,145.982 L375.325,136.731 L371.725,139.423 L368.126,143.311 L364.885,136.837 L361.285,142.651 L358.044,138.68 L354.803,136.84 L351.204,144.957 L347.963,146.203 L344.722,150.138 L341.122,159.348 L337.881,166.01 L334.282,175.157"/>
 </g>
 
 <g fill="url(#fillPattern40_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M161.102,248.279 L157.502,247.377 L154.261,249.766 L151.02,252.184 L147.42,250.933 L144.179,253.138 L140.58,251.649 L137.339,253.6 L134.098,255.548 L130.857,257.488 L127.616,259.414 L124.375,261.321 L121.134,263.203 L124.733,266.142 L127.974,264.043 L131.574,266.649 L134.815,264.301 L138.414,266.564 L141.655,263.982 L145.255,265.92 L148.496,263.14 L152.095,264.802 L155.336,261.88 L158.936,263.336 L162.177,260.351 L165.777,261.693 L169.018,258.744 L172.617,260.079 L175.858,257.287 L179.458,258.73 L182.699,256.234 L186.298,257.899 L189.539,255.857 L193.139,257.846 L196.38,256.426 L199.979,258.816 L203.22,258.185 L206.82,261.013 L210.42,263.605 L214.019,265.763 L217.26,267.369 L220.501,269.431 L224.101,272.298 L227.342,275.462 L230.583,278.791 L226.983,274.303 L223.384,269.158 L219.784,263.701 L216.185,258.235 L212.585,253.012 L208.986,248.223 L205.745,249.076 L202.145,245.266 L198.545,242.009 L195.304,243.714 L191.705,241.28 L188.464,243.353 L184.864,241.571 L181.623,243.916 L178.024,242.603 L174.783,245.111 L171.183,244.089 L167.942,246.652 L164.343,245.761 L161.102,248.279"/>
 </g>
 
 <g fill="url(#fillPattern41_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M334.282,175.157 L330.682,183.951 L331.04,183.898 L327.799,194.514 L324.558,206.544 L324.917,212.362 L321.676,226.006 L322.034,232.972 L318.793,245.138 L315.552,255.442 L312.311,263.616 L309.07,269.604 L312.67,263.925 L316.269,259.119 L313.028,262.46 L316.628,258.781 L319.869,255.552 L323.11,249.956 L326.351,241.744 L329.592,230.9 L329.233,221.931 L328.875,213.112 L332.116,198.287 L331.757,191.042 L334.999,177.794 L338.24,166.199 L337.881,166.01 L334.282,175.157"/>
 </g>
 
 <g fill="url(#fillPattern42_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M497.007,245.564 L493.766,246.789 L490.525,248.007 L486.925,249.067 L483.684,250.252 L480.085,251.262 L476.844,252.276 L473.244,253.046 L470.003,253.721 L466.404,254.026 L463.163,254.161 L459.563,253.755 L456.322,253.129 L452.722,251.75 L449.123,249.771 L445.882,247.538 L442.282,244.247 L438.683,240.273 L439.041,240.721 L435.442,235.945 L431.842,230.491 L432.201,231.07 L428.601,224.731 L425.002,217.793 L421.761,210.785 L425.36,218.628 L428.96,225.867 L432.559,232.381 L436.159,238.091 L439.758,242.965 L442.999,245.653 L446.599,248.96 L450.198,251.545 L453.439,252.625 L457.039,253.981 L460.638,254.849 L463.88,254.683 L467.479,254.764 L470.72,254.082 L474.32,253.655 L477.561,252.618 L481.16,251.935 L484.401,250.694 L487.642,249.457 L491.242,248.657 L494.483,247.394 L498.082,246.784 L501.323,245.587 L504.923,245.284 L508.164,244.216 L511.764,244.297 L515.005,243.394 L511.405,243.265 L507.806,243.473 L504.206,243.967 L500.606,244.686 L497.007,245.564"/>
 </g>
 
 <g fill="url(#fillPattern43_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M251.463,295.53 L255.063,293.21 L258.662,288.758 L261.903,294.944 L265.503,288.893 L268.744,294.48 L272.343,287.059 L275.584,291.793 L279.184,283.451 L282.425,287.233 L285.666,289.775 L289.265,281.46 L292.507,283.137 L295.748,283.547 L299.347,276.103 L302.588,275.604 L305.829,273.525 L309.07,269.604 L312.67,263.925 L316.269,259.119 L313.028,262.46 L316.628,258.781 L313.387,260.033 L309.787,263.856 L306.546,263.688 L303.305,262.293 L299.706,268.101 L296.465,265.839 L292.865,273.233 L289.624,270.14 L286.383,266.048 L282.783,274.605 L279.542,269.579 L275.943,278.514 L272.702,272.596 L269.102,281.242 L265.861,274.623 L262.262,282.416 L259.021,275.432 L255.421,281.98 L252.18,275.053 L248.58,280.158 L245.339,273.722 L241.74,277.366 L238.14,279.275 L234.899,274.099 L231.3,274.864 L227.7,274.196 L224.459,270.737 L220.86,269.511 L217.26,267.369 L220.501,269.431 L224.101,272.298 L227.342,275.462 L230.583,278.791 L234.182,282.263 L237.782,284.376 L241.023,289.248 L244.622,290.425 L248.222,289.643 L251.463,295.53"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,43.8886,217.593)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >-2</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="114.378,429.574 120.395,426.769 " />
 </g>
 
 <g fill="url(#fillPattern44_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M328.875,213.112 L329.233,221.931 L329.592,230.9 L326.351,241.744 L323.11,249.956 L319.869,255.552 L316.628,258.781 L320.227,256.664 L323.468,253.415 L326.709,247.74 L329.95,239.358 L333.191,228.235 L332.833,217.696 L332.474,207.425 L335.716,192.025 L335.357,183.517 L338.598,169.7 L338.24,166.199 L341.481,156.851 L337.881,166.01 L341.122,159.348 L344.722,150.138 L341.481,156.851 L337.881,166.01 L338.24,166.199 L334.999,177.794 L331.757,191.042 L332.116,198.287 L328.875,213.112"/>
 </g>
 
 <g fill="url(#fillPattern45_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M417.802,202.728 L421.402,210.398 L421.761,210.785 L418.161,202.505 L414.561,193.993 L410.962,185.484 L407.362,177.232 L403.763,169.496 L400.163,162.524 L396.564,156.54 L392.964,151.729 L389.365,148.222 L392.606,159.44 L396.205,163.104 L399.805,167.88 L403.404,173.642 L407.004,180.22 L410.603,187.41 L414.203,194.99 L417.802,202.728"/>
 </g>
 
 <g fill="url(#fillPattern46_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M491.242,248.657 L487.642,249.457 L484.401,250.694 L481.16,251.935 L477.561,252.618 L474.32,253.655 L470.72,254.082 L467.479,254.764 L463.88,254.683 L460.638,254.849 L464.238,255.335 L467.838,255.552 L471.079,254.633 L474.32,253.655 L477.919,253.171 L481.16,251.935 L484.76,251.332 L488.001,249.971 L491.6,249.445 L494.841,248.071 L498.441,247.773 L501.682,246.47 L505.281,246.512 L508.523,245.336 L512.122,245.788 L515.363,244.769 L518.963,245.662 L522.204,244.807 L518.604,243.898 L515.005,243.394 L511.764,244.297 L508.164,244.216 L504.923,245.284 L501.323,245.587 L498.082,246.784 L494.483,247.394 L491.242,248.657"/>
 </g>
 
 <g fill="url(#fillPattern47_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M203.22,258.185 L199.979,258.816 L196.38,256.426 L193.139,257.846 L189.539,255.857 L186.298,257.899 L182.699,256.234 L179.458,258.73 L175.858,257.287 L172.617,260.079 L169.018,258.744 L165.777,261.693 L162.177,260.351 L158.936,263.336 L155.336,261.88 L152.095,264.802 L148.496,263.14 L145.255,265.92 L141.655,263.982 L138.414,266.564 L134.815,264.301 L131.574,266.649 L127.974,264.043 L124.733,266.142 L121.134,263.203 L117.892,265.057 L114.651,266.878 L118.251,270.196 L121.492,268.194 L125.092,271.181 L128.691,273.966 L131.932,271.568 L135.532,273.968 L138.773,271.35 L142.372,273.378 L145.613,270.57 L149.213,272.264 L152.454,269.316 L156.053,270.735 L159.294,267.716 L162.536,264.693 L166.135,265.936 L169.376,262.972 L172.976,264.169 L176.217,261.385 L179.816,262.631 L183.057,260.165 L186.657,261.546 L189.898,259.557 L193.497,261.136 L196.738,259.799 L200.338,261.608 L203.579,261.099 L207.179,263.121 L210.778,264.716 L214.019,265.763 L217.26,267.369 L220.86,269.511 L224.459,270.737 L227.7,274.196 L231.3,274.864 L234.899,274.099 L238.14,279.275 L241.74,277.366 L245.339,273.722 L248.58,280.158 L252.18,275.053 L255.421,281.98 L259.021,275.432 L262.262,282.416 L265.861,274.623 L262.62,267.607 L259.021,275.432 L255.78,268.417 L252.18,275.053 L248.939,268.469 L245.339,273.722 L242.098,267.942 L238.499,271.788 L234.899,274.099 L231.658,269.634 L228.059,270.83 L224.459,270.737 L221.218,267.945 L217.619,267.277 L214.019,265.763 L210.42,263.605 L206.82,261.013 L203.22,258.185"/>
 </g>
 
 <g fill="url(#fillPattern48_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M457.039,253.981 L453.439,252.625 L450.198,251.545 L446.599,248.96 L442.999,245.653 L439.758,242.965 L443.358,247.012 L446.957,250.277 L450.557,252.831 L453.798,253.482 L457.397,254.867 L460.638,254.849 L457.039,253.981"/>
 </g>
 
 <g fill="url(#fillPattern49_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M368.126,143.311 L371.725,139.423 L368.484,132.061 L364.885,136.837 L368.126,143.311"/>
 </g>
 
 <g fill="url(#fillPattern50_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M361.285,142.651 L364.885,136.837 L361.644,132.028 L358.044,138.68 L361.285,142.651"/>
 </g>
 
 <g fill="url(#fillPattern51_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M293.224,262.627 L289.624,270.14 L292.865,273.233 L296.465,265.839 L293.224,262.627"/>
 </g>
 
 <g fill="url(#fillPattern52_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M269.102,281.242 L272.702,272.596 L269.461,265.988 L265.861,274.623 L269.102,281.242"/>
 </g>
 
 <g fill="url(#fillPattern53_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M378.566,145.982 L382.166,145.366 L378.925,135.416 L375.325,136.731 L378.566,145.982"/>
 </g>
 
 <g fill="url(#fillPattern54_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M310.146,259.738 L306.546,263.688 L309.787,263.856 L313.387,260.033 L310.146,259.738"/>
 </g>
 
 <g fill="url(#fillPattern55_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M276.301,263.691 L272.702,272.596 L275.943,278.514 L279.542,269.579 L276.301,263.691"/>
 </g>
 
 <g fill="url(#fillPattern56_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M299.706,268.101 L303.305,262.293 L300.064,259.917 L296.465,265.839 L299.706,268.101"/>
 </g>
 
 <g fill="url(#fillPattern57_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M351.204,144.957 L354.803,136.84 L351.562,137.614 L347.963,146.203 L351.204,144.957"/>
 </g>
 
 <g fill="url(#fillPattern58_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M316.986,257.916 L313.387,260.033 L316.628,258.781 L320.227,256.664 L316.986,257.916"/>
 </g>
 
 <g fill="url(#fillPattern59_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M283.142,261.049 L279.542,269.579 L282.783,274.605 L286.383,266.048 L283.142,261.049"/>
 </g>
 
 <g fill="url(#fillPattern60_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M429.318,227.984 L432.918,234.517 L436.159,238.091 L432.559,232.381 L428.96,225.867 L425.36,218.628 L425.719,220.62 L429.318,227.984"/>
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,15.0049,166.545)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >-0.5</text>
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="72.7908,343.275 79,345.622 " />
 </g>
 
 <g fill="url(#fillPattern61_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M436.159,238.091 L432.918,234.517 L429.318,227.984 L425.719,220.62 L425.36,218.628 L421.761,210.785 L418.161,202.505 L414.92,194.689 L411.32,185.382 L407.721,176.149 L404.48,167.616 L400.88,158.203 L397.281,149.54 L393.681,141.918 L390.082,135.6 L386.482,130.797 L382.883,127.658 L379.283,126.257 L376.042,118.864 L372.442,119.677 L369.201,115.433 L365.602,118.526 L362.361,117.956 L358.761,123.151 L355.52,126.381 L351.921,133.28 L348.68,140.018 L345.08,148.058 L341.481,156.851 L338.24,166.199 L338.598,169.7 L335.357,183.517 L335.716,192.025 L332.474,207.425 L332.833,217.696 L333.191,228.235 L329.95,239.358 L326.709,247.74 L323.468,253.415 L320.227,256.664 L316.986,257.916 L320.586,257.47 L317.345,257.353 L314.104,256.175 L317.703,257.713 L314.462,256.167 L310.863,254.257 L307.622,251.786 L304.022,251.234 L300.781,247.874 L297.182,249.14 L293.582,252.761 L290.341,248.161 L286.741,253.693 L283.5,248.238 L280.259,242.488 L276.66,249.162 L273.419,243.032 L269.819,250.67 L266.578,244.538 L262.979,252.511 L259.738,246.775 L256.138,254.476 L252.897,249.48 L249.297,256.41 L246.056,252.389 L242.457,258.211 L239.216,255.271 L235.616,259.83 L232.375,257.957 L228.776,261.265 L225.535,260.365 L221.935,262.564 L218.694,262.498 L215.095,263.808 L211.854,264.431 L208.254,265.1 L211.495,264.578 L207.896,264.788 L211.137,264.884 L214.378,265.714 L210.778,264.716 L214.019,265.763 L217.619,267.277 L221.218,267.945 L224.459,270.737 L228.059,270.83 L231.658,269.634 L234.899,274.099 L238.499,271.788 L242.098,267.942 L245.339,273.722 L248.939,268.469 L252.18,275.053 L255.78,268.417 L259.021,275.432 L262.62,267.607 L265.861,274.623 L269.461,265.988 L272.702,272.596 L276.301,263.691 L279.542,269.579 L283.142,261.049 L286.383,266.048 L289.624,270.14 L293.224,262.627 L296.465,265.839 L300.064,259.917 L303.305,262.293 L306.546,263.688 L310.146,259.738 L313.387,260.033 L316.986,257.916 L320.586,257.47 L317.345,257.353 L314.104,256.175 L317.703,257.713 L314.462,256.167 L318.062,259.215 L321.303,260.329 L324.902,263.342 L328.502,266.021 L331.743,265.738 L335.342,267.108 L338.584,265.769 L342.183,265.614 L345.424,263.097 L348.665,259.012 L351.906,252.901 L355.147,244.45 L354.789,232.208 L354.43,216.259 L350.831,214.317 L350.472,196.549 L350.114,178.938 L346.514,180.096 L346.156,166.285 L345.797,155.962 L349.038,143.133 L352.279,133.106 L355.52,126.381 L351.921,133.28 L348.68,140.018 L345.08,148.058 L341.481,156.851 L344.722,150.138 L347.963,146.203 L351.562,137.614 L354.803,136.84 L358.044,138.68 L361.644,132.028 L364.885,136.837 L368.484,132.061 L371.725,139.423 L375.325,136.731 L378.925,135.416 L382.166,145.366 L385.765,146.097 L389.365,148.222 L392.964,151.729 L396.564,156.54 L400.163,162.524 L403.763,169.496 L407.362,177.232 L410.962,185.484 L414.561,193.993 L418.161,202.505 L414.92,194.689 L411.32,185.382 L407.721,176.149 L404.48,167.616 L404.838,170.871 L408.438,181.383 L412.037,191.796 L412.396,198.119 L415.995,207.994 L419.595,217.166 L423.195,225.521 L426.794,232.996 L427.153,238.467 L430.752,244.528 L433.993,245.268 L437.593,250.136 L441.192,254.25 L444.792,257.701 L448.033,257.275 L451.632,259.717 L455.232,261.735 L458.473,260.478 L462.072,261.812 L465.314,260.217 L468.913,261.088 L472.154,259.238 L475.754,259.868 L478.995,257.859 L482.594,258.457 L485.835,256.385 L489.435,257.125 L492.676,255.074 L496.275,256.094 L499.516,254.131 L503.116,255.525 L506.357,253.695 L509.957,255.519 L513.198,253.845 L516.797,256.113 L520.038,254.596 L523.638,257.287 L526.879,255.907 L530.478,258.97 L534.078,262.368 L537.319,261.048 L540.918,264.674 L544.518,268.502 L547.759,267.128 L551,265.798 L547.4,262.155 L543.801,258.698 L540.201,255.492 L536.602,252.593 L533.002,250.045 L529.403,247.884 L525.803,246.135 L522.204,244.807 L518.963,245.662 L515.363,244.769 L512.122,245.788 L508.523,245.336 L505.281,246.512 L501.682,246.47 L498.441,247.773 L494.841,248.071 L491.6,249.445 L488.001,249.971 L484.76,251.332 L481.16,251.935 L477.919,253.171 L474.32,253.655 L471.079,254.633 L467.838,255.552 L464.238,255.335 L460.638,254.849 L457.397,254.867 L453.798,253.482 L450.557,252.831 L446.957,250.277 L443.358,247.012 L439.758,242.965 L436.159,238.091"/>
 </g>
 
 <g fill="url(#fillPattern62_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M207.179,263.121 L203.579,261.099 L200.338,261.608 L196.738,259.799 L193.497,261.136 L189.898,259.557 L186.657,261.546 L183.057,260.165 L179.816,262.631 L176.217,261.385 L172.976,264.169 L169.376,262.972 L166.135,265.936 L162.536,264.693 L159.294,267.716 L156.053,270.735 L152.454,269.316 L149.213,272.264 L145.613,270.57 L142.372,273.378 L138.773,271.35 L135.532,273.968 L131.932,271.568 L128.691,273.966 L125.092,271.181 L121.492,268.194 L118.251,270.196 L114.651,266.878 L111.41,268.663 L108.169,270.408 L104.928,272.111 L101.687,273.769 L98.4462,275.381 L95.2052,276.946 L91.9642,278.463 L95.5637,282.365 L99.1632,286.057 L102.404,284.533 L106.004,287.94 L109.603,291.005 L112.844,289.331 L116.444,291.981 L120.043,294.199 L123.285,292.326 L126.884,294.069 L130.125,292.014 L133.725,293.287 L136.966,291.063 L140.565,291.898 L143.806,289.532 L147.047,287.026 L150.647,287.518 L153.888,284.928 L157.487,285.145 L160.728,282.523 L164.328,282.55 L167.569,279.948 L170.81,277.296 L174.41,277.336 L177.651,274.79 L181.25,274.796 L184.491,272.402 L187.732,270.117 L191.332,270.194 L194.573,268.199 L198.172,268.17 L201.413,266.538 L205.013,266.281 L208.254,265.1 L211.495,264.578 L207.896,264.788 L211.137,264.884 L214.378,265.714 L210.778,264.716 L207.179,263.121"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,124.751,10)"
-font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.28125" font-family="Arial" font-size="24" font-weight="700" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.28125" font-family="Arial" font-size="24" font-weight="700" font-style="normal"
  >3D Surface</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-0.5,0.5,0,9.5,135.346)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal"
  >Z</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,214.458,256.286)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal"
  >Y</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,99.3199,257.584)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="-0.09375" font-family="Arial" font-size="22" font-weight="400" font-style="normal"
  >X</text>
 </g>
 
 <g fill="url(#fillPattern63_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M451.632,259.717 L448.033,257.275 L444.792,257.701 L441.192,254.25 L437.593,250.136 L433.993,245.268 L430.752,244.528 L427.153,238.467 L426.794,232.996 L423.195,225.521 L419.595,217.166 L415.995,207.994 L412.396,198.119 L412.037,191.796 L408.438,181.383 L404.838,170.871 L404.48,167.616 L400.88,158.203 L397.281,149.54 L394.04,141.799 L390.44,133.986 L386.841,127.598 L383.6,122.311 L380,117.683 L376.401,114.955 L373.159,113.435 L369.56,112.951 L365.96,114.492 L362.719,117.277 L359.12,120.957 L355.52,126.381 L358.761,123.151 L362.361,117.956 L365.602,118.526 L369.201,115.433 L372.442,119.677 L376.042,118.864 L379.283,126.257 L382.883,127.658 L386.482,130.797 L390.082,135.6 L393.681,141.918 L397.281,149.54 L394.04,141.799 L390.44,133.986 L386.841,127.598 L383.6,122.311 L387.199,128.678 L390.799,136.549 L394.398,145.638 L397.998,155.624 L398.356,163.888 L401.956,174.676 L402.314,185.26 L402.673,196.867 L406.272,206.124 L406.631,216.441 L410.23,224.084 L413.83,231.277 L417.429,237.997 L421.029,244.232 L424.629,249.978 L428.228,255.24 L431.828,260.029 L435.427,264.364 L438.668,263.426 L442.268,266.993 L445.867,270.155 L449.108,268.481 L452.708,270.965 L456.307,273.197 L459.548,270.888 L463.148,272.697 L466.389,270.172 L469.989,271.737 L473.23,269.088 L476.471,266.505 L480.07,267.905 L483.311,265.311 L486.911,266.861 L490.152,264.332 L493.751,266.153 L496.992,263.748 L500.592,265.922 L503.833,263.68 L507.432,266.253 L511.032,269.16 L514.273,267.169 L517.873,270.456 L521.114,268.643 L524.713,272.26 L528.313,276.077 L531.554,274.468 L534.795,272.906 L538.036,271.391 L541.277,269.923 L544.518,268.502 L540.918,264.674 L537.319,261.048 L534.078,262.368 L530.478,258.97 L526.879,255.907 L523.638,257.287 L520.038,254.596 L516.797,256.113 L513.198,253.845 L509.957,255.519 L506.357,253.695 L503.116,255.525 L499.516,254.131 L496.275,256.094 L492.676,255.074 L489.435,257.125 L485.835,256.385 L482.594,258.457 L478.995,257.859 L475.754,259.868 L472.154,259.238 L468.913,261.088 L465.314,260.217 L462.072,261.812 L458.473,260.478 L455.232,261.735 L451.632,259.717"/>
 </g>
 
 <g fill="url(#fillPattern64_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M191.332,270.194 L187.732,270.117 L184.491,272.402 L181.25,274.796 L177.651,274.79 L174.41,277.336 L170.81,277.296 L167.569,279.948 L164.328,282.55 L160.728,282.523 L157.487,285.145 L153.888,284.928 L150.647,287.518 L147.047,287.026 L143.806,289.532 L140.565,291.898 L136.966,291.063 L133.725,293.287 L130.125,292.014 L126.884,294.069 L123.285,292.326 L120.043,294.199 L116.444,291.981 L112.844,289.331 L109.603,291.005 L106.004,287.94 L102.404,284.533 L99.1632,286.057 L95.5637,282.365 L91.9642,278.463 L88.7231,279.932 L85.4821,281.354 L82.241,282.729 L79,284.06 L82.5995,287.702 L86.1991,291.157 L89.7986,294.361 L93.3982,297.257 L96.6392,296.281 L100.239,298.877 L103.838,301.065 L107.079,300.022 L110.679,301.788 L113.92,300.589 L117.519,301.89 L120.76,300.515 L124.36,301.336 L127.601,299.782 L131.201,300.139 L134.442,298.419 L138.041,298.355 L141.282,296.497 L144.882,296.085 L148.123,294.128 L151.364,292.044 L154.963,291.456 L158.204,289.337 L161.804,288.649 L165.045,286.536 L168.645,285.88 L171.886,283.802 L175.127,281.628 L178.726,281.27 L181.967,279.119 L185.567,279.024 L188.808,276.84 L192.049,274.561 L195.648,274.745 L198.889,272.325 L202.489,272.683 L205.73,269.994 L209.33,270.406 L212.571,267.313 L215.812,264.479 L219.411,264.002 L222.652,260.912 L225.893,258.678 L222.294,260.734 L219.053,262.19 L215.453,263.423 L211.854,264.431 L208.254,265.1 L205.013,266.281 L201.413,266.538 L198.172,268.17 L194.573,268.199 L191.332,270.194"/>
 </g>
 
 <g fill="url(#fillPattern65_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M283.5,248.238 L286.741,253.693 L290.341,248.161 L293.582,252.761 L297.182,249.14 L300.781,247.874 L304.022,251.234 L307.622,251.786 L310.863,254.257 L314.462,256.167 L311.221,254.131 L307.98,251.696 L304.739,248.934 L301.14,245.549 L297.54,244.065 L294.299,239.963 L290.699,240.272 L287.458,235.58 L283.859,237.828 L280.618,232.871 L277.018,236.907 L273.777,232.091 L270.178,237.508 L266.937,233.238 L263.337,239.468 L260.096,236.068 L256.497,242.489 L253.256,240.141 L249.656,246.187 L246.415,244.918 L242.815,250.158 L239.574,249.861 L236.333,251.45 L232.734,254.538 L229.493,256.564 L225.893,258.678 L222.294,260.734 L219.053,262.19 L215.453,263.423 L211.854,264.431 L215.095,263.808 L218.694,262.498 L221.935,262.564 L225.535,260.365 L228.776,261.265 L232.375,257.957 L235.616,259.83 L239.216,255.271 L242.457,258.211 L246.056,252.389 L249.297,256.41 L252.897,249.48 L256.138,254.476 L259.738,246.775 L262.979,252.511 L266.578,244.538 L269.819,250.67 L273.419,243.032 L276.66,249.162 L280.259,242.488 L283.5,248.238"/>
 </g>
 
 <g fill="url(#fillPattern66_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M350.831,214.317 L354.43,216.259 L354.789,232.208 L355.147,244.45 L351.906,252.901 L348.665,259.012 L345.424,263.097 L342.183,265.614 L338.584,265.769 L335.342,267.108 L331.743,265.738 L328.502,266.021 L324.902,263.342 L321.303,260.329 L318.062,259.215 L314.462,256.167 L311.221,254.131 L307.98,251.696 L304.739,248.934 L308.339,253.572 L311.58,255.761 L315.179,260.272 L318.779,264.403 L322.378,267.393 L325.619,267.717 L329.219,268.528 L332.46,268.278 L335.701,267.84 L338.942,267.052 L342.183,265.614 L345.783,263.895 L349.024,261.557 L352.623,258.589 L355.864,255.356 L359.464,251.816 L356.223,254.377 L352.982,255.893 L349.741,256.795 L346.141,261.802 L342.9,262.624 L339.301,266.162 L336.059,266.788 L332.818,267.329 L329.219,268.528 L332.46,268.278 L335.701,267.84 L338.942,267.052 L342.183,265.614 L345.783,263.895 L349.024,261.557 L352.623,258.589 L355.864,255.356 L359.464,251.816 L363.063,247.515 L366.304,244.497 L369.545,239.948 L372.786,233.76 L376.027,226.049 L375.669,214.571 L375.31,198.999 L371.711,194.669 L368.111,190.473 L367.753,170.458 L364.153,166.48 L360.554,163.567 L360.195,146.019 L356.596,145.938 L356.237,134.21 L359.478,123.918 L362.719,117.277 L359.12,120.957 L355.52,126.381 L352.279,133.106 L349.038,143.133 L345.797,155.962 L346.156,166.285 L346.514,180.096 L350.114,178.938 L350.472,196.549 L350.831,214.317"/>
 </g>
 
 <g fill="url(#fillPattern67_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M260.799,416.927 L264.398,418.17 L267.998,417.131 L271.239,416.179 L274.838,412.968 L278.079,408.8 L281.32,401.417 L284.561,391.017 L284.203,379.746 L283.844,362.974 L280.245,359.208 L276.645,353.102 L273.046,344.926 L269.446,335.111 L266.205,352.758 L262.606,341.758 L259.006,330.015 L255.765,345.694 L252.165,333.359 L248.924,346.33 L245.325,333.724 L242.084,343.581 L238.843,350.42 L239.201,366.585 L239.56,378.397 L239.918,385.399 L243.518,394.108 L247.117,401.248 L250.717,406.565 L253.958,411.346 L257.558,414.772 L260.799,416.927"/>
 </g>
 
 <g fill="url(#fillPattern68_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M260.799,416.927 L264.398,418.17 L267.998,417.131 L264.757,415.087 L261.157,415.996 L257.916,411.223 L254.316,409.905 L250.717,406.565 L253.958,411.346 L257.558,414.772 L260.799,416.927"/>
 </g>
 
 <g fill="url(#fillPattern69_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M271.239,416.179 L274.838,412.968 L271.597,414.002 L267.998,417.131 L271.239,416.179"/>
 </g>
 
 <g fill="url(#fillPattern70_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="22" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M369.56,112.951 L365.96,114.492 L362.719,117.277 L366.319,115.529 L369.56,112.951"/>
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,26.5049,133.795)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0</text>
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="72.7908,277.775 79,280.122 " />
 </g>
 
 <g fill="url(#fillPattern71_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M524.713,272.26 L521.114,268.643 L517.873,270.456 L514.273,267.169 L511.032,269.16 L507.432,266.253 L503.833,263.68 L500.592,265.922 L496.992,263.748 L493.751,266.153 L490.152,264.332 L486.911,266.861 L483.311,265.311 L480.07,267.905 L476.471,266.505 L473.23,269.088 L469.989,271.737 L466.389,270.172 L463.148,272.697 L459.548,270.888 L456.307,273.197 L452.708,270.965 L449.108,268.481 L445.867,270.155 L442.268,266.993 L438.668,263.426 L435.427,264.364 L431.828,260.029 L428.228,255.24 L424.629,249.978 L421.029,244.232 L417.429,237.997 L413.83,231.277 L410.23,224.084 L406.631,216.441 L406.272,206.124 L402.673,196.867 L402.314,185.26 L401.956,174.676 L398.356,163.888 L397.998,155.624 L394.398,145.638 L390.799,136.549 L387.199,128.678 L383.6,122.311 L380,117.683 L376.401,114.955 L373.159,113.435 L369.56,112.951 L366.319,115.529 L362.719,117.277 L359.478,123.918 L356.237,134.21 L356.596,145.938 L360.195,146.019 L360.554,163.567 L364.153,166.48 L367.753,170.458 L368.111,190.473 L371.711,194.669 L375.31,198.999 L375.669,214.571 L376.027,226.049 L372.786,233.76 L369.545,239.948 L366.304,244.497 L369.904,240.935 L366.663,242.901 L363.422,243.835 L360.181,244.111 L356.581,250.219 L353.34,250.706 L350.099,251.111 L346.5,257.455 L343.259,258.141 L339.659,263.332 L336.418,264.073 L333.177,264.904 L329.577,267.842 L326.336,268.351 L322.737,268.686 L325.978,268.654 L329.219,268.528 L325.619,267.717 L322.378,267.393 L318.779,264.403 L315.179,260.272 L311.58,255.761 L308.339,253.572 L304.739,248.934 L301.14,245.549 L297.899,242.011 L294.658,238.54 L291.058,235.872 L287.458,235.58 L290.699,240.272 L294.299,239.963 L297.54,244.065 L301.14,245.549 L297.899,242.011 L294.658,238.54 L298.257,243.142 L301.498,245.987 L305.098,251.227 L308.697,256.925 L312.297,262.228 L315.896,266.358 L319.496,268.711 L322.737,268.686 L325.978,268.654 L329.219,268.528 L332.818,267.329 L336.059,266.788 L339.301,266.162 L342.9,262.624 L346.141,261.802 L349.741,256.795 L352.982,255.893 L356.223,254.377 L359.464,251.816 L363.063,247.515 L366.304,244.497 L369.904,240.935 L373.503,237.554 L376.744,235.518 L379.986,232.233 L383.585,231.963 L386.826,228.953 L390.067,225.062 L393.667,228.166 L396.908,225.124 L400.507,229.824 L404.107,234.738 L407.706,239.86 L411.306,245.149 L414.905,250.538 L418.505,255.943 L422.104,261.269 L425.346,261.045 L428.945,265.927 L432.545,270.487 L436.144,274.693 L439.744,278.528 L442.985,276.786 L446.584,279.919 L449.825,277.743 L453.425,280.286 L456.666,277.78 L460.265,279.886 L463.506,277.159 L467.106,279 L470.347,276.155 L473.947,277.902 L477.188,275.036 L480.787,276.843 L484.028,274.038 L487.628,276.032 L490.869,273.357 L494.468,275.631 L497.709,273.134 L501.309,275.748 L504.908,278.585 L508.149,276.433 L511.749,279.614 L514.99,277.679 L518.59,281.171 L521.831,279.431 L525.072,277.732 L528.313,276.077 L524.713,272.26 M376.759,115.951 L380.359,120.414 L383.958,126.651 L387.558,134.422 L387.916,144.553 L388.275,158.137 L388.633,173.727 L385.034,165.154 L381.434,157.03 L378.193,167.768 L374.593,161.309 L370.994,155.652 L370.635,138.048 L367.036,134.41 L366.677,122.23 L369.918,115.811 L373.518,118.119 L376.759,115.951"/>
 </g>
 
 <g fill="url(#fillPattern72_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M262.606,341.758 L266.205,352.758 L269.446,335.111 L273.046,344.926 L276.645,353.102 L280.245,359.208 L283.844,362.974 L284.203,379.746 L284.561,391.017 L281.32,401.417 L278.079,408.8 L281.679,403.74 L285.278,397.125 L282.037,401.269 L278.796,402.74 L275.197,409.082 L271.956,407.693 L268.356,412.228 L265.115,408.15 L261.516,410.583 L258.275,404.268 L254.675,404.532 L251.075,403.029 L247.476,399.705 L243.876,394.601 L240.277,387.857 L243.518,394.108 L247.117,401.248 L250.717,406.565 L254.316,409.905 L257.916,411.223 L261.157,415.996 L264.757,415.087 L267.998,417.131 L271.597,414.002 L274.838,412.968 L278.079,408.8 L281.679,403.74 L285.278,397.125 L288.519,390.223 L291.76,380.71 L291.402,374.348 L291.043,363.325 L290.685,347.964 L287.085,345.996 L286.727,324.434 L283.127,317.557 L279.528,308.952 L276.287,326.699 L272.687,316.837 L269.088,306.145 L265.488,295.268 L262.247,312.829 L258.648,301.6 L255.048,291.088 L251.807,306.702 L248.207,296.204 L244.966,309.768 L241.367,299.44 L238.126,310.431 L234.885,319.393 L231.644,325.973 L228.403,330.066 L228.761,343.208 L229.12,353.485 L232.719,364.68 L233.078,370.432 L236.677,379.7 L240.277,387.857 L243.518,394.108 L239.918,385.399 L239.56,378.397 L239.201,366.585 L238.843,350.42 L242.084,343.581 L245.325,333.724 L248.924,346.33 L252.165,333.359 L255.765,345.694 L259.006,330.015 L262.606,341.758"/>
 </g>
 
 <g fill="url(#fillPattern73_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M225.893,258.678 L222.652,260.912 L219.411,264.002 L215.812,264.479 L212.571,267.313 L209.33,270.406 L205.73,269.994 L202.489,272.683 L198.889,272.325 L195.648,274.745 L192.049,274.561 L188.808,276.84 L185.567,279.024 L181.967,279.119 L178.726,281.27 L175.127,281.628 L171.886,283.802 L168.645,285.88 L165.045,286.536 L161.804,288.649 L158.204,289.337 L154.963,291.456 L151.364,292.044 L148.123,294.128 L144.882,296.085 L141.282,296.497 L138.041,298.355 L134.442,298.419 L131.201,300.139 L127.601,299.782 L124.36,301.336 L120.76,300.515 L117.519,301.89 L113.92,300.589 L110.679,301.788 L107.079,300.022 L103.838,301.065 L100.239,298.877 L96.6392,296.281 L93.3982,297.257 L96.9977,299.799 L100.597,301.952 L104.197,303.691 L107.796,305.005 L111.037,304.13 L114.637,304.995 L117.878,303.94 L121.477,304.341 L124.719,303.098 L128.318,303.051 L131.559,301.632 L135.159,301.182 L138.4,299.612 L141.999,298.833 L145.24,297.153 L148.481,295.365 L152.081,294.411 L155.322,292.584 L158.921,291.571 L162.162,289.758 L165.762,288.843 L169.003,287.089 L172.244,285.251 L175.844,284.774 L179.085,282.991 L182.684,282.975 L185.925,281.198 L189.525,281.791 L192.766,279.9 L196.007,277.731 L199.606,279.009 L202.847,276.418 L206.447,278.292 L209.688,275.001 L213.288,277.383 L216.529,273.091 L219.77,268.5 L223.369,270.271 L226.61,264.585 L229.851,259.23 L233.451,259.434 L236.692,253.427 L239.933,248.73 L236.333,251.45 L232.734,254.538 L229.493,256.564 L225.893,258.678"/>
 </g>
 
 <g fill="url(#fillPattern74_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M239.574,249.861 L242.815,250.158 L246.415,244.918 L249.656,246.187 L253.256,240.141 L256.497,242.489 L260.096,236.068 L256.855,234.839 L253.614,236.094 L250.014,240.051 L246.773,242.317 L243.174,245.796 L239.933,248.73 L236.333,251.45 L239.574,249.861"/>
 </g>
 
 <g fill="url(#fillPattern75_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M284.217,231.29 L280.618,232.871 L283.859,237.828 L287.458,235.58 L284.217,231.29"/>
 </g>
 
 <g fill="url(#fillPattern76_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M263.337,239.468 L266.937,233.238 L263.696,230.851 L260.096,236.068 L263.337,239.468"/>
 </g>
 
 <g fill="url(#fillPattern77_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M277.018,236.907 L280.618,232.871 L277.377,228.82 L273.777,232.091 L277.018,236.907"/>
 </g>
 
 <g fill="url(#fillPattern78_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M270.178,237.508 L273.777,232.091 L270.536,228.708 L266.937,233.238 L270.178,237.508"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="445.393,455.216 439.184,452.869 " />
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,224.089,230.201)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0</text>
 </g>
 
 <g fill="url(#fillPattern79_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M366.663,242.901 L369.904,240.935 L373.503,237.554 L376.744,235.518 L380.344,233.913 L383.944,233.157 L380.703,233.032 L377.103,234.793 L373.862,234.752 L370.621,234.064 L367.021,238.572 L363.78,238.192 L360.539,237.712 L356.94,244.123 L353.699,244.211 L350.458,244.621 L346.858,251.69 L343.617,252.584 L340.376,253.847 L336.776,260.077 L333.535,261.395 L330.294,262.996 L326.695,266.951 L323.454,268.383 L319.854,269.763 L323.095,268.931 L326.336,268.351 L322.737,268.686 L319.496,268.711 L315.896,266.358 L312.297,262.228 L308.697,256.925 L305.098,251.227 L301.498,245.987 L298.257,243.142 L294.658,238.54 L291.416,235.607 L287.817,232.264 L284.576,229.766 L280.976,228.023 L277.735,226.476 L274.136,226.36 L270.895,226.15 L267.295,227.403 L264.054,228.693 L260.455,230.857 L257.214,233.557 L253.614,236.094 L250.014,240.051 L246.773,242.317 L243.174,245.796 L239.933,248.73 L236.692,253.427 L233.451,259.434 L229.851,259.23 L226.61,264.585 L223.369,270.271 L219.77,268.5 L216.529,273.091 L213.288,277.383 L209.688,275.001 L206.447,278.292 L202.847,276.418 L199.606,279.009 L196.007,277.731 L192.766,279.9 L189.525,281.791 L185.925,281.198 L182.684,282.975 L179.085,282.991 L175.844,284.774 L172.244,285.251 L169.003,287.089 L165.762,288.843 L162.162,289.758 L158.921,291.571 L155.322,292.584 L152.081,294.411 L148.481,295.365 L145.24,297.153 L141.999,298.833 L138.4,299.612 L135.159,301.182 L131.559,301.632 L128.318,303.051 L124.719,303.098 L121.477,304.341 L117.878,303.94 L114.637,304.995 L111.037,304.13 L107.796,305.005 L111.396,305.894 L114.995,306.372 L118.595,306.467 L121.836,305.464 L125.436,305.137 L128.677,303.941 L132.276,303.235 L135.517,301.871 L139.117,300.862 L142.358,299.372 L145.957,298.162 L149.198,296.6 L152.439,294.985 L156.039,293.757 L159.28,292.163 L162.879,291.077 L166.12,289.573 L169.362,288.037 L172.961,287.468 L176.202,286.07 L179.802,286.101 L183.043,284.839 L186.642,285.686 L189.883,284.497 L193.483,286.362 L196.724,285.089 L200.323,288.132 L203.923,292.301 L207.164,290.819 L210.764,296.417 L214.363,303.363 L214.722,312.309 L218.321,321.407 L218.68,329.562 L222.279,339.606 L222.638,345.232 L226.237,354.785 L229.837,364.022 L233.436,372.604 L236.677,379.7 L240.277,387.857 L243.876,394.601 L247.476,399.705 L251.075,403.029 L254.675,404.532 L258.275,404.268 L261.516,410.583 L265.115,408.15 L268.356,412.228 L271.956,407.693 L275.197,409.082 L278.796,402.74 L282.037,401.269 L285.278,397.125 L288.519,390.223 L292.119,382.703 L288.878,389.418 L285.637,393.62 L282.396,395.391 L279.155,394.991 L275.555,401.822 L272.314,398.944 L268.715,404.169 L265.474,399.074 L261.874,402.377 L258.633,395.548 L255.033,396.824 L251.434,396.643 L247.834,394.891 L244.235,391.527 L240.994,382.759 L237.394,377.96 L233.795,371.921 L233.436,372.604 L236.677,379.7 L233.078,370.432 L232.719,364.68 L229.12,353.485 L228.761,343.208 L228.403,330.066 L231.644,325.973 L234.885,319.393 L238.126,310.431 L241.367,299.44 L244.966,309.768 L248.207,296.204 L251.807,306.702 L255.048,291.088 L258.648,301.6 L262.247,312.829 L265.488,295.268 L269.088,306.145 L272.687,316.837 L276.287,326.699 L279.528,308.952 L283.127,317.557 L286.727,324.434 L287.085,345.996 L290.685,347.964 L291.043,363.325 L291.402,374.348 L291.76,380.71 L288.519,390.223 L292.119,382.703 L295.36,373.597 L298.601,362.432 L298.243,355.581 L297.884,345.286 L297.526,331.988 L297.167,316.544 L293.567,313.64 L289.968,308.536 L286.368,301.45 L282.769,292.796 L279.169,283.15 L275.57,273.183 L272.329,288.771 L268.729,278.5 L265.13,268.973 L261.889,284.836 L258.289,275.411 L254.69,267.429 L251.09,261.174 L247.849,273.964 L247.49,256.759 L243.891,254.138 L247.132,246.062 L250.373,239.901 L253.973,238.988 L257.214,233.557 L253.614,236.094 L256.855,234.839 L260.096,236.068 L263.696,230.851 L266.937,233.238 L270.536,228.708 L273.777,232.091 L277.377,228.82 L280.618,232.871 L284.217,231.29 L287.458,235.58 L291.058,235.872 L294.658,238.54 L291.416,235.607 L295.016,240.865 L298.616,247.363 L302.215,254.292 L305.815,260.812 L309.414,266.156 L313.014,269.73 L316.613,271.179 L319.854,269.763 L323.095,268.931 L326.336,268.351 L329.577,267.842 L333.177,264.904 L336.418,264.073 L339.659,263.332 L343.259,258.141 L346.5,257.455 L350.099,251.111 L353.34,250.706 L356.581,250.219 L360.181,244.111 L363.422,243.835 L366.663,242.901"/>
 </g>
 
 <g fill="url(#fillPattern80_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M385.034,165.154 L388.633,173.727 L388.275,158.137 L387.916,144.553 L387.558,134.422 L383.958,126.651 L380.359,120.414 L376.759,115.951 L373.518,118.119 L369.918,115.811 L366.677,122.23 L367.036,134.41 L370.635,138.048 L370.994,155.652 L374.593,161.309 L378.193,167.768 L381.434,157.03 L385.034,165.154"/>
 </g>
 
 <g fill="url(#fillPattern81_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M396.908,225.124 L393.667,228.166 L390.067,225.062 L386.826,228.953 L383.585,231.963 L379.986,232.233 L376.744,235.518 L380.344,233.913 L383.944,233.157 L387.543,233.491 L391.143,235.054 L394.384,235.942 L397.983,239.221 L401.583,243.436 L404.824,244.495 L408.423,249.581 L412.023,255.077 L415.622,260.807 L419.222,266.59 L422.821,272.258 L426.421,277.666 L430.021,282.698 L433.262,281.507 L436.861,285.685 L440.461,289.405 L444.06,292.661 L447.301,290.304 L450.901,292.908 L454.142,290.249 L457.741,292.382 L460.982,289.54 L464.582,291.388 L467.823,288.475 L471.423,290.206 L474.664,287.322 L478.263,289.087 L481.504,286.314 L485.104,288.231 L488.345,285.636 L491.944,287.792 L495.185,285.419 L498.785,287.865 L502.026,285.738 L505.625,288.491 L508.866,286.614 L512.108,284.766 L515.349,282.951 L518.59,281.171 L514.99,277.679 L511.749,279.614 L508.149,276.433 L504.908,278.585 L501.309,275.748 L497.709,273.134 L494.468,275.631 L490.869,273.357 L487.628,276.032 L484.028,274.038 L480.787,276.843 L477.188,275.036 L473.947,277.902 L470.347,276.155 L467.106,279 L463.506,277.159 L460.265,279.886 L456.666,277.78 L453.425,280.286 L449.825,277.743 L446.584,279.919 L442.985,276.786 L439.744,278.528 L436.144,274.693 L432.545,270.487 L428.945,265.927 L425.346,261.045 L422.104,261.269 L418.505,255.943 L414.905,250.538 L411.306,245.149 L407.706,239.86 L404.107,234.738 L400.507,229.824 L396.908,225.124"/>
 </g>
 
 <g fill="url(#fillPattern82_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M284.576,229.766 L288.175,233.841 L291.416,235.607 L287.817,232.264 L284.576,229.766"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="197.168,460.866 203.184,458.061 " />
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,88.7833,233.239)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0</text>
 </g>
 
 <g fill="url(#fillPattern83_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M247.49,256.759 L247.849,273.964 L251.09,261.174 L254.69,267.429 L258.289,275.411 L261.889,284.836 L265.13,268.973 L268.729,278.5 L272.329,288.771 L275.57,273.183 L279.169,283.15 L282.769,292.796 L286.368,301.45 L289.968,308.536 L293.567,313.64 L297.167,316.544 L297.526,331.988 L297.884,345.286 L298.243,355.581 L298.601,362.432 L295.36,373.597 L292.119,382.703 L295.718,374.562 L299.318,366.277 L296.077,372.627 L292.836,376.95 L289.595,379.324 L286.354,379.959 L282.754,387.583 L279.513,386.108 L276.272,383.439 L272.673,389.31 L269.432,384.971 L265.832,389.387 L262.591,383.745 L258.992,386.487 L255.392,388.265 L252.151,381.043 L248.551,381.039 L244.952,379.903 L241.352,377.57 L237.753,374.031 L234.512,365.84 L230.912,361.233 L227.313,355.766 L223.713,349.587 L223.355,349.705 L226.596,356.912 L230.195,364.825 L229.837,364.022 L233.436,372.604 L233.795,371.921 L237.394,377.96 L240.994,382.759 L244.235,391.527 L247.834,394.891 L251.434,396.643 L255.033,396.824 L258.633,395.548 L261.874,402.377 L265.474,399.074 L268.715,404.169 L272.314,398.944 L275.555,401.822 L279.155,394.991 L282.396,395.391 L285.637,393.62 L288.878,389.418 L292.119,382.703 L295.718,374.562 L299.318,366.277 L302.559,357.979 L305.8,347.973 L309.041,336.642 L308.683,330.34 L308.324,322.316 L311.565,308.99 L311.207,300.455 L314.448,289.538 L317.689,280.478 L320.93,273.25 L324.171,267.653 L327.412,263.382 L323.812,267.682 L320.213,270.428 L323.454,268.383 L319.854,269.763 L316.613,271.179 L313.014,269.73 L309.414,266.156 L305.815,260.812 L302.215,254.292 L298.616,247.363 L295.016,240.865 L291.416,235.607 L288.175,233.841 L284.576,229.766 L280.976,228.023 L277.735,226.476 L274.136,226.36 L270.895,226.15 L267.295,227.403 L264.054,228.693 L260.455,230.857 L257.214,233.557 L253.973,238.988 L250.373,239.901 L247.132,246.062 L243.891,254.138 L247.49,256.759"/>
 </g>
 
 <g fill="url(#fillPattern84_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M214.722,312.309 L214.363,303.363 L210.764,296.417 L207.164,290.819 L203.923,292.301 L200.323,288.132 L196.724,285.089 L193.483,286.362 L189.883,284.497 L186.642,285.686 L183.043,284.839 L179.802,286.101 L176.202,286.07 L172.961,287.468 L169.362,288.037 L166.12,289.573 L162.879,291.077 L159.28,292.163 L156.039,293.757 L152.439,294.985 L149.198,296.6 L145.957,298.162 L142.358,299.372 L139.117,300.862 L135.517,301.871 L132.276,303.235 L128.677,303.941 L125.436,305.137 L121.836,305.464 L118.595,306.467 L122.194,306.216 L125.794,305.668 L129.394,304.884 L132.993,303.928 L136.593,302.873 L139.834,301.393 L143.433,300.213 L146.674,298.648 L149.915,297.102 L153.515,295.904 L156.756,294.393 L160.355,293.416 L163.596,292.041 L166.837,290.759 L170.437,290.357 L173.678,289.356 L177.278,289.682 L180.519,289.066 L184.118,290.372 L187.718,292.452 L190.959,292.757 L194.558,296.211 L198.158,300.601 L201.757,305.907 L205.357,312.06 L208.956,318.935 L212.556,326.364 L216.156,334.134 L219.755,342.001 L223.355,349.705 L226.596,356.912 L230.195,364.825 L229.837,364.022 L226.237,354.785 L222.638,345.232 L222.279,339.606 L218.68,329.562 L218.321,321.407 L214.722,312.309"/>
 </g>
 
 <g fill="url(#fillPattern85_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M436.861,285.685 L433.262,281.507 L430.021,282.698 L426.421,277.666 L422.821,272.258 L419.222,266.59 L415.622,260.807 L412.023,255.077 L408.423,249.581 L404.824,244.495 L401.583,243.436 L397.983,239.221 L394.384,235.942 L391.143,235.054 L387.902,233.535 L391.501,236 L388.26,233.768 L387.902,233.535 L384.661,231.549 L388.26,233.768 L387.902,233.535 L391.501,236 L388.26,233.768 L391.86,237.591 L395.459,242.808 L399.059,249.13 L402.658,256.218 L406.258,263.724 L409.857,271.316 L413.457,278.704 L413.815,286.14 L417.415,292.893 L421.014,298.853 L424.255,297.572 L427.855,302.367 L431.455,306.345 L435.054,309.527 L438.295,307.43 L441.895,309.757 L445.136,307.439 L448.735,309.108 L451.976,306.649 L455.576,307.861 L458.817,305.349 L462.416,306.293 L465.657,303.817 L469.257,304.659 L472.498,302.299 L476.098,303.18 L479.339,301.004 L482.938,302.033 L486.179,300.09 L489.42,298.142 L492.661,296.192 L495.902,294.247 L499.143,292.312 L502.384,290.392 L505.625,288.491 L502.026,285.738 L498.785,287.865 L495.185,285.419 L491.944,287.792 L488.345,285.636 L485.104,288.231 L481.504,286.314 L478.263,289.087 L474.664,287.322 L471.423,290.206 L467.823,288.475 L464.582,291.388 L460.982,289.54 L457.741,292.382 L454.142,290.249 L450.901,292.908 L447.301,290.304 L444.06,292.661 L440.461,289.405 L436.861,285.685"/>
 </g>
 
 <g fill="url(#fillPattern86_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M373.862,234.752 L377.103,234.793 L380.703,233.032 L383.944,233.157 L387.543,233.491 L391.143,235.054 L387.902,233.535 L384.661,231.549 L388.26,233.768 L385.019,231.401 L381.419,229.337 L377.82,229.155 L374.579,227.249 L370.979,229.291 L367.738,227.955 L364.497,227.088 L360.898,231.546 L357.657,231.549 L354.057,237.666 L350.816,238.475 L347.575,239.939 L343.976,246.881 L340.735,248.792 L337.493,251.244 L334.252,254.312 L330.653,260.107 L327.412,263.382 L323.812,267.682 L320.213,270.428 L323.454,268.383 L326.695,266.951 L330.294,262.996 L333.535,261.395 L336.776,260.077 L340.376,253.847 L343.617,252.584 L346.858,251.69 L350.458,244.621 L353.699,244.211 L356.94,244.123 L360.539,237.712 L363.78,238.192 L367.021,238.572 L370.621,234.064 L373.862,234.752"/>
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="72.7908,212.275 79,214.622 " />
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,18.0049,101.045)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0.5</text>
 </g>
 
 <g fill="url(#fillPattern87_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M166.837,290.759 L163.596,292.041 L160.355,293.416 L156.756,294.393 L153.515,295.904 L149.915,297.102 L146.674,298.648 L143.433,300.213 L139.834,301.393 L136.593,302.873 L140.192,301.797 L143.792,300.777 L147.391,299.892 L150.991,299.215 L154.59,298.816 L158.19,298.755 L161.789,299.085 L165.389,299.843 L168.988,301.055 L172.588,302.731 L175.829,301.199 L179.429,303.502 L183.028,306.27 L186.269,305.595 L189.869,309.05 L193.468,312.879 L196.709,313.423 L200.309,317.863 L203.908,322.482 L207.508,327.167 L211.107,331.802 L214.707,336.28 L218.307,340.499 L221.548,343.35 L224.789,347.258 L221.189,342.868 L217.59,338.043 L220.831,342.833 L217.231,337.387 L216.873,336.797 L220.114,342.884 L223.355,349.705 L219.755,342.001 L216.156,334.134 L212.556,326.364 L208.956,318.935 L205.357,312.06 L201.757,305.907 L198.158,300.601 L194.558,296.211 L190.959,292.757 L187.718,292.452 L184.118,290.372 L180.519,289.066 L177.278,289.682 L173.678,289.356 L170.437,290.357 L166.837,290.759"/>
 </g>
 
 <g fill="url(#fillPattern88_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M308.324,322.316 L308.683,330.34 L309.041,336.642 L305.8,347.973 L302.559,357.979 L299.318,366.277 L302.918,358.269 L306.517,350.88 L310.117,344.357 L306.876,349.9 L310.475,344.014 L314.075,339.155 L310.834,342.894 L307.593,345.7 L304.352,347.677 L300.752,352.801 L297.511,353.886 L294.27,354.344 L290.67,359.506 L287.429,359.048 L284.188,358.307 L280.589,362.711 L277.348,361.251 L273.748,365.075 L270.507,363.017 L266.908,366.015 L263.667,363.538 L260.067,365.543 L256.826,362.855 L253.226,363.792 L249.627,364.202 L246.386,360.98 L242.786,360.282 L239.187,358.965 L235.946,355.707 L232.346,353.449 L228.747,350.614 L225.147,347.232 L221.548,343.35 L224.789,347.258 L221.189,342.868 L217.59,338.043 L220.831,342.833 L217.231,337.387 L216.873,336.797 L220.114,342.884 L223.355,349.705 L223.713,349.587 L227.313,355.766 L230.912,361.233 L234.512,365.84 L237.753,374.031 L241.352,377.57 L244.952,379.903 L248.551,381.039 L252.151,381.043 L255.392,388.265 L258.992,386.487 L262.591,383.745 L265.832,389.387 L269.432,384.971 L272.673,389.31 L276.272,383.439 L279.513,386.108 L282.754,387.583 L286.354,379.959 L289.595,379.324 L292.836,376.95 L296.077,372.627 L299.318,366.277 L302.918,358.269 L306.517,350.88 L310.117,344.357 L306.876,349.9 L310.475,344.014 L314.075,339.155 L317.674,335.319 L320.915,331.073 L324.156,326.001 L327.397,320.158 L330.638,313.646 L330.28,306.764 L333.521,298.434 L336.762,289.971 L340.003,281.594 L339.645,271.488 L342.886,263.257 L346.127,255.705 L349.368,248.91 L352.609,242.915 L355.85,237.755 L359.449,241.587 L362.69,237.426 L366.29,243.296 L369.889,250.699 L370.248,262.586 L370.606,274.926 L370.965,286.919 L374.564,294.811 L374.923,304.868 L378.522,311.224 L382.122,316.865 L385.721,321.715 L388.963,320.272 L392.562,324.547 L396.162,327.95 L399.761,330.531 L403.002,329.501 L406.602,331.373 L409.843,330.282 L413.442,331.443 L416.683,330.249 L420.283,330.744 L423.524,329.431 L427.123,329.345 L430.365,327.92 L433.964,327.363 L437.205,325.854 L440.805,324.959 L444.046,323.41 L447.287,321.82 L450.528,320.192 L453.769,318.525 L457.01,316.819 L460.251,315.077 L463.492,313.299 L466.733,311.487 L469.974,309.645 L473.215,307.774 L476.456,305.879 L479.697,303.964 L482.938,302.033 L479.339,301.004 L476.098,303.18 L472.498,302.299 L469.257,304.659 L465.657,303.817 L462.416,306.293 L458.817,305.349 L455.576,307.861 L451.976,306.649 L448.735,309.108 L445.136,307.439 L441.895,309.757 L438.295,307.43 L435.054,309.527 L431.455,306.345 L427.855,302.367 L424.255,297.572 L421.014,298.853 L417.415,292.893 L413.815,286.14 L413.457,278.704 L409.857,271.316 L406.258,263.724 L402.658,256.218 L399.059,249.13 L395.459,242.808 L391.86,237.591 L388.26,233.768 L385.019,231.401 L381.778,229.163 L378.537,227.315 L374.937,225.384 L371.696,224.185 L368.455,223.782 L364.856,224.221 L361.615,224.785 L358.374,226.288 L355.133,228.736 L351.533,231.444 L348.292,234.699 L344.693,239.117 L341.452,242.976 L338.21,247.704 L334.611,252.684 L331.011,258.147 L327.412,263.382 L330.653,260.107 L334.252,254.312 L337.493,251.244 L340.735,248.792 L343.976,246.881 L347.575,239.939 L350.816,238.475 L354.057,237.666 L357.657,231.549 L360.898,231.546 L364.497,227.088 L367.738,227.955 L370.979,229.291 L374.579,227.249 L377.82,229.155 L381.419,229.337 L385.019,231.401 L381.778,229.163 L378.537,227.315 L374.937,225.384 L371.696,224.185 L368.455,223.782 L364.856,224.221 L361.615,224.785 L358.374,226.288 L355.133,228.736 L351.533,231.444 L348.292,234.699 L344.693,239.117 L341.452,242.976 L338.21,247.704 L334.611,252.684 L331.011,258.147 L327.412,263.382 L324.171,267.653 L320.93,273.25 L317.689,280.478 L314.448,289.538 L311.207,300.455 L311.565,308.99 L308.324,322.316"/>
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,26.5049,68.2943)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#d9d9d9" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >1</text>
 </g>
 
 <g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="72.7908,146.774 79,149.121 " />
 </g>
 
 <g fill="url(#fillPattern89_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M369.889,250.699 L366.29,243.296 L362.69,237.426 L359.449,241.587 L355.85,237.755 L352.609,242.915 L349.368,248.91 L346.127,255.705 L342.886,263.257 L339.645,271.488 L340.003,281.594 L336.762,289.971 L333.521,298.434 L330.28,306.764 L330.638,313.646 L327.397,320.158 L324.156,326.001 L320.915,331.073 L324.515,328.713 L327.756,324.292 L330.997,319.221 L334.238,313.578 L337.479,307.474 L340.72,301.045 L343.961,294.444 L347.202,287.82 L346.844,276.851 L350.085,269.863 L353.326,263.325 L356.925,269.15 L357.284,281.112 L360.883,287.693 L364.483,294.474 L364.841,304.471 L368.441,310.21 L372.04,315.516 L375.281,313.381 L378.881,318.595 L382.48,323.101 L386.08,326.873 L389.68,329.922 L392.921,328.984 L396.52,331.46 L399.761,330.531 L403.361,332.36 L406.96,333.524 L410.201,332.534 L413.801,333.085 L417.042,331.962 L420.641,331.948 L423.882,330.687 L427.482,330.191 L430.723,328.808 L434.323,327.938 L437.564,326.468 L440.805,324.959 L437.205,325.854 L433.964,327.363 L430.365,327.92 L427.123,329.345 L423.524,329.431 L420.283,330.744 L416.683,330.249 L413.442,331.443 L409.843,330.282 L406.602,331.373 L403.002,329.501 L399.761,330.531 L396.162,327.95 L392.562,324.547 L388.963,320.272 L385.721,321.715 L382.122,316.865 L378.522,311.224 L374.923,304.868 L374.564,294.811 L370.965,286.919 L370.606,274.926 L370.248,262.586 L369.889,250.699"/>
 </g>
 
 <g fill="url(#fillPattern90_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M196.709,313.423 L193.468,312.879 L189.869,309.05 L186.269,305.595 L183.028,306.27 L186.628,309.46 L190.227,313.012 L193.827,316.857 L197.068,316.999 L200.667,321.318 L204.267,325.735 L207.866,330.149 L211.466,334.46 L215.066,338.574 L218.307,340.499 L221.906,344.373 L225.506,347.827 L228.747,350.614 L225.147,347.232 L221.548,343.35 L218.307,340.499 L214.707,336.28 L211.107,331.802 L207.508,327.167 L203.908,322.482 L200.309,317.863 L196.709,313.423"/>
 </g>
 
 <g fill="url(#fillPattern91_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M172.588,302.731 L176.188,304.864 L179.787,307.433 L183.028,306.27 L179.429,303.502 L175.829,301.199 L172.588,302.731"/>
 </g>
 
 <g fill="url(#fillPattern92_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M310.834,342.894 L314.075,339.155 L317.674,335.319 L314.433,338.74 L311.192,341.386 L307.593,345.7 L310.834,342.894"/>
 </g>
 
 <g fill="url(#fillPattern93_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M239.187,358.965 L242.786,360.282 L246.386,360.98 L249.627,364.202 L253.226,363.792 L249.985,361.104 L246.386,360.98 L243.145,358.484 L239.545,357.381 L235.946,355.707 L239.187,358.965"/>
 </g>
 
 <g fill="url(#fillPattern94_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M300.752,352.801 L304.352,347.677 L301.111,348.966 L297.869,349.725 L294.27,354.344 L291.029,354.369 L287.429,359.048 L290.67,359.506 L294.27,354.344 L297.511,353.886 L300.752,352.801"/>
 </g>
 
 <g fill="url(#fillPattern95_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M229.105,350.809 L225.506,347.827 L228.747,350.614 L232.346,353.449 L229.105,350.809"/>
 </g>
 
 <g fill="url(#fillPattern96_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M266.908,366.015 L270.507,363.017 L267.266,361.215 L263.667,363.538 L266.908,366.015"/>
 </g>
 
 <g fill="url(#fillPattern97_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M273.748,365.075 L277.348,361.251 L274.107,359.867 L270.507,363.017 L273.748,365.075"/>
 </g>
 
 <g fill="url(#fillPattern98_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M260.426,361.477 L256.826,362.855 L260.067,365.543 L263.667,363.538 L260.426,361.477"/>
 </g>
 
 <g fill="url(#fillPattern99_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M280.589,362.711 L284.188,358.307 L280.947,357.466 L277.348,361.251 L280.589,362.711"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="370.849,489.97 364.64,487.623 " />
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,186.817,247.578)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >-2</text>
 </g>
 
 <g fill="url(#fillPattern100_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M353.326,263.325 L350.085,269.863 L346.844,276.851 L347.202,287.82 L343.961,294.444 L340.72,301.045 L337.479,307.474 L334.238,313.578 L330.997,319.221 L327.756,324.292 L331.355,323.468 L334.596,319.158 L337.837,314.363 L341.078,309.167 L344.32,303.674 L347.919,306.89 L351.16,302.118 L354.76,306.541 L358.001,302.516 L361.6,307.784 L365.2,312.864 L368.799,317.599 L372.399,321.878 L375.64,320.273 L379.239,324.412 L382.839,327.906 L386.439,330.762 L389.68,329.922 L393.279,332.287 L396.879,334.025 L400.12,333.244 L403.719,334.414 L406.96,333.524 L410.56,334.115 L413.801,333.085 L417.4,333.129 L420.641,331.948 L417.042,331.962 L413.801,333.085 L410.201,332.534 L406.96,333.524 L403.361,332.36 L399.761,330.531 L396.52,331.46 L392.921,328.984 L389.68,329.922 L386.08,326.873 L382.48,323.101 L378.881,318.595 L375.281,313.381 L372.04,315.516 L368.441,310.21 L364.841,304.471 L364.483,294.474 L360.883,287.693 L357.284,281.112 L356.925,269.15 L353.326,263.325"/>
 </g>
 
 <g fill="url(#fillPattern101_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M186.628,309.46 L183.028,306.27 L179.787,307.433 L183.387,310.401 L186.986,313.717 L190.586,317.319 L193.827,316.857 L197.426,320.911 L201.026,325.086 L204.625,329.29 L207.866,330.149 L204.267,325.735 L200.667,321.318 L197.068,316.999 L193.827,316.857 L190.227,313.012 L186.628,309.46"/>
 </g>
 
 <g fill="url(#fillPattern102_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M232.346,353.449 L235.946,355.707 L239.545,357.381 L236.304,355.227 L232.705,353.282 L229.105,350.809 L232.346,353.449"/>
 </g>
 
 <g fill="url(#fillPattern103_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M304.352,347.677 L307.593,345.7 L311.192,341.386 L307.951,343.344 L304.71,344.734 L301.111,348.966 L304.352,347.677"/>
 </g>
 
 <g fill="url(#fillPattern104_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M324.515,328.713 L320.915,331.073 L317.674,335.319 L314.433,338.74 L318.033,335.504 L321.274,332.448 L324.515,328.713"/>
 </g>
 
 <g fill="url(#fillPattern105_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M253.585,360.71 L249.985,361.104 L253.226,363.792 L256.826,362.855 L253.585,360.71"/>
 </g>
 
 <g fill="url(#fillPattern106_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M215.066,338.574 L218.665,342.407 L222.265,345.887 L225.506,347.827 L221.906,344.373 L218.307,340.499 L215.066,338.574"/>
 </g>
 
 <g fill="url(#fillPattern107_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M287.788,354.141 L284.188,358.307 L287.429,359.048 L291.029,354.369 L287.788,354.141"/>
 </g>
 
 <g fill="url(#fillPattern108_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M420.641,331.948 L424.241,331.511 L427.482,330.191 L423.882,330.687 L420.641,331.948"/>
 </g>
 
 <g fill="url(#fillPattern109_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M246.386,360.98 L249.985,361.104 L246.744,359.04 L243.145,358.484 L246.386,360.98"/>
 </g>
 
 <g fill="url(#fillPattern110_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M427.482,330.191 L431.082,329.368 L434.323,327.938 L430.723,328.808 L427.482,330.191"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,130.178,248.885)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >2</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="279.957,492.159 285.974,489.354 " />
 </g>
 
 <g fill="url(#fillPattern111_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M358.001,302.516 L354.76,306.541 L351.16,302.118 L347.919,306.89 L344.32,303.674 L341.078,309.167 L337.837,314.363 L334.596,319.158 L331.355,323.468 L327.756,324.292 L324.515,328.713 L321.274,332.448 L318.033,335.504 L314.792,337.924 L318.391,335.255 L318.033,335.504 L321.632,333.107 L318.391,335.255 L318.033,335.504 L321.632,333.107 L318.391,335.255 L321.991,333.3 L318.75,334.802 L322.349,333.25 L319.108,334.324 L322.708,333.143 L322.349,333.25 L325.949,332.239 L322.708,333.143 L322.349,333.25 L325.949,332.239 L322.708,333.143 L319.467,333.96 L323.066,333.136 L319.825,333.827 L316.584,334.554 L313.343,335.347 L310.102,336.232 L306.503,337.237 L303.262,338.229 L300.02,339.332 L296.421,340.668 L293.18,341.841 L289.939,343.127 L286.339,344.609 L283.098,345.911 L279.857,347.309 L276.258,348.745 L273.017,350.091 L269.417,351.458 L265.818,352.823 L262.577,353.895 L258.977,355.003 L255.377,355.96 L251.778,356.703 L248.178,357.175 L251.419,356.861 L247.82,357.201 L244.22,357.17 L240.621,356.727 L243.862,357.179 L240.262,356.504 L236.663,355.352 L233.063,353.709 L236.304,355.227 L239.545,357.381 L243.145,358.484 L246.744,359.04 L249.985,361.104 L253.585,360.71 L256.826,362.855 L260.426,361.477 L263.667,363.538 L267.266,361.215 L270.507,363.017 L274.107,359.867 L277.348,361.251 L280.947,357.466 L284.188,358.307 L287.788,354.141 L291.029,354.369 L294.27,354.344 L297.869,349.725 L301.111,348.966 L304.71,344.734 L307.951,343.344 L311.192,341.386 L314.433,338.74 L318.033,335.504 L314.792,337.924 L318.391,335.255 L321.991,333.3 L318.75,334.802 L322.349,333.25 L319.108,334.324 L322.708,333.143 L319.467,333.96 L323.066,333.136 L319.825,333.827 L316.584,334.554 L313.343,335.347 L310.102,336.232 L306.503,337.237 L303.262,338.229 L300.02,339.332 L296.421,340.668 L293.18,341.841 L289.939,343.127 L286.339,344.609 L283.098,345.911 L279.857,347.309 L276.258,348.745 L273.017,350.091 L269.417,351.458 L265.818,352.823 L262.577,353.895 L266.176,352.705 L269.776,351.501 L273.375,350.355 L276.975,349.334 L280.574,348.506 L284.174,347.93 L287.773,347.663 L291.373,347.748 L294.972,348.222 L298.572,349.109 L302.171,350.423 L305.771,352.163 L309.371,354.317 L312.97,356.861 L316.57,359.758 L320.169,362.962 L323.769,366.417 L327.368,370.06 L330.609,368.368 L333.85,366.721 L337.091,365.12 L340.332,363.567 L343.573,362.061 L346.814,360.602 L350.056,359.191 L353.297,357.825 L356.538,356.504 L359.779,355.224 L363.02,353.983 L366.261,352.778 L369.502,351.605 L372.743,350.46 L375.984,349.339 L379.225,348.236 L382.466,347.148 L385.707,346.068 L388.948,344.991 L392.189,343.914 L395.43,342.83 L398.671,341.735 L401.912,340.624 L405.153,339.494 L408.394,338.34 L411.635,337.158 L414.876,335.947 L418.117,334.704 L421.358,333.426 L424.599,332.111 L427.84,330.759 L431.082,329.368 L427.482,330.191 L424.241,331.511 L420.641,331.948 L417.4,333.129 L413.801,333.085 L410.56,334.115 L406.96,333.524 L403.719,334.414 L400.12,333.244 L396.879,334.025 L393.279,332.287 L389.68,329.922 L386.439,330.762 L382.839,327.906 L379.239,324.412 L375.64,320.273 L372.399,321.878 L368.799,317.599 L365.2,312.864 L361.6,307.784 L358.001,302.516"/>
 </g>
 
 <g fill="url(#fillPattern112_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M211.466,334.46 L207.866,330.149 L204.625,329.29 L201.026,325.086 L197.426,320.911 L193.827,316.857 L190.586,317.319 L194.185,321.133 L197.785,325.081 L201.384,329.08 L204.984,333.045 L208.583,336.897 L212.183,340.559 L215.783,343.963 L219.382,347.051 L222.982,349.775 L226.581,352.1 L230.181,354.001 L233.78,355.467 L237.38,356.5 L240.979,357.112 L244.579,357.326 L247.82,357.201 L244.22,357.17 L240.621,356.727 L243.862,357.179 L240.262,356.504 L236.663,355.352 L233.063,353.709 L236.304,355.227 L232.705,353.282 L229.105,350.809 L225.506,347.827 L222.265,345.887 L218.665,342.407 L215.066,338.574 L211.466,334.46"/>
 </g>
 
 <g fill="url(#fillPattern113_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M251.419,356.861 L247.82,357.201 L248.178,357.175 L244.579,357.326 L247.82,357.201 L248.178,357.175 L251.419,356.861"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="607,505 639,505 " />
 <polyline fill="none" vector-effect="none" points="607,43 639,43 " />
@@ -998,13 +998,13 @@ font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 </g>
 
 <g fill="url(#fillPattern114_)" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M607,505 L639,505 L639,43 L607,43 L607,505"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="639,505 639,43 " />
 <polyline fill="none" vector-effect="none" points="639,495.965 634.38,495.965 " />
@@ -1020,77 +1020,77 @@ font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,243.983)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >-0.8</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,219.015)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >-0.6</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,194.047)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >-0.4</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,169.079)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >-0.2</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,144.111)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,119.144)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0.2</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,94.1758)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0.4</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,69.208)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0.6</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,44.2402)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >0.8</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,322.001,19.2724)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
-<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+<text fill="#1f1f1f" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0.09375" font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >1</text>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <polyline fill="none" vector-effect="none" points="607,43 639,43 " />
 <polyline fill="none" vector-effect="none" points="607,505 639,505 " />
@@ -1099,25 +1099,25 @@ font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 </g>
 
 <g fill="#212121" fill-opacity="1" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M606.5,504.5 L607.5,504.5 L607.5,505.5 L606.5,505.5 L606.5,504.5"/>
 </g>
 
 <g fill="#212121" fill-opacity="1" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M606.5,42.5 L607.5,42.5 L607.5,43.5 L606.5,43.5 L606.5,42.5"/>
 </g>
 
 <g fill="#212121" fill-opacity="1" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M638.5,504.5 L639.5,504.5 L639.5,505.5 L638.5,505.5 L638.5,504.5"/>
 </g>
 
 <g fill="#212121" fill-opacity="1" stroke="none" transform="matrix(0.5,0,0,0.5,-1.49921,-7.5)"
-font-family="Arial" font-size="20" font-weight="400" font-style="normal" 
+font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <path vector-effect="none" fill-rule="evenodd" d="M638.5,42.5 L639.5,42.5 L639.5,43.5 L638.5,43.5 L638.5,42.5"/>
 </g>

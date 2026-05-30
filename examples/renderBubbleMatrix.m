@@ -1,4 +1,4 @@
-function files = renderBubbleMatrix(outputDir, formats)
+function [files, report] = renderBubbleMatrix(outputDir, formats)
 data = sftExampleData('bubble_matrix');
 theme = sftTheme('FigureSize', [12 10]);
 [r, c] = size(data.matrix);
@@ -19,9 +19,10 @@ cb.Color = theme.AxisColor;
 cb.FontName = theme.FontName;
 cb.FontSize = theme.FontSize;
 grid on
+xlabel('Column');
+ylabel('Row');
 title('Bubble Matrix');
 sftApplyTheme(gca, theme);
 
-files = sftExport(fig, fullfile(outputDir, 'bubble_matrix'), formats);
-close(fig);
+[files, report] = sftFinalizeFigure(fig, fullfile(outputDir, 'bubble_matrix'), formats);
 end
