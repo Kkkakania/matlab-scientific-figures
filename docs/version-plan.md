@@ -6,13 +6,13 @@ together.
 
 ## Current State
 
-- `v0.4.0` is the latest public release.
+- `v0.5.0` is the latest public release.
 - The gallery has 22 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 
-## v0.5.0
+## v0.5.0 Released
 
-Goal: make the project useful beyond a starter gallery.
+Goal met: make the project useful beyond a starter gallery.
 
 Scope:
 
@@ -26,9 +26,9 @@ Scope:
 
 Release condition:
 
-- At least 22 clean-room examples.
-- First-use documentation is short and practical.
-- The release has a clear changelog, closed issues, and passing CI.
+- 22 clean-room examples.
+- First-use documentation is shorter and more practical.
+- Changelog, local verification, and GitHub Actions are in place.
 
 ## v2.0.0
 
