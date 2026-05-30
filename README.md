@@ -163,6 +163,7 @@ See [docs/README.md](docs/README.md) for the grouped documentation index.
 | [Template backlog](docs/template-backlog.md) | See which high-value charts are planned |
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
 | [Release checklist](docs/release-checklist.md) | Check a release before tagging |
+| [Release cadence](docs/release-cadence.md) | Keep versioning deliberate and slow after stabilization |
 | [v0.5.0 maintenance report](docs/maintenance-report-v0.5.0.md) | See the current maintenance state |
 | [Provenance policy](docs/provenance-policy.md) | Keep public releases clean and auditable |
 | [Maintainer workflow](docs/openai-codex-workflow.md) | Review PRs, issues, and releases consistently |

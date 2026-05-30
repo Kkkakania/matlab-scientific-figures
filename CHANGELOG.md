@@ -5,6 +5,8 @@
 - Add a documentation link checker for local Markdown links and gallery image
   references.
 - Wire documentation link checks into the release gate and GitHub Actions.
+- Add release cadence guidance so future tags move more slowly after the first
+  stabilization day.
 
 ## v3.2.0 - 2026-05-30
 

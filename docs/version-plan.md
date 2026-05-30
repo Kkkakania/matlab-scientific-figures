@@ -9,6 +9,8 @@ together.
 - `v3.2.0` is the current release.
 - The gallery has 22 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
+- Future tags should follow `docs/release-cadence.md`; small maintenance
+  changes can land on `main` without a release.
 
 ## v0.5.0 Released
 

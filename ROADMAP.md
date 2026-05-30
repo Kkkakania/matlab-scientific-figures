@@ -72,6 +72,13 @@ Candidates that need careful design before inclusion:
 - A small number of domain examples that still use synthetic data.
 - PyPI or package-manager guidance if users ask for easier installation.
 
+## Versioning Pace
+
+The fast `v3.x` stabilization happened during the first public hardening pass.
+Future releases should follow [Release cadence](docs/release-cadence.md):
+patch tags for small fixes, minor tags for user-visible workflows, and no major
+tag unless the public compatibility boundary changes.
+
 ## Non-Goals
 
 - No raw data collections.
