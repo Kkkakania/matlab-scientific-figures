@@ -191,6 +191,9 @@ before release, and optional MATLAB batch rendering can be enabled when MATLAB
 is available. The project uses the `matlab-figures` preset from
 `matlab-figure-ci` for gallery-oriented checks, and the workflow prints
 `mfigci rules` before the full check so the active policy is visible in CI.
+Strict warning failure is available in `matlab-figure-ci`, but this repository
+keeps warnings non-blocking while the provenance policy is intentionally
+documented through CI artifacts.
 
 ## Requirements
 
