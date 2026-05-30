@@ -49,6 +49,8 @@ gallery:
     - "butterfly_comparison.svg"
     - "waffle_chart.png"
     - "waffle_chart.svg"
+    - "sankey_flow.png"
+    - "sankey_flow.svg"
     - "heatmap.png"
     - "heatmap.svg"
     - "line_plot.png"

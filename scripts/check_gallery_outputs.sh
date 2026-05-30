@@ -14,6 +14,7 @@ expected=(
   grouped_error_bar
   butterfly_comparison
   waffle_chart
+  sankey_flow
   positive_negative_area
   ridgeline_plot
   radar_chart

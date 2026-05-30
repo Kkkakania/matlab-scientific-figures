@@ -33,6 +33,7 @@ The `Name` column is the value to pass into `sftRenderExamples` or
 | `grouped_error_bar` | `renderGroupedErrorBar` | Compare methods with uncertainty bars |
 | `butterfly_comparison` | `renderButterflyComparison` | Compare two sides around a shared baseline |
 | `waffle_chart` | `renderWaffleChart` | Show composition or progress as countable cells |
+| `sankey_flow` | `renderSankeyFlow` | Show flow magnitude across stages |
 | `positive_negative_area` | `renderPositiveNegativeArea` | Show signed change around a baseline |
 | `ridgeline_plot` | `renderRidgelinePlot` | Compare distributions across many groups |
 | `radar_chart` | `renderRadarChart` | Compare a few normalized metrics across methods |

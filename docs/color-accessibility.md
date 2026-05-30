@@ -28,6 +28,7 @@ thumbnails.
 | `grouped_error_bar` | Medium | Series rely on hue; grouped position and error bars help. |
 | `butterfly_comparison` | Low | Side and direction encode the main distinction; color is secondary. |
 | `waffle_chart` | Medium | Category shares rely on hue and legend; keep category count small. |
+| `sankey_flow` | Medium | Flow thickness carries magnitude, but node color and direct labels need review. |
 | `ridgeline_plot` | Medium | Group color helps, but vertical position and labels carry the comparison. |
 | `radar_chart` | Medium | Series use color, but polygon shape, metric labels, and legend support reading. |
 | `parallel_coordinates` | Medium | Hue separates groups; repeated axes and median markers reduce ambiguity. |

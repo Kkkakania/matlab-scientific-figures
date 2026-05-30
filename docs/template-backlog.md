@@ -10,10 +10,10 @@ choice of chart type, but source files are not copied into the repo.
 
 ## Current Coverage
 
-The current public gallery has 22 examples covering trends, uncertainty, dense
+The current public gallery has 23 examples covering trends, uncertainty, dense
 x-y structure, grouped comparison, distributions, matrices, rankings,
-multivariate profiles, multi-panel figures, and one 3D surface. New work should
-improve real user workflows before adding more chart types.
+multivariate profiles, flow structure, multi-panel figures, and one 3D surface.
+New work should improve real user workflows before adding more chart types.
 
 ## Already Covered
 
@@ -23,7 +23,7 @@ improve real user workflows before adding more chart types.
 | Uncertainty band | `confidence_interval` |
 | Dense x-y relationship | `density_scatter`, `contour_scatter` |
 | Method comparison | `grouped_bar`, `grouped_error_bar`, `butterfly_comparison` |
-| Composition | `waffle_chart` |
+| Composition and flow | `waffle_chart`, `sankey_flow` |
 | Matrix values | `heatmap`, `bubble_matrix` |
 | Correlation matrix | `correlation_bubble`, `double_triangle_heatmap` |
 | Distribution comparison | `box_jitter`, `ridgeline_plot` |
@@ -38,7 +38,6 @@ improve real user workflows before adding more chart types.
 
 | Priority | Template | Why it is useful |
 |---|---|---|
-| Medium | [Sankey-style flow](https://github.com/Kkkakania/matlab-scientific-figures/issues/16) | Useful for flow or contribution structure, but needs careful API design |
 | Later | 3D density scatter | Attractive, but only worth adding if users need depth |
 | Later | Texture-filled bars | Useful for grayscale printing, but easy to overdo |
 

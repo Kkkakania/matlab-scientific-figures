@@ -53,4 +53,5 @@ renderer in `examples/` and a name accepted by `sftRenderExamples`.
 | `parallel_coordinates` | <img src="../gallery/parallel_coordinates.png" width="220" alt="Parallel coordinates"> | Samples need comparison across many features |
 | `multi_panel_overview` | <img src="../gallery/multi_panel_overview.png" width="220" alt="Multi panel overview"> | Several small plots belong on one figure |
 | `waffle_chart` | <img src="../gallery/waffle_chart.png" width="220" alt="Waffle chart"> | Composition is countable and compact |
+| `sankey_flow` | <img src="../gallery/sankey_flow.png" width="220" alt="Sankey flow"> | Flow magnitude should stay readable across stages |
 | `surface_3d` | <img src="../gallery/surface_3d.png" width="220" alt="3D surface"> | A smooth response varies over two inputs |

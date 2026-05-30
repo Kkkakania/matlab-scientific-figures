@@ -39,6 +39,7 @@ sftWriteTemplateManifest()
 | `grouped_error_bar` | `renderGroupedErrorBar` | Compare grouped values with uncertainty | `bar`, `uncertainty` |
 | `butterfly_comparison` | `renderButterflyComparison` | Compare two sides around a baseline | `bar`, `comparison` |
 | `waffle_chart` | `renderWaffleChart` | Show countable composition | `composition`, `percentage` |
+| `sankey_flow` | `renderSankeyFlow` | Show flow magnitude across stages | `flow`, `composition` |
 | `positive_negative_area` | `renderPositiveNegativeArea` | Show signed change around a baseline | `area`, `change` |
 | `ridgeline_plot` | `renderRidgelinePlot` | Compare many distributions | `distribution`, `density` |
 | `radar_chart` | `renderRadarChart` | Compare normalized metric profiles | `profile`, `metrics` |

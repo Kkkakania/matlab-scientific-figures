@@ -14,6 +14,7 @@ Choose the figure by the communication task first, not by decoration.
 | Compare methods with uncertainty | `grouped_error_bar` | Group means need visible uncertainty or variability |
 | Compare two sides | `butterfly_comparison` | Two groups should be read from a shared zero baseline |
 | Show composition | `waffle_chart` | Percent shares or progress counts should be compact and countable |
+| Show flow structure | `sankey_flow` | Weighted movement across stages needs direct labels |
 | Show matrix pattern | `heatmap` | Pairwise relations or sample-by-feature values matter |
 | Show correlation strength | `correlation_bubble` | Positive and negative pairwise correlations both matter |
 | Compare two matrices | `double_triangle_heatmap` | Two methods or conditions share the same pairwise layout |
@@ -29,9 +30,10 @@ Choose the figure by the communication task first, not by decoration.
 
 ## First-Release Boundary
 
-The first release intentionally avoids specialized maps, flow diagrams, and
-domain-specific templates. Those should be added only after the core rendering,
-testing, and provenance workflow is stable.
+The first release intentionally avoided specialized maps and domain-specific
+templates. New chart families should still be added only when they improve a
+real communication task and can ship with synthetic data, gallery outputs,
+tests, and documentation.
 
 ## Waffle Charts Versus Pie Charts
 
@@ -40,6 +42,13 @@ percentage shares and the countable 10 x 10 grid adds clarity. A waffle chart is
 often easier to scan than a pie chart when the parts are close in size, but it
 is not a good fit for many tiny categories or values that do not naturally sum
 to a meaningful whole.
+
+## Sankey-Style Flows
+
+Use `sankey_flow` when the main question is how weighted contributions move
+from inputs through intermediate stages to outputs. Keep the number of nodes
+small, label nodes directly, and avoid using it when a simple stacked bar would
+answer the composition question with less visual load.
 
 ## Butterfly Comparisons
 

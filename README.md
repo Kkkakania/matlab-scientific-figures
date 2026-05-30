@@ -48,12 +48,12 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ma
 
 ## Gallery
 
-The gallery contains 22 examples. These 8 are a quick scan of the range.
+The gallery contains 23 examples. These 8 are a quick scan of the range.
 
 <table>
   <tr>
     <td><img src="gallery/contour_scatter.png" width="210" alt="Contour scatter"><br>Contour scatter</td>
-    <td><img src="gallery/double_triangle_heatmap.png" width="210" alt="Double-triangle heatmap"><br>Double-triangle heatmap</td>
+    <td><img src="gallery/sankey_flow.png" width="210" alt="Sankey flow"><br>Sankey flow</td>
     <td><img src="gallery/zoomed_inset_line.png" width="210" alt="Zoomed inset line"><br>Zoomed inset line</td>
     <td><img src="gallery/parallel_coordinates.png" width="210" alt="Parallel coordinates"><br>Parallel coordinates</td>
   </tr>
@@ -61,7 +61,7 @@ The gallery contains 22 examples. These 8 are a quick scan of the range.
     <td><img src="gallery/grouped_error_bar.png" width="210" alt="Grouped error bar"><br>Grouped error bar</td>
     <td><img src="gallery/ridgeline_plot.png" width="210" alt="Ridgeline plot"><br>Ridgeline plot</td>
     <td><img src="gallery/radar_chart.png" width="210" alt="Radar chart"><br>Radar chart</td>
-    <td><img src="gallery/multi_panel_overview.png" width="210" alt="Multi-panel overview"><br>Multi-panel overview</td>
+    <td><img src="gallery/double_triangle_heatmap.png" width="210" alt="Double-triangle heatmap"><br>Double-triangle heatmap</td>
   </tr>
 </table>
 
@@ -72,7 +72,8 @@ density scatter plots, contour scatter plots, grouped bars, error bars,
 butterfly comparisons, waffle charts, ridgeline plots, signed area charts,
 heatmaps, double-triangle heatmaps, zoomed inset lines, correlation bubbles,
 bubble matrices, box plots with jittered observations, radar charts, lollipop
-rankings, multi-panel layouts, parallel coordinates, and 3D surfaces.
+rankings, Sankey-style flows, multi-panel layouts, parallel coordinates, and
+3D surfaces.
 
 ## Quick Start
 

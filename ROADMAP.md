@@ -8,7 +8,7 @@ It should agree with README, CHANGELOG, and GitHub releases.
 - Current public release: `v3.2.0`.
 - Maturity: early public project; the gallery is usable, but adoption claims
   should stay conservative until real external use appears.
-- Gallery size: 22 clean-room templates.
+- Gallery size: 23 clean-room templates.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
   privacy/provenance scans, and figure-quality CI.
 - Companion checker: `matlab-figure-ci` is dogfooded through

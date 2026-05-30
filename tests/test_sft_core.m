@@ -141,6 +141,17 @@ verifyGreaterThanOrEqual(testCase, data.values, 0);
 verifyLessThanOrEqual(testCase, data.values, 1);
 end
 
+function testSankeyFlowDataUsesPositiveEdgeTable(testCase)
+data = sftExampleData('sankey_flow');
+
+verifyEqual(testCase, data.edges.Properties.VariableNames, {'Source', 'Target', 'Weight'});
+verifyGreaterThan(testCase, height(data.edges), 5);
+verifyTrue(testCase, all(strlength(data.edges.Source) > 0));
+verifyTrue(testCase, all(strlength(data.edges.Target) > 0));
+verifyTrue(testCase, all(data.edges.Weight > 0));
+verifyGreaterThan(testCase, numel(unique([data.edges.Source; data.edges.Target])), 5);
+end
+
 function testContourScatterDataHasDensePairedCoordinates(testCase)
 data = sftExampleData('contour_scatter');
 
@@ -154,10 +165,11 @@ function testTemplateRegistryDefinesGalleryExamples(testCase)
 registry = sftTemplateRegistry();
 names = string({registry.Name}).';
 
-verifyEqual(testCase, numel(registry), 22);
+verifyEqual(testCase, numel(registry), 23);
 verifyEqual(testCase, numel(unique(names)), numel(names));
 verifyTrue(testCase, any(names == "contour_scatter"));
 verifyTrue(testCase, any(names == "parallel_coordinates"));
+verifyTrue(testCase, any(names == "sankey_flow"));
 verifyTrue(testCase, all(arrayfun(@(item) isa(item.Renderer, 'function_handle'), registry)));
 verifyTrue(testCase, all(arrayfun(@(item) strlength(item.Task) > 0, registry)));
 verifyTrue(testCase, all(arrayfun(@(item) ~isempty(item.Tags), registry)));
@@ -194,7 +206,7 @@ end
 function testTemplateManifestIncludesFilesAndTags(testCase)
 manifest = sftTemplateManifest();
 
-verifyEqual(testCase, numel(manifest), 22);
+verifyEqual(testCase, numel(manifest), 23);
 verifyTrue(testCase, isfield(manifest, 'Name'));
 verifyTrue(testCase, isfield(manifest, 'RendererName'));
 verifyTrue(testCase, isfield(manifest, 'ExampleFile'));
