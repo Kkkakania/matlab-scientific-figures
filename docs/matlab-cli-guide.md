@@ -73,6 +73,9 @@ Render only selected templates:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap radar_chart
 ```
 
+The command prints the rendered template names and writes the requested formats
+to the output directory.
+
 Render every template matching a search query:
 
 ```bash

@@ -140,4 +140,4 @@ for name in "$@"; do
 done
 
 name_expr="[$(IFS=,; echo "${names[*]}")]"
-run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); sftRenderExamples($name_expr, '$SFT_OUTPUT_DIR')"
+run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderExamples($name_expr, '$SFT_OUTPUT_DIR'); disp('Rendered templates:'); disp(string({result.name})')"

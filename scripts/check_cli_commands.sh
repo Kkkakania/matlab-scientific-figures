@@ -30,3 +30,11 @@ test -s "$TMP_DIR/zoomed_inset_line.png"
 rm -f "$TMP_DIR/zoomed_inset_line.png" "$TMP_DIR/zoomed_inset_line.svg"
 SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh tag inset
 test -s "$TMP_DIR/zoomed_inset_line.png"
+
+rm -f "$TMP_DIR/heatmap.png" "$TMP_DIR/heatmap.svg" \
+  "$TMP_DIR/radar_chart.png" "$TMP_DIR/radar_chart.svg"
+selected_output="$(SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh heatmap radar_chart)"
+grep -q "heatmap" <<<"$selected_output"
+grep -q "radar_chart" <<<"$selected_output"
+test -s "$TMP_DIR/heatmap.png"
+test -s "$TMP_DIR/radar_chart.png"
