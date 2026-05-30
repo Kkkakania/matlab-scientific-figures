@@ -31,6 +31,8 @@ gallery:
     - "box_jitter.svg"
     - "bubble_matrix.png"
     - "bubble_matrix.svg"
+    - "calendar_heatmap.png"
+    - "calendar_heatmap.svg"
     - "confidence_interval.png"
     - "confidence_interval.svg"
     - "contour_scatter.png"

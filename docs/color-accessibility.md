@@ -37,6 +37,7 @@ thumbnails.
 | `correlation_bubble` | Low | Sign and size help beyond hue. |
 | `double_triangle_heatmap` | Low | Triangle position separates the two conditions. |
 | `zoomed_inset_line` | Low | The inset and highlighted interval carry the main message. |
+| `calendar_heatmap` | Low | Grid position, labels, and colorbar support the sequential scale. |
 | `bubble_matrix` | Low | Bubble size supports the color scale. |
 | `box_jitter` | Medium | Groups use color, but x-position and labels also encode categories. |
 | `lollipop_ranking` | Low | Ranking position carries the message. |

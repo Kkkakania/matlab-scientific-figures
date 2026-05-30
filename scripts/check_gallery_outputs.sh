@@ -23,6 +23,7 @@ expected=(
   correlation_bubble
   double_triangle_heatmap
   zoomed_inset_line
+  calendar_heatmap
   bubble_matrix
   box_jitter
   lollipop_ranking

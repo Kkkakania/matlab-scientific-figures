@@ -42,6 +42,7 @@ The `Name` column is the value to pass into `sftRenderExamples` or
 | `correlation_bubble` | `renderCorrelationBubble` | Show positive and negative pairwise correlations |
 | `double_triangle_heatmap` | `renderDoubleTriangleHeatmap` | Compare two metrics in one pairwise matrix |
 | `zoomed_inset_line` | `renderZoomedInsetLine` | Show a long trend and a local event window |
+| `calendar_heatmap` | `renderCalendarHeatmap` | Show daily values over weeks |
 | `bubble_matrix` | `renderBubbleMatrix` | Show matrix magnitude with position and area |
 | `box_jitter` | `renderBoxJitter` | Compare group distributions and observations |
 | `lollipop_ranking` | `renderLollipopRanking` | Rank factors or features |

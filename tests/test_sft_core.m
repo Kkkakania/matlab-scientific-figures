@@ -152,6 +152,17 @@ verifyTrue(testCase, all(data.edges.Weight > 0));
 verifyGreaterThan(testCase, numel(unique([data.edges.Source; data.edges.Target])), 5);
 end
 
+function testCalendarHeatmapDataUsesDailyValues(testCase)
+data = sftExampleData('calendar_heatmap');
+
+verifyEqual(testCase, height(data.table), 84);
+verifyEqual(testCase, data.table.Properties.VariableNames, {'Date', 'Value'});
+verifyTrue(testCase, isdatetime(data.table.Date));
+verifyTrue(testCase, all(isfinite(data.table.Value)));
+verifyEqual(testCase, days(diff(data.table.Date(1:2))), 1);
+verifyGreaterThan(testCase, max(data.table.Value), min(data.table.Value));
+end
+
 function testContourScatterDataHasDensePairedCoordinates(testCase)
 data = sftExampleData('contour_scatter');
 
@@ -165,11 +176,12 @@ function testTemplateRegistryDefinesGalleryExamples(testCase)
 registry = sftTemplateRegistry();
 names = string({registry.Name}).';
 
-verifyEqual(testCase, numel(registry), 23);
+verifyEqual(testCase, numel(registry), 24);
 verifyEqual(testCase, numel(unique(names)), numel(names));
 verifyTrue(testCase, any(names == "contour_scatter"));
 verifyTrue(testCase, any(names == "parallel_coordinates"));
 verifyTrue(testCase, any(names == "sankey_flow"));
+verifyTrue(testCase, any(names == "calendar_heatmap"));
 verifyTrue(testCase, all(arrayfun(@(item) isa(item.Renderer, 'function_handle'), registry)));
 verifyTrue(testCase, all(arrayfun(@(item) strlength(item.Task) > 0, registry)));
 verifyTrue(testCase, all(arrayfun(@(item) ~isempty(item.Tags), registry)));
@@ -206,7 +218,7 @@ end
 function testTemplateManifestIncludesFilesAndTags(testCase)
 manifest = sftTemplateManifest();
 
-verifyEqual(testCase, numel(manifest), 23);
+verifyEqual(testCase, numel(manifest), 24);
 verifyTrue(testCase, isfield(manifest, 'Name'));
 verifyTrue(testCase, isfield(manifest, 'RendererName'));
 verifyTrue(testCase, isfield(manifest, 'ExampleFile'));

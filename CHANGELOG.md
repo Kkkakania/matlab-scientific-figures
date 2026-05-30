@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- No changes yet.
+- Add a clean-room `calendar_heatmap` template for daily values over weeks.
 
 ## v3.3.0 - 2026-05-31
 

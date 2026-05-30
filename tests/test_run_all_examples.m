@@ -8,7 +8,7 @@ addpath(genpath(fullfile(projectRoot, 'src')));
 addpath(genpath(fullfile(projectRoot, 'examples')));
 end
 
-function testRunAllExamplesCreatesTwentyThreePngFiles(testCase)
+function testRunAllExamplesCreatesTwentyFourPngFiles(testCase)
 outDir = fullfile(tempdir, 'sft-gallery-test');
 if exist(outDir, 'dir')
     rmdir(outDir, 's');
@@ -17,11 +17,12 @@ end
 result = runAllExamples(outDir, ["png"]);
 pngFiles = dir(fullfile(outDir, '*.png'));
 
-verifyEqual(testCase, numel(result), 23);
-verifyEqual(testCase, numel(pngFiles), 23);
+verifyEqual(testCase, numel(result), 24);
+verifyEqual(testCase, numel(pngFiles), 24);
 verifyTrue(testCase, isfile(fullfile(outDir, 'contour_scatter.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'parallel_coordinates.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'sankey_flow.png')));
+verifyTrue(testCase, isfile(fullfile(outDir, 'calendar_heatmap.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'radar_chart.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'ridgeline_plot.png')));
 verifyTrue(testCase, isfile(fullfile(outDir, 'butterfly_comparison.png')));
@@ -43,11 +44,12 @@ end
 
 report = sftGalleryReport(outDir, ["png"]);
 
-verifyEqual(testCase, height(report), 23);
+verifyEqual(testCase, height(report), 24);
 verifyTrue(testCase, all(report.Passed));
 verifyTrue(testCase, any(report.Example == "contour_scatter"));
 verifyTrue(testCase, any(report.Example == "parallel_coordinates"));
 verifyTrue(testCase, any(report.Example == "sankey_flow"));
+verifyTrue(testCase, any(report.Example == "calendar_heatmap"));
 verifyTrue(testCase, any(report.Example == "radar_chart"));
 verifyTrue(testCase, any(report.Example == "ridgeline_plot"));
 verifyTrue(testCase, any(report.Example == "butterfly_comparison"));

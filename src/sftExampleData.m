@@ -148,6 +148,19 @@ switch kind
         data.y = y;
         data.zoomRange = [10.9 14.8];
 
+    case "calendar_heatmap"
+        startDate = datetime(2026, 1, 5);
+        dates = startDate + caldays(0:83);
+        dayIndex = mod(0:83, 7).';
+        weekIndex = floor((0:83) / 7).';
+        weeklyCycle = 0.18 * cos(2 * pi * dayIndex / 7);
+        slowDrift = 0.018 * weekIndex;
+        event = 0.42 * exp(-0.5 * ((weekIndex - 7) / 1.15) .^ 2);
+        values = 0.58 + slowDrift + weeklyCycle + event + 0.035 * randn(84, 1);
+        data.table = table(dates(:), values, 'VariableNames', {'Date', 'Value'});
+        data.weekLabels = "W" + string(1:12);
+        data.dayLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
     case "heatmap"
         m = randn(10, 10);
         data.matrix = corr(m + linspace(-1, 1, 10));

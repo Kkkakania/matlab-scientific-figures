@@ -7,6 +7,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show time trend | `line_plot` | One or more signals change over an ordered axis |
 | Show uncertainty | `confidence_interval` | Estimates need confidence bands or prediction ranges |
 | Show signed change | `positive_negative_area` | Positive and negative deviations from a baseline both matter |
+| Show daily pattern | `calendar_heatmap` | Day-of-week and week-to-week changes both matter |
 | Show group relationship | `scatter_plot` | Points belong to categories or operating states |
 | Show dense relationship | `density_scatter` | Many points overlap and local density matters |
 | Show local density structure | `contour_scatter` | Points matter, but clusters and ridges also matter |
@@ -49,6 +50,13 @@ Use `sankey_flow` when the main question is how weighted contributions move
 from inputs through intermediate stages to outputs. Keep the number of nodes
 small, label nodes directly, and avoid using it when a simple stacked bar would
 answer the composition question with less visual load.
+
+## Calendar Heatmaps
+
+Use `calendar_heatmap` when the date pattern is as important as the value
+itself. It works well for usage, quality, reliability, or activity measures
+where weekday/week structure should be visible. Avoid it for sparse event logs
+or when exact timestamps matter more than a compact daily overview.
 
 ## Butterfly Comparisons
 
