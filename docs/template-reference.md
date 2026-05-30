@@ -7,6 +7,7 @@ From MATLAB:
 
 ```matlab
 sftListTemplates()
+sftListTags()
 sftFindTemplates("matrix")
 sftTemplateManifest()
 sftRenderExamples(["heatmap", "double_triangle_heatmap"], "gallery")
@@ -17,6 +18,7 @@ From a shell:
 
 ```bash
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tags
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search matrix
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match matrix
 ```

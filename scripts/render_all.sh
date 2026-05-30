@@ -31,6 +31,15 @@ if [[ "${1:-}" == "list" ]]; then
   exit 0
 fi
 
+if [[ "${1:-}" == "tags" ]]; then
+  if [[ "$#" -ne 1 ]]; then
+    echo "Usage: ./scripts/render_all.sh tags" >&2
+    exit 2
+  fi
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); disp(sftListTags())"
+  exit 0
+fi
+
 if [[ "${1:-}" == "search" ]]; then
   shift
   if [[ "$#" -eq 0 ]]; then

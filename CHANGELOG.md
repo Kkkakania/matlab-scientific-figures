@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-No unreleased changes.
+- Add `sftListTags` and `render_all.sh tags` for tag-based gallery discovery.
 
 ## v3.5.0 - 2026-05-31
 

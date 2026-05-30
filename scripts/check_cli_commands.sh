@@ -12,6 +12,10 @@ list_output="$(MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh list)"
 grep -q "line_plot" <<<"$list_output"
 grep -q "double_triangle_heatmap" <<<"$list_output"
 
+tags_output="$(MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh tags)"
+grep -q "matrix" <<<"$tags_output"
+grep -q "comparison" <<<"$tags_output"
+
 search_output="$(MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh search matrix)"
 grep -q "heatmap" <<<"$search_output"
 grep -q "correlation_bubble" <<<"$search_output"

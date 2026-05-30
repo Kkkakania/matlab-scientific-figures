@@ -19,6 +19,7 @@ Start by listing the gallery:
 addpath(genpath('src'));
 addpath(genpath('examples'));
 templates = sftListTemplates()
+tags = sftListTags()
 manifest = sftTemplateManifest()
 ```
 
@@ -41,6 +42,7 @@ From a shell:
 
 ```bash
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tags
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search matrix
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap double_triangle_heatmap
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match matrix
@@ -142,7 +144,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 - `sftTiledFigure` creates a clean tiled layout without hand-tuning positions.
 - `sftValidateFigure` catches a few common figure problems before export.
 - `sftGalleryReport` batch-checks every gallery example.
-- `sftListTemplates` and `sftFindTemplates` help users discover examples.
+- `sftListTemplates`, `sftListTags`, and `sftFindTemplates` help users
+  discover examples.
 - `sftRenderExamples` renders all examples or a selected subset by name.
 - `sftRenderMatches` renders every template that matches a search query.
 - `sftTemplateManifest` exports machine-readable metadata for tools.

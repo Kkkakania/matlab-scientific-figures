@@ -275,6 +275,17 @@ verifyTrue(testCase, any(templates.Name == "double_triangle_heatmap"));
 verifyTrue(testCase, any(contains(templates.Tags, "matrix")));
 end
 
+function testListTagsReturnsTagCounts(testCase)
+tags = sftListTags();
+
+verifyEqual(testCase, tags.Properties.VariableNames, {'Tag', 'Count'});
+verifyTrue(testCase, all(strlength(tags.Tag) > 0));
+verifyTrue(testCase, all(tags.Count > 0));
+verifyTrue(testCase, any(tags.Tag == "matrix"));
+verifyTrue(testCase, any(tags.Tag == "comparison"));
+verifyGreaterThanOrEqual(testCase, tags.Count(tags.Tag == "matrix"), 4);
+end
+
 function testFindTemplatesSearchesNamesTasksAndTags(testCase)
 matrixTemplates = sftFindTemplates("matrix");
 denseTemplates = sftFindTemplates(["density", "contour"]);

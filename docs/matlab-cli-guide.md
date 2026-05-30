@@ -41,6 +41,12 @@ List available templates:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
 ```
 
+List available tags and how many templates use each one:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tags
+```
+
 Search for templates by chart task, name, or tag:
 
 ```bash
@@ -69,7 +75,8 @@ SFT_OUTPUT_DIR=/tmp/sft-gallery MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/m
 
 Template names are lower-case identifiers such as `heatmap`,
 `double_triangle_heatmap`, and `zoomed_inset_line`. Use `list` when you forget
-the exact name.
+the exact name, and use `tags` when you know the type of task but not the
+right keyword yet.
 
 ## Working Notes
 
