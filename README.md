@@ -185,7 +185,8 @@ The workflow checks that gallery outputs exist and are non-empty, risky binary
 or source files are not committed, privacy and provenance traces are flagged
 before release, and optional MATLAB batch rendering can be enabled when MATLAB
 is available. The project uses the `matlab-figures` preset from
-`matlab-figure-ci` for gallery-oriented checks.
+`matlab-figure-ci` for gallery-oriented checks, and the workflow prints
+`mfigci rules` before the full check so the active policy is visible in CI.
 
 ## Requirements
 
