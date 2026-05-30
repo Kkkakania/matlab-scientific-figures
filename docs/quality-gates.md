@@ -19,6 +19,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts
 |---|---|---|
 | Gallery files | `./scripts/check_gallery_outputs.sh` | Missing PNG or SVG outputs for registered examples |
 | Metadata consistency | `./scripts/check_gallery_consistency.sh` | Drift between registry, examples docs, gallery files, and CI config |
+| Documentation links | `./scripts/check_docs_links.sh` | Broken local Markdown links and gallery image references |
 | Forbidden files | `./scripts/check_forbidden_files.sh` | `.p`, `.fig`, `.mat`, Office files, PDFs, archives, raw/OCR/tmp folders |
 | Privacy scan | `./scripts/check_privacy.sh` | Emails, local paths, personal identifiers, and platform traces |
 | Provenance scan | `./scripts/check_provenance.sh` | Third-party author, license, platform, or source-pack traces |

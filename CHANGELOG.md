@@ -2,7 +2,9 @@
 
 ## Unreleased
 
-- No unreleased changes.
+- Add a documentation link checker for local Markdown links and gallery image
+  references.
+- Wire documentation link checks into the release gate and GitHub Actions.
 
 ## v3.2.0 - 2026-05-30
 
