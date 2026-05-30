@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- No unreleased changes.
+- Add the v0.5.0 maintenance report.
 
 ## v0.5.0 - 2026-05-30
 
