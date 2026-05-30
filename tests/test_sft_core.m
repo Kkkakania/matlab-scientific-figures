@@ -300,6 +300,19 @@ verifyTrue(testCase, any(denseTemplates.Name == "contour_scatter"));
 verifyEqual(testCase, insetTemplates.Name, "zoomed_inset_line");
 end
 
+function testFindTemplatesByTagMatchesExactTags(testCase)
+matrixTemplates = sftFindTemplatesByTag("matrix");
+agreementTemplates = sftFindTemplatesByTag("agreement");
+combinedTemplates = sftFindTemplatesByTag(["waterfall", "agreement"]);
+
+verifyTrue(testCase, any(matrixTemplates.Name == "heatmap"));
+verifyTrue(testCase, any(matrixTemplates.Name == "double_triangle_heatmap"));
+verifyFalse(testCase, any(matrixTemplates.Name == "bland_altman_plot"));
+verifyEqual(testCase, agreementTemplates.Name, "bland_altman_plot");
+verifyTrue(testCase, any(combinedTemplates.Name == "waterfall_chart"));
+verifyTrue(testCase, any(combinedTemplates.Name == "bland_altman_plot"));
+end
+
 function testTemplateManifestIncludesFilesAndTags(testCase)
 manifest = sftTemplateManifest();
 

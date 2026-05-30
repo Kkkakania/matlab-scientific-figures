@@ -104,7 +104,7 @@ Delivered:
 Candidates that need careful design before inclusion:
 
 - Generated Markdown table from `docs/template-manifest.json`.
-- Tag-based gallery subsets for docs pages.
+- Generated docs pages from tag-based gallery subsets.
 - Automated color accessibility checks.
 - A small number of domain examples that still use synthetic data.
 - PyPI or package-manager guidance if users ask for easier installation.

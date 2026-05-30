@@ -62,6 +62,28 @@ if [[ "${1:-}" == "search" ]]; then
   exit 0
 fi
 
+if [[ "${1:-}" == "tag" ]]; then
+  shift
+  if [[ "$#" -eq 0 ]]; then
+    echo "Usage: ./scripts/render_all.sh tag <tag> [tag...]" >&2
+    exit 2
+  fi
+
+  tags=()
+  for tag in "$@"; do
+    if [[ ! "$tag" =~ ^[A-Za-z0-9_-]+$ ]]; then
+      echo "Invalid tag: $tag" >&2
+      echo "Tags may contain letters, numbers, hyphens, and underscores." >&2
+      exit 2
+    fi
+    tags+=("\"$tag\"")
+  done
+
+  tag_expr="[$(IFS=,; echo "${tags[*]}")]"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderTags($tag_expr, '$SFT_OUTPUT_DIR'); disp('Rendered templates:'); disp(string({result.name})')"
+  exit 0
+fi
+
 if [[ "${1:-}" == "match" ]]; then
   shift
   if [[ "$#" -eq 0 ]]; then

@@ -54,6 +54,13 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh se
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search density contour
 ```
 
+Render every template that uses an exact tag:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tag matrix
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tag agreement
+```
+
 Render only selected templates:
 
 ```bash
@@ -98,6 +105,7 @@ right keyword yet.
 | `Unknown template(s)` | The name passed to `render_all.sh` is not in the registry | Run `./scripts/render_all.sh list` and copy from the `Name` column |
 | `Invalid search keyword` | A shell search term contains unsupported punctuation | Use plain words such as `matrix`, `density`, or `inset` |
 | `No templates matched` | The `match` query did not find a name, task, or tag | Run `./scripts/render_all.sh search <keyword>` first |
+| `No templates matched tag(s)` | The `tag` query did not match an exact tag | Run `./scripts/render_all.sh tags` first |
 | Missing output files | Rendering failed before export | Run MATLAB tests and inspect command output |
 | Font mismatch | Machine lacks the chosen font | Use `Arial` or another common font |
 | Empty figure | Example did not draw into the active axes | Check the example renderer and call `drawnow` if needed |

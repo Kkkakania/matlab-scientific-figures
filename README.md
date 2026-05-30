@@ -27,6 +27,7 @@ Search by the chart job you have in mind:
 
 ```matlab
 sftFindTemplates("matrix")
+sftFindTemplatesByTag("matrix")
 sftFindTemplates(["density", "contour"])
 sftFindTemplates("inset")
 ```
@@ -35,6 +36,7 @@ Then render only those figures:
 
 ```matlab
 sftRenderExamples(["heatmap", "double_triangle_heatmap"], "gallery", ["png", "svg"]);
+sftRenderTags("matrix", "gallery", ["png", "svg"]);
 sftRenderMatches("matrix", "gallery", ["png", "svg"]);
 ```
 
@@ -45,6 +47,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh li
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tags
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search matrix
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap double_triangle_heatmap
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tag matrix
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match matrix
 ```
 
@@ -144,9 +147,10 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 - `sftTiledFigure` creates a clean tiled layout without hand-tuning positions.
 - `sftValidateFigure` catches a few common figure problems before export.
 - `sftGalleryReport` batch-checks every gallery example.
-- `sftListTemplates`, `sftListTags`, and `sftFindTemplates` help users
-  discover examples.
+- `sftListTemplates`, `sftListTags`, `sftFindTemplates`, and
+  `sftFindTemplatesByTag` help users discover examples.
 - `sftRenderExamples` renders all examples or a selected subset by name.
+- `sftRenderTags` renders all examples that use one or more exact tags.
 - `sftRenderMatches` renders every template that matches a search query.
 - `sftTemplateManifest` exports machine-readable metadata for tools.
 - `sftWriteTemplateManifest` writes the metadata JSON used by docs and checks.

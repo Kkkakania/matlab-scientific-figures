@@ -117,3 +117,25 @@ outDir = fullfile(tempdir, 'sft-matched-gallery-error-test');
 verifyError(testCase, @() sftRenderMatches("notarealquery", outDir, ["png"]), ...
     'sftRenderMatches:NoMatches');
 end
+
+function testRenderTagsCreatesOutputsFromExactTag(testCase)
+outDir = fullfile(tempdir, 'sft-tagged-gallery-test');
+if exist(outDir, 'dir')
+    rmdir(outDir, 's');
+end
+
+result = sftRenderTags("inset", outDir, ["png"]);
+pngFiles = dir(fullfile(outDir, '*.png'));
+
+verifyEqual(testCase, numel(result), 1);
+verifyEqual(testCase, result.name, "zoomed_inset_line");
+verifyEqual(testCase, numel(pngFiles), 1);
+verifyTrue(testCase, isfile(fullfile(outDir, 'zoomed_inset_line.png')));
+verifyTrue(testCase, result.report.Passed);
+end
+
+function testRenderTagsRejectsEmptyResult(testCase)
+outDir = fullfile(tempdir, 'sft-tagged-gallery-error-test');
+verifyError(testCase, @() sftRenderTags("notarealtag", outDir, ["png"]), ...
+    'sftRenderTags:NoMatches');
+end

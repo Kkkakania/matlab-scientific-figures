@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-- Add `sftListTags` and `render_all.sh tags` for tag-based gallery discovery.
+- Add `sftListTags`, `sftFindTemplatesByTag`, `sftRenderTags`, and CLI
+  `tags`/`tag` commands for tag-based gallery discovery and rendering.
 
 ## v3.5.0 - 2026-05-31
 

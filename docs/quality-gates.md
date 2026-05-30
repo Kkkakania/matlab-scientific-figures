@@ -33,7 +33,7 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | Forbidden files | `./scripts/check_forbidden_files.sh` | `.p`, `.fig`, `.mat`, Office files, PDFs, archives, raw/OCR/tmp folders |
 | Privacy scan | `./scripts/check_privacy.sh` | Emails, local paths, personal identifiers, and platform traces |
 | Provenance scan | `./scripts/check_provenance.sh` | Third-party author, license, platform, or source-pack traces |
-| CLI discovery | `./scripts/check_cli_commands.sh` | Broken `render_all.sh list`, `tags`, `search`, or `match` commands |
+| CLI discovery | `./scripts/check_cli_commands.sh` | Broken `render_all.sh list`, `tags`, `search`, `tag`, or `match` commands |
 | Template manifest | `./scripts/check_template_manifest.sh` | Stale `docs/template-manifest.json` after registry changes |
 
 ## MATLAB Checks

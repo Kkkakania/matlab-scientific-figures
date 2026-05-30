@@ -22,3 +22,7 @@ grep -q "correlation_bubble" <<<"$search_output"
 
 SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh match inset
 test -s "$TMP_DIR/zoomed_inset_line.png"
+
+rm -f "$TMP_DIR/zoomed_inset_line.png" "$TMP_DIR/zoomed_inset_line.svg"
+SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh tag inset
+test -s "$TMP_DIR/zoomed_inset_line.png"
