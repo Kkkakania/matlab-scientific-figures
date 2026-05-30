@@ -8,6 +8,7 @@ Use this before tagging a release.
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery.sh
 ./scripts/check_gallery_outputs.sh
+./scripts/check_gallery_consistency.sh
 ./scripts/check_privacy.sh
 ./scripts/check_provenance.sh
 ```

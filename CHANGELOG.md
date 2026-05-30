@@ -13,6 +13,8 @@
   local density contours, gallery output, tests, and docs.
 - Add a tutorials index and refresh the template backlog around the 22-example
   v0.5.0 gallery.
+- Add a gallery consistency check for renderer names, example docs, committed
+  PNGs, gallery checks, and `mfigci.yml`.
 
 ## v0.4.0 - 2026-05-30
 
