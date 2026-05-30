@@ -16,6 +16,7 @@
   collaboration.
 - Add a maintainer dashboard for current release, CI, feedback, and maintenance
   status.
+- Include the maintainer dashboard in version metadata consistency checks.
 - Add a README badge for the dogfooded figure-quality workflow.
 - Rename the README provenance section to reduce expected scan noise.
 - Exclude the reviewed project `LICENSE` file from `mfigci` scans so reports
