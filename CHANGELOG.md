@@ -10,6 +10,7 @@
   maintainer helper functions.
 - Add `CITATION.cff` and a CI check so citation metadata stays aligned with the
   current public release.
+- Add a first-use smoke test for list, info, and selected-template rendering.
 
 ## v3.5.0 - 2026-05-31
 

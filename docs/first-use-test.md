@@ -22,6 +22,16 @@ git clone https://github.com/Kkkakania/matlab-scientific-figures.git
 cd matlab-scientific-figures
 ```
 
+If MATLAB is available from the shell, run the scripted smoke test first:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/check_first_use.sh
+```
+
+It lists templates, inspects `heatmap`, renders `heatmap` and `radar_chart` to
+a temporary directory, and checks the expected PNG/SVG files. It does not touch
+the committed gallery.
+
 In MATLAB:
 
 ```matlab

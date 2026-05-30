@@ -43,6 +43,7 @@ if matlab_available; then
   run_step "MATLAB core tests" run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch \
     "addpath(genpath('src')); addpath(genpath('examples')); results = [runtests('tests/test_sft_core.m'), runtests('tests/test_run_all_examples.m')]; assertSuccess(results);"
   run_step "MATLAB CLI commands" env MATLAB_BIN="$MATLAB_BIN" ./scripts/check_cli_commands.sh
+  run_step "first-use smoke test" env MATLAB_BIN="$MATLAB_BIN" ./scripts/check_first_use.sh
 else
   if [[ "$REQUIRE_MATLAB" == "1" ]]; then
     echo "MATLAB executable not found: $MATLAB_BIN" >&2
