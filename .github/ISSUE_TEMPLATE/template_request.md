@@ -2,7 +2,7 @@
 name: Figure template request
 about: Ask for a new MATLAB figure example
 title: "[Template]: "
-labels: enhancement
+labels: template, enhancement, provenance
 assignees: ""
 ---
 

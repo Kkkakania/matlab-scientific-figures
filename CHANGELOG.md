@@ -16,6 +16,8 @@
 - Add compatibility documentation and a guard against accidental toolbox-only
   MATLAB calls.
 - Add a non-MATLAB static quality bundle for contributor preflight checks.
+- Add focused GitHub labels and align issue templates with template,
+  first-use, provenance, CI, and compatibility triage.
 
 ## v3.5.0 - 2026-05-31
 
