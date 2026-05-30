@@ -3,6 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MATLAB_BIN="${MATLAB_BIN:-matlab}"
+SFT_OUTPUT_DIR="${SFT_OUTPUT_DIR:-gallery}"
 
 if [[ "$MATLAB_BIN" == */* ]]; then
   if [[ ! -x "$MATLAB_BIN" ]]; then
@@ -49,8 +50,30 @@ if [[ "${1:-}" == "search" ]]; then
   exit 0
 fi
 
+if [[ "${1:-}" == "match" ]]; then
+  shift
+  if [[ "$#" -eq 0 ]]; then
+    echo "Usage: ./scripts/render_all.sh match <keyword> [keyword...]" >&2
+    exit 2
+  fi
+
+  queries=()
+  for query in "$@"; do
+    if [[ ! "$query" =~ ^[A-Za-z0-9_-]+$ ]]; then
+      echo "Invalid match keyword: $query" >&2
+      echo "Match keywords may contain letters, numbers, hyphens, and underscores." >&2
+      exit 2
+    fi
+    queries+=("\"$query\"")
+  done
+
+  query_expr="[$(IFS=,; echo "${queries[*]}")]"
+  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderMatches($query_expr, '$SFT_OUTPUT_DIR'); disp('Rendered templates:'); disp(string({result.name})')"
+  exit 0
+fi
+
 if [[ "$#" -eq 0 ]]; then
-  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('gallery')"
+  "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('$SFT_OUTPUT_DIR')"
   exit 0
 fi
 
@@ -65,4 +88,4 @@ for name in "$@"; do
 done
 
 name_expr="[$(IFS=,; echo "${names[*]}")]"
-"$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); sftRenderExamples($name_expr, 'gallery')"
+"$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); sftRenderExamples($name_expr, '$SFT_OUTPUT_DIR')"

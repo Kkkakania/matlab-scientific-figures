@@ -3,6 +3,8 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MATLAB_BIN="${MATLAB_BIN:-matlab}"
+TMP_DIR="$(mktemp -d)"
+trap 'rm -rf "$TMP_DIR"' EXIT
 
 cd "$ROOT_DIR"
 
@@ -13,3 +15,6 @@ grep -q "double_triangle_heatmap" <<<"$list_output"
 search_output="$(MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh search matrix)"
 grep -q "heatmap" <<<"$search_output"
 grep -q "correlation_bubble" <<<"$search_output"
+
+SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh match inset
+test -s "$TMP_DIR/zoomed_inset_line.png"

@@ -79,3 +79,25 @@ outDir = fullfile(tempdir, 'sft-selected-gallery-error-test');
 verifyError(testCase, @() sftRenderExamples("not_a_template", outDir, ["png"]), ...
     'sftRenderExamples:UnknownTemplate');
 end
+
+function testRenderMatchesCreatesOutputsFromSearchQuery(testCase)
+outDir = fullfile(tempdir, 'sft-matched-gallery-test');
+if exist(outDir, 'dir')
+    rmdir(outDir, 's');
+end
+
+result = sftRenderMatches("inset", outDir, ["png"]);
+pngFiles = dir(fullfile(outDir, '*.png'));
+
+verifyEqual(testCase, numel(result), 1);
+verifyEqual(testCase, result.name, "zoomed_inset_line");
+verifyEqual(testCase, numel(pngFiles), 1);
+verifyTrue(testCase, isfile(fullfile(outDir, 'zoomed_inset_line.png')));
+verifyTrue(testCase, result.report.Passed);
+end
+
+function testRenderMatchesRejectsEmptyResult(testCase)
+outDir = fullfile(tempdir, 'sft-matched-gallery-error-test');
+verifyError(testCase, @() sftRenderMatches("notarealquery", outDir, ["png"]), ...
+    'sftRenderMatches:NoMatches');
+end

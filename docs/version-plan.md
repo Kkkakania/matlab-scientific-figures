@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v3.0.0` is the current release.
+- `v3.1.0` is the current release.
 - The gallery has 22 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 
@@ -72,3 +72,20 @@ Release conditions:
 - All repository checks pass.
 - MATLAB tests pass locally with `REQUIRE_MATLAB=1`.
 - `CHANGELOG.md`, README release status, and GitHub release notes agree.
+
+## v3.1.0 Released
+
+Goal: make discovery directly actionable.
+
+Delivered changes:
+
+- `sftRenderMatches` renders every template returned by a search query.
+- `render_all.sh match <keyword>` brings the same workflow to MATLAB CLI.
+- `SFT_OUTPUT_DIR` lets shell users render into a scratch folder.
+- CLI tests now cover list, search, and match.
+
+Release conditions:
+
+- MATLAB tests and `checkcode` pass locally.
+- `REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh` passes.
+- GitHub Actions pass on tag and main.

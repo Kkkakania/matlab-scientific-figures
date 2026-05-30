@@ -37,6 +37,19 @@ Render only selected templates:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap radar_chart
 ```
 
+Render every template matching a search query:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match matrix
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match density contour
+```
+
+Write output to a scratch directory instead of `gallery/`:
+
+```bash
+SFT_OUTPUT_DIR=/tmp/sft-gallery MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match inset
+```
+
 Template names are lower-case identifiers such as `heatmap`,
 `double_triangle_heatmap`, and `zoomed_inset_line`. Use `list` when you forget
 the exact name.
@@ -59,6 +72,7 @@ the exact name.
 | `MATLAB executable not found` | `MATLAB_BIN` points to the wrong file | Check the installed MATLAB version under `/Applications` |
 | `Unknown template(s)` | The name passed to `render_all.sh` is not in the registry | Run `./scripts/render_all.sh list` and copy from the `Name` column |
 | `Invalid search keyword` | A shell search term contains unsupported punctuation | Use plain words such as `matrix`, `density`, or `inset` |
+| `No templates matched` | The `match` query did not find a name, task, or tag | Run `./scripts/render_all.sh search <keyword>` first |
 | Missing output files | Rendering failed before export | Run MATLAB tests and inspect command output |
 | Font mismatch | Machine lacks the chosen font | Use `Arial` or another common font |
 | Empty figure | Example did not draw into the active axes | Check the example renderer and call `drawnow` if needed |

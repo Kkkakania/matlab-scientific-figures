@@ -32,6 +32,7 @@ Then render only those figures:
 
 ```matlab
 sftRenderExamples(["heatmap", "double_triangle_heatmap"], "gallery", ["png", "svg"]);
+sftRenderMatches("matrix", "gallery", ["png", "svg"]);
 ```
 
 From a shell:
@@ -40,6 +41,7 @@ From a shell:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search matrix
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap double_triangle_heatmap
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match matrix
 ```
 
 ## Gallery
@@ -112,6 +114,7 @@ Or use the helper script:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search density
+SFT_OUTPUT_DIR=/tmp/sft-gallery MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match inset
 ```
 
 Check the examples without touching the committed gallery:
@@ -130,7 +133,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 - `sftValidateFigure` catches a few common figure problems before export.
 - `sftGalleryReport` batch-checks every gallery example.
 - `sftListTemplates` and `sftFindTemplates` help users discover examples.
-- `sftRenderExamples` renders all examples or a selected subset.
+- `sftRenderExamples` renders all examples or a selected subset by name.
+- `sftRenderMatches` renders every template that matches a search query.
 - `runAllExamples` remains as the full-gallery compatibility entry point.
 
 ## Documentation
@@ -196,7 +200,7 @@ is available. The project uses the `matlab-figures` preset from
 
 ## Project Status
 
-Current stable release: `v3.0.0`.
+Current stable release: `v3.1.0`.
 
 The project is intentionally focused. New templates should arrive with
 examples, deterministic data, documentation, and provenance checks.

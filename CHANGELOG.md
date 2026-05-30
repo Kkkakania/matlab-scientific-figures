@@ -4,6 +4,17 @@
 
 - No unreleased changes.
 
+## v3.1.0 - 2026-05-30
+
+- Add `sftRenderMatches` for rendering every template that matches a search
+  query.
+- Add `render_all.sh match <keyword>` for CLI query-based rendering.
+- Add `SFT_OUTPUT_DIR` support to `render_all.sh` so matched or selected
+  renders can go to a scratch directory.
+- Extend CLI checks to cover query-based rendering.
+- Document matched rendering in README, template reference, quality gates, and
+  MATLAB CLI guide.
+
 ## v3.0.0 - 2026-05-30
 
 - Add `sftListTemplates` for a user-facing table of public templates.
