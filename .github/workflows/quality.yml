@@ -56,6 +56,9 @@ jobs:
       - name: Check toolbox independence
         run: ./scripts/check_toolbox_independence.sh
 
+      - name: Check compatibility documentation
+        run: ./scripts/check_compatibility_docs.sh
+
       - name: Check timeout helper
         run: ./scripts/check_timeout_helper.sh
 

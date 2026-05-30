@@ -11,6 +11,11 @@ Processing Toolbox, Mapping Toolbox, or third-party plotting packages.
 - Older versions may work, but they are not part of the current verification
   loop.
 
+The R2020b recommendation is intentionally conservative. The current source
+uses modern base MATLAB features including `exportgraphics`, `tiledlayout` /
+`nexttile`, `jsonencode`, `datetime`, and string arrays. Do not lower the
+documented version target without testing the full gallery on that version.
+
 ## Shell Tools
 
 The helper scripts are Bash scripts. On Windows, use Git Bash, WSL, or call the
