@@ -19,6 +19,7 @@ run_step "API reference coverage" ./scripts/check_api_reference.sh
 run_step "template manifest schema" ./scripts/check_template_manifest_schema.sh
 run_step "template reference table" ./scripts/check_template_reference_table.sh
 run_step "tag reference" ./scripts/check_tag_reference.sh
+run_step "tag gallery" ./scripts/check_tag_gallery.sh
 run_step "examples README table" ./scripts/check_examples_readme_table.sh
 run_step "MATLAB help text" ./scripts/check_matlab_help.sh
 run_step "README gallery preview" ./scripts/check_readme_gallery.sh

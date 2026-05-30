@@ -39,6 +39,7 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | Template manifest schema | `./scripts/check_template_manifest_schema.sh` | JSON field, uniqueness, and referenced-file drift |
 | Template reference table | `./scripts/check_template_reference_table.sh` | Drift between manifest metadata and the template reference table |
 | Tag reference | `./scripts/check_tag_reference.sh` | Drift between manifest tags and tag-reference counts/examples |
+| Tag gallery | `./scripts/check_tag_gallery.sh` | Stale generated tag-gallery documentation |
 | Examples README table | `./scripts/check_examples_readme_table.sh` | Drift between manifest renderers and the examples README |
 | MATLAB help text | `./scripts/check_matlab_help.sh` | Public MATLAB functions missing a one-line help summary |
 | README gallery | `./scripts/check_readme_gallery.sh` | README gallery count or first-screen preview drift |

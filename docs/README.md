@@ -9,6 +9,7 @@ docs if you want to change the project.
 - [First-use test](first-use-test.md)
 - [Template reference](template-reference.md)
 - [Tag reference](tag-reference.md)
+- [Tag gallery](tag-gallery.md)
 - [API reference](api-reference.md)
 - [Template manifest JSON](template-manifest.json)
 - [Template manifest schema](template-manifest-schema.md)
