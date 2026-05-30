@@ -45,6 +45,7 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | README gallery | `./scripts/check_readme_gallery.sh` | README gallery count or first-screen preview drift |
 | Toolbox independence | `./scripts/check_toolbox_independence.sh` | Accidental toolbox-only calls in public MATLAB examples |
 | Compatibility docs | `./scripts/check_compatibility_docs.sh` | Missing notes for version-sensitive MATLAB APIs |
+| Color accessibility audit | `./scripts/check_color_accessibility_audit.sh` | Missing color-risk review rows for public templates |
 | Timeout helper | `./scripts/check_timeout_helper.sh` | Timeout wrapper regressions before MATLAB checks rely on it |
 | Forbidden files | `./scripts/check_forbidden_files.sh` | `.p`, `.fig`, `.mat`, Office files, PDFs, archives, raw/OCR/tmp folders |
 | Privacy scan | `./scripts/check_privacy.sh` | Emails, local paths, personal identifiers, and platform traces |

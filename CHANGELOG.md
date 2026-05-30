@@ -31,6 +31,7 @@
   follow-up issues.
 - Add generated tag-gallery documentation backed by the template manifest.
 - Expand MATLAB compatibility notes and guard them with a static check.
+- Add a low-noise color-accessibility audit coverage check.
 
 ## v3.5.0 - 2026-05-31
 

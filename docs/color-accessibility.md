@@ -64,3 +64,10 @@ size and answer:
 This repository keeps the first pass as a manual checklist. Automated color
 simulation or contrast scoring can be added later, but it should not introduce
 heavy dependencies or block valid scientific figures with noisy warnings.
+
+## Automated Coverage
+
+`./scripts/check_color_accessibility_audit.sh` checks that every template in the
+manifest has a row in the audit table above. This is intentionally a coverage
+check, not a visual-quality oracle. It keeps the manual review list current
+without pretending that a simple script can judge every scientific chart.

@@ -40,6 +40,7 @@ run_step "MATLAB help text" ./scripts/check_matlab_help.sh
 run_step "README gallery preview" ./scripts/check_readme_gallery.sh
 run_step "toolbox independence" ./scripts/check_toolbox_independence.sh
 run_step "compatibility docs" ./scripts/check_compatibility_docs.sh
+run_step "color accessibility audit" ./scripts/check_color_accessibility_audit.sh
 run_step "timeout helper" ./scripts/check_timeout_helper.sh
 run_step "forbidden file scan" ./scripts/check_forbidden_files.sh
 run_step "privacy scan" ./scripts/check_privacy.sh
