@@ -24,6 +24,7 @@
 - Add a manifest-backed check for tag-reference counts and examples.
 - Include the gallery reference in gallery metadata consistency checks while
   preserving its task-based grouping.
+- Add a manifest-backed check for `examples/README.md` output/function columns.
 
 ## v3.5.0 - 2026-05-31
 

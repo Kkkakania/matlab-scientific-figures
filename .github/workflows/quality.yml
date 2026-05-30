@@ -41,6 +41,9 @@ jobs:
       - name: Check tag reference
         run: ./scripts/check_tag_reference.sh
 
+      - name: Check examples README table
+        run: ./scripts/check_examples_readme_table.sh
+
       - name: Check MATLAB help text
         run: ./scripts/check_matlab_help.sh
 
