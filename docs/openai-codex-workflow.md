@@ -59,3 +59,20 @@ For each release:
 - Documentation consistency checks across examples, gallery reference, and chart
   guide entries.
 - Provenance and privacy review before major releases.
+
+## Evidence Boundary
+
+When this project is described in an application or public maintainer note, keep
+the claims tied to evidence that can be checked:
+
+- public repository and release links
+- committed gallery outputs and template manifest
+- local release-gate results
+- GitHub Actions workflow results
+- dogfooding of `matlab-figure-ci`
+- issue links for first-use feedback and template requests
+
+Do not present internal dogfooding as broad adoption. Do not invent stars,
+downloads, user counts, or guaranteed program eligibility. If the project is
+still early, say it is early and explain the maintenance system that already
+exists.
