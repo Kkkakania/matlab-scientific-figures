@@ -74,6 +74,8 @@ notes agree. It should not look maintained because tags are produced quickly.
    palette, export, and manifest system.
 3. Use the static preflight bundle for documentation and metadata pull
    requests.
-4. Keep `matlab-figure-ci` dogfooding aligned with the latest released tag.
-5. Prepare the next release only when examples, docs, gallery outputs, and
+4. Track the `v3.6.0 usability hardening` milestone for tag-subset docs,
+   color-accessibility checks, and compatibility evidence.
+5. Keep `matlab-figure-ci` dogfooding aligned with the latest released tag.
+6. Prepare the next release only when examples, docs, gallery outputs, and
    checks all move together.

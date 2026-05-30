@@ -112,6 +112,15 @@ Candidates that need careful design before inclusion:
 - A small number of domain examples that still use synthetic data.
 - PyPI or package-manager guidance if users ask for easier installation.
 
+Tracked candidates:
+
+- [#18](https://github.com/Kkkakania/matlab-scientific-figures/issues/18):
+  Generate tag-based gallery subset docs from the manifest.
+- [#19](https://github.com/Kkkakania/matlab-scientific-figures/issues/19):
+  Evaluate automated color-accessibility checks for gallery outputs.
+- [#20](https://github.com/Kkkakania/matlab-scientific-figures/issues/20):
+  Improve MATLAB version compatibility evidence.
+
 ## Versioning Pace
 
 The fast `v3.x` stabilization happened during the first public hardening pass.

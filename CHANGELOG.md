@@ -27,6 +27,8 @@
 - Add a manifest-backed check for `examples/README.md` output/function columns.
 - Clarify security reporting scope and add static preflight to the pull request
   checklist.
+- Create and document the `v3.6.0 usability hardening` milestone with concrete
+  follow-up issues.
 
 ## v3.5.0 - 2026-05-31
 
