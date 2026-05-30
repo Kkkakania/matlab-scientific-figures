@@ -71,6 +71,9 @@ gallery:
     - "zoomed_inset_line.png"
     - "zoomed_inset_line.svg"
 
+strict:
+  fail_on_warnings: false
+
 matlab:
   enabled: false
   bin_env: "MATLAB_BIN"
