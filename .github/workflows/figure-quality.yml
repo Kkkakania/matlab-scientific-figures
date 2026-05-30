@@ -17,7 +17,7 @@ jobs:
       - name: Install matlab-figure-ci
         run: |
           python -m pip install --upgrade pip
-          pip install git+https://github.com/Kkkakania/matlab-figure-ci.git@v1.0.0
+          pip install git+https://github.com/Kkkakania/matlab-figure-ci.git@v2.0.0
 
       - name: Run figure quality checks
         run: |
