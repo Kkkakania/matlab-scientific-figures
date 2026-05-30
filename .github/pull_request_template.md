@@ -15,6 +15,7 @@
 - [ ] Uses clean-room code and synthetic data
 - [ ] Adds or updates an example
 - [ ] Updates documentation when behavior changes
+- [ ] Runs `./scripts/check_static_quality.sh`
 - [ ] Runs `./scripts/check_release_ready.sh`
 - [ ] Runs MATLAB tests or explains why they were not run
 

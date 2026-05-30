@@ -25,6 +25,8 @@
 - Include the gallery reference in gallery metadata consistency checks while
   preserving its task-based grouping.
 - Add a manifest-backed check for `examples/README.md` output/function columns.
+- Clarify security reporting scope and add static preflight to the pull request
+  checklist.
 
 ## v3.5.0 - 2026-05-31
 
