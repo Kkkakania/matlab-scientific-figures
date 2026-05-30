@@ -1,6 +1,7 @@
 # MATLAB Scientific Figures
 
 [![Quality checks](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/quality.yml/badge.svg)](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/quality.yml)
+[![Figure quality](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/figure-quality.yml/badge.svg)](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/figure-quality.yml)
 [![Release](https://img.shields.io/github/v/release/Kkkakania/matlab-scientific-figures)](https://github.com/Kkkakania/matlab-scientific-figures/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
