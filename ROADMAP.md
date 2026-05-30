@@ -1,36 +1,76 @@
 # Roadmap
 
-This roadmap keeps the project focused on a small set of high-value scientific
-plotting workflows. New templates should improve communication quality, not
-just add visual variety.
+This roadmap tracks the current public shape of `matlab-scientific-figures`.
+It should agree with README, CHANGELOG, and GitHub releases.
 
-## v0.3.0: Paper-Ready Templates And Tutorials
+## Current State
 
-Planned additions:
+- Current stable release: `v3.2.0`.
+- Gallery size: 22 clean-room templates.
+- Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
+  privacy/provenance scans, and figure-quality CI.
+- Companion checker: `matlab-figure-ci` is dogfooded through
+  `.github/workflows/figure-quality.yml`.
 
-- Double-triangle heatmap for comparing two pairwise matrices.
-- Zoomed inset line plot for trend figures with one important interval.
-- CSV and Excel tutorial for using real tabular data.
-- Paper export tutorial for PNG, SVG, and PDF workflows.
-- Batch rendering tutorial for repeated experiment figures.
-- Cleaner README gallery preview for first-time users.
+## Completed Release Tracks
 
-Quality goals:
+### v0.3.0: Paper-Ready Templates And Tutorials
 
-- Each new template has deterministic synthetic data.
-- Each new template has PNG and SVG gallery output.
-- Each new template is referenced in the chart selection guide.
-- `runAllExamples` remains headless and script-friendly.
-- Documentation favors copyable workflows over broad claims.
+Delivered:
 
-## Later Candidates
+- Double-triangle heatmap.
+- Zoomed inset line plot.
+- CSV/Excel tutorial.
+- Paper export tutorial.
+- Batch rendering tutorial.
+- Cleaner README gallery preview.
+
+### v2.0.0: Registry And Selected Rendering
+
+Delivered:
+
+- `sftTemplateRegistry`.
+- `sftRenderExamples`.
+- Registry-backed shell rendering through `scripts/render_all.sh`.
+- Migration notes for the public API boundary.
+
+### v3.0.0: Maintenance And Usability
+
+Delivered:
+
+- `sftListTemplates`.
+- `sftFindTemplates`.
+- Template reference and gallery reference docs.
+- Release readiness gate.
+- Forbidden-file scanning.
+- Stronger issue, PR, contribution, and release workflows.
+
+### v3.1.0: Query-Based Rendering
+
+Delivered:
+
+- `sftRenderMatches`.
+- `render_all.sh match <keyword>`.
+- `SFT_OUTPUT_DIR` for scratch-directory renders.
+
+### v3.2.0: Machine-Readable Template Metadata
+
+Delivered:
+
+- `sftTemplateManifest`.
+- `sftWriteTemplateManifest`.
+- `docs/template-manifest.json`.
+- Manifest consistency checks in the MATLAB-enabled release gate.
+
+## Next Candidates
 
 Candidates that need careful design before inclusion:
 
-- Tag-based rendering for groups such as `matrix` or `density`.
-- Sankey-style flow diagram.
+- Generated Markdown table from `docs/template-manifest.json`.
+- Tag-based gallery subsets for docs pages.
 - Automated color accessibility checks.
-- 3D density scatter if a real use case needs depth.
+- A small number of domain examples that still use synthetic data.
+- PyPI or package-manager guidance if users ask for easier installation.
 
 ## Non-Goals
 
@@ -38,8 +78,9 @@ Candidates that need careful design before inclusion:
 - No private notes or unclear source files.
 - No large algorithm library inside this repository.
 - No template that cannot run without local dependencies.
+- No artificial usage, stars, comments, or adoption claims.
 
 ## Release Principle
 
 A release is ready only when examples, documentation, gallery outputs, privacy
-checks, provenance checks, and MATLAB tests all pass together.
+checks, provenance checks, MATLAB tests, and GitHub Actions pass together.
