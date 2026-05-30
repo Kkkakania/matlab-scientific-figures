@@ -8,6 +8,7 @@ docs if you want to change the project.
 - [Gallery reference](gallery-reference.md)
 - [First-use test](first-use-test.md)
 - [Template reference](template-reference.md)
+- [Tag reference](tag-reference.md)
 - [Template manifest JSON](template-manifest.json)
 - [Chart selection guide](chart-selection-guide.md)
 - [Use with your data](use-with-your-data.md)

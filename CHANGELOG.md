@@ -4,6 +4,8 @@
 
 - Add `sftListTags`, `sftFindTemplatesByTag`, `sftRenderTags`, and CLI
   `tags`/`tag` commands for tag-based gallery discovery and rendering.
+- Add a tag reference page for common template families and exact-tag
+  rendering.
 
 ## v3.5.0 - 2026-05-31
 
