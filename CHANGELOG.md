@@ -22,6 +22,8 @@
   citation, schema, help-text, and compatibility checks.
 - Add a manifest-backed check for the template reference table.
 - Add a manifest-backed check for tag-reference counts and examples.
+- Include the gallery reference in gallery metadata consistency checks while
+  preserving its task-based grouping.
 
 ## v3.5.0 - 2026-05-31
 
