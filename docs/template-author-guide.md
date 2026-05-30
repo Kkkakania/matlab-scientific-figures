@@ -24,11 +24,15 @@ For a new template named `example_name`:
 
 - Add or extend deterministic data in `src/sftExampleData.m`.
 - Add `examples/renderExampleName.m`.
-- Add the renderer to `src/runAllExamples.m`.
+- Add the renderer to `src/sftTemplateRegistry.m`.
 - Add `gallery/example_name.png`.
 - Add `gallery/example_name.svg`.
-- Update `README.md`, `examples/README.md`, and
-  `docs/chart-selection-guide.md`.
+- Update `README.md`, `examples/README.md`,
+  `docs/template-reference.md`, and `docs/chart-selection-guide.md`.
+- Update `scripts/check_gallery_outputs.sh` and `mfigci.yml`.
+
+`runAllExamples` and `sftRenderExamples` read from the registry, so the
+registry is the source of truth for public templates.
 
 ## 3. Keep Data Synthetic
 
@@ -85,7 +89,21 @@ disp(report)
 Then run:
 
 ```bash
+./scripts/check_release_ready.sh
+```
+
+If MATLAB is installed locally:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh
+```
+
+Or run the smaller checks while iterating:
+
+```bash
 ./scripts/check_gallery_outputs.sh
+./scripts/check_gallery_consistency.sh
+./scripts/check_forbidden_files.sh
 ./scripts/check_privacy.sh
 ./scripts/check_provenance.sh
 ```
@@ -108,9 +126,11 @@ data only.
 ## Pull Request Checklist
 
 - The chart has a clear task in `docs/chart-selection-guide.md`.
+- The template is listed in `src/sftTemplateRegistry.m`.
+- The template is listed in `docs/template-reference.md`.
 - The gallery includes PNG and SVG output.
 - Color choices have been reviewed with `docs/color-accessibility.md`.
-- `runAllExamples` renders the new template.
+- `sftRenderExamples("example_name")` renders the new template.
 - Tests pass.
 - Privacy and provenance checks pass.
 - Documentation explains when the template should be used.
