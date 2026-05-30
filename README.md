@@ -167,6 +167,7 @@ See [docs/README.md](docs/README.md) for the grouped documentation index.
 | [Gallery reference](docs/gallery-reference.md) | Pick a template by sight |
 | [Template reference](docs/template-reference.md) | List every template, renderer, task, and tag |
 | [Tag reference](docs/tag-reference.md) | Pick and render templates by exact tags |
+| [API reference](docs/api-reference.md) | Use the public MATLAB functions from scripts |
 | [Template manifest JSON](docs/template-manifest.json) | Machine-readable template metadata |
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
 | [Use with your data](docs/use-with-your-data.md) | Turn a gallery example into your own figure |

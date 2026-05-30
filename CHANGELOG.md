@@ -6,6 +6,8 @@
   `tags`/`tag` commands for tag-based gallery discovery and rendering.
 - Add a tag reference page for common template families and exact-tag
   rendering.
+- Add an API reference page for discovery, rendering, styling, export, and
+  maintainer helper functions.
 
 ## v3.5.0 - 2026-05-31
 
