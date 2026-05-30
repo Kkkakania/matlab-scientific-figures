@@ -175,6 +175,18 @@ verifyGreaterThan(testCase, strlength(data.beforeLabel), 0);
 verifyGreaterThan(testCase, strlength(data.afterLabel), 0);
 end
 
+function testUncertaintyFanDataHasOrderedBands(testCase)
+data = sftExampleData('uncertainty_fan_chart');
+
+verifyEqual(testCase, numel(data.x), numel(data.median));
+verifyEqual(testCase, numel(data.x), numel(data.p10));
+verifyEqual(testCase, numel(data.x), numel(data.p90));
+verifyTrue(testCase, all(data.p10 <= data.p25));
+verifyTrue(testCase, all(data.p25 <= data.median));
+verifyTrue(testCase, all(data.median <= data.p75));
+verifyTrue(testCase, all(data.p75 <= data.p90));
+end
+
 function testContourScatterDataHasDensePairedCoordinates(testCase)
 data = sftExampleData('contour_scatter');
 
@@ -188,13 +200,14 @@ function testTemplateRegistryDefinesGalleryExamples(testCase)
 registry = sftTemplateRegistry();
 names = string({registry.Name}).';
 
-verifyEqual(testCase, numel(registry), 25);
+verifyEqual(testCase, numel(registry), 26);
 verifyEqual(testCase, numel(unique(names)), numel(names));
 verifyTrue(testCase, any(names == "contour_scatter"));
 verifyTrue(testCase, any(names == "parallel_coordinates"));
 verifyTrue(testCase, any(names == "sankey_flow"));
 verifyTrue(testCase, any(names == "calendar_heatmap"));
 verifyTrue(testCase, any(names == "paired_slopegraph"));
+verifyTrue(testCase, any(names == "uncertainty_fan_chart"));
 verifyTrue(testCase, all(arrayfun(@(item) isa(item.Renderer, 'function_handle'), registry)));
 verifyTrue(testCase, all(arrayfun(@(item) strlength(item.Task) > 0, registry)));
 verifyTrue(testCase, all(arrayfun(@(item) ~isempty(item.Tags), registry)));
@@ -231,7 +244,7 @@ end
 function testTemplateManifestIncludesFilesAndTags(testCase)
 manifest = sftTemplateManifest();
 
-verifyEqual(testCase, numel(manifest), 25);
+verifyEqual(testCase, numel(manifest), 26);
 verifyTrue(testCase, isfield(manifest, 'Name'));
 verifyTrue(testCase, isfield(manifest, 'RendererName'));
 verifyTrue(testCase, isfield(manifest, 'ExampleFile'));

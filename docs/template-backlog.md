@@ -10,7 +10,7 @@ choice of chart type, but source files are not copied into the repo.
 
 ## Current Coverage
 
-The current gallery has 25 examples covering trends, uncertainty, dense
+The current gallery on `main` has 26 examples covering trends, uncertainty, dense
 x-y structure, grouped comparison, distributions, matrices, rankings,
 multivariate profiles, daily patterns, paired change, flow structure,
 multi-panel figures, and one 3D surface.
@@ -22,7 +22,7 @@ New work should improve real user workflows before adding more chart types.
 |---|---|
 | Time trend | `line_plot` |
 | Daily pattern | `calendar_heatmap` |
-| Uncertainty band | `confidence_interval` |
+| Uncertainty band | `confidence_interval`, `uncertainty_fan_chart` |
 | Dense x-y relationship | `density_scatter`, `contour_scatter` |
 | Method comparison | `grouped_bar`, `grouped_error_bar`, `butterfly_comparison` |
 | Paired change | `paired_slopegraph` |

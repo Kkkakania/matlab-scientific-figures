@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-- No changes yet.
+- Add a clean-room `uncertainty_fan_chart` template for widening forecast
+  intervals.
 
 ## v3.4.0 - 2026-05-31
 

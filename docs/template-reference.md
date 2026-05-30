@@ -32,6 +32,7 @@ sftWriteTemplateManifest()
 |---|---|---|---|
 | `line_plot` | `renderLinePlot` | Show time trend | `trend`, `line` |
 | `confidence_interval` | `renderConfidenceInterval` | Show uncertainty | `uncertainty`, `line` |
+| `uncertainty_fan_chart` | `renderUncertaintyFanChart` | Show widening forecast uncertainty | `uncertainty`, `forecast` |
 | `scatter_plot` | `renderScatterPlot` | Show grouped x-y relationship | `scatter`, `groups` |
 | `density_scatter` | `renderDensityScatter` | Show dense x-y relationship | `scatter`, `density` |
 | `contour_scatter` | `renderContourScatter` | Show local density structure | `scatter`, `density`, `contour` |

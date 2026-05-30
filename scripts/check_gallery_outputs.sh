@@ -7,6 +7,7 @@ GALLERY_DIR="$ROOT_DIR/gallery"
 expected=(
   line_plot
   confidence_interval
+  uncertainty_fan_chart
   scatter_plot
   density_scatter
   contour_scatter

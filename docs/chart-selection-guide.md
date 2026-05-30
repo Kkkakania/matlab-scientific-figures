@@ -6,6 +6,7 @@ Choose the figure by the communication task first, not by decoration.
 |---|---|---|
 | Show time trend | `line_plot` | One or more signals change over an ordered axis |
 | Show uncertainty | `confidence_interval` | Estimates need confidence bands or prediction ranges |
+| Show forecast uncertainty | `uncertainty_fan_chart` | Uncertainty widens over a forecast or scenario horizon |
 | Show signed change | `positive_negative_area` | Positive and negative deviations from a baseline both matter |
 | Show daily pattern | `calendar_heatmap` | Day-of-week and week-to-week changes both matter |
 | Show group relationship | `scatter_plot` | Points belong to categories or operating states |
@@ -58,6 +59,12 @@ Use `calendar_heatmap` when the date pattern is as important as the value
 itself. It works well for usage, quality, reliability, or activity measures
 where weekday/week structure should be visible. Avoid it for sparse event logs
 or when exact timestamps matter more than a compact daily overview.
+
+## Uncertainty Fan Charts
+
+Use `uncertainty_fan_chart` when the uncertainty range grows or changes across
+a horizon. It is a better fit than a single confidence band when the reader
+needs both a central trajectory and nested probability intervals.
 
 ## Butterfly Comparisons
 

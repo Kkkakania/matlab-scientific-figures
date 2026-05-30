@@ -29,6 +29,18 @@ switch kind
         data.upper = center + abs(spread);
         data.labels = ["Model A", "Model B", "Model C"];
 
+    case "uncertainty_fan_chart"
+        x = linspace(0, 24, 120);
+        median = 0.045 * x + 0.42 * sin(0.28 * x + 0.4);
+        innerSpread = 0.16 + 0.008 * x + 0.025 * sin(0.18 * x + 0.6);
+        outerSpread = 0.34 + 0.018 * x + 0.030 * cos(0.16 * x);
+        data.x = x;
+        data.median = median;
+        data.p25 = median - abs(innerSpread);
+        data.p75 = median + abs(innerSpread);
+        data.p10 = median - abs(outerSpread);
+        data.p90 = median + abs(outerSpread);
+
     case "scatter"
         n = 180;
         data.x = randn(n, 1);

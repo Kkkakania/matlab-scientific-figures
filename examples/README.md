@@ -26,6 +26,7 @@ The `Name` column is the value to pass into `sftRenderExamples` or
 |---|---|---|
 | `line_plot` | `renderLinePlot` | Show changes over an ordered axis |
 | `confidence_interval` | `renderConfidenceInterval` | Show uncertainty around an estimate |
+| `uncertainty_fan_chart` | `renderUncertaintyFanChart` | Show widening forecast uncertainty |
 | `scatter_plot` | `renderScatterPlot` | Show relationships across groups |
 | `density_scatter` | `renderDensityScatter` | Show dense point clouds without overplotting |
 | `contour_scatter` | `renderContourScatter` | Show dense point clouds with local density contours |

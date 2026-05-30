@@ -21,6 +21,7 @@ thumbnails.
 |---|---|---|
 | `line_plot` | Medium | Uses line color; labels and legend should remain visible. |
 | `confidence_interval` | Medium | Bands are color-coded; line identity should stay clear in legend. |
+| `uncertainty_fan_chart` | Low | Nested opacity, legend labels, and the median line carry the structure. |
 | `scatter_plot` | Medium | Group color carries meaning; marker overlap should be checked. |
 | `density_scatter` | Low | Sequential color is supported by density structure. |
 | `contour_scatter` | Low | Density color is reinforced by contour lines and overlaid points. |
