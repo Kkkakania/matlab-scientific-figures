@@ -46,6 +46,7 @@ Then check:
 - `README.md` current public release matches the tag.
 - `CHANGELOG.md` has a dated entry.
 - `ROADMAP.md` describes the current state, not old planned work.
+- `docs/release-cadence.md` points to the same current public release.
 - GitHub Actions pass on `main`.
 
 ## Maintainer Note
