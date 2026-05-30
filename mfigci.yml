@@ -1,0 +1,53 @@
+project:
+  name: matlab-scientific-figures
+
+scan:
+  include:
+    - "."
+  exclude:
+    - ".git"
+    - ".venv"
+    - "venv"
+    - "__pycache__"
+    - "dist"
+    - "build"
+    - ".pytest_cache"
+    - "scripts/check_privacy.sh"
+    - "scripts/check_provenance.sh"
+
+gallery:
+  path: "gallery"
+  allowed_extensions:
+    - ".png"
+    - ".svg"
+    - ".pdf"
+  min_size_bytes: 1024
+  expected:
+    - "box_jitter.png"
+    - "box_jitter.svg"
+    - "bubble_matrix.png"
+    - "bubble_matrix.svg"
+    - "confidence_interval.png"
+    - "confidence_interval.svg"
+    - "correlation_bubble.png"
+    - "correlation_bubble.svg"
+    - "density_scatter.png"
+    - "density_scatter.svg"
+    - "grouped_bar.png"
+    - "grouped_bar.svg"
+    - "heatmap.png"
+    - "heatmap.svg"
+    - "line_plot.png"
+    - "line_plot.svg"
+    - "lollipop_ranking.png"
+    - "lollipop_ranking.svg"
+    - "scatter_plot.png"
+    - "scatter_plot.svg"
+    - "surface_3d.png"
+    - "surface_3d.svg"
+
+matlab:
+  enabled: false
+  bin_env: "MATLAB_BIN"
+  fallback_bin: "matlab"
+  batch_command: "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('gallery')"

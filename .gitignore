@@ -10,5 +10,7 @@
 *.docx
 *.pdf~
 gallery/*.pdf
+mfigci-report.md
+.mfigci-results.json
 work/
 tmp/

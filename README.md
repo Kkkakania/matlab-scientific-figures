@@ -102,6 +102,17 @@ collections, or copied third-party templates. See
 Pass `["png", "pdf", "svg"]` to `runAllExamples` when local PDF exports are
 needed for papers or slides.
 
+## Figure Quality Checks
+
+This repository dogfoods
+[`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci), a small
+CLI/CI tool for MATLAB scientific figure repositories.
+
+The workflow checks that gallery outputs exist and are non-empty, risky binary
+or source files are not committed, privacy and provenance traces are flagged
+before release, and optional MATLAB batch rendering can be enabled when MATLAB
+is available.
+
 ## Requirements
 
 - MATLAB R2020b or newer is recommended.
