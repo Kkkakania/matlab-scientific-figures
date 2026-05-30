@@ -181,7 +181,7 @@ See [docs/README.md](docs/README.md) for the grouped documentation index.
 | [v2 migration notes](docs/v2-migration.md) | Move from direct renderer calls to the registry API |
 | [v3.0.0 maintenance report](docs/maintenance-report-v3.0.0.md) | Review the v3 maintenance and usability scope |
 
-## Copyright And Provenance
+## License And Provenance
 
 This repository uses synthetic data and original example code. It does not ship
 private archives, encrypted MATLAB files, article packs, journal image
