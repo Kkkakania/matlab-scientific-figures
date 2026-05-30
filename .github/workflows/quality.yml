@@ -38,6 +38,9 @@ jobs:
       - name: Check template reference table
         run: ./scripts/check_template_reference_table.sh
 
+      - name: Check tag reference
+        run: ./scripts/check_tag_reference.sh
+
       - name: Check MATLAB help text
         run: ./scripts/check_matlab_help.sh
 

@@ -21,6 +21,7 @@
 - Refresh maintainer dashboard and roadmap status for the new static,
   citation, schema, help-text, and compatibility checks.
 - Add a manifest-backed check for the template reference table.
+- Add a manifest-backed check for tag-reference counts and examples.
 
 ## v3.5.0 - 2026-05-31
 
