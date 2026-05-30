@@ -19,6 +19,7 @@ renderer in `examples/` and a name accepted by `sftRenderExamples`.
 | Template | Preview | Use When |
 |---|---|---|
 | `scatter_plot` | <img src="../gallery/scatter_plot.png" width="220" alt="Scatter plot"> | Groups need a simple x-y relationship |
+| `ternary_scatter` | <img src="../gallery/ternary_scatter.png" width="220" alt="Ternary scatter"> | Three components sum to one composition |
 | `density_scatter` | <img src="../gallery/density_scatter.png" width="220" alt="Density scatter"> | Many points overlap |
 | `contour_scatter` | <img src="../gallery/contour_scatter.png" width="220" alt="Contour scatter"> | Local density shape matters as much as points |
 

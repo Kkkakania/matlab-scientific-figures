@@ -4,6 +4,7 @@
 
 - Add a clean-room `uncertainty_fan_chart` template for widening forecast
   intervals.
+- Add a clean-room `ternary_scatter` template for three-part compositions.
 
 ## v3.4.0 - 2026-05-31
 

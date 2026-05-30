@@ -10,6 +10,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show signed change | `positive_negative_area` | Positive and negative deviations from a baseline both matter |
 | Show daily pattern | `calendar_heatmap` | Day-of-week and week-to-week changes both matter |
 | Show group relationship | `scatter_plot` | Points belong to categories or operating states |
+| Show three-part composition | `ternary_scatter` | Three components sum to a whole for each observation |
 | Show dense relationship | `density_scatter` | Many points overlap and local density matters |
 | Show local density structure | `contour_scatter` | Points matter, but clusters and ridges also matter |
 | Compare methods | `grouped_bar` | A few methods are compared across a few metrics |
@@ -65,6 +66,13 @@ or when exact timestamps matter more than a compact daily overview.
 Use `uncertainty_fan_chart` when the uncertainty range grows or changes across
 a horizon. It is a better fit than a single confidence band when the reader
 needs both a central trajectory and nested probability intervals.
+
+## Ternary Scatter
+
+Use `ternary_scatter` when each observation is a composition of three parts
+that sum to one. It is useful for mixtures, portfolios, operating modes, or
+energy shares. Do not use it when the three variables are independent; a
+regular scatter or parallel-coordinates view will be easier to read.
 
 ## Butterfly Comparisons
 

@@ -37,6 +37,8 @@ gallery:
     - "confidence_interval.svg"
     - "uncertainty_fan_chart.png"
     - "uncertainty_fan_chart.svg"
+    - "ternary_scatter.png"
+    - "ternary_scatter.svg"
     - "contour_scatter.png"
     - "contour_scatter.svg"
     - "correlation_bubble.png"

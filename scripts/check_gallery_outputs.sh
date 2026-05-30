@@ -9,6 +9,7 @@ expected=(
   confidence_interval
   uncertainty_fan_chart
   scatter_plot
+  ternary_scatter
   density_scatter
   contour_scatter
   grouped_bar

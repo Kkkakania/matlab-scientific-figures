@@ -48,7 +48,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ma
 
 ## Gallery
 
-The gallery on `main` contains 26 examples. These 8 are a quick scan of the
+The gallery on `main` contains 27 examples. These 8 are a quick scan of the
 range.
 
 <table>
@@ -61,7 +61,7 @@ range.
   <tr>
     <td><img src="gallery/paired_slopegraph.png" width="210" alt="Paired slopegraph"><br>Paired slopegraph</td>
     <td><img src="gallery/uncertainty_fan_chart.png" width="210" alt="Uncertainty fan chart"><br>Uncertainty fan chart</td>
-    <td><img src="gallery/calendar_heatmap.png" width="210" alt="Calendar heatmap"><br>Calendar heatmap</td>
+    <td><img src="gallery/ternary_scatter.png" width="210" alt="Ternary scatter"><br>Ternary scatter</td>
     <td><img src="gallery/double_triangle_heatmap.png" width="210" alt="Double-triangle heatmap"><br>Double-triangle heatmap</td>
   </tr>
 </table>
@@ -69,12 +69,13 @@ range.
 Run `runAllExamples` to regenerate the full gallery locally.
 
 The full gallery includes line plots, confidence intervals, uncertainty fan
-charts, scatter plots, density scatter plots, contour scatter plots, grouped
-bars, error bars, butterfly comparisons, paired slopegraphs, waffle charts,
-ridgeline plots, signed area charts, heatmaps, double-triangle heatmaps, zoomed
-inset lines, correlation bubbles, bubble matrices, calendar heatmaps, box plots
-with jittered observations, radar charts, lollipop rankings, Sankey-style
-flows, multi-panel layouts, parallel coordinates, and 3D surfaces.
+charts, scatter plots, ternary scatter plots, density scatter plots, contour
+scatter plots, grouped bars, error bars, butterfly comparisons, paired
+slopegraphs, waffle charts, ridgeline plots, signed area charts, heatmaps,
+double-triangle heatmaps, zoomed inset lines, correlation bubbles, bubble
+matrices, calendar heatmaps, box plots with jittered observations, radar
+charts, lollipop rankings, Sankey-style flows, multi-panel layouts, parallel
+coordinates, and 3D surfaces.
 
 ## Quick Start
 

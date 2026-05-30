@@ -7,7 +7,7 @@ together.
 ## Current State
 
 - `v3.4.0` is the current release.
-- The gallery has 26 examples on `main`.
+- The gallery has 27 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 - Future tags should follow `docs/release-cadence.md`; small maintenance
   changes can land on `main` without a release.

@@ -47,6 +47,26 @@ switch kind
         data.y = 0.65 * data.x + 0.55 * randn(n, 1);
         data.group = categorical(repmat(["A"; "B"; "C"], n / 3, 1));
 
+    case "ternary_scatter"
+        groupNames = ["Balanced"; "A-rich"; "C-rich"];
+        samplesPerGroup = 30;
+        weights = [
+            1.0 1.0 1.0
+            2.3 0.8 0.9
+            0.8 0.9 2.2
+        ];
+        values = zeros(numel(groupNames) * samplesPerGroup, 3);
+        groups = strings(numel(groupNames) * samplesPerGroup, 1);
+        for k = 1:numel(groupNames)
+            rows = (1:samplesPerGroup) + (k - 1) * samplesPerGroup;
+            raw = -log(max(rand(samplesPerGroup, 3), eps)) .* weights(k, :);
+            values(rows, :) = raw ./ sum(raw, 2);
+            groups(rows) = groupNames(k);
+        end
+        data.table = table(values(:, 1), values(:, 2), values(:, 3), ...
+            categorical(groups), 'VariableNames', {'A', 'B', 'C', 'Group'});
+        data.componentLabels = ["Component A", "Component B", "Component C"];
+
     case "density_scatter"
         n = 520;
         x1 = randn(round(n * 0.65), 1) * 0.65 - 0.4;
