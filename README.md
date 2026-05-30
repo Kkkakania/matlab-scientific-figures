@@ -118,6 +118,10 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh se
 SFT_OUTPUT_DIR=/tmp/sft-gallery MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match inset
 ```
 
+Use [MATLAB CLI guide](docs/matlab-cli-guide.md) for Linux and Windows
+executable paths. The helper scripts expect Bash; Windows users can use Git
+Bash/WSL or call MATLAB directly with `-batch`.
+
 Check the examples without touching the committed gallery:
 
 ```bash
@@ -137,6 +141,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 - `sftRenderExamples` renders all examples or a selected subset by name.
 - `sftRenderMatches` renders every template that matches a search query.
 - `sftTemplateManifest` exports machine-readable metadata for tools.
+- `sftWriteTemplateManifest` writes the metadata JSON used by docs and checks.
 - `runAllExamples` remains as the full-gallery compatibility entry point.
 
 ## Documentation

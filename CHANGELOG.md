@@ -22,6 +22,8 @@
   and completed workflow foundations.
 - Set explicit read-only GitHub Actions permissions for repository quality
   workflows.
+- Document Linux and Windows MATLAB CLI executable paths and clarify that the
+  helper scripts expect a Bash-compatible shell.
 
 ## v3.2.0 - 2026-05-30
 

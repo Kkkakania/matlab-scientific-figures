@@ -4,12 +4,29 @@ The examples can run from a terminal. That is useful when you need to rebuild a
 gallery, render figures for a paper, or check a pull request without opening the
 MATLAB desktop.
 
-## macOS R2025a
+## MATLAB Executable Paths
 
 Use the full MATLAB path if `matlab` is not on `PATH`:
 
 ```bash
 /Applications/MATLAB_R2025a.app/bin/matlab -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('gallery')"
+```
+
+Common executable locations:
+
+| Platform | Example `MATLAB_BIN` |
+|---|---|
+| macOS | `/Applications/MATLAB_R2025a.app/bin/matlab` |
+| Linux | `/usr/local/MATLAB/R2025a/bin/matlab` |
+| Windows PowerShell | `C:\Program Files\MATLAB\R2025a\bin\matlab.exe` |
+
+On Windows, run the helper scripts from Git Bash, WSL, or another Bash-compatible
+shell. From PowerShell, call MATLAB directly with `-batch`.
+
+PowerShell example:
+
+```powershell
+& "C:\Program Files\MATLAB\R2025a\bin\matlab.exe" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('gallery')"
 ```
 
 Or run:
@@ -69,7 +86,8 @@ the exact name.
 | Symptom | Likely Cause | Fix |
 |---|---|---|
 | `matlab: command not found` | MATLAB is not on `PATH` | Set `MATLAB_BIN` to the full executable path |
-| `MATLAB executable not found` | `MATLAB_BIN` points to the wrong file | Check the installed MATLAB version under `/Applications` |
+| `MATLAB executable not found` | `MATLAB_BIN` points to the wrong file | Check the installed MATLAB version and platform-specific install path |
+| Bash script does not run on Windows | PowerShell is not a Bash shell | Use Git Bash/WSL for `scripts/*.sh`, or call MATLAB directly with `-batch` |
 | `Unknown template(s)` | The name passed to `render_all.sh` is not in the registry | Run `./scripts/render_all.sh list` and copy from the `Name` column |
 | `Invalid search keyword` | A shell search term contains unsupported punctuation | Use plain words such as `matrix`, `density`, or `inset` |
 | `No templates matched` | The `match` query did not find a name, task, or tag | Run `./scripts/render_all.sh search <keyword>` first |
