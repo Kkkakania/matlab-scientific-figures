@@ -17,6 +17,9 @@ jobs:
       - name: Verify gallery metadata is consistent
         run: ./scripts/check_gallery_consistency.sh
 
+      - name: Verify release metadata is consistent
+        run: ./scripts/check_version_consistency.sh
+
       - name: Check documentation links
         run: ./scripts/check_docs_links.sh
 

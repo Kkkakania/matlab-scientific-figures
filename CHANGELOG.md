@@ -7,6 +7,8 @@
 - Wire documentation link checks into the release gate and GitHub Actions.
 - Add release cadence guidance so future tags move more slowly after the first
   stabilization day.
+- Add a version consistency check for README, ROADMAP, version plan, and
+  changelog release metadata.
 
 ## v3.2.0 - 2026-05-30
 
