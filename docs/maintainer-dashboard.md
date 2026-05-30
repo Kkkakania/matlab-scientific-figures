@@ -21,10 +21,14 @@ scope, and where feedback should go.
 - Figure repository checks run through `.github/workflows/figure-quality.yml`.
 - Local release checks are documented in
   [Quality gates](quality-gates.md) and [Release checklist](release-checklist.md).
+- Fast non-MATLAB contributor checks are documented in
+  [Local checks](local-checks.md).
 - MATLAB commands use timeout guards in helper scripts so failed local runs do
   not linger in the background.
 - Privacy, provenance, forbidden-file, documentation-link, gallery, and
   template-manifest checks are part of the maintenance workflow.
+- Citation metadata, API reference coverage, MATLAB help summaries, manifest
+  schema, and toolbox-independence checks are also guarded.
 
 ## Feedback Intake
 
@@ -35,6 +39,8 @@ Use the issue templates for focused feedback:
 - `First-use feedback`: fresh-clone testing from the first-use checklist.
 - `Feature request`: workflow, API, documentation, or quality-gate
   improvements.
+- `Quality or compatibility check`: CI, provenance, privacy, compatibility, or
+  release-gate improvements.
 
 Keep reports synthetic and reproducible. Do not attach private data, copied
 journal figures, third-party plotting files, or source packs.
@@ -58,12 +64,16 @@ notes agree. It should not look maintained because tags are produced quickly.
 - No claims about broad adoption, downloads, stars, or guaranteed external
   benefit-program approval.
 - No mandatory MATLAB dependency for CI checks that can run without MATLAB.
+- No hidden toolbox dependency for public gallery examples unless documented and
+  deliberately accepted.
 
 ## Next Maintenance Moves
 
 1. Collect first-use feedback from a fresh clone.
 2. Prioritize one or two template requests that reuse the existing theme,
    palette, export, and manifest system.
-3. Keep `matlab-figure-ci` dogfooding aligned with the latest released tag.
-4. Prepare the next release only when examples, docs, gallery outputs, and
+3. Use the static preflight bundle for documentation and metadata pull
+   requests.
+4. Keep `matlab-figure-ci` dogfooding aligned with the latest released tag.
+5. Prepare the next release only when examples, docs, gallery outputs, and
    checks all move together.

@@ -18,6 +18,8 @@
 - Add a non-MATLAB static quality bundle for contributor preflight checks.
 - Add focused GitHub labels and align issue templates with template,
   first-use, provenance, CI, and compatibility triage.
+- Refresh maintainer dashboard and roadmap status for the new static,
+  citation, schema, help-text, and compatibility checks.
 
 ## v3.5.0 - 2026-05-31
 

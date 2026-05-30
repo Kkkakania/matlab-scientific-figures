@@ -11,7 +11,10 @@ It should agree with README, CHANGELOG, and GitHub releases.
 - Gallery size on `main`: 30 clean-room templates. The current public release
   `v3.5.0` shipped 30 templates.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
-  privacy/provenance scans, and figure-quality CI.
+  citation metadata, privacy/provenance scans, static contributor preflight,
+  first-use smoke test, and figure-quality CI.
+- Current `main` also guards API reference coverage, MATLAB help summaries,
+  manifest schema, toolbox independence, and README gallery-preview drift.
 - Companion checker: `matlab-figure-ci` is dogfooded through
   `.github/workflows/figure-quality.yml`.
 
@@ -106,6 +109,7 @@ Candidates that need careful design before inclusion:
 - Generated Markdown table from `docs/template-manifest.json`.
 - Generated docs pages from tag-based gallery subsets.
 - Automated color accessibility checks.
+- Optional local check for MATLAB version compatibility.
 - A small number of domain examples that still use synthetic data.
 - PyPI or package-manager guidance if users ask for easier installation.
 
