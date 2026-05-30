@@ -164,11 +164,11 @@ See [docs/README.md](docs/README.md) for the grouped documentation index.
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
 | [Release checklist](docs/release-checklist.md) | Check a release before tagging |
 | [Release cadence](docs/release-cadence.md) | Keep versioning deliberate and slow after stabilization |
-| [v0.5.0 maintenance report](docs/maintenance-report-v0.5.0.md) | See the current maintenance state |
+| [v0.5.0 maintenance report](docs/maintenance-report-v0.5.0.md) | Review the early hardening snapshot |
 | [Provenance policy](docs/provenance-policy.md) | Keep public releases clean and auditable |
 | [Maintainer workflow](docs/openai-codex-workflow.md) | Review PRs, issues, and releases consistently |
 | [Roadmap](ROADMAP.md) | Track planned template and workflow milestones |
-| [Version plan](docs/version-plan.md) | Understand the v0.5.0 and v2.0.0 release path |
+| [Version plan](docs/version-plan.md) | Understand release milestones and cadence |
 | [v2 API design](docs/v2-api-design.md) | See the registry and selected-rendering API |
 | [v2 migration notes](docs/v2-migration.md) | Move from direct renderer calls to the registry API |
 | [v3.0.0 maintenance report](docs/maintenance-report-v3.0.0.md) | Review the v3 maintenance and usability scope |
