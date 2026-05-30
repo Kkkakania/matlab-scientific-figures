@@ -34,6 +34,7 @@ docs if you want to change the project.
 - [Template backlog](template-backlog.md)
 - [Release checklist](release-checklist.md)
 - [Release cadence](release-cadence.md)
+- [Maintainer dashboard](maintainer-dashboard.md)
 - [Provenance policy](provenance-policy.md)
 - [Maintainer workflow](openai-codex-workflow.md)
 - [Version plan](version-plan.md)

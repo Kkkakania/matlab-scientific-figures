@@ -164,6 +164,7 @@ See [docs/README.md](docs/README.md) for the grouped documentation index.
 | [Figure quality checklist](docs/figure-quality-checklist.md) | Review a figure before release |
 | [Color accessibility](docs/color-accessibility.md) | Check hue, contrast, and grayscale risks |
 | [Quality gates](docs/quality-gates.md) | Understand local and CI checks |
+| [Maintainer dashboard](docs/maintainer-dashboard.md) | See current release, CI, feedback, and maintenance status |
 | [Template author guide](docs/template-author-guide.md) | Add a new clean-room example |
 | [Template review checklist](docs/template-review-checklist.md) | Review a template before merge |
 | [Template backlog](docs/template-backlog.md) | See which high-value charts are planned |
