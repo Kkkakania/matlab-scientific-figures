@@ -7,6 +7,16 @@ trap 'rm -f "$TMP_LINKS"' EXIT
 
 found=0
 
+require_link() {
+  local source_file="$1"
+  local target="$2"
+
+  if ! grep -Fq "($target)" "$ROOT_DIR/$source_file"; then
+    echo "Missing required documentation link in $source_file: $target" >&2
+    found=1
+  fi
+}
+
 check_target() {
   local source_file="$1"
   local raw_target="$2"
@@ -46,6 +56,8 @@ while IFS= read -r md_file; do
     check_target "$md_file" "$target"
   done < "$TMP_LINKS"
 done < <(find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type f -name '*.md' -print)
+
+require_link "docs/README.md" "../ROADMAP.md"
 
 if [[ "$found" -ne 0 ]]; then
   exit 1

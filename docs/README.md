@@ -37,6 +37,7 @@ docs if you want to change the project.
 - [Maintainer dashboard](maintainer-dashboard.md)
 - [Provenance policy](provenance-policy.md)
 - [Maintainer workflow](openai-codex-workflow.md)
+- [Roadmap](../ROADMAP.md)
 - [Version plan](version-plan.md)
 
 ## API Notes

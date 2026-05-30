@@ -20,6 +20,8 @@
 - Add a README badge for the dogfooded figure-quality workflow.
 - Clarify the maintainer workflow evidence boundary for public applications and
   API credit planning.
+- Add the roadmap to the documentation index and require that entry in the
+  documentation link check.
 - Rename the README provenance section to reduce expected scan noise.
 - Exclude the reviewed project `LICENSE` file from `mfigci` scans so reports
   focus on unexpected provenance findings.
