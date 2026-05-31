@@ -90,6 +90,7 @@ close(fig);
 | `sftPlotRidgeline(ax, values, labels, theme)` | Draw compact stacked density profiles for groups. |
 | `sftPlotPositiveNegativeArea(ax, x, y, baseline, theme)` | Draw signed deviations around a baseline. |
 | `sftPlotZoomedInsetLine(fig, x, y, zoomRange, theme)` | Draw a full trend with a detailed inset window. |
+| `sftPlotCalendarHeatmap(ax, values, weekLabels, dayLabels, theme)` | Draw daily values in a day-by-week heatmap. |
 
 Example:
 
@@ -298,6 +299,17 @@ y = 0.05 * x + sin(0.4 * x) + exp(-0.5 * ((x - 12) / 0.6) .^ 2);
 fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
 sftPlotZoomedInsetLine(fig, x, y, [10.8 13.6], theme);
 sftExport(fig, "gallery/my_zoomed_inset_line", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13.5 7.5], "FontSize", 9);
+values = reshape(1:28, 7, 4);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotCalendarHeatmap(ax, values, "W" + string(1:4), ...
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], theme);
+sftExport(fig, "gallery/my_calendar_heatmap", ["png", "svg"]);
 close(fig);
 ```
 

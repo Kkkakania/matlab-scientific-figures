@@ -753,6 +753,34 @@ verifyError(testCase, @() sftPlotZoomedInsetLine(fig, 1:5, 1:5, [7 8], ...
     sftTheme()), 'sft:InvalidRange');
 end
 
+function testPlotCalendarHeatmapDrawsDailyGrid(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, imageHandle, colorbarHandle] = sftPlotCalendarHeatmap(ax, ...
+    reshape(1:14, 7, 2), ["W1", "W2"], ...
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(imageHandle, 'image'));
+verifyTrue(testCase, isgraphics(colorbarHandle));
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["W1"; "W2"]);
+verifyEqual(testCase, string(ax.YTickLabel(:)), ...
+    ["Mon"; "Tue"; "Wed"; "Thu"; "Fri"; "Sat"; "Sun"]);
+verifyEqual(testCase, string(ax.XLabel.String), "Week");
+end
+
+function testPlotCalendarHeatmapRejectsLabelMismatch(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotCalendarHeatmap(ax, rand(7, 2), ...
+    ["W1", "W2", "W3"], ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], ...
+    sftTheme()), 'sft:InvalidLabels');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

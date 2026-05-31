@@ -258,6 +258,17 @@ sftExport(fig, "outputs/my_zoomed_inset_line", ["png", "svg"]);
 close(fig);
 ```
 
+For daily values arranged by weekday and week, use a calendar heatmap:
+
+```matlab
+theme = sftTheme("FigureSize", [13.5 7.5], "FontSize", 9);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotCalendarHeatmap(ax, dayByWeekValues, weekLabels, dayLabels, theme);
+sftExport(fig, "outputs/my_calendar_heatmap", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
