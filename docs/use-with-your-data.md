@@ -187,6 +187,18 @@ sftExport(fig, "outputs/my_butterfly_comparison", ["png", "svg"]);
 close(fig);
 ```
 
+For matched items measured before and after a change, use a paired slopegraph:
+
+```matlab
+theme = sftTheme("FigureSize", [16 9.2], "FontSize", 8);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotPairedSlopegraph(ax, beforeValues, afterValues, itemLabels, ...
+    ["Before", "After"], theme);
+sftExport(fig, "outputs/my_paired_slopegraph", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

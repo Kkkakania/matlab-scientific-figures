@@ -576,6 +576,35 @@ verifyError(testCase, @() sftPlotButterflyComparison(ax, [1 -2], [1 2], ...
     ["A", "B"], ["Left", "Right"], sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotPairedSlopegraphSortsByBeforeValues(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, lineHandles, pointHandles, labelHandles, order] = sftPlotPairedSlopegraph(ax, ...
+    [0.8 0.4 0.6], [0.7 0.5 0.9], ["High", "Low", "Mid"], ...
+    ["Before", "After"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, order, [2; 3; 1]);
+verifyEqual(testCase, numel(lineHandles), 3);
+verifyEqual(testCase, numel(pointHandles), 3);
+verifyEqual(testCase, numel(labelHandles), 6);
+verifyTrue(testCase, all(isgraphics(lineHandles, 'line')));
+verifyTrue(testCase, all(isgraphics(pointHandles, 'scatter')));
+verifyTrue(testCase, all(isgraphics(labelHandles, 'text')));
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["Before"; "After"]);
+end
+
+function testPlotPairedSlopegraphRejectsLengthMismatch(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotPairedSlopegraph(ax, [1 2], 1, ...
+    ["A", "B"], ["Before", "After"], sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

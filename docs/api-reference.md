@@ -84,6 +84,7 @@ close(fig);
 | `sftPlotLollipopRanking(ax, labels, values, theme)` | Draw a sorted lollipop ranking chart. |
 | `sftPlotWaffleChart(ax, counts, labels, theme)` | Draw a 100-cell composition chart. |
 | `sftPlotButterflyComparison(ax, leftValues, rightValues, labels, sideLabels, theme)` | Draw mirrored horizontal bars around a shared baseline. |
+| `sftPlotPairedSlopegraph(ax, before, after, labels, conditionLabels, theme)` | Draw paired before-after changes for matched items. |
 
 Example:
 
@@ -229,6 +230,16 @@ ax = axes(fig);
 sftPlotButterflyComparison(ax, [38 31 28], [34 36 30], ...
     ["North", "East", "South"], ["Scenario A", "Scenario B"], theme);
 sftExport(fig, "gallery/my_butterfly_comparison", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [16 9.2], "FontSize", 8);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotPairedSlopegraph(ax, [0.62 0.71 0.78], [0.78 0.83 0.64], ...
+    ["Efficiency", "Reliability", "Response time"], ["Baseline", "Updated"], theme);
+sftExport(fig, "gallery/my_paired_slopegraph", ["png", "svg"]);
 close(fig);
 ```
 
