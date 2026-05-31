@@ -89,6 +89,7 @@ close(fig);
 | `sftPlotParallelCoordinates(ax, values, features, groups, theme)` | Draw normalized multivariate profiles by group. |
 | `sftPlotRidgeline(ax, values, labels, theme)` | Draw compact stacked density profiles for groups. |
 | `sftPlotPositiveNegativeArea(ax, x, y, baseline, theme)` | Draw signed deviations around a baseline. |
+| `sftPlotZoomedInsetLine(fig, x, y, zoomRange, theme)` | Draw a full trend with a detailed inset window. |
 
 Example:
 
@@ -287,6 +288,16 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotPositiveNegativeArea(ax, x, y, 0, theme);
 sftExport(fig, "gallery/my_positive_negative_area", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [14 9.3]);
+x = linspace(0, 24, 260);
+y = 0.05 * x + sin(0.4 * x) + exp(-0.5 * ((x - 12) / 0.6) .^ 2);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+sftPlotZoomedInsetLine(fig, x, y, [10.8 13.6], theme);
+sftExport(fig, "gallery/my_zoomed_inset_line", ["png", "svg"]);
 close(fig);
 ```
 

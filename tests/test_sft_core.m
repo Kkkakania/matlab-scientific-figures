@@ -727,6 +727,32 @@ verifyError(testCase, @() sftPlotPositiveNegativeArea(ax, 1:3, 1:2, 0, ...
     sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotZoomedInsetLineDrawsMainAndInsetAxes(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+
+[mainAx, insetAx, handles] = sftPlotZoomedInsetLine(fig, ...
+    1:10, [1 2 3 5 8 13 8 5 3 2], [4 7], sftTheme());
+
+verifyTrue(testCase, isgraphics(mainAx, 'axes'));
+verifyTrue(testCase, isgraphics(insetAx, 'axes'));
+verifyTrue(testCase, isgraphics(handles.highlightPatch, 'patch'));
+verifyTrue(testCase, isgraphics(handles.fullLine, 'line'));
+verifyTrue(testCase, isgraphics(handles.zoomLine, 'line'));
+verifyTrue(testCase, isgraphics(handles.insetLine, 'line'));
+verifyTrue(testCase, isgraphics(handles.insetPoints, 'scatter'));
+verifyEqual(testCase, insetAx.XLim, [4 7]);
+verifyEqual(testCase, string(mainAx.XLabel.String), "Time");
+end
+
+function testPlotZoomedInsetLineRejectsEmptyZoomRange(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+
+verifyError(testCase, @() sftPlotZoomedInsetLine(fig, 1:5, 1:5, [7 8], ...
+    sftTheme()), 'sft:InvalidRange');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

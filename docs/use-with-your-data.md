@@ -247,6 +247,17 @@ sftExport(fig, "outputs/my_positive_negative_area", ["png", "svg"]);
 close(fig);
 ```
 
+For a long trend with one interval that needs close inspection, use a zoomed
+inset line chart:
+
+```matlab
+theme = sftTheme("FigureSize", [14 9.3]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+sftPlotZoomedInsetLine(fig, timeValues, signalValues, zoomRange, theme);
+sftExport(fig, "outputs/my_zoomed_inset_line", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
