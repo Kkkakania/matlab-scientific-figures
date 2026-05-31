@@ -11,6 +11,21 @@ Each example is meant to be copied: synthetic data in, publication-style PNG,
 SVG, or PDF out. No private source packs, no journal screenshots, no hidden
 helper archive.
 
+## Project Ecosystem
+
+This repository is the main gallery in a small MATLAB scientific-figure
+tooling ecosystem:
+
+| Repository | Role |
+|---|---|
+| [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | Main clean-room MATLAB gallery, examples, themes, export helpers, and documentation. |
+| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | Companion CLI/CI quality gate used to check gallery outputs, provenance, privacy, and risky files. |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | Agent Skill for choosing and rendering MATLAB figures from user CSV, Excel, or MAT data. |
+
+The repositories are maintained together, but each has a separate scope:
+templates live here, automated quality checks live in `matlab-figure-ci`, and
+agent-facing plotting workflows live in `matlab-plotting-skill`.
+
 Current public release: `v3.5.0`. This is still an early public project: the
 gallery and CLI are usable, but adoption claims should stay conservative until
 more external feedback arrives. The fast early version jumps mark API and
