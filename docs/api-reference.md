@@ -76,6 +76,7 @@ close(fig);
 | `sftPlotConfidenceBand(ax, x, center, lower, upper, labels, theme)` | Draw line series with shaded uncertainty bands. |
 | `sftPlotUncertaintyFan(ax, x, medianValue, p10, p25, p75, p90, theme)` | Draw nested percentile bands around a median trend. |
 | `sftPlotGroupedScatter(ax, x, y, groups, theme)` | Draw a grouped x-y scatter plot into an existing axes. |
+| `sftPlotTernaryScatter(ax, compositions, groups, componentLabels, theme)` | Draw grouped three-part compositions on a ternary frame. |
 | `sftPlotDensityScatter(ax, x, y, bins, theme)` | Draw a density-colored x-y scatter plot for large point clouds. |
 | `sftPlotContourScatter(ax, x, y, bins, theme)` | Draw density contours with overlaid scatter points. |
 | `sftPlotBlandAltman(ax, methodA, methodB, theme)` | Draw method agreement with bias and 95% limits of agreement. |
@@ -159,6 +160,17 @@ xlabel(ax, "Feature X");
 ylabel(ax, "Feature Y");
 title(ax, "Grouped Relationship");
 sftExport(fig, "gallery/my_grouped_scatter", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+compositions = [0.35 0.40 0.25; 0.58 0.22 0.20; 0.20 0.26 0.54];
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotTernaryScatter(ax, compositions, ["Balanced", "A-rich", "C-rich"], ...
+    ["Component A", "Component B", "Component C"], theme);
+sftExport(fig, "gallery/my_ternary_scatter", ["png", "svg"]);
 close(fig);
 ```
 

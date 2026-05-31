@@ -367,6 +367,32 @@ verifyError(testCase, @() sftPlotGroupedScatter(ax, [1 2], [1 2], "A", ...
     sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotTernaryScatterDrawsGroupsAndLabels(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+compositions = [0.5 0.3 0.2; 0.2 0.5 0.3; 0.2 0.2 0.6];
+
+[returnedAx, pointHandles, labelHandles] = sftPlotTernaryScatter(ax, compositions, ...
+    ["A", "B", "B"], ["First", "Second", "Third"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(pointHandles), 2);
+verifyTrue(testCase, all(isgraphics(pointHandles, 'scatter')));
+verifyEqual(testCase, numel(labelHandles), 3);
+verifyTrue(testCase, all(isgraphics(labelHandles, 'text')));
+verifyEqual(testCase, string(ax.Title.String), "Ternary Scatter");
+end
+
+function testPlotTernaryScatterRejectsNegativeCompositions(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotTernaryScatter(ax, [0.5 -0.1 0.6], ...
+    "A", ["A", "B", "C"], sftTheme()), 'sft:InvalidData');
+end
+
 function testPlotDensityScatterReturnsDensityForEachPoint(testCase)
 fig = figure('Visible', 'off', 'Color', 'w');
 cleanup = onCleanup(@() close(fig));

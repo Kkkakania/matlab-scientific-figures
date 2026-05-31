@@ -90,6 +90,20 @@ sftExport(fig, "outputs/my_grouped_scatter", ["png", "svg"]);
 close(fig);
 ```
 
+For three-part compositions, pass one row per sample and one group label per
+row. Rows do not need to be pre-normalized; the plotting function normalizes
+each positive row internally:
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotTernaryScatter(ax, compositionMatrix, sampleGroups, ...
+    ["Component A", "Component B", "Component C"], theme);
+sftExport(fig, "outputs/my_ternary_scatter", ["png", "svg"]);
+close(fig);
+```
+
 For dense point clouds, use a density-colored scatter so overlapping points stay
 readable:
 
