@@ -31,6 +31,8 @@ Feedback channels are split by workflow: use
 for gallery/API first-use feedback, and
 [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11)
 for agent-assisted data-to-figure rendering feedback.
+For a factual status view of all three repositories, see
+[Ecosystem status](docs/ecosystem-status.md).
 
 Current public release: `v3.5.0`. This is still an early public project: the
 gallery and CLI are usable, but adoption claims should stay conservative until

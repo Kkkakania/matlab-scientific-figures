@@ -16,6 +16,8 @@ scope, and where feedback should go.
   [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9).
 - Public agent-assisted rendering feedback channel:
   [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11).
+- Cross-repository status view:
+  [Ecosystem status](ecosystem-status.md).
 
 ## Quality Signals
 

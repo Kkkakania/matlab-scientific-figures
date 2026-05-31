@@ -58,6 +58,7 @@ while IFS= read -r md_file; do
 done < <(find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type f -name '*.md' -print)
 
 require_link "docs/README.md" "../ROADMAP.md"
+require_link "README.md" "docs/ecosystem-status.md"
 
 while IFS= read -r doc_file; do
   doc_name="$(basename "$doc_file")"
