@@ -87,6 +87,7 @@ close(fig);
 | `sftPlotPairedSlopegraph(ax, before, after, labels, conditionLabels, theme)` | Draw paired before-after changes for matched items. |
 | `sftPlotRadarChart(ax, values, metrics, series, theme)` | Draw normalized metric profiles as radar polygons. |
 | `sftPlotParallelCoordinates(ax, values, features, groups, theme)` | Draw normalized multivariate profiles by group. |
+| `sftPlotRidgeline(ax, values, labels, theme)` | Draw compact stacked density profiles for groups. |
 
 Example:
 
@@ -264,6 +265,16 @@ sftPlotParallelCoordinates(ax, ...
     [0.62 0.58 0.70; 0.72 0.69 0.78; 0.80 0.76 0.82], ...
     ["Accuracy", "Throughput", "Stability"], ["Base", "Base", "Tuned"], theme);
 sftExport(fig, "gallery/my_parallel_coordinates", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13 8.5]);
+values = [randn(120, 1), randn(120, 1) + 0.7, randn(120, 1) + 1.2];
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotRidgeline(ax, values, ["Control", "Treatment A", "Treatment B"], theme);
+sftExport(fig, "gallery/my_ridgeline_plot", ["png", "svg"]);
 close(fig);
 ```
 

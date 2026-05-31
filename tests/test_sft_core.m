@@ -659,6 +659,37 @@ verifyError(testCase, @() sftPlotParallelCoordinates(ax, [0.2 0.3; 0.4 0.5], ...
     ["A", "B"], "OneGroup", sftTheme()), 'sft:InvalidLabels');
 end
 
+function testPlotRidgelineDrawsDensityProfiles(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+values = [
+    linspace(-1, 1, 40).'
+    linspace(-0.5, 1.5, 40).'
+];
+values = reshape(values, 40, 2);
+[returnedAx, fillHandles, lineHandles] = sftPlotRidgeline(ax, values, ...
+    ["Group A", "Group B"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(fillHandles), 2);
+verifyEqual(testCase, numel(lineHandles), 2);
+verifyTrue(testCase, all(isgraphics(fillHandles, 'patch')));
+verifyTrue(testCase, all(isgraphics(lineHandles, 'line')));
+verifyEqual(testCase, string(ax.YTickLabel(:)), ["Group A"; "Group B"]);
+verifyEqual(testCase, string(ax.XLabel.String), "Value");
+end
+
+function testPlotRidgelineRejectsLabelMismatch(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotRidgeline(ax, randn(10, 2), "Only one", ...
+    sftTheme()), 'sft:InvalidLabels');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

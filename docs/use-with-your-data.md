@@ -223,6 +223,18 @@ sftExport(fig, "outputs/my_parallel_coordinates", ["png", "svg"]);
 close(fig);
 ```
 
+For comparing many group distributions in one compact figure, use a ridgeline
+plot. Put one group per column:
+
+```matlab
+theme = sftTheme("FigureSize", [13 8.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotRidgeline(ax, distributionMatrix, groupLabels, theme);
+sftExport(fig, "outputs/my_ridgeline_plot", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
