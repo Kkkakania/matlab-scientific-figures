@@ -65,6 +65,9 @@ jobs:
       - name: Check timeout helper
         run: ./scripts/check_timeout_helper.sh
 
+      - name: Check workflow maintenance settings
+        run: ./scripts/check_workflows.sh
+
       - name: Check forbidden public files
         run: ./scripts/check_forbidden_files.sh
 
