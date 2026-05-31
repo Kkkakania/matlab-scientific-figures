@@ -363,6 +363,34 @@ verifyError(testCase, @() sftPlotDensityScatter(ax, [1 2], [1 2], 1, ...
     sftTheme()), 'sft:InvalidBins');
 end
 
+function testPlotContourScatterDrawsDensityAndPoints(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+x = [linspace(-1, 1, 20), linspace(0.5, 1.5, 20)];
+y = [0.4 * x(1:20), -0.3 * x(21:40) + 1];
+
+[returnedAx, filledContourHandle, pointHandle, lineContourHandle, density] = ...
+    sftPlotContourScatter(ax, x, y, 8, sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyFalse(testCase, isempty(filledContourHandle));
+verifyTrue(testCase, isgraphics(pointHandle, 'scatter'));
+verifyFalse(testCase, isempty(lineContourHandle));
+verifySize(testCase, density, [7 7]);
+verifyEqual(testCase, string(ax.XLabel.String), "Feature X");
+verifyEqual(testCase, numel(findall(fig, 'Type', 'ColorBar')), 1);
+end
+
+function testPlotContourScatterRejectsInvalidBins(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotContourScatter(ax, [1 2], [1 2], 3, ...
+    sftTheme()), 'sft:InvalidBins');
+end
+
 function testPlotBlandAltmanDrawsAgreementStatistics(testCase)
 fig = figure('Visible', 'off', 'Color', 'w');
 cleanup = onCleanup(@() close(fig));

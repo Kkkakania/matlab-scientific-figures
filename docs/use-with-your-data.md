@@ -94,6 +94,20 @@ sftExport(fig, "outputs/my_density_scatter", ["png", "svg"]);
 close(fig);
 ```
 
+For dense data where the shape of the point cloud matters, use contour scatter
+to show both individual observations and smoothed density:
+
+```matlab
+theme = sftTheme("FigureSize", [12 8]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotContourScatter(ax, featureX, responseY, 34, theme);
+xlabel(ax, "Variable X");
+ylabel(ax, "Variable Y");
+sftExport(fig, "outputs/my_contour_scatter", ["png", "svg"]);
+close(fig);
+```
+
 For method-comparison experiments, use a Bland-Altman plot to inspect agreement
 between two measurement methods:
 
