@@ -9,9 +9,9 @@ ecosystem. It is a reviewer aid, not an adoption claim.
 
 | Repository | Current maintenance evidence |
 |---|---|
-| [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | 30 clean-room gallery examples, static quality gates, figure-quality dogfooding, first-use feedback issue, release-cadence policy |
-| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | CLI/package tests, release-preflight checks, package artifact workflow, downstream dogfooding report |
-| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | first-render walkthrough, scheme readiness matrix, privacy/provenance checks, maintenance cadence |
+| [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | 30 clean-room gallery examples, static quality gates, figure-quality dogfooding, first-use feedback issue, release-cadence policy, `render_all.sh help examples` for shell users |
+| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | CLI/package tests, release-preflight checks, package artifact workflow, downstream dogfooding report, `init verification guidance` through `doctor` and `check` next steps |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | first-render walkthrough, scheme readiness matrix, `stable first-use scheme list`, privacy/provenance checks, maintenance cadence |
 
 ## External Pull Requests
 
