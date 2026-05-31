@@ -78,6 +78,7 @@ close(fig);
 | `sftPlotDensityScatter(ax, x, y, bins, theme)` | Draw a density-colored x-y scatter plot for large point clouds. |
 | `sftPlotCorrelationBubble(ax, matrix, labels, theme)` | Draw a bubble heatmap for a correlation matrix. |
 | `sftPlotForest(ax, estimate, lower, upper, labels, reference, theme)` | Draw effect estimates with interval bounds and a reference line. |
+| `sftPlotGroupedErrorBar(ax, values, errors, groupLabels, seriesLabels, theme)` | Draw grouped bars with matched error bars. |
 
 Example:
 
@@ -162,6 +163,17 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotForest(ax, estimate, lower, upper, ["Baseline", "Fusion", "Control", "Margin"], 0, theme);
 sftExport(fig, "gallery/my_forest_plot", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13 8.5]);
+values = [4.4 3.8; 5.2 4.7; 3.9 4.3];
+errors = [0.28 0.22; 0.31 0.26; 0.24 0.27];
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotGroupedErrorBar(ax, values, errors, ["Baseline", "Method A", "Method B"], ["Dataset 1", "Dataset 2"], theme);
+sftExport(fig, "gallery/my_grouped_error_bar", ["png", "svg"]);
 close(fig);
 ```
 

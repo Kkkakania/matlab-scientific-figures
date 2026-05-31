@@ -418,6 +418,32 @@ verifyError(testCase, @() sftPlotForest(ax, 0.2, 0.3, 0.4, "A", 0, ...
     sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotGroupedErrorBarDrawsBarsAndErrors(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, barHandles, errorHandles] = sftPlotGroupedErrorBar(ax, ...
+    [1 2; 3 4], [0.1 0.2; 0.3 0.4], ["A", "B"], ["S1", "S2"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(barHandles), 2);
+verifyEqual(testCase, numel(errorHandles), 2);
+verifyTrue(testCase, all(isgraphics(barHandles, 'bar')));
+verifyTrue(testCase, all(isgraphics(errorHandles, 'errorbar')));
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["A"; "B"]);
+verifyEqual(testCase, string(legend(ax).String(:)), ["S1"; "S2"]);
+end
+
+function testPlotGroupedErrorBarRejectsMismatchedErrors(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotGroupedErrorBar(ax, [1 2], [0.1; 0.2], ...
+    "A", ["S1", "S2"], sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

@@ -117,6 +117,18 @@ sftExport(fig, "outputs/my_forest_plot", ["png", "svg"]);
 close(fig);
 ```
 
+For method comparisons with uncertainty, keep `values` and `errors` the same
+matrix size:
+
+```matlab
+theme = sftTheme("FigureSize", [13 8.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotGroupedErrorBar(ax, values, errors, methodLabels, datasetLabels, theme);
+sftExport(fig, "outputs/my_grouped_error_bar", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
