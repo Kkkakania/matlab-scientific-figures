@@ -72,6 +72,7 @@ close(fig);
 | Function | Use When |
 |---|---|
 | `sftPlotHeatmap(ax, matrix, labels, theme)` | Draw a themed square matrix heatmap into an existing axes. |
+| `sftPlotLineSeries(ax, x, y, labels, theme)` | Draw one or more themed line series into an existing axes. |
 
 Example:
 
@@ -81,6 +82,18 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotHeatmap(ax, corr(randn(80, 5)), ["A", "B", "C", "D", "E"], theme);
 sftExport(fig, "gallery/my_heatmap", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme();
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotLineSeries(ax, 1:6, [1 3 2 5 4 6; 2 2.5 3 3.5 3.2 4], ["A", "B"], theme);
+xlabel(ax, "Sample");
+ylabel(ax, "Response");
+title(ax, "Two Series");
+sftExport(fig, "gallery/my_line_plot", ["png", "svg"]);
 close(fig);
 ```
 

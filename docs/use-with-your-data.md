@@ -37,6 +37,20 @@ close(fig);
 Use this path when it exists. It is easier to test and easier to keep stable
 than a copied renderer.
 
+For a simple line chart, pass one x vector and one row per series:
+
+```matlab
+theme = sftTheme();
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotLineSeries(ax, timeHours, [baseline; treatment], ["Baseline", "Treatment"], theme);
+xlabel(ax, "Time (hours)");
+ylabel(ax, "Response");
+title(ax, "Experiment Response");
+sftExport(fig, "outputs/my_line_plot", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

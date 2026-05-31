@@ -263,6 +263,30 @@ verifyError(testCase, @() sftPlotHeatmap(ax, eye(2), "A", sftTheme()), ...
     'sft:InvalidLabels');
 end
 
+function testPlotLineSeriesDrawsOneLinePerRow(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, lineHandles] = sftPlotLineSeries(ax, 1:3, [1 2 3; 3 2 1], ...
+    ["Up", "Down"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(lineHandles), 2);
+verifyTrue(testCase, all(isgraphics(lineHandles, 'line')));
+verifyEqual(testCase, numel(findobj(ax, 'Type', 'Line')), 2);
+verifyEqual(testCase, string(legend(ax).String(:)), ["Up"; "Down"]);
+end
+
+function testPlotLineSeriesRejectsMismatchedShape(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotLineSeries(ax, 1:3, [1 2; 2 3], ...
+    ["A", "B"], sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');
