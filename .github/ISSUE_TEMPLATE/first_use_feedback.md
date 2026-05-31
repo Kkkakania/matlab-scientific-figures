@@ -25,10 +25,16 @@ assignees: ""
 ## Result
 
 ```text
+Command sequence:
+Template subset rendered:
+Output formats:
 Quick start result:
 Template discovery result:
 Rendering result:
 CLI/helper script result:
+Expected result:
+Actual result:
+Private details redacted: yes/no
 ```
 
 ## Most Useful Template

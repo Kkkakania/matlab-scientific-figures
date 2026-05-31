@@ -29,6 +29,9 @@ jobs:
       - name: Check documentation links
         run: ./scripts/check_docs_links.sh
 
+      - name: Check first-use feedback docs
+        run: ./scripts/check_first_use_docs.sh
+
       - name: Check API reference coverage
         run: ./scripts/check_api_reference.sh
 

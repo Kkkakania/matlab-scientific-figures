@@ -126,13 +126,19 @@ Paste a short report into issue #9:
 OS:
 MATLAB:
 Commit:
+Command sequence:
+Template subset rendered:
+Output formats:
 Quick start result:
 Template discovery result:
 First template I would use:
 Rendering result:
 CLI/helper script result:
+Expected result:
+Actual result:
 Most confusing part:
 Most useful missing template:
+Private details redacted: yes/no
 ```
 
 Keep feedback specific. A failing command, unclear output, or awkward label is
