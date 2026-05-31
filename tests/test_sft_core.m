@@ -469,6 +469,32 @@ verifyError(testCase, @() sftPlotBoxJitter(ax, ["A", "B"], 1, sftTheme()), ...
     'sft:InvalidData');
 end
 
+function testPlotLollipopRankingSortsValuesAscending(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, lineHandles, pointHandles, order] = sftPlotLollipopRanking(ax, ...
+    ["High", "Low", "Mid"], [0.9 0.2 0.5], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, order, [2; 3; 1]);
+verifyEqual(testCase, numel(lineHandles), 3);
+verifyEqual(testCase, numel(pointHandles), 3);
+verifyTrue(testCase, all(isgraphics(lineHandles, 'line')));
+verifyTrue(testCase, all(isgraphics(pointHandles, 'scatter')));
+verifyEqual(testCase, string(ax.YTickLabel(:)), ["Low"; "Mid"; "High"]);
+end
+
+function testPlotLollipopRankingRejectsMismatchedInputs(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotLollipopRanking(ax, ["A", "B"], 1, ...
+    sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

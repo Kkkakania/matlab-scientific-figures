@@ -141,6 +141,17 @@ sftExport(fig, "outputs/my_box_jitter", ["png", "svg"]);
 close(fig);
 ```
 
+For ranked factors or feature importance, use a lollipop chart:
+
+```matlab
+theme = sftTheme("FigureSize", [13 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotLollipopRanking(ax, factorLabels, relativeScores, theme);
+sftExport(fig, "outputs/my_lollipop_ranking", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

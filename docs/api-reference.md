@@ -80,6 +80,7 @@ close(fig);
 | `sftPlotForest(ax, estimate, lower, upper, labels, reference, theme)` | Draw effect estimates with interval bounds and a reference line. |
 | `sftPlotGroupedErrorBar(ax, values, errors, groupLabels, seriesLabels, theme)` | Draw grouped bars with matched error bars. |
 | `sftPlotBoxJitter(ax, group, value, theme)` | Draw grouped distributions with jittered observations. |
+| `sftPlotLollipopRanking(ax, labels, values, theme)` | Draw a sorted lollipop ranking chart. |
 
 Example:
 
@@ -186,6 +187,15 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotBoxJitter(ax, group, value, theme);
 sftExport(fig, "gallery/my_box_jitter", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotLollipopRanking(ax, ["Grid", "Storage", "Sensing", "Forecast"], [0.91 0.83 0.78 0.72], theme);
+sftExport(fig, "gallery/my_lollipop_ranking", ["png", "svg"]);
 close(fig);
 ```
 
