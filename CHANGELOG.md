@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Add a guarded README first-steps path so fresh clones can inspect templates,
+  render one scratch figure, and try the bundled CSV example before reading the
+  longer guides.
 - Add common examples to `render_all.sh help` so first-time shell users can
   discover list, search, selected-render, scratch-output, and format workflows
   without opening the full CLI guide.

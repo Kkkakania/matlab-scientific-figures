@@ -18,6 +18,7 @@ run_step "maintainer activity bounds" ./scripts/check_maintainer_activity.sh
 run_step "citation metadata" ./scripts/check_citation.sh
 run_step "documentation links" ./scripts/check_docs_links.sh
 run_step "first-use feedback docs" ./scripts/check_first_use_docs.sh
+run_step "README first steps" ./scripts/check_readme_first_steps.sh
 run_step "API reference coverage" ./scripts/check_api_reference.sh
 run_step "template manifest schema" ./scripts/check_template_manifest_schema.sh
 run_step "template reference table" ./scripts/check_template_reference_table.sh

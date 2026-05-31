@@ -53,6 +53,31 @@ Run the MATLAB-enabled local gate before relying on regenerated figures:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh
 ```
 
+## First 5 Minutes
+
+For a fresh clone, start with one narrow path instead of reading every guide:
+
+1. Inspect the available templates without rendering anything.
+
+   ```bash
+   MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
+   MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh info heatmap
+   ```
+
+2. Render one known template into a scratch directory.
+
+   ```bash
+   SFT_OUTPUT_DIR=/tmp/sft-first-render MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap
+   ```
+
+3. Try the bundled CSV example before wiring in your own data.
+
+   ```bash
+   SFT_OUTPUT_DIR=/tmp/sft-csv-example MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh csv-example
+   ```
+
+Move to your own data only after those three checks pass.
+
 ## Find The Right Template
 
 Start by listing the gallery:
