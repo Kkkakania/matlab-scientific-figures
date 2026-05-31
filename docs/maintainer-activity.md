@@ -22,6 +22,7 @@ ecosystem. It is a reviewer aid, not an adoption claim.
 | `fieldtrip/website` | [`#927`](https://github.com/fieldtrip/website/pull/927) | Open, mergeable | Add an extension author checklist |
 | `chebfun/chebfun` | [`#2495`](https://github.com/chebfun/chebfun/pull/2495) | Open, mergeable | Align workflow trigger and license link with the master branch |
 | `scottclowe/matlab-schemer` | [`#47`](https://github.com/scottclowe/matlab-schemer/pull/47) | Open, mergeable | Fix documentation and MATLAB help-text typos |
+| `PRML/PRMLT` | [`#54`](https://github.com/PRML/PRMLT/pull/54) | Open, mergeable | Fix README and MATLAB help-index typos |
 
 ## Review Policy
 
