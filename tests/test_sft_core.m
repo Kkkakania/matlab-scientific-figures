@@ -781,6 +781,32 @@ verifyError(testCase, @() sftPlotCalendarHeatmap(ax, rand(7, 2), ...
     sftTheme()), 'sft:InvalidLabels');
 end
 
+function testPlotBubbleMatrixDrawsScaledBubbles(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, pointHandle, colorbarHandle] = sftPlotBubbleMatrix(ax, ...
+    [0 1; 2 3], ["R1", "R2"], ["C1", "C2"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(pointHandle, 'scatter'));
+verifyTrue(testCase, isgraphics(colorbarHandle));
+verifyEqual(testCase, numel(pointHandle.SizeData), 4);
+verifyGreaterThan(testCase, max(pointHandle.SizeData), min(pointHandle.SizeData));
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["C1"; "C2"]);
+verifyEqual(testCase, string(ax.YTickLabel(:)), ["R1"; "R2"]);
+end
+
+function testPlotBubbleMatrixRejectsNegativeValues(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotBubbleMatrix(ax, [1 -1], "R1", ...
+    ["C1", "C2"], sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

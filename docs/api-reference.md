@@ -91,6 +91,7 @@ close(fig);
 | `sftPlotPositiveNegativeArea(ax, x, y, baseline, theme)` | Draw signed deviations around a baseline. |
 | `sftPlotZoomedInsetLine(fig, x, y, zoomRange, theme)` | Draw a full trend with a detailed inset window. |
 | `sftPlotCalendarHeatmap(ax, values, weekLabels, dayLabels, theme)` | Draw daily values in a day-by-week heatmap. |
+| `sftPlotBubbleMatrix(ax, matrix, rowLabels, colLabels, theme)` | Draw matrix magnitudes with bubble area and color. |
 
 Example:
 
@@ -310,6 +311,16 @@ ax = axes(fig);
 sftPlotCalendarHeatmap(ax, values, "W" + string(1:4), ...
     ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], theme);
 sftExport(fig, "gallery/my_calendar_heatmap", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotBubbleMatrix(ax, abs(randn(4, 5)), ...
+    ["R1", "R2", "R3", "R4"], "C" + string(1:5), theme);
+sftExport(fig, "gallery/my_bubble_matrix", ["png", "svg"]);
 close(fig);
 ```
 

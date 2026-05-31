@@ -269,6 +269,18 @@ sftExport(fig, "outputs/my_calendar_heatmap", ["png", "svg"]);
 close(fig);
 ```
 
+For nonnegative matrix magnitudes where both position and size matter, use a
+bubble matrix:
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotBubbleMatrix(ax, magnitudeMatrix, rowLabels, columnLabels, theme);
+sftExport(fig, "outputs/my_bubble_matrix", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
