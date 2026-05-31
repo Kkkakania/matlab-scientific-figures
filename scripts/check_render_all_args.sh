@@ -40,4 +40,19 @@ expect_failure "SFT_FORMATS must include at least one" \
 expect_failure "SFT_OUTPUT_DIR may not contain single quotes" \
   env "SFT_OUTPUT_DIR=bad'path" MATLAB_BIN=/no/such/matlab "$SCRIPT" list
 
+FAKE_MATLAB="$TMP_DIR/fake_matlab"
+CAPTURED_ARGS="$TMP_DIR/matlab_args.txt"
+cat >"$FAKE_MATLAB" <<'SH'
+#!/usr/bin/env bash
+printf '%s\n' "$*" >"$CAPTURED_ARGS"
+SH
+chmod +x "$FAKE_MATLAB"
+
+env CAPTURED_ARGS="$CAPTURED_ARGS" SFT_FORMATS=pdf MATLAB_BIN="$FAKE_MATLAB" "$SCRIPT" heatmap >/dev/null
+grep -q 'sftRenderExamples(\["heatmap"\]' "$CAPTURED_ARGS"
+grep -q '\["pdf"\]' "$CAPTURED_ARGS"
+
+env CAPTURED_ARGS="$CAPTURED_ARGS" MATLAB_BIN="$FAKE_MATLAB" "$SCRIPT" heatmap >/dev/null
+grep -q '\["png","svg"\]' "$CAPTURED_ARGS"
+
 echo "render_all argument checks passed."

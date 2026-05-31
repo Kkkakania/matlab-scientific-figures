@@ -6,6 +6,8 @@
   choose PNG, SVG, and PDF export formats without editing MATLAB code.
 - Add non-MATLAB argument checks for `scripts/render_all.sh` export formats and
   output-path quoting.
+- Extend the `render_all.sh` argument checks with a fake MATLAB executable so
+  valid `SFT_FORMATS` values are verified in the generated batch command.
 - Add a bounded maintainer activity snapshot covering own-repo maintenance and
   external MATLAB pull requests without claiming broad adoption.
 - Add the PRMLT documentation cleanup pull request to the bounded maintainer
