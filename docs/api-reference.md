@@ -100,6 +100,7 @@ close(fig);
 | `sftPlotDoubleTriangleHeatmap(ax, upperValues, lowerValues, labels, theme)` | Compare two square matrices in one layout. |
 | `sftPlotSankeyFlow(ax, nodes, edges, theme)` | Draw weighted flow bands across staged nodes. |
 | `sftPlotSurface3D(ax, x, y, z, theme)` | Draw a smooth themed 3D response surface. |
+| `sftPlotMultiPanelOverview(lineData, scatterData, barData, rankingData, theme)` | Draw a four-panel overview figure from reusable data structures. |
 
 Example:
 
@@ -420,6 +421,19 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotSurface3D(ax, x, y, z, theme);
 sftExport(fig, "gallery/my_surface_3d", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [16 11], "FontSize", 8.5, "MarkerSize", 32);
+lineData = struct("x", 1:8, "y", [1 2 3 2.8 4 4.5 4.7 5]);
+scatterData = struct("x", randn(80, 1), "y", randn(80, 1));
+barData = struct("values", [4.2 5.0 3.6 4.8], ...
+    "labels", ["Baseline", "Method A", "Method B", "Method C"]);
+rankingData = struct("values", [0.91 0.83 0.78 0.72], ...
+    "labels", ["Grid", "Storage", "Sensing", "Forecast"]);
+fig = sftPlotMultiPanelOverview(lineData, scatterData, barData, rankingData, theme);
+sftExport(fig, "gallery/my_multi_panel_overview", ["png", "svg"]);
 close(fig);
 ```
 

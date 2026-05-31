@@ -380,6 +380,21 @@ sftExport(fig, "outputs/my_surface_3d", ["png", "svg"]);
 close(fig);
 ```
 
+For a compact paper or report overview, combine four small views into one
+figure. Each input is a simple struct, so you can build it from tables, CSV
+columns, or simulation outputs:
+
+```matlab
+theme = sftTheme("FigureSize", [16 11], "FontSize", 8.5, "MarkerSize", 32);
+lineData = struct("x", timeValues, "y", responseValues);
+scatterData = struct("x", featureValues, "y", outputValues);
+barData = struct("values", comparisonScores, "labels", comparisonLabels);
+rankingData = struct("values", importanceScores, "labels", factorLabels);
+fig = sftPlotMultiPanelOverview(lineData, scatterData, barData, rankingData, theme);
+sftExport(fig, "outputs/my_multi_panel_overview", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

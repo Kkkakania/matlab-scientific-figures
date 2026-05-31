@@ -1024,6 +1024,36 @@ verifyError(testCase, @() sftPlotSurface3D(ax, zeros(2), zeros(2), zeros(3), ...
     sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotMultiPanelOverviewDrawsFourAxes(testCase)
+lineData = struct('x', 1:4, 'y', [1 3 2 4]);
+scatterData = struct('x', [1 2 3], 'y', [3 2 1]);
+barData = struct('values', [4 5 3], 'labels', ["A", "B", "C"]);
+rankingData = struct('values', [0.4 0.9 0.6], 'labels', ["Low", "High", "Mid"]);
+
+[fig, layout, axesHandles, handles] = sftPlotMultiPanelOverview(lineData, ...
+    scatterData, barData, rankingData, sftTheme());
+cleanup = onCleanup(@() close(fig));
+
+verifyTrue(testCase, isgraphics(layout));
+verifyEqual(testCase, numel(axesHandles), 4);
+verifyTrue(testCase, all(isgraphics(axesHandles, 'axes')));
+verifyTrue(testCase, isgraphics(handles.Trend, 'line'));
+verifyTrue(testCase, isgraphics(handles.Relationship, 'scatter'));
+verifyTrue(testCase, isgraphics(handles.Comparison, 'bar'));
+verifyTrue(testCase, isgraphics(handles.RankingPoints, 'scatter'));
+verifyEqual(testCase, string(axesHandles(1).Title.String), "Trend");
+end
+
+function testPlotMultiPanelOverviewRejectsLabelMismatch(testCase)
+lineData = struct('x', 1:4, 'y', [1 3 2 4]);
+scatterData = struct('x', [1 2 3], 'y', [3 2 1]);
+barData = struct('values', [4 5 3], 'labels', ["A", "B"]);
+rankingData = struct('values', [0.4 0.9 0.6], 'labels', ["Low", "High", "Mid"]);
+
+verifyError(testCase, @() sftPlotMultiPanelOverview(lineData, scatterData, ...
+    barData, rankingData, sftTheme()), 'sft:InvalidLabels');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');
