@@ -19,7 +19,25 @@ Start from the chart, not the code:
 If two examples feel close, choose the simpler one first. It is easier to add a
 label or color later than to unwind a complicated plot.
 
-## 2. Copy The Renderer
+## 2. Use A Reusable Plot Function When Available
+
+Some templates expose a small plotting function in `src/` so you can keep your
+own data loading code separate from the gallery example. For example, a matrix
+heatmap can be drawn directly into an axes:
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotHeatmap(ax, myMatrix, myLabels, theme);
+sftExport(fig, "outputs/my_heatmap", ["png", "svg"]);
+close(fig);
+```
+
+Use this path when it exists. It is easier to test and easier to keep stable
+than a copied renderer.
+
+## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
 
@@ -30,7 +48,7 @@ function files = renderMyExperiment(outputDir, formats)
 Keep the function signature. It makes the file easy to run from MATLAB, from a
 shell script, and later from a batch workflow.
 
-## 3. Replace The Synthetic Data
+## 4. Replace The Synthetic Data
 
 In the gallery examples, the first line usually looks like this:
 
@@ -49,7 +67,7 @@ data.labels = ["Baseline", "Method A", "Method B"];
 Keep the rest of the renderer as boring as possible: plot, label, apply theme,
 export.
 
-## 4. Export Once, Then Inspect
+## 5. Export Once, Then Inspect
 
 Use PNG for quick review and SVG or PDF when you need vector output:
 
@@ -69,7 +87,7 @@ disp(report.Passed)
 The validator only catches simple issues. Still check the exported image by
 eye, especially legends, long labels, and small tick text.
 
-## 5. Keep Local Details Out Of The Figure
+## 6. Keep Local Details Out Of The Figure
 
 Avoid putting personal names, local paths, private project names, or real sample
 identifiers into example figures. Use neutral labels in shared code and add

@@ -240,6 +240,29 @@ verifyEqual(testCase, data.final, data.start + sum(data.steps), 'AbsTol', 1e-12)
 verifyGreaterThan(testCase, data.final, 0);
 end
 
+function testPlotHeatmapDrawsIntoProvidedAxes(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+returnedAx = sftPlotHeatmap(ax, [1 0.2; 0.2 1], ["A", "B"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(findobj(ax, 'Type', 'Image')), 1);
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["A"; "B"]);
+verifyEqual(testCase, string(ax.YTickLabel(:)), ["A"; "B"]);
+verifyEqual(testCase, char(ax.Title.String), 'Matrix Heatmap');
+end
+
+function testPlotHeatmapRejectsMismatchedLabels(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotHeatmap(ax, eye(2), "A", sftTheme()), ...
+    'sft:InvalidLabels');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

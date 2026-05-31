@@ -67,6 +67,23 @@ sftExport(fig, "gallery/my_example", ["png", "svg"]);
 close(fig);
 ```
 
+## Reusable Plotting Functions
+
+| Function | Use When |
+|---|---|
+| `sftPlotHeatmap(ax, matrix, labels, theme)` | Draw a themed square matrix heatmap into an existing axes. |
+
+Example:
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotHeatmap(ax, corr(randn(80, 5)), ["A", "B", "C", "D", "E"], theme);
+sftExport(fig, "gallery/my_heatmap", ["png", "svg"]);
+close(fig);
+```
+
 ## Maintainer-Oriented Helpers
 
 | Function | Use When |
