@@ -495,6 +495,34 @@ verifyError(testCase, @() sftPlotLollipopRanking(ax, ["A", "B"], 1, ...
     sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotWaterfallChartDrawsContributionSteps(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, barHandles, connectorHandles, labelHandles] = sftPlotWaterfallChart(ax, ...
+    10, [3 -2 4], ["A", "B", "C"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(barHandles), 5);
+verifyEqual(testCase, numel(connectorHandles), 3);
+verifyEqual(testCase, numel(labelHandles), 5);
+verifyTrue(testCase, all(isgraphics(barHandles, 'rectangle')));
+verifyTrue(testCase, all(isgraphics(connectorHandles, 'line')));
+verifyTrue(testCase, all(isgraphics(labelHandles, 'text')));
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["Start"; "A"; "B"; "C"; "Final"]);
+verifyEqual(testCase, string(labelHandles(end).String), "15");
+end
+
+function testPlotWaterfallChartRejectsMismatchedInputs(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotWaterfallChart(ax, 10, [1 2], "A", ...
+    sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

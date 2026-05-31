@@ -152,6 +152,17 @@ sftExport(fig, "outputs/my_lollipop_ranking", ["png", "svg"]);
 close(fig);
 ```
 
+For cumulative gains, losses, or contribution breakdowns, use a waterfall chart:
+
+```matlab
+theme = sftTheme("FigureSize", [13.5 8.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotWaterfallChart(ax, startValue, contributionSteps, contributionLabels, theme);
+sftExport(fig, "outputs/my_waterfall_chart", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

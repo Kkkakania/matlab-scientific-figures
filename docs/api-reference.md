@@ -78,6 +78,7 @@ close(fig);
 | `sftPlotDensityScatter(ax, x, y, bins, theme)` | Draw a density-colored x-y scatter plot for large point clouds. |
 | `sftPlotCorrelationBubble(ax, matrix, labels, theme)` | Draw a bubble heatmap for a correlation matrix. |
 | `sftPlotForest(ax, estimate, lower, upper, labels, reference, theme)` | Draw effect estimates with interval bounds and a reference line. |
+| `sftPlotWaterfallChart(ax, startValue, steps, stepLabels, theme)` | Draw cumulative contribution steps. |
 | `sftPlotGroupedErrorBar(ax, values, errors, groupLabels, seriesLabels, theme)` | Draw grouped bars with matched error bars. |
 | `sftPlotBoxJitter(ax, group, value, theme)` | Draw grouped distributions with jittered observations. |
 | `sftPlotLollipopRanking(ax, labels, values, theme)` | Draw a sorted lollipop ranking chart. |
@@ -196,6 +197,16 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotLollipopRanking(ax, ["Grid", "Storage", "Sensing", "Forecast"], [0.91 0.83 0.78 0.72], theme);
 sftExport(fig, "gallery/my_lollipop_ranking", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13.5 8.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotWaterfallChart(ax, 100, [18 12 -9 15 -6], ...
+    ["Efficiency", "Storage", "Curtailment", "Forecast", "Control"], theme);
+sftExport(fig, "gallery/my_waterfall_chart", ["png", "svg"]);
 close(fig);
 ```
 
