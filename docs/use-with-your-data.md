@@ -65,6 +65,17 @@ sftExport(fig, "outputs/my_confidence_band", ["png", "svg"]);
 close(fig);
 ```
 
+For forecasts or simulations with nested percentiles, use a fan chart:
+
+```matlab
+theme = sftTheme("FigureSize", [14 8.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotUncertaintyFan(ax, horizon, medianForecast, p10, p25, p75, p90, theme);
+sftExport(fig, "outputs/my_uncertainty_fan", ["png", "svg"]);
+close(fig);
+```
+
 For grouped scatter plots, pass one group label for each point:
 
 ```matlab

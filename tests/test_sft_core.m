@@ -316,6 +316,34 @@ verifyError(testCase, @() sftPlotConfidenceBand(ax, 1:2, [1 2], [2 3], ...
     [1 2], "A", sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotUncertaintyFanDrawsNestedBands(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+x = 1:4;
+medianValue = [1 2 3 4];
+
+[returnedAx, outerBand, innerBand, medianLine] = sftPlotUncertaintyFan(ax, x, ...
+    medianValue, medianValue - 2, medianValue - 1, medianValue + 1, ...
+    medianValue + 2, sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(outerBand, 'patch'));
+verifyTrue(testCase, isgraphics(innerBand, 'patch'));
+verifyTrue(testCase, isgraphics(medianLine, 'line'));
+verifyEqual(testCase, string(ax.XLabel.String), "Forecast horizon");
+end
+
+function testPlotUncertaintyFanRejectsCrossedPercentiles(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotUncertaintyFan(ax, 1:3, [1 2 3], ...
+    [0 1 2], [0.5 1.5 2.5], [0.4 2.2 3.2], [2 3 4], sftTheme()), ...
+    'sft:InvalidData');
+end
+
 function testPlotGroupedScatterDrawsOneHandlePerGroup(testCase)
 fig = figure('Visible', 'off', 'Color', 'w');
 cleanup = onCleanup(@() close(fig));

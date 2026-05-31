@@ -74,6 +74,7 @@ close(fig);
 | `sftPlotHeatmap(ax, matrix, labels, theme)` | Draw a themed square matrix heatmap into an existing axes. |
 | `sftPlotLineSeries(ax, x, y, labels, theme)` | Draw one or more themed line series into an existing axes. |
 | `sftPlotConfidenceBand(ax, x, center, lower, upper, labels, theme)` | Draw line series with shaded uncertainty bands. |
+| `sftPlotUncertaintyFan(ax, x, medianValue, p10, p25, p75, p90, theme)` | Draw nested percentile bands around a median trend. |
 | `sftPlotGroupedScatter(ax, x, y, groups, theme)` | Draw a grouped x-y scatter plot into an existing axes. |
 | `sftPlotDensityScatter(ax, x, y, bins, theme)` | Draw a density-colored x-y scatter plot for large point clouds. |
 | `sftPlotContourScatter(ax, x, y, bins, theme)` | Draw density contours with overlaid scatter points. |
@@ -133,6 +134,19 @@ xlabel(ax, "Sample");
 ylabel(ax, "Estimate");
 title(ax, "Estimate With Uncertainty");
 sftExport(fig, "gallery/my_confidence_band", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [14 8.5]);
+x = 1:12;
+medianValue = 0.2 * x + sin(x / 3);
+spread = 0.3 + 0.03 * x;
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotUncertaintyFan(ax, x, medianValue, medianValue - 2 * spread, ...
+    medianValue - spread, medianValue + spread, medianValue + 2 * spread, theme);
+sftExport(fig, "gallery/my_uncertainty_fan", ["png", "svg"]);
 close(fig);
 ```
 
