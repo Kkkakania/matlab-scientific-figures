@@ -605,6 +605,33 @@ verifyError(testCase, @() sftPlotPairedSlopegraph(ax, [1 2], 1, ...
     ["A", "B"], ["Before", "After"], sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotRadarChartDrawsMetricProfiles(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, lineHandles, patchHandles, labelHandles] = sftPlotRadarChart(ax, ...
+    [0.6 0.7 0.8; 0.8 0.5 0.9], ["A", "B", "C"], ["Base", "New"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(lineHandles), 2);
+verifyEqual(testCase, numel(patchHandles), 2);
+verifyEqual(testCase, numel(labelHandles), 3);
+verifyTrue(testCase, all(isgraphics(lineHandles, 'line')));
+verifyTrue(testCase, all(isgraphics(patchHandles, 'patch')));
+verifyTrue(testCase, all(isgraphics(labelHandles, 'text')));
+verifyEqual(testCase, string(labelHandles(1).String), "A");
+end
+
+function testPlotRadarChartRejectsOutOfRangeValues(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotRadarChart(ax, [0.2 1.2], ...
+    ["A", "B"], "Series", sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

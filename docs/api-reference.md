@@ -85,6 +85,7 @@ close(fig);
 | `sftPlotWaffleChart(ax, counts, labels, theme)` | Draw a 100-cell composition chart. |
 | `sftPlotButterflyComparison(ax, leftValues, rightValues, labels, sideLabels, theme)` | Draw mirrored horizontal bars around a shared baseline. |
 | `sftPlotPairedSlopegraph(ax, before, after, labels, conditionLabels, theme)` | Draw paired before-after changes for matched items. |
+| `sftPlotRadarChart(ax, values, metrics, series, theme)` | Draw normalized metric profiles as radar polygons. |
 
 Example:
 
@@ -240,6 +241,17 @@ ax = axes(fig);
 sftPlotPairedSlopegraph(ax, [0.62 0.71 0.78], [0.78 0.83 0.64], ...
     ["Efficiency", "Reliability", "Response time"], ["Baseline", "Updated"], theme);
 sftExport(fig, "gallery/my_paired_slopegraph", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [12 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotRadarChart(ax, ...
+    [0.72 0.66 0.58; 0.84 0.73 0.64], ...
+    ["Accuracy", "Speed", "Memory"], ["Baseline", "Method A"], theme);
+sftExport(fig, "gallery/my_radar_chart", ["png", "svg"]);
 close(fig);
 ```
 

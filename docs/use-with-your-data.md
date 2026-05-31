@@ -199,6 +199,18 @@ sftExport(fig, "outputs/my_paired_slopegraph", ["png", "svg"]);
 close(fig);
 ```
 
+For a compact profile across a small set of normalized metrics, use a radar
+chart. Values should already be scaled to the 0-1 range:
+
+```matlab
+theme = sftTheme("FigureSize", [12 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotRadarChart(ax, normalizedScores, metricLabels, methodLabels, theme);
+sftExport(fig, "outputs/my_radar_chart", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
