@@ -70,7 +70,12 @@ the claims tied to evidence that can be checked:
 - local release-gate results
 - GitHub Actions workflow results
 - dogfooding of `matlab-figure-ci`
-- issue links for first-use feedback and template requests
+- issue links for first-use feedback, including
+  [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9)
+  for gallery/API feedback and
+  [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11)
+  for agent-assisted data-to-figure feedback
+- issue links for template requests
 
 Do not present internal dogfooding as broad adoption. Do not invent stars,
 downloads, user counts, or guaranteed program eligibility. If the project is

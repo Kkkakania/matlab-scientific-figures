@@ -5,11 +5,11 @@
 [![Release](https://img.shields.io/github/v/release/Kkkakania/matlab-scientific-figures)](https://github.com/Kkkakania/matlab-scientific-figures/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A clean-room gallery of MATLAB figure scripts.
+A clean-room MATLAB scientific-figure library.
 
-Each example is meant to be copied: synthetic data in, publication-style PNG,
-SVG, or PDF out. No private source packs, no journal screenshots, no hidden
-helper archive.
+Use the reusable `sftPlot*.m` APIs with your own data, or regenerate the
+synthetic gallery examples as reference outputs. No private source packs, no
+journal screenshots, no hidden helper archive.
 
 ## Project Ecosystem
 
@@ -25,6 +25,12 @@ tooling ecosystem:
 The repositories are maintained together, but each has a separate scope:
 templates live here, automated quality checks live in `matlab-figure-ci`, and
 agent-facing plotting workflows live in `matlab-plotting-skill`.
+
+Feedback channels are split by workflow: use
+[`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9)
+for gallery/API first-use feedback, and
+[`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11)
+for agent-assisted data-to-figure rendering feedback.
 
 Current public release: `v3.5.0`. This is still an early public project: the
 gallery and CLI are usable, but adoption claims should stay conservative until

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Clarify that the main repository is now a reusable MATLAB plotting library,
+  not only copyable gallery scripts, and link first-use feedback channels for
+  both gallery/API and agent-assisted rendering workflows.
 - Update the user-data guide to present the 30 reusable `sftPlot*.m` APIs as
   the default path, with gallery examples serving as reference wrappers.
 - Add `sftListTags`, `sftFindTemplatesByTag`, `sftRenderTags`, and CLI

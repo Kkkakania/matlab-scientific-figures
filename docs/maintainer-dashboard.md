@@ -12,8 +12,10 @@ scope, and where feedback should go.
 - Companion CI tool: `matlab-figure-ci` is dogfooded at `v2.4.5`.
 - MATLAB rendering in GitHub Actions: disabled by default because public
   runners normally do not include MATLAB.
-- Public feedback channel: issue
-  [#9](https://github.com/Kkkakania/matlab-scientific-figures/issues/9).
+- Public gallery/API feedback channel:
+  [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9).
+- Public agent-assisted rendering feedback channel:
+  [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11).
 
 ## Quality Signals
 
@@ -69,7 +71,8 @@ notes agree. It should not look maintained because tags are produced quickly.
 
 ## Next Maintenance Moves
 
-1. Collect first-use feedback from a fresh clone.
+1. Collect first-use feedback from a fresh clone of the gallery and from the
+   agent-assisted rendering workflow.
 2. Prioritize one or two template requests that reuse the existing theme,
    palette, export, and manifest system.
 3. Use the static preflight bundle for documentation and metadata pull
