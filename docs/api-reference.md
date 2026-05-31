@@ -75,6 +75,7 @@ close(fig);
 | `sftPlotLineSeries(ax, x, y, labels, theme)` | Draw one or more themed line series into an existing axes. |
 | `sftPlotConfidenceBand(ax, x, center, lower, upper, labels, theme)` | Draw line series with shaded uncertainty bands. |
 | `sftPlotGroupedScatter(ax, x, y, groups, theme)` | Draw a grouped x-y scatter plot into an existing axes. |
+| `sftPlotDensityScatter(ax, x, y, bins, theme)` | Draw a density-colored x-y scatter plot for large point clouds. |
 
 Example:
 
@@ -123,6 +124,20 @@ xlabel(ax, "Feature X");
 ylabel(ax, "Feature Y");
 title(ax, "Grouped Relationship");
 sftExport(fig, "gallery/my_grouped_scatter", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+x = [randn(300, 1) * 0.7; randn(220, 1) * 0.45 + 1.1];
+y = [0.6 * x(1:300) + randn(300, 1) * 0.35; -0.4 * x(301:end) + randn(220, 1) * 0.28 + 1.2];
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotDensityScatter(ax, x, y, 36, theme);
+xlabel(ax, "Variable X");
+ylabel(ax, "Variable Y");
+title(ax, "Density Scatter");
+sftExport(fig, "gallery/my_density_scatter", ["png", "svg"]);
 close(fig);
 ```
 

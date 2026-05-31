@@ -339,6 +339,30 @@ verifyError(testCase, @() sftPlotGroupedScatter(ax, [1 2], [1 2], "A", ...
     sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotDensityScatterReturnsDensityForEachPoint(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, pointHandle, density] = sftPlotDensityScatter(ax, [1 1 2 3], ...
+    [1 1 2 3], 3, sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(pointHandle, 'scatter'));
+verifyEqual(testCase, numel(density), 4);
+verifyGreaterThan(testCase, max(density), min(density));
+verifyEqual(testCase, numel(findall(fig, 'Type', 'ColorBar')), 1);
+end
+
+function testPlotDensityScatterRejectsInvalidBins(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotDensityScatter(ax, [1 2], [1 2], 1, ...
+    sftTheme()), 'sft:InvalidBins');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

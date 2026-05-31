@@ -79,6 +79,21 @@ sftExport(fig, "outputs/my_grouped_scatter", ["png", "svg"]);
 close(fig);
 ```
 
+For dense point clouds, use a density-colored scatter so overlapping points stay
+readable:
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotDensityScatter(ax, featureX, responseY, 36, theme);
+xlabel(ax, "Variable X");
+ylabel(ax, "Variable Y");
+title(ax, "Density Scatter Plot");
+sftExport(fig, "outputs/my_density_scatter", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
