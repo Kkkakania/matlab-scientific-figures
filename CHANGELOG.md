@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add a bounded maintainer activity snapshot covering own-repo maintenance and
+  external MATLAB pull requests without claiming broad adoption.
 - Add a roadmap status-language check so released milestones do not drift back
   into stale "planned additions" wording.
 - Clarify that the main repository is now a reusable MATLAB plotting library,

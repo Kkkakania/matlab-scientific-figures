@@ -35,6 +35,9 @@ source packs, or full local paths in feedback.
 - Release tags should slow down after the initial public hardening pass; small
   documentation and issue-intake improvements can land on `main` without
   creating a new tag.
+- A factual maintainer activity snapshot is kept in
+  [Maintainer activity](maintainer-activity.md) for internal and external
+  review without turning activity into adoption claims.
 
 ## What This Does Not Claim
 

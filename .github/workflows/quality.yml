@@ -26,6 +26,9 @@ jobs:
       - name: Verify roadmap status language
         run: ./scripts/check_roadmap_status.sh
 
+      - name: Verify maintainer activity bounds
+        run: ./scripts/check_maintainer_activity.sh
+
       - name: Check citation metadata
         run: ./scripts/check_citation.sh
 

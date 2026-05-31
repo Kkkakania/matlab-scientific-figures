@@ -34,6 +34,7 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | Metadata consistency | `./scripts/check_gallery_consistency.sh` | Drift between registry, examples docs, gallery reference, gallery files, and CI config |
 | Version metadata | `./scripts/check_version_consistency.sh` | README, ROADMAP, version plan, maintainer dashboard, release cadence, and changelog release mismatch |
 | Roadmap status | `./scripts/check_roadmap_status.sh` | Stale roadmap language that makes released milestones look like old planned work |
+| Maintainer activity | `./scripts/check_maintainer_activity.sh` | Unsupported adoption or approval claims in the activity snapshot |
 | Citation metadata | `./scripts/check_citation.sh` | Missing or stale `CITATION.cff` metadata |
 | Documentation links | `./scripts/check_docs_links.sh` | Broken local Markdown links and gallery image references |
 | API reference | `./scripts/check_api_reference.sh` | Public MATLAB functions missing from the API reference |

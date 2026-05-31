@@ -18,6 +18,8 @@ scope, and where feedback should go.
   [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11).
 - Cross-repository status view:
   [Ecosystem status](ecosystem-status.md).
+- Public maintenance activity snapshot:
+  [Maintainer activity](maintainer-activity.md).
 
 ## Quality Signals
 
@@ -84,3 +86,5 @@ notes agree. It should not look maintained because tags are produced quickly.
 5. Keep `matlab-figure-ci` dogfooding aligned with the latest released tag.
 6. Prepare the next release only when examples, docs, gallery outputs, and
    checks all move together.
+7. Keep the maintainer activity snapshot factual; update it only from current
+   PR state and avoid adoption or approval claims.

@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+DOC="$ROOT_DIR/docs/maintainer-activity.md"
+
+if [[ ! -s "$DOC" ]]; then
+  echo "missing maintainer activity document" >&2
+  exit 1
+fi
+
+require_text() {
+  local text="$1"
+  if ! grep -Fq -- "$text" "$DOC"; then
+    echo "maintainer activity document missing: $text" >&2
+    exit 1
+  fi
+}
+
+reject_text() {
+  local text="$1"
+  if grep -Fiq -- "$text" "$DOC"; then
+    echo "maintainer activity document contains unsupported claim: $text" >&2
+    exit 1
+  fi
+}
+
+require_text "Snapshot date: 2026-06-01"
+require_text "not an adoption claim"
+require_text "## Own Repositories"
+require_text "## External Pull Requests"
+require_text "matlab2tikz/matlab2tikz/pull/1158"
+require_text "fieldtrip/fieldtrip/pull/2591"
+require_text "fieldtrip/website/pull/927"
+require_text "chebfun/chebfun/pull/2495"
+require_text "scottclowe/matlab-schemer/pull/47"
+require_text "Do not ask for status updates"
+require_text "show broad adoption"
+require_text "guaranteed program eligibility"
+
+reject_text "widely adopted"
+reject_text "thousands of downloads"
+reject_text "guaranteed approval"
+reject_text "will be approved"
+reject_text "fake"
+
+echo "Maintainer activity document is factual and bounded."

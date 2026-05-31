@@ -41,6 +41,7 @@ docs if you want to change the project.
 - [Release checklist](release-checklist.md)
 - [Release cadence](release-cadence.md)
 - [Maintainer dashboard](maintainer-dashboard.md)
+- [Maintainer activity](maintainer-activity.md)
 - [Ecosystem status](ecosystem-status.md)
 - [Provenance policy](provenance-policy.md)
 - [Maintainer workflow](openai-codex-workflow.md)
