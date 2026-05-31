@@ -49,6 +49,7 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | Compatibility docs | `./scripts/check_compatibility_docs.sh` | Missing notes for version-sensitive MATLAB APIs |
 | Color accessibility audit | `./scripts/check_color_accessibility_audit.sh` | Missing color-risk review rows for public templates |
 | CLI script static checks | `./scripts/check_cli_script_static.sh` | Shell helper drift for format selection or documented CLI examples |
+| render_all argument checks | `./scripts/check_render_all_args.sh` | Broken non-MATLAB validation for export formats and output paths |
 | Timeout helper | `./scripts/check_timeout_helper.sh` | Timeout wrapper regressions before MATLAB checks rely on it |
 | Forbidden files | `./scripts/check_forbidden_files.sh` | `.p`, `.fig`, `.mat`, Office files, PDFs, archives, raw/OCR/tmp folders |
 | Privacy scan | `./scripts/check_privacy.sh` | Emails, local paths, personal identifiers, and platform traces |
