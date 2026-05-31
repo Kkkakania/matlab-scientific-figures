@@ -32,6 +32,10 @@
 - Add generated tag-gallery documentation backed by the template manifest.
 - Expand MATLAB compatibility notes and guard them with a static check.
 - Add a low-noise color-accessibility audit coverage check.
+- Replace a version-gated `clim` call with `caxis` so the documented R2020b
+  floor stays accurate.
+- Tune the default categorical palette for clearer eight-category separation
+  and document palette-choice guidance.
 
 ## v3.5.0 - 2026-05-31
 

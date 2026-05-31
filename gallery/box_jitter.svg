@@ -8,16 +8,16 @@
 </defs>
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
-<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
-<path vector-effect="none" fill-rule="evenodd" d="M12,9 L620,9 L620,512 L12,512 L12,9"/>
+<path vector-effect="none" fill-rule="evenodd" d="M13,9 L621,9 L621,512 L13,512 L13,9"/>
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-6.68318,-5)"
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(5e-05,0,0,5e-05,-7.18318,-5)"
 font-family=".AppleSystemUIFont" font-size="13" font-weight="400" font-style="normal"
 >
-<path vector-effect="none" fill-rule="evenodd" d="M880000,380000 L880000,4.5e+06 L6.15e+06,4.5e+06 L6.15e+06,380000 L880000,380000"/>
+<path vector-effect="none" fill-rule="evenodd" d="M890000,380000 L890000,4.5e+06 L6.16e+06,4.5e+06 L6.16e+06,380000 L890000,380000"/>
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,86.8168,10)"
@@ -27,253 +27,253 @@ font-family="Arial" font-size="24" font-weight="700" font-style="normal"
  >Box Plot With Jittered Points</text>
 </g>
 
-<g fill="#d1dbe6" fill-opacity="0.2" stroke="none" transform="matrix(5e-05,0,0,5e-05,-6.68318,-5)"
+<g fill="#d1dbe6" fill-opacity="0.2" stroke="none" transform="matrix(5e-05,0,0,5e-05,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<path vector-effect="none" fill-rule="evenodd" d="M1.46556e+06,3.34775e+06 L2.05111e+06,3.34775e+06 L2.05111e+06,2.72388e+06 L1.46556e+06,2.72388e+06 L1.46556e+06,3.34775e+06"/>
+<path vector-effect="none" fill-rule="evenodd" d="M1.47556e+06,3.34775e+06 L2.06111e+06,3.34775e+06 L2.06111e+06,2.72388e+06 L1.47556e+06,2.72388e+06 L1.47556e+06,3.34775e+06"/>
 </g>
 
-<g fill="#d1dbe6" fill-opacity="0.2" stroke="none" transform="matrix(5e-05,0,0,5e-05,-6.68318,-5)"
+<g fill="#d1dbe6" fill-opacity="0.2" stroke="none" transform="matrix(5e-05,0,0,5e-05,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<path vector-effect="none" fill-rule="evenodd" d="M2.63667e+06,2.98444e+06 L3.22222e+06,2.98444e+06 L3.22222e+06,2.31137e+06 L2.63667e+06,2.31137e+06 L2.63667e+06,2.98444e+06"/>
+<path vector-effect="none" fill-rule="evenodd" d="M2.64667e+06,2.98444e+06 L3.23222e+06,2.98444e+06 L3.23222e+06,2.31137e+06 L2.64667e+06,2.31137e+06 L2.64667e+06,2.98444e+06"/>
 </g>
 
-<g fill="#d1dbe6" fill-opacity="0.2" stroke="none" transform="matrix(5e-05,0,0,5e-05,-6.68318,-5)"
+<g fill="#d1dbe6" fill-opacity="0.2" stroke="none" transform="matrix(5e-05,0,0,5e-05,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<path vector-effect="none" fill-rule="evenodd" d="M3.80778e+06,2.69299e+06 L4.39333e+06,2.69299e+06 L4.39333e+06,1.74388e+06 L3.80778e+06,1.74388e+06 L3.80778e+06,2.69299e+06"/>
+<path vector-effect="none" fill-rule="evenodd" d="M3.81778e+06,2.69299e+06 L4.40333e+06,2.69299e+06 L4.40333e+06,1.74388e+06 L3.81778e+06,1.74388e+06 L3.81778e+06,2.69299e+06"/>
 </g>
 
-<g fill="#d1dbe6" fill-opacity="0.2" stroke="none" transform="matrix(5e-05,0,0,5e-05,-6.68318,-5)"
+<g fill="#d1dbe6" fill-opacity="0.2" stroke="none" transform="matrix(5e-05,0,0,5e-05,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<path vector-effect="none" fill-rule="evenodd" d="M4.97889e+06,2.07658e+06 L5.56444e+06,2.07658e+06 L5.56444e+06,1.12342e+06 L4.97889e+06,1.12342e+06 L4.97889e+06,2.07658e+06"/>
+<path vector-effect="none" fill-rule="evenodd" d="M4.98889e+06,2.07658e+06 L5.57444e+06,2.07658e+06 L5.57444e+06,1.12342e+06 L4.98889e+06,1.12342e+06 L4.98889e+06,2.07658e+06"/>
 </g>
 
-<g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#d9d9d9" fill-opacity="1" stroke="#d9d9d9" stroke-opacity="1" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<polyline fill="none" vector-effect="none" points="175.833,411.495 175.833,334.775 " />
-<polyline fill="none" vector-effect="none" points="175.833,272.388 175.833,207.783 " />
-<polyline fill="none" vector-effect="none" points="161.194,411.495 190.472,411.495 " />
-<polyline fill="none" vector-effect="none" points="161.194,207.783 190.472,207.783 " />
-<polyline fill="none" vector-effect="none" points="292.944,388.939 292.944,298.444 " />
-<polyline fill="none" vector-effect="none" points="292.944,231.137 292.944,203.928 " />
-<polyline fill="none" vector-effect="none" points="278.306,388.939 307.583,388.939 " />
-<polyline fill="none" vector-effect="none" points="278.306,203.928 307.583,203.928 " />
-<polyline fill="none" vector-effect="none" points="410.056,344.236 410.056,269.299 " />
-<polyline fill="none" vector-effect="none" points="410.056,174.388 410.056,107.095 " />
-<polyline fill="none" vector-effect="none" points="395.417,344.236 424.694,344.236 " />
-<polyline fill="none" vector-effect="none" points="395.417,107.095 424.694,107.095 " />
-<polyline fill="none" vector-effect="none" points="527.167,262.232 527.167,207.658 " />
-<polyline fill="none" vector-effect="none" points="527.167,112.342 527.167,47.8107 " />
-<polyline fill="none" vector-effect="none" points="512.528,262.232 541.806,262.232 " />
-<polyline fill="none" vector-effect="none" points="512.528,47.8107 541.806,47.8107 " />
+<polyline fill="none" vector-effect="none" points="176.833,411.495 176.833,334.775 " />
+<polyline fill="none" vector-effect="none" points="176.833,272.388 176.833,207.783 " />
+<polyline fill="none" vector-effect="none" points="162.194,411.495 191.472,411.495 " />
+<polyline fill="none" vector-effect="none" points="162.194,207.783 191.472,207.783 " />
+<polyline fill="none" vector-effect="none" points="293.944,388.939 293.944,298.444 " />
+<polyline fill="none" vector-effect="none" points="293.944,231.137 293.944,203.928 " />
+<polyline fill="none" vector-effect="none" points="279.306,388.939 308.583,388.939 " />
+<polyline fill="none" vector-effect="none" points="279.306,203.928 308.583,203.928 " />
+<polyline fill="none" vector-effect="none" points="411.056,344.236 411.056,269.299 " />
+<polyline fill="none" vector-effect="none" points="411.056,174.388 411.056,107.095 " />
+<polyline fill="none" vector-effect="none" points="396.417,344.236 425.694,344.236 " />
+<polyline fill="none" vector-effect="none" points="396.417,107.095 425.694,107.095 " />
+<polyline fill="none" vector-effect="none" points="528.167,262.232 528.167,207.658 " />
+<polyline fill="none" vector-effect="none" points="528.167,112.342 528.167,47.8107 " />
+<polyline fill="none" vector-effect="none" points="513.528,262.232 542.806,262.232 " />
+<polyline fill="none" vector-effect="none" points="513.528,47.8107 542.806,47.8107 " />
 </g>
 
-<g fill="#d1dbe6" fill-opacity="1" stroke="#d1dbe6" stroke-opacity="1" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#d1dbe6" fill-opacity="1" stroke="#d1dbe6" stroke-opacity="1" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<polyline fill="none" vector-effect="none" points="146.556,304.499 205.111,304.499 " />
-<polyline fill="none" vector-effect="none" points="263.667,254.541 322.222,254.541 " />
-<polyline fill="none" vector-effect="none" points="380.778,230.944 439.333,230.944 " />
-<polyline fill="none" vector-effect="none" points="497.889,167.533 556.444,167.533 " />
+<polyline fill="none" vector-effect="none" points="147.556,304.499 206.111,304.499 " />
+<polyline fill="none" vector-effect="none" points="264.667,254.541 323.222,254.541 " />
+<polyline fill="none" vector-effect="none" points="381.778,230.944 440.333,230.944 " />
+<polyline fill="none" vector-effect="none" points="498.889,167.533 557.444,167.533 " />
 </g>
 
-<g fill="none" stroke="#d1dbe6" stroke-opacity="1" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="none" stroke="#d1dbe6" stroke-opacity="1" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<path vector-effect="none" fill-rule="evenodd" d="M146.556,334.775 L205.111,334.775 L205.111,272.388 L146.556,272.388 L146.556,334.775"/>
-<path vector-effect="none" fill-rule="evenodd" d="M263.667,298.444 L322.222,298.444 L322.222,231.137 L263.667,231.137 L263.667,298.444"/>
-<path vector-effect="none" fill-rule="evenodd" d="M380.778,269.299 L439.333,269.299 L439.333,174.388 L380.778,174.388 L380.778,269.299"/>
-<path vector-effect="none" fill-rule="evenodd" d="M497.889,207.658 L556.444,207.658 L556.444,112.342 L497.889,112.342 L497.889,207.658"/>
+<path vector-effect="none" fill-rule="evenodd" d="M147.556,334.775 L206.111,334.775 L206.111,272.388 L147.556,272.388 L147.556,334.775"/>
+<path vector-effect="none" fill-rule="evenodd" d="M264.667,298.444 L323.222,298.444 L323.222,231.137 L264.667,231.137 L264.667,298.444"/>
+<path vector-effect="none" fill-rule="evenodd" d="M381.778,269.299 L440.333,269.299 L440.333,174.388 L381.778,174.388 L381.778,269.299"/>
+<path vector-effect="none" fill-rule="evenodd" d="M498.889,207.658 L557.444,207.658 L557.444,112.342 L498.889,112.342 L498.889,207.658"/>
 </g>
 
-<g fill="#0d528a" fill-opacity="0.6" stroke="none" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#0073b3" fill-opacity="0.6" stroke="none" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<circle cx="183.16" cy="304.499" r="5.09902"/>
-<circle cx="187.77" cy="297.359" r="5.09902"/>
-<circle cx="174.698" cy="263.24" r="5.09902"/>
-<circle cx="182.731" cy="241.162" r="5.09902"/>
-<circle cx="185.65" cy="273.549" r="5.09902"/>
-<circle cx="182.678" cy="341.013" r="5.09902"/>
-<circle cx="177.797" cy="260.232" r="5.09902"/>
-<circle cx="172.961" cy="272.001" r="5.09902"/>
-<circle cx="184.933" cy="359.698" r="5.09902"/>
-<circle cx="188.492" cy="299.427" r="5.09902"/>
-<circle cx="172.33" cy="309.593" r="5.09902"/>
-<circle cx="163.651" cy="371.447" r="5.09902"/>
-<circle cx="175.302" cy="279.942" r="5.09902"/>
-<circle cx="167.46" cy="322.2" r="5.09902"/>
-<circle cx="164.733" cy="228.392" r="5.09902"/>
-<circle cx="173.395" cy="361.596" r="5.09902"/>
-<circle cx="181.607" cy="333.583" r="5.09902"/>
-<circle cx="168.985" cy="341.168" r="5.09902"/>
-<circle cx="170.07" cy="351.176" r="5.09902"/>
-<circle cx="168.945" cy="283.806" r="5.09902"/>
-<circle cx="175.389" cy="267.321" r="5.09902"/>
-<circle cx="180.566" cy="334.061" r="5.09902"/>
-<circle cx="178.598" cy="260.042" r="5.09902"/>
-<circle cx="179.571" cy="411.495" r="5.09902"/>
-<circle cx="168.053" cy="329.495" r="5.09902"/>
-<circle cx="185.963" cy="308.365" r="5.09902"/>
-<circle cx="168.727" cy="349.466" r="5.09902"/>
-<circle cx="167.582" cy="307.436" r="5.09902"/>
-<circle cx="168.608" cy="286.886" r="5.09902"/>
-<circle cx="163.214" cy="291.73" r="5.09902"/>
-<circle cx="186.655" cy="316.702" r="5.09902"/>
-<circle cx="184.766" cy="252.995" r="5.09902"/>
-<circle cx="185.043" cy="207.783" r="5.09902"/>
-<circle cx="175.322" cy="335.014" r="5.09902"/>
-<circle cx="172.19" cy="291.022" r="5.09902"/>
+<circle cx="184.16" cy="304.499" r="5.09902"/>
+<circle cx="188.77" cy="297.359" r="5.09902"/>
+<circle cx="175.698" cy="263.24" r="5.09902"/>
+<circle cx="183.731" cy="241.162" r="5.09902"/>
+<circle cx="186.65" cy="273.549" r="5.09902"/>
+<circle cx="183.678" cy="341.013" r="5.09902"/>
+<circle cx="178.797" cy="260.232" r="5.09902"/>
+<circle cx="173.961" cy="272.001" r="5.09902"/>
+<circle cx="185.933" cy="359.698" r="5.09902"/>
+<circle cx="189.492" cy="299.427" r="5.09902"/>
+<circle cx="173.33" cy="309.593" r="5.09902"/>
+<circle cx="164.651" cy="371.447" r="5.09902"/>
+<circle cx="176.302" cy="279.942" r="5.09902"/>
+<circle cx="168.46" cy="322.2" r="5.09902"/>
+<circle cx="165.733" cy="228.392" r="5.09902"/>
+<circle cx="174.395" cy="361.596" r="5.09902"/>
+<circle cx="182.607" cy="333.583" r="5.09902"/>
+<circle cx="169.985" cy="341.168" r="5.09902"/>
+<circle cx="171.07" cy="351.176" r="5.09902"/>
+<circle cx="169.945" cy="283.806" r="5.09902"/>
+<circle cx="176.389" cy="267.321" r="5.09902"/>
+<circle cx="181.566" cy="334.061" r="5.09902"/>
+<circle cx="179.598" cy="260.042" r="5.09902"/>
+<circle cx="180.571" cy="411.495" r="5.09902"/>
+<circle cx="169.053" cy="329.495" r="5.09902"/>
+<circle cx="186.963" cy="308.365" r="5.09902"/>
+<circle cx="169.727" cy="349.466" r="5.09902"/>
+<circle cx="168.582" cy="307.436" r="5.09902"/>
+<circle cx="169.608" cy="286.886" r="5.09902"/>
+<circle cx="164.214" cy="291.73" r="5.09902"/>
+<circle cx="187.655" cy="316.702" r="5.09902"/>
+<circle cx="185.766" cy="252.995" r="5.09902"/>
+<circle cx="186.043" cy="207.783" r="5.09902"/>
+<circle cx="176.322" cy="335.014" r="5.09902"/>
+<circle cx="173.19" cy="291.022" r="5.09902"/>
 </g>
 
-<g fill="#e36b2e" fill-opacity="0.6" stroke="none" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#e69e00" fill-opacity="0.6" stroke="none" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<circle cx="296.13" cy="286.908" r="5.09902"/>
-<circle cx="296.273" cy="217.845" r="5.09902"/>
-<circle cx="302.486" cy="311.208" r="5.09902"/>
-<circle cx="298.852" cy="307.968" r="5.09902"/>
-<circle cx="282.879" cy="388.939" r="5.09902"/>
-<circle cx="286.996" cy="227.785" r="5.09902"/>
-<circle cx="294.691" cy="339.778" r="5.09902"/>
-<circle cx="284.66" cy="233.401" r="5.09902"/>
-<circle cx="283.172" cy="233.129" r="5.09902"/>
-<circle cx="300.652" cy="232.443" r="5.09902"/>
-<circle cx="292.915" cy="269.222" r="5.09902"/>
-<circle cx="283.058" cy="213.087" r="5.09902"/>
-<circle cx="298.365" cy="245.143" r="5.09902"/>
-<circle cx="284.499" cy="279.265" r="5.09902"/>
-<circle cx="280.137" cy="329.683" r="5.09902"/>
-<circle cx="284.401" cy="279.742" r="5.09902"/>
-<circle cx="286.804" cy="253.733" r="5.09902"/>
-<circle cx="290.458" cy="289.532" r="5.09902"/>
-<circle cx="282.549" cy="340.349" r="5.09902"/>
-<circle cx="284.818" cy="229.786" r="5.09902"/>
-<circle cx="305.616" cy="238.481" r="5.09902"/>
-<circle cx="287.064" cy="265.487" r="5.09902"/>
-<circle cx="289.145" cy="229.454" r="5.09902"/>
-<circle cx="299.901" cy="300.241" r="5.09902"/>
-<circle cx="295.906" cy="239.348" r="5.09902"/>
-<circle cx="280.371" cy="246.038" r="5.09902"/>
-<circle cx="304.184" cy="330.339" r="5.09902"/>
-<circle cx="303.034" cy="212.079" r="5.09902"/>
-<circle cx="281.288" cy="226.87" r="5.09902"/>
-<circle cx="302.712" cy="230.702" r="5.09902"/>
-<circle cx="304.919" cy="293.051" r="5.09902"/>
-<circle cx="302.54" cy="203.928" r="5.09902"/>
-<circle cx="290.851" cy="254.541" r="5.09902"/>
-<circle cx="297.037" cy="305.538" r="5.09902"/>
-<circle cx="284.389" cy="267.642" r="5.09902"/>
+<circle cx="297.13" cy="286.908" r="5.09902"/>
+<circle cx="297.273" cy="217.845" r="5.09902"/>
+<circle cx="303.486" cy="311.208" r="5.09902"/>
+<circle cx="299.852" cy="307.968" r="5.09902"/>
+<circle cx="283.879" cy="388.939" r="5.09902"/>
+<circle cx="287.996" cy="227.785" r="5.09902"/>
+<circle cx="295.691" cy="339.778" r="5.09902"/>
+<circle cx="285.66" cy="233.401" r="5.09902"/>
+<circle cx="284.172" cy="233.129" r="5.09902"/>
+<circle cx="301.652" cy="232.443" r="5.09902"/>
+<circle cx="293.915" cy="269.222" r="5.09902"/>
+<circle cx="284.058" cy="213.087" r="5.09902"/>
+<circle cx="299.365" cy="245.143" r="5.09902"/>
+<circle cx="285.499" cy="279.265" r="5.09902"/>
+<circle cx="281.137" cy="329.683" r="5.09902"/>
+<circle cx="285.401" cy="279.742" r="5.09902"/>
+<circle cx="287.804" cy="253.733" r="5.09902"/>
+<circle cx="291.458" cy="289.532" r="5.09902"/>
+<circle cx="283.549" cy="340.349" r="5.09902"/>
+<circle cx="285.818" cy="229.786" r="5.09902"/>
+<circle cx="306.616" cy="238.481" r="5.09902"/>
+<circle cx="288.064" cy="265.487" r="5.09902"/>
+<circle cx="290.145" cy="229.454" r="5.09902"/>
+<circle cx="300.901" cy="300.241" r="5.09902"/>
+<circle cx="296.906" cy="239.348" r="5.09902"/>
+<circle cx="281.371" cy="246.038" r="5.09902"/>
+<circle cx="305.184" cy="330.339" r="5.09902"/>
+<circle cx="304.034" cy="212.079" r="5.09902"/>
+<circle cx="282.288" cy="226.87" r="5.09902"/>
+<circle cx="303.712" cy="230.702" r="5.09902"/>
+<circle cx="305.919" cy="293.051" r="5.09902"/>
+<circle cx="303.54" cy="203.928" r="5.09902"/>
+<circle cx="291.851" cy="254.541" r="5.09902"/>
+<circle cx="298.037" cy="305.538" r="5.09902"/>
+<circle cx="285.389" cy="267.642" r="5.09902"/>
 </g>
 
-<g fill="#1a8570" fill-opacity="0.6" stroke="none" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#009e73" fill-opacity="0.6" stroke="none" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<circle cx="403.129" cy="230.944" r="5.09902"/>
-<circle cx="409.257" cy="241.71" r="5.09902"/>
-<circle cx="405.973" cy="122.015" r="5.09902"/>
-<circle cx="421.755" cy="262.931" r="5.09902"/>
-<circle cx="415.952" cy="276.335" r="5.09902"/>
-<circle cx="403.071" cy="183.179" r="5.09902"/>
-<circle cx="409.424" cy="282.645" r="5.09902"/>
-<circle cx="409.3" cy="268.338" r="5.09902"/>
-<circle cx="417.98" cy="283.649" r="5.09902"/>
-<circle cx="399.897" cy="279.382" r="5.09902"/>
-<circle cx="422.183" cy="143.969" r="5.09902"/>
-<circle cx="415.294" cy="173.006" r="5.09902"/>
-<circle cx="409.55" cy="221.794" r="5.09902"/>
-<circle cx="413.974" cy="269.619" r="5.09902"/>
-<circle cx="418.367" cy="234.999" r="5.09902"/>
-<circle cx="407.024" cy="171.091" r="5.09902"/>
-<circle cx="403.777" cy="150.303" r="5.09902"/>
-<circle cx="416.25" cy="107.095" r="5.09902"/>
-<circle cx="406.813" cy="182.946" r="5.09902"/>
-<circle cx="415.798" cy="142.26" r="5.09902"/>
-<circle cx="421.13" cy="236.796" r="5.09902"/>
-<circle cx="402.841" cy="154.254" r="5.09902"/>
-<circle cx="411.219" cy="178.533" r="5.09902"/>
-<circle cx="410.674" cy="334.09" r="5.09902"/>
-<circle cx="420.895" cy="249.773" r="5.09902"/>
-<circle cx="418.881" cy="218.024" r="5.09902"/>
-<circle cx="401.716" cy="274.125" r="5.09902"/>
-<circle cx="401.92" cy="344.235" r="5.09902"/>
-<circle cx="418.035" cy="274.883" r="5.09902"/>
-<circle cx="415.646" cy="250.272" r="5.09902"/>
-<circle cx="417.52" cy="189.923" r="5.09902"/>
-<circle cx="408.79" cy="233.944" r="5.09902"/>
-<circle cx="400.94" cy="157.956" r="5.09902"/>
-<circle cx="421.409" cy="210.551" r="5.09902"/>
-<circle cx="401.999" cy="193.115" r="5.09902"/>
+<circle cx="404.129" cy="230.944" r="5.09902"/>
+<circle cx="410.257" cy="241.71" r="5.09902"/>
+<circle cx="406.973" cy="122.015" r="5.09902"/>
+<circle cx="422.755" cy="262.931" r="5.09902"/>
+<circle cx="416.952" cy="276.335" r="5.09902"/>
+<circle cx="404.071" cy="183.179" r="5.09902"/>
+<circle cx="410.424" cy="282.645" r="5.09902"/>
+<circle cx="410.3" cy="268.338" r="5.09902"/>
+<circle cx="418.98" cy="283.649" r="5.09902"/>
+<circle cx="400.897" cy="279.382" r="5.09902"/>
+<circle cx="423.183" cy="143.969" r="5.09902"/>
+<circle cx="416.294" cy="173.006" r="5.09902"/>
+<circle cx="410.55" cy="221.794" r="5.09902"/>
+<circle cx="414.974" cy="269.619" r="5.09902"/>
+<circle cx="419.367" cy="234.999" r="5.09902"/>
+<circle cx="408.024" cy="171.091" r="5.09902"/>
+<circle cx="404.777" cy="150.303" r="5.09902"/>
+<circle cx="417.25" cy="107.095" r="5.09902"/>
+<circle cx="407.813" cy="182.946" r="5.09902"/>
+<circle cx="416.798" cy="142.26" r="5.09902"/>
+<circle cx="422.13" cy="236.796" r="5.09902"/>
+<circle cx="403.841" cy="154.254" r="5.09902"/>
+<circle cx="412.219" cy="178.533" r="5.09902"/>
+<circle cx="411.674" cy="334.09" r="5.09902"/>
+<circle cx="421.895" cy="249.773" r="5.09902"/>
+<circle cx="419.881" cy="218.024" r="5.09902"/>
+<circle cx="402.716" cy="274.125" r="5.09902"/>
+<circle cx="402.92" cy="344.235" r="5.09902"/>
+<circle cx="419.035" cy="274.883" r="5.09902"/>
+<circle cx="416.646" cy="250.272" r="5.09902"/>
+<circle cx="418.52" cy="189.923" r="5.09902"/>
+<circle cx="409.79" cy="233.944" r="5.09902"/>
+<circle cx="401.94" cy="157.956" r="5.09902"/>
+<circle cx="422.409" cy="210.551" r="5.09902"/>
+<circle cx="402.999" cy="193.115" r="5.09902"/>
 </g>
 
-<g fill="#b82e47" fill-opacity="0.6" stroke="none" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#d65e00" fill-opacity="0.6" stroke="none" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<circle cx="524.624" cy="47.8107" r="5.09902"/>
-<circle cx="539.672" cy="189.12" r="5.09902"/>
-<circle cx="526.001" cy="146.148" r="5.09902"/>
-<circle cx="538.345" cy="262.232" r="5.09902"/>
-<circle cx="538.457" cy="128.51" r="5.09902"/>
-<circle cx="515.058" cy="147.852" r="5.09902"/>
-<circle cx="534.793" cy="213.107" r="5.09902"/>
-<circle cx="514.566" cy="196.266" r="5.09902"/>
-<circle cx="535.63" cy="110.306" r="5.09902"/>
-<circle cx="527.539" cy="71.012" r="5.09902"/>
-<circle cx="530.68" cy="97.9154" r="5.09902"/>
-<circle cx="529.914" cy="188.562" r="5.09902"/>
-<circle cx="531.738" cy="57.9898" r="5.09902"/>
-<circle cx="539.242" cy="199.171" r="5.09902"/>
-<circle cx="525.376" cy="167.533" r="5.09902"/>
-<circle cx="535.987" cy="208.453" r="5.09902"/>
-<circle cx="536.987" cy="133.452" r="5.09902"/>
-<circle cx="520.382" cy="84.1551" r="5.09902"/>
-<circle cx="526.074" cy="103.237" r="5.09902"/>
-<circle cx="525.175" cy="228.264" r="5.09902"/>
-<circle cx="529.696" cy="105.957" r="5.09902"/>
-<circle cx="533.778" cy="155.596" r="5.09902"/>
-<circle cx="532.066" cy="239.484" r="5.09902"/>
-<circle cx="515.91" cy="216.462" r="5.09902"/>
-<circle cx="534.869" cy="208.587" r="5.09902"/>
-<circle cx="531.759" cy="118.449" r="5.09902"/>
-<circle cx="518.034" cy="88.7048" r="5.09902"/>
-<circle cx="518.528" cy="175.467" r="5.09902"/>
-<circle cx="528.677" cy="238.81" r="5.09902"/>
-<circle cx="530.421" cy="147.591" r="5.09902"/>
-<circle cx="535.058" cy="193.668" r="5.09902"/>
-<circle cx="520.536" cy="205.274" r="5.09902"/>
-<circle cx="518.986" cy="154.953" r="5.09902"/>
-<circle cx="537.633" cy="202.393" r="5.09902"/>
-<circle cx="523.464" cy="247.073" r="5.09902"/>
+<circle cx="525.624" cy="47.8107" r="5.09902"/>
+<circle cx="540.672" cy="189.12" r="5.09902"/>
+<circle cx="527.001" cy="146.148" r="5.09902"/>
+<circle cx="539.345" cy="262.232" r="5.09902"/>
+<circle cx="539.457" cy="128.51" r="5.09902"/>
+<circle cx="516.058" cy="147.852" r="5.09902"/>
+<circle cx="535.793" cy="213.107" r="5.09902"/>
+<circle cx="515.566" cy="196.266" r="5.09902"/>
+<circle cx="536.63" cy="110.306" r="5.09902"/>
+<circle cx="528.539" cy="71.012" r="5.09902"/>
+<circle cx="531.68" cy="97.9154" r="5.09902"/>
+<circle cx="530.914" cy="188.562" r="5.09902"/>
+<circle cx="532.738" cy="57.9898" r="5.09902"/>
+<circle cx="540.242" cy="199.171" r="5.09902"/>
+<circle cx="526.376" cy="167.533" r="5.09902"/>
+<circle cx="536.987" cy="208.453" r="5.09902"/>
+<circle cx="537.987" cy="133.452" r="5.09902"/>
+<circle cx="521.382" cy="84.1551" r="5.09902"/>
+<circle cx="527.074" cy="103.237" r="5.09902"/>
+<circle cx="526.175" cy="228.264" r="5.09902"/>
+<circle cx="530.696" cy="105.957" r="5.09902"/>
+<circle cx="534.778" cy="155.596" r="5.09902"/>
+<circle cx="533.066" cy="239.484" r="5.09902"/>
+<circle cx="516.91" cy="216.462" r="5.09902"/>
+<circle cx="535.869" cy="208.587" r="5.09902"/>
+<circle cx="532.759" cy="118.449" r="5.09902"/>
+<circle cx="519.034" cy="88.7048" r="5.09902"/>
+<circle cx="519.528" cy="175.467" r="5.09902"/>
+<circle cx="529.677" cy="238.81" r="5.09902"/>
+<circle cx="531.421" cy="147.591" r="5.09902"/>
+<circle cx="536.058" cy="193.668" r="5.09902"/>
+<circle cx="521.536" cy="205.274" r="5.09902"/>
+<circle cx="519.986" cy="154.953" r="5.09902"/>
+<circle cx="538.633" cy="202.393" r="5.09902"/>
+<circle cx="524.464" cy="247.073" r="5.09902"/>
 </g>
 
-<g fill="#dbdbdb" fill-opacity="0.25098" stroke="#dbdbdb" stroke-opacity="0.25098" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#dbdbdb" fill-opacity="0.25098" stroke="#dbdbdb" stroke-opacity="0.25098" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<polyline fill="none" vector-effect="none" points="175.833,38 175.833,450 " />
-<polyline fill="none" vector-effect="none" points="292.944,38 292.944,450 " />
-<polyline fill="none" vector-effect="none" points="410.056,38 410.056,450 " />
-<polyline fill="none" vector-effect="none" points="527.167,38 527.167,450 " />
-<polyline fill="none" vector-effect="none" points="88,450 615,450 " />
-<polyline fill="none" vector-effect="none" points="88,381.333 615,381.333 " />
-<polyline fill="none" vector-effect="none" points="88,312.667 615,312.667 " />
-<polyline fill="none" vector-effect="none" points="88,244 615,244 " />
-<polyline fill="none" vector-effect="none" points="88,175.333 615,175.333 " />
-<polyline fill="none" vector-effect="none" points="88,106.667 615,106.667 " />
-<polyline fill="none" vector-effect="none" points="88,38 615,38 " />
+<polyline fill="none" vector-effect="none" points="176.833,38 176.833,450 " />
+<polyline fill="none" vector-effect="none" points="293.944,38 293.944,450 " />
+<polyline fill="none" vector-effect="none" points="411.056,38 411.056,450 " />
+<polyline fill="none" vector-effect="none" points="528.167,38 528.167,450 " />
+<polyline fill="none" vector-effect="none" points="89,450 616,450 " />
+<polyline fill="none" vector-effect="none" points="89,381.333 616,381.333 " />
+<polyline fill="none" vector-effect="none" points="89,312.667 616,312.667 " />
+<polyline fill="none" vector-effect="none" points="89,244 616,244 " />
+<polyline fill="none" vector-effect="none" points="89,175.333 616,175.333 " />
+<polyline fill="none" vector-effect="none" points="89,106.667 616,106.667 " />
+<polyline fill="none" vector-effect="none" points="89,38 616,38 " />
 </g>
 
-<g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
-<polyline fill="none" vector-effect="none" points="88,450 615,450 " />
-<polyline fill="none" vector-effect="none" points="175.833,450 175.833,455.27 " />
-<polyline fill="none" vector-effect="none" points="292.944,450 292.944,455.27 " />
-<polyline fill="none" vector-effect="none" points="410.056,450 410.056,455.27 " />
-<polyline fill="none" vector-effect="none" points="527.167,450 527.167,455.27 " />
+<polyline fill="none" vector-effect="none" points="89,450 616,450 " />
+<polyline fill="none" vector-effect="none" points="176.833,450 176.833,455.27 " />
+<polyline fill="none" vector-effect="none" points="293.944,450 293.944,455.27 " />
+<polyline fill="none" vector-effect="none" points="411.056,450 411.056,455.27 " />
+<polyline fill="none" vector-effect="none" points="528.167,450 528.167,455.27 " />
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,74.4835,234.726)"
@@ -318,17 +318,17 @@ font-family="Arial" font-size="22" font-weight="400" font-style="normal"
  >Measurement</text>
 </g>
 
-<g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-6.68318,-5)"
+<g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round" transform="matrix(0.5,0,0,0.5,-7.18318,-5)"
 font-family="Arial" font-size="22" font-weight="400" font-style="normal"
 >
-<polyline fill="none" vector-effect="none" points="88,450 88,38 " />
-<polyline fill="none" vector-effect="none" points="82.73,450 88,450 " />
-<polyline fill="none" vector-effect="none" points="82.73,381.333 88,381.333 " />
-<polyline fill="none" vector-effect="none" points="82.73,312.667 88,312.667 " />
-<polyline fill="none" vector-effect="none" points="82.73,244 88,244 " />
-<polyline fill="none" vector-effect="none" points="82.73,175.333 88,175.333 " />
-<polyline fill="none" vector-effect="none" points="82.73,106.667 88,106.667 " />
-<polyline fill="none" vector-effect="none" points="82.73,38 88,38 " />
+<polyline fill="none" vector-effect="none" points="89,450 89,38 " />
+<polyline fill="none" vector-effect="none" points="83.73,450 89,450 " />
+<polyline fill="none" vector-effect="none" points="83.73,381.333 89,381.333 " />
+<polyline fill="none" vector-effect="none" points="83.73,312.667 89,312.667 " />
+<polyline fill="none" vector-effect="none" points="83.73,244 89,244 " />
+<polyline fill="none" vector-effect="none" points="83.73,175.333 89,175.333 " />
+<polyline fill="none" vector-effect="none" points="83.73,106.667 89,106.667 " />
+<polyline fill="none" vector-effect="none" points="83.73,38 89,38 " />
 </g>
 
 <g fill="#1f1f1f" fill-opacity="1" stroke="#1f1f1f" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.5,0,0,0.5,22.5909,223.5)"

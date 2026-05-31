@@ -13,7 +13,24 @@ thumbnails.
 - Keep foreground marks clearly separated from the white background.
 - Check that legends are close enough to the plotted marks to avoid ambiguity.
 - Prefer a small number of categories over a large rainbow palette.
+- The default `sftPalette('main', 8)` is ordered for up to eight categorical
+  series, but eight is still a lot for small figures. Add markers, line styles,
+  direct labels, or panel splits when categories are important.
+- Use `sftPalette('contrast', n)` for small, high-emphasis comparisons with
+  five or fewer categories.
 - Review the PNG thumbnail and SVG export because they can fail differently.
+
+## Palette Guidance
+
+`sftPalette('main', n)` uses a colorblind-aware order for common categorical
+plots. The first eight colors avoid an early neutral gray because that can be
+hard to separate from red or dark marks under color-vision deficiency
+simulations. For more than eight categories, prefer faceting, direct labels, or
+a domain-specific grouping strategy instead of relying on hue alone.
+
+This is a practical default, not a certified accessibility guarantee. Before a
+paper, poster, or README figure is published, review the rendered figure at the
+size where readers will actually see it.
 
 ## Current Gallery Audit
 

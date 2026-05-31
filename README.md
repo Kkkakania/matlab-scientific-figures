@@ -11,6 +11,20 @@ Each example is meant to be copied: synthetic data in, publication-style PNG,
 SVG, or PDF out. No private source packs, no journal screenshots, no hidden
 helper archive.
 
+Current public release: `v3.5.0`. This is still an early public project: the
+gallery and CLI are usable, but adoption claims should stay conservative until
+more external feedback arrives. The fast early version jumps mark API and
+workflow stabilization milestones from the first public hardening pass; future
+tags are intentionally slower and follow [Release cadence](docs/release-cadence.md).
+
+The GitHub badges run static, documentation, provenance, manifest, and committed
+gallery-output checks. They do not mean GitHub-hosted runners executed MATLAB.
+Run the MATLAB-enabled local gate before relying on regenerated figures:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh
+```
+
 ## Find The Right Template
 
 Start by listing the gallery:
@@ -160,45 +174,21 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 
 ## Documentation
 
-See [docs/README.md](docs/README.md) for the grouped documentation index.
+New users usually need only a few pages:
 
 | Guide | Purpose |
 |---|---|
 | [Tutorials](docs/tutorials.md) | Start from a concrete figure workflow |
-| [First-use test](docs/first-use-test.md) | Try the project from a fresh clone and report useful feedback |
 | [Gallery reference](docs/gallery-reference.md) | Pick a template by sight |
-| [Template reference](docs/template-reference.md) | List every template, renderer, task, and tag |
-| [Tag reference](docs/tag-reference.md) | Pick and render templates by exact tags |
-| [Tag gallery](docs/tag-gallery.md) | Browse generated template groups by tag |
-| [API reference](docs/api-reference.md) | Use the public MATLAB functions from scripts |
-| [Template manifest JSON](docs/template-manifest.json) | Machine-readable template metadata |
-| [Template manifest schema](docs/template-manifest-schema.md) | Consume gallery metadata from other tools |
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
 | [Use with your data](docs/use-with-your-data.md) | Turn a gallery example into your own figure |
-| [Recipes](docs/recipes.md) | Common copy-paste edits |
-| [Compatibility](docs/compatibility.md) | Check MATLAB version and toolbox expectations |
-| [Local checks](docs/local-checks.md) | Run fast static and full MATLAB gates |
 | [CSV and Excel tutorial](docs/tutorial-csv-excel-data.md) | Connect real tables to templates |
-| [Paper export tutorial](docs/tutorial-paper-export.md) | Export SVG, PDF, and PNG for papers |
-| [Batch rendering tutorial](docs/tutorial-batch-rendering.md) | Render many experiment figures at once |
-| [Figure quality checklist](docs/figure-quality-checklist.md) | Review a figure before release |
-| [Color accessibility](docs/color-accessibility.md) | Check hue, contrast, and grayscale risks |
-| [Quality gates](docs/quality-gates.md) | Understand local and CI checks |
-| [Maintainer dashboard](docs/maintainer-dashboard.md) | See current release, CI, feedback, and maintenance status |
-| [Template author guide](docs/template-author-guide.md) | Add a new clean-room example |
-| [Template review checklist](docs/template-review-checklist.md) | Review a template before merge |
-| [Template backlog](docs/template-backlog.md) | See which high-value charts are planned |
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
-| [Release checklist](docs/release-checklist.md) | Check a release before tagging |
-| [Release cadence](docs/release-cadence.md) | Keep versioning deliberate and slow after stabilization |
-| [v0.5.0 maintenance report](docs/maintenance-report-v0.5.0.md) | Review the early hardening snapshot |
-| [Provenance policy](docs/provenance-policy.md) | Keep public releases clean and auditable |
-| [Maintainer workflow](docs/openai-codex-workflow.md) | Review PRs, issues, and releases consistently |
-| [Roadmap](ROADMAP.md) | Track planned template and workflow milestones |
-| [Version plan](docs/version-plan.md) | Understand release milestones and cadence |
-| [v2 API design](docs/v2-api-design.md) | See the registry and selected-rendering API |
-| [v2 migration notes](docs/v2-migration.md) | Move from direct renderer calls to the registry API |
-| [v3.0.0 maintenance report](docs/maintenance-report-v3.0.0.md) | Review the v3 maintenance and usability scope |
+| [Quality gates](docs/quality-gates.md) | Understand what local checks and CI actually verify |
+
+The full grouped index lives in [docs/README.md](docs/README.md). Maintainer
+notes, release plans, migration notes, and historical reports are kept there so
+the README stays focused on using the library.
 
 ## License And Provenance
 
@@ -216,10 +206,10 @@ This repository dogfoods
 [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci), a small
 CLI/CI tool for MATLAB scientific figure repositories.
 
-The workflow checks that gallery outputs exist and are non-empty, risky binary
-or source files are not committed, privacy and provenance traces are flagged
-before release, and optional MATLAB batch rendering can be enabled when MATLAB
-is available. The project uses the `matlab-figures` preset from
+The workflow checks that committed gallery outputs exist and are non-empty,
+risky binary or source files are not committed, privacy and provenance traces
+are flagged before release, and optional MATLAB batch rendering can be enabled
+when MATLAB is available. The project uses the `matlab-figures` preset from
 `matlab-figure-ci` v2.4.5 for gallery-oriented checks, and the workflow prints
 `mfigci rules` before the full check so the active policy is visible in CI.
 Strict warning failure is available in `matlab-figure-ci`, but this repository

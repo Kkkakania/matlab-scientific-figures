@@ -27,7 +27,7 @@ font-family="Arial" font-size="24" font-weight="700" font-style="normal"
  >Grouped Scatter Plot</text>
 </g>
 
-<g fill="#0d528a" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
+<g fill="#0073b3" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <circle cx="367.011" cy="259.31" r="6.48074"/>
@@ -92,7 +92,7 @@ font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 <circle cx="400.151" cy="210.972" r="6.48074"/>
 </g>
 
-<g fill="#e36b2e" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
+<g fill="#e69e00" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <circle cx="379.695" cy="327.411" r="6.48074"/>
@@ -157,7 +157,7 @@ font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 <circle cx="278.307" cy="217.995" r="6.48074"/>
 </g>
 
-<g fill="#1a8570" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
+<g fill="#009e73" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
 font-family="Arial" font-size="24" font-weight="700" font-style="normal"
 >
 <circle cx="440.309" cy="280.795" r="6.48074"/>
@@ -379,19 +379,19 @@ font-family="Arial" font-size="20" font-weight="400" font-style="normal"
  >3</text>
 </g>
 
-<g fill="#0d528a" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
+<g fill="#0073b3" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
 font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <circle cx="574.652" cy="437.904" r="6"/>
 </g>
 
-<g fill="#e36b2e" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
+<g fill="#e69e00" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
 font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <circle cx="574.652" cy="458.5" r="6"/>
 </g>
 
-<g fill="#1a8570" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
+<g fill="#009e73" fill-opacity="0.721569" stroke="none" transform="matrix(0.5,0,0,0.5,-15.6832,-7.5)"
 font-family="Arial" font-size="20" font-weight="400" font-style="normal"
 >
 <circle cx="574.652" cy="479.096" r="6"/>

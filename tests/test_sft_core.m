@@ -5,6 +5,7 @@ end
 function setupOnce(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 addpath(genpath(fullfile(projectRoot, 'src')));
+addpath(genpath(fullfile(projectRoot, 'examples')));
 end
 
 function testThemeProvidesStableDefaults(testCase)
@@ -53,6 +54,26 @@ colors = sftPalette('main', 7);
 verifySize(testCase, colors, [7 3]);
 verifyGreaterThanOrEqual(testCase, colors, 0);
 verifyLessThanOrEqual(testCase, colors, 1);
+end
+
+function testMainPaletteKeepsEightCategoriesSeparated(testCase)
+colors = sftPalette('main', 8);
+minDistance = inf;
+for row = 1:size(colors, 1)
+    for other = row + 1:size(colors, 1)
+        distance = sqrt(sum((colors(row, :) - colors(other, :)) .^ 2));
+        minDistance = min(minDistance, distance);
+    end
+end
+
+verifyGreaterThan(testCase, minDistance, 0.25);
+end
+
+function testMainPaletteAvoidsEarlyNeutralGray(testCase)
+colors = sftPalette('main', 8);
+channelRange = max(colors(1:7, :), [], 2) - min(colors(1:7, :), [], 2);
+
+verifyGreaterThan(testCase, channelRange, 0.2);
 end
 
 function testDivergingPaletteReturnsRequestedNumberOfRgbRows(testCase)
@@ -217,6 +238,31 @@ verifyEqual(testCase, numel(data.labels), numel(data.steps));
 verifyTrue(testCase, all(isfinite(data.steps)));
 verifyEqual(testCase, data.final, data.start + sum(data.steps), 'AbsTol', 1e-12);
 verifyGreaterThan(testCase, data.final, 0);
+end
+
+function testBundledCsvExampleHasExpectedColumns(testCase)
+projectRoot = fileparts(fileparts(mfilename('fullpath')));
+csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');
+
+verifyTrue(testCase, isfile(csvPath));
+tbl = readtable(csvPath);
+
+verifyEqual(testCase, tbl.Properties.VariableNames, {'time', 'baseline', 'treatment'});
+verifyGreaterThan(testCase, height(tbl), 10);
+verifyTrue(testCase, all(isfinite(tbl.time)));
+verifyTrue(testCase, all(isfinite(tbl.baseline)));
+verifyTrue(testCase, all(isfinite(tbl.treatment)));
+end
+
+function testCsvExperimentRendererExportsPng(testCase)
+outputDir = tempname;
+mkdir(outputDir);
+cleanup = onCleanup(@() rmdir(outputDir, 's'));
+
+files = renderCsvExperiment(outputDir, "png");
+
+verifyEqual(testCase, numel(files), 1);
+verifyTrue(testCase, isfile(fullfile(outputDir, 'csv_experiment_signal.png')));
 end
 
 function testBlandAltmanDataHasAgreementStatistics(testCase)

@@ -6,6 +6,13 @@ and documentation structure were still settling.
 
 Going forward, releases should slow down.
 
+## Normal Maintenance Mode
+
+After the first stabilization pass, routine work should accumulate on `main`
+and in `CHANGELOG.md` without immediately creating a new tag. Prefer closing
+small issue clusters with tested commits, then wait until several user-visible
+changes naturally form a coherent release.
+
 ## Current Policy
 
 - Keep `v3.5.0` as the current public release until a user-visible reason
@@ -25,6 +32,9 @@ These changes can land on `main` without a tag:
 - ROADMAP cleanup.
 - Extra local checks.
 - Issue template edits.
+- Compatibility fixes that preserve the documented MATLAB floor.
+- Palette, accessibility, or documentation clarifications that do not require a
+  new install target.
 - Small documentation navigation improvements.
 
 ## Release Checklist

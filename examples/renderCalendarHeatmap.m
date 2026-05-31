@@ -11,7 +11,7 @@ fig = figure('Visible', 'off', 'Units', 'centimeters', 'Position', [1 1 theme.Fi
 imagesc(gridValues);
 axis equal tight
 colormap(sftPalette('sequential', 128));
-clim([min(values) max(values)]);
+caxis([min(values) max(values)]);
 cb = colorbar;
 cb.Label.String = 'Daily value';
 cb.Color = theme.AxisColor;
