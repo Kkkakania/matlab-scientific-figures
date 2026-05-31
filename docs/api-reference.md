@@ -76,6 +76,7 @@ close(fig);
 | `sftPlotConfidenceBand(ax, x, center, lower, upper, labels, theme)` | Draw line series with shaded uncertainty bands. |
 | `sftPlotGroupedScatter(ax, x, y, groups, theme)` | Draw a grouped x-y scatter plot into an existing axes. |
 | `sftPlotDensityScatter(ax, x, y, bins, theme)` | Draw a density-colored x-y scatter plot for large point clouds. |
+| `sftPlotBlandAltman(ax, methodA, methodB, theme)` | Draw method agreement with bias and 95% limits of agreement. |
 | `sftPlotCorrelationBubble(ax, matrix, labels, theme)` | Draw a bubble heatmap for a correlation matrix. |
 | `sftPlotForest(ax, estimate, lower, upper, labels, reference, theme)` | Draw effect estimates with interval bounds and a reference line. |
 | `sftPlotWaterfallChart(ax, startValue, steps, stepLabels, theme)` | Draw cumulative contribution steps. |
@@ -156,6 +157,17 @@ xlabel(ax, "Variable X");
 ylabel(ax, "Variable Y");
 title(ax, "Density Scatter");
 sftExport(fig, "gallery/my_density_scatter", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13.5 9]);
+methodA = 40 + 10 * randn(80, 1);
+methodB = methodA + 1.2 + 2.5 * randn(80, 1);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotBlandAltman(ax, methodA, methodB, theme);
+sftExport(fig, "gallery/my_bland_altman", ["png", "svg"]);
 close(fig);
 ```
 

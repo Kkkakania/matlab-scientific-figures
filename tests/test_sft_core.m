@@ -363,6 +363,32 @@ verifyError(testCase, @() sftPlotDensityScatter(ax, [1 2], [1 2], 1, ...
     sftTheme()), 'sft:InvalidBins');
 end
 
+function testPlotBlandAltmanDrawsAgreementStatistics(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, pointHandle, biasHandle, limitHandles, labelHandles, stats] = ...
+    sftPlotBlandAltman(ax, [10 12 14 16], [11 13 13 18], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(pointHandle, 'scatter'));
+verifyTrue(testCase, isgraphics(biasHandle));
+verifyTrue(testCase, all(isgraphics(limitHandles)));
+verifyTrue(testCase, all(isgraphics(labelHandles, 'text')));
+verifyEqual(testCase, stats.Bias, mean([1 1 -1 2]), 'AbsTol', 1e-12);
+verifyEqual(testCase, string(ax.XLabel.String), "Mean of two methods");
+end
+
+function testPlotBlandAltmanRejectsLengthMismatch(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotBlandAltman(ax, [1 2], 1, sftTheme()), ...
+    'sft:InvalidData');
+end
+
 function testPlotCorrelationBubbleDrawsMatrixBubbles(testCase)
 fig = figure('Visible', 'off', 'Color', 'w');
 cleanup = onCleanup(@() close(fig));

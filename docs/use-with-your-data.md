@@ -94,6 +94,18 @@ sftExport(fig, "outputs/my_density_scatter", ["png", "svg"]);
 close(fig);
 ```
 
+For method-comparison experiments, use a Bland-Altman plot to inspect agreement
+between two measurement methods:
+
+```matlab
+theme = sftTheme("FigureSize", [13.5 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotBlandAltman(ax, referenceMethod, candidateMethod, theme);
+sftExport(fig, "outputs/my_bland_altman", ["png", "svg"]);
+close(fig);
+```
+
 For a correlation matrix, use the bubble heatmap when both sign and magnitude
 matter:
 
