@@ -690,6 +690,43 @@ verifyError(testCase, @() sftPlotRidgeline(ax, randn(10, 2), "Only one", ...
     sftTheme()), 'sft:InvalidLabels');
 end
 
+function testPlotPositiveNegativeAreaDrawsSignedRegions(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, positivePatch, negativePatch, signalHandle, baselineHandle] = ...
+    sftPlotPositiveNegativeArea(ax, 1:5, [-1 0.5 1 -0.2 0.4], 0, sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(positivePatch, 'patch'));
+verifyTrue(testCase, isgraphics(negativePatch, 'patch'));
+verifyTrue(testCase, isgraphics(signalHandle, 'line'));
+verifyTrue(testCase, isgraphics(baselineHandle, 'line'));
+verifyEqual(testCase, string(ax.XLabel.String), "Time");
+verifyEqual(testCase, string(ax.YLabel.String), "Change from baseline");
+end
+
+function testPlotPositiveNegativeAreaSupportsVectorBaseline(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[~, ~, ~, ~, baselineHandle] = sftPlotPositiveNegativeArea(ax, ...
+    1:4, [1 2 1 3], [0.5 1.5 1.5 2.5], sftTheme());
+
+verifyEqual(testCase, baselineHandle.YData, [0.5 1.5 1.5 2.5]);
+end
+
+function testPlotPositiveNegativeAreaRejectsLengthMismatch(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotPositiveNegativeArea(ax, 1:3, 1:2, 0, ...
+    sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

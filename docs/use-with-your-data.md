@@ -235,6 +235,18 @@ sftExport(fig, "outputs/my_ridgeline_plot", ["png", "svg"]);
 close(fig);
 ```
 
+For signed time-series deviations, use a positive-negative area chart. The
+baseline can be a scalar or a vector the same length as `x`:
+
+```matlab
+theme = sftTheme("FigureSize", [14 8]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotPositiveNegativeArea(ax, timeValues, signalValues, baselineValues, theme);
+sftExport(fig, "outputs/my_positive_negative_area", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

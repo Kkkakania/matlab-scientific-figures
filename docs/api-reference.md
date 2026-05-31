@@ -88,6 +88,7 @@ close(fig);
 | `sftPlotRadarChart(ax, values, metrics, series, theme)` | Draw normalized metric profiles as radar polygons. |
 | `sftPlotParallelCoordinates(ax, values, features, groups, theme)` | Draw normalized multivariate profiles by group. |
 | `sftPlotRidgeline(ax, values, labels, theme)` | Draw compact stacked density profiles for groups. |
+| `sftPlotPositiveNegativeArea(ax, x, y, baseline, theme)` | Draw signed deviations around a baseline. |
 
 Example:
 
@@ -275,6 +276,17 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotRidgeline(ax, values, ["Control", "Treatment A", "Treatment B"], theme);
 sftExport(fig, "gallery/my_ridgeline_plot", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [14 8]);
+x = linspace(0, 10, 160);
+y = sin(x) + 0.15 * cos(3 * x);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotPositiveNegativeArea(ax, x, y, 0, theme);
+sftExport(fig, "gallery/my_positive_negative_area", ["png", "svg"]);
 close(fig);
 ```
 
