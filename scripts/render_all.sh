@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MATLAB_BIN="${MATLAB_BIN:-matlab}"
-SFT_OUTPUT_DIR="${SFT_OUTPUT_DIR:-gallery}"
+SFT_OUTPUT_DIR="${SFT_OUTPUT_DIR-gallery}"
 SFT_FORMATS="${SFT_FORMATS:-png,svg}"
 SFT_MATLAB_TIMEOUT_SECONDS="${SFT_MATLAB_TIMEOUT_SECONDS:-600}"
 
@@ -47,6 +47,11 @@ if [[ "${1:-}" == "help" || "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
   fi
   print_help
   exit 0
+fi
+
+if [[ -z "$SFT_OUTPUT_DIR" ]]; then
+  echo "SFT_OUTPUT_DIR must not be empty." >&2
+  exit 2
 fi
 
 if [[ "$SFT_OUTPUT_DIR" == *"'"* ]]; then
