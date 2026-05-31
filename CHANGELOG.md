@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Update the user-data guide to present the 30 reusable `sftPlot*.m` APIs as
+  the default path, with gallery examples serving as reference wrappers.
 - Add `sftListTags`, `sftFindTemplatesByTag`, `sftRenderTags`, and CLI
   `tags`/`tag` commands for tag-based gallery discovery and rendering.
 - Add a tag reference page for common template families and exact-tag

@@ -202,7 +202,7 @@ New users usually need only a few pages:
 | [Tutorials](docs/tutorials.md) | Start from a concrete figure workflow |
 | [Gallery reference](docs/gallery-reference.md) | Pick a template by sight |
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
-| [Use with your data](docs/use-with-your-data.md) | Turn a gallery example into your own figure |
+| [Use with your data](docs/use-with-your-data.md) | Call reusable plotting APIs with your own data |
 | [CSV and Excel tutorial](docs/tutorial-csv-excel-data.md) | Connect real tables to templates |
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
 | [Quality gates](docs/quality-gates.md) | Understand what local checks and CI actually verify |

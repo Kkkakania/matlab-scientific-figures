@@ -1,7 +1,10 @@
 # Use With Your Data
 
-The fastest way to use this repo is to copy one example and replace the data
-section. You do not need to keep the synthetic data helper in your own work.
+The fastest way to use this repo is to call one of the reusable `sftPlot*.m`
+functions with your own arrays, tables, or labels. The gallery examples are
+still useful as references for synthetic data, figure sizing, and export
+patterns, but your own scripts should usually keep data loading separate from
+the gallery wrappers.
 
 ## 1. Pick The Closest Example
 
@@ -19,11 +22,11 @@ Start from the chart, not the code:
 If two examples feel close, choose the simpler one first. It is easier to add a
 label or color later than to unwind a complicated plot.
 
-## 2. Use A Reusable Plot Function When Available
+## 2. Call The Reusable Plot Function
 
-Some templates expose a small plotting function in `src/` so you can keep your
-own data loading code separate from the gallery example. For example, a matrix
-heatmap can be drawn directly into an axes:
+All 30 templates expose small plotting functions in `src/`, so you can keep
+your own data loading code separate from the gallery examples. For example, a
+matrix heatmap can be drawn directly into an axes:
 
 ```matlab
 theme = sftTheme("FigureSize", [12 10]);
@@ -34,8 +37,8 @@ sftExport(fig, "outputs/my_heatmap", ["png", "svg"]);
 close(fig);
 ```
 
-Use this path when it exists. It is easier to test and easier to keep stable
-than a copied renderer.
+Use this path first. It is easier to test and easier to keep stable than a
+copied renderer.
 
 For a simple line chart, pass one x vector and one row per series:
 
