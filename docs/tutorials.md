@@ -4,6 +4,7 @@ Start with the task you have, not with the chart name.
 
 | I need to... | Read this |
 |---|---|
+| Try the project safely in a few commands | [First 5 Minutes](first-five-minutes.md) |
 | Pick a suitable figure type | [Chart selection guide](chart-selection-guide.md) |
 | Replace synthetic data with my own table | [Use with your data](use-with-your-data.md) |
 | Load CSV or Excel files | [CSV and Excel tutorial](tutorial-csv-excel-data.md) |

@@ -6,6 +6,7 @@ docs if you want to change the project.
 ## Use The Library
 
 - [Gallery reference](gallery-reference.md)
+- [First 5 Minutes](first-five-minutes.md)
 - [First-use test](first-use-test.md)
 - [Template reference](template-reference.md)
 - [Tag reference](tag-reference.md)

@@ -78,6 +78,9 @@ For a fresh clone, start with one narrow path instead of reading every guide:
 
 Move to your own data only after those three checks pass.
 
+The same path is available as a shareable
+[First 5 Minutes guide](docs/first-five-minutes.md).
+
 ## Find The Right Template
 
 Start by listing the gallery:

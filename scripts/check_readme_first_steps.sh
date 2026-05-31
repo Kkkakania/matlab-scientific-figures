@@ -21,5 +21,6 @@ require_text "SFT_OUTPUT_DIR=/tmp/sft-first-render"
 require_text "3. Try the bundled CSV example before wiring in your own data."
 require_text "./scripts/render_all.sh csv-example"
 require_text "Move to your own data only after those three checks pass."
+require_text "[First 5 Minutes guide](docs/first-five-minutes.md)"
 
 echo "README first-steps checks passed."

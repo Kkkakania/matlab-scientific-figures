@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add a shareable First 5 Minutes guide and link it from README, the docs
+  index, and the tutorials overview.
 - Add a guarded README first-steps path so fresh clones can inspect templates,
   render one scratch figure, and try the bundled CSV example before reading the
   longer guides.
