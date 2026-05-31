@@ -390,6 +390,34 @@ verifyError(testCase, @() sftPlotCorrelationBubble(ax, [1 1.2; 1.2 1], ...
     ["A", "B"], sftTheme()), 'sft:InvalidMatrix');
 end
 
+function testPlotForestDrawsIntervalsPointsAndLabels(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, pointHandles, intervalHandles, labelHandles] = sftPlotForest(ax, ...
+    [-0.1 0.2], [-0.3 0.1], [0.05 0.35], ["A", "B"], 0, sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(pointHandles), 2);
+verifyEqual(testCase, numel(intervalHandles), 2);
+verifyEqual(testCase, numel(labelHandles), 2);
+verifyTrue(testCase, all(isgraphics(pointHandles, 'scatter')));
+verifyTrue(testCase, all(isgraphics(intervalHandles, 'line')));
+verifyTrue(testCase, all(isgraphics(labelHandles, 'text')));
+verifyEqual(testCase, string(ax.YTickLabel(:)), ["A"; "B"]);
+verifyEqual(testCase, string(ax.YDir), "reverse");
+end
+
+function testPlotForestRejectsInvalidIntervals(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotForest(ax, 0.2, 0.3, 0.4, "A", 0, ...
+    sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

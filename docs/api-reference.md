@@ -77,6 +77,7 @@ close(fig);
 | `sftPlotGroupedScatter(ax, x, y, groups, theme)` | Draw a grouped x-y scatter plot into an existing axes. |
 | `sftPlotDensityScatter(ax, x, y, bins, theme)` | Draw a density-colored x-y scatter plot for large point clouds. |
 | `sftPlotCorrelationBubble(ax, matrix, labels, theme)` | Draw a bubble heatmap for a correlation matrix. |
+| `sftPlotForest(ax, estimate, lower, upper, labels, reference, theme)` | Draw effect estimates with interval bounds and a reference line. |
 
 Example:
 
@@ -149,6 +150,18 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotCorrelationBubble(ax, matrix, ["A", "B", "C", "D", "E"], theme);
 sftExport(fig, "gallery/my_correlation_bubble", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13.5 8.5]);
+estimate = [-0.18 0.12 0.28 -0.06];
+lower = estimate - [0.16 0.20 0.13 0.18];
+upper = estimate + [0.16 0.20 0.13 0.18];
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotForest(ax, estimate, lower, upper, ["Baseline", "Fusion", "Control", "Margin"], 0, theme);
+sftExport(fig, "gallery/my_forest_plot", ["png", "svg"]);
 close(fig);
 ```
 

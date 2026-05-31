@@ -106,6 +106,17 @@ sftExport(fig, "outputs/my_correlation_bubble", ["png", "svg"]);
 close(fig);
 ```
 
+For effect estimates or ablation results with intervals, use a forest plot:
+
+```matlab
+theme = sftTheme("FigureSize", [13.5 8.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotForest(ax, estimate, lowerBound, upperBound, scenarioLabels, 0, theme);
+sftExport(fig, "outputs/my_forest_plot", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
