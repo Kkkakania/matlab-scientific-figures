@@ -30,6 +30,13 @@ Environment:
   SFT_OUTPUT_DIR               Output directory. Default: gallery
   SFT_FORMATS                  Comma-separated png,svg,pdf list. Default: png,svg
   SFT_MATLAB_TIMEOUT_SECONDS   Per-command timeout. Default: 600
+
+Examples:
+  ./scripts/render_all.sh list
+  ./scripts/render_all.sh search matrix
+  ./scripts/render_all.sh heatmap radar_chart
+  SFT_OUTPUT_DIR=/tmp/sft-gallery ./scripts/render_all.sh match inset
+  SFT_FORMATS=png,svg,pdf ./scripts/render_all.sh tag matrix
 HELP
 }
 

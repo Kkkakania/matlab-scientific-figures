@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Add common examples to `render_all.sh help` so first-time shell users can
+  discover list, search, selected-render, scratch-output, and format workflows
+  without opening the full CLI guide.
 - Add `SFT_FORMATS` support to `scripts/render_all.sh` so shell users can
   choose PNG, SVG, and PDF export formats without editing MATLAB code.
 - Add non-MATLAB argument checks for `scripts/render_all.sh` export formats and
