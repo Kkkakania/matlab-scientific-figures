@@ -999,6 +999,31 @@ verifyError(testCase, @() sftPlotSankeyFlow(ax, nodes, edges, sftTheme()), ...
     'sft:InvalidData');
 end
 
+function testPlotSurface3DDrawsSurfaceAndColorbar(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+[x, y] = meshgrid(-1:1, -1:1);
+z = x .^ 2 + y .^ 2;
+
+[returnedAx, surfaceHandle, colorbarHandle] = sftPlotSurface3D(ax, x, y, z, sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(surfaceHandle, 'surface'));
+verifyTrue(testCase, isgraphics(colorbarHandle, 'colorbar'));
+verifyEqual(testCase, string(ax.ZLabel.String), "Z");
+verifyEqual(testCase, string(ax.Title.String), "3D Surface");
+end
+
+function testPlotSurface3DRejectsMismatchedGridSize(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotSurface3D(ax, zeros(2), zeros(2), zeros(3), ...
+    sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

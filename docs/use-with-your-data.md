@@ -369,6 +369,17 @@ sftExport(fig, "outputs/my_sankey_flow", ["png", "svg"]);
 close(fig);
 ```
 
+For gridded response surfaces, pass matching `X`, `Y`, and `Z` matrices:
+
+```matlab
+theme = sftTheme("FigureSize", [13 10]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotSurface3D(ax, xGrid, yGrid, zGrid, theme);
+sftExport(fig, "outputs/my_surface_3d", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

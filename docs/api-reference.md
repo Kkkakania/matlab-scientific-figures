@@ -99,6 +99,7 @@ close(fig);
 | `sftPlotBubbleMatrix(ax, matrix, rowLabels, colLabels, theme)` | Draw matrix magnitudes with bubble area and color. |
 | `sftPlotDoubleTriangleHeatmap(ax, upperValues, lowerValues, labels, theme)` | Compare two square matrices in one layout. |
 | `sftPlotSankeyFlow(ax, nodes, edges, theme)` | Draw weighted flow bands across staged nodes. |
+| `sftPlotSurface3D(ax, x, y, z, theme)` | Draw a smooth themed 3D response surface. |
 
 Example:
 
@@ -408,6 +409,17 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotSankeyFlow(ax, nodes, edges, theme);
 sftExport(fig, "gallery/my_sankey_flow", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13 10]);
+[x, y] = meshgrid(linspace(-3, 3, 60), linspace(-3, 3, 60));
+z = peaks(x, y) / 8;
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotSurface3D(ax, x, y, z, theme);
+sftExport(fig, "gallery/my_surface_3d", ["png", "svg"]);
 close(fig);
 ```
 
