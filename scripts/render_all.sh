@@ -4,9 +4,37 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MATLAB_BIN="${MATLAB_BIN:-matlab}"
 SFT_OUTPUT_DIR="${SFT_OUTPUT_DIR:-gallery}"
+SFT_FORMATS="${SFT_FORMATS:-png,svg}"
 SFT_MATLAB_TIMEOUT_SECONDS="${SFT_MATLAB_TIMEOUT_SECONDS:-600}"
 
 source "$ROOT_DIR/scripts/_run_with_timeout.sh"
+
+if [[ "$SFT_OUTPUT_DIR" == *"'"* ]]; then
+  echo "SFT_OUTPUT_DIR may not contain single quotes." >&2
+  exit 2
+fi
+
+formats=()
+IFS=',' read -r -a requested_formats <<<"$SFT_FORMATS"
+for format in "${requested_formats[@]}"; do
+  format="${format//[[:space:]]/}"
+  if [[ -z "$format" ]]; then
+    continue
+  fi
+  if [[ ! "$format" =~ ^(png|svg|pdf)$ ]]; then
+    echo "Invalid SFT_FORMATS entry: $format" >&2
+    echo "Use a comma-separated list containing png, svg, and/or pdf." >&2
+    exit 2
+  fi
+  formats+=("\"$format\"")
+done
+
+if [[ "${#formats[@]}" -eq 0 ]]; then
+  echo "SFT_FORMATS must include at least one of: png, svg, pdf." >&2
+  exit 2
+fi
+
+format_expr="[$(IFS=,; echo "${formats[*]}")]"
 
 if [[ "$MATLAB_BIN" == */* ]]; then
   if [[ ! -x "$MATLAB_BIN" ]]; then
@@ -98,7 +126,7 @@ if [[ "${1:-}" == "tag" ]]; then
   done
 
   tag_expr="[$(IFS=,; echo "${tags[*]}")]"
-  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderTags($tag_expr, '$SFT_OUTPUT_DIR'); disp('Rendered templates:'); disp(string({result.name})')"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderTags($tag_expr, '$SFT_OUTPUT_DIR', $format_expr); disp('Rendered templates:'); disp(string({result.name})')"
   exit 0
 fi
 
@@ -120,7 +148,7 @@ if [[ "${1:-}" == "match" ]]; then
   done
 
   query_expr="[$(IFS=,; echo "${queries[*]}")]"
-  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderMatches($query_expr, '$SFT_OUTPUT_DIR'); disp('Rendered templates:'); disp(string({result.name})')"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderMatches($query_expr, '$SFT_OUTPUT_DIR', $format_expr); disp('Rendered templates:'); disp(string({result.name})')"
   exit 0
 fi
 
@@ -129,12 +157,12 @@ if [[ "${1:-}" == "csv-example" ]]; then
     echo "Usage: ./scripts/render_all.sh csv-example" >&2
     exit 2
   fi
-  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderCsvExperiment('$SFT_OUTPUT_DIR')"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderCsvExperiment('$SFT_OUTPUT_DIR', $format_expr)"
   exit 0
 fi
 
 if [[ "$#" -eq 0 ]]; then
-  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('$SFT_OUTPUT_DIR')"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('$SFT_OUTPUT_DIR', $format_expr)"
   exit 0
 fi
 
@@ -149,4 +177,4 @@ for name in "$@"; do
 done
 
 name_expr="[$(IFS=,; echo "${names[*]}")]"
-run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderExamples($name_expr, '$SFT_OUTPUT_DIR'); disp('Rendered templates:'); disp(string({result.name})')"
+run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderExamples($name_expr, '$SFT_OUTPUT_DIR', $format_expr); disp('Rendered templates:'); disp(string({result.name})')"

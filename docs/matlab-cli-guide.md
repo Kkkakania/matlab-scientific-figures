@@ -89,6 +89,14 @@ Write output to a scratch directory instead of `gallery/`:
 SFT_OUTPUT_DIR=/tmp/sft-gallery MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match inset
 ```
 
+Choose export formats with `SFT_FORMATS`, using a comma-separated list
+containing `png`, `svg`, and `pdf`:
+
+```bash
+SFT_FORMATS=png,svg,pdf MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap
+SFT_OUTPUT_DIR=/tmp/sft-pdf SFT_FORMATS=pdf MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tag matrix
+```
+
 Template names are lower-case identifiers such as `heatmap`,
 `double_triangle_heatmap`, and `zoomed_inset_line`. Use `list` when you forget
 the exact name, and use `tags` when you know the type of task but not the

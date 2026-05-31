@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add `SFT_FORMATS` support to `scripts/render_all.sh` so shell users can
+  choose PNG, SVG, and PDF export formats without editing MATLAB code.
 - Add a bounded maintainer activity snapshot covering own-repo maintenance and
   external MATLAB pull requests without claiming broad adoption.
 - Add the PRMLT documentation cleanup pull request to the bounded maintainer
