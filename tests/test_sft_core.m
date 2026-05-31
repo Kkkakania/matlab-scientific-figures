@@ -444,6 +444,31 @@ verifyError(testCase, @() sftPlotGroupedErrorBar(ax, [1 2], [0.1; 0.2], ...
     "A", ["S1", "S2"], sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotBoxJitterDrawsBoxAndPointGroups(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, boxHandle, pointHandles] = sftPlotBoxJitter(ax, ...
+    ["A", "A", "B", "B"], [1 2 3 4], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(boxHandle));
+verifyEqual(testCase, numel(pointHandles), 2);
+verifyTrue(testCase, all(isgraphics(pointHandles, 'scatter')));
+verifyEqual(testCase, string(ax.XLabel.String), "Group");
+verifyEqual(testCase, string(ax.YLabel.String), "Measurement");
+end
+
+function testPlotBoxJitterRejectsLengthMismatch(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotBoxJitter(ax, ["A", "B"], 1, sftTheme()), ...
+    'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

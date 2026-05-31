@@ -79,6 +79,7 @@ close(fig);
 | `sftPlotCorrelationBubble(ax, matrix, labels, theme)` | Draw a bubble heatmap for a correlation matrix. |
 | `sftPlotForest(ax, estimate, lower, upper, labels, reference, theme)` | Draw effect estimates with interval bounds and a reference line. |
 | `sftPlotGroupedErrorBar(ax, values, errors, groupLabels, seriesLabels, theme)` | Draw grouped bars with matched error bars. |
+| `sftPlotBoxJitter(ax, group, value, theme)` | Draw grouped distributions with jittered observations. |
 
 Example:
 
@@ -174,6 +175,17 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotGroupedErrorBar(ax, values, errors, ["Baseline", "Method A", "Method B"], ["Dataset 1", "Dataset 2"], theme);
 sftExport(fig, "gallery/my_grouped_error_bar", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [12 9]);
+group = categorical(repelem(["A", "B", "C"], 30).');
+value = randn(90, 1) + repelem([0 0.4 0.8], 30).';
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotBoxJitter(ax, group, value, theme);
+sftExport(fig, "gallery/my_box_jitter", ["png", "svg"]);
 close(fig);
 ```
 

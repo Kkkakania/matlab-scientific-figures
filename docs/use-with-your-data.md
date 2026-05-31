@@ -129,6 +129,18 @@ sftExport(fig, "outputs/my_grouped_error_bar", ["png", "svg"]);
 close(fig);
 ```
 
+For distributions where the raw observations matter, use a box plot with
+jittered points:
+
+```matlab
+theme = sftTheme("FigureSize", [12 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotBoxJitter(ax, groupLabels, measurements, theme);
+sftExport(fig, "outputs/my_box_jitter", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
