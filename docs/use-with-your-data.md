@@ -65,6 +65,20 @@ sftExport(fig, "outputs/my_confidence_band", ["png", "svg"]);
 close(fig);
 ```
 
+For grouped scatter plots, pass one group label for each point:
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotGroupedScatter(ax, featureX, responseY, methodGroup, theme);
+xlabel(ax, "Observed feature");
+ylabel(ax, "Predicted response");
+title(ax, "Grouped Scatter Plot");
+sftExport(fig, "outputs/my_grouped_scatter", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

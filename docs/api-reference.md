@@ -74,6 +74,7 @@ close(fig);
 | `sftPlotHeatmap(ax, matrix, labels, theme)` | Draw a themed square matrix heatmap into an existing axes. |
 | `sftPlotLineSeries(ax, x, y, labels, theme)` | Draw one or more themed line series into an existing axes. |
 | `sftPlotConfidenceBand(ax, x, center, lower, upper, labels, theme)` | Draw line series with shaded uncertainty bands. |
+| `sftPlotGroupedScatter(ax, x, y, groups, theme)` | Draw a grouped x-y scatter plot into an existing axes. |
 
 Example:
 
@@ -110,6 +111,18 @@ xlabel(ax, "Sample");
 ylabel(ax, "Estimate");
 title(ax, "Estimate With Uncertainty");
 sftExport(fig, "gallery/my_confidence_band", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [12 10]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotGroupedScatter(ax, randn(90, 1), randn(90, 1), repelem(["A"; "B"; "C"], 30), theme);
+xlabel(ax, "Feature X");
+ylabel(ax, "Feature Y");
+title(ax, "Grouped Relationship");
+sftExport(fig, "gallery/my_grouped_scatter", ["png", "svg"]);
 close(fig);
 ```
 

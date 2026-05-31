@@ -316,6 +316,29 @@ verifyError(testCase, @() sftPlotConfidenceBand(ax, 1:2, [1 2], [2 3], ...
     [1 2], "A", sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotGroupedScatterDrawsOneHandlePerGroup(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, pointHandles] = sftPlotGroupedScatter(ax, [1 2 3 4], [4 3 2 1], ...
+    ["A", "A", "B", "B"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(pointHandles), 2);
+verifyTrue(testCase, all(isgraphics(pointHandles, 'scatter')));
+verifyEqual(testCase, string(legend(ax).String(:)), ["A"; "B"]);
+end
+
+function testPlotGroupedScatterRejectsLengthMismatch(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotGroupedScatter(ax, [1 2], [1 2], "A", ...
+    sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');
