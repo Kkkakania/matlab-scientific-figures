@@ -7,6 +7,8 @@ README="$ROOT_DIR/README.md"
 CLI_GUIDE="$ROOT_DIR/docs/matlab-cli-guide.md"
 
 grep -Fq 'SFT_FORMATS="${SFT_FORMATS:-png,svg}"' "$SCRIPT"
+grep -Fq 'print_help()' "$SCRIPT"
+grep -Fq './scripts/render_all.sh help' "$SCRIPT"
 grep -Fq 'format_expr=' "$SCRIPT"
 grep -Fq 'sftRenderTags($tag_expr' "$SCRIPT"
 grep -Fq 'sftRenderMatches($query_expr' "$SCRIPT"

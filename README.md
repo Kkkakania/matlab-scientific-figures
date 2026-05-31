@@ -167,6 +167,7 @@ matlab -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExam
 Or use the helper script:
 
 ```bash
+./scripts/render_all.sh help
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh list
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search density

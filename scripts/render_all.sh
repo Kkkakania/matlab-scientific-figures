@@ -9,6 +9,39 @@ SFT_MATLAB_TIMEOUT_SECONDS="${SFT_MATLAB_TIMEOUT_SECONDS:-600}"
 
 source "$ROOT_DIR/scripts/_run_with_timeout.sh"
 
+print_help() {
+  cat <<'HELP'
+Usage: ./scripts/render_all.sh [command|template...]
+
+Commands:
+  help                         Show this help text.
+  list                         List available templates.
+  tags                         List available tags.
+  search <keyword> [...]       Search templates by name, task, or tag.
+  info <template>              Show metadata for one template.
+  tag <tag> [...]              Render templates with exact tag matches.
+  match <keyword> [...]        Render templates matching search keywords.
+  csv-example                  Render the bundled CSV example.
+  <template> [...]             Render selected templates.
+  (no arguments)               Render the full gallery.
+
+Environment:
+  MATLAB_BIN                   MATLAB executable. Default: matlab
+  SFT_OUTPUT_DIR               Output directory. Default: gallery
+  SFT_FORMATS                  Comma-separated png,svg,pdf list. Default: png,svg
+  SFT_MATLAB_TIMEOUT_SECONDS   Per-command timeout. Default: 600
+HELP
+}
+
+if [[ "${1:-}" == "help" || "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
+  if [[ "$#" -ne 1 ]]; then
+    echo "Usage: ./scripts/render_all.sh help" >&2
+    exit 2
+  fi
+  print_help
+  exit 0
+fi
+
 if [[ "$SFT_OUTPUT_DIR" == *"'"* ]]; then
   echo "SFT_OUTPUT_DIR may not contain single quotes." >&2
   exit 2

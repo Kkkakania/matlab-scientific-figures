@@ -40,6 +40,10 @@ expect_failure "SFT_FORMATS must include at least one" \
 expect_failure "SFT_OUTPUT_DIR may not contain single quotes" \
   env "SFT_OUTPUT_DIR=bad'path" MATLAB_BIN=/no/such/matlab "$SCRIPT" list
 
+help_output="$(env SFT_FORMATS=bad MATLAB_BIN=/no/such/matlab "$SCRIPT" help)"
+grep -q "Usage: ./scripts/render_all.sh" <<<"$help_output"
+grep -q "SFT_FORMATS" <<<"$help_output"
+
 FAKE_MATLAB="$TMP_DIR/fake_matlab"
 CAPTURED_ARGS="$TMP_DIR/matlab_args.txt"
 cat >"$FAKE_MATLAB" <<'SH'

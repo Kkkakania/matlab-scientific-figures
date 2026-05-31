@@ -8,6 +8,8 @@
   output-path quoting.
 - Extend the `render_all.sh` argument checks with a fake MATLAB executable so
   valid `SFT_FORMATS` values are verified in the generated batch command.
+- Add `render_all.sh help` so new users can inspect CLI commands and
+  environment variables without starting MATLAB.
 - Add a bounded maintainer activity snapshot covering own-repo maintenance and
   external MATLAB pull requests without claiming broad adoption.
 - Add the PRMLT documentation cleanup pull request to the bounded maintainer

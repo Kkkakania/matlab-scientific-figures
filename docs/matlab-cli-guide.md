@@ -35,6 +35,12 @@ Or run:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh
 ```
 
+Print the helper script options without starting MATLAB:
+
+```bash
+./scripts/render_all.sh help
+```
+
 List available templates:
 
 ```bash
