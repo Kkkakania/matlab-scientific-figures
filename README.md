@@ -17,8 +17,13 @@ more external feedback arrives. The fast early version jumps mark API and
 workflow stabilization milestones from the first public hardening pass; future
 tags are intentionally slower and follow [Release cadence](docs/release-cadence.md).
 
-The GitHub badges run static, documentation, provenance, manifest, and committed
-gallery-output checks. They do not mean GitHub-hosted runners executed MATLAB.
+The GitHub badges are CI health signals, not proof that GitHub-hosted runners
+executed MATLAB or regenerated the gallery. `Quality checks` covers static
+repository checks such as gallery-file presence, metadata consistency,
+documentation links, provenance, privacy, and manifest drift. `Figure quality`
+runs `matlab-figure-ci` against committed gallery outputs. For exact badge
+scope and local reproduction commands, see [Quality gates](docs/quality-gates.md).
+
 Run the MATLAB-enabled local gate before relying on regenerated figures:
 
 ```bash

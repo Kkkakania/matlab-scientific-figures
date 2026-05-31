@@ -54,6 +54,24 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | First-use smoke test | `./scripts/check_first_use.sh` | Broken list/info/selected-render workflow from a fresh clone |
 | Template manifest | `./scripts/check_template_manifest.sh` | Stale `docs/template-manifest.json` after registry changes |
 
+## Badge Scope
+
+The README badges are intentionally narrow CI signals. They should not be read
+as claims that every MATLAB renderer was executed on GitHub-hosted runners.
+
+| Badge | Workflow | Runs MATLAB? | What Green Means |
+|---|---|---:|---|
+| `Quality checks` | `.github/workflows/quality.yml` | No | The committed repository passes static shell checks for gallery-file presence, metadata consistency, documentation links, manifest/schema drift, version/citation metadata, compatibility notes, color-audit coverage, forbidden files, privacy traces, and provenance traces. |
+| `Figure quality` | `.github/workflows/figure-quality.yml` | No | `matlab-figure-ci` can scan the committed repository and verify the configured committed gallery outputs without policy errors. |
+
+These badges do not prove that committed PNG/SVG files were regenerated from
+the current MATLAB source. Maintainers should run the MATLAB-enabled local gate
+before a release or before trusting regenerated gallery output:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh
+```
+
 ## MATLAB Checks
 
 These run when MATLAB is available:

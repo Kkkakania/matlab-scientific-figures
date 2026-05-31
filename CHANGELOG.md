@@ -38,6 +38,8 @@
   and document palette-choice guidance.
 - Add a runnable bundled CSV example and `render_all.sh csv-example` command
   for the end-to-end data-to-figure path.
+- Clarify what the README CI badges verify and what still requires a local
+  MATLAB-enabled release gate.
 
 ## v3.5.0 - 2026-05-31
 
