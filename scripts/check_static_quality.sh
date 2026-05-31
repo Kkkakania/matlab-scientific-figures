@@ -13,6 +13,7 @@ run_step() {
 run_step "gallery outputs" ./scripts/check_gallery_outputs.sh
 run_step "gallery metadata consistency" ./scripts/check_gallery_consistency.sh
 run_step "version metadata consistency" ./scripts/check_version_consistency.sh
+run_step "roadmap status language" ./scripts/check_roadmap_status.sh
 run_step "citation metadata" ./scripts/check_citation.sh
 run_step "documentation links" ./scripts/check_docs_links.sh
 run_step "first-use feedback docs" ./scripts/check_first_use_docs.sh

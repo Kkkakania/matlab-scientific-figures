@@ -23,6 +23,9 @@ jobs:
       - name: Verify release metadata is consistent
         run: ./scripts/check_version_consistency.sh
 
+      - name: Verify roadmap status language
+        run: ./scripts/check_roadmap_status.sh
+
       - name: Check citation metadata
         run: ./scripts/check_citation.sh
 

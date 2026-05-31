@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add a roadmap status-language check so released milestones do not drift back
+  into stale "planned additions" wording.
 - Clarify that the main repository is now a reusable MATLAB plotting library,
   not only copyable gallery scripts, and link first-use feedback channels for
   both gallery/API and agent-assisted rendering workflows.
