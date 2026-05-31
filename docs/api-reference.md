@@ -86,6 +86,7 @@ close(fig);
 | `sftPlotButterflyComparison(ax, leftValues, rightValues, labels, sideLabels, theme)` | Draw mirrored horizontal bars around a shared baseline. |
 | `sftPlotPairedSlopegraph(ax, before, after, labels, conditionLabels, theme)` | Draw paired before-after changes for matched items. |
 | `sftPlotRadarChart(ax, values, metrics, series, theme)` | Draw normalized metric profiles as radar polygons. |
+| `sftPlotParallelCoordinates(ax, values, features, groups, theme)` | Draw normalized multivariate profiles by group. |
 
 Example:
 
@@ -252,6 +253,17 @@ sftPlotRadarChart(ax, ...
     [0.72 0.66 0.58; 0.84 0.73 0.64], ...
     ["Accuracy", "Speed", "Memory"], ["Baseline", "Method A"], theme);
 sftExport(fig, "gallery/my_radar_chart", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [14 8]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotParallelCoordinates(ax, ...
+    [0.62 0.58 0.70; 0.72 0.69 0.78; 0.80 0.76 0.82], ...
+    ["Accuracy", "Throughput", "Stability"], ["Base", "Base", "Tuned"], theme);
+sftExport(fig, "gallery/my_parallel_coordinates", ["png", "svg"]);
 close(fig);
 ```
 

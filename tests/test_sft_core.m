@@ -632,6 +632,33 @@ verifyError(testCase, @() sftPlotRadarChart(ax, [0.2 1.2], ...
     ["A", "B"], "Series", sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotParallelCoordinatesDrawsSamplesAndMedians(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, sampleHandles, medianHandles] = sftPlotParallelCoordinates(ax, ...
+    [0.1 0.2 0.3; 0.2 0.3 0.4; 0.8 0.7 0.6], ...
+    ["A", "B", "C"], ["Base", "Base", "New"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(sampleHandles), 3);
+verifyEqual(testCase, numel(medianHandles), 2);
+verifyTrue(testCase, all(isgraphics(sampleHandles, 'line')));
+verifyTrue(testCase, all(isgraphics(medianHandles, 'line')));
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["A"; "B"; "C"]);
+verifyEqual(testCase, string(ax.YLabel.String), "Normalized value");
+end
+
+function testPlotParallelCoordinatesRejectsMismatchedGroups(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotParallelCoordinates(ax, [0.2 0.3; 0.4 0.5], ...
+    ["A", "B"], "OneGroup", sftTheme()), 'sft:InvalidLabels');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');
