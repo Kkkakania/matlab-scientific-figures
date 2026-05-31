@@ -175,6 +175,18 @@ sftExport(fig, "outputs/my_waffle_chart", ["png", "svg"]);
 close(fig);
 ```
 
+For two-sided comparisons around a shared baseline, use a butterfly chart:
+
+```matlab
+theme = sftTheme("FigureSize", [13 9.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotButterflyComparison(ax, scenarioA, scenarioB, groupLabels, ...
+    ["Scenario A", "Scenario B"], theme);
+sftExport(fig, "outputs/my_butterfly_comparison", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

@@ -549,6 +549,33 @@ verifyError(testCase, @() sftPlotWaffleChart(ax, [30 30], ...
     ["A", "B"], sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotButterflyComparisonDrawsMirroredBars(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, leftBars, rightBars, labelHandles] = sftPlotButterflyComparison(ax, ...
+    [4 2], [3 5], ["North", "South"], ["A", "B"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(leftBars, 'bar'));
+verifyTrue(testCase, isgraphics(rightBars, 'bar'));
+verifyEqual(testCase, leftBars.YData, -[4 2]);
+verifyEqual(testCase, rightBars.YData, [3 5]);
+verifyEqual(testCase, numel(labelHandles), 4);
+verifyTrue(testCase, all(isgraphics(labelHandles, 'text')));
+verifyEqual(testCase, string(ax.YTickLabel(:)), ["North"; "South"]);
+end
+
+function testPlotButterflyComparisonRejectsNegativeValues(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotButterflyComparison(ax, [1 -2], [1 2], ...
+    ["A", "B"], ["Left", "Right"], sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

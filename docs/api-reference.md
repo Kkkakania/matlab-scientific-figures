@@ -83,6 +83,7 @@ close(fig);
 | `sftPlotBoxJitter(ax, group, value, theme)` | Draw grouped distributions with jittered observations. |
 | `sftPlotLollipopRanking(ax, labels, values, theme)` | Draw a sorted lollipop ranking chart. |
 | `sftPlotWaffleChart(ax, counts, labels, theme)` | Draw a 100-cell composition chart. |
+| `sftPlotButterflyComparison(ax, leftValues, rightValues, labels, sideLabels, theme)` | Draw mirrored horizontal bars around a shared baseline. |
 
 Example:
 
@@ -218,6 +219,16 @@ ax = axes(fig);
 sftPlotWaffleChart(ax, [42 27 19 12], ...
     ["Completed", "In progress", "Queued", "Blocked"], theme);
 sftExport(fig, "gallery/my_waffle_chart", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13 9.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotButterflyComparison(ax, [38 31 28], [34 36 30], ...
+    ["North", "East", "South"], ["Scenario A", "Scenario B"], theme);
+sftExport(fig, "gallery/my_butterfly_comparison", ["png", "svg"]);
 close(fig);
 ```
 
