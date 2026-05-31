@@ -281,6 +281,18 @@ sftExport(fig, "outputs/my_bubble_matrix", ["png", "svg"]);
 close(fig);
 ```
 
+For comparing two same-size pairwise matrices in one layout, use a
+double-triangle heatmap:
+
+```matlab
+theme = sftTheme("FigureSize", [13 11]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotDoubleTriangleHeatmap(ax, conditionA, conditionB, matrixLabels, theme);
+sftExport(fig, "outputs/my_double_triangle_heatmap", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

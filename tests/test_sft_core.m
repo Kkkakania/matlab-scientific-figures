@@ -807,6 +807,33 @@ verifyError(testCase, @() sftPlotBubbleMatrix(ax, [1 -1], "R1", ...
     ["C1", "C2"], sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotDoubleTriangleHeatmapDrawsPairedTriangles(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, upperHandles, lowerHandles, colorbarHandle] = ...
+    sftPlotDoubleTriangleHeatmap(ax, eye(3), flipud(eye(3)), ["A", "B", "C"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifySize(testCase, upperHandles, [3 3]);
+verifySize(testCase, lowerHandles, [3 3]);
+verifyTrue(testCase, all(isgraphics(upperHandles(:), 'patch')));
+verifyTrue(testCase, all(isgraphics(lowerHandles(:), 'patch')));
+verifyTrue(testCase, isgraphics(colorbarHandle));
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["A"; "B"; "C"]);
+verifyEqual(testCase, string(ax.YTickLabel(:)), ["A"; "B"; "C"]);
+end
+
+function testPlotDoubleTriangleHeatmapRejectsMismatchedMatrices(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotDoubleTriangleHeatmap(ax, eye(2), eye(3), ...
+    ["A", "B"], sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

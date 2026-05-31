@@ -92,6 +92,7 @@ close(fig);
 | `sftPlotZoomedInsetLine(fig, x, y, zoomRange, theme)` | Draw a full trend with a detailed inset window. |
 | `sftPlotCalendarHeatmap(ax, values, weekLabels, dayLabels, theme)` | Draw daily values in a day-by-week heatmap. |
 | `sftPlotBubbleMatrix(ax, matrix, rowLabels, colLabels, theme)` | Draw matrix magnitudes with bubble area and color. |
+| `sftPlotDoubleTriangleHeatmap(ax, upperValues, lowerValues, labels, theme)` | Compare two square matrices in one layout. |
 
 Example:
 
@@ -321,6 +322,17 @@ ax = axes(fig);
 sftPlotBubbleMatrix(ax, abs(randn(4, 5)), ...
     ["R1", "R2", "R3", "R4"], "C" + string(1:5), theme);
 sftExport(fig, "gallery/my_bubble_matrix", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13 11]);
+upper = corr(randn(80, 4));
+lower = corr(randn(80, 4));
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotDoubleTriangleHeatmap(ax, upper, lower, ["A", "B", "C", "D"], theme);
+sftExport(fig, "gallery/my_double_triangle_heatmap", ["png", "svg"]);
 close(fig);
 ```
 
