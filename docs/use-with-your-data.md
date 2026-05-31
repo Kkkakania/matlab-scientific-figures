@@ -94,6 +94,18 @@ sftExport(fig, "outputs/my_density_scatter", ["png", "svg"]);
 close(fig);
 ```
 
+For a correlation matrix, use the bubble heatmap when both sign and magnitude
+matter:
+
+```matlab
+theme = sftTheme("FigureSize", [13 11]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotCorrelationBubble(ax, corrcoef(myTable{:,:}), string(myTable.Properties.VariableNames), theme);
+sftExport(fig, "outputs/my_correlation_bubble", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

@@ -363,6 +363,33 @@ verifyError(testCase, @() sftPlotDensityScatter(ax, [1 2], [1 2], 1, ...
     sftTheme()), 'sft:InvalidBins');
 end
 
+function testPlotCorrelationBubbleDrawsMatrixBubbles(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+matrix = [1 0.72; 0.72 1];
+
+[returnedAx, pointHandle, textHandles] = sftPlotCorrelationBubble(ax, matrix, ...
+    ["A", "B"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyTrue(testCase, isgraphics(pointHandle, 'scatter'));
+verifyEqual(testCase, numel(pointHandle.SizeData), 4);
+verifyEqual(testCase, numel(textHandles), 4);
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["A"; "B"]);
+verifyEqual(testCase, string(ax.YTickLabel(:)), ["A"; "B"]);
+verifyEqual(testCase, ax.CLim, [-1 1]);
+end
+
+function testPlotCorrelationBubbleRejectsOutOfRangeValues(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotCorrelationBubble(ax, [1 1.2; 1.2 1], ...
+    ["A", "B"], sftTheme()), 'sft:InvalidMatrix');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

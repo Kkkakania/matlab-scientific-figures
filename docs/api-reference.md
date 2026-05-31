@@ -76,6 +76,7 @@ close(fig);
 | `sftPlotConfidenceBand(ax, x, center, lower, upper, labels, theme)` | Draw line series with shaded uncertainty bands. |
 | `sftPlotGroupedScatter(ax, x, y, groups, theme)` | Draw a grouped x-y scatter plot into an existing axes. |
 | `sftPlotDensityScatter(ax, x, y, bins, theme)` | Draw a density-colored x-y scatter plot for large point clouds. |
+| `sftPlotCorrelationBubble(ax, matrix, labels, theme)` | Draw a bubble heatmap for a correlation matrix. |
 
 Example:
 
@@ -138,6 +139,16 @@ xlabel(ax, "Variable X");
 ylabel(ax, "Variable Y");
 title(ax, "Density Scatter");
 sftExport(fig, "gallery/my_density_scatter", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [13 11]);
+matrix = corr(randn(120, 5));
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotCorrelationBubble(ax, matrix, ["A", "B", "C", "D", "E"], theme);
+sftExport(fig, "gallery/my_correlation_bubble", ["png", "svg"]);
 close(fig);
 ```
 
