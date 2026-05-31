@@ -287,6 +287,35 @@ verifyError(testCase, @() sftPlotLineSeries(ax, 1:3, [1 2; 2 3], ...
     ["A", "B"], sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotConfidenceBandDrawsLinesAndBands(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+x = 1:3;
+center = [1 2 3; 2 3 4];
+lower = center - 0.2;
+upper = center + 0.2;
+
+[returnedAx, lineHandles, bandHandles] = sftPlotConfidenceBand(ax, x, center, ...
+    lower, upper, ["A", "B"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(lineHandles), 2);
+verifyEqual(testCase, numel(bandHandles), 2);
+verifyTrue(testCase, all(isgraphics(lineHandles, 'line')));
+verifyTrue(testCase, all(isgraphics(bandHandles, 'patch')));
+verifyEqual(testCase, string(legend(ax).String(:)), ["A"; "B"]);
+end
+
+function testPlotConfidenceBandRejectsInvertedBounds(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotConfidenceBand(ax, 1:2, [1 2], [2 3], ...
+    [1 2], "A", sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

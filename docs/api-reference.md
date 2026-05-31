@@ -73,6 +73,7 @@ close(fig);
 |---|---|
 | `sftPlotHeatmap(ax, matrix, labels, theme)` | Draw a themed square matrix heatmap into an existing axes. |
 | `sftPlotLineSeries(ax, x, y, labels, theme)` | Draw one or more themed line series into an existing axes. |
+| `sftPlotConfidenceBand(ax, x, center, lower, upper, labels, theme)` | Draw line series with shaded uncertainty bands. |
 
 Example:
 
@@ -94,6 +95,21 @@ xlabel(ax, "Sample");
 ylabel(ax, "Response");
 title(ax, "Two Series");
 sftExport(fig, "gallery/my_line_plot", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [15 9]);
+x = 1:6;
+center = [1 2 2.5 3.2 3.5 4];
+spread = 0.25 + 0.05 * x;
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotConfidenceBand(ax, x, center, center - spread, center + spread, "Method A", theme);
+xlabel(ax, "Sample");
+ylabel(ax, "Estimate");
+title(ax, "Estimate With Uncertainty");
+sftExport(fig, "gallery/my_confidence_band", ["png", "svg"]);
 close(fig);
 ```
 

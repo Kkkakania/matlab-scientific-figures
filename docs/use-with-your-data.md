@@ -51,6 +51,20 @@ sftExport(fig, "outputs/my_line_plot", ["png", "svg"]);
 close(fig);
 ```
 
+For uncertainty bands, keep your center, lower, and upper arrays the same shape:
+
+```matlab
+theme = sftTheme("FigureSize", [15 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotConfidenceBand(ax, x, center, lower, upper, ["Baseline", "Treatment"], theme);
+xlabel(ax, "Input");
+ylabel(ax, "Estimate");
+title(ax, "Estimate With Uncertainty");
+sftExport(fig, "outputs/my_confidence_band", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
