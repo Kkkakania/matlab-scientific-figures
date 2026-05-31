@@ -523,6 +523,32 @@ verifyError(testCase, @() sftPlotWaterfallChart(ax, 10, [1 2], "A", ...
     sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotWaffleChartDrawsCellsAndLegend(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, cellHandles, legendHandles] = sftPlotWaffleChart(ax, ...
+    [50 30 20], ["Done", "Active", "Queued"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(cellHandles), 100);
+verifyEqual(testCase, numel(legendHandles), 3);
+verifyTrue(testCase, all(isgraphics(cellHandles, 'rectangle')));
+verifyTrue(testCase, all(isgraphics(legendHandles, 'line')));
+verifyEqual(testCase, string(ax.XLabel.String), "100 cells");
+verifyEqual(testCase, string(ax.YLabel.String), "Composition");
+end
+
+function testPlotWaffleChartRejectsNonHundredCounts(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotWaffleChart(ax, [30 30], ...
+    ["A", "B"], sftTheme()), 'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');

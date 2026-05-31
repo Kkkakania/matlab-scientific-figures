@@ -82,6 +82,7 @@ close(fig);
 | `sftPlotGroupedErrorBar(ax, values, errors, groupLabels, seriesLabels, theme)` | Draw grouped bars with matched error bars. |
 | `sftPlotBoxJitter(ax, group, value, theme)` | Draw grouped distributions with jittered observations. |
 | `sftPlotLollipopRanking(ax, labels, values, theme)` | Draw a sorted lollipop ranking chart. |
+| `sftPlotWaffleChart(ax, counts, labels, theme)` | Draw a 100-cell composition chart. |
 
 Example:
 
@@ -207,6 +208,16 @@ ax = axes(fig);
 sftPlotWaterfallChart(ax, 100, [18 12 -9 15 -6], ...
     ["Efficiency", "Storage", "Curtailment", "Forecast", "Control"], theme);
 sftExport(fig, "gallery/my_waterfall_chart", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [12 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotWaffleChart(ax, [42 27 19 12], ...
+    ["Completed", "In progress", "Queued", "Blocked"], theme);
+sftExport(fig, "gallery/my_waffle_chart", ["png", "svg"]);
 close(fig);
 ```
 

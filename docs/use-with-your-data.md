@@ -163,6 +163,18 @@ sftExport(fig, "outputs/my_waterfall_chart", ["png", "svg"]);
 close(fig);
 ```
 
+For 100-cell composition summaries, use a waffle chart. Counts must be
+nonnegative integers that sum to 100:
+
+```matlab
+theme = sftTheme("FigureSize", [12 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotWaffleChart(ax, categoryCounts, categoryLabels, theme);
+sftExport(fig, "outputs/my_waffle_chart", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:
