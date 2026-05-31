@@ -15,8 +15,36 @@ if [[ ! -s "$QUALITY_WORKFLOW" ]]; then
   exit 1
 fi
 
-grep -q "actions/upload-artifact@v5" "$FIGURE_WORKFLOW"
-grep -q "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true" "$FIGURE_WORKFLOW"
-grep -q "scripts/check_workflows.sh" "$QUALITY_WORKFLOW"
+require_text() {
+  local file="$1"
+  local text="$2"
+
+  if ! grep -q "$text" "$file"; then
+    echo "missing workflow setting in ${file#$ROOT_DIR/}: $text" >&2
+    exit 1
+  fi
+}
+
+reject_text() {
+  local file="$1"
+  local text="$2"
+
+  if grep -q "$text" "$file"; then
+    echo "outdated workflow setting in ${file#$ROOT_DIR/}: $text" >&2
+    exit 1
+  fi
+}
+
+require_text "$FIGURE_WORKFLOW" "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true"
+require_text "$FIGURE_WORKFLOW" "actions/checkout@v6"
+require_text "$FIGURE_WORKFLOW" "actions/setup-python@v6"
+require_text "$FIGURE_WORKFLOW" "actions/upload-artifact@v5"
+reject_text "$FIGURE_WORKFLOW" "actions/checkout@v4"
+reject_text "$FIGURE_WORKFLOW" "actions/setup-python@v4"
+reject_text "$FIGURE_WORKFLOW" "actions/upload-artifact@v4"
+
+require_text "$QUALITY_WORKFLOW" "actions/checkout@v6"
+require_text "$QUALITY_WORKFLOW" "scripts/check_workflows.sh"
+reject_text "$QUALITY_WORKFLOW" "actions/checkout@v4"
 
 echo "Workflow maintenance checks passed."
