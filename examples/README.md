@@ -63,6 +63,20 @@ addpath(genpath('examples'));
 renderHeatmap('gallery', ["png", "svg"]);
 ```
 
+## Run The Bundled CSV Example
+
+```matlab
+addpath(genpath('src'));
+addpath(genpath('examples'));
+renderCsvExperiment('gallery', ["png", "svg"]);
+```
+
+From a shell:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh csv-example
+```
+
 ## Run The Full Gallery
 
 ```matlab

@@ -124,6 +124,15 @@ if [[ "${1:-}" == "match" ]]; then
   exit 0
 fi
 
+if [[ "${1:-}" == "csv-example" ]]; then
+  if [[ "$#" -ne 1 ]]; then
+    echo "Usage: ./scripts/render_all.sh csv-example" >&2
+    exit 2
+  fi
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderCsvExperiment('$SFT_OUTPUT_DIR')"
+  exit 0
+fi
+
 if [[ "$#" -eq 0 ]]; then
   run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); runAllExamples('$SFT_OUTPUT_DIR')"
   exit 0

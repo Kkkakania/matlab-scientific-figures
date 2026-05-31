@@ -65,6 +65,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh se
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap double_triangle_heatmap
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh tag matrix
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match matrix
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh csv-example
 ```
 
 ## Gallery
@@ -220,7 +221,8 @@ through CI artifacts without blocking gallery checks.
 
 - MATLAB R2020b or newer is recommended.
 - MATLAB R2025a is used for local verification.
-- No example requires external data files.
+- No example requires private data files or external downloads. The CSV example
+  uses a small bundled synthetic file.
 
 ## Project Status
 

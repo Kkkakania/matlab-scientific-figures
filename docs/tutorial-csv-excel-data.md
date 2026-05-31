@@ -6,15 +6,34 @@ columns to the variables used by the example.
 
 ## CSV Input
 
-Suppose `data/experiment.csv` has these columns:
+The repository includes a small public CSV at
+`examples/data/experiment_signal.csv`. It is synthetic, but it uses the same
+`readtable` path you would use for lab or simulation data.
 
-| time | signal | group |
-|---:|---:|---|
-| 0.0 | 1.12 | baseline |
-| 0.5 | 1.25 | baseline |
-| 1.0 | 1.41 | baseline |
+Run the complete example from MATLAB:
 
-Use it in a line-style example:
+```matlab
+addpath(genpath('src'));
+addpath(genpath('examples'));
+renderCsvExperiment('gallery', ["png", "svg"]);
+```
+
+Or from a shell:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh csv-example
+```
+
+The bundled CSV has these columns:
+
+| time | baseline | treatment |
+|---:|---:|---:|
+| 0.0 | 1.02 | 1.03 |
+| 0.5 | 1.08 | 1.15 |
+| 1.0 | 1.13 | 1.28 |
+
+If your own file uses one value column and one group column, reshape or filter
+it into the columns needed by the figure. For a simple line-style example:
 
 ```matlab
 addpath(genpath('src'));

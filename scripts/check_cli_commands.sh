@@ -31,6 +31,10 @@ rm -f "$TMP_DIR/zoomed_inset_line.png" "$TMP_DIR/zoomed_inset_line.svg"
 SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh tag inset
 test -s "$TMP_DIR/zoomed_inset_line.png"
 
+rm -f "$TMP_DIR/csv_experiment_signal.png" "$TMP_DIR/csv_experiment_signal.svg"
+SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh csv-example
+test -s "$TMP_DIR/csv_experiment_signal.png"
+
 rm -f "$TMP_DIR/heatmap.png" "$TMP_DIR/heatmap.svg" \
   "$TMP_DIR/radar_chart.png" "$TMP_DIR/radar_chart.svg"
 selected_output="$(SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh heatmap radar_chart)"
