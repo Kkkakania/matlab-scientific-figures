@@ -293,6 +293,20 @@ sftExport(fig, "outputs/my_double_triangle_heatmap", ["png", "svg"]);
 close(fig);
 ```
 
+For weighted movement across stages, use a Sankey-style flow chart:
+
+```matlab
+nodes = table(nodeNames, nodeStages, 'VariableNames', {'Name', 'Stage'});
+edges = table(sourceNames, targetNames, weights, ...
+    'VariableNames', {'Source', 'Target', 'Weight'});
+theme = sftTheme("FigureSize", [14 8.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotSankeyFlow(ax, nodes, edges, theme);
+sftExport(fig, "outputs/my_sankey_flow", ["png", "svg"]);
+close(fig);
+```
+
 ## 3. Copy The Renderer
 
 Copy the renderer into your own working folder and rename it:

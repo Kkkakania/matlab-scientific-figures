@@ -93,6 +93,7 @@ close(fig);
 | `sftPlotCalendarHeatmap(ax, values, weekLabels, dayLabels, theme)` | Draw daily values in a day-by-week heatmap. |
 | `sftPlotBubbleMatrix(ax, matrix, rowLabels, colLabels, theme)` | Draw matrix magnitudes with bubble area and color. |
 | `sftPlotDoubleTriangleHeatmap(ax, upperValues, lowerValues, labels, theme)` | Compare two square matrices in one layout. |
+| `sftPlotSankeyFlow(ax, nodes, edges, theme)` | Draw weighted flow bands across staged nodes. |
 
 Example:
 
@@ -333,6 +334,19 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotDoubleTriangleHeatmap(ax, upper, lower, ["A", "B", "C", "D"], theme);
 sftExport(fig, "gallery/my_double_triangle_heatmap", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+nodes = table(["Input"; "Process"; "Output"], [1; 2; 3], ...
+    'VariableNames', {'Name', 'Stage'});
+edges = table(["Input"; "Process"], ["Process"; "Output"], [12; 9], ...
+    'VariableNames', {'Source', 'Target', 'Weight'});
+theme = sftTheme("FigureSize", [14 8.5]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotSankeyFlow(ax, nodes, edges, theme);
+sftExport(fig, "gallery/my_sankey_flow", ["png", "svg"]);
 close(fig);
 ```
 

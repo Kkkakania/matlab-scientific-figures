@@ -834,6 +834,40 @@ verifyError(testCase, @() sftPlotDoubleTriangleHeatmap(ax, eye(2), eye(3), ...
     ["A", "B"], sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotSankeyFlowDrawsNodesAndFlows(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+nodes = table(["A"; "B"; "C"], [1; 2; 3], ...
+    'VariableNames', {'Name', 'Stage'});
+edges = table(["A"; "B"], ["B"; "C"], [5; 4], ...
+    'VariableNames', {'Source', 'Target', 'Weight'});
+
+[returnedAx, flowHandles, nodeHandles, labelHandles, layout] = ...
+    sftPlotSankeyFlow(ax, nodes, edges, sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(flowHandles), 2);
+verifyEqual(testCase, numel(nodeHandles), 3);
+verifyEqual(testCase, numel(labelHandles), 3);
+verifyTrue(testCase, all(isgraphics(flowHandles, 'patch')));
+verifyTrue(testCase, all(isgraphics(nodeHandles, 'rectangle')));
+verifyTrue(testCase, all(isgraphics(labelHandles, 'text')));
+verifyEqual(testCase, height(layout), 3);
+verifyEqual(testCase, string(ax.XLabel.String), "Stage");
+end
+
+function testPlotSankeyFlowRejectsUnknownNodeReference(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+nodes = table(["A"; "B"], [1; 2], 'VariableNames', {'Name', 'Stage'});
+edges = table("A", "Missing", 5, 'VariableNames', {'Source', 'Target', 'Weight'});
+
+verifyError(testCase, @() sftPlotSankeyFlow(ax, nodes, edges, sftTheme()), ...
+    'sft:InvalidData');
+end
+
 function testBundledCsvExampleHasExpectedColumns(testCase)
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');
