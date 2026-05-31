@@ -143,6 +143,17 @@ sftExport(fig, "outputs/my_forest_plot", ["png", "svg"]);
 close(fig);
 ```
 
+For grouped comparisons without uncertainty bars, use a grouped bar chart:
+
+```matlab
+theme = sftTheme("FigureSize", [14 9]);
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotGroupedBar(ax, values, methodLabels, metricLabels, theme);
+sftExport(fig, "outputs/my_grouped_bar", ["png", "svg"]);
+close(fig);
+```
+
 For method comparisons with uncertainty, keep `values` and `errors` the same
 matrix size:
 

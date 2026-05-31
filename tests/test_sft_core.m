@@ -472,6 +472,29 @@ verifyError(testCase, @() sftPlotForest(ax, 0.2, 0.3, 0.4, "A", 0, ...
     sftTheme()), 'sft:InvalidData');
 end
 
+function testPlotGroupedBarDrawsSeries(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+[returnedAx, barHandles] = sftPlotGroupedBar(ax, [1 2; 3 4; 5 6], ...
+    ["A", "B", "C"], ["Left", "Right"], sftTheme());
+
+verifyEqual(testCase, returnedAx, ax);
+verifyEqual(testCase, numel(barHandles), 2);
+verifyEqual(testCase, string(ax.XTickLabel(:)), ["A"; "B"; "C"]);
+verifyEqual(testCase, string(ax.XLabel.String), "Scenario");
+end
+
+function testPlotGroupedBarRejectsLabelMismatch(testCase)
+fig = figure('Visible', 'off', 'Color', 'w');
+cleanup = onCleanup(@() close(fig));
+ax = axes(fig);
+
+verifyError(testCase, @() sftPlotGroupedBar(ax, [1 2; 3 4], "Only one", ...
+    ["Left", "Right"], sftTheme()), 'sft:InvalidLabels');
+end
+
 function testPlotGroupedErrorBarDrawsBarsAndErrors(testCase)
 fig = figure('Visible', 'off', 'Color', 'w');
 cleanup = onCleanup(@() close(fig));

@@ -81,6 +81,7 @@ close(fig);
 | `sftPlotCorrelationBubble(ax, matrix, labels, theme)` | Draw a bubble heatmap for a correlation matrix. |
 | `sftPlotForest(ax, estimate, lower, upper, labels, reference, theme)` | Draw effect estimates with interval bounds and a reference line. |
 | `sftPlotWaterfallChart(ax, startValue, steps, stepLabels, theme)` | Draw cumulative contribution steps. |
+| `sftPlotGroupedBar(ax, values, groupLabels, seriesLabels, theme)` | Draw grouped bars for scenario or method comparison. |
 | `sftPlotGroupedErrorBar(ax, values, errors, groupLabels, seriesLabels, theme)` | Draw grouped bars with matched error bars. |
 | `sftPlotBoxJitter(ax, group, value, theme)` | Draw grouped distributions with jittered observations. |
 | `sftPlotLollipopRanking(ax, labels, values, theme)` | Draw a sorted lollipop ranking chart. |
@@ -190,6 +191,16 @@ fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.Fi
 ax = axes(fig);
 sftPlotCorrelationBubble(ax, matrix, ["A", "B", "C", "D", "E"], theme);
 sftExport(fig, "gallery/my_correlation_bubble", ["png", "svg"]);
+close(fig);
+```
+
+```matlab
+theme = sftTheme("FigureSize", [14 9]);
+values = [4.2 3.1; 5.0 4.1; 3.6 4.7];
+fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
+ax = axes(fig);
+sftPlotGroupedBar(ax, values, ["Baseline", "Method A", "Method B"], ["Precision", "Recall"], theme);
+sftExport(fig, "gallery/my_grouped_bar", ["png", "svg"]);
 close(fig);
 ```
 
