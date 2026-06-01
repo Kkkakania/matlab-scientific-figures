@@ -81,6 +81,84 @@ fi
 
 format_expr="[$(IFS=,; echo "${formats[*]}")]"
 
+validate_tokens() {
+  local label="$1"
+  local pattern="$2"
+  shift 2
+  local value
+
+  for value in "$@"; do
+    if [[ ! "$value" =~ $pattern ]]; then
+      echo "Invalid $label: $value" >&2
+      case "$label" in
+        "search keyword")
+          echo "Search keywords may contain letters, numbers, hyphens, and underscores." >&2
+          ;;
+        "match keyword")
+          echo "Match keywords may contain letters, numbers, hyphens, and underscores." >&2
+          ;;
+        "tag")
+          echo "Tags may contain letters, numbers, hyphens, and underscores." >&2
+          ;;
+        "template name")
+          echo "Template names may contain lowercase letters, numbers, and underscores." >&2
+          ;;
+      esac
+      exit 2
+    fi
+  done
+}
+
+case "${1:-}" in
+  list|tags|csv-example)
+    if [[ "$#" -ne 1 ]]; then
+      echo "Usage: ./scripts/render_all.sh ${1}" >&2
+      exit 2
+    fi
+    ;;
+  search)
+    shift
+    if [[ "$#" -eq 0 ]]; then
+      echo "Usage: ./scripts/render_all.sh search <keyword> [keyword...]" >&2
+      exit 2
+    fi
+    validate_tokens "search keyword" '^[A-Za-z0-9_-]+$' "$@"
+    set -- search "$@"
+    ;;
+  match)
+    shift
+    if [[ "$#" -eq 0 ]]; then
+      echo "Usage: ./scripts/render_all.sh match <keyword> [keyword...]" >&2
+      exit 2
+    fi
+    validate_tokens "match keyword" '^[A-Za-z0-9_-]+$' "$@"
+    set -- match "$@"
+    ;;
+  tag)
+    shift
+    if [[ "$#" -eq 0 ]]; then
+      echo "Usage: ./scripts/render_all.sh tag <tag> [tag...]" >&2
+      exit 2
+    fi
+    validate_tokens "tag" '^[A-Za-z0-9_-]+$' "$@"
+    set -- tag "$@"
+    ;;
+  info)
+    shift
+    if [[ "$#" -ne 1 ]]; then
+      echo "Usage: ./scripts/render_all.sh info <template>" >&2
+      exit 2
+    fi
+    validate_tokens "template name" '^[a-z0-9_]+$' "$@"
+    set -- info "$@"
+    ;;
+  "")
+    ;;
+  *)
+    validate_tokens "template name" '^[a-z0-9_]+$' "$@"
+    ;;
+esac
+
 if [[ "$MATLAB_BIN" == */* ]]; then
   if [[ ! -x "$MATLAB_BIN" ]]; then
     echo "MATLAB executable not found: $MATLAB_BIN" >&2
@@ -115,18 +193,9 @@ fi
 
 if [[ "${1:-}" == "search" ]]; then
   shift
-  if [[ "$#" -eq 0 ]]; then
-    echo "Usage: ./scripts/render_all.sh search <keyword> [keyword...]" >&2
-    exit 2
-  fi
 
   queries=()
   for query in "$@"; do
-    if [[ ! "$query" =~ ^[A-Za-z0-9_-]+$ ]]; then
-      echo "Invalid search keyword: $query" >&2
-      echo "Search keywords may contain letters, numbers, hyphens, and underscores." >&2
-      exit 2
-    fi
     queries+=("\"$query\"")
   done
 
@@ -137,17 +206,8 @@ fi
 
 if [[ "${1:-}" == "info" ]]; then
   shift
-  if [[ "$#" -ne 1 ]]; then
-    echo "Usage: ./scripts/render_all.sh info <template>" >&2
-    exit 2
-  fi
 
   name="$1"
-  if [[ ! "$name" =~ ^[a-z0-9_]+$ ]]; then
-    echo "Invalid template name: $name" >&2
-    echo "Template names may contain lowercase letters, numbers, and underscores." >&2
-    exit 2
-  fi
 
   run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); disp(sftTemplateInfo(\"$name\"))"
   exit 0
@@ -155,18 +215,9 @@ fi
 
 if [[ "${1:-}" == "tag" ]]; then
   shift
-  if [[ "$#" -eq 0 ]]; then
-    echo "Usage: ./scripts/render_all.sh tag <tag> [tag...]" >&2
-    exit 2
-  fi
 
   tags=()
   for tag in "$@"; do
-    if [[ ! "$tag" =~ ^[A-Za-z0-9_-]+$ ]]; then
-      echo "Invalid tag: $tag" >&2
-      echo "Tags may contain letters, numbers, hyphens, and underscores." >&2
-      exit 2
-    fi
     tags+=("\"$tag\"")
   done
 
@@ -177,18 +228,9 @@ fi
 
 if [[ "${1:-}" == "match" ]]; then
   shift
-  if [[ "$#" -eq 0 ]]; then
-    echo "Usage: ./scripts/render_all.sh match <keyword> [keyword...]" >&2
-    exit 2
-  fi
 
   queries=()
   for query in "$@"; do
-    if [[ ! "$query" =~ ^[A-Za-z0-9_-]+$ ]]; then
-      echo "Invalid match keyword: $query" >&2
-      echo "Match keywords may contain letters, numbers, hyphens, and underscores." >&2
-      exit 2
-    fi
     queries+=("\"$query\"")
   done
 
@@ -198,10 +240,6 @@ if [[ "${1:-}" == "match" ]]; then
 fi
 
 if [[ "${1:-}" == "csv-example" ]]; then
-  if [[ "$#" -ne 1 ]]; then
-    echo "Usage: ./scripts/render_all.sh csv-example" >&2
-    exit 2
-  fi
   run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderCsvExperiment('$SFT_OUTPUT_DIR', $format_expr)"
   exit 0
 fi
@@ -213,11 +251,6 @@ fi
 
 names=()
 for name in "$@"; do
-  if [[ ! "$name" =~ ^[a-z0-9_]+$ ]]; then
-    echo "Invalid template name: $name" >&2
-    echo "Template names may contain lowercase letters, numbers, and underscores." >&2
-    exit 2
-  fi
   names+=("\"$name\"")
 done
 

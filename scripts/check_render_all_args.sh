@@ -43,6 +43,15 @@ expect_failure "SFT_OUTPUT_DIR may not contain single quotes" \
 expect_failure "SFT_OUTPUT_DIR must not be empty" \
   env SFT_OUTPUT_DIR= MATLAB_BIN=/no/such/matlab "$SCRIPT" list
 
+expect_failure "Usage: ./scripts/render_all.sh search <keyword>" \
+  env MATLAB_BIN=/no/such/matlab "$SCRIPT" search
+
+expect_failure "Usage: ./scripts/render_all.sh info <template>" \
+  env MATLAB_BIN=/no/such/matlab "$SCRIPT" info heatmap radar_chart
+
+expect_failure "Invalid template name: Heatmap" \
+  env MATLAB_BIN=/no/such/matlab "$SCRIPT" Heatmap
+
 help_output="$(env SFT_FORMATS=bad MATLAB_BIN=/no/such/matlab "$SCRIPT" help)"
 grep -q "Usage: ./scripts/render_all.sh" <<<"$help_output"
 grep -q "SFT_FORMATS" <<<"$help_output"
