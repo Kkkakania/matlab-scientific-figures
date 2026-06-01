@@ -29,6 +29,12 @@ forbidden_dirs=(
   "tmp"
 )
 
+forbidden_names=(
+  ".DS_Store"
+  "Thumbs.db"
+  "desktop.ini"
+)
+
 found=0
 
 for pattern in "${forbidden_extensions[@]}"; do
@@ -43,6 +49,13 @@ for dir_name in "${forbidden_dirs[@]}"; do
     echo "Forbidden source-material directory found: ${dir#$ROOT_DIR/}" >&2
     found=1
   done < <(find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type d -name "$dir_name" -print)
+done
+
+for file_name in "${forbidden_names[@]}"; do
+  while IFS= read -r file; do
+    echo "Forbidden system metadata file found: ${file#$ROOT_DIR/}" >&2
+    found=1
+  done < <(find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type f -name "$file_name" -print)
 done
 
 if [[ "$found" -ne 0 ]]; then
