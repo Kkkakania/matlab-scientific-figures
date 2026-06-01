@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added a static check for GitHub issue templates and tightened template
+  request provenance checkboxes around synthetic examples and copied material.
 - Use `mktemp` and trap cleanup in privacy/provenance scan scripts, guarded by
   a static check, instead of predictable `/tmp` match files.
 - Make `scripts/render_all.sh` reject an empty `SFT_OUTPUT_DIR` before MATLAB

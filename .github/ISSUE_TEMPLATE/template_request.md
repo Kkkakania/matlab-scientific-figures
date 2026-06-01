@@ -47,5 +47,10 @@ y = rand(1, 10);
 
 ## Provenance Note
 
-Please do not attach copied template code or private data. A rough sketch or a
-short description is enough.
+Please do not attach copied template code or private data. A rough sketch,
+synthetic table, or short description is enough.
+
+- [ ] I am not attaching private data, local project files, or private paths.
+- [ ] I am not attaching copied figure code, journal screenshots, or
+      third-party plotting bundles.
+- [ ] Any example values above are synthetic or safe to publish.
