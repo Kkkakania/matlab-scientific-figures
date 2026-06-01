@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added a dogfooded `matlab-figure-ci` version-alignment check for README,
+  maintainer dashboard, quality-gate docs, and the Figure quality workflow.
 - Added a static check for GitHub issue templates and tightened template
   request provenance checkboxes around synthetic examples and copied material.
 - Use `mktemp` and trap cleanup in privacy/provenance scan scripts, guarded by
