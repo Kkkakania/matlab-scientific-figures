@@ -44,7 +44,13 @@ reject_text "$FIGURE_WORKFLOW" "actions/setup-python@v4"
 reject_text "$FIGURE_WORKFLOW" "actions/upload-artifact@v4"
 
 require_text "$QUALITY_WORKFLOW" "actions/checkout@v6"
+require_text "$QUALITY_WORKFLOW" "scripts/check_mfigci_dogfood_version.sh"
 require_text "$QUALITY_WORKFLOW" "scripts/check_workflows.sh"
+require_text "$QUALITY_WORKFLOW" "scripts/check_issue_templates.sh"
+require_text "$QUALITY_WORKFLOW" "scripts/check_readme_first_steps.sh"
+require_text "$QUALITY_WORKFLOW" "scripts/check_cli_script_static.sh"
+require_text "$QUALITY_WORKFLOW" "scripts/check_render_all_args.sh"
+require_text "$QUALITY_WORKFLOW" "scripts/check_scan_script_tempfiles.sh"
 reject_text "$QUALITY_WORKFLOW" "actions/checkout@v4"
 
 echo "Workflow maintenance checks passed."

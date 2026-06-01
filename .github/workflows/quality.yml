@@ -23,6 +23,9 @@ jobs:
       - name: Verify release metadata is consistent
         run: ./scripts/check_version_consistency.sh
 
+      - name: Verify matlab-figure-ci dogfood version
+        run: ./scripts/check_mfigci_dogfood_version.sh
+
       - name: Verify roadmap status language
         run: ./scripts/check_roadmap_status.sh
 
@@ -37,6 +40,12 @@ jobs:
 
       - name: Check first-use feedback docs
         run: ./scripts/check_first_use_docs.sh
+
+      - name: Check issue templates
+        run: ./scripts/check_issue_templates.sh
+
+      - name: Check README first steps
+        run: ./scripts/check_readme_first_steps.sh
 
       - name: Check API reference coverage
         run: ./scripts/check_api_reference.sh
@@ -70,6 +79,15 @@ jobs:
 
       - name: Check color accessibility audit
         run: ./scripts/check_color_accessibility_audit.sh
+
+      - name: Check CLI script static behavior
+        run: ./scripts/check_cli_script_static.sh
+
+      - name: Check render_all argument handling
+        run: ./scripts/check_render_all_args.sh
+
+      - name: Check scan script tempfiles
+        run: ./scripts/check_scan_script_tempfiles.sh
 
       - name: Check timeout helper
         run: ./scripts/check_timeout_helper.sh
