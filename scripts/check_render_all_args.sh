@@ -40,6 +40,9 @@ expect_failure "SFT_FORMATS must include at least one" \
 expect_failure "SFT_OUTPUT_DIR may not contain single quotes" \
   env "SFT_OUTPUT_DIR=bad'path" MATLAB_BIN=/no/such/matlab "$SCRIPT" list
 
+expect_failure "SFT_OUTPUT_DIR may not contain control characters" \
+  env SFT_OUTPUT_DIR=$'bad\npath' MATLAB_BIN=/no/such/matlab "$SCRIPT" list
+
 expect_failure "SFT_OUTPUT_DIR must not be empty" \
   env SFT_OUTPUT_DIR= MATLAB_BIN=/no/such/matlab "$SCRIPT" list
 

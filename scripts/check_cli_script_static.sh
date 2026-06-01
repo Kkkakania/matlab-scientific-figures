@@ -21,6 +21,7 @@ grep -Fq 'sftRenderExamples($name_expr' "$SCRIPT"
 grep -Fq 'Invalid SFT_FORMATS entry' "$SCRIPT"
 grep -Fq 'SFT_OUTPUT_DIR must not be empty' "$SCRIPT"
 grep -Fq 'SFT_OUTPUT_DIR may not contain single quotes' "$SCRIPT"
+grep -Fq 'SFT_OUTPUT_DIR may not contain control characters' "$SCRIPT"
 
 grep -Fq 'SFT_FORMATS=png,svg,pdf' "$README"
 grep -Fq 'SFT_FORMATS=png,svg,pdf' "$CLI_GUIDE"

@@ -59,6 +59,11 @@ if [[ "$SFT_OUTPUT_DIR" == *"'"* ]]; then
   exit 2
 fi
 
+if [[ "$SFT_OUTPUT_DIR" =~ [[:cntrl:]] ]]; then
+  echo "SFT_OUTPUT_DIR may not contain control characters." >&2
+  exit 2
+fi
+
 formats=()
 IFS=',' read -r -a requested_formats <<<"$SFT_FORMATS"
 for format in "${requested_formats[@]}"; do
