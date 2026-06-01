@@ -33,6 +33,7 @@ run_step "color accessibility audit" ./scripts/check_color_accessibility_audit.s
 run_step "CLI script static checks" ./scripts/check_cli_script_static.sh
 run_step "render_all argument checks" ./scripts/check_render_all_args.sh
 run_step "timeout helper" ./scripts/check_timeout_helper.sh
+run_step "scan script tempfiles" ./scripts/check_scan_script_tempfiles.sh
 run_step "workflow maintenance settings" ./scripts/check_workflows.sh
 run_step "forbidden file scan" ./scripts/check_forbidden_files.sh
 run_step "privacy scan" ./scripts/check_privacy.sh

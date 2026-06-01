@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Use `mktemp` and trap cleanup in privacy/provenance scan scripts, guarded by
+  a static check, instead of predictable `/tmp` match files.
 - Make `scripts/render_all.sh` reject an empty `SFT_OUTPUT_DIR` before MATLAB
   starts, avoiding confusing renders with an empty output path.
 - Add a shareable First 5 Minutes guide and link it from README, the docs
