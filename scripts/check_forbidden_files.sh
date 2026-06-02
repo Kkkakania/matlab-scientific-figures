@@ -21,6 +21,7 @@ forbidden_extensions=(
 )
 
 forbidden_dirs=(
+  "__MACOSX"
   "10_inbox"
   "OCR"
   "ocr"
