@@ -10,7 +10,9 @@ examples_list="$TMP_DIR/examples_readme.txt"
 template_reference_list="$TMP_DIR/template_reference.txt"
 gallery_reference_list="$TMP_DIR/gallery_reference.txt"
 gallery_png_list="$TMP_DIR/gallery_png.txt"
+gallery_svg_list="$TMP_DIR/gallery_svg.txt"
 mfigci_png_list="$TMP_DIR/mfigci_png.txt"
+mfigci_svg_list="$TMP_DIR/mfigci_svg.txt"
 check_script_list="$TMP_DIR/check_gallery_outputs.txt"
 
 sed -nE 's/^[[:space:]]*makeTemplate\("([^"]+)".*/\1/p' \
@@ -28,8 +30,14 @@ sed -nE 's/^\| `([^`]+)` \|.*/\1/p' "$ROOT_DIR/docs/gallery-reference.md" \
 find "$ROOT_DIR/gallery" -maxdepth 1 -type f -name '*.png' \
   -exec basename {} .png \; | sort > "$gallery_png_list"
 
+find "$ROOT_DIR/gallery" -maxdepth 1 -type f -name '*.svg' \
+  -exec basename {} .svg \; | sort > "$gallery_svg_list"
+
 sed -nE 's/^[[:space:]]*- "([^"]+)\.png"$/\1/p' "$ROOT_DIR/mfigci.yml" \
   | sort > "$mfigci_png_list"
+
+sed -nE 's/^[[:space:]]*- "([^"]+)\.svg"$/\1/p' "$ROOT_DIR/mfigci.yml" \
+  | sort > "$mfigci_svg_list"
 
 sed -n '/^expected=(/,/^)/p' "$ROOT_DIR/scripts/check_gallery_outputs.sh" \
   | sed -nE 's/^[[:space:]]*([a-z0-9_]+)$/\1/p' > "$check_script_list"
@@ -61,7 +69,9 @@ compare_exact "template reference order" "$registry_list" "$template_reference_l
 compare_exact "check_gallery_outputs order" "$registry_list" "$check_script_list"
 compare_sorted "gallery reference entries" "$gallery_reference_list"
 compare_sorted "committed gallery pngs" "$gallery_png_list"
+compare_sorted "committed gallery svgs" "$gallery_svg_list"
 compare_sorted "mfigci png entries" "$mfigci_png_list"
+compare_sorted "mfigci svg entries" "$mfigci_svg_list"
 
 if [[ "$failure" -ne 0 ]]; then
   exit 1
