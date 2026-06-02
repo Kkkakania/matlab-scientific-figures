@@ -4,6 +4,9 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 API_DOC="$ROOT_DIR/docs/api-reference.md"
 USER_DATA_DOC="$ROOT_DIR/docs/use-with-your-data.md"
+PLOT_FILES="$(mktemp)"
+PLOT_DOCS="$(mktemp)"
+trap 'rm -f "$PLOT_FILES" "$PLOT_DOCS"' EXIT
 
 if [[ ! -s "$API_DOC" ]]; then
   echo "Missing API reference: docs/api-reference.md" >&2
@@ -31,6 +34,24 @@ fi
 plot_count="$(find "$ROOT_DIR/src" -maxdepth 1 -type f -name 'sftPlot*.m' | wc -l | tr -d ' ')"
 if [[ "$plot_count" -ne 30 ]]; then
   echo "Expected 30 reusable sftPlot*.m functions, found $plot_count" >&2
+  exit 1
+fi
+
+find "$ROOT_DIR/src" -maxdepth 1 -type f -name 'sftPlot*.m' \
+  | sed -E 's|.*/([^/]+)\.m$|\1|' \
+  | sort > "$PLOT_FILES"
+
+sed -n '/^## Reusable Plotting Functions$/,/^## /p' "$API_DOC" \
+  | grep -Eo '\| `sftPlot[A-Za-z0-9_]+' \
+  | sed -E 's/^\| `//' \
+  | sort > "$PLOT_DOCS"
+
+if ! cmp -s "$PLOT_FILES" "$PLOT_DOCS"; then
+  echo "Reusable plotting function table does not match src/sftPlot*.m." >&2
+  echo "Expected from src:" >&2
+  cat "$PLOT_FILES" >&2
+  echo "Found in docs/api-reference.md:" >&2
+  cat "$PLOT_DOCS" >&2
   exit 1
 fi
 
