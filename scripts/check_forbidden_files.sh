@@ -23,6 +23,7 @@ forbidden_extensions=(
 forbidden_dirs=(
   ".ipynb_checkpoints"
   ".pytest_cache"
+  "__pycache__"
   "__MACOSX"
   "10_inbox"
   "OCR"
