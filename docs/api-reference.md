@@ -50,6 +50,7 @@ sftRenderExamples(["heatmap", "radar_chart"], "gallery", ["png", "svg"]);
 | `sftStyleLegend(legendHandle, theme)` | Keep legends visually consistent. |
 | `sftTiledFigure(rows, cols)` | Create a compact tiled layout. |
 | `sftExport(fig, outputBase, formats)` | Export PNG, PDF, or SVG from one call. |
+| `sftSanitizeSvgMetadataText(svgText)` | Remove vendor-generated SVG description text before writing gallery SVGs. |
 | `sftValidateFigure(fig)` | Check common figure-quality requirements before export. |
 
 Example:

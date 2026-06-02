@@ -46,11 +46,7 @@ end
 
 function sanitizeSvgMetadata(filePath)
 svgText = fileread(filePath);
-vendorDescription = ['<desc>MATLAB, The Math' ...
-    'Works, Inc\. Version [^<]+</desc>'];
-svgText = regexprep(svgText, vendorDescription, '<desc>Clean-room gallery output</desc>');
-svgText = regexprep(svgText, '[ \t]+(\r?\n)', '$1');
-svgText = regexprep(svgText, '[ \t]+\Z', '');
+svgText = sftSanitizeSvgMetadataText(svgText);
 
 fid = fopen(filePath, 'w');
 if fid < 0

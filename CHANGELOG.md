@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Broadened SVG metadata sanitization so regenerated gallery SVGs remove
+  common vendor-generated description variants while preserving ordinary figure
+  descriptions.
 - Added a dogfooded `matlab-figure-ci` version-alignment check for README,
   maintainer dashboard, quality-gate docs, and the Figure quality workflow.
 - Added a static check for GitHub issue templates and tightened template

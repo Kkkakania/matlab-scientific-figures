@@ -1260,6 +1260,24 @@ verifyFalse(testCase, contains(svgText, vendorName));
 verifyEmpty(testCase, regexp(svgText, '[ \t]+\n', 'once'));
 end
 
+function testSvgMetadataSanitizerHandlesMatlabDescriptionVariants(testCase)
+vendorName = ['Math' 'Works'];
+rawSvg = strjoin([
+    "<svg>"
+    "<desc>MATLAB, The " + vendorName + ", Inc. Version 25.1.0.2943329 (R2025a)</desc>"
+    "<desc>Created with MATLAB R2026a Update 1 (" + vendorName + ")</desc>"
+    "<desc>Paper-ready figure</desc>"
+    "</svg>"
+], newline);
+
+cleanSvg = sftSanitizeSvgMetadataText(rawSvg);
+
+verifyEqual(testCase, count(string(cleanSvg), '<desc>Clean-room gallery output</desc>'), 2);
+verifyTrue(testCase, contains(cleanSvg, '<desc>Paper-ready figure</desc>'));
+verifyFalse(testCase, contains(cleanSvg, vendorName));
+verifyFalse(testCase, contains(cleanSvg, 'R2026a'));
+end
+
 function testValidateFigurePassesLabeledPublicationFigure(testCase)
 fig = figure('Visible', 'off', 'Color', 'w', 'Position', [100 100 640 420]);
 cleanup = onCleanup(@() close(fig));
