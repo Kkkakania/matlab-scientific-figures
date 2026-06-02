@@ -76,11 +76,19 @@ channelRange = max(colors(1:7, :), [], 2) - min(colors(1:7, :), [], 2);
 verifyGreaterThan(testCase, channelRange, 0.2);
 end
 
+function testCategoricalPaletteWarnsWhenInterpolatingBeyondCuratedAnchors(testCase)
+verifyWarning(testCase, @() sftPalette('contrast', 6), 'sftPalette:InterpolatedCategoricalPalette');
+end
+
 function testDivergingPaletteReturnsRequestedNumberOfRgbRows(testCase)
 colors = sftPalette('diverging', 11);
 verifySize(testCase, colors, [11 3]);
 verifyGreaterThanOrEqual(testCase, colors, 0);
 verifyLessThanOrEqual(testCase, colors, 1);
+end
+
+function testSequentialPaletteCanInterpolateWithoutWarning(testCase)
+verifyWarningFree(testCase, @() sftPalette('sequential', 128));
 end
 
 function testExampleDataIsDeterministic(testCase)

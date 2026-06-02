@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Warn when categorical palettes need interpolation beyond their curated anchor
+  colors, while leaving sequential and diverging palettes warning-free.
 - Broadened SVG metadata sanitization so regenerated gallery SVGs remove
   common vendor-generated description variants while preserving ordinary figure
   descriptions.

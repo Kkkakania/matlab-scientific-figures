@@ -25,6 +25,7 @@ switch name
             0.62 0.39 0.23
             0.48 0.62 0.30
         ];
+        warnIfInterpolatingCategorical(name, n, size(base, 1));
     case "muted"
         base = [
             0.27 0.45 0.57
@@ -34,6 +35,7 @@ switch name
             0.52 0.48 0.65
             0.48 0.48 0.48
         ];
+        warnIfInterpolatingCategorical(name, n, size(base, 1));
     case "contrast"
         base = [
             0.02 0.18 0.33
@@ -42,6 +44,7 @@ switch name
             0.78 0.12 0.20
             0.30 0.24 0.65
         ];
+        warnIfInterpolatingCategorical(name, n, size(base, 1));
     case "sequential"
         anchors = [
             0.93 0.96 0.98
@@ -79,4 +82,16 @@ x = linspace(0, 1, size(base, 1));
 xq = linspace(0, 1, n);
 colors = interp1(x, base, xq, 'linear');
 colors = max(0, min(1, colors));
+end
+
+function warnIfInterpolatingCategorical(name, n, curatedCount)
+if n <= curatedCount
+    return
+end
+
+warning( ...
+    'sftPalette:InterpolatedCategoricalPalette', ...
+    ['Palette "%s" has %d curated categorical colors; requested %d, ' ...
+     'so additional colors are interpolated.'], ...
+    name, curatedCount, n);
 end
