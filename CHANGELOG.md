@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added a standalone synthetic PV power confidence-band example as the first
+  domain example without expanding the core gallery registry.
 - Warn when categorical palettes need interpolation beyond their curated anchor
   colors, while leaving sequential and diverging palettes warning-free.
 - Broadened SVG metadata sanitization so regenerated gallery SVGs remove

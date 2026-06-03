@@ -1087,6 +1087,33 @@ verifyEqual(testCase, numel(files), 1);
 verifyTrue(testCase, isfile(fullfile(outputDir, 'csv_experiment_signal.png')));
 end
 
+function testPvPowerExampleDataIsBoundedAndDeterministic(testCase)
+first = sftExampleData('pv_power');
+second = sftExampleData('pv_power');
+
+verifyEqual(testCase, first.hours, second.hours);
+verifyEqual(testCase, first.center, second.center);
+verifyEqual(testCase, first.lower, second.lower);
+verifyEqual(testCase, first.upper, second.upper);
+verifyEqual(testCase, first.labels, "PV forecast");
+verifyGreaterThan(testCase, numel(first.hours), 24);
+verifyGreaterThanOrEqual(testCase, first.lower, 0);
+verifyLessThanOrEqual(testCase, first.upper, 1.05);
+verifyLessThanOrEqual(testCase, first.lower, first.center);
+verifyLessThanOrEqual(testCase, first.center, first.upper);
+end
+
+function testPvPowerConfidenceRendererExportsPng(testCase)
+outputDir = tempname;
+mkdir(outputDir);
+cleanup = onCleanup(@() rmdir(outputDir, 's'));
+
+files = renderPvPowerConfidence(outputDir, "png");
+
+verifyEqual(testCase, numel(files), 1);
+verifyTrue(testCase, isfile(fullfile(outputDir, 'pv_power_confidence.png')));
+end
+
 function testBlandAltmanDataHasAgreementStatistics(testCase)
 data = sftExampleData('bland_altman_plot');
 

@@ -29,6 +29,18 @@ switch kind
         data.upper = center + abs(spread);
         data.labels = ["Model A", "Model B", "Model C"];
 
+    case "pv_power"
+        hours = linspace(0, 24, 97);
+        daylight = max(0, sin(pi * (hours - 6) / 12));
+        cloudDip = 0.16 * exp(-0.5 * ((hours - 14.2) / 1.1) .^ 2);
+        center = min(1, max(0, daylight .^ 1.6 - cloudDip + 0.025 * randn(size(hours))));
+        spread = 0.035 + 0.08 * daylight .* (1 - daylight) + 0.025 * exp(-0.5 * ((hours - 14.2) / 1.5) .^ 2);
+        data.hours = hours;
+        data.center = center;
+        data.lower = max(0, center - spread);
+        data.upper = min(1.05, center + spread);
+        data.labels = "PV forecast";
+
     case "uncertainty_fan_chart"
         x = linspace(0, 24, 120);
         median = 0.045 * x + 0.42 * sin(0.28 * x + 0.4);

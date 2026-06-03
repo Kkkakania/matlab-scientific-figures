@@ -77,6 +77,17 @@ From a shell:
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh csv-example
 ```
 
+## Run A Domain Example
+
+Domain examples are synthetic, standalone examples that reuse the public
+plotting helpers without expanding the core 30-template gallery.
+
+```matlab
+addpath(genpath('src'));
+addpath(genpath('examples'));
+renderPvPowerConfidence('gallery', ["png", "svg"]);
+```
+
 ## Run The Full Gallery
 
 ```matlab
