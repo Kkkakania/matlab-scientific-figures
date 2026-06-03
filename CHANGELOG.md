@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## v3.6.0 - 2026-06-03
+
+- Added a clean-room directional-frequency rose standalone example and
+  `scripts/render_all.sh directional-rose`, informed by the expanded local
+  plotting-resource audit without copying source files or image assets.
 - Added `scripts/render_all.sh pv-power` for the standalone synthetic PV power
   domain example.
 - Added a standalone synthetic PV power confidence-band example as the first

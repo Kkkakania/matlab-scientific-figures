@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v3.5.0` is the current release.
+- `v3.6.0` is the current release.
 - The gallery has 30 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 - Future tags should follow `docs/release-cadence.md`; small maintenance
@@ -172,19 +172,27 @@ Release conditions:
 - MATLAB-enabled release gate passes locally.
 - `Quality checks` and `Figure quality` pass on `main` and the release tag.
 
-## Post-v3.5.0 Main-Branch Hardening
+## v3.6.0 Released
 
-Goal: improve contributor confidence without creating version churn.
+Goal: publish a user-visible workflow release without expanding the stable
+30-template gallery.
 
-Delivered on `main` after `v3.5.0`:
+Delivered changes:
 
+- `pv_power_confidence` standalone domain example with deterministic synthetic
+  PV forecast data.
+- `directional_rose` standalone example for directional-frequency data,
+  reimplemented clean-room after auditing local resources at the chart-family
+  level.
+- CLI commands for `csv-example`, `pv-power`, and `directional-rose`.
+- `SFT_FORMATS`, CLI help examples, argument validation, timeout checks, and
+  first-use documentation improvements.
 - Tag-based gallery documentation generated from the template manifest.
 - Color-accessibility audit coverage checks.
 - MATLAB compatibility documentation and local release-gate coverage.
 
-Release policy:
+Release conditions:
 
-- Do not tag these changes by themselves unless users need a packaged release.
-- Use `v3.5.1` for small documentation or CI fixes if a tag is needed.
-- Use `v3.6.0` only when there is a user-visible workflow, template, or API
-  addition that justifies a new minor release.
+- MATLAB core tests pass locally.
+- CLI command checks render the CSV, PV, and directional-rose examples.
+- Static quality, provenance, privacy, and figure-quality checks pass.

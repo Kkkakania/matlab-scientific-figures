@@ -29,3 +29,13 @@ look original.
 Generated gallery SVG files should keep only neutral project metadata. This is
 not a claim about ownership of the rendering tool; it keeps committed examples
 free of machine-specific or vendor-generated description text.
+
+## Local Reference Audits
+
+Maintainers may inspect private or local plotting archives to identify common
+chart families, user workflows, and missing documentation. Those audits may
+inform the public roadmap at the level of tasks such as "directional
+frequency", "marginal distributions", or "3D comparison". They must not be used
+to copy source files, generated images, bundled datasets, helper libraries,
+book companion code, journal figure collections, or binary project files into
+this repository.

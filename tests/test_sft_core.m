@@ -1114,6 +1114,28 @@ verifyEqual(testCase, numel(files), 1);
 verifyTrue(testCase, isfile(fullfile(outputDir, 'pv_power_confidence.png')));
 end
 
+function testDirectionalRoseExampleDataUsesCircularBins(testCase)
+data = sftExampleData('directional_rose');
+
+verifyEqual(testCase, numel(data.directionDegrees), numel(data.frequency));
+verifyEqual(testCase, data.directionDegrees(1), 0);
+verifyLessThan(testCase, data.directionDegrees(end), 360);
+verifyTrue(testCase, all(data.frequency > 0));
+verifyEqual(testCase, sum(data.frequency), 1, 'AbsTol', 1e-12);
+verifyGreaterThan(testCase, max(data.frequency), min(data.frequency));
+end
+
+function testDirectionalRoseRendererExportsPng(testCase)
+outputDir = tempname;
+mkdir(outputDir);
+cleanup = onCleanup(@() rmdir(outputDir, 's'));
+
+files = renderDirectionalRose(outputDir, "png");
+
+verifyEqual(testCase, numel(files), 1);
+verifyTrue(testCase, isfile(fullfile(outputDir, 'directional_rose.png')));
+end
+
 function testBlandAltmanDataHasAgreementStatistics(testCase)
 data = sftExampleData('bland_altman_plot');
 

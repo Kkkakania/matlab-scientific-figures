@@ -41,6 +41,17 @@ switch kind
         data.upper = min(1.05, center + spread);
         data.labels = "PV forecast";
 
+    case "directional_rose"
+        directionDegrees = 0:30:330;
+        prevailing = 0.36 * exp(-0.5 * localCircularDistance(directionDegrees, 60) .^ 2 / 32 ^ 2);
+        secondary = 0.24 * exp(-0.5 * localCircularDistance(directionDegrees, 225) .^ 2 / 42 ^ 2);
+        background = 0.035 + 0.018 * cosd(2 * directionDegrees - 20);
+        frequency = max(0.012, prevailing + secondary + background);
+        frequency = frequency ./ sum(frequency);
+        data.directionDegrees = directionDegrees;
+        data.frequency = frequency;
+        data.directionLabels = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+
     case "uncertainty_fan_chart"
         x = linspace(0, 24, 120);
         median = 0.045 * x + 0.42 * sin(0.28 * x + 0.4);
@@ -327,4 +338,8 @@ switch kind
     otherwise
         error('sftExampleData:UnknownKind', 'Unknown example data kind "%s".', kind);
 end
+end
+
+function distance = localCircularDistance(angleDegrees, centerDegrees)
+distance = abs(mod(angleDegrees - centerDegrees + 180, 360) - 180);
 end

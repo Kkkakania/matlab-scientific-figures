@@ -23,6 +23,7 @@ Commands:
   match <keyword> [...]        Render templates matching search keywords.
   csv-example                  Render the bundled CSV example.
   pv-power                     Render the synthetic PV power domain example.
+  directional-rose             Render the synthetic directional-frequency example.
   <template> [...]             Render selected templates.
   (no arguments)               Render the full gallery.
 
@@ -39,6 +40,7 @@ Examples:
   SFT_OUTPUT_DIR=/tmp/sft-gallery ./scripts/render_all.sh match inset
   SFT_FORMATS=png,svg,pdf ./scripts/render_all.sh tag matrix
   ./scripts/render_all.sh pv-power
+  ./scripts/render_all.sh directional-rose
 HELP
 }
 
@@ -117,7 +119,7 @@ validate_tokens() {
 }
 
 case "${1:-}" in
-  list|tags|csv-example|pv-power)
+  list|tags|csv-example|pv-power|directional-rose)
     if [[ "$#" -ne 1 ]]; then
       echo "Usage: ./scripts/render_all.sh ${1}" >&2
       exit 2
@@ -253,6 +255,11 @@ fi
 
 if [[ "${1:-}" == "pv-power" ]]; then
   run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderPvPowerConfidence('$SFT_OUTPUT_DIR', $format_expr)"
+  exit 0
+fi
+
+if [[ "${1:-}" == "directional-rose" ]]; then
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderDirectionalRose('$SFT_OUTPUT_DIR', $format_expr)"
   exit 0
 fi
 

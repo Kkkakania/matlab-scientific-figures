@@ -34,7 +34,7 @@ for agent-assisted data-to-figure rendering feedback.
 For a factual status view of all three repositories, see
 [Ecosystem status](docs/ecosystem-status.md).
 
-Current public release: `v3.5.0`. This is still an early public project: the
+Current public release: `v3.6.0`. This is still an early public project: the
 gallery and CLI are usable, but adoption claims should stay conservative until
 more external feedback arrives. The fast early version jumps mark API and
 workflow stabilization milestones from the first public hardening pass; future
@@ -123,6 +123,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ta
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match matrix
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh csv-example
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh pv-power
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh directional-rose
 ```
 
 ## Gallery
@@ -203,6 +204,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh se
 SFT_OUTPUT_DIR=/tmp/sft-gallery MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match inset
 SFT_FORMATS=png,svg,pdf MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh pv-power
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh directional-rose
 ```
 
 Use [MATLAB CLI guide](docs/matlab-cli-guide.md) for Linux and Windows
@@ -286,7 +288,7 @@ through CI artifacts without blocking gallery checks.
 
 ## Project Status
 
-Current public release: `v3.5.0`.
+Current public release: `v3.6.0`.
 
 Project maturity: early public project. The examples, CLI workflow, and checks
 are usable today, but the repository is still collecting feedback before

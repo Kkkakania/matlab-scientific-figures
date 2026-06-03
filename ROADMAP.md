@@ -5,11 +5,12 @@ It should agree with README, CHANGELOG, and GitHub releases.
 
 ## Current State
 
-- Current public release: `v3.5.0`.
+- Current public release: `v3.6.0`.
 - Maturity: early public project; the gallery is usable, but adoption claims
   should stay conservative until real external use appears.
 - Gallery size on `main`: 30 clean-room templates. The current public release
-  `v3.5.0` shipped 30 templates.
+  `v3.6.0` keeps that gallery stable and adds standalone domain examples plus
+  CLI usability hardening.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
   citation metadata, privacy/provenance scans, static contributor preflight,
   first-use smoke test, and figure-quality CI.
@@ -102,18 +103,28 @@ Delivered:
   count.
 - MATLAB release-gate coverage for the 30-template gallery.
 
-## Post-v3.5.0 Hardening On Main
+### v3.6.0: Standalone Domain Examples And CLI Hardening
 
-These changes are already on `main` after the `v3.5.0` tag. They improve
-maintainability and first-use confidence, but they are intentionally not tagged
-yet because the project is slowing its release pace.
+Delivered:
 
+- Clean-room standalone `pv_power_confidence` domain example.
+- Clean-room standalone `directional_rose` example for directional-frequency
+  data, added after a local plotting-resource audit at the chart-family level.
+- `render_all.sh csv-example`, `pv-power`, and `directional-rose` commands for
+  end-to-end CLI smoke paths.
+- `SFT_FORMATS`, CLI help examples, argument validation, timeout checks, and
+  first-use documentation improvements.
 - Generated tag-based gallery subsets from the manifest
   ([#18](https://github.com/Kkkakania/matlab-scientific-figures/issues/18)).
 - Color-accessibility audit coverage checks
   ([#19](https://github.com/Kkkakania/matlab-scientific-figures/issues/19)).
 - MATLAB compatibility documentation and release-gate coverage
   ([#20](https://github.com/Kkkakania/matlab-scientific-figures/issues/20)).
+
+## Post-v3.6.0 Hardening On Main
+
+No post-`v3.6.0` hardening is listed yet. Accumulate small fixes on `main`
+until there is a user-visible reason for another tag.
 
 ## Next Candidates
 

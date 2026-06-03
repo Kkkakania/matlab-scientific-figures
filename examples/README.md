@@ -86,12 +86,14 @@ plotting helpers without expanding the core 30-template gallery.
 addpath(genpath('src'));
 addpath(genpath('examples'));
 renderPvPowerConfidence('gallery', ["png", "svg"]);
+renderDirectionalRose('gallery', ["png", "svg"]);
 ```
 
 From a shell:
 
 ```bash
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh pv-power
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh directional-rose
 ```
 
 ## Run The Full Gallery

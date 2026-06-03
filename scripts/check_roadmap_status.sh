@@ -21,11 +21,11 @@ reject_text() {
 }
 
 require_text "## Current State"
-require_text "- Current public release: \`v3.5.0\`."
+require_text "- Current public release: \`v3.6.0\`."
 require_text "## Completed Release Tracks"
-require_text "## Post-v3.5.0 Hardening On Main"
-require_text "These changes are already on \`main\` after the \`v3.5.0\` tag."
-require_text "they are intentionally not tagged"
+require_text "## Post-v3.6.0 Hardening On Main"
+require_text "No post-\`v3.6.0\` hardening is listed yet."
+require_text "Accumulate small fixes on \`main\`"
 require_text "## Next Candidates"
 require_text "## Versioning Pace"
 require_text "Future releases should follow"
