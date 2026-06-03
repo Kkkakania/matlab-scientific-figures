@@ -21,9 +21,15 @@ Commands:
   info <template>              Show metadata for one template.
   tag <tag> [...]              Render templates with exact tag matches.
   match <keyword> [...]        Render templates matching search keywords.
+  data-file <csv|xls|xlsx>     Inspect data, choose a first figure, and report.
   csv-example                  Render the bundled CSV example.
   pv-power                     Render the synthetic PV power domain example.
   directional-rose             Render the synthetic directional-frequency example.
+  marginal-scatter             Render the synthetic marginal scatter example.
+  raincloud                    Render the synthetic raincloud distribution example.
+  ribbon                       Render the synthetic 3D ribbon comparison example.
+  vector-field                 Render the synthetic vector field example.
+  polar-bubble                 Render the synthetic polar bubble example.
   <template> [...]             Render selected templates.
   (no arguments)               Render the full gallery.
 
@@ -39,8 +45,10 @@ Examples:
   ./scripts/render_all.sh heatmap radar_chart
   SFT_OUTPUT_DIR=/tmp/sft-gallery ./scripts/render_all.sh match inset
   SFT_FORMATS=png,svg,pdf ./scripts/render_all.sh tag matrix
+  SFT_OUTPUT_DIR=/tmp/sft-data ./scripts/render_all.sh data-file examples/data/experiment_signal.csv
   ./scripts/render_all.sh pv-power
   ./scripts/render_all.sh directional-rose
+  ./scripts/render_all.sh marginal-scatter
 HELP
 }
 
@@ -119,7 +127,7 @@ validate_tokens() {
 }
 
 case "${1:-}" in
-  list|tags|csv-example|pv-power|directional-rose)
+  list|tags|csv-example|pv-power|directional-rose|marginal-scatter|raincloud|ribbon|vector-field|polar-bubble)
     if [[ "$#" -ne 1 ]]; then
       echo "Usage: ./scripts/render_all.sh ${1}" >&2
       exit 2
@@ -160,6 +168,22 @@ case "${1:-}" in
     fi
     validate_tokens "template name" '^[a-z0-9_]+$' "$@"
     set -- info "$@"
+    ;;
+  data-file)
+    shift
+    if [[ "$#" -ne 1 ]]; then
+      echo "Usage: ./scripts/render_all.sh data-file <csv|xls|xlsx>" >&2
+      exit 2
+    fi
+    if [[ "$1" == *"'"* ]]; then
+      echo "Data file path may not contain single quotes." >&2
+      exit 2
+    fi
+    if [[ "$1" =~ [[:cntrl:]] ]]; then
+      echo "Data file path may not contain control characters." >&2
+      exit 2
+    fi
+    set -- data-file "$@"
     ;;
   "")
     ;;
@@ -260,6 +284,37 @@ fi
 
 if [[ "${1:-}" == "directional-rose" ]]; then
   run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderDirectionalRose('$SFT_OUTPUT_DIR', $format_expr)"
+  exit 0
+fi
+
+if [[ "${1:-}" == "marginal-scatter" ]]; then
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderMarginalScatter('$SFT_OUTPUT_DIR', $format_expr)"
+  exit 0
+fi
+
+if [[ "${1:-}" == "raincloud" ]]; then
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderRaincloudDistribution('$SFT_OUTPUT_DIR', $format_expr)"
+  exit 0
+fi
+
+if [[ "${1:-}" == "ribbon" ]]; then
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderRibbonComparison('$SFT_OUTPUT_DIR', $format_expr)"
+  exit 0
+fi
+
+if [[ "${1:-}" == "vector-field" ]]; then
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderVectorField('$SFT_OUTPUT_DIR', $format_expr)"
+  exit 0
+fi
+
+if [[ "${1:-}" == "polar-bubble" ]]; then
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderPolarBubble('$SFT_OUTPUT_DIR', $format_expr)"
+  exit 0
+fi
+
+if [[ "${1:-}" == "data-file" ]]; then
+  data_file="$2"
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); result = sftRenderDataFile('$data_file', '$SFT_OUTPUT_DIR', $format_expr); disp('Selected template:'); disp(result.SelectedTemplate); disp('Report:'); disp(result.MarkdownReport)"
   exit 0
 fi
 

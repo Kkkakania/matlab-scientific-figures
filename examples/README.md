@@ -87,6 +87,11 @@ addpath(genpath('src'));
 addpath(genpath('examples'));
 renderPvPowerConfidence('gallery', ["png", "svg"]);
 renderDirectionalRose('gallery', ["png", "svg"]);
+renderMarginalScatter('gallery', ["png", "svg"]);
+renderRaincloudDistribution('gallery', ["png", "svg"]);
+renderRibbonComparison('gallery', ["png", "svg"]);
+renderVectorField('gallery', ["png", "svg"]);
+renderPolarBubble('gallery', ["png", "svg"]);
 ```
 
 From a shell:
@@ -94,6 +99,11 @@ From a shell:
 ```bash
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh pv-power
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh directional-rose
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh marginal-scatter
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh raincloud
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ribbon
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh vector-field
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh polar-bubble
 ```
 
 ## Run The Full Gallery

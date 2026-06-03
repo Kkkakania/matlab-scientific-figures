@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+## v3.7.0 - 2026-06-03
+
+- Added `README.zh-CN.md` with a Chinese first-use path, project boundary
+  summary, and language switch from the English README.
+- Added a first-pass CSV/Excel data-to-figure workflow:
+  `sftInspectDataFile`, `sftRecommendFigure`, `sftRenderDataFile`, and
+  `render_all.sh data-file <csv|xls|xlsx>`.
+- Added Markdown and JSON reports for data-to-figure renders.
+- Added five clean-room standalone extended examples: marginal scatter,
+  raincloud distribution, 3D ribbon comparison, vector field, and polar bubble.
+- Added CLI commands for the five extended examples and covered them in the
+  MATLAB CLI command check.
+- Added a bilingual README consistency check to the static quality gate.
+
 ## v3.6.0 - 2026-06-03
 
 - Added a clean-room directional-frequency rose standalone example and

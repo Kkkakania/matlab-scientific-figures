@@ -43,6 +43,25 @@ rm -f "$TMP_DIR/directional_rose.png" "$TMP_DIR/directional_rose.svg"
 SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh directional-rose
 test -s "$TMP_DIR/directional_rose.png"
 
+rm -f "$TMP_DIR/data_to_figure.png" "$TMP_DIR/figure_report.md" "$TMP_DIR/figure_report.json"
+SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh data-file examples/data/experiment_signal.csv
+test -s "$TMP_DIR/data_to_figure.png"
+test -s "$TMP_DIR/figure_report.md"
+test -s "$TMP_DIR/figure_report.json"
+
+for extended_example in \
+  marginal-scatter:marginal_scatter \
+  raincloud:raincloud_distribution \
+  ribbon:ribbon_comparison \
+  vector-field:vector_field \
+  polar-bubble:polar_bubble; do
+  command_name="${extended_example%%:*}"
+  output_name="${extended_example##*:}"
+  rm -f "$TMP_DIR/$output_name.png" "$TMP_DIR/$output_name.svg"
+  SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh "$command_name"
+  test -s "$TMP_DIR/$output_name.png"
+done
+
 rm -f "$TMP_DIR/heatmap.png" "$TMP_DIR/heatmap.svg" \
   "$TMP_DIR/radar_chart.png" "$TMP_DIR/radar_chart.svg"
 selected_output="$(SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh heatmap radar_chart)"

@@ -40,6 +40,24 @@ sftRenderTags("matrix", "gallery", ["png", "svg"]);
 sftRenderExamples(["heatmap", "radar_chart"], "gallery", ["png", "svg"]);
 ```
 
+## Data-To-Figure Workflow
+
+| Function | Use When |
+|---|---|
+| `sftInspectDataFile(filePath)` | Inspect a CSV, XLS, or XLSX table before choosing a chart. |
+| `sftRecommendFigure(profile)` | Get transparent first-pass recommendations from an inspected table profile. |
+| `sftRenderDataFile(filePath, outputDir, formats)` | Render a first-pass figure and write Markdown/JSON reports from a data file. |
+
+Example:
+
+```matlab
+profile = sftInspectDataFile("examples/data/experiment_signal.csv");
+recommendations = sftRecommendFigure(profile);
+result = sftRenderDataFile("examples/data/experiment_signal.csv", ...
+    "outputs/data-to-figure", ["png", "svg"]);
+disp(result.SelectedTemplate)
+```
+
 ## Styling And Export
 
 | Function | Use When |

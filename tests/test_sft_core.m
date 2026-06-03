@@ -1087,6 +1087,48 @@ verifyEqual(testCase, numel(files), 1);
 verifyTrue(testCase, isfile(fullfile(outputDir, 'csv_experiment_signal.png')));
 end
 
+function testInspectDataFileSummarizesBundledCsv(testCase)
+projectRoot = fileparts(fileparts(mfilename('fullpath')));
+csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');
+
+profile = sftInspectDataFile(csvPath);
+
+verifyEqual(testCase, profile.FileType, "csv");
+verifyGreaterThan(testCase, profile.RowCount, 10);
+verifyEqual(testCase, profile.NumericVariables, ["time", "baseline", "treatment"]);
+verifyTrue(testCase, profile.HasMonotonicFirstNumeric);
+end
+
+function testRecommendFigurePrefersLineForMonotonicCsv(testCase)
+projectRoot = fileparts(fileparts(mfilename('fullpath')));
+csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');
+profile = sftInspectDataFile(csvPath);
+
+recommendations = sftRecommendFigure(profile);
+
+verifyGreaterThanOrEqual(testCase, numel(recommendations), 3);
+verifyEqual(testCase, recommendations(1).Name, "line_plot");
+verifyEqual(testCase, recommendations(1).Reason, "First numeric column is monotonic and can be used as an ordered axis.");
+end
+
+function testRenderDataFileCreatesFigureAndReports(testCase)
+projectRoot = fileparts(fileparts(mfilename('fullpath')));
+csvPath = fullfile(projectRoot, 'examples', 'data', 'experiment_signal.csv');
+outputDir = tempname;
+mkdir(outputDir);
+cleanup = onCleanup(@() rmdir(outputDir, 's'));
+
+result = sftRenderDataFile(csvPath, outputDir, ["png"]);
+
+verifyEqual(testCase, result.SelectedTemplate, "line_plot");
+verifyTrue(testCase, isfile(fullfile(outputDir, 'data_to_figure.png')));
+verifyTrue(testCase, isfile(fullfile(outputDir, 'figure_report.md')));
+verifyTrue(testCase, isfile(fullfile(outputDir, 'figure_report.json')));
+reportText = fileread(fullfile(outputDir, 'figure_report.md'));
+verifyTrue(testCase, contains(reportText, 'Selected template: `line_plot`'));
+verifyTrue(testCase, contains(reportText, 'Recommended alternatives'));
+end
+
 function testPvPowerExampleDataIsBoundedAndDeterministic(testCase)
 first = sftExampleData('pv_power');
 second = sftExampleData('pv_power');
@@ -1134,6 +1176,40 @@ files = renderDirectionalRose(outputDir, "png");
 
 verifyEqual(testCase, numel(files), 1);
 verifyTrue(testCase, isfile(fullfile(outputDir, 'directional_rose.png')));
+end
+
+function testExtendedStandaloneExampleDataShapes(testCase)
+marginal = sftExampleData('marginal_scatter');
+raincloud = sftExampleData('raincloud_distribution');
+ribbon = sftExampleData('ribbon_comparison');
+field = sftExampleData('vector_field');
+polarBubble = sftExampleData('polar_bubble');
+
+verifyEqual(testCase, numel(marginal.x), numel(marginal.y));
+verifyGreaterThan(testCase, numel(marginal.x), 100);
+verifyEqual(testCase, size(raincloud.values, 2), numel(raincloud.labels));
+verifyEqual(testCase, size(ribbon.z, 1), numel(ribbon.series));
+verifyEqual(testCase, size(field.x), size(field.u));
+verifyEqual(testCase, size(field.y), size(field.v));
+verifyEqual(testCase, numel(polarBubble.thetaDegrees), numel(polarBubble.radius));
+verifyEqual(testCase, numel(polarBubble.radius), numel(polarBubble.sizeValue));
+end
+
+function testExtendedStandaloneRenderersExportPng(testCase)
+outputDir = tempname;
+mkdir(outputDir);
+cleanup = onCleanup(@() rmdir(outputDir, 's'));
+
+renderers = {@renderMarginalScatter, @renderRaincloudDistribution, ...
+    @renderRibbonComparison, @renderVectorField, @renderPolarBubble};
+outputs = ["marginal_scatter", "raincloud_distribution", ...
+    "ribbon_comparison", "vector_field", "polar_bubble"];
+
+for k = 1:numel(renderers)
+    files = renderers{k}(outputDir, "png");
+    verifyEqual(testCase, numel(files), 1);
+    verifyTrue(testCase, isfile(fullfile(outputDir, outputs(k) + ".png")));
+end
 end
 
 function testBlandAltmanDataHasAgreementStatistics(testCase)

@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v3.6.0` is the current release.
+- `v3.7.0` is the current release.
 - The gallery has 30 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 - Future tags should follow `docs/release-cadence.md`; small maintenance
@@ -196,3 +196,26 @@ Release conditions:
 - MATLAB core tests pass locally.
 - CLI command checks render the CSV, PV, and directional-rose examples.
 - Static quality, provenance, privacy, and figure-quality checks pass.
+
+## v3.7.0 Released
+
+Goal: turn the project from an English-first gallery into a more usable
+bilingual data-to-figure workflow while keeping the stable 30-template gallery
+boundary.
+
+Delivered changes:
+
+- `README.zh-CN.md` and README language switching.
+- `sftInspectDataFile`, `sftRecommendFigure`, and `sftRenderDataFile` for
+  CSV/Excel inspection, recommendation, rendering, and reporting.
+- `render_all.sh data-file <csv|xls|xlsx>` for shell users.
+- Five clean-room extended examples: marginal scatter, raincloud distribution,
+  3D ribbon comparison, vector field, and polar bubble.
+- CLI command checks for the data-file workflow and all five extended examples.
+
+Release conditions:
+
+- MATLAB core tests pass locally.
+- CLI command checks render the data-file workflow and extended examples.
+- Static quality, bilingual README, provenance, privacy, and figure-quality
+  checks pass.

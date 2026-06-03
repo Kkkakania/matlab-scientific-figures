@@ -52,6 +52,60 @@ switch kind
         data.frequency = frequency;
         data.directionLabels = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
 
+    case "marginal_scatter"
+        n = 260;
+        data.x = 0.8 * randn(n, 1);
+        data.y = 0.62 * data.x + 0.48 * randn(n, 1) + 0.18 * sin(2 * data.x);
+        data.xLabel = "Predictor";
+        data.yLabel = "Response";
+
+    case "raincloud_distribution"
+        groupCount = 4;
+        sampleCount = 130;
+        centers = [-0.35 0.10 0.42 0.78];
+        spreads = [0.34 0.28 0.38 0.31];
+        values = zeros(sampleCount, groupCount);
+        for k = 1:groupCount
+            values(:, k) = centers(k) + spreads(k) * randn(sampleCount, 1) ...
+                + 0.08 * sin(randn(sampleCount, 1) + k);
+        end
+        data.values = values;
+        data.labels = ["Baseline", "A", "B", "C"];
+
+    case "ribbon_comparison"
+        x = linspace(0, 12, 90);
+        series = ["Baseline", "Method A", "Method B", "Method C"];
+        z = zeros(numel(series), numel(x));
+        for k = 1:numel(series)
+            z(k, :) = 0.18 * k + sin(0.55 * x + 0.45 * k) ...
+                + 0.16 * cos(1.1 * x - 0.2 * k);
+        end
+        data.x = x;
+        data.series = series;
+        data.z = z;
+
+    case "vector_field"
+        [x, y] = meshgrid(linspace(-2.2, 2.2, 17), linspace(-2.2, 2.2, 17));
+        u = -y .* exp(-0.14 * (x .^ 2 + y .^ 2)) + 0.18 * cos(1.4 * y);
+        v = x .* exp(-0.14 * (x .^ 2 + y .^ 2)) + 0.18 * sin(1.2 * x);
+        data.x = x;
+        data.y = y;
+        data.u = u;
+        data.v = v;
+        data.speed = hypot(u, v);
+
+    case "polar_bubble"
+        n = 84;
+        theta = linspace(0, 360, n + 1);
+        theta(end) = [];
+        radius = 0.38 + 0.42 * (0.5 + 0.5 * sind(2 * theta + 35)) ...
+            + 0.08 * rand(1, n);
+        sizeValue = 0.18 + 0.70 * (0.5 + 0.5 * cosd(theta - 70)) ...
+            + 0.08 * rand(1, n);
+        data.thetaDegrees = theta;
+        data.radius = radius;
+        data.sizeValue = sizeValue;
+
     case "uncertainty_fan_chart"
         x = linspace(0, 24, 120);
         median = 0.045 * x + 0.42 * sin(0.28 * x + 0.4);

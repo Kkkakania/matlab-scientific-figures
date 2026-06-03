@@ -1,5 +1,7 @@
 # MATLAB Scientific Figures
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 [![Quality checks](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/quality.yml/badge.svg)](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/quality.yml)
 [![Figure quality](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/figure-quality.yml/badge.svg)](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/figure-quality.yml)
 [![Release](https://img.shields.io/github/v/release/Kkkakania/matlab-scientific-figures)](https://github.com/Kkkakania/matlab-scientific-figures/releases)
@@ -34,7 +36,7 @@ for agent-assisted data-to-figure rendering feedback.
 For a factual status view of all three repositories, see
 [Ecosystem status](docs/ecosystem-status.md).
 
-Current public release: `v3.6.0`. This is still an early public project: the
+Current public release: `v3.7.0`. This is still an early public project: the
 gallery and CLI are usable, but adoption claims should stay conservative until
 more external feedback arrives. The fast early version jumps mark API and
 workflow stabilization milestones from the first public hardening pass; future
@@ -124,6 +126,11 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ma
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh csv-example
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh pv-power
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh directional-rose
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh marginal-scatter
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh raincloud
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ribbon
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh vector-field
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh polar-bubble
 ```
 
 ## Gallery
@@ -203,6 +210,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh li
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh search density
 SFT_OUTPUT_DIR=/tmp/sft-gallery MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh match inset
 SFT_FORMATS=png,svg,pdf MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh heatmap
+SFT_OUTPUT_DIR=/tmp/sft-data MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh data-file examples/data/experiment_signal.csv
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh pv-power
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh directional-rose
 ```
@@ -226,6 +234,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 - `sftTiledFigure` creates a clean tiled layout without hand-tuning positions.
 - `sftValidateFigure` catches a few common figure problems before export.
 - `sftGalleryReport` batch-checks every gallery example.
+- `sftInspectDataFile`, `sftRecommendFigure`, and `sftRenderDataFile` provide a
+  first-pass CSV/Excel data-to-figure workflow with Markdown and JSON reports.
 - `sftListTemplates`, `sftListTags`, `sftFindTemplates`, and
   `sftFindTemplatesByTag` help users discover examples.
 - `sftRenderExamples` renders all examples or a selected subset by name.
@@ -288,7 +298,7 @@ through CI artifacts without blocking gallery checks.
 
 ## Project Status
 
-Current public release: `v3.6.0`.
+Current public release: `v3.7.0`.
 
 Project maturity: early public project. The examples, CLI workflow, and checks
 are usable today, but the repository is still collecting feedback before

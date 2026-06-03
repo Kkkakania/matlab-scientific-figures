@@ -17,6 +17,7 @@ run_step "matlab-figure-ci dogfood version" ./scripts/check_mfigci_dogfood_versi
 run_step "roadmap status language" ./scripts/check_roadmap_status.sh
 run_step "maintainer activity bounds" ./scripts/check_maintainer_activity.sh
 run_step "citation metadata" ./scripts/check_citation.sh
+run_step "bilingual README" ./scripts/check_bilingual_readme.sh
 run_step "documentation links" ./scripts/check_docs_links.sh
 run_step "first-use feedback docs" ./scripts/check_first_use_docs.sh
 run_step "issue templates" ./scripts/check_issue_templates.sh

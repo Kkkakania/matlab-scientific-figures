@@ -5,12 +5,12 @@ It should agree with README, CHANGELOG, and GitHub releases.
 
 ## Current State
 
-- Current public release: `v3.6.0`.
+- Current public release: `v3.7.0`.
 - Maturity: early public project; the gallery is usable, but adoption claims
   should stay conservative until real external use appears.
 - Gallery size on `main`: 30 clean-room templates. The current public release
-  `v3.6.0` keeps that gallery stable and adds standalone domain examples plus
-  CLI usability hardening.
+  `v3.7.0` keeps that gallery stable while adding bilingual onboarding,
+  CSV/Excel data-to-figure workflow, and extended standalone examples.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
   citation metadata, privacy/provenance scans, static contributor preflight,
   first-use smoke test, and figure-quality CI.
@@ -121,9 +121,22 @@ Delivered:
 - MATLAB compatibility documentation and release-gate coverage
   ([#20](https://github.com/Kkkakania/matlab-scientific-figures/issues/20)).
 
-## Post-v3.6.0 Hardening On Main
+### v3.7.0: Bilingual Data-To-Figure Expansion
 
-No post-`v3.6.0` hardening is listed yet. Accumulate small fixes on `main`
+Delivered:
+
+- Chinese README entry that mirrors the project meaning without being a direct
+  translation of the English README.
+- CSV/Excel data inspection, transparent figure recommendation, first-pass
+  rendering, and Markdown/JSON reports.
+- `render_all.sh data-file <csv|xls|xlsx>` for command-line data-to-figure
+  workflows.
+- Five clean-room extended examples: marginal scatter, raincloud distribution,
+  3D ribbon comparison, vector field, and polar bubble.
+
+## Post-v3.7.0 Hardening On Main
+
+No post-`v3.7.0` hardening is listed yet. Accumulate small fixes on `main`
 until there is a user-visible reason for another tag.
 
 ## Next Candidates
