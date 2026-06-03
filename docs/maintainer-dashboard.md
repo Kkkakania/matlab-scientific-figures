@@ -18,6 +18,8 @@ scope, and where feedback should go.
   [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11).
 - Cross-repository status view:
   [Ecosystem status](ecosystem-status.md).
+- Cross-repository planning board design:
+  [GitHub Project board plan](github-project-board.md).
 - Public maintenance activity snapshot:
   [Maintainer activity](maintainer-activity.md).
 

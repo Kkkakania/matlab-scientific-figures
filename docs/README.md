@@ -42,6 +42,7 @@ docs if you want to change the project.
 - [Release checklist](release-checklist.md)
 - [Release cadence](release-cadence.md)
 - [Maintainer dashboard](maintainer-dashboard.md)
+- [GitHub Project board plan](github-project-board.md)
 - [Maintainer activity](maintainer-activity.md)
 - [Ecosystem status](ecosystem-status.md)
 - [Provenance policy](provenance-policy.md)
