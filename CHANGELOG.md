@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added `scripts/render_all.sh pv-power` for the standalone synthetic PV power
+  domain example.
 - Added a standalone synthetic PV power confidence-band example as the first
   domain example without expanding the core gallery registry.
 - Warn when categorical palettes need interpolation beyond their curated anchor

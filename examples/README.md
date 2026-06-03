@@ -88,6 +88,12 @@ addpath(genpath('examples'));
 renderPvPowerConfidence('gallery', ["png", "svg"]);
 ```
 
+From a shell:
+
+```bash
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh pv-power
+```
+
 ## Run The Full Gallery
 
 ```matlab
