@@ -1,6 +1,6 @@
 # Maintainer Activity
 
-Snapshot date: 2026-06-01
+Snapshot date: 2026-06-04
 
 This page records factual maintenance activity for the MATLAB plotting
 ecosystem. It is a reviewer aid, not an adoption claim.
@@ -12,6 +12,14 @@ ecosystem. It is a reviewer aid, not an adoption claim.
 | [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | 30 clean-room gallery examples, static quality gates, figure-quality dogfooding, first-use feedback issue, release-cadence policy, `render_all.sh help examples` for shell users |
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | CLI/package tests, release-preflight checks, package artifact workflow, downstream dogfooding report, `init verification guidance` through `doctor` and `check` next steps |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | first-render walkthrough, scheme readiness matrix, `stable first-use scheme list`, privacy/provenance checks, maintenance cadence |
+
+## Fork And Pull Request Intake
+
+As of the snapshot date, the three repositories have no open pull requests.
+Recent public forks were checked against `main`; the visible fork branches were
+behind the upstream repositories and did not contain ahead commits to review or
+merge. Treat those forks as awareness signals, not as adoption metrics or
+pending contribution evidence.
 
 ## External Pull Requests
 

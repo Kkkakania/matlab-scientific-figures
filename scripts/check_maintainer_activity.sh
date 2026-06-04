@@ -25,12 +25,15 @@ reject_text() {
   fi
 }
 
-require_text "Snapshot date: 2026-06-01"
+require_text "Snapshot date: 2026-06-04"
 require_text "not an adoption claim"
 require_text "## Own Repositories"
 require_text "render_all.sh help examples"
 require_text "init verification guidance"
 require_text "stable first-use scheme list"
+require_text "## Fork And Pull Request Intake"
+require_text "no open pull requests"
+require_text "did not contain ahead commits"
 require_text "## External Pull Requests"
 require_text "matlab2tikz/matlab2tikz/pull/1158"
 require_text "fieldtrip/fieldtrip/pull/2591"
