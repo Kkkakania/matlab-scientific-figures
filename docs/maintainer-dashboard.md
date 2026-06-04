@@ -22,6 +22,8 @@ scope, and where feedback should go.
   [GitHub Project board plan](github-project-board.md).
 - Live GitHub Project board status: pending; tracked in
   [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31).
+- Temporary cross-repository triage while the live board is pending:
+  `./scripts/check_ecosystem_triage_status.sh`.
 - Public maintenance activity snapshot:
   [Maintainer activity](maintainer-activity.md).
 

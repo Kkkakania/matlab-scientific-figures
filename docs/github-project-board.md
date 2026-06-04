@@ -67,6 +67,14 @@ refreshed, use the non-failing documentation mode:
 ./scripts/check_github_project_board_status.sh --allow-pending
 ```
 
+While the live board is pending, use the repository triage helper to review the
+same cross-repository open issues and pull requests without requiring GitHub
+Projects scopes:
+
+```bash
+./scripts/check_ecosystem_triage_status.sh
+```
+
 Do not close `#31` until a live public board exists or the issue explicitly
 records that the web-created board has been verified.
 
