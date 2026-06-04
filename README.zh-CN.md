@@ -123,6 +123,23 @@ clear cleanup  % 恢复调用前的 root 默认值
 
 ## 质量检查
 
+在导出自己的图之前，可以先用 `sftValidateFigure` 做轻量检查。默认检查标题、坐标轴标签、图尺寸和基础结构：
+
+```matlab
+report = sftValidateFigure(gcf);
+disp(report.Passed)
+```
+
+如果这张图依赖多条线、多个 marker 或多个 patch 的颜色区分，可以额外打开保守的颜色分离检查：
+
+```matlab
+report = sftValidateFigure(gcf, ...
+    "CheckColorContrast", true, ...
+    "MinimumColorDistance", 2.0);
+```
+
+这个检查会比较提取到的线条、marker 和 patch 颜色，但它只是维护者复核辅助，不是完整的无障碍认证。正式投稿或报告前，仍然要在最终尺寸下人工检查图例、标签、灰度打印和色觉差异可读性。
+
 本仓库的 CI badge 说明静态质量和 figure-quality 检查通过，不代表 GitHub-hosted runner 已经安装 MATLAB 或重新生成了全部图。需要完整验证时，在本地运行：
 
 ```bash
