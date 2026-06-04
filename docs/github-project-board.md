@@ -87,6 +87,12 @@ pending:
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
 
+Maintainers can verify those labels with:
+
+```bash
+./scripts/check_ecosystem_issue_labels.sh
+```
+
 Do not close `#31` until a live public board exists or the issue explicitly
 records that the web-created board has been verified.
 

@@ -6,6 +6,7 @@ DOC="$ROOT_DIR/docs/github-project-board.md"
 DOC_ZH="$ROOT_DIR/docs/github-project-board.zh-CN.md"
 HELPER="$ROOT_DIR/scripts/check_github_project_board_status.sh"
 TRIAGE_HELPER="$ROOT_DIR/scripts/check_ecosystem_triage_status.sh"
+LABEL_HELPER="$ROOT_DIR/scripts/check_ecosystem_issue_labels.sh"
 
 if [[ ! -s "$DOC" ]]; then
   echo "Missing docs/github-project-board.md." >&2
@@ -27,6 +28,11 @@ if [[ ! -x "$TRIAGE_HELPER" ]]; then
   exit 1
 fi
 
+if [[ ! -x "$LABEL_HELPER" ]]; then
+  echo "Missing executable scripts/check_ecosystem_issue_labels.sh." >&2
+  exit 1
+fi
+
 grep -Fq "MATLAB Scientific Figure Ecosystem" "$DOC"
 grep -Fq "matlab-scientific-figures#31" "$DOC"
 grep -Fq "gh auth refresh -s read:project -s project" "$DOC"
@@ -35,6 +41,7 @@ grep -Fq "active browser account is" "$DOC"
 grep -Fq "browser account can be different" "$DOC"
 grep -Fq "./scripts/check_github_project_board_status.sh --allow-pending" "$DOC"
 grep -Fq "./scripts/check_ecosystem_triage_status.sh" "$DOC"
+grep -Fq "./scripts/check_ecosystem_issue_labels.sh" "$DOC"
 grep -Fq "Interim labels" "$DOC"
 grep -Fq '`documentation`, `ci`' "$DOC"
 grep -Fq '`template`, `enhancement`' "$DOC"
@@ -54,6 +61,7 @@ grep -Fq "浏览器当前登录账号是" "$DOC_ZH"
 grep -Fq 'gh` CLI 账号和浏览器登录账号可能不是同一个' "$DOC_ZH"
 grep -Fq "./scripts/check_github_project_board_status.sh --allow-pending" "$DOC_ZH"
 grep -Fq "./scripts/check_ecosystem_triage_status.sh" "$DOC_ZH"
+grep -Fq "./scripts/check_ecosystem_issue_labels.sh" "$DOC_ZH"
 grep -Fq "临时标签" "$DOC_ZH"
 grep -Fq '`documentation`, `ci`' "$DOC_ZH"
 grep -Fq '`template`, `enhancement`' "$DOC_ZH"

@@ -57,6 +57,12 @@ gh project list --owner Kkkakania --limit 20
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
 
+维护者可以用下面的脚本核验这些标签是否还在：
+
+```bash
+./scripts/check_ecosystem_issue_labels.sh
+```
+
 ## 建议字段
 
 看板字段保持少量，便于每周维护。
