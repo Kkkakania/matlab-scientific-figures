@@ -81,6 +81,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh cs
 
 Domain examples are synthetic, standalone examples that reuse the public
 plotting helpers without expanding the core 30-template gallery.
+See `docs/domain-examples.md` for the current electrical-engineering example
+pack, feedback questions, and expansion boundaries.
 
 ```matlab
 addpath(genpath('src'));

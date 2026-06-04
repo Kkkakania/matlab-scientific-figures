@@ -263,6 +263,7 @@ New users usually need only a few pages:
 | [Chart selection guide](docs/chart-selection-guide.md) | Pick a chart by communication task |
 | [Use with your data](docs/use-with-your-data.md) | Call reusable plotting APIs with your own data |
 | [CSV and Excel tutorial](docs/tutorial-csv-excel-data.md) | Connect real tables to templates |
+| [Domain examples](docs/domain-examples.md) | Try standalone synthetic engineering examples |
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
 | [Quality gates](docs/quality-gates.md) | Understand what local checks and CI actually verify |
 

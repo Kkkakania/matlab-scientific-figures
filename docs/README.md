@@ -16,6 +16,7 @@ docs if you want to change the project.
 - [Template manifest schema](template-manifest-schema.md)
 - [Chart selection guide](chart-selection-guide.md)
 - [Use with your data](use-with-your-data.md)
+- [Domain examples](domain-examples.md)
 - [Recipes](recipes.md)
 - [MATLAB CLI guide](matlab-cli-guide.md)
 - [Compatibility](compatibility.md)
