@@ -31,6 +31,32 @@ This board should be public if possible. Public visibility makes the roadmap
 easy for contributors to inspect, but it should not be used to imply adoption,
 download volume, or external program eligibility.
 
+## Current Creation Status
+
+Live board creation is tracked in
+[`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31).
+
+As of 2026-06-04, the local `gh` token used for repository maintenance can read
+and update issues, but it does not have GitHub Projects scopes. The CLI command
+`gh project list --owner Kkkakania` returns a missing `read:project` scope error.
+Until that token is refreshed or the board is created in the GitHub web UI, use
+this document as the public setup checklist and seed queue.
+
+To enable CLI setup later, refresh the token with:
+
+```bash
+gh auth refresh -s read:project -s project
+```
+
+Then verify:
+
+```bash
+gh project list --owner Kkkakania --limit 20
+```
+
+Do not close `#31` until a live public board exists or the issue explicitly
+records that the web-created board has been verified.
+
 ## Fields
 
 Use a small number of fields so the board stays maintainable.
@@ -109,6 +135,21 @@ Repository is not empty
 
 Group by `Repository`, then review linked issues manually.
 
+## Web Setup Checklist
+
+If using the GitHub web UI:
+
+1. Open the account Projects page.
+2. Create a new project named `MATLAB Scientific Figure Ecosystem`.
+3. Add the description from this document.
+4. Add the fields in the `Fields` table.
+5. Create the five saved views in the `Views` section.
+6. Add the current seed issues from the table below.
+7. For each item, set `Repository`, `Track`, `Priority`, `Evidence level`, and
+   `Release target`.
+8. Link the live project URL back to
+   [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31).
+
 ## Starter Items
 
 These issues are good initial board items because they represent real current
@@ -124,6 +165,20 @@ maintenance questions rather than synthetic tasks.
 When adding more items, prefer open issues or pull requests. Do not add private
 tasks, unreviewed source packs, copied examples, or benefit-program application
 claims to the public board.
+
+## Current Seed Queue
+
+Use this queue for the first board population. It reflects the open public
+issues after the recent maintenance pass and avoids already-completed work.
+
+| Item | Repository | Track | Suggested status | Suggested priority | Evidence level | Release target | Next action |
+|---|---|---|---|---|---|---|---|
+| [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | scientific-figures | Documentation | In progress | P1 | Dogfooded | no release planned | Create or verify the live GitHub Project board. |
+| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | Gallery/API | Needs review | P2 | Dogfooded | no release planned | Wait for feedback on the PV and harmonic-spectrum examples before expanding the pack. |
+| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | Feedback | Ready | P1 | Needs user feedback | no release planned | Collect a fresh-clone first-use report. |
+| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | Release | Backlog | P1 | Official/source-backed | v2.x | Prepare PyPI only after package-name and install checks are current. |
+| [`matlab-plotting-skill#16`](https://github.com/Kkkakania/matlab-plotting-skill/issues/16) | plotting-skill | Agent workflow | Ready | P1 | Proposal | v0.x | Broaden install script support beyond the Codex skills directory. |
+| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | Feedback | Ready | P1 | Needs user feedback | no release planned | Collect first-use MATLAB rendering feedback. |
 
 ## Maintenance Rhythm
 
