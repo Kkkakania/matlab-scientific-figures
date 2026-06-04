@@ -75,6 +75,18 @@ Projects scopes:
 ./scripts/check_ecosystem_triage_status.sh
 ```
 
+Also keep the current open issues labeled. Labels are not a replacement for the
+Project board, but they make the interim triage state visible while the board is
+pending:
+
+| Issue | Interim labels |
+|---|---|
+| [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | `documentation`, `ci` |
+| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | `template`, `enhancement` |
+| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | `first-use`, `help wanted`, `good first issue`, `question` |
+| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
+| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
+
 Do not close `#31` until a live public board exists or the issue explicitly
 records that the web-created board has been verified.
 

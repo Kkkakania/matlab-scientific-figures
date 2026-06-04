@@ -47,6 +47,16 @@ gh project list --owner Kkkakania --limit 20
 
 第一个脚本记录看板是否仍处于 pending 状态。第二个脚本列出三个仓库当前开放的 issue 和 PR。它们只是维护快照，不代表公开看板已经建好。
 
+同时保持当前开放 issue 的标签可读。标签不能替代 Project 看板，但在看板 pending 时，它们能让临时 triage 状态更容易被别人看见：
+
+| Issue | 临时标签 |
+|---|---|
+| [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | `documentation`, `ci` |
+| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | `template`, `enhancement` |
+| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | `first-use`, `help wanted`, `good first issue`, `question` |
+| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
+| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
+
 ## 建议字段
 
 看板字段保持少量，便于每周维护。
