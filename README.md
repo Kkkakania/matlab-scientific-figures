@@ -82,6 +82,9 @@ Move to your own data only after those three checks pass.
 
 The same path is available as a shareable
 [First 5 Minutes guide](docs/first-five-minutes.md).
+If you are reporting a fresh-clone result, use
+`./scripts/collect_first_use_feedback.sh --output-dir <scratch-output>` to
+generate a redacted Markdown draft for the first-use feedback issue.
 
 ## Find The Right Template
 

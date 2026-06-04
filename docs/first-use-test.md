@@ -122,6 +122,28 @@ Record:
 
 Paste a short report into issue #9:
 
+After running the checklist, you can generate a redacted Markdown draft from
+your scratch output directory:
+
+```bash
+./scripts/collect_first_use_feedback.sh \
+  --output-dir /tmp/sft-first-render \
+  --command 'SFT_OUTPUT_DIR=/tmp/sft-first-render ./scripts/render_all.sh heatmap' \
+  --matlab R2025a \
+  --os macOS \
+  --commit "$(git rev-parse --short HEAD)" \
+  --templates "heatmap, radar_chart" \
+  --formats "png, svg" \
+  --quick-start "passed" \
+  --discovery "sftListTemplates and sftFindTemplates worked" \
+  --rendering "outputs were readable" \
+  --helper "render_all.sh worked"
+```
+
+Review the draft before posting. The helper redacts common local absolute paths
+and emails, but you should still remove private datasets, lab names, account
+names, and anything else that should not be public.
+
 ```text
 OS:
 MATLAB:

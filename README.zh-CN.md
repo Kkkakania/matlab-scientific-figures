@@ -70,6 +70,9 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh po
 - [使用自己的数据](docs/use-with-your-data.md)
 - [图表选择指南](docs/chart-selection-guide.md)
 
+如果你想提交 fresh-clone 使用反馈，可以运行
+`./scripts/collect_first_use_feedback.sh --output-dir <临时输出目录>` 生成一份基础脱敏的 Markdown 草稿，再人工检查后粘贴到 first-use feedback issue。
+
 如果图里有中文、日文或韩文标签，可以让主题系统自动选择当前机器上可用的 CJK 友好字体：
 
 ```matlab
