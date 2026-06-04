@@ -1506,6 +1506,58 @@ verifyTrue(testCase, report.Passed);
 verifyFalse(testCase, any(failedNames == "FigureSize"));
 end
 
+function testValidateFigureDoesNotRunColorContrastByDefault(testCase)
+fig = figure('Visible', 'off', 'Color', 'w', 'Position', [100 100 640 420]);
+cleanup = onCleanup(@() close(fig));
+
+plot(1:4, [1 3 2 5], 'Color', [0.2 0.2 0.2], 'LineWidth', 1.5);
+hold on
+plot(1:4, [1.1 3.1 2.1 5.1], 'Color', [0.205 0.205 0.205], 'LineWidth', 1.5);
+title('Validation Example');
+xlabel('Sample');
+ylabel('Response');
+
+report = sftValidateFigure(fig);
+verifyFalse(testCase, any(string({report.Checks.Name}) == "PairwiseColorContrast"));
+end
+
+function testValidateFigureFlagsLowColorSeparationWhenEnabled(testCase)
+fig = figure('Visible', 'off', 'Color', 'w', 'Position', [100 100 640 420]);
+cleanup = onCleanup(@() close(fig));
+
+plot(1:4, [1 3 2 5], 'Color', [0.2 0.2 0.2], 'LineWidth', 1.5);
+hold on
+plot(1:4, [1.1 3.1 2.1 5.1], 'Color', [0.205 0.205 0.205], 'LineWidth', 1.5);
+title('Validation Example');
+xlabel('Sample');
+ylabel('Response');
+
+report = sftValidateFigure(fig, 'CheckColorContrast', true, 'MinimumColorDistance', 2);
+failedNames = string({report.Checks(~[report.Checks.Passed]).Name});
+
+verifyFalse(testCase, report.Passed);
+verifyTrue(testCase, any(failedNames == "PairwiseColorContrast"));
+end
+
+function testValidateFigurePassesSeparatedColorsWhenEnabled(testCase)
+fig = figure('Visible', 'off', 'Color', 'w', 'Position', [100 100 640 420]);
+cleanup = onCleanup(@() close(fig));
+colors = sftPalette('main', 2);
+
+plot(1:4, [1 3 2 5], 'Color', colors(1, :), 'LineWidth', 1.5);
+hold on
+plot(1:4, [1.1 3.1 2.1 5.1], 'Color', colors(2, :), 'LineWidth', 1.5);
+title('Validation Example');
+xlabel('Sample');
+ylabel('Response');
+
+report = sftValidateFigure(fig, 'CheckColorContrast', true, 'MinimumColorDistance', 2);
+failedNames = string({report.Checks(~[report.Checks.Passed]).Name});
+
+verifyTrue(testCase, report.Passed);
+verifyFalse(testCase, any(failedNames == "PairwiseColorContrast"));
+end
+
 function defaults = captureRootThemeDefaults()
 defaults = struct( ...
     'defaultFigureColor', get(groot, 'defaultFigureColor'), ...

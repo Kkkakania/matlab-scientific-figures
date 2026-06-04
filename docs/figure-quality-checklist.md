@@ -31,6 +31,16 @@ The validator checks for plot axes, a clean canvas, readable fonts, and basic
 label completeness. It will not judge whether the chart is the right chart. That
 part is still on you.
 
+When color separation is part of the review, run the opt-in color check:
+
+```matlab
+report = sftValidateFigure(gcf, 'CheckColorContrast', true);
+disp(struct2table(report.Checks));
+```
+
+This catches very close extracted series colors. It is a preflight signal, not
+a replacement for opening the final PNG/SVG at the size readers will see.
+
 ## Export Quality
 
 - PNG export is high resolution.

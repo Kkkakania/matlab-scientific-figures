@@ -70,7 +70,7 @@ disp(result.SelectedTemplate)
 | `sftTiledFigure(rows, cols)` | Create a compact tiled layout. |
 | `sftExport(fig, outputBase, formats)` | Export PNG, PDF, or SVG from one call. |
 | `sftSanitizeSvgMetadataText(svgText)` | Remove vendor-generated SVG description text before writing gallery SVGs. |
-| `sftValidateFigure(fig)` | Check common figure-quality requirements before export. |
+| `sftValidateFigure(fig)` | Check common figure-quality requirements before export, with optional pairwise color separation checks. |
 
 Example:
 
@@ -87,6 +87,18 @@ sftValidateFigure(fig);
 sftExport(fig, "gallery/my_example", ["png", "svg"]);
 close(fig);
 ```
+
+Enable the conservative color check when color separation is part of the review:
+
+```matlab
+report = sftValidateFigure(fig, ...
+    "CheckColorContrast", true, ...
+    "MinimumColorDistance", 2.0);
+```
+
+The color check compares extracted line, marker, and patch colors in Lab color
+space. It is a maintainer review aid, not a complete accessibility
+certification.
 
 Use root defaults only when the side effect is intentional:
 

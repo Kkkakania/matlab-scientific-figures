@@ -88,3 +88,8 @@ heavy dependencies or block valid scientific figures with noisy warnings.
 manifest has a row in the audit table above. This is intentionally a coverage
 check, not a visual-quality oracle. It keeps the manual review list current
 without pretending that a simple script can judge every scientific chart.
+
+`sftValidateFigure(fig, 'CheckColorContrast', true)` adds a small opt-in runtime
+check for very close extracted line, marker, and patch colors. It compares
+colors in Lab color space and is useful before export, but it still does not
+replace manual review at the final viewing size.
