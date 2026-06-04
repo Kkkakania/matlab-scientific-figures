@@ -181,10 +181,13 @@ Delivered changes:
 
 - `pv_power_confidence` standalone domain example with deterministic synthetic
   PV forecast data.
+- `harmonic_spectrum` standalone domain example with deterministic synthetic
+  power-quality harmonic data.
 - `directional_rose` standalone example for directional-frequency data,
   reimplemented clean-room after auditing local resources at the chart-family
   level.
-- CLI commands for `csv-example`, `pv-power`, and `directional-rose`.
+- CLI commands for `csv-example`, `pv-power`, `harmonic-spectrum`, and
+  `directional-rose`.
 - `SFT_FORMATS`, CLI help examples, argument validation, timeout checks, and
   first-use documentation improvements.
 - Tag-based gallery documentation generated from the template manifest.

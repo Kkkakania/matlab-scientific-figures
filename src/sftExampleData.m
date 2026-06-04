@@ -41,6 +41,15 @@ switch kind
         data.upper = min(1.05, center + spread);
         data.labels = "PV forecast";
 
+    case "harmonic_spectrum"
+        orders = [3 5 7 9 11 13 15 17 19].';
+        twoLevel = 18 ./ (orders .^ 0.86) + 0.42 * exp(-0.5 * ((orders - 5) / 2.2) .^ 2);
+        threeLevel = 12 ./ (orders .^ 0.96) + 0.24 * exp(-0.5 * ((orders - 7) / 2.8) .^ 2);
+        data.orders = orders;
+        data.values = [twoLevel threeLevel];
+        data.groups = "H" + string(orders);
+        data.series = ["Two-level inverter", "Three-level inverter"];
+
     case "directional_rose"
         directionDegrees = 0:30:330;
         prevailing = 0.36 * exp(-0.5 * localCircularDistance(directionDegrees, 60) .^ 2 / 32 ^ 2);

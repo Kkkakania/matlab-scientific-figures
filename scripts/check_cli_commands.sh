@@ -39,6 +39,10 @@ rm -f "$TMP_DIR/pv_power_confidence.png" "$TMP_DIR/pv_power_confidence.svg"
 SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh pv-power
 test -s "$TMP_DIR/pv_power_confidence.png"
 
+rm -f "$TMP_DIR/harmonic_spectrum.png" "$TMP_DIR/harmonic_spectrum.svg"
+SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh harmonic-spectrum
+test -s "$TMP_DIR/harmonic_spectrum.png"
+
 rm -f "$TMP_DIR/directional_rose.png" "$TMP_DIR/directional_rose.svg"
 SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh directional-rose
 test -s "$TMP_DIR/directional_rose.png"

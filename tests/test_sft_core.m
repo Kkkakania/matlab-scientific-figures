@@ -1232,6 +1232,31 @@ verifyEqual(testCase, numel(files), 1);
 verifyTrue(testCase, isfile(fullfile(outputDir, 'pv_power_confidence.png')));
 end
 
+function testHarmonicSpectrumExampleDataIsDeterministic(testCase)
+first = sftExampleData('harmonic_spectrum');
+second = sftExampleData('harmonic_spectrum');
+
+verifyEqual(testCase, first.orders, second.orders);
+verifyEqual(testCase, first.values, second.values);
+verifyEqual(testCase, first.series, ["Two-level inverter", "Three-level inverter"]);
+verifyEqual(testCase, numel(first.orders), size(first.values, 1));
+verifyEqual(testCase, numel(first.series), size(first.values, 2));
+verifyTrue(testCase, all(mod(first.orders, 2) == 1));
+verifyGreaterThan(testCase, first.values, 0);
+verifyGreaterThan(testCase, first.values(1, 1), first.values(end, 1));
+end
+
+function testHarmonicSpectrumRendererExportsPng(testCase)
+outputDir = tempname;
+mkdir(outputDir);
+cleanup = onCleanup(@() rmdir(outputDir, 's'));
+
+files = renderHarmonicSpectrum(outputDir, "png");
+
+verifyEqual(testCase, numel(files), 1);
+verifyTrue(testCase, isfile(fullfile(outputDir, 'harmonic_spectrum.png')));
+end
+
 function testDirectionalRoseExampleDataUsesCircularBins(testCase)
 data = sftExampleData('directional_rose');
 
