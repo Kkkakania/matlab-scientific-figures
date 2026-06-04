@@ -62,7 +62,7 @@ disp(result.SelectedTemplate)
 
 | Function | Use When |
 |---|---|
-| `sftTheme(varargin)` | Create shared figure defaults such as size, font, and line width. |
+| `sftTheme(varargin)` | Create shared figure defaults such as size, font, line width, and optional CJK font mode. |
 | `sftPalette(name, n)` | Get categorical, sequential, diverging, or contrast colors. |
 | `sftApplyTheme(ax, theme)` | Apply shared styling to an axes object. |
 | `sftStyleLegend(legendHandle, theme)` | Keep legends visually consistent. |
@@ -75,6 +75,7 @@ Example:
 
 ```matlab
 theme = sftTheme("FigureSize", [12 8]);
+themeCjk = sftTheme("FontMode", "cjk");
 fig = figure("Visible", "off", "Units", "centimeters", "Position", [1 1 theme.FigureSize]);
 plot(1:4, [1 3 2 5], "LineWidth", theme.LineWidth);
 xlabel("Sample");

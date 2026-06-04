@@ -227,7 +227,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 
 ## Design
 
-- `sftTheme` keeps figure size, font, grid, and line defaults in one place.
+- `sftTheme` keeps figure size, font, grid, and line defaults in one place,
+  with an opt-in CJK font mode for mixed-script labels.
 - `sftPalette` provides categorical, sequential, and diverging palettes.
 - `sftExampleData` generates deterministic synthetic data for the gallery.
 - `sftExport` writes PNG, PDF, and SVG outputs from one call.

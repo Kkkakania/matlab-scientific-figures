@@ -11,8 +11,25 @@ end
 function testThemeProvidesStableDefaults(testCase)
 theme = sftTheme();
 verifyEqual(testCase, theme.FontName, 'Arial');
+verifyEqual(testCase, theme.FontMode, 'latin');
+verifyGreaterThan(testCase, numel(theme.CjkFontCandidates), 0);
 verifyGreaterThan(testCase, theme.LineWidth, 0);
 verifyEqual(testCase, numel(theme.FigureSize), 2);
+end
+
+function testThemeSupportsCjkFontMode(testCase)
+theme = sftTheme('FontMode', 'cjk', 'CjkFontCandidates', {'Missing Font A', 'Missing Font B'});
+
+verifyEqual(testCase, theme.FontMode, 'cjk');
+verifyEqual(testCase, theme.FontName, 'Arial');
+verifyEqual(testCase, theme.CjkFontCandidates, {'Missing Font A', 'Missing Font B'});
+end
+
+function testThemeExplicitFontOverridesCjkFallback(testCase)
+theme = sftTheme('FontMode', 'cjk', 'FontName', 'Arial', 'CjkFontCandidates', {'Missing Font A'});
+
+verifyEqual(testCase, theme.FontName, 'Arial');
+verifyEqual(testCase, theme.FontMode, 'cjk');
 end
 
 function testApplyThemeUsesWhiteAxesBackground(testCase)
