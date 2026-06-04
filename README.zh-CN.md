@@ -87,6 +87,20 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh po
 
 三个仓库一起维护，但职责分开：模板和图表 API 在这里，自动化检查在 `matlab-figure-ci`，agent-facing 工作流在 `matlab-plotting-skill`。
 
+## 主题和全局默认值
+
+一般情况下，建议用 `theme = sftTheme(...)` 创建样式，再把它传给 `sftApplyTheme(gca, theme)`。这种方式只影响当前图，不会改变 MATLAB 会话里其他工具箱或脚本的图形默认值。
+
+如果你确实想让当前一段代码里的新图都继承同一套默认字体、字号和线宽，可以使用带清理句柄的写法：
+
+```matlab
+[theme, cleanup] = sftTheme('ApplyDefaults', true);
+% 这里创建的新图会使用共享默认值
+clear cleanup  % 恢复调用前的 root 默认值
+```
+
+如果只是想清掉本库写入的 root 图形默认值，可以调用 `sftResetTheme()`。它只处理 `sftTheme(..., 'ApplyDefaults', true)` 写过的几项默认值，不会重置整个 MATLAB 会话。
+
 ## 质量检查
 
 本仓库的 CI badge 说明静态质量和 figure-quality 检查通过，不代表 GitHub-hosted runner 已经安装 MATLAB 或重新生成了全部图。需要完整验证时，在本地运行：

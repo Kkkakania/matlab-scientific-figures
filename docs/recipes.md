@@ -13,6 +13,23 @@ fig = figure('Visible', 'off', 'Units', 'centimeters', ...
 Use centimeters when the figure is going into a paper. It keeps the result
 easier to reason about than screen pixels.
 
+## Scope Session-Wide Defaults
+
+Most examples pass the theme to `sftApplyTheme` instead of changing MATLAB's
+root defaults. If you do want every new figure in the current scope to inherit
+the same defaults, keep the cleanup handle:
+
+```matlab
+[theme, cleanup] = sftTheme('ApplyDefaults', true);
+fig = figure('Visible', 'off');
+plot(1:4, [1 3 2 5]);
+sftApplyTheme(gca, theme);
+clear cleanup
+```
+
+Use `sftResetTheme()` when you want to clear only the root graphics defaults
+that `sftTheme(..., 'ApplyDefaults', true)` writes.
+
 ## Save PNG And SVG Together
 
 ```matlab

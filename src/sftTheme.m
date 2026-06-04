@@ -1,8 +1,12 @@
-function theme = sftTheme(varargin)
+function [theme, cleanup] = sftTheme(varargin)
 %SFTTHEME Return shared style settings for scientific figures.
 %
 %   theme = SFTTHEME() returns a struct with stable defaults for figures,
 %   axes, fonts, lines, grid styling, and export size.
+%
+%   [theme, cleanup] = SFTTHEME('ApplyDefaults', true) applies the theme to
+%   MATLAB root graphics defaults and returns an onCleanup handle that
+%   restores the previous values when it is cleared.
 
 p = inputParser;
 p.FunctionName = 'sftTheme';
@@ -32,13 +36,41 @@ theme.BackgroundColor = double(theme.BackgroundColor(:).');
 theme.AxisColor = double(theme.AxisColor(:).');
 theme.GridColor = double(theme.GridColor(:).');
 
+cleanup = [];
 if theme.ApplyDefaults
+    snapshot = captureDefaultSnapshot();
     set(groot, ...
         'defaultFigureColor', theme.BackgroundColor, ...
         'defaultAxesFontName', theme.FontName, ...
         'defaultAxesFontSize', theme.FontSize, ...
         'defaultAxesLineWidth', theme.LineWidth, ...
         'defaultLineLineWidth', theme.LineWidth);
+    if nargout > 1
+        cleanup = onCleanup(@() restoreDefaultSnapshot(snapshot));
+    end
+end
+end
+
+function properties = themeDefaultProperties()
+properties = { ...
+    'defaultFigureColor', ...
+    'defaultAxesFontName', ...
+    'defaultAxesFontSize', ...
+    'defaultAxesLineWidth', ...
+    'defaultLineLineWidth'};
+end
+
+function snapshot = captureDefaultSnapshot()
+properties = themeDefaultProperties();
+snapshot = struct('Property', properties, 'Value', cell(size(properties)));
+for index = 1:numel(properties)
+    snapshot(index).Value = get(groot, properties{index});
+end
+end
+
+function restoreDefaultSnapshot(snapshot)
+for index = 1:numel(snapshot)
+    set(groot, snapshot(index).Property, snapshot(index).Value);
 end
 end
 

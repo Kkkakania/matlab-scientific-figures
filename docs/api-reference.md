@@ -62,7 +62,8 @@ disp(result.SelectedTemplate)
 
 | Function | Use When |
 |---|---|
-| `sftTheme(varargin)` | Create shared figure defaults such as size, font, line width, and optional CJK font mode. |
+| `sftTheme(varargin)` | Create shared figure defaults such as size, font, line width, optional CJK font mode, and optional scoped root defaults. |
+| `sftResetTheme()` | Clear only the root graphics defaults written by `sftTheme(..., "ApplyDefaults", true)`. |
 | `sftPalette(name, n)` | Get categorical, sequential, diverging, or contrast colors. |
 | `sftApplyTheme(ax, theme)` | Apply shared styling to an axes object. |
 | `sftStyleLegend(legendHandle, theme)` | Keep legends visually consistent. |
@@ -85,6 +86,14 @@ sftApplyTheme(gca, theme);
 sftValidateFigure(fig);
 sftExport(fig, "gallery/my_example", ["png", "svg"]);
 close(fig);
+```
+
+Use root defaults only when the side effect is intentional:
+
+```matlab
+[theme, cleanup] = sftTheme("ApplyDefaults", true);
+% Figures created here inherit the shared defaults.
+clear cleanup  % restores the previous root defaults
 ```
 
 ## Reusable Plotting Functions

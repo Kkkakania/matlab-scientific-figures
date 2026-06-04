@@ -32,6 +32,40 @@ verifyEqual(testCase, theme.FontName, 'Arial');
 verifyEqual(testCase, theme.FontMode, 'cjk');
 end
 
+function testThemeApplyDefaultsCanBeScopedWithCleanup(testCase)
+baseline = captureRootThemeDefaults();
+restore = onCleanup(@() restoreRootThemeDefaults(baseline));
+
+[~, cleanup] = sftTheme('FontName', 'Times New Roman', 'FontSize', 13, ...
+    'LineWidth', 2, 'ApplyDefaults', true);
+
+verifyEqual(testCase, get(groot, 'defaultAxesFontName'), 'Times New Roman');
+verifyEqual(testCase, get(groot, 'defaultAxesFontSize'), 13);
+verifyEqual(testCase, get(groot, 'defaultAxesLineWidth'), 2);
+clear cleanup
+
+verifyRootThemeDefaults(testCase, baseline);
+clear restore
+end
+
+function testResetThemeClearsThemeDefaultKeys(testCase)
+baseline = captureRootThemeDefaults();
+restore = onCleanup(@() restoreRootThemeDefaults(baseline));
+sftResetTheme();
+factoryDefaults = captureRootThemeDefaults();
+
+sftTheme('FontName', 'Times New Roman', 'FontSize', 13, ...
+    'LineWidth', 2, 'ApplyDefaults', true);
+sftResetTheme();
+
+verifyEqual(testCase, get(groot, 'defaultFigureColor'), factoryDefaults.defaultFigureColor);
+verifyEqual(testCase, get(groot, 'defaultAxesFontName'), factoryDefaults.defaultAxesFontName);
+verifyEqual(testCase, get(groot, 'defaultAxesFontSize'), factoryDefaults.defaultAxesFontSize);
+verifyEqual(testCase, get(groot, 'defaultAxesLineWidth'), factoryDefaults.defaultAxesLineWidth);
+verifyEqual(testCase, get(groot, 'defaultLineLineWidth'), factoryDefaults.defaultLineLineWidth);
+clear restore
+end
+
 function testApplyThemeUsesWhiteAxesBackground(testCase)
 fig = figure('Visible', 'off', 'Color', 'w');
 cleanup = onCleanup(@() close(fig));
@@ -1470,4 +1504,30 @@ failedNames = string({report.Checks(~[report.Checks.Passed]).Name});
 
 verifyTrue(testCase, report.Passed);
 verifyFalse(testCase, any(failedNames == "FigureSize"));
+end
+
+function defaults = captureRootThemeDefaults()
+defaults = struct( ...
+    'defaultFigureColor', get(groot, 'defaultFigureColor'), ...
+    'defaultAxesFontName', get(groot, 'defaultAxesFontName'), ...
+    'defaultAxesFontSize', get(groot, 'defaultAxesFontSize'), ...
+    'defaultAxesLineWidth', get(groot, 'defaultAxesLineWidth'), ...
+    'defaultLineLineWidth', get(groot, 'defaultLineLineWidth'));
+end
+
+function restoreRootThemeDefaults(defaults)
+set(groot, ...
+    'defaultFigureColor', defaults.defaultFigureColor, ...
+    'defaultAxesFontName', defaults.defaultAxesFontName, ...
+    'defaultAxesFontSize', defaults.defaultAxesFontSize, ...
+    'defaultAxesLineWidth', defaults.defaultAxesLineWidth, ...
+    'defaultLineLineWidth', defaults.defaultLineLineWidth);
+end
+
+function verifyRootThemeDefaults(testCase, expected)
+verifyEqual(testCase, get(groot, 'defaultFigureColor'), expected.defaultFigureColor);
+verifyEqual(testCase, get(groot, 'defaultAxesFontName'), expected.defaultAxesFontName);
+verifyEqual(testCase, get(groot, 'defaultAxesFontSize'), expected.defaultAxesFontSize);
+verifyEqual(testCase, get(groot, 'defaultAxesLineWidth'), expected.defaultAxesLineWidth);
+verifyEqual(testCase, get(groot, 'defaultLineLineWidth'), expected.defaultLineLineWidth);
 end
