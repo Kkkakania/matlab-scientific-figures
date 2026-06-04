@@ -107,6 +107,8 @@ theme = sftTheme("FontName", "Journal Sans", ...
 
 三个仓库一起维护，但职责分开：模板和图表 API 在这里，自动化检查在 `matlab-figure-ci`，agent-facing 工作流在 `matlab-plotting-skill`。
 
+跨仓库维护看板的英文设置说明见 [GitHub Project board plan](docs/github-project-board.md)，中文操作版见 [GitHub Project 看板设置说明](docs/github-project-board.zh-CN.md)。当前看板创建状态仍由 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) 跟踪；在 GitHub Projects 权限可用前，请使用 `./scripts/check_ecosystem_triage_status.sh` 做临时 triage。
+
 ## 主题和全局默认值
 
 一般情况下，建议用 `theme = sftTheme(...)` 创建样式，再把它传给 `sftApplyTheme(gca, theme)`。这种方式只影响当前图，不会改变 MATLAB 会话里其他工具箱或脚本的图形默认值。
