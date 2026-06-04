@@ -54,6 +54,19 @@ Then verify:
 gh project list --owner Kkkakania --limit 20
 ```
 
+Or run the repository helper:
+
+```bash
+./scripts/check_github_project_board_status.sh
+```
+
+On machines where the board is still pending or the token has not been
+refreshed, use the non-failing documentation mode:
+
+```bash
+./scripts/check_github_project_board_status.sh --allow-pending
+```
+
 Do not close `#31` until a live public board exists or the issue explicitly
 records that the web-created board has been verified.
 
@@ -177,7 +190,6 @@ issues after the recent maintenance pass and avoids already-completed work.
 | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | Gallery/API | Needs review | P2 | Dogfooded | no release planned | Wait for feedback on the PV and harmonic-spectrum examples before expanding the pack. |
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | Feedback | Ready | P1 | Needs user feedback | no release planned | Collect a fresh-clone first-use report. |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | Release | Backlog | P1 | Official/source-backed | v2.x | Prepare PyPI only after package-name and install checks are current. |
-| [`matlab-plotting-skill#16`](https://github.com/Kkkakania/matlab-plotting-skill/issues/16) | plotting-skill | Agent workflow | Ready | P1 | Proposal | v0.x | Broaden install script support beyond the Codex skills directory. |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | Feedback | Ready | P1 | Needs user feedback | no release planned | Collect first-use MATLAB rendering feedback. |
 
 ## Maintenance Rhythm
