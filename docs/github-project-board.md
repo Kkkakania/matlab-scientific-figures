@@ -160,15 +160,19 @@ Group by `Repository`, then review linked issues manually.
 
 If using the GitHub web UI:
 
-1. Open the account Projects page.
-2. Create a new project named `MATLAB Scientific Figure Ecosystem`.
-3. Add the description from this document.
-4. Add the fields in the `Fields` table.
-5. Create the five saved views in the `Views` section.
-6. Add the current seed issues from the table below.
-7. For each item, set `Repository`, `Track`, `Priority`, `Evidence level`, and
+1. Open `https://github.com/projects` and verify the active browser account is
+   `Kkkakania` before clicking `New project`. The `gh` CLI account and the
+   browser account can be different.
+2. If the page shows another owner in the header or URL, stop and switch GitHub
+   accounts before creating anything.
+3. Create a new project named `MATLAB Scientific Figure Ecosystem`.
+4. Add the description from this document.
+5. Add the fields in the `Fields` table.
+6. Create the five saved views in the `Views` section.
+7. Add the current seed issues from the table below.
+8. For each item, set `Repository`, `Track`, `Priority`, `Evidence level`, and
    `Release target`.
-8. Link the live project URL back to
+9. Link the live project URL back to
    [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31).
 
 ## Starter Items

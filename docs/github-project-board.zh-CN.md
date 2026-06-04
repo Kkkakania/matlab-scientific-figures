@@ -88,20 +88,21 @@ gh project list --owner Kkkakania --limit 20
 
 如果用 GitHub 网页创建：
 
-1. 打开账号的 Projects 页面。
-2. 新建项目，名称填写 `MATLAB Scientific Figure Ecosystem`。
-3. 描述填写：
+1. 打开 `https://github.com/projects`，先确认浏览器当前登录账号是 `Kkkakania`，再点击 `New project`。`gh` CLI 账号和浏览器登录账号可能不是同一个。
+2. 如果页面标题、头像菜单或 URL 显示的是其他 owner，先停止创建，切换到 `Kkkakania` 后再继续。
+3. 新建项目，名称填写 `MATLAB Scientific Figure Ecosystem`。
+4. 描述填写：
 
    ```text
    Cross-repository roadmap for MATLAB scientific figures, figure quality checks,
    and agent-assisted data-to-figure workflows.
    ```
 
-4. 按上面的字段表建立字段。
-5. 建立 Roadmap、Triage、Release Readiness、Feedback Loops 和 Cross-Repo Dependencies 五个视图。
-6. 把下面的 seed queue 加入看板。
-7. 为每个条目设置仓库、track、优先级、证据等级和 release target。
-8. 把公开看板 URL 回填到 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31)。
+5. 按上面的字段表建立字段。
+6. 建立 Roadmap、Triage、Release Readiness、Feedback Loops 和 Cross-Repo Dependencies 五个视图。
+7. 把下面的 seed queue 加入看板。
+8. 为每个条目设置仓库、track、优先级、证据等级和 release target。
+9. 把公开看板 URL 回填到 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31)。
 
 不要在没有公开 URL 或没有核验结果时关闭 `#31`。
 
