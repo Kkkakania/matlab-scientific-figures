@@ -12,7 +12,9 @@ function testThemeProvidesStableDefaults(testCase)
 theme = sftTheme();
 verifyEqual(testCase, theme.FontName, 'Arial');
 verifyEqual(testCase, theme.FontMode, 'latin');
+verifyEqual(testCase, theme.TextScript, 'latin');
 verifyGreaterThan(testCase, numel(theme.CjkFontCandidates), 0);
+verifyEqual(testCase, theme.RequestedFontName, 'Arial');
 verifyGreaterThan(testCase, theme.LineWidth, 0);
 verifyEqual(testCase, numel(theme.FigureSize), 2);
 end
@@ -21,7 +23,8 @@ function testThemeSupportsCjkFontMode(testCase)
 theme = sftTheme('FontMode', 'cjk', 'CjkFontCandidates', {'Missing Font A', 'Missing Font B'});
 
 verifyEqual(testCase, theme.FontMode, 'cjk');
-verifyEqual(testCase, theme.FontName, 'Arial');
+verifyEqual(testCase, theme.TextScript, 'cjk');
+verifyEqual(testCase, theme.FontName, 'Missing Font A');
 verifyEqual(testCase, theme.CjkFontCandidates, {'Missing Font A', 'Missing Font B'});
 end
 
@@ -30,6 +33,28 @@ theme = sftTheme('FontMode', 'cjk', 'FontName', 'Arial', 'CjkFontCandidates', {'
 
 verifyEqual(testCase, theme.FontName, 'Arial');
 verifyEqual(testCase, theme.FontMode, 'cjk');
+verifyEqual(testCase, theme.RequestedFontName, 'Arial');
+end
+
+function testThemeFallsBackWhenRequestedFontIsUnavailable(testCase)
+theme = sftTheme( ...
+    'FontName', 'Missing Journal Font', ...
+    'FontFallbacks', ["Test Sans", "Arial"], ...
+    'AvailableFonts', ["Arial", "Test Sans"]);
+
+verifyEqual(testCase, theme.RequestedFontName, 'Missing Journal Font');
+verifyEqual(testCase, theme.FontName, 'Test Sans');
+verifyEqual(testCase, theme.FontFallbacks, ["Test Sans", "Arial"]);
+end
+
+function testThemeCanSelectCjkFallbackDeterministically(testCase)
+theme = sftTheme( ...
+    'TextScript', 'cjk', ...
+    'AvailableFonts', ["Latin Only", "Noto Sans CJK SC", "Arial"]);
+
+verifyEqual(testCase, theme.TextScript, 'cjk');
+verifyEqual(testCase, theme.FontName, 'Noto Sans CJK SC');
+verifyTrue(testCase, any(theme.FontFallbacks == "Noto Sans CJK SC"));
 end
 
 function testThemeApplyDefaultsCanBeScopedWithCleanup(testCase)
@@ -1407,11 +1432,9 @@ verifyTrue(testCase, contains(text, '"PngFile":"gallery/line_plot.png"'));
 end
 
 function testExportCreatesRequestedFiles(testCase)
-outDir = fullfile(tempdir, 'sft-core-test');
-if exist(outDir, 'dir')
-    rmdir(outDir, 's');
-end
+outDir = tempname;
 mkdir(outDir);
+cleanupDir = onCleanup(@() removeDirectoryIfPresent(outDir));
 
 fig = figure('Visible', 'off');
 plot(1:3, [1 4 2]);
@@ -1420,6 +1443,12 @@ close(fig);
 
 verifyEqual(testCase, numel(files), 1);
 verifyTrue(testCase, isfile(files(1)));
+end
+
+function removeDirectoryIfPresent(pathName)
+if exist(pathName, 'dir')
+    rmdir(pathName, 's');
+end
 end
 
 function testExportSanitizesSvgMetadata(testCase)

@@ -36,7 +36,7 @@ for agent-assisted data-to-figure rendering feedback.
 For a factual status view of all three repositories, see
 [Ecosystem status](docs/ecosystem-status.md).
 
-Current public release: `v3.7.0`. This is still an early public project: the
+Current public release: `v3.7.1`. This is still an early public project: the
 gallery and CLI are usable, but adoption claims should stay conservative until
 more external feedback arrives. The fast early version jumps mark API and
 workflow stabilization milestones from the first public hardening pass; future
@@ -228,7 +228,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
 ## Design
 
 - `sftTheme` keeps figure size, font, grid, and line defaults in one place,
-  with opt-in CJK font mode and scoped root-default cleanup support.
+  with portable font fallbacks, opt-in CJK handling, and scoped root-default
+  cleanup support.
 - `sftPalette` provides categorical, sequential, and diverging palettes.
 - `sftExampleData` generates deterministic synthetic data for the gallery.
 - `sftExport` writes PNG, PDF, and SVG outputs from one call.
@@ -299,7 +300,7 @@ through CI artifacts without blocking gallery checks.
 
 ## Project Status
 
-Current public release: `v3.7.0`.
+Current public release: `v3.7.1`.
 
 Project maturity: early public project. The examples, CLI workflow, and checks
 are usable today, but the repository is still collecting feedback before

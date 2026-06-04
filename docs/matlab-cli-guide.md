@@ -130,5 +130,5 @@ right keyword yet.
 | `No templates matched` | The `match` query did not find a name, task, or tag | Run `./scripts/render_all.sh search <keyword>` first |
 | `No templates matched tag(s)` | The `tag` query did not match an exact tag | Run `./scripts/render_all.sh tags` first |
 | Missing output files | Rendering failed before export | Run MATLAB tests and inspect command output |
-| Font mismatch | Machine lacks the chosen font | Use `Arial` or another common font |
+| Font mismatch | Machine lacks the chosen font | Use `sftTheme("FontFallbacks", [...])` or `sftTheme("TextScript", "cjk")` for CJK labels |
 | Empty figure | Example did not draw into the active axes | Check the example renderer and call `drawnow` if needed |

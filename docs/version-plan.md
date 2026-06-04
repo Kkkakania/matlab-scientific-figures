@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v3.7.0` is the current release.
+- `v3.7.1` is the current release.
 - The gallery has 30 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 - Future tags should follow `docs/release-cadence.md`; small maintenance
@@ -219,3 +219,24 @@ Release conditions:
 - CLI command checks render the data-file workflow and extended examples.
 - Static quality, bilingual README, provenance, privacy, and figure-quality
   checks pass.
+
+## v3.7.1 Released
+
+Goal: improve bilingual and mixed-script first-use quality without expanding
+the gallery or changing the public plotting boundary.
+
+Delivered changes:
+
+- `sftTheme` now records the requested font separately from the resolved font.
+- `FontFallbacks` lets users provide portable fallbacks when a requested
+  journal or lab font is not installed.
+- `TextScript="cjk"` selects an installed CJK-friendly font for Chinese,
+  Japanese, or Korean labels.
+- English and Chinese documentation now show the mixed-script font workflow.
+
+Release conditions:
+
+- Font fallback regression tests pass.
+- MATLAB core tests pass locally.
+- Static quality, bilingual README, version metadata, provenance, privacy, and
+  figure-quality checks pass.

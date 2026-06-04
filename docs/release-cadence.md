@@ -15,9 +15,9 @@ changes naturally form a coherent release.
 
 ## Current Policy
 
-- Keep `v3.7.0` as the current public release until a user-visible reason
+- Keep `v3.7.1` as the current public release until a user-visible reason
   justifies another tag.
-- Use patch releases, such as `v3.7.1`, for documentation fixes, CI checks,
+- Use patch releases, such as `v3.7.2`, for documentation fixes, CI checks,
   typo fixes, and small maintenance work.
 - Use minor releases, such as `v3.8.0`, only when users get a new workflow,
   helper API, template, or documented behavior.

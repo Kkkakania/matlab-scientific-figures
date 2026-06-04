@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## v3.7.1 - 2026-06-04
+
+- Added portable font fallback support to `sftTheme`, including a
+  `TextScript="cjk"` option for Chinese, Japanese, and Korean labels.
+- Documented mixed-script font handling in the English API reference, MATLAB
+  CLI troubleshooting guide, and Chinese README.
+- Added regression tests for requested-font fallback and deterministic CJK font
+  selection.
+
 ## v3.7.0 - 2026-06-03
 
 - Added `README.zh-CN.md` with a Chinese first-use path, project boundary

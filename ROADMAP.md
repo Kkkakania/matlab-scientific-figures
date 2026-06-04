@@ -5,12 +5,13 @@ It should agree with README, CHANGELOG, and GitHub releases.
 
 ## Current State
 
-- Current public release: `v3.7.0`.
+- Current public release: `v3.7.1`.
 - Maturity: early public project; the gallery is usable, but adoption claims
   should stay conservative until real external use appears.
 - Gallery size on `main`: 30 clean-room templates. The current public release
-  `v3.7.0` keeps that gallery stable while adding bilingual onboarding,
-  CSV/Excel data-to-figure workflow, and extended standalone examples.
+  `v3.7.1` keeps that gallery stable while adding bilingual onboarding,
+  CSV/Excel data-to-figure workflow, extended standalone examples, and
+  portable mixed-script font fallback.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
   citation metadata, privacy/provenance scans, static contributor preflight,
   first-use smoke test, and figure-quality CI.
@@ -134,9 +135,18 @@ Delivered:
 - Five clean-room extended examples: marginal scatter, raincloud distribution,
   3D ribbon comparison, vector field, and polar bubble.
 
-## Post-v3.7.0 Hardening On Main
+### v3.7.1: Mixed-Script Font Fallback
 
-No post-`v3.7.0` hardening is listed yet. Accumulate small fixes on `main`
+Delivered:
+
+- Portable `sftTheme` font fallback support for machines that do not have a
+  requested journal or lab font installed.
+- `TextScript="cjk"` theme mode for Chinese, Japanese, and Korean labels.
+- Regression tests and documentation for mixed-script font handling.
+
+## Post-v3.7.1 Hardening On Main
+
+No post-`v3.7.1` hardening is listed yet. Accumulate small fixes on `main`
 until there is a user-visible reason for another tag.
 
 ## Next Candidates

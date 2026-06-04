@@ -10,6 +10,7 @@ extract_first() {
 }
 
 readme_version="$(extract_first 's/^Current public release: `(v[0-9]+\.[0-9]+\.[0-9]+)`\.$/\1/p' README.md)"
+readme_zh_version="$(extract_first 's/^当前公开版本：`(v[0-9]+\.[0-9]+\.[0-9]+)`。.*$/\1/p' README.zh-CN.md)"
 roadmap_version="$(extract_first 's/^- Current public release: `(v[0-9]+\.[0-9]+\.[0-9]+)`\.$/\1/p' ROADMAP.md)"
 version_plan_version="$(extract_first 's/^- `(v[0-9]+\.[0-9]+\.[0-9]+)` is the current release\.$/\1/p' docs/version-plan.md)"
 dashboard_version="$(extract_first 's/^- Current released line: `(v[0-9]+\.[0-9]+\.[0-9]+)`\.$/\1/p' docs/maintainer-dashboard.md)"
@@ -17,7 +18,7 @@ changelog_version="$(extract_first 's/^## (v[0-9]+\.[0-9]+\.[0-9]+) - [0-9]{4}-[
 cadence_version="$(extract_first 's/^- Keep `(v[0-9]+\.[0-9]+\.[0-9]+)` as the current public release until a user-visible reason$/\1/p' docs/release-cadence.md)"
 
 missing=0
-for name in readme_version roadmap_version version_plan_version dashboard_version changelog_version cadence_version; do
+for name in readme_version readme_zh_version roadmap_version version_plan_version dashboard_version changelog_version cadence_version; do
   if [[ -z "${!name}" ]]; then
     echo "Could not find $name in release metadata files." >&2
     missing=1
@@ -28,7 +29,8 @@ if [[ "$missing" -ne 0 ]]; then
   exit 1
 fi
 
-if [[ "$readme_version" != "$roadmap_version" || \
+if [[ "$readme_version" != "$readme_zh_version" || \
+      "$readme_version" != "$roadmap_version" || \
       "$readme_version" != "$version_plan_version" || \
       "$readme_version" != "$dashboard_version" || \
       "$readme_version" != "$changelog_version" || \
@@ -36,6 +38,7 @@ if [[ "$readme_version" != "$roadmap_version" || \
   cat >&2 <<EOF
 Version metadata mismatch:
   README.md:         $readme_version
+  README.zh-CN.md:   $readme_zh_version
   ROADMAP.md:        $roadmap_version
   docs/version-plan: $version_plan_version
   maintainer dash:   $dashboard_version

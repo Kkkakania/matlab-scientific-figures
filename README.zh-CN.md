@@ -6,7 +6,7 @@
 
 这个仓库不收录私人素材包、期刊截图、第三方源码包、本地模板归档或隐藏 helper。你可以直接使用 `sftPlot*.m` API 处理自己的数据，也可以运行合成数据示例来学习图表结构、导出方式和质量检查流程。
 
-当前公开版本：`v3.7.0`。项目仍处于早期公开维护阶段：gallery、CLI 和质量检查已经可用，但不会宣称广泛采用、下载量或任何外部福利项目的通过保证。
+当前公开版本：`v3.7.1`。项目仍处于早期公开维护阶段：gallery、CLI 和质量检查已经可用，但不会宣称广泛采用、下载量或任何外部福利项目的通过保证。
 
 ## 适合谁
 
@@ -68,6 +68,22 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh po
 - [CSV/Excel 教程](docs/tutorial-csv-excel-data.md)
 - [使用自己的数据](docs/use-with-your-data.md)
 - [图表选择指南](docs/chart-selection-guide.md)
+
+如果图里有中文、日文或韩文标签，可以让主题系统自动选择当前机器上可用的 CJK 友好字体：
+
+```matlab
+theme = sftTheme("TextScript", "cjk");
+xlabel("时间");
+ylabel("响应");
+sftApplyTheme(gca, theme);
+```
+
+如果实验室或期刊要求某个字体，但协作者机器上未必安装，可以显式提供 fallback：
+
+```matlab
+theme = sftTheme("FontName", "Journal Sans", ...
+    "FontFallbacks", ["Arial", "Helvetica", "DejaVu Sans"]);
+```
 
 ## 图库范围
 

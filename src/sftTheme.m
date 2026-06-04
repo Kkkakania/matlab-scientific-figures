@@ -7,13 +7,26 @@ function [theme, cleanup] = sftTheme(varargin)
 %   [theme, cleanup] = SFTTHEME('ApplyDefaults', true) applies the theme to
 %   MATLAB root graphics defaults and returns an onCleanup handle that
 %   restores the previous values when it is cleared.
+%
+%   theme = SFTTHEME("TextScript", "cjk") selects the first available
+%   CJK-friendly fallback font for Chinese, Japanese, or Korean labels.
+%
+%   theme = SFTTHEME("FontMode", "cjk") is an equivalent compatibility
+%   spelling for users who already adopted the CJK font mode.
+%
+%   theme = SFTTHEME("FontName", "Journal Sans", ...
+%       "FontFallbacks", ["Arial", "Helvetica"]) uses the requested font
+%   when available and otherwise falls back to the first installed fallback.
 
 p = inputParser;
 p.FunctionName = 'sftTheme';
 addParameter(p, 'FontName', 'Arial', @(x) ischar(x) || isstring(x));
 addParameter(p, 'FontMode', 'latin', @(x) any(strcmpi(string(x), ["latin", "cjk"])));
+addParameter(p, 'TextScript', 'latin', @(x) any(strcmpi(string(x), ["latin", "cjk"])));
 addParameter(p, 'CjkFontCandidates', defaultCjkFontCandidates(), ...
     @(x) ischar(x) || isstring(x) || iscellstr(x));
+addParameter(p, 'FontFallbacks', string.empty(1, 0), @(x) ischar(x) || isstring(x) || iscellstr(x));
+addParameter(p, 'AvailableFonts', string.empty(1, 0), @(x) ischar(x) || isstring(x) || iscellstr(x));
 addParameter(p, 'FontSize', 10, @(x) isnumeric(x) && isscalar(x) && x > 0);
 addParameter(p, 'LineWidth', 1.4, @(x) isnumeric(x) && isscalar(x) && x > 0);
 addParameter(p, 'MarkerSize', 42, @(x) isnumeric(x) && isscalar(x) && x > 0);
@@ -25,12 +38,31 @@ addParameter(p, 'ApplyDefaults', false, @(x) islogical(x) && isscalar(x));
 parse(p, varargin{:});
 
 theme = p.Results;
+requestedFontName = char(theme.FontName);
 theme.FontMode = char(lower(string(theme.FontMode)));
-theme.CjkFontCandidates = normalizeFontCandidates(theme.CjkFontCandidates);
-theme.FontName = char(theme.FontName);
-if strcmp(theme.FontMode, 'cjk') && any(strcmp(p.UsingDefaults, 'FontName'))
-    theme.FontName = chooseAvailableFont(theme.CjkFontCandidates, theme.FontName);
+theme.TextScript = char(lower(string(theme.TextScript)));
+if strcmp(theme.FontMode, 'cjk') || strcmp(theme.TextScript, 'cjk')
+    theme.FontMode = 'cjk';
+    theme.TextScript = 'cjk';
+else
+    theme.FontMode = 'latin';
+    theme.TextScript = 'latin';
 end
+
+theme.CjkFontCandidates = normalizeFontCandidates(theme.CjkFontCandidates);
+if isempty(theme.FontFallbacks)
+    theme.FontFallbacks = defaultFontFallbacks(theme.TextScript, theme.CjkFontCandidates);
+else
+    theme.FontFallbacks = string(theme.FontFallbacks);
+end
+
+availableFonts = string(theme.AvailableFonts);
+theme = rmfield(theme, 'AvailableFonts');
+if strcmp(theme.TextScript, 'cjk') && ~wasParameterProvided(varargin, 'FontName')
+    requestedFontName = char(theme.FontFallbacks(1));
+end
+theme.RequestedFontName = requestedFontName;
+theme.FontName = char(resolveFontName(requestedFontName, theme.FontFallbacks, availableFonts));
 theme.FigureSize = double(theme.FigureSize(:).');
 theme.BackgroundColor = double(theme.BackgroundColor(:).');
 theme.AxisColor = double(theme.AxisColor(:).');
@@ -81,10 +113,11 @@ candidates = { ...
     'Noto Sans CJK KR', ...
     'Source Han Sans SC', ...
     'Source Han Sans', ...
-    'Microsoft YaHei', ...
     'PingFang SC', ...
-    'Hiragino Sans', ...
+    'Hiragino Sans GB', ...
+    'Microsoft YaHei', ...
     'SimHei', ...
+    'WenQuanYi Micro Hei', ...
     'Arial Unicode MS', ...
     'DejaVu Sans', ...
     'Arial'};
@@ -99,18 +132,48 @@ end
 candidates = candidates(:).';
 end
 
-function fontName = chooseAvailableFont(candidates, fallback)
-fontName = char(fallback);
-try
-    availableFonts = string(listfonts);
-catch
-    return
+function fallbacks = defaultFontFallbacks(textScript, cjkCandidates)
+switch textScript
+    case 'cjk'
+        fallbacks = string(cjkCandidates);
+    otherwise
+        fallbacks = ["Arial", "Helvetica", "DejaVu Sans"];
 end
-for index = 1:numel(candidates)
-    candidate = string(candidates{index});
-    if any(strcmpi(candidate, availableFonts))
-        fontName = char(candidate);
+end
+
+function tf = wasParameterProvided(args, name)
+tf = false;
+for k = 1:2:numel(args)
+    if ischar(args{k}) || isstring(args{k})
+        tf = strcmpi(string(args{k}), string(name));
+        if tf
+            return
+        end
+    end
+end
+end
+
+function fontName = resolveFontName(requestedFontName, fallbacks, availableFonts)
+if isempty(availableFonts)
+    availableFonts = installedFonts();
+end
+
+candidates = unique([string(requestedFontName), string(fallbacks)], 'stable');
+availableFonts = string(availableFonts);
+for k = 1:numel(candidates)
+    if any(strcmpi(candidates(k), availableFonts))
+        fontName = candidates(k);
         return
     end
+end
+
+fontName = string(requestedFontName);
+end
+
+function fonts = installedFonts()
+try
+    fonts = string(listfonts);
+catch
+    fonts = string.empty(1, 0);
 end
 end

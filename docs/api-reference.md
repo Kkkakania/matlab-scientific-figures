@@ -108,6 +108,25 @@ Use root defaults only when the side effect is intentional:
 clear cleanup  % restores the previous root defaults
 ```
 
+For mixed Chinese, Japanese, or Korean labels, ask the theme to choose an
+installed CJK-friendly fallback instead of hard-coding a machine-specific font:
+
+```matlab
+theme = sftTheme("TextScript", "cjk");
+xlabel("时间");
+ylabel("响应");
+sftApplyTheme(gca, theme);
+```
+
+If a journal or lab style guide asks for a font that may not exist on every
+machine, keep the requested name and provide a portable fallback list:
+
+```matlab
+theme = sftTheme( ...
+    "FontName", "Journal Sans", ...
+    "FontFallbacks", ["Arial", "Helvetica", "DejaVu Sans"]);
+```
+
 ## Reusable Plotting Functions
 
 | Function | Use When |
