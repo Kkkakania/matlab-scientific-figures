@@ -21,6 +21,24 @@ behind the upstream repositories and did not contain ahead commits to review or
 merge. Treat those forks as awareness signals, not as adoption metrics or
 pending contribution evidence.
 
+Live fork intake can be repeated with:
+
+```bash
+./scripts/check_fork_intake_status.sh
+```
+
+Latest visible-fork snapshot:
+
+| Repository | Visible forks checked | Ahead commits to review |
+|---|---:|---:|
+| `matlab-scientific-figures` | 4 | 0 |
+| `matlab-figure-ci` | 3 | 0 |
+| `matlab-plotting-skill` | 3 | 0 |
+
+The latest visible forks included `Fantastic-wil2`, `Fantastic-wil`,
+`Williamkakania`, and `Wppypepyyy` forks depending on repository. All checked
+default branches were behind upstream `main`.
+
 ## External Pull Requests
 
 | Project | Pull request | Status at snapshot | Scope |
