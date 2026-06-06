@@ -149,6 +149,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts
 ```
 
 更多说明见 [Quality gates](docs/quality-gates.md) 和 [Release checklist](docs/release-checklist.md)。
+维护者工作流见 [Maintainer workflow](docs/openai-codex-workflow.md)，其中集中说明 PR review、issue triage、release workflow、security/provenance review 和 code-quality gates。
 
 ## 来源和版权边界
 

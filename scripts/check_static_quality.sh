@@ -22,6 +22,7 @@ run_step "documentation links" ./scripts/check_docs_links.sh
 run_step "first-use feedback docs" ./scripts/check_first_use_docs.sh
 run_step "domain examples docs" ./scripts/check_domain_examples_doc.sh
 run_step "GitHub Project board docs" ./scripts/check_github_project_board_docs.sh
+run_step "maintainer workflow docs" ./scripts/check_maintainer_workflow.sh
 run_step "issue templates" ./scripts/check_issue_templates.sh
 run_step "README first steps" ./scripts/check_readme_first_steps.sh
 run_step "API reference coverage" ./scripts/check_api_reference.sh

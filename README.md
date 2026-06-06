@@ -266,10 +266,15 @@ New users usually need only a few pages:
 | [Domain examples](docs/domain-examples.md) | Try standalone synthetic engineering examples |
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
 | [Quality gates](docs/quality-gates.md) | Understand what local checks and CI actually verify |
+| [Maintainer workflow](docs/openai-codex-workflow.md) | See how PR review, issue triage, release workflow, security, and code quality are handled |
 
 The full grouped index lives in [docs/README.md](docs/README.md). Maintainer
 notes, release plans, migration notes, and historical reports are kept there so
 the README stays focused on using the library.
+
+For reviewers and OSS-program evaluators, [Maintainer workflow](docs/openai-codex-workflow.md)
+summarizes the public maintenance loop: PR review, issue triage, release
+workflow, security/provenance review, and code-quality gates.
 
 ## License And Provenance
 
