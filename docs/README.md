@@ -48,6 +48,7 @@ docs if you want to change the project.
 - [Maintainer activity](maintainer-activity.md)
 - [Ecosystem status](ecosystem-status.md)
 - [Provenance policy](provenance-policy.md)
+- [Local resource intake](local-resource-intake.md)
 - [Maintainer workflow](openai-codex-workflow.md)
 - [Roadmap](../ROADMAP.md)
 - [Version plan](version-plan.md)

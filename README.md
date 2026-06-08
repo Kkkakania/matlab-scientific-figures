@@ -266,6 +266,7 @@ New users usually need only a few pages:
 | [Domain examples](docs/domain-examples.md) | Try standalone synthetic engineering examples |
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
 | [Quality gates](docs/quality-gates.md) | Understand what local checks and CI actually verify |
+| [Local resource intake](docs/local-resource-intake.md) | Understand how private/local plotting resources are converted into clean-room requirements |
 | [Maintainer workflow](docs/openai-codex-workflow.md) | See how PR review, issue triage, release workflow, security, and code quality are handled |
 
 The full grouped index lives in [docs/README.md](docs/README.md). Maintainer

@@ -7,6 +7,9 @@ stories while keeping the public repository clean-room and synthetic.
 
 The electrical-engineering example pack is tracked in
 [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30).
+Local teaching folders and plotting collections can suggest chart tasks, but
+they are not copied into this repository. See
+[Local resource intake](local-resource-intake.md) for the clean-room boundary.
 The current implemented electrical examples are deliberately small:
 
 | Command | MATLAB function | Output | Purpose |
