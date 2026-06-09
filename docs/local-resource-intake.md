@@ -51,6 +51,27 @@ larger set of chart jobs that users may ask for:
 The public decision is deliberately narrow: chart names can enter the backlog;
 files, labels, screenshots, and code do not.
 
+## Private Prototype Library Snapshot
+
+A separate private prototype pass produced a larger original learning library:
+216 Python templates, 216 MATLAB templates, 27 palette families, and a small
+Origin scripting layer. That work is useful as a design sketch, but it is not
+automatically part of this public repository.
+
+The public intake from that prototype is limited to aggregate signals:
+
+| Prototype signal | Public follow-up |
+|---|---|
+| 23 chart categories | Keep the public backlog grouped by task, not by source folder |
+| Strong electrical, signal, control, RF, ML, CFD, and optimization coverage | Promote these areas only when they can be rewritten with small synthetic datasets |
+| Palette preview system | Improve public palette docs and color-accessibility checks before adding many styles |
+| Origin Python and LabTalk scripts | Document interoperability boundaries; do not add Origin workbooks or copied scripts |
+| 200+ generated gallery images | Treat as private visual QA only; public gallery images must be regenerated from public source |
+
+This snapshot does not prove adoption, originality, or readiness by itself. Each
+public template still needs a normal issue, new implementation, synthetic data,
+gallery output, tests, and provenance notes.
+
 ## Rejected Inputs
 
 Do not add any of these to the public repository:

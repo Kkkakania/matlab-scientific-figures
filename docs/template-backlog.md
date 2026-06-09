@@ -57,6 +57,22 @@ New work should improve real user workflows before adding more chart types.
 These items came from task-level review of local plotting resources and common
 MATLAB workflows. They are not ports of the local files.
 
+## Prototype-Derived Triage Notes
+
+A private prototype library now sketches more than 200 figure ideas across
+electrical, signal, control, RF, ML, CFD, optimization, distribution,
+multivariate, polar, and 3D families. The useful next step is not to import that
+library. The useful next step is to pick a few public, testable gaps:
+
+- electrical diagnostics that already match existing domain examples;
+- signal-processing plots with simple deterministic waveforms;
+- model-evaluation plots that use small synthetic classifiers;
+- palette documentation that can be checked without copying palette packs;
+- Origin interoperability notes that keep `.opju` and workbook files out of the
+  repository.
+
+Anything outside those lanes should wait for real user feedback.
+
 ## Workflow Work Before More Templates
 
 Completed workflow foundations:
