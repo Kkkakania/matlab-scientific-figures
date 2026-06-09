@@ -7,6 +7,8 @@ change, density, and paper layouts.
 The rule is simple: the public repo gets original MATLAB code, synthetic data,
 gallery output, tests, and documentation. Reference material can guide the
 choice of chart type, but source files are not copied into the repo.
+Use [Local resource intake](local-resource-intake.md) before turning a private
+resource collection into public backlog items.
 
 ## Current Coverage
 
@@ -111,6 +113,7 @@ Open a figure-template request issue with:
 - the input data shape
 - where the figure will be used
 - any constraints such as long labels or grayscale printing
+- the intake decision if the idea came from a local resource collection
 
 Then implement it as a normal example: data, renderer, gallery PNG/SVG, docs,
 and tests.
