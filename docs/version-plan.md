@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v3.7.1` is the current release.
+- `v3.8.0` is the current release.
 - The gallery has 30 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 - Future tags should follow `docs/release-cadence.md`; small maintenance
@@ -243,3 +243,26 @@ Release conditions:
 - MATLAB core tests pass locally.
 - Static quality, bilingual README, version metadata, provenance, privacy, and
   figure-quality checks pass.
+
+## v3.8.0 Released
+
+Goal: make the project easier to audit and extend from local plotting-resource
+ideas without weakening the clean-room boundary.
+
+Delivered changes:
+
+- A clean-room harmonic-spectrum domain example and CLI smoke coverage.
+- Local resource intake policy and static checks for requirements-only use of
+  local plotting archives.
+- First-use feedback draft tooling for cleaner public reports.
+- Synthetic-data seed metadata in `sftExampleData`, `sftExampleDataSeed`, and
+  `docs/template-manifest.json`.
+- JSON envelope compatibility documentation for the three-repository MATLAB
+  figure ecosystem.
+
+Release conditions:
+
+- Static quality checks pass.
+- MATLAB core tests pass locally.
+- Template manifest consistency and CLI command checks pass.
+- GitHub Actions pass on `main` and the release tag.

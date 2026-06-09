@@ -5,13 +5,14 @@ It should agree with README, CHANGELOG, and GitHub releases.
 
 ## Current State
 
-- Current public release: `v3.7.1`.
+- Current public release: `v3.8.0`.
 - Maturity: early public project; the gallery is usable, but adoption claims
   should stay conservative until real external use appears.
 - Gallery size on `main`: 30 clean-room templates. The current public release
-  `v3.7.1` keeps that gallery stable while adding bilingual onboarding,
-  CSV/Excel data-to-figure workflow, extended standalone examples, and
-  portable mixed-script font fallback.
+  `v3.8.0` keeps that gallery stable while adding bilingual onboarding,
+  CSV/Excel data-to-figure workflow, extended standalone examples, portable
+  mixed-script font fallback, domain-example intake guidance, and synthetic
+  data provenance metadata.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
   citation metadata, privacy/provenance scans, static contributor preflight,
   first-use smoke test, and figure-quality CI.
@@ -144,9 +145,21 @@ Delivered:
 - `TextScript="cjk"` theme mode for Chinese, Japanese, and Korean labels.
 - Regression tests and documentation for mixed-script font handling.
 
-## Post-v3.7.1 Hardening On Main
+### v3.8.0: Provenance And Intake Hardening
 
-No post-`v3.7.1` hardening is listed yet. Accumulate small fixes on `main`
+Delivered:
+
+- Clean-room `harmonic_spectrum` standalone domain example and CLI coverage.
+- Local resource intake policy and checks for keeping local plotting archives
+  as requirements-only inputs unless provenance is clear.
+- First-use feedback draft tooling for lower-friction public reports.
+- Synthetic-data seed metadata in `sftExampleData`, `sftExampleDataSeed`, and
+  the template manifest.
+- JSON envelope compatibility notes for the MATLAB figure ecosystem.
+
+## Post-v3.8.0 Hardening On Main
+
+No post-`v3.8.0` hardening is listed yet. Accumulate small fixes on `main`
 until there is a user-visible reason for another tag.
 
 ## Next Candidates

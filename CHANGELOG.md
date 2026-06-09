@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v3.8.0 - 2026-06-10
+
+- Added the clean-room `harmonic_spectrum` domain example and CLI coverage.
+- Added first-use feedback draft tooling and stronger first-use documentation.
+- Added local resource intake policy, checks, and backlog links so local
+  plotting resources stay requirements-only unless they pass provenance review.
 - Expose synthetic-data seed metadata through `sftExampleDataSeed`,
   `sftExampleData(...).Metadata`, and `docs/template-manifest.json`.
 - Add template-manifest schema checks for synthetic data kind, seed, and RNG

@@ -6,7 +6,7 @@ scope, and where feedback should go.
 
 ## Current Public State
 
-- Current released line: `v3.7.1`.
+- Current released line: `v3.8.0`.
 - Main branch gallery: 30 clean-room examples with committed PNG and SVG
   outputs.
 - Companion CI tool: `matlab-figure-ci` is dogfooded at `v2.4.5`.
@@ -87,7 +87,7 @@ notes agree. It should not look maintained because tags are produced quickly.
    palette, export, and manifest system.
 3. Use the static preflight bundle for documentation and metadata pull
    requests.
-4. Keep post-`v3.7.1` changes on `main` until another coherent user-visible
+4. Keep post-`v3.8.0` changes on `main` until another coherent user-visible
    release is ready.
 5. Keep `matlab-figure-ci` dogfooding aligned with the latest released tag.
 6. Prepare the next release only when examples, docs, gallery outputs, and

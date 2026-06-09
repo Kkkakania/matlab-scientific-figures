@@ -8,8 +8,8 @@ authors:
 repository-code: "https://github.com/Kkkakania/matlab-scientific-figures"
 url: "https://github.com/Kkkakania/matlab-scientific-figures"
 license: "MIT"
-version: "3.7.1"
-date-released: "2026-06-04"
+version: "3.8.0"
+date-released: "2026-06-10"
 abstract: "A clean-room MATLAB toolkit for reproducible publication-style scientific figures, gallery rendering, and figure-quality checks."
 keywords:
   - MATLAB
