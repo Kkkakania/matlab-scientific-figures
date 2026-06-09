@@ -34,6 +34,23 @@ The intake pass produced these safe signals for future work:
 - Any paper-inspired layout should be described at the chart-family level, not
   copied from a specific journal figure.
 
+## Latest Intake Notes
+
+The newer local snapshot adds breadth, not publishable material. It points to a
+larger set of chart jobs that users may ask for:
+
+| Signal | Public route |
+|---|---|
+| MATLAB x AI plotting notes | Improve data-inspection, recommendation, and report examples with new synthetic fixtures |
+| MATLAB and Origin plotting books | Extract chart-family names only; do not reuse source files, screenshots, or workbook layouts |
+| Signal-processing folders | Prioritize FFT, PSD, spectrogram, filter-response, group-delay, and envelope examples |
+| Electrical-engineering examples | Keep small synthetic demos for power, impedance, harmonics, motor, and converter plots |
+| 3D/scientific visualization material | Add only when a 3D view answers a real communication task better than a 2D view |
+| Modeling and machine-learning examples | Treat ROC, lift, calibration, residual, SHAP-like, and learning-curve plots as backlog candidates |
+
+The public decision is deliberately narrow: chart names can enter the backlog;
+files, labels, screenshots, and code do not.
+
 ## Rejected Inputs
 
 Do not add any of these to the public repository:

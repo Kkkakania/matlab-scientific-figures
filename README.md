@@ -7,11 +7,13 @@
 [![Release](https://img.shields.io/github/v/release/Kkkakania/matlab-scientific-figures)](https://github.com/Kkkakania/matlab-scientific-figures/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A clean-room MATLAB scientific-figure library.
+This is my clean-room MATLAB figure library: reusable plotting functions,
+synthetic examples, and a small set of checks that make the outputs easier to
+trust.
 
-Use the reusable `sftPlot*.m` APIs with your own data, or regenerate the
-synthetic gallery examples as reference outputs. No private source packs, no
-journal screenshots, no hidden helper archive.
+The repo is intentionally boring about provenance. Bring your own data, render
+the examples, or adapt the `sftPlot*.m` APIs, but do not treat this as a dump
+for private template folders, journal screenshots, or old helper archives.
 
 ## Project Ecosystem
 

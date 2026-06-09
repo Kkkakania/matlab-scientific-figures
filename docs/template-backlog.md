@@ -46,8 +46,16 @@ New work should improve real user workflows before adding more chart types.
 
 | Priority | Template | Why it is useful |
 |---|---|---|
+| High | Signal-processing pack | FFT, Welch PSD, spectrogram, group delay, and envelope plots are common in MATLAB-heavy work and map cleanly to synthetic examples |
+| High | Electrical diagnostics pack | Impedance locus, harmonic spectrum, voltage sag, THD bars, and three-phase waveform examples fit the project's current domain examples |
+| Medium | Model-evaluation pack | ROC, precision-recall, calibration, residual, learning-curve, and confusion-matrix plots help users move beyond generic line charts |
+| Medium | Distribution comparison pack | Raincloud, split violin, swarm, ECDF, and notched box plots cover a lot of experiment-summary work |
+| Medium | Polar and direction pack | Wind rose, antenna pattern, polar heatmap, and compass plots are useful but need careful labeling and export checks |
 | Later | 3D density scatter | Attractive, but only worth adding if users need depth |
 | Later | Texture-filled bars | Useful for grayscale printing, but easy to overdo |
+
+These items came from task-level review of local plotting resources and common
+MATLAB workflows. They are not ports of the local files.
 
 ## Workflow Work Before More Templates
 
