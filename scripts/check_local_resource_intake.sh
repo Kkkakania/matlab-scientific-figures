@@ -17,4 +17,8 @@ grep -q "more than 200 figure ideas" "$BACKLOG"
 grep -q "not to import that" "$BACKLOG"
 grep -q "Origin interoperability notes" "$BACKLOG"
 
+grep -q "Local resource intake" "$ROOT_DIR/docs/quality-gates.md"
+grep -q "check_local_resource_intake.sh" "$ROOT_DIR/docs/quality-gates.md"
+grep -q "clean-room promotion rules" "$ROOT_DIR/docs/quality-gates.md"
+
 echo "Local resource intake checks passed."

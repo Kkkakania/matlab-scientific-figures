@@ -54,6 +54,7 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | Forbidden files | `./scripts/check_forbidden_files.sh` | `.p`, `.fig`, `.mat`, Office files, PDFs, archives, raw/OCR/tmp folders |
 | Privacy scan | `./scripts/check_privacy.sh` | Emails, local paths, personal identifiers, and platform traces |
 | Provenance scan | `./scripts/check_provenance.sh` | Third-party author, license, platform, or source-pack traces |
+| Local resource intake | `./scripts/check_local_resource_intake.sh` | Drift in private-prototype boundaries, backlog intake language, and clean-room promotion rules |
 | Generated asset placement | `mfigci scan` | Rendered images or PDFs that accidentally appear beside source/template files |
 | CLI discovery | `./scripts/check_cli_commands.sh` | Broken `render_all.sh list`, `tags`, `search`, `tag`, or `match` commands |
 | First-use smoke test | `./scripts/check_first_use.sh` | Broken list/info/selected-render workflow from a fresh clone |
