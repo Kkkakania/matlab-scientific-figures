@@ -16,6 +16,9 @@ be consumed from any language.
 | `RendererName` | string | MATLAB renderer function in `examples/` |
 | `Task` | string | Short user-facing chart task |
 | `Tags` | string array | Exact tags accepted by `sftFindTemplatesByTag` and `render_all.sh tag` |
+| `SyntheticDataKind` | string | `sftExampleData` input used by the renderer, or a `+`-joined list for composite examples |
+| `SyntheticDataSeed` | integer | Deterministic MATLAB RNG seed used for synthetic example data |
+| `SyntheticDataRng` | string | MATLAB RNG algorithm used with `rng`; currently `twister` |
 | `ExampleFile` | string | Renderer source path |
 | `PngFile` | string | Committed PNG gallery output |
 | `SvgFile` | string | Committed SVG gallery output |
@@ -26,6 +29,9 @@ be consumed from any language.
 - `RendererName` starts with `render` and points to `examples/<RendererName>.m`.
 - `PngFile` and `SvgFile` point to committed, non-empty gallery outputs.
 - `Tags` are lower-case identifiers and each template has at least one tag.
+- `SyntheticDataSeed` and `SyntheticDataRng` must match
+  `sftExampleDataSeed()`, so downstream tools can explain how gallery data is
+  reproduced.
 - Template and output names are unique.
 
 Run the schema check:

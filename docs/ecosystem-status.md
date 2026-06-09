@@ -32,6 +32,9 @@ source packs, or full local paths in feedback.
   do not include MATLAB.
 - The skill repository provides a separate first-render path for users who want
   an agent to choose a chart from their own data.
+- JSON payloads are documented producer by producer. See
+  [JSON envelope compatibility](json-envelope-compatibility.md) before changing
+  manifest, report, doctor, or preflight payload shapes across repositories.
 - Release tags should slow down after the initial public hardening pass; small
   documentation and issue-intake improvements can land on `main` without
   creating a new tag.

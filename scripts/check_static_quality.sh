@@ -36,6 +36,7 @@ run_step "MATLAB help text" ./scripts/check_matlab_help.sh
 run_step "README gallery preview" ./scripts/check_readme_gallery.sh
 run_step "toolbox independence" ./scripts/check_toolbox_independence.sh
 run_step "compatibility docs" ./scripts/check_compatibility_docs.sh
+run_step "JSON contract docs" ./scripts/check_json_contract_docs.sh
 run_step "color accessibility audit" ./scripts/check_color_accessibility_audit.sh
 run_step "CLI script static checks" ./scripts/check_cli_script_static.sh
 run_step "render_all argument checks" ./scripts/check_render_all_args.sh

@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- Expose synthetic-data seed metadata through `sftExampleDataSeed`,
+  `sftExampleData(...).Metadata`, and `docs/template-manifest.json`.
+- Add template-manifest schema checks for synthetic data kind, seed, and RNG
+  fields.
+- Add JSON envelope compatibility documentation for the MATLAB figure
+  ecosystem without changing existing payload shapes.
+
 ## v3.7.1 - 2026-06-04
 
 - Added portable font fallback support to `sftTheme`, including a

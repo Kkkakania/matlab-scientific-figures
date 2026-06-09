@@ -17,6 +17,9 @@ const requiredFields = [
   'RendererName',
   'Task',
   'Tags',
+  'SyntheticDataKind',
+  'SyntheticDataSeed',
+  'SyntheticDataRng',
   'ExampleFile',
   'PngFile',
   'SvgFile',
@@ -60,6 +63,19 @@ if (!Array.isArray(manifest)) {
     if (!Array.isArray(item.Tags) || item.Tags.length === 0 ||
         item.Tags.some((tag) => typeof tag !== 'string' || !/^[a-z0-9_-]+$/.test(tag))) {
       errors.push(`Entry ${index} has invalid Tags.`);
+    }
+
+    if (typeof item.SyntheticDataKind !== 'string' ||
+        !/^[a-z0-9_+]+$/.test(item.SyntheticDataKind)) {
+      errors.push(`Entry ${index} has invalid SyntheticDataKind: ${item.SyntheticDataKind}`);
+    }
+
+    if (!Number.isInteger(item.SyntheticDataSeed) || item.SyntheticDataSeed <= 0) {
+      errors.push(`Entry ${index} has invalid SyntheticDataSeed: ${item.SyntheticDataSeed}`);
+    }
+
+    if (item.SyntheticDataRng !== 'twister') {
+      errors.push(`Entry ${index} has invalid SyntheticDataRng: ${item.SyntheticDataRng}`);
     }
 
     const expectedExample = `examples/${item.RendererName}.m`;

@@ -47,6 +47,7 @@ sftRenderExamples(["heatmap", "radar_chart"], "gallery", ["png", "svg"]);
 | `sftInspectDataFile(filePath)` | Inspect a CSV, XLS, or XLSX table before choosing a chart. |
 | `sftRecommendFigure(profile)` | Get transparent first-pass recommendations from an inspected table profile. |
 | `sftRenderDataFile(filePath, outputDir, formats)` | Render a first-pass figure and write Markdown/JSON reports from a data file. |
+| `sftExampleDataSeed(kind)` | Inspect the deterministic seed metadata used by synthetic gallery data. |
 
 Example:
 
@@ -56,6 +57,17 @@ recommendations = sftRecommendFigure(profile);
 result = sftRenderDataFile("examples/data/experiment_signal.csv", ...
     "outputs/data-to-figure", ["png", "svg"]);
 disp(result.SelectedTemplate)
+```
+
+Gallery examples use synthetic data. To make that reproducibility auditable,
+`sftExampleData(kind)` adds a `Metadata` field and the template manifest exposes
+`SyntheticDataKind`, `SyntheticDataSeed`, and `SyntheticDataRng`:
+
+```matlab
+data = sftExampleData("line");
+disp(data.Metadata.Seed)
+seed = sftExampleDataSeed("line");
+disp(seed.RngAlgorithm)
 ```
 
 ## Styling And Export

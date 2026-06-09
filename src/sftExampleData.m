@@ -6,7 +6,8 @@ if nargin < 1 || isempty(kind)
 end
 
 kind = lower(string(kind));
-rng(20260530, 'twister');
+seed = sftExampleDataSeed(kind);
+rng(seed.Seed, seed.RngAlgorithm);
 
 switch kind
     case "line"
@@ -401,6 +402,7 @@ switch kind
     otherwise
         error('sftExampleData:UnknownKind', 'Unknown example data kind "%s".', kind);
 end
+data.Metadata = seed;
 end
 
 function distance = localCircularDistance(angleDegrees, centerDegrees)

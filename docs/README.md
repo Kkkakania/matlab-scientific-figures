@@ -48,6 +48,7 @@ docs if you want to change the project.
 - [GitHub Project board plan, Chinese](github-project-board.zh-CN.md)
 - [Maintainer activity](maintainer-activity.md)
 - [Ecosystem status](ecosystem-status.md)
+- [JSON envelope compatibility](json-envelope-compatibility.md)
 - [Provenance policy](provenance-policy.md)
 - [Maintainer workflow](openai-codex-workflow.md)
 - [Roadmap](../ROADMAP.md)

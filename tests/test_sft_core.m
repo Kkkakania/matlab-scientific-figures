@@ -174,6 +174,19 @@ verifyEqual(testCase, a.x, b.x);
 verifyEqual(testCase, a.y, b.y);
 end
 
+function testExampleDataExposesSeedMetadata(testCase)
+data = sftExampleData('line');
+seed = sftExampleDataSeed('line');
+
+verifyTrue(testCase, isfield(data, 'Metadata'));
+verifyEqual(testCase, data.Metadata.Kind, "line");
+verifyEqual(testCase, data.Metadata.Seed, int64(20260530));
+verifyEqual(testCase, data.Metadata.RngAlgorithm, "twister");
+verifyEqual(testCase, seed.Kind, "line");
+verifyEqual(testCase, seed.Seed, data.Metadata.Seed);
+verifyEqual(testCase, seed.RngAlgorithm, data.Metadata.RngAlgorithm);
+end
+
 function testCorrelationBubbleDataIsSymmetric(testCase)
 data = sftExampleData('correlation_bubble');
 
@@ -1431,6 +1444,9 @@ verifyTrue(testCase, isfield(manifest, 'RendererName'));
 verifyTrue(testCase, isfield(manifest, 'ExampleFile'));
 verifyTrue(testCase, isfield(manifest, 'PngFile'));
 verifyTrue(testCase, isfield(manifest, 'SvgFile'));
+verifyTrue(testCase, isfield(manifest, 'SyntheticDataKind'));
+verifyTrue(testCase, isfield(manifest, 'SyntheticDataSeed'));
+verifyTrue(testCase, isfield(manifest, 'SyntheticDataRng'));
 
 names = string({manifest.Name});
 linePlot = manifest(names == "line_plot");
@@ -1439,6 +1455,9 @@ verifyEqual(testCase, string(linePlot.RendererName), "renderLinePlot");
 verifyEqual(testCase, string(linePlot.ExampleFile), "examples/renderLinePlot.m");
 verifyEqual(testCase, string(linePlot.PngFile), "gallery/line_plot.png");
 verifyEqual(testCase, string(linePlot.SvgFile), "gallery/line_plot.svg");
+verifyEqual(testCase, string(linePlot.SyntheticDataKind), "line");
+verifyEqual(testCase, linePlot.SyntheticDataSeed, int64(20260530));
+verifyEqual(testCase, string(linePlot.SyntheticDataRng), "twister");
 verifyTrue(testCase, any(string(linePlot.Tags) == "trend"));
 end
 

@@ -238,7 +238,9 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/validate_gallery
   with portable font fallbacks, opt-in CJK handling, and scoped root-default
   cleanup support.
 - `sftPalette` provides categorical, sequential, and diverging palettes.
-- `sftExampleData` generates deterministic synthetic data for the gallery.
+- `sftExampleData` generates deterministic synthetic data for the gallery, and
+  `sftExampleDataSeed` exposes the seed metadata used by examples and the
+  template manifest.
 - `sftExport` writes PNG, PDF, and SVG outputs from one call.
 - `sftTiledFigure` creates a clean tiled layout without hand-tuning positions.
 - `sftValidateFigure` catches a few common figure problems before export.
