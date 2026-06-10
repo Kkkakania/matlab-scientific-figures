@@ -191,6 +191,13 @@ that changed. If the change touches the ecosystem handoff, include
 `mfigci-report.md` or `render_report.md` only as redacted summaries or CI
 artifacts, not as copied raw output.
 
+When the `matlab-figure-ci` working results are available, generate a compact
+draft instead of writing the packet by hand:
+
+```bash
+mfigci report --style evidence --output mfigci-evidence.md
+```
+
 For an application packet, keep the same evidence but remove maintainer-only
 noise. Link the public repository, current release, green workflow run URL,
 dogfooding workflow, clean-room policy, and one redacted issue or PR link that
