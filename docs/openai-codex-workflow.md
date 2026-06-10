@@ -198,6 +198,10 @@ draft instead of writing the packet by hand:
 mfigci report --style evidence --output mfigci-evidence.md
 ```
 
+This report style is available on matlab-figure-ci main after v2.5.0. Do not
+assume it is present in this repository's pinned `v2.5.0` figure-quality
+workflow until a later `matlab-figure-ci` release is intentionally adopted.
+
 For an application packet, keep the same evidence but remove maintainer-only
 noise. Link the public repository, current release, green workflow run URL,
 dogfooding workflow, clean-room policy, and one redacted issue or PR link that
