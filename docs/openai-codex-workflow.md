@@ -201,6 +201,8 @@ mfigci report --style evidence --output mfigci-evidence.md
 This report style is available on matlab-figure-ci main after v2.5.0. Do not
 assume it is present in this repository's pinned `v2.5.0` figure-quality
 workflow until a later `matlab-figure-ci` release is intentionally adopted.
+Do not commit mfigci-evidence.md by default; keep the filled packet as a local
+note or CI artifact unless it is deliberately reviewed for public release.
 
 For an application packet, keep the same evidence but remove maintainer-only
 noise. Link the public repository, current release, green workflow run URL,
