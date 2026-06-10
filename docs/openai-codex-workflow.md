@@ -164,3 +164,24 @@ Do not present internal dogfooding as broad adoption. Do not invent stars,
 downloads, user counts, or guaranteed program eligibility. If the project is
 still early, say it is early and explain the maintenance system that already
 exists.
+
+## Evidence Packet
+
+A maintainer can prepare a small evidence packet without turning it into a
+marketing page:
+
+1. Link the current release tag and the green `Quality checks` and
+   `Figure quality` workflow runs for the same commit.
+2. Include the static command that was run locally, such as
+   `./scripts/check_static_quality.sh`, and note whether MATLAB-backed checks
+   were run separately.
+3. Link the template manifest, gallery preview, `mfigci.yml`, and
+   `docs/local-resource-intake.md` so reviewers can see the clean-room boundary.
+4. Link active issue-triage surfaces such as first-use feedback, the electrical
+   example proposal, and the GitHub Project-board task.
+5. Keep application text factual: "dogfooded by companion repositories" is
+   acceptable when linked; "widely adopted" is not unless public usage evidence
+   exists.
+
+Do not include private local folder paths, private screenshots, raw research
+data, unreviewed prototype images, or claims about benefit-program approval.
