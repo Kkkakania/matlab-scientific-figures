@@ -70,7 +70,7 @@ as claims that every MATLAB renderer was executed on GitHub-hosted runners.
 | `Quality checks` | `.github/workflows/quality.yml` | No | The committed repository passes static shell checks for gallery-file presence, metadata consistency, documentation links, manifest/schema drift, version/citation metadata, compatibility notes, color-audit coverage, forbidden files, privacy traces, and provenance traces. |
 | `Figure quality` | `.github/workflows/figure-quality.yml` | No | `matlab-figure-ci` can scan the committed repository and verify the configured committed gallery outputs without policy errors. |
 
-`figure-quality.yml` installs `matlab-figure-ci` v2.4.5 from its GitHub release
+`figure-quality.yml` installs `matlab-figure-ci` v2.5.0 from its GitHub release
 tag. Keep that pinned tag aligned with README and the maintainer dashboard when
 the companion checker intentionally moves to a newer public release.
 

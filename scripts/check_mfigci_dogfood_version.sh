@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-EXPECTED_TAG="v2.4.5"
+EXPECTED_TAG="v2.5.0"
 
 require_text() {
   local file="$1"

@@ -19,7 +19,7 @@ Flat payloads are easiest for current scripts:
 ```json
 {
   "schema_version": "1.0",
-  "tool_version": "2.4.5",
+  "tool_version": "2.5.0",
   "summary": {
     "passed": true
   }
