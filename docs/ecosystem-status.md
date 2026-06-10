@@ -46,6 +46,8 @@ source packs, or full local paths in feedback.
 - The main gallery keeps 30 committed clean-room PNG/SVG examples.
 - The main gallery dogfoods `matlab-figure-ci` in GitHub Actions for static
   figure-repository checks.
+- `matlab-plotting-skill now runs mfigci check` in its public quality workflow
+  before a render result becomes first-use feedback or a future gallery request.
 - MATLAB rendering is still a local gate because public hosted runners normally
   do not include MATLAB.
 - The skill repository provides a separate first-render path for users who want
