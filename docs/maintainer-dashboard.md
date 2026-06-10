@@ -24,6 +24,10 @@ scope, and where feedback should go.
   [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31).
 - Temporary cross-repository triage while the live board is pending:
   `./scripts/check_ecosystem_triage_status.sh`.
+- When the live board exists, use `Awaiting feedback` for first-use reports,
+  domain-pack proposals, and outside-dependent MATLAB compatibility questions.
+  Those items should get a maintainer ping or a written waiting reason before
+  they sit stale for more than 14 days.
 - Public maintenance activity snapshot:
   [Maintainer activity](maintainer-activity.md).
 

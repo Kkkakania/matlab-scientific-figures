@@ -102,15 +102,34 @@ Use a small number of fields so the board stays maintainable.
 
 | Field | Type | Suggested values |
 |---|---|---|
-| Status | Single select | Backlog, Ready, In progress, Needs review, Blocked, Done |
+| Status | Single select | Inbox, Triaged, Accepted, In progress, Awaiting feedback, Done |
 | Repository | Single select | scientific-figures, figure-ci, plotting-skill |
-| Track | Single select | Gallery/API, Quality gate, Agent workflow, Documentation, Release, Feedback |
+| Track | Single select | gallery, agent, ci, ecosystem-docs |
 | Priority | Single select | P0, P1, P2, Later |
-| Evidence level | Single select | Official/source-backed, Dogfooded, Needs user feedback, Proposal |
-| Release target | Text | v3.x, v2.x, v0.x, no release planned |
+| Evidence level | Single select | none, single-report, reproducible, ci-covered |
+| Release target | Text | v3.x, v2.x, v0.x, PyPI candidate; leave blank when no release is planned |
 
 Avoid fine-grained numeric scoring. The repositories already use qualitative
 release and maintenance gates; the board should match that style.
+
+The `Awaiting feedback` status is important for this ecosystem. First-use
+reports, domain-pack proposals, and external tool feedback can be real work even
+when no maintainer is actively editing code. Marking those items explicitly
+keeps them from looking abandoned while still making the outside dependency
+visible.
+
+Use the evidence ladder conservatively:
+
+- `none`: an idea or hunch with no checked reproduction yet.
+- `single-report`: one external report or one maintainer observation.
+- `reproducible`: a specific commit and command sequence that another person
+  can rerun.
+- `ci-covered`: the behavior is guarded by a current CI or static check.
+
+The track names are intentionally short. They map to maintainer context switches
+rather than marketing categories: `gallery` for MATLAB templates and rendering,
+`agent` for the data-to-figure skill, `ci` for `matlab-figure-ci`, and
+`ecosystem-docs` for cross-repository documentation and coordination.
 
 ## Views
 
@@ -121,10 +140,13 @@ Purpose: show the main work that moves the ecosystem forward.
 Filter:
 
 ```text
-Status is not Done
+is:open
+field:Status != Done
+field:"Evidence level" != none
+field:"Release target" not empty
 ```
 
-Group by `Track`. Sort by `Priority`.
+Group by `Track`. Sort by `Priority` descending, then by `Repository`.
 
 ### Triage
 
@@ -133,7 +155,7 @@ Purpose: review new issues and external feedback.
 Filter:
 
 ```text
-Status is Backlog
+Status is Inbox
 ```
 
 Group by `Repository`. Sort by creation date.
@@ -145,7 +167,7 @@ Purpose: collect items that must be checked before a tag.
 Filter:
 
 ```text
-Track is Release
+field:"Release target" not empty
 ```
 
 Group by `Release target`.
@@ -157,10 +179,12 @@ Purpose: keep first-use testing and adoption reports visible.
 Filter:
 
 ```text
-Track is Feedback
+Status is "Awaiting feedback"
 ```
 
-Group by `Evidence level`.
+Sort by oldest update first. A reasonable maintenance target is to avoid leaving
+anything in this view for more than 14 days without a maintainer ping or a
+documented reason for waiting.
 
 ### Cross-Repo Dependencies
 
@@ -189,7 +213,8 @@ If using the GitHub web UI:
 6. Create the five saved views in the `Views` section.
 7. Add the current seed issues from the table below.
 8. For each item, set `Repository`, `Track`, `Priority`, `Evidence level`, and
-   `Release target`.
+   `Release target`. Leave `Release target` blank when the item is not tied to a
+   planned tag or publish decision.
 9. Link the live project URL back to
    [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31).
 
@@ -200,10 +225,10 @@ maintenance questions rather than synthetic tasks.
 
 | Item | Repository | Track | Suggested priority | Evidence level |
 |---|---|---|---|---|
-| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | Feedback | P1 | Needs user feedback |
-| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | Gallery/API | P2 | Proposal |
-| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | Release | P1 | Official/source-backed |
-| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | Feedback | P1 | Needs user feedback |
+| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | P1 | single-report |
+| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | P2 | ci-covered |
+| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | P1 | ci-covered |
+| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | P1 | single-report |
 
 When adding more items, prefer open issues or pull requests. Do not add private
 tasks, unreviewed source packs, copied examples, or benefit-program application
@@ -216,21 +241,21 @@ issues after the recent maintenance pass and avoids already-completed work.
 
 | Item | Repository | Track | Suggested status | Suggested priority | Evidence level | Release target | Next action |
 |---|---|---|---|---|---|---|---|
-| [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | scientific-figures | Documentation | In progress | P1 | Dogfooded | no release planned | Create or verify the live GitHub Project board. |
-| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | Gallery/API | Needs review | P2 | Dogfooded | no release planned | Wait for feedback on the PV and harmonic-spectrum examples before expanding the pack. |
-| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | Feedback | Ready | P1 | Needs user feedback | no release planned | Collect a fresh-clone first-use report. |
-| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | Release | Backlog | P1 | Official/source-backed | v2.x | Prepare PyPI only after package-name and install checks are current. |
-| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | Feedback | Ready | P1 | Needs user feedback | no release planned | Collect first-use MATLAB rendering feedback. |
+| [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | scientific-figures | ecosystem-docs | In progress | P1 | reproducible | (blank) | Create or verify the live GitHub Project board. |
+| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | Awaiting feedback | P2 | ci-covered | (blank) | Wait for feedback on the PV and harmonic-spectrum examples before expanding the pack. |
+| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | (blank) | Collect a fresh-clone first-use report. |
+| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | Prepare PyPI only after package-name and install checks are current. |
+| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | (blank) | Collect first-use MATLAB rendering feedback. |
 
 ## Maintenance Rhythm
 
 Use the board as a weekly maintenance surface:
 
-1. Triage new issues into a track and priority.
-2. Move only items with a concrete next action into `Ready`.
+1. Triage new issues into a track, priority, and evidence level.
+2. Move only items with a concrete maintainer decision into `Accepted`.
 3. Keep at most a few items in `In progress`.
-4. Move release-related items to `Needs review` only after local checks and CI
-   pass.
+4. Move outside-dependent items into `Awaiting feedback` and ping or document
+   the waiting reason before they become stale.
 5. Archive completed items after the related issue, pull request, or release
    note is linked.
 

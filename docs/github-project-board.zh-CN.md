@@ -69,32 +69,52 @@ gh project list --owner Kkkakania --limit 20
 
 | 字段 | 类型 | 建议值 |
 |---|---|---|
-| Status | Single select | Backlog, Ready, In progress, Needs review, Blocked, Done |
+| Status | Single select | Inbox, Triaged, Accepted, In progress, Awaiting feedback, Done |
 | Repository | Single select | scientific-figures, figure-ci, plotting-skill |
-| Track | Single select | Gallery/API, Quality gate, Agent workflow, Documentation, Release, Feedback |
+| Track | Single select | gallery, agent, ci, ecosystem-docs |
 | Priority | Single select | P0, P1, P2, Later |
-| Evidence level | Single select | Official/source-backed, Dogfooded, Needs user feedback, Proposal |
-| Release target | Text | v3.x, v2.x, v0.x, no release planned |
+| Evidence level | Single select | none, single-report, reproducible, ci-covered |
+| Release target | Text | v3.x, v2.x, v0.x, PyPI candidate；没有计划发布时留空 |
 
 不要使用细到小数点的评分。这个生态现在更需要可验证的状态、下一步动作和证据等级。
+
+这里最值得保留的是 `Awaiting feedback`。很多事项不是维护者忘了做，而是正在等外部反馈，比如首次使用报告、领域样例包反馈、Windows/MATLAB 版本差异反馈。把状态写成 `Awaiting feedback`，别人一眼就知道这不是普通 backlog，也不是已经接受但还没开工的任务。
+
+证据等级按保守原则使用：
+
+- `none`：只是想法或线索，还没有可复现依据。
+- `single-report`：有一次外部反馈，或一次维护者观察。
+- `reproducible`：有明确 commit 和命令，别人可以照着复跑。
+- `ci-covered`：已经被当前 CI 或静态检查守住。
+
+`Track` 不按“宣传分类”来分，而是按维护时的上下文切换成本来分：`gallery` 对应 MATLAB 模板、渲染和导出；`agent` 对应 `matlab-plotting-skill` 的数据到图表选择；`ci` 对应 `matlab-figure-ci`；`ecosystem-docs` 对应跨仓库文档、看板和维护协调。
 
 ## 建议视图
 
 ### Roadmap
 
-用于看仍在推进的事项。筛选条件是 `Status is not Done`，按 `Track` 分组，再按 `Priority` 排序。
+用于看真正值得投入维护时间的事项。建议保存的筛选条件：
+
+```text
+is:open
+field:Status != Done
+field:"Evidence level" != none
+field:"Release target" not empty
+```
+
+按 `Track` 分组，再按 `Priority` 降序、`Repository` 排序。
 
 ### Triage
 
-用于处理新 issue、外部建议和 fork 线索。筛选条件是 `Status is Backlog`，按 `Repository` 分组，按创建时间排序。
+用于处理新 issue、外部建议和 fork 线索。筛选条件是 `Status is Inbox`，按 `Repository` 分组，按创建时间排序。
 
 ### Release Readiness
 
-用于收拢发布前检查。筛选条件是 `Track is Release`，按 `Release target` 分组。
+用于收拢发布前检查。筛选条件是 `field:"Release target" not empty`，按 `Release target` 分组。
 
 ### Feedback Loops
 
-用于放首次使用反馈、dogfooding 状态和 adoption report。筛选条件是 `Track is Feedback`，按 `Evidence level` 分组。
+用于放首次使用反馈、dogfooding 状态和等待外部确认的事项。筛选条件是 `Status is "Awaiting feedback"`，按更新时间从旧到新排序。一个合理的维护目标是：这个视图里不要有超过 14 天完全没有维护者 ping 或等待说明的条目。
 
 ### Cross-Repo Dependencies
 
@@ -117,7 +137,7 @@ gh project list --owner Kkkakania --limit 20
 5. 按上面的字段表建立字段。
 6. 建立 Roadmap、Triage、Release Readiness、Feedback Loops 和 Cross-Repo Dependencies 五个视图。
 7. 把下面的 seed queue 加入看板。
-8. 为每个条目设置仓库、track、优先级、证据等级和 release target。
+8. 为每个条目设置仓库、track、优先级、证据等级和 release target。没有计划发布或上传时，`Release target` 留空。
 9. 把公开看板 URL 回填到 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31)。
 
 不要在没有公开 URL 或没有核验结果时关闭 `#31`。
@@ -128,20 +148,20 @@ gh project list --owner Kkkakania --limit 20
 
 | 条目 | 仓库 | Track | 建议状态 | 建议优先级 | 证据等级 | Release target | 下一步 |
 |---|---|---|---|---|---|---|---|
-| [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | scientific-figures | Documentation | In progress | P1 | Dogfooded | no release planned | 创建或核验公开 GitHub Project 看板。 |
-| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | Gallery/API | Needs review | P2 | Dogfooded | no release planned | 等待 PV 与 harmonic-spectrum 示例反馈，再决定是否扩展电气工程 pack。 |
-| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | Feedback | Ready | P1 | Needs user feedback | no release planned | 收集 fresh-clone 首次使用反馈。 |
-| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | Release | Backlog | P1 | Official/source-backed | v2.x | 等 package name 和安装检查都最新后，再准备 PyPI。 |
-| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | Feedback | Ready | P1 | Needs user feedback | no release planned | 收集第一次 MATLAB 渲染反馈。 |
+| [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | scientific-figures | ecosystem-docs | In progress | P1 | reproducible | （留空） | 创建或核验公开 GitHub Project 看板。 |
+| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | Awaiting feedback | P2 | ci-covered | （留空） | 等待 PV 与 harmonic-spectrum 示例反馈，再决定是否扩展电气工程 pack。 |
+| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | （留空） | 收集 fresh-clone 首次使用反馈。 |
+| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | 等 package name 和安装检查都最新后，再准备 PyPI。 |
+| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | （留空） | 收集第一次 MATLAB 渲染反馈。 |
 
 ## 每周维护节奏
 
 每周只需要做一次轻量更新：
 
 1. 用 `./scripts/check_ecosystem_triage_status.sh` 看三个仓库的开放 issue 和 PR。
-2. 新事项先放 Backlog，确认下一步动作后再移到 Ready。
+2. 新事项先放 Inbox，确认范围、证据和下一步动作后移到 Triaged。
 3. In progress 保持少量，避免看板变成堆积清单。
-4. 只有本地检查和 CI 都通过后，release 相关条目才移到 Needs review。
+4. 如果事项主要卡在外部反馈，就放到 Awaiting feedback，并在超过两周前补一次 ping 或写清楚等待原因。
 5. 事项完成后，链接对应 issue、PR 或 release note，再移动到 Done。
 
 这个节奏的重点是让维护状态可检查。它不应该制造虚假的活跃度，也不应该把每次文档修补都变成 release。
