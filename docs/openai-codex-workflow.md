@@ -183,5 +183,19 @@ marketing page:
    acceptable when linked; "widely adopted" is not unless public usage evidence
    exists.
 
+Use two packet shapes, depending on the job.
+
+For a review packet, collect the commit, the relevant workflow run URL, the
+local command summary, the issue or PR that motivated the change, and the files
+that changed. If the change touches the ecosystem handoff, include
+`mfigci-report.md` or `render_report.md` only as redacted summaries or CI
+artifacts, not as copied raw output.
+
+For an application packet, keep the same evidence but remove maintainer-only
+noise. Link the public repository, current release, green workflow run URL,
+dogfooding workflow, clean-room policy, and one redacted issue or PR link that
+shows real maintenance. This is not an approval argument. It is a compact way
+to show what has been built and how it is checked.
+
 Do not include private local folder paths, private screenshots, raw research
 data, unreviewed prototype images, or claims about benefit-program approval.

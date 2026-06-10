@@ -156,6 +156,8 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts
 更多说明见 [Quality gates](docs/quality-gates.md) 和 [Release checklist](docs/release-checklist.md)。
 维护者工作流见 [Maintainer workflow](docs/openai-codex-workflow.md)，其中集中说明 PR review、issue triage、release workflow、security/provenance review 和 code-quality gates。
 
+如果需要对外说明项目维护情况，建议只引用可复查材料：当前 commit、GitHub Actions 链接、本地检查命令、`mfigci` 报告摘要、first-use issue、clean-room policy 和 release 记录。不要写成下载量、已有用户规模或任何外部项目通过保证。
+
 ## 来源和版权边界
 
 本项目采用 clean-room 策略。允许进入公开仓库的内容包括：
