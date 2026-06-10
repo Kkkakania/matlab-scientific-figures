@@ -38,6 +38,7 @@ jobs:
         if: always()
         with:
           name: mfigci-report
+          include-hidden-files: true
           path: |
             mfigci-report.md
             .mfigci-results.json
