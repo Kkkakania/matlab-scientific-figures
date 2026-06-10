@@ -12,6 +12,24 @@ maintenance signals without claiming broad adoption.
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | Quality gate for figure repositories | Gallery output checks, provenance/privacy scans, risky-file checks, release preflight reports |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | Agent-facing plotting workflow | CSV/Excel/MAT inspection, scheme selection, MATLAB CLI rendering, render reports |
 
+## Handoff Contract
+
+The three repositories should hand off reviewed artifacts and commands, not
+private source folders or vague status claims. In practice, handoff means artifacts and commands
+that another maintainer can inspect from a clean clone.
+
+| Producer | Producer artifact | Next consumer | Handoff command or check |
+|---|---|---|---|
+| `matlab-scientific-figures` | `gallery/*.png and gallery/*.svg`, `docs/template-manifest.json`, `mfigci.yml` | `matlab-figure-ci` | `mfigci check --config mfigci.yml --report mfigci-report.md` |
+| `matlab-figure-ci` | `mfigci-report.md and .mfigci-results.json` | Maintainer review, release notes, issue triage | Review error/warning counts, redacted findings, gallery status, and optional render status |
+| `matlab-plotting-skill` | `render_report.md and render_report.json`, generated PNG/SVG outputs, selected scheme explanation | User feedback issue or future gallery/template request | Share the redacted report summary and selected scheme, then decide whether the chart task belongs in this gallery |
+
+Do not move private datasets, local template folders, journal screenshots,
+watermarked images, binary MATLAB project files, or copied third-party helper
+code across this boundary. If a local resource suggests a useful chart family,
+rewrite the idea as a public task and back it with synthetic data before it
+enters a public repository.
+
 ## Current Feedback Channels
 
 | Workflow | Public feedback path | Good feedback includes |

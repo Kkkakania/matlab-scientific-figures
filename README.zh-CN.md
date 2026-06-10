@@ -110,6 +110,8 @@ theme = sftTheme("FontName", "Journal Sans", ...
 
 三个仓库一起维护，但职责分开：模板和图表 API 在这里，自动化检查在 `matlab-figure-ci`，agent-facing 工作流在 `matlab-plotting-skill`。
 
+跨仓库交接只交接可复查的公开产物：gallery 的 PNG/SVG、模板 manifest、`mfigci-report.md`、`.mfigci-results.json`、以及 agent 渲染时生成的 `render_report.md/json`。不要把私有数据集、本地模板文件夹、期刊截图、水印图片、二进制 MATLAB 工程文件或第三方 helper 代码带进这个边界。详细英文说明见 [Ecosystem status](docs/ecosystem-status.md)。
+
 跨仓库维护看板的英文设置说明见 [GitHub Project board plan](docs/github-project-board.md)，中文操作版见 [GitHub Project 看板设置说明](docs/github-project-board.zh-CN.md)。当前看板创建状态仍由 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) 跟踪；在 GitHub Projects 权限可用前，请使用 `./scripts/check_ecosystem_triage_status.sh` 做临时 triage。
 
 ## 主题和全局默认值
