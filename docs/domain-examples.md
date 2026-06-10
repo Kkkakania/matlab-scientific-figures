@@ -60,6 +60,17 @@ dump.
 No adoption, download, or approval claims are implied by these examples. They
 are maintenance and design evidence only.
 
+## Frequency-Plot Boundary
+
+`harmonic-spectrum` is the current frequency-domain example. It is for comparing
+known harmonic orders and relative magnitudes in synthetic power-quality data.
+It is not an FFT, PSD, or spectrogram workflow.
+
+Add a new signal-processing example only when the task starts from a sampled
+time-domain signal or needs frequency-bin, windowing, PSD, or time-frequency
+explanation. This prevents the electrical examples from turning into duplicate
+frequency charts.
+
 ## Other Standalone Examples
 
 The repository also contains other standalone examples such as

@@ -59,6 +59,21 @@ New work should improve real user workflows before adding more chart types.
 These items came from task-level review of local plotting resources and common
 MATLAB workflows. They are not ports of the local files.
 
+## Candidate De-Duplication Notes
+
+Do not add `fft_spectrum` just to increase the template count. The repository
+already has `renderHarmonicSpectrum` as a small electrical-domain frequency
+example. A new FFT/PSD candidate is only useful if it answers a distinct task:
+
+- raw time-domain signal to single-sided amplitude spectrum;
+- windowing or leakage comparison;
+- Welch PSD for noisy measurements;
+- spectrogram or time-frequency view;
+- report text that explains sampling rate, bin spacing, and units.
+
+If the task is only "show harmonic magnitudes by order", use the existing
+`harmonic-spectrum` domain example instead of adding another frequency plot.
+
 ## Prototype-Derived Triage Notes
 
 A private prototype library now sketches more than 200 figure ideas across
