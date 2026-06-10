@@ -38,4 +38,6 @@ jobs:
         if: always()
         with:
           name: mfigci-report
-          path: mfigci-report.md
+          path: |
+            mfigci-report.md
+            .mfigci-results.json
