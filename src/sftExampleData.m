@@ -41,6 +41,8 @@ switch kind
         data.lower = max(0, center - spread);
         data.upper = min(1.05, center + spread);
         data.labels = "PV forecast";
+        data.nameplateMW = 5;
+        data.powerUnit = "p.u. of 5 MW";
 
     case "harmonic_spectrum"
         orders = [3 5 7 9 11 13 15 17 19].';
@@ -50,6 +52,7 @@ switch kind
         data.values = [twoLevel threeLevel];
         data.groups = "H" + string(orders);
         data.series = ["Two-level inverter", "Three-level inverter"];
+        data.valueUnit = "% of fundamental";
 
     case "directional_rose"
         directionDegrees = 0:30:330;

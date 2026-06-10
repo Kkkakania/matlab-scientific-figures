@@ -1232,6 +1232,8 @@ verifyGreaterThanOrEqual(testCase, first.lower, 0);
 verifyLessThanOrEqual(testCase, first.upper, 1.05);
 verifyLessThanOrEqual(testCase, first.lower, first.center);
 verifyLessThanOrEqual(testCase, first.center, first.upper);
+verifyEqual(testCase, first.nameplateMW, 5);
+verifyEqual(testCase, first.powerUnit, "p.u. of 5 MW");
 end
 
 function testPvPowerConfidenceRendererExportsPng(testCase)
@@ -1257,6 +1259,7 @@ verifyEqual(testCase, numel(first.series), size(first.values, 2));
 verifyTrue(testCase, all(mod(first.orders, 2) == 1));
 verifyGreaterThan(testCase, first.values, 0);
 verifyGreaterThan(testCase, first.values(1, 1), first.values(end, 1));
+verifyEqual(testCase, first.valueUnit, "% of fundamental");
 end
 
 function testHarmonicSpectrumRendererExportsPng(testCase)

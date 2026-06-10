@@ -14,8 +14,8 @@ The current implemented electrical examples are deliberately small:
 
 | Command | MATLAB function | Output | Purpose |
 |---|---|---|---|
-| `./scripts/render_all.sh pv-power` | `renderPvPowerConfidence` | `pv_power_confidence` | Show a synthetic PV power forecast with uncertainty. |
-| `./scripts/render_all.sh harmonic-spectrum` | `renderHarmonicSpectrum` | `harmonic_spectrum` | Compare synthetic power-quality harmonic spectra. |
+| `./scripts/render_all.sh pv-power` | `renderPvPowerConfidence` | `pv_power_confidence` | Show a synthetic 5 MW PV power forecast with uncertainty. |
+| `./scripts/render_all.sh harmonic-spectrum` | `renderHarmonicSpectrum` | `harmonic_spectrum` | Compare synthetic power-quality harmonic spectra in `% of fundamental`. |
 
 Run them from the shell with a MATLAB executable:
 
@@ -56,6 +56,12 @@ good next example should include deterministic synthetic data, a standalone
 renderer, shell entry point, documentation, and tests. It should not require a
 new release by itself, and it should not turn the gallery into a domain-specific
 dump.
+
+The current examples have two small calibration choices from issue feedback:
+`pv-power` states its 5 MW synthetic system size while still plotting normalized
+power, and `harmonic-spectrum` labels relative magnitudes as `% of fundamental`.
+Those labels make the examples easier to reuse in course reports without
+claiming measured data or a site-specific operating condition.
 
 No adoption, download, or approval claims are implied by these examples. They
 are maintenance and design evidence only.

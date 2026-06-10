@@ -9,7 +9,7 @@ fig = figure('Visible', 'off', 'Units', 'centimeters', ...
 ax = axes(fig);
 sftPlotGroupedBar(ax, data.values, data.groups, data.series, theme);
 xlabel(ax, 'Harmonic order');
-ylabel(ax, 'Relative magnitude (%)');
+ylabel(ax, "Relative magnitude (" + data.valueUnit + ")");
 title(ax, 'Synthetic Harmonic Spectrum Comparison');
 ylim(ax, [0 max(data.values(:)) * 1.18]);
 

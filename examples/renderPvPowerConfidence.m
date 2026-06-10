@@ -8,8 +8,8 @@ fig = figure('Visible', 'off', 'Units', 'centimeters', 'Position', [1 1 theme.Fi
 ax = axes(fig);
 sftPlotConfidenceBand(ax, data.hours, data.center, data.lower, data.upper, data.labels, theme);
 xlabel(ax, 'Hour of day');
-ylabel(ax, 'Normalized power');
-title(ax, 'Synthetic PV Power Forecast With Uncertainty');
+ylabel(ax, "Normalized power (" + data.powerUnit + ")");
+title(ax, sprintf('Synthetic %.0f MW PV Power Forecast With Uncertainty', data.nameplateMW));
 ylim(ax, [0 1.08]);
 sftApplyTheme(ax, theme);
 
