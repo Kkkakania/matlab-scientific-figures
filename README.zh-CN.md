@@ -149,6 +149,8 @@ report = sftValidateFigure(gcf, ...
 
 本仓库的 CI badge 说明静态质量和 figure-quality 检查通过，不代表 GitHub-hosted runner 已经安装 MATLAB 或重新生成了全部图。需要完整验证时，在本地运行：
 
+`Figure quality` workflow 会上传 `mfigci-report.md` 和 `.mfigci-results.json`：Markdown 报告方便维护者快速阅读，JSON 结果用于 release notes、issue triage 或小型 evidence packet，不代表外部采用规模或任何审批保证。
+
 ```bash
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts/check_release_ready.sh
 ```

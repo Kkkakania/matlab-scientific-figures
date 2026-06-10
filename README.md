@@ -51,6 +51,10 @@ repository checks such as gallery-file presence, metadata consistency,
 documentation links, provenance, privacy, and manifest drift. `Figure quality`
 runs `matlab-figure-ci` against committed gallery outputs. For exact badge
 scope and local reproduction commands, see [Quality gates](docs/quality-gates.md).
+The `Figure quality` workflow uploads `mfigci-report.md` and `.mfigci-results.json`.
+The Markdown report is for quick maintainer review, and the JSON result
+preserves the same check for release notes, issue triage, or a small evidence
+packet.
 
 Run the MATLAB-enabled local gate before relying on regenerated figures:
 

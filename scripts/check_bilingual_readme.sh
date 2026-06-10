@@ -20,5 +20,7 @@ grep -Fq "matlab-scientific-figures#31" "$README_ZH"
 grep -Fq "./scripts/check_ecosystem_triage_status.sh" "$README_ZH"
 grep -Fq "Current public release" "$README"
 grep -Fq "当前公开版本" "$README_ZH"
+grep -Fq 'uploads `mfigci-report.md` and `.mfigci-results.json`' "$README"
+grep -Fq '上传 `mfigci-report.md` 和 `.mfigci-results.json`' "$README_ZH"
 
 echo "Bilingual README checks passed."
