@@ -67,9 +67,13 @@ multivariate, polar, and 3D families. The useful next step is not to import that
 library. The useful next step is to pick a few public, testable gaps:
 
 - electrical diagnostics that already match existing domain examples;
+- power and energy plots only when the task can be shown with small synthetic
+  waveforms or tabular summaries;
 - signal-processing plots with simple deterministic waveforms;
 - model-evaluation plots that use small synthetic classifiers;
 - palette documentation that can be checked without copying palette packs;
+- diagram-style figures only when they communicate data flow or system
+  structure better than plain prose;
 - Origin interoperability notes that keep `.opju` and workbook files out of the
   repository.
 

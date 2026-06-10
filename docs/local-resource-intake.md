@@ -47,24 +47,29 @@ larger set of chart jobs that users may ask for:
 | Electrical-engineering examples | Keep small synthetic demos for power, impedance, harmonics, motor, and converter plots |
 | 3D/scientific visualization material | Add only when a 3D view answers a real communication task better than a 2D view |
 | Modeling and machine-learning examples | Treat ROC, lift, calibration, residual, SHAP-like, and learning-curve plots as backlog candidates |
+| Larger clean-room template index | Treat the reported 239 template ideas and 60 palette families as a task map, not as source material or public adoption evidence |
+| Go-side helpers and color-science utilities | Keep language/toolchain ideas at the workflow level; do not publish compiled helpers, local utility code, or generated audit outputs without a normal review |
 
 The public decision is deliberately narrow: chart names can enter the backlog;
 files, labels, screenshots, and code do not.
 
 ## Private Prototype Library Snapshot
 
-A separate private prototype pass produced a larger original learning library:
-216 Python templates, 216 MATLAB templates, 27 palette families, and a small
-Origin scripting layer. That work is useful as a design sketch, but it is not
-automatically part of this public repository.
+A separate private prototype pass first produced a larger original learning
+library with 216 Python templates, 216 MATLAB templates, 27 palette families,
+and a small Origin scripting layer. A later private index reports broader
+coverage: 239 template ideas, MATLAB/Python counterparts, 60 palette families,
+Go-side helper experiments, Origin scripting notes, and color-science audit
+material. That work is useful as a design sketch, but it is not automatically
+part of this public repository.
 
 The public intake from that prototype is limited to aggregate signals:
 
 | Prototype signal | Public follow-up |
 |---|---|
-| 23 chart categories | Keep the public backlog grouped by task, not by source folder |
+| 23+ chart categories | Keep the public backlog grouped by task, not by source folder |
 | Strong electrical, signal, control, RF, ML, CFD, and optimization coverage | Promote these areas only when they can be rewritten with small synthetic datasets |
-| Palette preview system | Improve public palette docs and color-accessibility checks before adding many styles |
+| Palette preview and color-science tooling | Improve public palette docs and color-accessibility checks before adding many styles |
 | Origin Python and LabTalk scripts | Document interoperability boundaries; do not add Origin workbooks or copied scripts |
 | 200+ generated gallery images | Treat as private visual QA only; public gallery images must be regenerated from public source |
 
