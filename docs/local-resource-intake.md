@@ -20,6 +20,7 @@ The local folder contains several kinds of material:
 | Third-party color tools and palette packs | Do not copy; prefer small original palettes or documented public sources |
 | Clean-room learning notes and template names | Use as a chart-task map after rewriting data, code, labels, and examples |
 | Electrical-engineering sketches | Convert only into deterministic synthetic examples with original code |
+| Local sales, bundle, or packaged-course directories | Keep out of the public repository; they may stay on the maintainer's machine, but they are not source material for issues, examples, or releases |
 
 ## Accepted Signals
 
@@ -52,6 +53,22 @@ larger set of chart jobs that users may ask for:
 
 The public decision is deliberately narrow: chart names can enter the backlog;
 files, labels, screenshots, and code do not.
+
+## Bulk Library And Bundle Intake
+
+A large local plotting-library snapshot can be useful without being copied.
+Treat it as three separate streams:
+
+| Stream | Public handling |
+|---|---|
+| Source ideas: chart families, task names, palette needs, validation gaps | Keep as backlog signals after rewriting the task in public maintainer language |
+| Generated gallery outputs: bulk PNG/SVG/PDF renders, dark-mode previews, MATLAB rerender folders | Review only as visual QA; commit a subset only when it is regenerated from public source and listed in the gallery manifest |
+| Private bundles: sales packages, course exports, license notes, packaged archives, local distribution folders | Keep outside public source control or add to `.gitignore`; do not use them as evidence of adoption |
+
+For this repository, the safe promotion unit is still one public template or
+one documented workflow at a time. A bulk library pass may reveal missing chart
+families, but it does not bypass synthetic data, clean-room implementation,
+gallery provenance, and release checks.
 
 ## Private Prototype Library Snapshot
 
@@ -88,6 +105,9 @@ Do not add any of these to the public repository:
 - third-party MATLAB helper code with unclear license or provenance;
 - generated outputs that still contain local paths, usernames, watermarks, or
   source-folder names.
+- local sales or bundle directories, even when they contain clean-room code,
+  unless they are intentionally repackaged as normal public source with a
+  separate review.
 
 ## Clean-Room Conversion Rule
 
