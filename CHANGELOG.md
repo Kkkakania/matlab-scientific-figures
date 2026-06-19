@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added a Codex for OSS evidence note that selects this repository as the main
+  application target, records current public evidence, and keeps application
+  claims separate from adoption or approval guarantees.
+
 ## v3.8.0 - 2026-06-10
 
 - Added the clean-room `harmonic_spectrum` domain example and CLI coverage.

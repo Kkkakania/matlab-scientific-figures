@@ -158,6 +158,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab REQUIRE_MATLAB=1 ./scripts
 
 更多说明见 [Quality gates](docs/quality-gates.md) 和 [Release checklist](docs/release-checklist.md)。
 维护者工作流见 [Maintainer workflow](docs/openai-codex-workflow.md)，其中集中说明 PR review、issue triage、release workflow、security/provenance review 和 code-quality gates。
+面向 Codex for OSS 申请的事实材料集中放在 [Codex for OSS evidence note](docs/codex-for-oss-evidence.md)；它只记录可复查证据和边界，不写成通过保证。
 
 如果需要对外说明项目维护情况，建议只引用可复查材料：当前 commit、GitHub Actions 链接、本地检查命令、`mfigci` 报告摘要、first-use issue、clean-room policy 和 release 记录。不要写成下载量、已有用户规模或任何外部项目通过保证。
 

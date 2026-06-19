@@ -288,6 +288,9 @@ the README stays focused on using the library.
 For reviewers and OSS-program evaluators, [Maintainer workflow](docs/openai-codex-workflow.md)
 summarizes the public maintenance loop: PR review, issue triage, release
 workflow, security/provenance review, and code-quality gates.
+The companion [Codex for OSS evidence note](docs/codex-for-oss-evidence.md)
+keeps the application-facing facts in one place without turning this README
+into a benefits-program pitch.
 
 ## License And Provenance
 
