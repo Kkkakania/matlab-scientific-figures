@@ -18,9 +18,9 @@
 - Added an issue-triage checklist workflow so new issues get a bounded
   maintainer checklist for track, evidence level, next state, and synthetic
   reproducer needs while the live GitHub Project board remains pending.
-- Added a Codex for OSS evidence note that selects this repository as the main
-  application target, records current public evidence, and keeps application
-  claims separate from adoption or approval guarantees.
+- Updated the Codex for OSS evidence note so the current application story can
+  use the agent-facing `matlab-plotting-skill` as the primary repo while this
+  gallery remains the clean-room MATLAB evidence surface.
 
 ## v3.8.0 - 2026-06-10
 

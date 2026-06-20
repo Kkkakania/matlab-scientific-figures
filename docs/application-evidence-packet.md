@@ -9,14 +9,16 @@ ChatGPT Pro access.
 
 ## Main Repository
 
-Use this repository as the main application repository:
+For the current skill-first application story, use this repository as the main
+application repository:
 
-<https://github.com/Kkkakania/matlab-scientific-figures>
+<https://github.com/Kkkakania/matlab-plotting-skill>
 
-This is the repository that users would clone to inspect the MATLAB APIs,
-examples, synthetic data generators, gallery outputs, and documentation. The
-companion repositories support maintenance and agent workflows, but they should
-not be used to inflate the main repository.
+This is the repository that exposes the agent-facing MATLAB plotting skill and
+the scientific diagram skill. `matlab-scientific-figures` remains the clean-room
+gallery and MATLAB API evidence surface. `matlab-figure-ci` remains the
+companion quality gate. The repos should be described as one maintenance
+workflow, not as inflated adoption.
 
 ## Public Evidence To Cite
 
@@ -34,7 +36,8 @@ not be used to inflate the main repository.
 | First-use feedback | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) |
 | Project-board tracking | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31), currently pending on GitHub Project scopes |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
-| Agent workflow | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance and [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams |
+| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance |
+| Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
 
 ## Verification Commands
 
@@ -58,7 +61,8 @@ non-MATLAB quality gates and the dogfooded `matlab-figure-ci` checks.
 
 Keep the framing factual and narrow:
 
-- The project is an early public MATLAB scientific plotting library.
+- The primary application repo is an early public MATLAB plotting skill.
+- This gallery repo is the clean-room MATLAB API and example evidence surface.
 - It uses clean-room source rules, deterministic synthetic examples, committed
   gallery outputs, and guarded quality checks.
 - The maintainer workflow includes issue templates, a PR template, release
@@ -81,4 +85,4 @@ screenshots, or non-public conversations. Do not use companion repositories to
 make the main project look larger than it is.
 
 The honest claim is that the project has a real maintenance system for a
-practical MATLAB plotting problem, not that it is already widely adopted.
+practical agent-assisted plotting problem, not that it is already widely adopted.

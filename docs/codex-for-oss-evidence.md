@@ -7,13 +7,15 @@ For a shorter reviewer-facing packet, use
 
 ## Repository To Use In The Form
 
-Use this repository as the main application repository:
+For the current skill-first application story, use the agent-facing skill
+repository as the main application repository:
 
-<https://github.com/Kkkakania/matlab-scientific-figures>
+<https://github.com/Kkkakania/matlab-plotting-skill>
 
-Reason: this repo is the public MATLAB figure library that users would clone,
-run, and adapt. The companion repos are real maintenance infrastructure, but
-they support this one rather than replacing it as the primary project.
+Reason: the strongest current story is not only a MATLAB gallery. It is an
+agent workflow for choosing, rendering, checking, and reviewing scientific
+figures. This repository remains the public gallery and API evidence surface.
+`matlab-figure-ci` remains the quality gate.
 
 ## Current Public Signals
 
@@ -28,7 +30,8 @@ Snapshot date: 2026-06-19.
 | Maintainer workflow | issue templates, PR template, release checklist, release cadence, provenance policy, and quality gates |
 | Active issue surfaces | first-use feedback, domain example proposals, and ecosystem Project-board tracking |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) checks gallery outputs, privacy, provenance, risky files, and report generation |
-| Agent workflow | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow and now includes [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for clean Mermaid/draw.io research diagrams |
+| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow |
+| Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
 
 Do not present these numbers as broad adoption. They are early public signals.
 
@@ -36,17 +39,18 @@ Do not present these numbers as broad adoption. They are early public signals.
 
 The strongest story is not "many repositories"; it is one maintained workflow:
 
-1. `matlab-scientific-figures` provides clean-room MATLAB figure APIs, examples,
-   gallery outputs, and docs.
+1. `matlab-plotting-skill` gives an agent a repeatable path for choosing a
+   MATLAB chart, rendering it, collecting a redacted report, and handing the
+   result back for maintainer review.
 2. `matlab-figure-ci` checks whether a figure repository is clean enough to
    publish: gallery outputs, risky files, privacy traces, provenance markers,
    and bounded reports.
-3. `matlab-plotting-skill` documents how an AI agent can choose a plotting
-   pattern, render figures, and produce a redacted first-use report. Its
-   `scientific-diagram-skill` companion covers method diagrams, system blocks,
-   signal chains, and draw.io exports without copying paper figures or private
+3. `matlab-scientific-figures` provides the clean-room MATLAB figure APIs,
+   examples, gallery outputs, and docs that the skill can point users toward.
+4. `scientific-diagram-skill` covers method diagrams, system blocks, signal
+   chains, and draw.io exports without copying paper figures or private
    screenshots.
-4. Issues, PR templates, release gates, and changelog entries keep changes
+5. Issues, PR templates, release gates, and changelog entries keep changes
    reviewable instead of relying on ad hoc commits.
 
 One recent example is
@@ -82,12 +86,11 @@ and a squash merge.
 
 ## Draft: Why This Repository Qualifies
 
-`matlab-scientific-figures` is a clean-room MATLAB scientific plotting library
-with reusable APIs, synthetic examples, committed gallery outputs, provenance
-rules, and CI checks. It serves a practical need for students and engineers who
-want publication-ready figures without copying unclear templates. The project is
-early, but it already has release gates, issue/PR templates, first-use feedback,
-and companion tooling for figure QA.
+`matlab-plotting-skill` is an agent-facing workflow for MATLAB scientific
+plotting. It helps Codex inspect data, choose an appropriate figure pattern,
+render through MATLAB CLI, and produce a redacted report for maintainer review.
+The ecosystem is early, but it already has clean-room gallery evidence,
+provenance checks, issue/PR templates, and a companion CI tool for figure QA.
 
 ## Draft: API Credit Use
 
@@ -99,8 +102,8 @@ keeping final decisions with the maintainer.
 
 ## Optional Extra Note
 
-This is an early public project. The application should be honest about that.
-The stronger claim is not adoption volume; it is that the repo already models a
-careful maintenance workflow for MATLAB scientific figures, with clean-room
-source rules, green quality gates, and a companion CI tool built for the same
-problem.
+This is an early public ecosystem. The application should be honest about that.
+The stronger claim is not adoption volume; it is that the repos already model a
+careful maintainer workflow for agent-assisted scientific figures: skill
+instructions, clean-room gallery evidence, green quality gates, and a companion
+CI tool built for the same problem.

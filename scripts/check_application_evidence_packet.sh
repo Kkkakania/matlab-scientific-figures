@@ -29,6 +29,7 @@ reject_text() {
 
 require_text "Snapshot date: 2026-06-20"
 require_text "not a promise of Codex for Open Source eligibility"
+require_text "Kkkakania/matlab-plotting-skill"
 require_text "Kkkakania/matlab-scientific-figures"
 require_text "v3.8.0"
 require_text "Quality checks"
@@ -43,11 +44,14 @@ require_text "dependabot.yml"
 require_text "GitHub Actions dependency"
 require_text "matlab-figure-ci"
 require_text "matlab-plotting-skill"
+require_text "scientific-diagram-skill"
+require_text "checked \`.drawio\` and \`.svg\` examples"
 require_text "./scripts/check_static_quality.sh"
 require_text "./scripts/check_release_ready.sh"
 require_text "hosted GitHub workflows do not prove"
 require_text "Do not claim broad adoption"
 require_text "Do not cite private local folders"
+require_text "practical agent-assisted plotting problem"
 require_text "not that it is already widely adopted"
 
 if ! grep -Fq "(application-evidence-packet.md)" "$DOC_INDEX"; then
