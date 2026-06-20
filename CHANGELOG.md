@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added an issue-triage checklist workflow so new issues get a bounded
+  maintainer checklist for track, evidence level, next state, and synthetic
+  reproducer needs while the live GitHub Project board remains pending.
 - Added a Codex for OSS evidence note that selects this repository as the main
   application target, records current public evidence, and keeps application
   claims separate from adoption or approval guarantees.

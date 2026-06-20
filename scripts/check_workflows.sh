@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 FIGURE_WORKFLOW="$ROOT_DIR/.github/workflows/figure-quality.yml"
 QUALITY_WORKFLOW="$ROOT_DIR/.github/workflows/quality.yml"
+TRIAGE_WORKFLOW="$ROOT_DIR/.github/workflows/issue-triage.yml"
 
 if [[ ! -s "$FIGURE_WORKFLOW" ]]; then
   echo "missing figure-quality workflow" >&2
@@ -12,6 +13,11 @@ fi
 
 if [[ ! -s "$QUALITY_WORKFLOW" ]]; then
   echo "missing quality workflow" >&2
+  exit 1
+fi
+
+if [[ ! -s "$TRIAGE_WORKFLOW" ]]; then
+  echo "missing issue triage workflow" >&2
   exit 1
 fi
 
@@ -55,5 +61,15 @@ require_text "$QUALITY_WORKFLOW" "scripts/check_cli_script_static.sh"
 require_text "$QUALITY_WORKFLOW" "scripts/check_render_all_args.sh"
 require_text "$QUALITY_WORKFLOW" "scripts/check_scan_script_tempfiles.sh"
 reject_text "$QUALITY_WORKFLOW" "actions/checkout@v4"
+
+require_text "$TRIAGE_WORKFLOW" "issues:"
+require_text "$TRIAGE_WORKFLOW" "types: \[opened\]"
+require_text "$TRIAGE_WORKFLOW" "issues: write"
+require_text "$TRIAGE_WORKFLOW" "matlab-figure-ecosystem-triage"
+require_text "$TRIAGE_WORKFLOW" "gh issue comment"
+require_text "$TRIAGE_WORKFLOW" "Kkkakania/matlab-scientific-figures#31"
+require_text "$TRIAGE_WORKFLOW" "Awaiting feedback"
+reject_text "$TRIAGE_WORKFLOW" "project:"
+reject_text "$TRIAGE_WORKFLOW" "read:project"
 
 echo "Workflow maintenance checks passed."

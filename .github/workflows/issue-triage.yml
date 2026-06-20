@@ -1,0 +1,45 @@
+name: Issue triage checklist
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  checklist:
+    if: ${{ !github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add maintainer triage checklist
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          TRIAGE_MARKER: "<!-- matlab-figure-ecosystem-triage -->"
+        run: |
+          set -euo pipefail
+
+          if gh issue view "$ISSUE_URL" --comments --json comments --jq '.comments[].body' | grep -Fq "$TRIAGE_MARKER"; then
+            echo "Triage checklist already exists."
+            exit 0
+          fi
+
+          cat > /tmp/triage-comment.md <<'COMMENT'
+          <!-- matlab-figure-ecosystem-triage -->
+          Thanks for opening this. I use the checklist below to keep the issue useful without exposing private data or turning one report into a broad claim.
+
+          Maintainer triage:
+
+          - [ ] Classify the track: `gallery`, `agent`, `ci`, or `ecosystem-docs`.
+          - [ ] Set the evidence level: `none`, `single-report`, `reproducible`, or `ci-covered`.
+          - [ ] Ask for a synthetic reproducer if the report depends on private data.
+          - [ ] Link the closest template, command, workflow run, or documentation page.
+          - [ ] Decide the next state: `Triaged`, `Awaiting feedback`, `Accepted`, or `Out of scope`.
+          - [ ] If this affects a release, add the release target in the public roadmap notes.
+
+          Project-board setup is tracked in Kkkakania/matlab-scientific-figures#31. Until the live board exists, this checklist and repository labels are the public fallback triage surface.
+          COMMENT
+
+          gh issue comment "$ISSUE_URL" --body-file /tmp/triage-comment.md

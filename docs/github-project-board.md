@@ -36,11 +36,12 @@ download volume, or external program eligibility.
 Live board creation is tracked in
 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31).
 
-As of 2026-06-04, the local `gh` token used for repository maintenance can read
+As of 2026-06-20, the local `gh` token used for repository maintenance can read
 and update issues, but it does not have GitHub Projects scopes. The CLI command
 `gh project list --owner Kkkakania` returns a missing `read:project` scope error.
 Until that token is refreshed or the board is created in the GitHub web UI, use
-this document as the public setup checklist and seed queue.
+this document, the issue-triage workflow, and the interim label checks as the
+public setup checklist and seed queue.
 
 To enable CLI setup later, refresh the token with:
 
@@ -74,6 +75,12 @@ Projects scopes:
 ```bash
 ./scripts/check_ecosystem_triage_status.sh
 ```
+
+New issues also receive an automated maintainer checklist from
+`.github/workflows/issue-triage.yml`. The checklist asks the maintainer to set a
+track, evidence level, next state, and synthetic reproducer request when needed.
+It is deliberately small: it does not add an item to GitHub Projects, does not
+make adoption claims, and does not require `project` or `read:project` scopes.
 
 Also keep the current open issues labeled. Labels are not a replacement for the
 Project board, but they make the interim triage state visible while the board is
@@ -258,6 +265,9 @@ Use the board as a weekly maintenance surface:
    the waiting reason before they become stale.
 5. Archive completed items after the related issue, pull request, or release
    note is linked.
+
+The issue-triage workflow can handle the first reminder, but a maintainer still
+has to read the issue and make the classification.
 
 This rhythm supports a normal open-source maintenance story. It should not
 create artificial releases or busywork.

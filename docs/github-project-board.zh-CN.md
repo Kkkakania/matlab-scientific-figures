@@ -20,7 +20,7 @@ MATLAB Scientific Figure Ecosystem
 
 公开看板的创建任务记录在 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31)。
 
-截至 2026-06-04，本地维护用的 `gh` token 可以读写 issue，但没有 GitHub Projects 权限。运行下面的命令会返回缺少 `read:project` scope：
+截至 2026-06-20，本地维护用的 `gh` token 可以读写 issue，但没有 GitHub Projects 权限。运行下面的命令会返回缺少 `read:project` scope：
 
 ```bash
 gh project list --owner Kkkakania --limit 20
@@ -46,6 +46,8 @@ gh project list --owner Kkkakania --limit 20
 ```
 
 第一个脚本记录看板是否仍处于 pending 状态。第二个脚本列出三个仓库当前开放的 issue 和 PR。它们只是维护快照，不代表公开看板已经建好。
+
+新 issue 还会由 `.github/workflows/issue-triage.yml` 自动收到一条维护者检查清单。这条评论只提醒维护者设置 track、证据等级、下一步状态，以及在涉及私有数据时要求合成复现。它不会创建 GitHub Project 条目，也不需要 `project` 或 `read:project` 权限。
 
 同时保持当前开放 issue 的标签可读。标签不能替代 Project 看板，但在看板 pending 时，它们能让临时 triage 状态更容易被别人看见：
 
@@ -163,6 +165,8 @@ field:"Release target" not empty
 3. In progress 保持少量，避免看板变成堆积清单。
 4. 如果事项主要卡在外部反馈，就放到 Awaiting feedback，并在超过两周前补一次 ping 或写清楚等待原因。
 5. 事项完成后，链接对应 issue、PR 或 release note，再移动到 Done。
+
+issue-triage workflow 只能给出第一次提醒，不能替维护者判断问题是否有效、是否需要进入路线图、是否需要等待反馈。
 
 这个节奏的重点是让维护状态可检查。它不应该制造虚假的活跃度，也不应该把每次文档修补都变成 release。
 
