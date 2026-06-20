@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added an application evidence packet and static check so public application
+  materials cite current release, workflow, PR/issue, companion-tool, and
+  boundary evidence without overstating adoption.
 - Strengthened the pull request template with review evidence, local checks,
   risk/provenance, and release-note prompts so PR review has a clearer public
   audit trail.

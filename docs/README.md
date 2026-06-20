@@ -49,6 +49,7 @@ docs if you want to change the project.
 - [Maintainer activity](maintainer-activity.md)
 - [Ecosystem status](ecosystem-status.md)
 - [Codex for OSS evidence note](codex-for-oss-evidence.md)
+- [Application evidence packet](application-evidence-packet.md)
 - [JSON envelope compatibility](json-envelope-compatibility.md)
 - [Provenance policy](provenance-policy.md)
 - [Maintainer workflow](openai-codex-workflow.md)

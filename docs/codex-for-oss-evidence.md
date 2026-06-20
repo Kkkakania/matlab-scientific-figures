@@ -2,6 +2,8 @@
 
 This note is a factual packet for a future Codex for Open Source application.
 It is not a promise of eligibility, approval, credits, or ChatGPT Pro access.
+For a shorter reviewer-facing packet, use
+[Application evidence packet](application-evidence-packet.md).
 
 ## Repository To Use In The Form
 
