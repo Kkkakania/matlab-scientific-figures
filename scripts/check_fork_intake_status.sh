@@ -6,6 +6,7 @@ REPOS=(
   "matlab-scientific-figures"
   "matlab-figure-ci"
   "matlab-plotting-skill"
+  "python-plotting-skill"
 )
 
 usage() {
@@ -13,7 +14,7 @@ usage() {
 Usage:
   check_fork_intake_status.sh
 
-Lists visible forks for the three MATLAB plotting repositories and compares each
+Lists visible forks for the tracked plotting repositories and compares each
 fork's default branch against upstream main.
 
 This is a live maintainer helper, not a CI requirement. A fork with ahead=0 has
@@ -53,4 +54,3 @@ for repo in "${REPOS[@]}"; do
       --jq '"status=\(.status) ahead=\(.ahead_by) behind=\(.behind_by) fork='"$fork"' branch='"$branch"'"'
   done <<< "$forks"
 done
-

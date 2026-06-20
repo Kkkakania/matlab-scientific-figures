@@ -38,6 +38,7 @@ workflow, not as inflated adoption.
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
+| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with synthetic gallery outputs and first-use feedback issues |
 
 ## Verification Commands
 
@@ -71,6 +72,8 @@ Keep the framing factual and narrow:
 - Companion agent skills document two recurring maintainer tasks: choosing
   MATLAB figures from data and preparing clean research diagrams without
   copying paper figures or private screenshots.
+- The Python plotting Skill is now public as a small sibling project. It should
+  be cited as early cross-language evidence, not as proof of adoption.
 - API credits or Codex would be used for PR review, issue triage, release-note
   drafting, CI failure analysis, and compact summaries of `matlab-figure-ci`
   reports.

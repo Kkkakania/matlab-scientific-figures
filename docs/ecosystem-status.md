@@ -1,8 +1,8 @@
 # Ecosystem Status
 
-This page explains how the three MATLAB plotting repositories fit together.
-It is intentionally factual: it describes current scope, feedback channels, and
-maintenance signals without claiming broad adoption.
+This page explains how the MATLAB plotting repositories and sibling Skills fit
+together. It is intentionally factual: it describes current scope, feedback
+channels, and maintenance signals without claiming broad adoption.
 
 ## Repository Roles
 
@@ -11,10 +11,11 @@ maintenance signals without claiming broad adoption.
 | [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | Main gallery and reusable MATLAB plotting APIs | Clean-room examples, `sftPlot*.m` APIs, themes, export helpers, gallery docs, release notes |
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | Quality gate for figure repositories | Gallery output checks, provenance/privacy scans, risky-file checks, release preflight reports |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | Agent-facing plotting workflow | CSV/Excel/MAT inspection, scheme selection, MATLAB CLI rendering, render reports |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | Early Python sibling Skill | Matplotlib examples, chart-selection notes, synthetic gallery outputs, small first-use feedback surface |
 
 ## Handoff Contract
 
-The three repositories should hand off reviewed artifacts and commands, not
+The ecosystem repositories should hand off reviewed artifacts and commands, not
 private source folders or vague status claims. In practice, handoff means artifacts and commands
 that another maintainer can inspect from a clean clone.
 
@@ -23,6 +24,7 @@ that another maintainer can inspect from a clean clone.
 | `matlab-scientific-figures` | `gallery/*.png and gallery/*.svg`, `docs/template-manifest.json`, `mfigci.yml` | `matlab-figure-ci` | `mfigci check --config mfigci.yml --report mfigci-report.md` |
 | `matlab-figure-ci` | `mfigci-report.md and .mfigci-results.json` | Maintainer review, release notes, issue triage | Review error/warning counts, redacted findings, gallery status, and optional render status |
 | `matlab-plotting-skill` | `render_report.md and render_report.json`, generated PNG/SVG outputs, selected scheme explanation | User feedback issue or future gallery/template request | Share the redacted report summary and selected scheme, then decide whether the chart task belongs in this gallery |
+| `python-plotting-skill` | `docs/gallery/*.png and docs/gallery/*.svg`, chart-selection notes, repository check output | Maintainer review or future cross-language template request | Check that the Python example answers the same figure question without copying MATLAB-only implementation details |
 
 Do not move private datasets, local template folders, journal screenshots,
 watermarked images, binary MATLAB project files, or copied third-party helper
@@ -36,6 +38,7 @@ enters a public repository.
 |---|---|---|
 | Fresh clone of the main gallery/API | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | OS, MATLAB version, commit, commands run, selected template, failure or confusing step |
 | Agent-assisted data-to-figure rendering | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | Data shape summary, selected scheme, report summary, redacted command output |
+| Python plotting Skill first use | [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | Python version, command run, chart tried, output readability, confusing setup step |
 | CI or release preflight for figure repos | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | Package workflow result, preflight JSON summary, clean-install notes |
 
 Do not post private datasets, local account names, copied journal figures,
@@ -52,6 +55,8 @@ source packs, or full local paths in feedback.
   do not include MATLAB.
 - The skill repository provides a separate first-render path for users who want
   an agent to choose a chart from their own data.
+- `python-plotting-skill` is public and intentionally small. It should gather
+  first-use feedback before it becomes a larger template library.
 - JSON payloads are documented producer by producer. See
   [JSON envelope compatibility](json-envelope-compatibility.md) before changing
   manifest, report, doctor, or preflight payload shapes across repositories.

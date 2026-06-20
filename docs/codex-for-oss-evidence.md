@@ -19,7 +19,7 @@ figures. This repository remains the public gallery and API evidence surface.
 
 ## Current Public Signals
 
-Snapshot date: 2026-06-19.
+Snapshot date: 2026-06-20.
 
 | Signal | Current evidence |
 |---|---|
@@ -32,6 +32,7 @@ Snapshot date: 2026-06-19.
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) checks gallery outputs, privacy, provenance, risky files, and report generation |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
+| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has first-use/template-request issue surfaces |
 
 Do not present these numbers as broad adoption. They are early public signals.
 
@@ -50,7 +51,10 @@ The strongest story is not "many repositories"; it is one maintained workflow:
 4. `scientific-diagram-skill` covers method diagrams, system blocks, signal
    chains, and draw.io exports without copying paper figures or private
    screenshots.
-5. Issues, PR templates, release gates, and changelog entries keep changes
+5. `python-plotting-skill` records the Python side of the same problem with a
+   small Matplotlib gallery, synthetic data, and issue intake for first-use
+   feedback.
+6. Issues, PR templates, release gates, and changelog entries keep changes
    reviewable instead of relying on ad hoc commits.
 
 One recent example is

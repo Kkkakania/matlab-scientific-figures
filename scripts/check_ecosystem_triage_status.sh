@@ -6,6 +6,7 @@ REPOS=(
   "matlab-scientific-figures"
   "matlab-figure-ci"
   "matlab-plotting-skill"
+  "python-plotting-skill"
 )
 
 usage() {
@@ -13,9 +14,9 @@ usage() {
 Usage:
   check_ecosystem_triage_status.sh
 
-Lists open issues and open pull requests for the three MATLAB plotting
-repositories. This is a live maintainer helper for the period before the
-GitHub Project board is created or verified.
+Lists open issues and open pull requests for the tracked plotting repositories.
+This is a live maintainer helper for the period before the GitHub Project board
+is created or verified.
 
 It does not require GitHub Projects scopes; ordinary repository read access is
 enough. Treat the output as a triage snapshot, not an adoption metric.
@@ -56,4 +57,3 @@ for repo in "${REPOS[@]}"; do
     --json number,title,headRefName,updatedAt \
     --jq '.[] | "#\(.number) \(.title) [head: \(.headRefName)] updated=\(.updatedAt)"'
 done
-

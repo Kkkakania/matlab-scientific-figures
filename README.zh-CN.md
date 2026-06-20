@@ -107,9 +107,10 @@ theme = sftTheme("FontName", "Journal Sans", ...
 | [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | clean-room MATLAB gallery、示例、主题、导出 helper 和文档。 |
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | 检查 gallery 输出、来源边界、隐私痕迹、风险文件和 release 状态。 |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | 面向 agent/Codex 的数据到图表选择与渲染 workflow。 |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | 早期 Python 兄弟 skill，用 Matplotlib 做小型科研绘图任务和跨语言选图记录。 |
 | [`scientific-plotting-function-library`](https://github.com/Kkkakania/scientific-plotting-function-library) | 更大的 Python + MATLAB 双语参考库，包含 1000 个 clean-room 模板、79 套色板和更严格的 gallery/release 检查。 |
 
-这些仓库一起维护，但职责分开：模板和图表 API 在这里，自动化检查在 `matlab-figure-ci`，agent-facing 工作流在 `matlab-plotting-skill`。更大的 `scientific-plotting-function-library` 主要作为图形分类、配色设计和大规模 gallery/release gate 的参考面。
+这些仓库一起维护，但职责分开：模板和图表 API 在这里，自动化检查在 `matlab-figure-ci`，MATLAB agent-facing 工作流在 `matlab-plotting-skill`。`python-plotting-skill` 还是早期仓库，作用是把同一类选图问题用 Python 小样例跑通。更大的 `scientific-plotting-function-library` 主要作为图形分类、配色设计和大规模 gallery/release gate 的参考面，不作为主申请叙事。
 
 跨仓库交接只交接可复查的公开产物：gallery 的 PNG/SVG、模板 manifest、`mfigci-report.md`、`.mfigci-results.json`、以及 agent 渲染时生成的 `render_report.md/json`。不要把私有数据集、本地模板文件夹、期刊截图、水印图片、二进制 MATLAB 工程文件或第三方 helper 代码带进这个边界。详细英文说明见 [Ecosystem status](docs/ecosystem-status.md)。
 
