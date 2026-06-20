@@ -2,6 +2,11 @@
 
 Use this before tagging a release.
 
+For a public release, open a
+[Release readiness issue](../.github/ISSUE_TEMPLATE/release_readiness.md) and
+fill in the release reason, local checks, workflow URLs, gallery/docs/manifest
+review, and release-notes draft before tagging.
+
 ## Local Checks
 
 ```bash

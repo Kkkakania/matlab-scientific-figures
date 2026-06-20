@@ -27,7 +27,7 @@ not be used to inflate the main repository.
 | Quality gates | [Quality gates](quality-gates.md), [release checklist](release-checklist.md), and `./scripts/check_static_quality.sh` |
 | CI | [`Quality checks`](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/quality.yml) and [`Figure quality`](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/figure-quality.yml) |
 | PR review | [Pull request template](../.github/pull_request_template.md) with review evidence, local checks, risk/provenance, and release-note prompts |
-| Issue intake | [Issue templates](../.github/ISSUE_TEMPLATE) and [`issue-triage.yml`](../.github/workflows/issue-triage.yml) |
+| Issue intake | [Issue templates](../.github/ISSUE_TEMPLATE), [release readiness template](../.github/ISSUE_TEMPLATE/release_readiness.md), and [`issue-triage.yml`](../.github/workflows/issue-triage.yml) |
 | Maintainer workflow | [Maintainer workflow](openai-codex-workflow.md), [maintainer dashboard](maintainer-dashboard.md), and [release cadence](release-cadence.md) |
 | Clean-room boundary | [Provenance policy](provenance-policy.md), [local resource intake](local-resource-intake.md), and privacy/provenance checks |
 | First-use feedback | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) |

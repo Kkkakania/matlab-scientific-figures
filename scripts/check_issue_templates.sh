@@ -5,9 +5,10 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TEMPLATE="$ROOT_DIR/.github/ISSUE_TEMPLATE/template_request.md"
 QUALITY="$ROOT_DIR/.github/ISSUE_TEMPLATE/quality_check_request.md"
 FIRST_USE="$ROOT_DIR/.github/ISSUE_TEMPLATE/first_use_feedback.md"
+RELEASE_READINESS="$ROOT_DIR/.github/ISSUE_TEMPLATE/release_readiness.md"
 PR_TEMPLATE="$ROOT_DIR/.github/pull_request_template.md"
 
-for file in "$TEMPLATE" "$QUALITY" "$FIRST_USE" "$PR_TEMPLATE"; do
+for file in "$TEMPLATE" "$QUALITY" "$FIRST_USE" "$RELEASE_READINESS" "$PR_TEMPLATE"; do
   if [[ ! -s "$file" ]]; then
     echo "missing GitHub template: ${file#$ROOT_DIR/}" >&2
     exit 1
@@ -28,6 +29,13 @@ require_text "I am not attaching copied figure code" "$TEMPLATE"
 require_text "synthetic" "$TEMPLATE"
 require_text "private datasets, copied figures, or third-party source bundles" "$QUALITY"
 require_text "Private details redacted: yes/no" "$FIRST_USE"
+require_text "Release Readiness" "$RELEASE_READINESS"
+require_text "Coherent User-Visible Reason" "$RELEASE_READINESS"
+require_text "./scripts/check_static_quality.sh" "$RELEASE_READINESS"
+require_text "./scripts/check_release_ready.sh" "$RELEASE_READINESS"
+require_text "Quality checks workflow URL" "$RELEASE_READINESS"
+require_text "Figure quality workflow URL" "$RELEASE_READINESS"
+require_text "No broad adoption, endorsement, or benefit-program approval claims" "$RELEASE_READINESS"
 require_text "Review Evidence" "$PR_TEMPLATE"
 require_text "Risk And Provenance" "$PR_TEMPLATE"
 require_text "Release Notes" "$PR_TEMPLATE"

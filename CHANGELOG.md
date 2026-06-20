@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added a release-readiness issue template so future releases can track the
+  user-visible reason, local checks, workflow URLs, gallery/docs/manifest
+  review, risk boundaries, and release-note draft before tagging.
 - Added an application evidence packet and static check so public application
   materials cite current release, workflow, PR/issue, companion-tool, and
   boundary evidence without overstating adoption.

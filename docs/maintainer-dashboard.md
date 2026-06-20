@@ -57,6 +57,8 @@ Use the issue templates for focused feedback:
   improvements.
 - `Quality or compatibility check`: CI, provenance, privacy, compatibility, or
   release-gate improvements.
+- `Release readiness`: public release evidence, local checks, workflow URLs,
+  gallery/docs/manifest review, and release-note boundaries before tagging.
 
 Keep reports synthetic and reproducible. Do not attach private data, copied
 journal figures, third-party plotting files, or source packs.
