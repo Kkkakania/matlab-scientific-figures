@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Strengthened the pull request template with review evidence, local checks,
+  risk/provenance, and release-note prompts so PR review has a clearer public
+  audit trail.
 - Added an issue-triage checklist workflow so new issues get a bounded
   maintainer checklist for track, evidence level, next state, and synthetic
   reproducer needs while the live GitHub Project board remains pending.
