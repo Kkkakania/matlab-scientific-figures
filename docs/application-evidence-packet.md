@@ -34,7 +34,7 @@ not be used to inflate the main repository.
 | First-use feedback | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) |
 | Project-board tracking | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31), currently pending on GitHub Project scopes |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
-| Agent workflow | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance |
+| Agent workflow | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance and [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams |
 
 ## Verification Commands
 
@@ -64,6 +64,9 @@ Keep the framing factual and narrow:
 - The maintainer workflow includes issue templates, a PR template, release
   readiness checks, provenance/privacy scans, GitHub Actions dependency
   maintenance, and companion CI tooling.
+- Companion agent skills document two recurring maintainer tasks: choosing
+  MATLAB figures from data and preparing clean research diagrams without
+  copying paper figures or private screenshots.
 - API credits or Codex would be used for PR review, issue triage, release-note
   drafting, CI failure analysis, and compact summaries of `matlab-figure-ci`
   reports.

@@ -28,7 +28,7 @@ Snapshot date: 2026-06-19.
 | Maintainer workflow | issue templates, PR template, release checklist, release cadence, provenance policy, and quality gates |
 | Active issue surfaces | first-use feedback, domain example proposals, and ecosystem Project-board tracking |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) checks gallery outputs, privacy, provenance, risky files, and report generation |
-| Agent workflow | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow |
+| Agent workflow | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow and now includes [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for clean Mermaid/draw.io research diagrams |
 
 Do not present these numbers as broad adoption. They are early public signals.
 
@@ -42,7 +42,10 @@ The strongest story is not "many repositories"; it is one maintained workflow:
    publish: gallery outputs, risky files, privacy traces, provenance markers,
    and bounded reports.
 3. `matlab-plotting-skill` documents how an AI agent can choose a plotting
-   pattern, render figures, and produce a redacted first-use report.
+   pattern, render figures, and produce a redacted first-use report. Its
+   `scientific-diagram-skill` companion covers method diagrams, system blocks,
+   signal chains, and draw.io exports without copying paper figures or private
+   screenshots.
 4. Issues, PR templates, release gates, and changelog entries keep changes
    reviewable instead of relying on ad hoc commits.
 

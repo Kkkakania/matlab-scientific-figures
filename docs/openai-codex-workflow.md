@@ -144,6 +144,9 @@ API credits or Codex should be used for real maintainer work:
 - review pull requests for docs, manifest, provenance, and risky-file drift;
 - draft release notes from merged commits for maintainer editing;
 - compare README, template reference, gallery outputs, and manifest entries;
+- prepare clean research-diagram drafts for documentation while keeping
+  `.drawio` source, SVG/PNG exports, and provenance notes separate from MATLAB
+  data plots;
 - generate first-pass comments for incomplete bug reports or first-use reports;
 - inspect CI failures and propose the smallest reproducible fix.
 
@@ -160,6 +163,8 @@ keep claims tied to evidence that can be checked:
 - local release-gate commands and results;
 - GitHub Actions workflow results;
 - dogfooding of `matlab-figure-ci`;
+- companion agent workflows for data-to-figure planning and clean research
+  diagrams;
 - issue links for first-use feedback and accepted maintenance work;
 - public PR review or issue triage comments.
 
