@@ -5,6 +5,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 FIGURE_WORKFLOW="$ROOT_DIR/.github/workflows/figure-quality.yml"
 QUALITY_WORKFLOW="$ROOT_DIR/.github/workflows/quality.yml"
 TRIAGE_WORKFLOW="$ROOT_DIR/.github/workflows/issue-triage.yml"
+DEPENDABOT_CONFIG="$ROOT_DIR/.github/dependabot.yml"
 
 if [[ ! -s "$FIGURE_WORKFLOW" ]]; then
   echo "missing figure-quality workflow" >&2
@@ -18,6 +19,11 @@ fi
 
 if [[ ! -s "$TRIAGE_WORKFLOW" ]]; then
   echo "missing issue triage workflow" >&2
+  exit 1
+fi
+
+if [[ ! -s "$DEPENDABOT_CONFIG" ]]; then
+  echo "missing dependabot configuration" >&2
   exit 1
 fi
 
@@ -71,5 +77,12 @@ require_text "$TRIAGE_WORKFLOW" "Kkkakania/matlab-scientific-figures#31"
 require_text "$TRIAGE_WORKFLOW" "Awaiting feedback"
 reject_text "$TRIAGE_WORKFLOW" "project:"
 reject_text "$TRIAGE_WORKFLOW" "read:project"
+
+require_text "$DEPENDABOT_CONFIG" "version: 2"
+require_text "$DEPENDABOT_CONFIG" "package-ecosystem: github-actions"
+require_text "$DEPENDABOT_CONFIG" 'directory: "/"'
+require_text "$DEPENDABOT_CONFIG" "interval: weekly"
+require_text "$DEPENDABOT_CONFIG" "open-pull-requests-limit: 5"
+require_text "$DEPENDABOT_CONFIG" "prefix: ci"
 
 echo "Workflow maintenance checks passed."

@@ -17,6 +17,13 @@ problems. If a report contains private data, local paths, personal identifiers,
 or unreleased source material, do not paste the material into a public issue.
 Describe the failure mode and use synthetic examples whenever possible.
 
+## Dependency And Workflow Hygiene
+
+GitHub Actions dependencies are monitored with Dependabot through
+`.github/dependabot.yml`. These updates are reviewed like ordinary maintenance
+pull requests: CI must pass, release claims must stay factual, and workflow
+permissions should remain as narrow as practical.
+
 ## What To Avoid
 
 - Personal email, phone numbers, addresses, or school identity details.

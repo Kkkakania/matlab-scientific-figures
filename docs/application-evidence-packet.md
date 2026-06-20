@@ -30,6 +30,7 @@ not be used to inflate the main repository.
 | Issue intake | [Issue templates](../.github/ISSUE_TEMPLATE), [release readiness template](../.github/ISSUE_TEMPLATE/release_readiness.md), and [`issue-triage.yml`](../.github/workflows/issue-triage.yml) |
 | Maintainer workflow | [Maintainer workflow](openai-codex-workflow.md), [maintainer dashboard](maintainer-dashboard.md), and [release cadence](release-cadence.md) |
 | Clean-room boundary | [Provenance policy](provenance-policy.md), [local resource intake](local-resource-intake.md), and privacy/provenance checks |
+| Dependency hygiene | [Security policy](../SECURITY.md), [`dependabot.yml`](../.github/dependabot.yml), and narrow workflow permissions |
 | First-use feedback | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) |
 | Project-board tracking | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31), currently pending on GitHub Project scopes |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
@@ -61,7 +62,8 @@ Keep the framing factual and narrow:
 - It uses clean-room source rules, deterministic synthetic examples, committed
   gallery outputs, and guarded quality checks.
 - The maintainer workflow includes issue templates, a PR template, release
-  readiness checks, provenance/privacy scans, and companion CI tooling.
+  readiness checks, provenance/privacy scans, GitHub Actions dependency
+  maintenance, and companion CI tooling.
 - API credits or Codex would be used for PR review, issue triage, release-note
   drafting, CI failure analysis, and compact summaries of `matlab-figure-ci`
   reports.

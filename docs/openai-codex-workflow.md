@@ -16,7 +16,7 @@ source history, and provenance boundary before changes are merged.
 | Pull request review | PR template, CI checks, local check commands | Review changed files, ask for missing evidence, keep feedback specific |
 | Issue triage | issue templates, labels, Project-board plan | Classify by track, evidence level, and next action |
 | Release workflow | release checklist, release cadence, version plan | Batch coherent user-visible changes, avoid tag churn |
-| Security and provenance | security policy, provenance policy, privacy scans | Reject private data, copied source packs, unclear licenses, or local paths |
+| Security and provenance | security policy, provenance policy, privacy scans, Dependabot for GitHub Actions | Reject private data, copied source packs, unclear licenses, or local paths; review workflow dependency updates like ordinary PRs |
 | Code quality | static checks, MATLAB tests, figure quality checks | Run the smallest useful gate first, then MATLAB-enforced checks before release |
 
 ## Issue Triage
@@ -116,6 +116,9 @@ Security and provenance review is intentionally conservative:
 
 The public repository uses `matlab-figure-ci` to check committed files for
 privacy traces, provenance markers, risky extensions, and gallery-output drift.
+GitHub Actions dependencies are monitored with Dependabot. Those updates still
+need maintainer review and green CI before merge; Dependabot is a reminder, not
+a replacement for review.
 
 ## Code Quality Gates
 

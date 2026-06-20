@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added Dependabot coverage for GitHub Actions and guarded it in the workflow
+  maintenance check so action dependency updates become ordinary reviewed PRs.
 - Added a release-readiness issue template so future releases can track the
   user-visible reason, local checks, workflow URLs, gallery/docs/manifest
   review, risk boundaries, and release-note draft before tagging.
