@@ -41,7 +41,7 @@ application if time has passed.
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance, with a 51-scheme catalog including unit-aware `stacked_time_series` |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
-| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with a 14-template synthetic gallery including `lollipop_ranking` and `paired_before_after`, plus first-use feedback issues |
+| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with a 15-template synthetic gallery including `lollipop_ranking`, `paired_before_after`, and `category_small_multiples`, plus first-use feedback issues |
 
 ## Companion Workflow Snapshot
 
@@ -53,7 +53,7 @@ separate adoption claims. The snapshot below was checked with `gh` on
 |---|---|---|---|
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `a00918e` | [`CI` run `27894967466`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27894967466) and [`Package` run `27894967451`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27894967451) | 0 annotations |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `6fd31e0` | [`Quality` run `27899493672`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27899493672) | 0 annotations |
-| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `1d1d758` | [`Quality` run `27906232479`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27906232479) | 0 annotations |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `48e0a71` | [`Quality` run `27906732960`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27906732960) | 0 annotations |
 
 ## Verification Commands
 
@@ -95,7 +95,7 @@ Keep the framing factual and narrow:
 - Companion agent skills document two recurring maintainer tasks: choosing
   MATLAB figures from data and preparing clean research diagrams without
   copying paper figures or private screenshots.
-- The Python plotting Skill is now public as a small sibling project with 14
+- The Python plotting Skill is now public as a small sibling project with 15
   synthetic Matplotlib templates. It should be cited as early cross-language
   evidence, not as proof of adoption.
 - API credits or Codex would be used for PR review, issue triage, release-note
