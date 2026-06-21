@@ -39,7 +39,7 @@ Companion snapshot checked on 2026-06-21:
 
 | Repository | Evidence boundary |
 |---|---|
-| `matlab-figure-ci` | commit `a00918e`; `CI` run `27894967466` and `Package` run `27894967451`, both successful with 0 annotations |
+| `matlab-figure-ci` | commit `877b589`; `CI` run `27920162827` and `Package` run `27920162825`, both successful with 0 annotations; release-preflight JSON now includes package name and version |
 | `matlab-plotting-skill` | commit `6fd31e0`; `Quality` run `27899493672`, successful with 0 annotations; added unit-aware labels for `stacked_time_series` |
 | `python-plotting-skill` | commit `48e0a71`; `Quality` run `27906732960`, successful with 0 annotations; refreshed the public application-evidence snapshot after adding `category_small_multiples` as the 15th template |
 
