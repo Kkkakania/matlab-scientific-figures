@@ -35,6 +35,14 @@ Snapshot date: 2026-06-21.
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has first-use/template-request issue surfaces |
 
+Companion snapshot checked on 2026-06-21:
+
+| Repository | Evidence boundary |
+|---|---|
+| `matlab-figure-ci` | commit `a00918e`; `CI` run `27894967466` and `Package` run `27894967451`, both successful with 0 annotations |
+| `matlab-plotting-skill` | commit `a28131f`; `Quality` run `27894703366`, successful with 0 annotations |
+| `python-plotting-skill` | commit `4bf723c`; `Quality` run `27895483759`, successful with 0 annotations |
+
 Do not present these numbers as broad adoption. They are early public signals.
 Run `./scripts/check_codex_application_live_snapshot.sh` before copying any
 release, star, fork, or CI wording into an application form.

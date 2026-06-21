@@ -43,6 +43,18 @@ application if time has passed.
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with synthetic gallery outputs and first-use feedback issues |
 
+## Companion Workflow Snapshot
+
+These companion repositories are cited as maintenance workflow evidence, not as
+separate adoption claims. The snapshot below was checked with `gh` on
+2026-06-21 and should be refreshed before submitting an application.
+
+| Repository | Checked commit | Workflow evidence | Annotation status |
+|---|---|---|---|
+| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `a00918e` | [`CI` run `27894967466`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27894967466) and [`Package` run `27894967451`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27894967451) | 0 annotations |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `a28131f` | [`Quality` run `27894703366`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27894703366) | 0 annotations |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `4bf723c` | [`Quality` run `27895483759`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27895483759) | 0 annotations |
+
 ## Verification Commands
 
 Run these before reusing this packet in an application note:
