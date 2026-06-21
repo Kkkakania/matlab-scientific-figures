@@ -33,7 +33,7 @@ Snapshot date: 2026-06-21.
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) checks gallery outputs, privacy, provenance, risky files, and report generation |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow, now including a 51-scheme catalog and unit-aware `stacked_time_series` labels |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
-| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has a 13-template Matplotlib gallery plus first-use/template-request issue surfaces |
+| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has a 14-template Matplotlib gallery plus first-use/template-request issue surfaces |
 
 Companion snapshot checked on 2026-06-21:
 
@@ -41,7 +41,7 @@ Companion snapshot checked on 2026-06-21:
 |---|---|
 | `matlab-figure-ci` | commit `a00918e`; `CI` run `27894967466` and `Package` run `27894967451`, both successful with 0 annotations |
 | `matlab-plotting-skill` | commit `6fd31e0`; `Quality` run `27899493672`, successful with 0 annotations; added unit-aware labels for `stacked_time_series` |
-| `python-plotting-skill` | commit `d880b87`; `Quality` run `27905568715`, successful with 0 annotations; added `lollipop_ranking` as the 13th template |
+| `python-plotting-skill` | commit `bd061bb`; `Quality` run `27905926400`, successful with 0 annotations; added `paired_before_after` as the 14th template |
 
 Do not present these numbers as broad adoption. They are early public signals.
 Run `./scripts/check_codex_application_live_snapshot.sh` before copying any
