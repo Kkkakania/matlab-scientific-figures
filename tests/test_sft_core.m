@@ -1410,6 +1410,18 @@ verifyTrue(testCase, any(denseTemplates.Name == "contour_scatter"));
 verifyEqual(testCase, insetTemplates.Name, "zoomed_inset_line");
 end
 
+function testUncertaintySearchMatchesExactTag(testCase)
+searchMatches = sftFindTemplates("uncertainty");
+tagMatches = sftFindTemplatesByTag("uncertainty");
+
+verifyEqual(testCase, sort(searchMatches.Name), sort(tagMatches.Name));
+verifyEqual(testCase, sort(tagMatches.Name), sort([
+    "confidence_interval"
+    "grouped_error_bar"
+    "uncertainty_fan_chart"
+]));
+end
+
 function testFindTemplatesByTagMatchesExactTags(testCase)
 matrixTemplates = sftFindTemplatesByTag("matrix");
 agreementTemplates = sftFindTemplatesByTag("agreement");
