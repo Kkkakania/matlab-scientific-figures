@@ -1,6 +1,6 @@
 # Application Evidence Packet
 
-Snapshot date: 2026-06-20.
+Snapshot date: 2026-06-21.
 
 This packet gathers public evidence for reviewers who want to understand the
 current MATLAB figure ecosystem without reading every maintenance document. It
@@ -21,6 +21,9 @@ is. `matlab-plotting-skill` shows the agent-facing MATLAB workflow,
 small cross-language sibling.
 
 ## Public Evidence To Cite
+
+Checked with GitHub CLI on 2026-06-21. Refresh this table before submitting an
+application if time has passed.
 
 | Area | Evidence |
 |---|---|
@@ -46,6 +49,13 @@ Run these before reusing this packet in an application note:
 
 ```bash
 ./scripts/check_static_quality.sh
+```
+
+Then refresh the public GitHub snapshot before copying release, star, fork, or
+CI wording into a form:
+
+```bash
+./scripts/check_codex_application_live_snapshot.sh
 ```
 
 When MATLAB is available, run the release gate with MATLAB enforced:

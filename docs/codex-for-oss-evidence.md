@@ -20,7 +20,7 @@ companion repositories, not as separate adoption claims.
 
 ## Current Public Signals
 
-Snapshot date: 2026-06-20.
+Snapshot date: 2026-06-21.
 
 | Signal | Current evidence |
 |---|---|
@@ -36,6 +36,8 @@ Snapshot date: 2026-06-20.
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has first-use/template-request issue surfaces |
 
 Do not present these numbers as broad adoption. They are early public signals.
+Run `./scripts/check_codex_application_live_snapshot.sh` before copying any
+release, star, fork, or CI wording into an application form.
 
 ## Maintenance Chain Worth Citing
 

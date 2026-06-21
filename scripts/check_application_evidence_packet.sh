@@ -27,7 +27,7 @@ reject_text() {
   fi
 }
 
-require_text "Snapshot date: 2026-06-20"
+require_text "Snapshot date: 2026-06-21"
 require_text "not a promise of Codex for Open Source eligibility"
 require_text "If the form asks for a single repository"
 require_text "Kkkakania/matlab-scientific-figures"
@@ -52,6 +52,7 @@ require_text "checked \`.drawio\` and \`.svg\` examples"
 require_text "python-plotting-skill"
 require_text "early cross-language evidence"
 require_text "./scripts/check_static_quality.sh"
+require_text "./scripts/check_codex_application_live_snapshot.sh"
 require_text "./scripts/check_release_ready.sh"
 require_text "hosted GitHub workflows do not prove"
 require_text "Do not claim broad adoption"
