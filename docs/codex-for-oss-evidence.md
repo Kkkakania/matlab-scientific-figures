@@ -41,7 +41,7 @@ Companion snapshot checked on 2026-06-21:
 |---|---|
 | `matlab-figure-ci` | commit `a00918e`; `CI` run `27894967466` and `Package` run `27894967451`, both successful with 0 annotations |
 | `matlab-plotting-skill` | commit `6fd31e0`; `Quality` run `27899493672`, successful with 0 annotations; added unit-aware labels for `stacked_time_series` |
-| `python-plotting-skill` | commit `bd061bb`; `Quality` run `27905926400`, successful with 0 annotations; added `paired_before_after` as the 14th template |
+| `python-plotting-skill` | commit `1d1d758`; `Quality` run `27906232479`, successful with 0 annotations; refreshed the public application-evidence snapshot after adding `paired_before_after` as the 14th template |
 
 Do not present these numbers as broad adoption. They are early public signals.
 Run `./scripts/check_codex_application_live_snapshot.sh` before copying any
