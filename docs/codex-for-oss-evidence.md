@@ -31,7 +31,7 @@ Snapshot date: 2026-06-21.
 | Maintainer workflow | issue templates, PR template, release checklist, release cadence, provenance policy, and quality gates |
 | Active issue surfaces | first-use feedback, domain example proposals, and ecosystem Project-board tracking |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) checks gallery outputs, privacy, provenance, risky files, and report generation |
-| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow |
+| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow, now including a 51-scheme catalog and the `stacked_time_series` scheme |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has first-use/template-request issue surfaces |
 
@@ -40,7 +40,7 @@ Companion snapshot checked on 2026-06-21:
 | Repository | Evidence boundary |
 |---|---|
 | `matlab-figure-ci` | commit `a00918e`; `CI` run `27894967466` and `Package` run `27894967451`, both successful with 0 annotations |
-| `matlab-plotting-skill` | commit `a28131f`; `Quality` run `27894703366`, successful with 0 annotations |
+| `matlab-plotting-skill` | commit `dc13ba0`; `Quality` run `27898635990`, successful with 0 annotations; added `stacked_time_series` as the 51st scheme |
 | `python-plotting-skill` | commit `4bf723c`; `Quality` run `27895483759`, successful with 0 annotations |
 
 Do not present these numbers as broad adoption. They are early public signals.
@@ -84,7 +84,7 @@ and a squash merge.
 - Draft release notes from merged commits for maintainer editing.
 - Compare README, template reference, gallery outputs, and manifest entries
   before releases.
-- Summarize `mfigci` reports into compact maintainer notes.
+- Produce compact summaries of `matlab-figure-ci` reports for maintainer review.
 - Investigate CI failures and propose the smallest fix that preserves the
   clean-room and privacy boundaries.
 

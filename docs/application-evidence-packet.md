@@ -39,7 +39,7 @@ application if time has passed.
 | First-use feedback | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) |
 | Project-board tracking | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31), currently pending on GitHub Project scopes |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
-| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance |
+| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance, with a 51-scheme catalog including `stacked_time_series` |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with synthetic gallery outputs and first-use feedback issues |
 
@@ -52,7 +52,7 @@ separate adoption claims. The snapshot below was checked with `gh` on
 | Repository | Checked commit | Workflow evidence | Annotation status |
 |---|---|---|---|
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `a00918e` | [`CI` run `27894967466`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27894967466) and [`Package` run `27894967451`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27894967451) | 0 annotations |
-| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `a28131f` | [`Quality` run `27894703366`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27894703366) | 0 annotations |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `dc13ba0` | [`Quality` run `27898635990`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27898635990) | 0 annotations |
 | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `4bf723c` | [`Quality` run `27895483759`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27895483759) | 0 annotations |
 
 ## Verification Commands

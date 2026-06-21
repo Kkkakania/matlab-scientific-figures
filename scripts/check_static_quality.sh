@@ -26,6 +26,7 @@ run_step "GitHub Project board docs" ./scripts/check_github_project_board_docs.s
 run_step "ecosystem handoff docs" ./scripts/check_ecosystem_handoff.sh
 run_step "maintainer workflow docs" ./scripts/check_maintainer_workflow.sh
 run_step "Codex application draft" ./scripts/check_codex_application_draft.sh
+run_step "Codex evidence note" ./scripts/check_codex_evidence_note.sh
 run_step "application evidence packet" ./scripts/check_application_evidence_packet.sh
 run_step "GitHub templates" ./scripts/check_issue_templates.sh
 run_step "README first steps" ./scripts/check_readme_first_steps.sh
