@@ -93,7 +93,6 @@ pending:
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | `first-use`, `help wanted`, `good first issue`, `question` |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
-| [`matlab-plotting-skill#19`](https://github.com/Kkkakania/matlab-plotting-skill/issues/19) | `enhancement`, `testing` |
 
 Maintainers can verify those labels with:
 
@@ -237,7 +236,6 @@ maintenance questions rather than synthetic tasks.
 | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | P2 | ci-covered |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | P1 | ci-covered |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | P1 | single-report |
-| [`matlab-plotting-skill#19`](https://github.com/Kkkakania/matlab-plotting-skill/issues/19) | plotting-skill | agent | P2 | reproducible |
 
 When adding more items, prefer open issues or pull requests. Do not add private
 tasks, unreviewed source packs, copied examples, or benefit-program application
@@ -255,7 +253,6 @@ issues after the recent maintenance pass and avoids already-completed work.
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | (blank) | Collect a fresh-clone first-use report. |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | Prepare PyPI only after package-name and install checks are current. |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | (blank) | Collect first-use MATLAB rendering feedback. |
-| [`matlab-plotting-skill#19`](https://github.com/Kkkakania/matlab-plotting-skill/issues/19) | plotting-skill | agent | Triaged | P2 | reproducible | (blank) | Decide whether stacked time-series plots should infer units from common signal names. |
 
 ## Maintenance Rhythm
 

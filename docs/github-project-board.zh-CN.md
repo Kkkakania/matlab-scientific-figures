@@ -58,7 +58,6 @@ gh project list --owner Kkkakania --limit 20
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | `first-use`, `help wanted`, `good first issue`, `question` |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
-| [`matlab-plotting-skill#19`](https://github.com/Kkkakania/matlab-plotting-skill/issues/19) | `enhancement`, `testing` |
 
 维护者可以用下面的脚本核验这些标签是否还在：
 
@@ -156,7 +155,6 @@ field:"Release target" not empty
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | （留空） | 收集 fresh-clone 首次使用反馈。 |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | 等 package name 和安装检查都最新后，再准备 PyPI。 |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | （留空） | 收集第一次 MATLAB 渲染反馈。 |
-| [`matlab-plotting-skill#19`](https://github.com/Kkkakania/matlab-plotting-skill/issues/19) | plotting-skill | agent | Triaged | P2 | reproducible | （留空） | 判断 stacked time-series 图是否应该根据常见信号名自动补单位。 |
 
 ## 每周维护节奏
 
