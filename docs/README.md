@@ -49,6 +49,7 @@ docs if you want to change the project.
 - [Maintainer activity](maintainer-activity.md)
 - [Ecosystem status](ecosystem-status.md)
 - [Codex for OSS evidence note](codex-for-oss-evidence.md)
+- [Codex for OSS application draft](codex-for-oss-application-draft.md)
 - [Application evidence packet](application-evidence-packet.md)
 - [JSON envelope compatibility](json-envelope-compatibility.md)
 - [Provenance policy](provenance-policy.md)
