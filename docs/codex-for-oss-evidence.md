@@ -7,15 +7,16 @@ For a shorter reviewer-facing packet, use
 
 ## Repository To Use In The Form
 
-For the current skill-first application story, use the agent-facing skill
-repository as the main application repository:
+If the form asks for a single repository, use the main gallery/API repository:
 
-<https://github.com/Kkkakania/matlab-plotting-skill>
+<https://github.com/Kkkakania/matlab-scientific-figures>
 
-Reason: the strongest current story is not only a MATLAB gallery. It is an
-agent workflow for choosing, rendering, checking, and reviewing scientific
-figures. This repository remains the public gallery and API evidence surface.
-`matlab-figure-ci` remains the quality gate.
+Reason: this repo has the public release history, clean-room MATLAB gallery,
+reusable APIs, documentation, issue/PR workflow, and CI evidence. The stronger
+story is still broader than a gallery: `matlab-plotting-skill` demonstrates the
+agent-facing data-to-figure workflow, and `matlab-figure-ci` demonstrates the
+quality gate used to keep figure repositories publishable. Cite those as
+companion repositories, not as separate adoption claims.
 
 ## Current Public Signals
 
@@ -90,11 +91,13 @@ and a squash merge.
 
 ## Draft: Why This Repository Qualifies
 
-`matlab-plotting-skill` is an agent-facing workflow for MATLAB scientific
-plotting. It helps Codex inspect data, choose an appropriate figure pattern,
-render through MATLAB CLI, and produce a redacted report for maintainer review.
-The ecosystem is early, but it already has clean-room gallery evidence,
-provenance checks, issue/PR templates, and a companion CI tool for figure QA.
+`matlab-scientific-figures` is a clean-room MATLAB gallery and plotting API
+library for scientific figures. It gives Codex a concrete maintenance surface:
+checked examples, deterministic synthetic data, quality gates, release
+checklists, issue/PR templates, and a companion workflow for agent-assisted
+data-to-figure rendering through `matlab-plotting-skill`. The ecosystem is
+early, but it already has provenance checks, green CI, and a companion CI tool
+for figure QA.
 
 ## Draft: API Credit Use
 

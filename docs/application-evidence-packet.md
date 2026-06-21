@@ -9,16 +9,16 @@ ChatGPT Pro access.
 
 ## Main Repository
 
-For the current skill-first application story, use this repository as the main
-application repository:
+If the form asks for a single repository, use this repository as the main application repository:
 
-<https://github.com/Kkkakania/matlab-plotting-skill>
+<https://github.com/Kkkakania/matlab-scientific-figures>
 
-This is the repository that exposes the agent-facing MATLAB plotting skill and
-the scientific diagram skill. `matlab-scientific-figures` remains the clean-room
-gallery and MATLAB API evidence surface. `matlab-figure-ci` remains the
-companion quality gate. The repos should be described as one maintenance
-workflow, not as inflated adoption.
+Reason: this repo has the public release history, committed clean-room gallery,
+MATLAB APIs, documentation, issue/PR templates, and quality gates. The skill
+repositories are still important, but they should be cited as companion workflow evidence rather than used to make the application look larger than it
+is. `matlab-plotting-skill` shows the agent-facing MATLAB workflow,
+`matlab-figure-ci` shows the CI/quality gate, and `python-plotting-skill` is a
+small cross-language sibling.
 
 ## Public Evidence To Cite
 
@@ -62,8 +62,9 @@ non-MATLAB quality gates and the dogfooded `matlab-figure-ci` checks.
 
 Keep the framing factual and narrow:
 
-- The primary application repo is an early public MATLAB plotting skill.
-- This gallery repo is the clean-room MATLAB API and example evidence surface.
+- The primary application repo is `matlab-scientific-figures`.
+- The companion skill repo shows how an agent can choose and render MATLAB
+  figures from data.
 - It uses clean-room source rules, deterministic synthetic examples, committed
   gallery outputs, and guarded quality checks.
 - The maintainer workflow includes issue templates, a PR template, release
@@ -87,5 +88,5 @@ Do not cite private local folders, unreviewed figure packs, raw datasets,
 screenshots, or non-public conversations. Do not use companion repositories to
 make the main project look larger than it is.
 
-The honest claim is that the project has a real maintenance system for a
-practical agent-assisted plotting problem, not that it is already widely adopted.
+The honest claim is that the main gallery has a real maintenance system around
+a practical agent-assisted plotting problem. It is not already widely adopted.

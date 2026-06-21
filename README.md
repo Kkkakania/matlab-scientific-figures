@@ -293,8 +293,10 @@ For reviewers and OSS-program evaluators, [Maintainer workflow](docs/openai-code
 summarizes the public maintenance loop: PR review, issue triage, release
 workflow, security/provenance review, and code-quality gates.
 The companion [Codex for OSS evidence note](docs/codex-for-oss-evidence.md)
-tracks how this gallery supports the skill-first application story without
-turning this README into a benefits-program pitch.
+tracks how this repository can be cited as the main application repo while the
+skill and CI repositories provide the surrounding workflow evidence. It is kept
+out of the README body so the project page does not turn into a benefits-program
+pitch.
 
 ## License And Provenance
 
