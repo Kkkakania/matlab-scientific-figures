@@ -167,6 +167,7 @@ theme = sftTheme( ...
 | `sftPlotRidgeline(ax, values, labels, theme)` | Draw compact stacked density profiles for groups. |
 | `sftPlotPositiveNegativeArea(ax, x, y, baseline, theme)` | Draw signed deviations around a baseline. |
 | `sftPlotZoomedInsetLine(fig, x, y, zoomRange, theme)` | Draw a full trend with a detailed inset window. |
+| `sftPlotStackedTimeSeries(fig, time, values, labels, units, theme)` | Draw stacked signals that share one time axis. |
 | `sftPlotCalendarHeatmap(ax, values, weekLabels, dayLabels, theme)` | Draw daily values in a day-by-week heatmap. |
 | `sftPlotBubbleMatrix(ax, matrix, rowLabels, colLabels, theme)` | Draw matrix magnitudes with bubble area and color. |
 | `sftPlotDoubleTriangleHeatmap(ax, upperValues, lowerValues, labels, theme)` | Compare two square matrices in one layout. |

@@ -301,6 +301,22 @@ switch kind
         data.y = y;
         data.zoomRange = [10.9 14.8];
 
+    case "stacked_time_series"
+        time = linspace(0, 0.24, 360);
+        eventCenter = 0.115;
+        eventWidth = 0.018;
+        disturbance = exp(-0.5 * ((time - eventCenter) / eventWidth) .^ 2);
+        voltage = 1.0 - 0.12 * disturbance + 0.012 * sin(2 * pi * 50 * time) ...
+            + 0.003 * randn(size(time));
+        current = 42 + 18 * disturbance + 4.5 * sin(2 * pi * 50 * time - 0.45) ...
+            + 0.65 * randn(size(time));
+        power = 58 + 23 * disturbance + 5.8 * sin(2 * pi * 8 * time + 0.3) ...
+            + 0.75 * randn(size(time));
+        data.time = time;
+        data.values = [voltage; current; power];
+        data.labels = ["Voltage", "Current", "Power"];
+        data.units = ["p.u.", "A", "kW"];
+
     case "calendar_heatmap"
         startDate = datetime(2026, 1, 5);
         dates = startDate + caldays(0:83);

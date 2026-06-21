@@ -153,14 +153,14 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh po
 
 ## Gallery
 
-The gallery on `main` contains 30 examples. These 8 are a quick scan of the
+The gallery on `main` contains 31 examples. These 8 are a quick scan of the
 range.
 
 <table>
   <tr>
     <td><img src="gallery/contour_scatter.png" width="210" alt="Contour scatter"><br>Contour scatter</td>
     <td><img src="gallery/sankey_flow.png" width="210" alt="Sankey flow"><br>Sankey flow</td>
-    <td><img src="gallery/zoomed_inset_line.png" width="210" alt="Zoomed inset line"><br>Zoomed inset line</td>
+    <td><img src="gallery/stacked_time_series.png" width="210" alt="Stacked time series"><br>Stacked time series</td>
     <td><img src="gallery/parallel_coordinates.png" width="210" alt="Parallel coordinates"><br>Parallel coordinates</td>
   </tr>
   <tr>
@@ -179,7 +179,7 @@ scatter plots, Bland-Altman agreement plots, grouped bars, error bars,
 butterfly comparisons, paired slopegraphs, forest plots, waterfall charts,
 waffle charts, ridgeline plots, signed area charts, heatmaps, double-triangle
 heatmaps, zoomed inset lines, correlation bubbles, bubble matrices, calendar
-heatmaps, box plots with jittered observations, radar charts, lollipop
+heatmaps, stacked time-series plots, box plots with jittered observations, radar charts, lollipop
 rankings, Sankey-style flows, multi-panel layouts, parallel coordinates, and
 3D surfaces.
 

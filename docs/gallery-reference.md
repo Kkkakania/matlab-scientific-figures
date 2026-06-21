@@ -11,6 +11,7 @@ renderer in `examples/` and a name accepted by `sftRenderExamples`.
 | `confidence_interval` | <img src="../gallery/confidence_interval.png" width="220" alt="Confidence interval"> | A trend needs an uncertainty band |
 | `uncertainty_fan_chart` | <img src="../gallery/uncertainty_fan_chart.png" width="220" alt="Uncertainty fan chart"> | Forecast uncertainty widens over a horizon |
 | `zoomed_inset_line` | <img src="../gallery/zoomed_inset_line.png" width="220" alt="Zoomed inset line"> | The whole trend matters, but one event needs detail |
+| `stacked_time_series` | <img src="../gallery/stacked_time_series.png" width="220" alt="Stacked time series"> | Several synchronized signals share one time base |
 | `calendar_heatmap` | <img src="../gallery/calendar_heatmap.png" width="220" alt="Calendar heatmap"> | Daily values need a compact week-by-day view |
 | `positive_negative_area` | <img src="../gallery/positive_negative_area.png" width="220" alt="Positive negative area"> | Signed deviations around zero matter |
 

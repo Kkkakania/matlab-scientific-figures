@@ -62,6 +62,7 @@ sftWriteTemplateManifest()
 | `correlation_bubble` | `renderCorrelationBubble` | Show correlation strength and sign | `matrix`, `correlation` |
 | `double_triangle_heatmap` | `renderDoubleTriangleHeatmap` | Compare two pairwise matrices | `matrix`, `comparison` |
 | `zoomed_inset_line` | `renderZoomedInsetLine` | Show a long trend and local event | `trend`, `inset` |
+| `stacked_time_series` | `renderStackedTimeSeries` | Compare synchronized signals on one time axis | `trend`, `time` |
 | `calendar_heatmap` | `renderCalendarHeatmap` | Show daily values over weeks | `time`, `heatmap` |
 | `bubble_matrix` | `renderBubbleMatrix` | Show matrix magnitude with bubble area | `matrix`, `bubble` |
 | `box_jitter` | `renderBoxJitter` | Compare distributions and observations | `distribution`, `points` |

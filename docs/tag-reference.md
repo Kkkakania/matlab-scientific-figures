@@ -31,7 +31,7 @@ MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh ta
 | `change` | 2 | `positive_negative_area`, `waterfall_chart` |
 | `distribution` | 2 | `box_jitter`, `ridgeline_plot` |
 | `profile` | 2 | `radar_chart`, `parallel_coordinates` |
-| `trend` | 2 | `line_plot`, `zoomed_inset_line` |
+| `trend` | 3 | `line_plot`, `zoomed_inset_line`, `stacked_time_series` |
 
 ## Specific Tags
 

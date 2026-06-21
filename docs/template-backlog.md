@@ -12,10 +12,10 @@ resource collection into public backlog items.
 
 ## Current Coverage
 
-The current gallery on `main` has 30 examples covering trends, uncertainty, dense
+The current gallery on `main` has 31 examples covering trends, uncertainty, dense
 x-y structure, grouped comparison, distributions, matrices, rankings,
 multivariate profiles, daily patterns, three-part composition, estimate intervals,
-method agreement, paired change, cumulative contribution steps, flow structure,
+method agreement, synchronized time-series signals, paired change, cumulative contribution steps, flow structure,
 multi-panel figures, and one 3D surface.
 New work should improve real user workflows before adding more chart types.
 
@@ -24,6 +24,7 @@ New work should improve real user workflows before adding more chart types.
 | Need | Example |
 |---|---|
 | Time trend | `line_plot` |
+| Synchronized signals | `stacked_time_series` |
 | Daily pattern | `calendar_heatmap` |
 | Uncertainty band | `confidence_interval`, `uncertainty_fan_chart` |
 | Three-part composition | `ternary_scatter` |

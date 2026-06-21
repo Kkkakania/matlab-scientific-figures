@@ -87,6 +87,8 @@ gallery:
     - "surface_3d.svg"
     - "zoomed_inset_line.png"
     - "zoomed_inset_line.svg"
+    - "stacked_time_series.png"
+    - "stacked_time_series.svg"
 
 strict:
   fail_on_warnings: false

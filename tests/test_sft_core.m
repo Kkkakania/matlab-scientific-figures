@@ -305,6 +305,22 @@ verifyTrue(testCase, all(data.median <= data.p75));
 verifyTrue(testCase, all(data.p75 <= data.p90));
 end
 
+function testStackedTimeSeriesDataUsesSharedTimeAxis(testCase)
+data = sftExampleData('stacked_time_series');
+
+verifyTrue(testCase, isfield(data, 'time'));
+verifyTrue(testCase, isfield(data, 'values'));
+verifyTrue(testCase, isfield(data, 'labels'));
+verifyTrue(testCase, isfield(data, 'units'));
+verifyEqual(testCase, size(data.values, 1), 3);
+verifyEqual(testCase, size(data.values, 2), numel(data.time));
+verifyEqual(testCase, numel(data.labels), 3);
+verifyEqual(testCase, numel(data.units), 3);
+verifyTrue(testCase, all(isfinite(data.time)));
+verifyTrue(testCase, all(isfinite(data.values(:))));
+verifyGreaterThan(testCase, min(diff(data.time)), 0);
+end
+
 function testTernaryScatterDataUsesClosedCompositions(testCase)
 data = sftExampleData('ternary_scatter');
 
@@ -1354,7 +1370,7 @@ function testTemplateRegistryDefinesGalleryExamples(testCase)
 registry = sftTemplateRegistry();
 names = string({registry.Name}).';
 
-verifyEqual(testCase, numel(registry), 30);
+verifyEqual(testCase, numel(registry), 31);
 verifyEqual(testCase, numel(unique(names)), numel(names));
 verifyTrue(testCase, any(names == "contour_scatter"));
 verifyTrue(testCase, any(names == "parallel_coordinates"));
@@ -1366,9 +1382,29 @@ verifyTrue(testCase, any(names == "ternary_scatter"));
 verifyTrue(testCase, any(names == "forest_plot"));
 verifyTrue(testCase, any(names == "waterfall_chart"));
 verifyTrue(testCase, any(names == "bland_altman_plot"));
+verifyTrue(testCase, any(names == "stacked_time_series"));
 verifyTrue(testCase, all(arrayfun(@(item) isa(item.Renderer, 'function_handle'), registry)));
 verifyTrue(testCase, all(arrayfun(@(item) strlength(item.Task) > 0, registry)));
 verifyTrue(testCase, all(arrayfun(@(item) ~isempty(item.Tags), registry)));
+end
+
+function testPlotStackedTimeSeriesCreatesLinkedAxes(testCase)
+data = sftExampleData('stacked_time_series');
+theme = sftTheme('FigureSize', [14 10]);
+fig = figure('Visible', 'off', 'Units', 'centimeters', ...
+    'Position', [1 1 theme.FigureSize]);
+cleanup = onCleanup(@() close(fig));
+
+[layout, axesHandles, lineHandles] = sftPlotStackedTimeSeries( ...
+    fig, data.time, data.values, data.labels, data.units, theme);
+
+verifyEqual(testCase, layout.GridSize, [3 1]);
+verifyEqual(testCase, size(axesHandles), [3 1]);
+verifyEqual(testCase, size(lineHandles), [3 1]);
+verifyEqual(testCase, get(axesHandles(1), 'XLim'), get(axesHandles(2), 'XLim'));
+verifyEqual(testCase, get(axesHandles(1), 'XLim'), get(axesHandles(3), 'XLim'));
+verifyEqual(testCase, string(get(get(axesHandles(3), 'XLabel'), 'String')), "Time (s)");
+verifyEqual(testCase, string(get(get(axesHandles(1), 'YLabel'), 'String')), "Voltage (p.u.)");
 end
 
 function testListTemplatesReturnsUserFacingTable(testCase)
@@ -1453,7 +1489,7 @@ end
 function testTemplateManifestIncludesFilesAndTags(testCase)
 manifest = sftTemplateManifest();
 
-verifyEqual(testCase, numel(manifest), 30);
+verifyEqual(testCase, numel(manifest), 31);
 verifyTrue(testCase, isfield(manifest, 'Name'));
 verifyTrue(testCase, isfield(manifest, 'RendererName'));
 verifyTrue(testCase, isfield(manifest, 'ExampleFile'));
@@ -1474,6 +1510,15 @@ verifyEqual(testCase, string(linePlot.SyntheticDataKind), "line");
 verifyEqual(testCase, linePlot.SyntheticDataSeed, int64(20260530));
 verifyEqual(testCase, string(linePlot.SyntheticDataRng), "twister");
 verifyTrue(testCase, any(string(linePlot.Tags) == "trend"));
+
+stacked = manifest(names == "stacked_time_series");
+verifyEqual(testCase, string(stacked.RendererName), "renderStackedTimeSeries");
+verifyEqual(testCase, string(stacked.ExampleFile), "examples/renderStackedTimeSeries.m");
+verifyEqual(testCase, string(stacked.PngFile), "gallery/stacked_time_series.png");
+verifyEqual(testCase, string(stacked.SvgFile), "gallery/stacked_time_series.svg");
+verifyEqual(testCase, string(stacked.SyntheticDataKind), "stacked_time_series");
+verifyTrue(testCase, any(string(stacked.Tags) == "trend"));
+verifyTrue(testCase, any(string(stacked.Tags) == "time"));
 end
 
 function testWriteTemplateManifestCreatesJsonFile(testCase)

@@ -29,6 +29,7 @@ expected=(
   correlation_bubble
   double_triangle_heatmap
   zoomed_inset_line
+  stacked_time_series
   calendar_heatmap
   bubble_matrix
   box_jitter

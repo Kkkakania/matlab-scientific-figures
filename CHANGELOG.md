@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added the clean-room `stacked_time_series` template, reusable
+  `sftPlotStackedTimeSeries` API, gallery outputs, manifest metadata, and
+  tests for synchronized multi-signal time-series figures.
 - Added Dependabot coverage for GitHub Actions and guarded it in the workflow
   maintenance check so action dependency updates become ordinary reviewed PRs.
 - Relaxed workflow-version guards to reject outdated action majors without

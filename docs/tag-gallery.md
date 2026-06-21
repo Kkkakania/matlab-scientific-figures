@@ -160,14 +160,16 @@ Regenerate it with:
 
 - `surface_3d` - Show a smooth 3D response ([PNG](../gallery/surface_3d.png), [SVG](../gallery/surface_3d.svg))
 
-## time (1)
+## time (2)
 
+- `stacked_time_series` - Compare synchronized signals on one time axis ([PNG](../gallery/stacked_time_series.png), [SVG](../gallery/stacked_time_series.svg))
 - `calendar_heatmap` - Show daily values over weeks ([PNG](../gallery/calendar_heatmap.png), [SVG](../gallery/calendar_heatmap.svg))
 
-## trend (2)
+## trend (3)
 
 - `line_plot` - Show time trend ([PNG](../gallery/line_plot.png), [SVG](../gallery/line_plot.svg))
 - `zoomed_inset_line` - Show a long trend and local event ([PNG](../gallery/zoomed_inset_line.png), [SVG](../gallery/zoomed_inset_line.svg))
+- `stacked_time_series` - Compare synchronized signals on one time axis ([PNG](../gallery/stacked_time_series.png), [SVG](../gallery/stacked_time_series.svg))
 
 ## uncertainty (3)
 

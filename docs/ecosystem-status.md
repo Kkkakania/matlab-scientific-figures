@@ -46,7 +46,7 @@ source packs, or full local paths in feedback.
 
 ## Maintenance Signals
 
-- The main gallery keeps 30 committed clean-room PNG/SVG examples.
+- The main gallery keeps 31 committed clean-room PNG/SVG examples.
 - The main gallery dogfoods `matlab-figure-ci` in GitHub Actions for static
   figure-repository checks.
 - `matlab-plotting-skill now runs mfigci check` in its public quality workflow

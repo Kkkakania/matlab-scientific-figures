@@ -1,7 +1,7 @@
 # Domain Examples
 
 Domain examples are standalone MATLAB examples that reuse the public plotting
-helpers without expanding the core 30-template gallery registry. They are useful
+helpers without expanding the core gallery registry. They are useful
 for testing whether the library can support realistic research and engineering
 stories while keeping the public repository clean-room and synthetic.
 

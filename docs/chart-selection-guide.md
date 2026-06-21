@@ -7,6 +7,7 @@ Choose the figure by the communication task first, not by decoration.
 | Show time trend | `line_plot` | One or more signals change over an ordered axis |
 | Show uncertainty | `confidence_interval` | Estimates need confidence bands or prediction ranges |
 | Show forecast uncertainty | `uncertainty_fan_chart` | Uncertainty widens over a forecast or scenario horizon |
+| Compare synchronized signals | `stacked_time_series` | Voltage/current/power, sensors, or logs share one time base but need separate scales |
 | Show signed change | `positive_negative_area` | Positive and negative deviations from a baseline both matter |
 | Show daily pattern | `calendar_heatmap` | Day-of-week and week-to-week changes both matter |
 | Show group relationship | `scatter_plot` | Points belong to categories or operating states |

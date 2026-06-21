@@ -11,6 +11,7 @@ the gallery wrappers.
 Start from the chart, not the code:
 
 - time series: `examples/renderLinePlot.m`
+- synchronized signals: `examples/renderStackedTimeSeries.m`
 - signed change: `examples/renderPositiveNegativeArea.m`
 - uncertainty band: `examples/renderConfidenceInterval.m`
 - method comparison with uncertainty: `examples/renderGroupedErrorBar.m`
@@ -24,7 +25,7 @@ label or color later than to unwind a complicated plot.
 
 ## 2. Call The Reusable Plot Function
 
-All 30 templates expose small plotting functions in `src/`, so you can keep
+All 31 templates expose small plotting functions in `src/`, so you can keep
 your own data loading code separate from the gallery examples. For example, a
 matrix heatmap can be drawn directly into an axes:
 
