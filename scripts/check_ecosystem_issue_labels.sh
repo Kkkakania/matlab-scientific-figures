@@ -64,6 +64,7 @@ check_issue_labels "matlab-scientific-figures" 30 template enhancement
 check_issue_labels "matlab-scientific-figures" 9 first-use "help wanted" "good first issue" question
 check_issue_labels "matlab-figure-ci" 1 enhancement
 check_issue_labels "matlab-plotting-skill" 11 testing feedback
+check_issue_labels "matlab-plotting-skill" 19 enhancement testing
 
 if [[ "$missing" -ne 0 ]]; then
   echo "One or more interim triage labels are missing." >&2
