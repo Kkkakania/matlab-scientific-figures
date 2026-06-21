@@ -78,6 +78,13 @@ Run this from the repository root before reusing the draft:
 ./scripts/check_static_quality.sh
 ```
 
+Then refresh the live GitHub snapshot before copying stats or CI wording into a
+form:
+
+```bash
+./scripts/check_codex_application_live_snapshot.sh
+```
+
 If MATLAB is available, also run:
 
 ```bash

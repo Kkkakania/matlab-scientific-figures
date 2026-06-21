@@ -42,7 +42,13 @@ require_text "Form answer: how API credits or Codex would be used"
 require_text "real maintainer work"
 require_text "不要写下载量、外部背书、公司认可或通过承诺"
 require_text "./scripts/check_static_quality.sh"
+require_text "./scripts/check_codex_application_live_snapshot.sh"
 require_text "./scripts/check_release_ready.sh"
+
+if [[ ! -x "$ROOT_DIR/scripts/check_codex_application_live_snapshot.sh" ]]; then
+  echo "Codex application live snapshot helper is missing or not executable" >&2
+  exit 1
+fi
 
 if ! grep -Fq "(codex-for-oss-application-draft.md)" "$DOC_INDEX"; then
   echo "docs index does not link Codex application draft" >&2
