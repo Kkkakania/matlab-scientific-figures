@@ -27,7 +27,7 @@ Snapshot date: 2026-06-21.
 | Public repository | `Kkkakania/matlab-scientific-figures` is public |
 | Current release | [`v3.8.0`](https://github.com/Kkkakania/matlab-scientific-figures/releases/tag/v3.8.0) |
 | Public repo stats | 6 GitHub stars, 4 forks at the snapshot time |
-| CI | `Quality checks` and `Figure quality` workflows are green on recent `main` commits |
+| CI | `Quality checks` and `Figure quality` workflows are green and annotation-free on the current checked `main` snapshot |
 | Maintainer workflow | issue templates, PR template, release checklist, release cadence, provenance policy, and quality gates |
 | Active issue surfaces | first-use feedback, domain example proposals, and ecosystem Project-board tracking |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) checks gallery outputs, privacy, provenance, risky files, and report generation |

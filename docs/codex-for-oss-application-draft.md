@@ -32,7 +32,7 @@ Checked with GitHub CLI on 2026-06-21:
 | Main repository | `Kkkakania/matlab-scientific-figures`, public |
 | Current release | `v3.8.0` |
 | Public stats | 6 stars, 4 forks at the snapshot time |
-| Latest verified CI | `Quality checks` and `Figure quality` passed on `main` |
+| Latest verified CI | `Quality checks` and `Figure quality` passed on `main` and were annotation-free at snapshot time |
 | Main feedback surfaces | `#9` first-use feedback, `#30` domain examples, `#31` Project-board tracking |
 | Companion checks | `matlab-figure-ci`, `mfigci.yml`, `mfigci-report.md`, and `.mfigci-results.json` |
 

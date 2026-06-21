@@ -74,17 +74,25 @@ else
   exit 1
 fi
 
-runs_json="$(gh run list -R "$REPO" --limit 10 --json workflowName,status,conclusion,headSha,url,createdAt)"
+runs_json="$(gh run list -R "$REPO" --limit 10 --json databaseId,workflowName,status,conclusion,headSha,url,createdAt)"
 
 for workflow in "${EXPECTED_WORKFLOWS[@]}"; do
   conclusion="$(printf '%s' "$runs_json" | latest_run_field "$workflow" "conclusion")"
   status="$(printf '%s' "$runs_json" | latest_run_field "$workflow" "status")"
   run_url="$(printf '%s' "$runs_json" | latest_run_field "$workflow" "url")"
+  run_id="$(printf '%s' "$runs_json" | latest_run_field "$workflow" "databaseId")"
   if [[ "$status" != "completed" || "$conclusion" != "success" ]]; then
     echo "latest $workflow run is not green: status=$status conclusion=$conclusion" >&2
     exit 1
   fi
-  echo "OK $workflow: $run_url"
+  annotation_count="$(
+    gh run view "$run_id" -R "$REPO" --json jobs --jq '[.jobs[].annotations[]?] | length'
+  )"
+  if [[ "$annotation_count" != "0" ]]; then
+    echo "latest $workflow run has $annotation_count GitHub annotation(s): $run_url" >&2
+    exit 1
+  fi
+  echo "OK $workflow: $run_url (no annotations)"
 done
 
 cat <<EOF
@@ -94,5 +102,5 @@ Codex application live snapshot:
 - Latest release: $release_tag
 - Stars: $stars
 - Forks: $forks
-- CI: latest Quality checks and Figure quality runs are successful
+- CI: latest Quality checks and Figure quality runs are successful and annotation-free
 EOF
