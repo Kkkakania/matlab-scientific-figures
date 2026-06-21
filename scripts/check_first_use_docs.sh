@@ -5,6 +5,9 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DOC="$ROOT_DIR/docs/first-use-test.md"
 TEMPLATE="$ROOT_DIR/.github/ISSUE_TEMPLATE/first_use_feedback.md"
 COLLECTOR="$ROOT_DIR/scripts/collect_first_use_feedback.sh"
+CLI_GUIDE="$ROOT_DIR/docs/matlab-cli-guide.md"
+QUALITY_GATES="$ROOT_DIR/docs/quality-gates.md"
+PROVENANCE_POLICY="$ROOT_DIR/docs/provenance-policy.md"
 
 for file in "$DOC" "$TEMPLATE"; do
   if [[ ! -s "$file" ]]; then
@@ -23,6 +26,11 @@ done
 grep -q "Do not paste private paths" "$DOC"
 grep -q "collect_first_use_feedback.sh" "$DOC"
 grep -q "I avoided private data" "$TEMPLATE"
+grep -q 'MATLAB_BIN="/c/Program Files/MATLAB/R2025a/bin/matlab.exe"' "$CLI_GUIDE"
+grep -q "include the \`.exe\` suffix" "$CLI_GUIDE"
+grep -q "\`cmd.exe\` is not a target shell" "$CLI_GUIDE"
+grep -q "what the green badges and local checks actually mean" "$QUALITY_GATES"
+grep -q "why the examples are synthetic" "$PROVENANCE_POLICY"
 bash -n "$COLLECTOR"
 
 TMP_DIR="$(mktemp -d)"

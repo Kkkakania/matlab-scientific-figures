@@ -23,6 +23,20 @@ Common executable locations:
 On Windows, run the helper scripts from Git Bash, WSL, or another Bash-compatible
 shell. From PowerShell, call MATLAB directly with `-batch`.
 
+Git Bash example:
+
+```bash
+MATLAB_BIN="/c/Program Files/MATLAB/R2025a/bin/matlab.exe" ./scripts/render_all.sh list
+MATLAB_BIN="/c/Program Files/MATLAB/R2025a/bin/matlab.exe" ./scripts/render_all.sh search matrix
+MATLAB_BIN="/c/Program Files/MATLAB/R2025a/bin/matlab.exe" ./scripts/render_all.sh tag matrix
+MATLAB_BIN="/c/Program Files/MATLAB/R2025a/bin/matlab.exe" ./scripts/render_all.sh csv-example
+```
+
+Keep the quotes around `MATLAB_BIN` when the path contains `Program Files`, and
+include the `.exe` suffix. `cmd.exe` is not a target shell for
+`scripts/render_all.sh`; use Git Bash/WSL for the shell wrapper or call MATLAB
+directly from PowerShell.
+
 PowerShell example:
 
 ```powershell

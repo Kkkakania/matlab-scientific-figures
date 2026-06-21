@@ -1,5 +1,10 @@
 # Quality Gates
 
+For users, this page explains what the green badges and local checks actually mean
+before you trust a figure in a report or paper. For contributors, it is the
+checklist for proving that a change did not break the gallery, docs, provenance
+boundary, or release metadata.
+
 This repository uses small checks instead of one large opaque release script.
 Run the combined gate before tagging:
 

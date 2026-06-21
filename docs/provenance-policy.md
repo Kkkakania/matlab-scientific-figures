@@ -1,5 +1,10 @@
 # Provenance Policy
 
+For users, this page explains why the examples are synthetic and why the public
+gallery avoids copied paper figures, private datasets, local paths, and
+watermarked material. For contributors, it is the rule for deciding whether an
+idea can enter the repository as clean-room code.
+
 This repository uses a clean-room approach.
 
 ## Allowed
