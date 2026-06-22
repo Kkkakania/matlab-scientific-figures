@@ -40,7 +40,7 @@ Companion snapshot checked on 2026-06-22:
 | Repository | Evidence boundary |
 |---|---|
 | `matlab-figure-ci` | commit `877b589`; `CI` run `27920162827` and `Package` run `27920162825`, both successful with 0 annotations; release-preflight JSON now includes package name and version |
-| `matlab-plotting-skill` | commit `f09dcca`; `Quality` run `27926156956`, successful with 0 annotations; refreshed the application evidence snapshot and kept scientific diagram checks, including Diagram example validation, in the public workflow |
+| `matlab-plotting-skill` | commit `9fd2478`; `Quality` run `27928892308`, successful with 0 annotations; refreshed the application-evidence CI snapshot and kept scientific diagram checks, including Diagram example validation, in the public workflow |
 | `python-plotting-skill` | commit `fc9b1f4`; `Quality` run `27925041264`, successful with 0 annotations; records the README template-count guard after `category_small_multiples` became the 15th template and refreshes the Python application-evidence snapshot |
 
 Do not present these numbers as broad adoption. They are early public signals.

@@ -52,7 +52,7 @@ separate adoption claims. The snapshot below was checked with `gh` on
 | Repository | Checked commit | Workflow evidence | Annotation status |
 |---|---|---|---|
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `877b589` | [`CI` run `27920162827`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162827) and [`Package` run `27920162825`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162825) | 0 annotations |
-| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `f09dcca` | [`Quality` run `27926156956`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27926156956), including Diagram example validation | 0 annotations |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `9fd2478` | [`Quality` run `27928892308`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27928892308), including Diagram example validation and refreshed application-evidence CI snapshot | 0 annotations |
 | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `fc9b1f4` | [`Quality` run `27925041264`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27925041264) | 0 annotations |
 
 ## Verification Commands
