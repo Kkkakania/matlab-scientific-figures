@@ -11,6 +11,7 @@ channels, and maintenance signals without claiming broad adoption.
 | [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | Main gallery and reusable MATLAB plotting APIs | Clean-room examples, `sftPlot*.m` APIs, themes, export helpers, gallery docs, release notes |
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | Quality gate for figure repositories | Gallery output checks, provenance/privacy scans, risky-file checks, release preflight reports |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | Agent-facing plotting workflow | CSV/Excel/MAT inspection, scheme selection, MATLAB CLI rendering, render reports |
+| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | Agent-facing research diagram workflow | Mermaid drafts, editable `.drawio` source, SVG previews, diagram provenance notes |
 | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | Early Python sibling Skill | Matplotlib examples, chart-selection notes, synthetic gallery outputs, small first-use feedback surface |
 
 ## Handoff Contract
@@ -24,6 +25,7 @@ that another maintainer can inspect from a clean clone.
 | `matlab-scientific-figures` | `gallery/*.png and gallery/*.svg`, `docs/template-manifest.json`, `mfigci.yml` | `matlab-figure-ci` | `mfigci check --config mfigci.yml --report mfigci-report.md` |
 | `matlab-figure-ci` | `mfigci-report.md and .mfigci-results.json` | Maintainer review, release notes, issue triage | Review error/warning counts, redacted findings, gallery status, and optional render status |
 | `matlab-plotting-skill` | `render_report.md and render_report.json`, generated PNG/SVG outputs, selected scheme explanation | User feedback issue or future gallery/template request | Share the redacted report summary and selected scheme, then decide whether the chart task belongs in this gallery |
+| `scientific-diagram-skill` | `.drawio` source, SVG preview, and provenance note | Diagram feedback issue or future docs/gallery handoff | Check that the diagram is clean-room, editable, and free of paper-figure tracing or private metadata |
 | `python-plotting-skill` | `docs/gallery/*.png and docs/gallery/*.svg`, chart-selection notes, repository check output | Maintainer review or future cross-language template request | Check that the Python example answers the same figure question without copying MATLAB-only implementation details |
 
 Do not move private datasets, local template folders, journal screenshots,
@@ -38,6 +40,7 @@ enters a public repository.
 |---|---|---|
 | Fresh clone of the main gallery/API | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | OS, MATLAB version, commit, commands run, selected template, failure or confusing step |
 | Agent-assisted data-to-figure rendering | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | Data shape summary, selected scheme, report summary, redacted command output |
+| Research diagram Skill first use | [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | Diagram type, Mermaid draft usefulness, whether `.drawio` source was needed, provenance or handoff confusion |
 | Python plotting Skill first use | [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | Python version, command run, chart tried, output readability, confusing setup step |
 | CI or release preflight for figure repos | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | Package workflow result, preflight JSON summary, clean-install notes |
 
@@ -55,6 +58,9 @@ source packs, or full local paths in feedback.
   do not include MATLAB.
 - The skill repository provides a separate first-render path for users who want
   an agent to choose a chart from their own data.
+- `scientific-diagram-skill` is now a separate public Skill repository for
+  Mermaid and draw.io research diagrams, with a checked `.drawio` example and a
+  first-use feedback issue.
 - `python-plotting-skill` is public and intentionally small. It should gather
   first-use feedback before it becomes a larger template library.
 - JSON payloads are documented producer by producer. See

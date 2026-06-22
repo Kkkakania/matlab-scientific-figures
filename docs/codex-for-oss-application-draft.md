@@ -21,6 +21,7 @@ main object:
 - `matlab-scientific-figures`: main clean-room MATLAB gallery, APIs, docs, and release workflow.
 - `matlab-figure-ci`: companion CI tool for gallery, privacy, provenance, risky-file, and report checks.
 - `matlab-plotting-skill`: agent-facing MATLAB data-to-figure workflow.
+- `scientific-diagram-skill`: companion Skill for Mermaid and draw.io research diagrams.
 - `python-plotting-skill`: early Python sibling used as cross-language evidence, not adoption proof.
 
 ## Verified public snapshot
@@ -45,13 +46,13 @@ Companion repository rows in the evidence packet are checked baselines, not late
 Use this as a starting point, then adjust to the exact form limit:
 
 ```text
-matlab-scientific-figures is a clean-room MATLAB scientific figure library with deterministic gallery and domain examples, reusable plotting APIs, committed PNG/SVG outputs, provenance/privacy checks, issue and PR templates, release checklists, and green CI. It is maintained with companion tooling: matlab-figure-ci for figure QA and matlab-plotting-skill for agent-assisted data-to-figure workflows.
+matlab-scientific-figures is a clean-room MATLAB scientific figure library with deterministic gallery and domain examples, reusable plotting APIs, committed PNG/SVG outputs, provenance/privacy checks, issue and PR templates, release checklists, and green CI. It is maintained with companion tooling: matlab-figure-ci for figure QA, matlab-plotting-skill for agent-assisted data-to-figure workflows, and scientific-diagram-skill for clean Mermaid/draw.io research diagrams.
 ```
 
 Shorter version:
 
 ```text
-matlab-scientific-figures is a clean-room MATLAB figure library with reproducible gallery and domain examples, reusable plotting APIs, committed gallery outputs, provenance/privacy checks, issue/PR templates, release gates, and green CI. It is paired with matlab-figure-ci and matlab-plotting-skill for real maintainer workflows.
+matlab-scientific-figures is a clean-room MATLAB figure library with reproducible gallery and domain examples, reusable plotting APIs, committed gallery outputs, provenance/privacy checks, issue/PR templates, release gates, and green CI. It is paired with matlab-figure-ci, matlab-plotting-skill, and scientific-diagram-skill for real maintainer workflows.
 ```
 
 ## Form answer: how API credits or Codex would be used
@@ -63,12 +64,12 @@ I would use Codex/API credits for real maintainer work: reviewing PRs for docs, 
 ## Optional extra note
 
 ```text
-The project is early and should be evaluated as a maintained open-source workflow, not as an adoption-volume story. The value is the clean-room gallery, reproducible examples, quality gates, and companion tools for agent-assisted scientific plotting.
+The project is early and should be evaluated as a maintained open-source workflow, not as an adoption-volume story. The value is the clean-room gallery, reproducible examples, quality gates, and companion tools for agent-assisted scientific plotting and research diagrams.
 ```
 
 ## 中文维护说明
 
-表单如果只能填一个仓库，填 `matlab-scientific-figures`。这个仓库最适合作为主申请对象，因为它有 release、gallery、CI、issue/PR 模板、来源边界和维护文档。`matlab-figure-ci`、`matlab-plotting-skill`、`python-plotting-skill` 可以作为配套证据，但不要写成多个项目都有大量采用。
+表单如果只能填一个仓库，填 `matlab-scientific-figures`。这个仓库最适合作为主申请对象，因为它有 release、gallery、CI、issue/PR 模板、来源边界和维护文档。`matlab-figure-ci`、`matlab-plotting-skill`、`scientific-diagram-skill`、`python-plotting-skill` 可以作为配套证据，但不要写成多个项目都有大量采用。
 
 提交前只引用可复查事实：公开仓库、release、CI 链接、issue、PR、检查脚本和文档。不要写下载量、外部背书、公司认可或通过承诺。
 

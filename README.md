@@ -25,13 +25,15 @@ tooling ecosystem:
 | [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | Main clean-room MATLAB gallery, examples, themes, export helpers, and documentation. |
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | Companion CLI/CI quality gate used to check gallery outputs, provenance, privacy, and risky files. |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | Agent Skill for choosing and rendering MATLAB figures from user CSV, Excel, or MAT data. |
+| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | Companion Skill for clean Mermaid and draw.io / diagrams.net research diagrams. |
 | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | Early Python sibling skill for small Matplotlib plotting tasks and cross-language chart-selection notes. |
 | [`scientific-plotting-function-library`](https://github.com/Kkkakania/scientific-plotting-function-library) | Larger Python + MATLAB reference library with 1000 clean-room templates, 79 palettes, and stricter gallery/release gates. |
 
 The repositories are maintained together, but each has a separate scope:
-templates live here, automated quality checks live in `matlab-figure-ci`, and
-MATLAB agent-facing plotting workflows live in `matlab-plotting-skill`. The
-new `python-plotting-skill` is a small sibling project, useful when the same
+templates live here, automated quality checks live in `matlab-figure-ci`,
+MATLAB agent-facing plotting workflows live in `matlab-plotting-skill`, and
+research diagrams now live in `scientific-diagram-skill`. The new
+`python-plotting-skill` is a small sibling project, useful when the same
 chart-selection problem needs a Python example instead of MATLAB. The broader
 `scientific-plotting-function-library` is used as an extended reference surface
 for template taxonomy, palette design, and large-gallery release checks; it is

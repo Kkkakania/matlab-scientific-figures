@@ -17,8 +17,8 @@ Reason: this repo has the public release history, committed clean-room gallery,
 MATLAB APIs, documentation, issue/PR templates, and quality gates. The skill
 repositories are still important, but they should be cited as companion workflow evidence rather than used to make the application look larger than it
 is. `matlab-plotting-skill` shows the agent-facing MATLAB workflow,
-`matlab-figure-ci` shows the CI/quality gate, and `python-plotting-skill` is a
-small cross-language sibling.
+`matlab-figure-ci` shows the CI/quality gate, `scientific-diagram-skill` covers
+research diagrams, and `python-plotting-skill` is a small cross-language sibling.
 
 ## Public Evidence To Cite
 
@@ -41,7 +41,7 @@ application if time has passed.
 | Project-board tracking | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31), currently pending on GitHub Project scopes |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance, with a 51-scheme catalog, unit-aware `stacked_time_series`, and redacted data-shape feedback summaries |
-| Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
+| Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with a 15-template synthetic gallery including `lollipop_ranking`, `paired_before_after`, and `category_small_multiples`, plus first-use feedback issues and a README template-count guard |
 
 ## Companion Workflow Snapshot
@@ -55,6 +55,7 @@ Rows below are checked baselines, not latest-commit claims.
 |---|---|---|---|
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `4f064fa` | [`CI` run `27937231749`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231749) and [`Package` run `27937231695`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231695) | 0 annotations |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `5dfe425` | [`Quality` run `27937069270`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27937069270), including Diagram example validation and refreshed application-evidence CI snapshot | 0 annotations |
+| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | `5483537` | [`Quality` run `27938632703`](https://github.com/Kkkakania/scientific-diagram-skill/actions/runs/27938632703), including `.drawio` XML, SVG preview, provenance, and skill metadata checks | 0 annotations |
 | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `8292dd2` | [`Quality` run `27937426099`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27937426099) | 0 annotations |
 
 ## Verification Commands
@@ -96,7 +97,8 @@ Keep the framing factual and narrow:
   maintenance, and companion CI tooling.
 - Companion agent skills document two recurring maintainer tasks: choosing
   MATLAB figures from data and preparing clean research diagrams without
-  copying paper figures or private screenshots.
+  copying paper figures or private screenshots. The diagram skill is now a
+  separate public repository with its own quality workflow and first-use issue.
 - The Python plotting Skill is now public as a small sibling project with 15
   synthetic Matplotlib templates. It should be cited as early cross-language
   evidence, not as proof of adoption.

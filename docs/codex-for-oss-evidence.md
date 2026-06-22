@@ -15,8 +15,9 @@ Reason: this repo has the public release history, clean-room MATLAB gallery,
 reusable APIs, documentation, issue/PR workflow, and CI evidence. The stronger
 story is still broader than a gallery: `matlab-plotting-skill` demonstrates the
 agent-facing data-to-figure workflow, and `matlab-figure-ci` demonstrates the
-quality gate used to keep figure repositories publishable. Cite those as
-companion repositories, not as separate adoption claims.
+quality gate used to keep figure repositories publishable.
+`scientific-diagram-skill` covers the related research-diagram workflow. Cite
+those as companion repositories, not as separate adoption claims.
 
 ## Current Public Signals
 
@@ -33,7 +34,7 @@ Snapshot date: 2026-06-22.
 | Domain examples | `pv-power`, `harmonic-spectrum`, and `three-phase`, tracked through [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) and documented as deterministic synthetic domain examples |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) checks gallery outputs, privacy, provenance, risky files, and report generation |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow, now including a 51-scheme catalog, unit-aware `stacked_time_series` labels, and redacted data-shape feedback summaries |
-| Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
+| Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has a 15-template Matplotlib gallery plus first-use/template-request issue surfaces |
 
 Companion snapshot checked on 2026-06-22. These are checked baselines, not latest-commit claims:
@@ -42,6 +43,7 @@ Companion snapshot checked on 2026-06-22. These are checked baselines, not lates
 |---|---|
 | `matlab-figure-ci` | commit `4f064fa`; `CI` run `27937231749` and `Package` run `27937231695`, both successful with 0 annotations; release-preflight JSON now includes package name and version |
 | `matlab-plotting-skill` | commit `5dfe425`; `Quality` run `27937069270`, successful with 0 annotations; refreshed the application-evidence CI snapshot and kept scientific diagram checks, including Diagram example validation, in the public workflow |
+| `scientific-diagram-skill` | commit `5483537`; `Quality` run `27938632703`, successful with 0 annotations; publishes the diagram Skill as its own public repository with checked `.drawio`, SVG, provenance, and skill metadata |
 | `python-plotting-skill` | commit `8292dd2`; `Quality` run `27937426099`, successful with 0 annotations; records the README template-count guard after `category_small_multiples` became the 15th template and refreshes the Python application-evidence snapshot |
 
 Do not present these numbers as broad adoption. They are early public signals.
