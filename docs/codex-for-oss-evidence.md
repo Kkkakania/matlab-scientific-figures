@@ -35,7 +35,7 @@ Snapshot date: 2026-06-22.
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has a 15-template Matplotlib gallery plus first-use/template-request issue surfaces |
 
-Companion snapshot checked on 2026-06-22:
+Companion snapshot checked on 2026-06-22. These are checked baselines, not latest-commit claims:
 
 | Repository | Evidence boundary |
 |---|---|

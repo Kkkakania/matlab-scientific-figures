@@ -48,6 +48,7 @@ application if time has passed.
 These companion repositories are cited as maintenance workflow evidence, not as
 separate adoption claims. The snapshot below was checked with `gh` on
 2026-06-22 and should be refreshed before submitting an application.
+Rows below are checked baselines, not latest-commit claims.
 
 | Repository | Checked commit | Workflow evidence | Annotation status |
 |---|---|---|---|
