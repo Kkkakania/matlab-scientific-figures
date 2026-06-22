@@ -26,15 +26,17 @@ reject_text() {
   fi
 }
 
-require_text "Snapshot date: 2026-06-21"
+require_text "Snapshot date: 2026-06-22"
 require_text "Approval is not promised"
 require_text "https://github.com/Kkkakania/matlab-scientific-figures"
 require_text "Do not submit three repositories"
 require_text "v3.8.0"
 require_text "6 stars, 4 forks"
+require_text "Checked with GitHub CLI on 2026-06-22"
 require_text "Quality checks"
 require_text "Figure quality"
 require_text "annotation-free"
+require_text "not latest-commit claims"
 require_text "matlab-figure-ci"
 require_text "matlab-plotting-skill"
 require_text "python-plotting-skill"

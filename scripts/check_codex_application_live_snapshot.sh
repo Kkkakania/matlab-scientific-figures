@@ -15,6 +15,27 @@ need_cmd() {
 need_cmd gh
 need_cmd python3
 
+gh_retry() {
+  local attempt=1
+  local max_attempts="${GH_RETRY_ATTEMPTS:-3}"
+  local delay="${GH_RETRY_DELAY_SECONDS:-1}"
+  local output status
+
+  while true; do
+    if output="$(gh "$@" 2>&1)"; then
+      printf '%s\n' "$output"
+      return 0
+    fi
+    status=$?
+    if [[ "$output" != *"EOF"* && "$output" != *"HTTP 5"* && "$output" != *"timeout"* ]] || [[ "$attempt" -ge "$max_attempts" ]]; then
+      printf '%s\n' "$output" >&2
+      return "$status"
+    fi
+    sleep "$delay"
+    attempt=$((attempt + 1))
+  done
+}
+
 json_get() {
   local expr="$1"
   python3 -c 'import json, sys
@@ -49,7 +70,7 @@ else:
     print("")' "$workflow" "$field"
 }
 
-repo_json="$(gh repo view "$REPO" --json nameWithOwner,visibility,stargazerCount,forkCount,latestRelease,url)"
+repo_json="$(gh_retry repo view "$REPO" --json nameWithOwner,visibility,stargazerCount,forkCount,latestRelease,url)"
 
 visibility="$(printf '%s' "$repo_json" | json_get "visibility")"
 release_tag="$(printf '%s' "$repo_json" | json_get "latestRelease.tagName")"
@@ -74,7 +95,7 @@ else
   exit 1
 fi
 
-runs_json="$(gh run list -R "$REPO" --limit 10 --json databaseId,workflowName,status,conclusion,headSha,url,createdAt)"
+runs_json="$(gh_retry run list -R "$REPO" --limit 10 --json databaseId,workflowName,status,conclusion,headSha,url,createdAt)"
 
 for workflow in "${EXPECTED_WORKFLOWS[@]}"; do
   conclusion="$(printf '%s' "$runs_json" | latest_run_field "$workflow" "conclusion")"
@@ -86,7 +107,7 @@ for workflow in "${EXPECTED_WORKFLOWS[@]}"; do
     exit 1
   fi
   annotation_count="$(
-    gh run view "$run_id" -R "$REPO" --json jobs --jq '[.jobs[].annotations[]?] | length'
+    gh_retry run view "$run_id" -R "$REPO" --json jobs --jq '[.jobs[].annotations[]?] | length'
   )"
   if [[ "$annotation_count" != "0" ]]; then
     echo "latest $workflow run has $annotation_count GitHub annotation(s): $run_url" >&2

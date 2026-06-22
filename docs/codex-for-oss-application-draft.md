@@ -1,6 +1,6 @@
 # Codex for OSS application draft
 
-Snapshot date: 2026-06-21.
+Snapshot date: 2026-06-22.
 
 This page is a copy-ready draft for a future Codex for Open Source application.
 Approval is not promised. Update the public stats and CI links before
@@ -25,7 +25,7 @@ main object:
 
 ## Verified public snapshot
 
-Checked with GitHub CLI on 2026-06-21:
+Checked with GitHub CLI on 2026-06-22:
 
 | Item | Evidence |
 |---|---|
@@ -37,6 +37,7 @@ Checked with GitHub CLI on 2026-06-21:
 | Companion checks | `matlab-figure-ci`, `mfigci.yml`, `mfigci-report.md`, and `.mfigci-results.json` |
 
 These numbers are early public signals. Do not describe them as adoption volume.
+Companion repository rows in the evidence packet are checked baselines, not latest-commit claims.
 
 ## Form answer: why this repository qualifies
 
