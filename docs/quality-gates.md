@@ -56,7 +56,8 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | CLI script static checks | `./scripts/check_cli_script_static.sh` | Shell helper drift for format selection or documented CLI examples |
 | render_all argument checks | `./scripts/check_render_all_args.sh` | Broken non-MATLAB validation for export formats and output paths |
 | Timeout helper | `./scripts/check_timeout_helper.sh` | Timeout wrapper regressions before MATLAB checks rely on it |
-| Forbidden files | `./scripts/check_forbidden_files.sh` | `.p`, `.fig`, `.mat`, Office files, PDFs, archives, raw/OCR/tmp folders |
+| Forbidden file self-test | `./scripts/check_forbidden_files_selftest.sh` | Drift in the forbidden-file scanner itself, using temporary `.venv`, `.egg-info`, `.mex*`, `mfigci-report.md`, and `.mfigci-results.json` fixtures |
+| Forbidden files | `./scripts/check_forbidden_files.sh` | `.p`, `.fig`, `.mat`, `.mex*`, Office files, PDFs, archives, Python caches/build output, local mfigci reports, raw/OCR/tmp/work folders |
 | Privacy scan | `./scripts/check_privacy.sh` | Emails, local paths, personal identifiers, and platform traces |
 | Provenance scan | `./scripts/check_provenance.sh` | Third-party author, license, platform, or source-pack traces |
 | Local resource intake | `./scripts/check_local_resource_intake.sh` | Drift in private-prototype boundaries, backlog intake language, and clean-room promotion rules |

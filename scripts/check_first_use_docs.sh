@@ -30,6 +30,9 @@ grep -q 'MATLAB_BIN="/c/Program Files/MATLAB/R2025a/bin/matlab.exe"' "$CLI_GUIDE
 grep -q "include the \`.exe\` suffix" "$CLI_GUIDE"
 grep -q "\`cmd.exe\` is not a target shell" "$CLI_GUIDE"
 grep -q "what the green badges and local checks actually mean" "$QUALITY_GATES"
+grep -q "check_forbidden_files_selftest.sh" "$QUALITY_GATES"
+grep -q ".mex*" "$QUALITY_GATES"
+grep -q "mfigci-report.md" "$QUALITY_GATES"
 grep -q "why the examples are synthetic" "$PROVENANCE_POLICY"
 bash -n "$COLLECTOR"
 
