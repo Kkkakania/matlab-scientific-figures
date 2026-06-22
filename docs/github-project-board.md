@@ -36,12 +36,18 @@ download volume, or external program eligibility.
 Live board creation is tracked in
 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31).
 
-As of 2026-06-20, the local `gh` token used for repository maintenance can read
-and update issues, but it does not have GitHub Projects scopes. The CLI command
-`gh project list --owner Kkkakania` returns a missing `read:project` scope error.
-Until that token is refreshed or the board is created in the GitHub web UI, use
-this document, the issue-triage workflow, and the interim label checks as the
-public setup checklist and seed queue.
+As of 2026-06-22, the local `gh` token used for repository maintenance can read
+and update issues, but it does not have GitHub Projects scopes. The current
+`gh auth status` scope line is:
+
+```text
+Token scopes: 'gist', 'read:org', 'repo', 'workflow'
+```
+
+The CLI command `gh project list --owner Kkkakania` still returns a missing
+`read:project` scope error. Until that token is refreshed or the board is
+created in the GitHub web UI, use this document, the issue-triage workflow, and
+the interim label checks as the public setup checklist and seed queue.
 
 To enable CLI setup later, refresh the token with:
 

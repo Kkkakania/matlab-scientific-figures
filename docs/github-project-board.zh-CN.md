@@ -20,7 +20,13 @@ MATLAB Scientific Figure Ecosystem
 
 公开看板的创建任务记录在 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31)。
 
-截至 2026-06-20，本地维护用的 `gh` token 可以读写 issue，但没有 GitHub Projects 权限。运行下面的命令会返回缺少 `read:project` scope：
+截至 2026-06-22，本地维护用的 `gh` token 可以读写 issue，但仍然没有 GitHub Projects 权限。当前 `gh auth status` 显示的 scope 是：
+
+```text
+Token scopes: 'gist', 'read:org', 'repo', 'workflow'
+```
+
+也就是说，它能做普通仓库维护和 Actions 工作流相关操作，但不能读取或创建 GitHub Projects。运行下面的命令仍会返回缺少 `read:project` scope：
 
 ```bash
 gh project list --owner Kkkakania --limit 20
