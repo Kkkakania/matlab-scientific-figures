@@ -53,7 +53,7 @@ separate adoption claims. The snapshot below was checked with `gh` on
 |---|---|---|---|
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `877b589` | [`CI` run `27920162827`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162827) and [`Package` run `27920162825`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162825) | 0 annotations |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `49711e1` | [`Quality` run `27923803978`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27923803978) | 0 annotations |
-| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `48e0a71` | [`Quality` run `27906732960`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27906732960) | 0 annotations |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `0c76af2` | [`Quality` run `27924618583`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27924618583) | 0 annotations |
 
 ## Verification Commands
 

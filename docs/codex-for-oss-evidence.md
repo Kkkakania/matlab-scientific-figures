@@ -41,7 +41,7 @@ Companion snapshot checked on 2026-06-22:
 |---|---|
 | `matlab-figure-ci` | commit `877b589`; `CI` run `27920162827` and `Package` run `27920162825`, both successful with 0 annotations; release-preflight JSON now includes package name and version |
 | `matlab-plotting-skill` | commit `49711e1`; `Quality` run `27923803978`, successful with 0 annotations; added `--data-shape` feedback summaries after the unit-aware `stacked_time_series` label work |
-| `python-plotting-skill` | commit `48e0a71`; `Quality` run `27906732960`, successful with 0 annotations; refreshed the public application-evidence snapshot after adding `category_small_multiples` as the 15th template |
+| `python-plotting-skill` | commit `0c76af2`; `Quality` run `27924618583`, successful with 0 annotations; corrected the public 15-template README count after `category_small_multiples` and refreshed the Python application-evidence snapshot |
 
 Do not present these numbers as broad adoption. They are early public signals.
 Run `./scripts/check_codex_application_live_snapshot.sh` before copying any
