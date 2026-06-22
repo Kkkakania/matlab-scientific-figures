@@ -9,6 +9,9 @@ scope, and where feedback should go.
 - Current released line: `v3.8.0`.
 - Main branch gallery: 31 clean-room examples with committed PNG and SVG
   outputs.
+- Domain examples: three deterministic synthetic electrical examples
+  (`pv-power`, `harmonic-spectrum`, and `three-phase`) tracked in
+  [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30).
 - Companion CI tool: `matlab-figure-ci` is dogfooded at `v2.5.0`.
 - MATLAB rendering in GitHub Actions: disabled by default because public
   runners normally do not include MATLAB.

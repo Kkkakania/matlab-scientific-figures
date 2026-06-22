@@ -34,6 +34,7 @@ Checked with GitHub CLI on 2026-06-22:
 | Public stats | 6 stars, 4 forks at the snapshot time |
 | Latest verified CI | `Quality checks` and `Figure quality` passed on `main` and were annotation-free at snapshot time |
 | Main feedback surfaces | `#9` first-use feedback, `#30` domain examples, `#31` Project-board tracking |
+| Domain examples | `pv-power`, `harmonic-spectrum`, and `three-phase`, all deterministic synthetic standalone examples |
 | Companion checks | `matlab-figure-ci`, `mfigci.yml`, `mfigci-report.md`, and `.mfigci-results.json` |
 
 These numbers are early public signals. Do not describe them as adoption volume.
@@ -44,13 +45,13 @@ Companion repository rows in the evidence packet are checked baselines, not late
 Use this as a starting point, then adjust to the exact form limit:
 
 ```text
-matlab-scientific-figures is a clean-room MATLAB scientific figure library with deterministic gallery examples, reusable plotting APIs, committed PNG/SVG outputs, provenance/privacy checks, issue and PR templates, release checklists, and green CI. It is maintained with companion tooling: matlab-figure-ci for figure QA and matlab-plotting-skill for agent-assisted data-to-figure workflows.
+matlab-scientific-figures is a clean-room MATLAB scientific figure library with deterministic gallery and domain examples, reusable plotting APIs, committed PNG/SVG outputs, provenance/privacy checks, issue and PR templates, release checklists, and green CI. It is maintained with companion tooling: matlab-figure-ci for figure QA and matlab-plotting-skill for agent-assisted data-to-figure workflows.
 ```
 
 Shorter version:
 
 ```text
-matlab-scientific-figures is a clean-room MATLAB figure library with reproducible examples, reusable plotting APIs, committed gallery outputs, provenance/privacy checks, issue/PR templates, release gates, and green CI. It is paired with matlab-figure-ci and matlab-plotting-skill for real maintainer workflows.
+matlab-scientific-figures is a clean-room MATLAB figure library with reproducible gallery and domain examples, reusable plotting APIs, committed gallery outputs, provenance/privacy checks, issue/PR templates, release gates, and green CI. It is paired with matlab-figure-ci and matlab-plotting-skill for real maintainer workflows.
 ```
 
 ## Form answer: how API credits or Codex would be used
