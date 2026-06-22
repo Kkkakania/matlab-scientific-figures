@@ -9,6 +9,7 @@ forbidden_extensions=(
   "*.docx"
   "*.fig"
   "*.mat"
+  "*.mex*"
   "*.mlx"
   "*.p"
   "*.pdf"
