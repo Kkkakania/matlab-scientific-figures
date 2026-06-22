@@ -37,6 +37,7 @@ application if time has passed.
 | Clean-room boundary | [Provenance policy](provenance-policy.md), [local resource intake](local-resource-intake.md), and privacy/provenance checks |
 | Dependency hygiene | [Security policy](../SECURITY.md), [`dependabot.yml`](../.github/dependabot.yml), and narrow workflow permissions |
 | First-use feedback | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) |
+| Domain examples | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) and [domain examples](domain-examples.md), currently covering `pv-power`, `harmonic-spectrum`, and `three-phase` with deterministic synthetic data |
 | Project-board tracking | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31), currently pending on GitHub Project scopes |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance, with a 51-scheme catalog, unit-aware `stacked_time_series`, and redacted data-shape feedback summaries |

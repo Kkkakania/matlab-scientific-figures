@@ -25,9 +25,10 @@ reject_text() {
   fi
 }
 
-require_text "Snapshot date: 2026-06-20"
+require_text "Snapshot date: 2026-06-22"
 require_text "not an adoption claim"
 require_text "## Own Repositories"
+require_text "three electrical domain examples"
 require_text "render_all.sh help examples"
 require_text "init verification guidance"
 require_text "stable first-use scheme list"

@@ -261,7 +261,7 @@ issues after the recent maintenance pass and avoids already-completed work.
 | Item | Repository | Track | Suggested status | Suggested priority | Evidence level | Release target | Next action |
 |---|---|---|---|---|---|---|---|
 | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | scientific-figures | ecosystem-docs | In progress | P1 | reproducible | (blank) | Create or verify the live GitHub Project board. |
-| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | Awaiting feedback | P2 | ci-covered | (blank) | Wait for feedback on the PV and harmonic-spectrum examples before expanding the pack. |
+| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | Awaiting feedback | P2 | ci-covered | (blank) | Wait for feedback on the PV, harmonic-spectrum, and three-phase examples before expanding the pack. |
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | (blank) | Collect a fresh-clone first-use report. |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | Prepare PyPI only after package-name and install checks are current. |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | (blank) | Collect first-use MATLAB rendering feedback. |

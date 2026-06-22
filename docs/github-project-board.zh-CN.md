@@ -160,7 +160,7 @@ field:"Release target" not empty
 | 条目 | 仓库 | Track | 建议状态 | 建议优先级 | 证据等级 | Release target | 下一步 |
 |---|---|---|---|---|---|---|---|
 | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | scientific-figures | ecosystem-docs | In progress | P1 | reproducible | （留空） | 创建或核验公开 GitHub Project 看板。 |
-| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | Awaiting feedback | P2 | ci-covered | （留空） | 等待 PV 与 harmonic-spectrum 示例反馈，再决定是否扩展电气工程 pack。 |
+| [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | Awaiting feedback | P2 | ci-covered | （留空） | 等待 PV、harmonic-spectrum 与 three-phase 示例反馈，再决定是否扩展电气工程 pack。 |
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | （留空） | 收集 fresh-clone 首次使用反馈。 |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | 等 package name 和安装检查都最新后，再准备 PyPI。 |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | （留空） | 收集第一次 MATLAB 渲染反馈。 |

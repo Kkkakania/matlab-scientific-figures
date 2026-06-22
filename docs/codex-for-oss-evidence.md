@@ -30,6 +30,7 @@ Snapshot date: 2026-06-22.
 | CI | `Quality checks` and `Figure quality` workflows are green and annotation-free on the current checked `main` snapshot |
 | Maintainer workflow | issue templates, PR template, release checklist, release cadence, provenance policy, and quality gates |
 | Active issue surfaces | first-use feedback, domain example proposals, and ecosystem Project-board tracking |
+| Domain examples | `pv-power`, `harmonic-spectrum`, and `three-phase`, tracked through [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) and documented as deterministic synthetic domain examples |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) checks gallery outputs, privacy, provenance, risky files, and report generation |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow, now including a 51-scheme catalog, unit-aware `stacked_time_series` labels, and redacted data-shape feedback summaries |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
