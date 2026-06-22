@@ -20,7 +20,7 @@ companion repositories, not as separate adoption claims.
 
 ## Current Public Signals
 
-Snapshot date: 2026-06-21.
+Snapshot date: 2026-06-22.
 
 | Signal | Current evidence |
 |---|---|
@@ -31,16 +31,16 @@ Snapshot date: 2026-06-21.
 | Maintainer workflow | issue templates, PR template, release checklist, release cadence, provenance policy, and quality gates |
 | Active issue surfaces | first-use feedback, domain example proposals, and ecosystem Project-board tracking |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) checks gallery outputs, privacy, provenance, risky files, and report generation |
-| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow, now including a 51-scheme catalog and unit-aware `stacked_time_series` labels |
+| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) turns data-to-figure decisions into a repeatable agent-facing workflow, now including a 51-scheme catalog, unit-aware `stacked_time_series` labels, and redacted data-shape feedback summaries |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has a 15-template Matplotlib gallery plus first-use/template-request issue surfaces |
 
-Companion snapshot checked on 2026-06-21:
+Companion snapshot checked on 2026-06-22:
 
 | Repository | Evidence boundary |
 |---|---|
 | `matlab-figure-ci` | commit `877b589`; `CI` run `27920162827` and `Package` run `27920162825`, both successful with 0 annotations; release-preflight JSON now includes package name and version |
-| `matlab-plotting-skill` | commit `6fd31e0`; `Quality` run `27899493672`, successful with 0 annotations; added unit-aware labels for `stacked_time_series` |
+| `matlab-plotting-skill` | commit `49711e1`; `Quality` run `27923803978`, successful with 0 annotations; added `--data-shape` feedback summaries after the unit-aware `stacked_time_series` label work |
 | `python-plotting-skill` | commit `48e0a71`; `Quality` run `27906732960`, successful with 0 annotations; refreshed the public application-evidence snapshot after adding `category_small_multiples` as the 15th template |
 
 Do not present these numbers as broad adoption. They are early public signals.

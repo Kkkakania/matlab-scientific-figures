@@ -1,6 +1,6 @@
 # Application Evidence Packet
 
-Snapshot date: 2026-06-21.
+Snapshot date: 2026-06-22.
 
 This packet gathers public evidence for reviewers who want to understand the
 current MATLAB figure ecosystem without reading every maintenance document. It
@@ -22,7 +22,7 @@ small cross-language sibling.
 
 ## Public Evidence To Cite
 
-Checked with GitHub CLI on 2026-06-21. Refresh this table before submitting an
+Checked with GitHub CLI on 2026-06-22. Refresh this table before submitting an
 application if time has passed.
 
 | Area | Evidence |
@@ -39,7 +39,7 @@ application if time has passed.
 | First-use feedback | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) |
 | Project-board tracking | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31), currently pending on GitHub Project scopes |
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
-| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance, with a 51-scheme catalog including unit-aware `stacked_time_series` |
+| Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance, with a 51-scheme catalog, unit-aware `stacked_time_series`, and redacted data-shape feedback summaries |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with a 15-template synthetic gallery including `lollipop_ranking`, `paired_before_after`, and `category_small_multiples`, plus first-use feedback issues |
 
@@ -47,12 +47,12 @@ application if time has passed.
 
 These companion repositories are cited as maintenance workflow evidence, not as
 separate adoption claims. The snapshot below was checked with `gh` on
-2026-06-21 and should be refreshed before submitting an application.
+2026-06-22 and should be refreshed before submitting an application.
 
 | Repository | Checked commit | Workflow evidence | Annotation status |
 |---|---|---|---|
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `877b589` | [`CI` run `27920162827`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162827) and [`Package` run `27920162825`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162825) | 0 annotations |
-| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `6fd31e0` | [`Quality` run `27899493672`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27899493672) | 0 annotations |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `49711e1` | [`Quality` run `27923803978`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27923803978) | 0 annotations |
 | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `48e0a71` | [`Quality` run `27906732960`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27906732960) | 0 annotations |
 
 ## Verification Commands
