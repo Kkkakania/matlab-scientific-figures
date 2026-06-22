@@ -49,6 +49,8 @@ Companion snapshot checked on 2026-06-22. These are checked baselines, not lates
 Do not present these numbers as broad adoption. They are early public signals.
 Run `./scripts/check_codex_application_live_snapshot.sh` before copying any
 release, star, fork, or CI wording into an application form.
+That helper also verifies the current `scientific-diagram-skill` Quality
+workflow because the application text cites it as companion evidence.
 
 ## Maintenance Chain Worth Citing
 

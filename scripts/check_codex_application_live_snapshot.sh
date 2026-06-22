@@ -4,6 +4,9 @@ set -euo pipefail
 REPO="${1:-Kkkakania/matlab-scientific-figures}"
 EXPECTED_RELEASE="v3.8.0"
 EXPECTED_WORKFLOWS=("Quality checks" "Figure quality")
+COMPANION_REPOS=(
+  "Kkkakania/scientific-diagram-skill:Quality"
+)
 
 need_cmd() {
   if ! command -v "$1" >/dev/null 2>&1; then
@@ -116,6 +119,38 @@ for workflow in "${EXPECTED_WORKFLOWS[@]}"; do
   echo "OK $workflow: $run_url (no annotations)"
 done
 
+for companion in "${COMPANION_REPOS[@]}"; do
+  companion_repo="${companion%%:*}"
+  companion_workflow="${companion#*:}"
+  companion_json="$(gh_retry repo view "$companion_repo" --json visibility,url)"
+  companion_visibility="$(printf '%s' "$companion_json" | json_get "visibility")"
+  companion_url="$(printf '%s' "$companion_json" | json_get "url")"
+  if [[ "$companion_visibility" != "PUBLIC" ]]; then
+    echo "companion repository is not public: $companion_repo visibility=$companion_visibility" >&2
+    exit 1
+  fi
+
+  companion_runs="$(gh_retry run list -R "$companion_repo" --limit 10 --json databaseId,workflowName,status,conclusion,headSha,url,createdAt)"
+  companion_status="$(printf '%s' "$companion_runs" | latest_run_field "$companion_workflow" "status")"
+  companion_conclusion="$(printf '%s' "$companion_runs" | latest_run_field "$companion_workflow" "conclusion")"
+  companion_run_url="$(printf '%s' "$companion_runs" | latest_run_field "$companion_workflow" "url")"
+  companion_run_id="$(printf '%s' "$companion_runs" | latest_run_field "$companion_workflow" "databaseId")"
+
+  if [[ "$companion_status" != "completed" || "$companion_conclusion" != "success" ]]; then
+    echo "latest $companion_repo $companion_workflow run is not green: status=$companion_status conclusion=$companion_conclusion" >&2
+    exit 1
+  fi
+
+  companion_annotation_count="$(
+    gh_retry run view "$companion_run_id" -R "$companion_repo" --json jobs --jq '[.jobs[].annotations[]?] | length'
+  )"
+  if [[ "$companion_annotation_count" != "0" ]]; then
+    echo "latest $companion_repo $companion_workflow run has $companion_annotation_count GitHub annotation(s): $companion_run_url" >&2
+    exit 1
+  fi
+  echo "OK companion $companion_repo $companion_workflow: $companion_run_url (no annotations, $companion_url)"
+done
+
 cat <<EOF
 Codex application live snapshot:
 - Repository: $url
@@ -124,4 +159,5 @@ Codex application live snapshot:
 - Stars: $stars
 - Forks: $forks
 - CI: latest Quality checks and Figure quality runs are successful and annotation-free
+- Companion CI: scientific-diagram-skill latest Quality run is successful and annotation-free
 EOF

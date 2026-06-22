@@ -73,6 +73,9 @@ CI wording into a form:
 ./scripts/check_codex_application_live_snapshot.sh
 ```
 
+The live snapshot also checks the current `scientific-diagram-skill` Quality
+workflow because this packet cites it as companion evidence.
+
 When MATLAB is available, run the release gate with MATLAB enforced:
 
 ```bash

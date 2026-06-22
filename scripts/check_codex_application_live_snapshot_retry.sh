@@ -19,14 +19,26 @@ fi
 
 case "$*" in
   repo\ view*)
-    cat <<'JSON'
+    if [[ "$*" == *"scientific-diagram-skill"* ]]; then
+      cat <<'JSON'
+{"visibility":"PUBLIC","url":"https://github.com/Kkkakania/scientific-diagram-skill"}
+JSON
+    else
+      cat <<'JSON'
 {"nameWithOwner":"Kkkakania/matlab-scientific-figures","visibility":"PUBLIC","stargazerCount":6,"forkCount":4,"latestRelease":{"tagName":"v3.8.0"},"url":"https://github.com/Kkkakania/matlab-scientific-figures"}
 JSON
+    fi
     ;;
   run\ list*)
-    cat <<'JSON'
+    if [[ "$*" == *"scientific-diagram-skill"* ]]; then
+      cat <<'JSON'
+[{"databaseId":201,"workflowName":"Quality","status":"completed","conclusion":"success","url":"https://example.test/diagram-quality"}]
+JSON
+    else
+      cat <<'JSON'
 [{"databaseId":101,"workflowName":"Quality checks","status":"completed","conclusion":"success","url":"https://example.test/quality"},{"databaseId":102,"workflowName":"Figure quality","status":"completed","conclusion":"success","url":"https://example.test/figure"}]
 JSON
+    fi
     ;;
   run\ view*)
     echo 0
@@ -47,5 +59,7 @@ TMP_GH_STATE="$TMP_DIR/state" GH_RETRY_DELAY_SECONDS=0 PATH="$TMP_DIR:$PATH" \
 grep -q "Codex application live snapshot:" "$out"
 grep -q "OK Quality checks" "$out"
 grep -q "OK Figure quality" "$out"
+grep -q "OK companion Kkkakania/scientific-diagram-skill Quality" "$out"
+grep -q "Companion CI: scientific-diagram-skill" "$out"
 
 echo "Codex application live snapshot retry check passed."
