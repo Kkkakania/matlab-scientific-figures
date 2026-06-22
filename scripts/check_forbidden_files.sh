@@ -18,25 +18,37 @@ forbidden_extensions=(
   "*.xls"
   "*.xlsx"
   "*.zip"
+  "*.pyc"
 )
 
 forbidden_dirs=(
+  ".venv"
   ".ipynb_checkpoints"
   ".pytest_cache"
   "__pycache__"
   "__MACOSX"
   "10_inbox"
   "OCR"
+  "build"
+  "dist"
   "ocr"
   "raw"
   "source_packs"
   "tmp"
+  "venv"
+  "work"
+  "*.egg-info"
 )
 
 forbidden_names=(
   ".DS_Store"
   "Thumbs.db"
   "desktop.ini"
+  ".mfigci-results.json"
+  "mfigci-report.md"
+  "mfigci-report.json"
+  "pypi-name-check.json"
+  "release-preflight.json"
 )
 
 found=0
