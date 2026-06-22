@@ -41,7 +41,7 @@ application if time has passed.
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance, with a 51-scheme catalog, unit-aware `stacked_time_series`, and redacted data-shape feedback summaries |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/matlab-plotting-skill/tree/main/skills/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
-| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with a 15-template synthetic gallery including `lollipop_ranking`, `paired_before_after`, and `category_small_multiples`, plus first-use feedback issues |
+| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with a 15-template synthetic gallery including `lollipop_ranking`, `paired_before_after`, and `category_small_multiples`, plus first-use feedback issues and a README template-count guard |
 
 ## Companion Workflow Snapshot
 
@@ -53,7 +53,7 @@ separate adoption claims. The snapshot below was checked with `gh` on
 |---|---|---|---|
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `877b589` | [`CI` run `27920162827`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162827) and [`Package` run `27920162825`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162825) | 0 annotations |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `49711e1` | [`Quality` run `27923803978`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27923803978) | 0 annotations |
-| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `0c76af2` | [`Quality` run `27924618583`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27924618583) | 0 annotations |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `fc9b1f4` | [`Quality` run `27925041264`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27925041264) | 0 annotations |
 
 ## Verification Commands
 
