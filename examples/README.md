@@ -90,6 +90,7 @@ addpath(genpath('src'));
 addpath(genpath('examples'));
 renderPvPowerConfidence('gallery', ["png", "svg"]);
 renderHarmonicSpectrum('gallery', ["png", "svg"]);
+renderThreePhaseWaveform('gallery', ["png", "svg"]);
 renderDirectionalRose('gallery', ["png", "svg"]);
 renderMarginalScatter('gallery', ["png", "svg"]);
 renderRaincloudDistribution('gallery', ["png", "svg"]);
@@ -103,6 +104,7 @@ From a shell:
 ```bash
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh pv-power
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh harmonic-spectrum
+MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh three-phase
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh directional-rose
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh marginal-scatter
 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh raincloud

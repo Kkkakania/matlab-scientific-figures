@@ -16,12 +16,14 @@ The current implemented electrical examples are deliberately small:
 |---|---|---|---|
 | `./scripts/render_all.sh pv-power` | `renderPvPowerConfidence` | `pv_power_confidence` | Show a synthetic 5 MW PV power forecast with uncertainty. |
 | `./scripts/render_all.sh harmonic-spectrum` | `renderHarmonicSpectrum` | `harmonic_spectrum` | Compare synthetic power-quality harmonic spectra in `% of fundamental`. |
+| `./scripts/render_all.sh three-phase` | `renderThreePhaseWaveform` | `three_phase_waveform` | Show a synthetic three-phase voltage sag in per-unit. |
 
 Run them from the shell with a MATLAB executable:
 
 ```bash
 SFT_OUTPUT_DIR=/tmp/sft-domain MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh pv-power
 SFT_OUTPUT_DIR=/tmp/sft-domain MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh harmonic-spectrum
+SFT_OUTPUT_DIR=/tmp/sft-domain MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh three-phase
 ```
 
 Or call them directly from MATLAB:
@@ -31,6 +33,7 @@ addpath(genpath('src'));
 addpath(genpath('examples'));
 renderPvPowerConfidence('/tmp/sft-domain', ["png", "svg"]);
 renderHarmonicSpectrum('/tmp/sft-domain', ["png", "svg"]);
+renderThreePhaseWaveform('/tmp/sft-domain', ["png", "svg"]);
 ```
 
 ## Feedback Wanted
@@ -62,6 +65,8 @@ The current examples have two small calibration choices from issue feedback:
 power, and `harmonic-spectrum` labels relative magnitudes as `% of fundamental`.
 Those labels make the examples easier to reuse in course reports without
 claiming measured data or a site-specific operating condition.
+The `three-phase` example uses per-unit voltage over milliseconds so it can
+show waveform shape without implying a measured feeder, machine, or converter.
 
 No adoption, download, or approval claims are implied by these examples. They
 are maintenance and design evidence only.

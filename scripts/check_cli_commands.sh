@@ -43,6 +43,10 @@ rm -f "$TMP_DIR/harmonic_spectrum.png" "$TMP_DIR/harmonic_spectrum.svg"
 SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh harmonic-spectrum
 test -s "$TMP_DIR/harmonic_spectrum.png"
 
+rm -f "$TMP_DIR/three_phase_waveform.png" "$TMP_DIR/three_phase_waveform.svg"
+SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh three-phase
+test -s "$TMP_DIR/three_phase_waveform.png"
+
 rm -f "$TMP_DIR/directional_rose.png" "$TMP_DIR/directional_rose.svg"
 SFT_OUTPUT_DIR="$TMP_DIR" MATLAB_BIN="$MATLAB_BIN" ./scripts/render_all.sh directional-rose
 test -s "$TMP_DIR/directional_rose.png"

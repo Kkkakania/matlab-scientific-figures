@@ -25,6 +25,7 @@ Commands:
   csv-example                  Render the bundled CSV example.
   pv-power                     Render the synthetic PV power domain example.
   harmonic-spectrum            Render the synthetic harmonic spectrum domain example.
+  three-phase                  Render the synthetic three-phase voltage example.
   directional-rose             Render the synthetic directional-frequency example.
   marginal-scatter             Render the synthetic marginal scatter example.
   raincloud                    Render the synthetic raincloud distribution example.
@@ -49,6 +50,7 @@ Examples:
   SFT_OUTPUT_DIR=/tmp/sft-data ./scripts/render_all.sh data-file examples/data/experiment_signal.csv
   ./scripts/render_all.sh pv-power
   ./scripts/render_all.sh harmonic-spectrum
+  ./scripts/render_all.sh three-phase
   ./scripts/render_all.sh directional-rose
   ./scripts/render_all.sh marginal-scatter
 HELP
@@ -129,7 +131,7 @@ validate_tokens() {
 }
 
 case "${1:-}" in
-  list|tags|csv-example|pv-power|harmonic-spectrum|directional-rose|marginal-scatter|raincloud|ribbon|vector-field|polar-bubble)
+  list|tags|csv-example|pv-power|harmonic-spectrum|three-phase|directional-rose|marginal-scatter|raincloud|ribbon|vector-field|polar-bubble)
     if [[ "$#" -ne 1 ]]; then
       echo "Usage: ./scripts/render_all.sh ${1}" >&2
       exit 2
@@ -286,6 +288,11 @@ fi
 
 if [[ "${1:-}" == "harmonic-spectrum" ]]; then
   run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderHarmonicSpectrum('$SFT_OUTPUT_DIR', $format_expr)"
+  exit 0
+fi
+
+if [[ "${1:-}" == "three-phase" ]]; then
+  run_with_timeout "$SFT_MATLAB_TIMEOUT_SECONDS" "$MATLAB_BIN" -batch "addpath(genpath('src')); addpath(genpath('examples')); renderThreePhaseWaveform('$SFT_OUTPUT_DIR', $format_expr)"
   exit 0
 fi
 

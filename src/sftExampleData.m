@@ -54,6 +54,20 @@ switch kind
         data.series = ["Two-level inverter", "Three-level inverter"];
         data.valueUnit = "% of fundamental";
 
+    case "three_phase_waveform"
+        time = linspace(0, 0.06, 720);
+        voltage = [
+            sin(2 * pi * 50 * time)
+            sin(2 * pi * 50 * time - 2 * pi / 3)
+            sin(2 * pi * 50 * time + 2 * pi / 3)
+        ];
+        sag = 0.18 * exp(-0.5 * ((time - 0.032) / 0.0045) .^ 2);
+        voltage = voltage .* (1 - sag);
+        data.timeMs = time * 1000;
+        data.values = voltage;
+        data.labels = ["Phase A", "Phase B", "Phase C"];
+        data.unit = "per-unit";
+
     case "directional_rose"
         directionDegrees = 0:30:330;
         prevailing = 0.36 * exp(-0.5 * localCircularDistance(directionDegrees, 60) .^ 2 / 32 ^ 2);
