@@ -24,6 +24,7 @@ run_step "domain examples docs" ./scripts/check_domain_examples_doc.sh
 run_step "local resource intake docs" ./scripts/check_local_resource_intake.sh
 run_step "GitHub Project board docs" ./scripts/check_github_project_board_docs.sh
 run_step "ecosystem handoff docs" ./scripts/check_ecosystem_handoff.sh
+run_step "ecosystem triage status retry" ./scripts/check_ecosystem_triage_status_retry.sh
 run_step "maintainer workflow docs" ./scripts/check_maintainer_workflow.sh
 run_step "Codex application draft" ./scripts/check_codex_application_draft.sh
 run_step "Codex application live snapshot retry" ./scripts/check_codex_application_live_snapshot_retry.sh
