@@ -11,6 +11,7 @@ feedback loops across:
 - [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures)
 - [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci)
 - [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill)
+- [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill)
 - [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill)
 
 ## Recommended Board
@@ -25,7 +26,7 @@ Description:
 
 ```text
 Cross-repository roadmap for MATLAB scientific figures, figure quality checks,
-and MATLAB/Python agent-assisted data-to-figure workflows.
+MATLAB/Python agent-assisted data-to-figure workflows, and research diagram Skills.
 ```
 
 This board should be public if possible. Public visibility makes the roadmap
@@ -100,6 +101,7 @@ pending:
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | `first-use`, `help wanted`, `good first issue`, `question` |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
+| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | `documentation`, `question` |
 | [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | `documentation`, `question` |
 | [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | `enhancement`, `good first issue` |
 
@@ -119,7 +121,7 @@ Use a small number of fields so the board stays maintainable.
 | Field | Type | Suggested values |
 |---|---|---|
 | Status | Single select | Inbox, Triaged, Accepted, In progress, Awaiting feedback, Done |
-| Repository | Single select | scientific-figures, figure-ci, plotting-skill, python-skill |
+| Repository | Single select | scientific-figures, figure-ci, plotting-skill, diagram-skill, python-skill |
 | Track | Single select | gallery, agent, ci, ecosystem-docs |
 | Priority | Single select | P0, P1, P2, Later |
 | Evidence level | Single select | none, single-report, reproducible, ci-covered |
@@ -144,9 +146,8 @@ Use the evidence ladder conservatively:
 
 The track names are intentionally short. They map to maintainer context switches
 rather than marketing categories: `gallery` for MATLAB templates and rendering,
-`agent` for MATLAB or Python data-to-figure Skills, `ci` for
-`matlab-figure-ci`, and `ecosystem-docs` for cross-repository documentation and
-coordination.
+`agent` for MATLAB, Python, or diagram Skills, `ci` for `matlab-figure-ci`, and
+`ecosystem-docs` for cross-repository documentation and coordination.
 
 ## Views
 
@@ -246,6 +247,7 @@ maintenance questions rather than synthetic tasks.
 | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | P2 | ci-covered |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | P1 | ci-covered |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | P1 | single-report |
+| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | diagram-skill | agent | P2 | single-report |
 | [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | python-skill | agent | P2 | single-report |
 | [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | python-skill | agent | P2 | none |
 
@@ -265,6 +267,7 @@ issues after the recent maintenance pass and avoids already-completed work.
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | (blank) | Collect a fresh-clone first-use report. |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | Prepare PyPI only after package-name and install checks are current. |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | (blank) | Collect first-use MATLAB rendering feedback. |
+| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | diagram-skill | agent | Awaiting feedback | P2 | single-report | (blank) | Collect first-use feedback on Mermaid drafts, `.drawio` source, and diagram provenance rules. |
 | [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | python-skill | agent | Awaiting feedback | P2 | single-report | (blank) | Collect first-use Python plotting feedback before expanding templates. |
 | [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | python-skill | agent | Inbox | P2 | none | v0.2 candidate | Turn recurring feedback into a small v0.2 template request only after evidence appears. |
 

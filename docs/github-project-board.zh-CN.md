@@ -15,6 +15,7 @@ MATLAB Scientific Figure Ecosystem
 - [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures)，主 gallery、MATLAB API、主题、导出和文档。
 - [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci)，gallery、隐私、来源、风险文件和发布状态检查。
 - [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill)，面向 agent 的数据到图表选择、MATLAB CLI 渲染和反馈收集。
+- [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill)，面向 agent 的 Mermaid 和 draw.io / diagrams.net 科研示意图 workflow。
 - [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill)，早期 Python 兄弟 Skill，用小型 Matplotlib gallery 验证跨语言选图思路。
 
 ## 当前状态
@@ -65,6 +66,7 @@ gh project list --owner Kkkakania --limit 20
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | `first-use`, `help wanted`, `good first issue`, `question` |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
+| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | `documentation`, `question` |
 | [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | `documentation`, `question` |
 | [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | `enhancement`, `good first issue` |
 
@@ -81,7 +83,7 @@ gh project list --owner Kkkakania --limit 20
 | 字段 | 类型 | 建议值 |
 |---|---|---|
 | Status | Single select | Inbox, Triaged, Accepted, In progress, Awaiting feedback, Done |
-| Repository | Single select | scientific-figures, figure-ci, plotting-skill, python-skill |
+| Repository | Single select | scientific-figures, figure-ci, plotting-skill, diagram-skill, python-skill |
 | Track | Single select | gallery, agent, ci, ecosystem-docs |
 | Priority | Single select | P0, P1, P2, Later |
 | Evidence level | Single select | none, single-report, reproducible, ci-covered |
@@ -98,7 +100,7 @@ gh project list --owner Kkkakania --limit 20
 - `reproducible`：有明确 commit 和命令，别人可以照着复跑。
 - `ci-covered`：已经被当前 CI 或静态检查守住。
 
-`Track` 不按“宣传分类”来分，而是按维护时的上下文切换成本来分：`gallery` 对应 MATLAB 模板、渲染和导出；`agent` 对应 MATLAB 或 Python plotting Skill 的数据到图表选择；`ci` 对应 `matlab-figure-ci`；`ecosystem-docs` 对应跨仓库文档、看板和维护协调。
+`Track` 不按“宣传分类”来分，而是按维护时的上下文切换成本来分：`gallery` 对应 MATLAB 模板、渲染和导出；`agent` 对应 MATLAB、Python 或 diagram Skill；`ci` 对应 `matlab-figure-ci`；`ecosystem-docs` 对应跨仓库文档、看板和维护协调。
 
 ## 建议视图
 
@@ -142,7 +144,7 @@ field:"Release target" not empty
 
    ```text
    Cross-repository roadmap for MATLAB scientific figures, figure quality checks,
-   and MATLAB/Python agent-assisted data-to-figure workflows.
+   MATLAB/Python agent-assisted data-to-figure workflows, and research diagram Skills.
    ```
 
 5. 按上面的字段表建立字段。
@@ -164,6 +166,7 @@ field:"Release target" not empty
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | （留空） | 收集 fresh-clone 首次使用反馈。 |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | 等 package name 和安装检查都最新后，再准备 PyPI。 |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | （留空） | 收集第一次 MATLAB 渲染反馈。 |
+| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | diagram-skill | agent | Awaiting feedback | P2 | single-report | （留空） | 收集 Mermaid 草图、`.drawio` 源文件和 diagram provenance 规则的首次使用反馈。 |
 | [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | python-skill | agent | Awaiting feedback | P2 | single-report | （留空） | 先收集 Python plotting 首次使用反馈，再决定是否扩展模板。 |
 | [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | python-skill | agent | Inbox | P2 | none | v0.2 candidate | 只有出现重复反馈后，才整理成小范围 v0.2 模板需求。 |
 

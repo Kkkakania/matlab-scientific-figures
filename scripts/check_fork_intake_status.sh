@@ -6,6 +6,7 @@ REPOS=(
   "matlab-scientific-figures"
   "matlab-figure-ci"
   "matlab-plotting-skill"
+  "scientific-diagram-skill"
   "python-plotting-skill"
 )
 

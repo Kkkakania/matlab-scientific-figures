@@ -12,6 +12,7 @@ ecosystem. It is a reviewer aid, not an adoption claim.
 | [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | 31 clean-room gallery examples, three electrical domain examples, static quality gates, figure-quality dogfooding, first-use feedback issue, release-cadence policy, `render_all.sh help examples` for shell users |
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | CLI/package tests, release-preflight checks, package artifact workflow, downstream dogfooding report, `init verification guidance` through `doctor` and `check` next steps |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | first-render walkthrough, scheme readiness matrix, `stable first-use scheme list`, privacy/provenance checks, maintenance cadence |
+| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | public diagram Skill, checked `.drawio` and SVG example, provenance note, quality workflow, first-use feedback issue |
 | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | early public Python Skill, synthetic Matplotlib gallery, repository quality check, first-use feedback issue, v0.2 template request issue |
 
 ## Fork And Pull Request Intake
@@ -19,9 +20,10 @@ ecosystem. It is a reviewer aid, not an adoption claim.
 As of the snapshot date, the tracked repositories have no open pull requests.
 Recent public forks were checked against `main`; the visible fork branches for
 the MATLAB repositories were behind the upstream repositories and did not
-contain ahead commits to review or merge. `python-plotting-skill` had no visible
-forks at the snapshot time. Treat forks and issue counts as maintenance context,
-not as adoption metrics or pending contribution evidence.
+contain ahead commits to review or merge. `scientific-diagram-skill` and
+`python-plotting-skill` had no visible forks at the snapshot time. Treat forks
+and issue counts as maintenance context, not as adoption metrics or pending
+contribution evidence.
 
 Live fork intake can be repeated with:
 
@@ -36,6 +38,7 @@ Latest visible-fork snapshot:
 | `matlab-scientific-figures` | 4 | 0 |
 | `matlab-figure-ci` | 4 | 0 |
 | `matlab-plotting-skill` | 4 | 0 |
+| `scientific-diagram-skill` | 0 | 0 |
 | `python-plotting-skill` | 0 | 0 |
 
 The latest visible forks included `Fantastic-wil2`, `Fantastic-wil`,
