@@ -55,7 +55,7 @@ Rows below are checked baselines, not latest-commit claims.
 |---|---|---|---|
 | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `4f064fa` | [`CI` run `27937231749`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231749) and [`Package` run `27937231695`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231695) | 0 annotations |
 | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `5dfe425` | [`Quality` run `27937069270`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27937069270), including Diagram example validation and refreshed application-evidence CI snapshot | 0 annotations |
-| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | `5483537` | [`Quality` run `27938632703`](https://github.com/Kkkakania/scientific-diagram-skill/actions/runs/27938632703), including `.drawio` XML, SVG preview, provenance, and skill metadata checks | 0 annotations |
+| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | `cbbc4cd` | [`Quality` run `27939806328`](https://github.com/Kkkakania/scientific-diagram-skill/actions/runs/27939806328), including `.drawio` XML, SVG preview, provenance, skill metadata, contribution/security entrypoint, and README badge checks | 0 annotations |
 | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `8292dd2` | [`Quality` run `27937426099`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27937426099) | 0 annotations |
 
 ## Verification Commands

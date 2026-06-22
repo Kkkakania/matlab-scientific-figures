@@ -43,7 +43,7 @@ Companion snapshot checked on 2026-06-22. These are checked baselines, not lates
 |---|---|
 | `matlab-figure-ci` | commit `4f064fa`; `CI` run `27937231749` and `Package` run `27937231695`, both successful with 0 annotations; release-preflight JSON now includes package name and version |
 | `matlab-plotting-skill` | commit `5dfe425`; `Quality` run `27937069270`, successful with 0 annotations; refreshed the application-evidence CI snapshot and kept scientific diagram checks, including Diagram example validation, in the public workflow |
-| `scientific-diagram-skill` | commit `5483537`; `Quality` run `27938632703`, successful with 0 annotations; publishes the diagram Skill as its own public repository with checked `.drawio`, SVG, provenance, and skill metadata |
+| `scientific-diagram-skill` | commit `cbbc4cd`; `Quality` run `27939806328`, successful with 0 annotations; publishes the diagram Skill as its own public repository with checked `.drawio`, SVG, provenance, skill metadata, contribution/security entrypoints, and README badge checks |
 | `python-plotting-skill` | commit `8292dd2`; `Quality` run `27937426099`, successful with 0 annotations; records the README template-count guard after `category_small_multiples` became the 15th template and refreshes the Python application-evidence snapshot |
 
 Do not present these numbers as broad adoption. They are early public signals.
