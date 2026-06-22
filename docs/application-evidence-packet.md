@@ -53,9 +53,9 @@ Rows below are checked baselines, not latest-commit claims.
 
 | Repository | Checked commit | Workflow evidence | Annotation status |
 |---|---|---|---|
-| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `877b589` | [`CI` run `27920162827`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162827) and [`Package` run `27920162825`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27920162825) | 0 annotations |
-| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `6b6d653` | [`Quality` run `27936759727`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27936759727), including Diagram example validation and refreshed application-evidence CI snapshot | 0 annotations |
-| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `33a0207` | [`Quality` run `27926529569`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27926529569) | 0 annotations |
+| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `4f064fa` | [`CI` run `27937231749`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231749) and [`Package` run `27937231695`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231695) | 0 annotations |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `5dfe425` | [`Quality` run `27937069270`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27937069270), including Diagram example validation and refreshed application-evidence CI snapshot | 0 annotations |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `8292dd2` | [`Quality` run `27937426099`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27937426099) | 0 annotations |
 
 ## Verification Commands
 

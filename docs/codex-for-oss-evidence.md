@@ -40,9 +40,9 @@ Companion snapshot checked on 2026-06-22. These are checked baselines, not lates
 
 | Repository | Evidence boundary |
 |---|---|
-| `matlab-figure-ci` | commit `877b589`; `CI` run `27920162827` and `Package` run `27920162825`, both successful with 0 annotations; release-preflight JSON now includes package name and version |
-| `matlab-plotting-skill` | commit `6b6d653`; `Quality` run `27936759727`, successful with 0 annotations; refreshed the application-evidence CI snapshot and kept scientific diagram checks, including Diagram example validation, in the public workflow |
-| `python-plotting-skill` | commit `33a0207`; `Quality` run `27926529569`, successful with 0 annotations; records the README template-count guard after `category_small_multiples` became the 15th template and refreshes the Python application-evidence snapshot |
+| `matlab-figure-ci` | commit `4f064fa`; `CI` run `27937231749` and `Package` run `27937231695`, both successful with 0 annotations; release-preflight JSON now includes package name and version |
+| `matlab-plotting-skill` | commit `5dfe425`; `Quality` run `27937069270`, successful with 0 annotations; refreshed the application-evidence CI snapshot and kept scientific diagram checks, including Diagram example validation, in the public workflow |
+| `python-plotting-skill` | commit `8292dd2`; `Quality` run `27937426099`, successful with 0 annotations; records the README template-count guard after `category_small_multiples` became the 15th template and refreshes the Python application-evidence snapshot |
 
 Do not present these numbers as broad adoption. They are early public signals.
 Run `./scripts/check_codex_application_live_snapshot.sh` before copying any
