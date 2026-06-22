@@ -2,7 +2,7 @@
 
 [English](github-project-board.md) | 中文
 
-这份文档给中文维护者使用。它不是新的路线图，也不替代公开 GitHub Project。它的用途是把当前三仓库的维护事项整理成一套可以照着执行的看板设置步骤，等 GitHub Projects 权限可用后，直接按这里建立或核验公开看板。
+这份文档给中文维护者使用。它不是新的路线图，也不替代公开 GitHub Project。它的用途是把当前 MATLAB 科研绘图仓库和几个小型 plotting Skill 的维护事项整理成一套可以照着执行的看板设置步骤，等 GitHub Projects 权限可用后，直接按这里建立或核验公开看板。
 
 目标看板名称：
 
@@ -10,11 +10,12 @@
 MATLAB Scientific Figure Ecosystem
 ```
 
-看板应服务三个仓库：
+看板应服务这些公开仓库：
 
 - [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures)，主 gallery、MATLAB API、主题、导出和文档。
 - [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci)，gallery、隐私、来源、风险文件和发布状态检查。
 - [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill)，面向 agent 的数据到图表选择、MATLAB CLI 渲染和反馈收集。
+- [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill)，早期 Python 兄弟 Skill，用小型 Matplotlib gallery 验证跨语言选图思路。
 
 ## 当前状态
 
@@ -51,7 +52,7 @@ gh project list --owner Kkkakania --limit 20
 ./scripts/check_ecosystem_triage_status.sh
 ```
 
-第一个脚本记录看板是否仍处于 pending 状态。第二个脚本列出三个仓库当前开放的 issue 和 PR。它们只是维护快照，不代表公开看板已经建好。
+第一个脚本记录看板是否仍处于 pending 状态。第二个脚本列出当前跟踪的 plotting 仓库开放 issue 和 PR。它们只是维护快照，不代表公开看板已经建好。
 
 新 issue 还会由 `.github/workflows/issue-triage.yml` 自动收到一条维护者检查清单。这条评论只提醒维护者设置 track、证据等级、下一步状态，以及在涉及私有数据时要求合成复现。它不会创建 GitHub Project 条目，也不需要 `project` 或 `read:project` 权限。
 
@@ -64,6 +65,8 @@ gh project list --owner Kkkakania --limit 20
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | `first-use`, `help wanted`, `good first issue`, `question` |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
+| [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | `documentation`, `question` |
+| [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | `enhancement`, `good first issue` |
 
 维护者可以用下面的脚本核验这些标签是否还在：
 
@@ -78,7 +81,7 @@ gh project list --owner Kkkakania --limit 20
 | 字段 | 类型 | 建议值 |
 |---|---|---|
 | Status | Single select | Inbox, Triaged, Accepted, In progress, Awaiting feedback, Done |
-| Repository | Single select | scientific-figures, figure-ci, plotting-skill |
+| Repository | Single select | scientific-figures, figure-ci, plotting-skill, python-skill |
 | Track | Single select | gallery, agent, ci, ecosystem-docs |
 | Priority | Single select | P0, P1, P2, Later |
 | Evidence level | Single select | none, single-report, reproducible, ci-covered |
@@ -95,7 +98,7 @@ gh project list --owner Kkkakania --limit 20
 - `reproducible`：有明确 commit 和命令，别人可以照着复跑。
 - `ci-covered`：已经被当前 CI 或静态检查守住。
 
-`Track` 不按“宣传分类”来分，而是按维护时的上下文切换成本来分：`gallery` 对应 MATLAB 模板、渲染和导出；`agent` 对应 `matlab-plotting-skill` 的数据到图表选择；`ci` 对应 `matlab-figure-ci`；`ecosystem-docs` 对应跨仓库文档、看板和维护协调。
+`Track` 不按“宣传分类”来分，而是按维护时的上下文切换成本来分：`gallery` 对应 MATLAB 模板、渲染和导出；`agent` 对应 MATLAB 或 Python plotting Skill 的数据到图表选择；`ci` 对应 `matlab-figure-ci`；`ecosystem-docs` 对应跨仓库文档、看板和维护协调。
 
 ## 建议视图
 
@@ -139,7 +142,7 @@ field:"Release target" not empty
 
    ```text
    Cross-repository roadmap for MATLAB scientific figures, figure quality checks,
-   and agent-assisted data-to-figure workflows.
+   and MATLAB/Python agent-assisted data-to-figure workflows.
    ```
 
 5. 按上面的字段表建立字段。
@@ -161,12 +164,14 @@ field:"Release target" not empty
 | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | （留空） | 收集 fresh-clone 首次使用反馈。 |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | 等 package name 和安装检查都最新后，再准备 PyPI。 |
 | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | （留空） | 收集第一次 MATLAB 渲染反馈。 |
+| [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | python-skill | agent | Awaiting feedback | P2 | single-report | （留空） | 先收集 Python plotting 首次使用反馈，再决定是否扩展模板。 |
+| [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | python-skill | agent | Inbox | P2 | none | v0.2 candidate | 只有出现重复反馈后，才整理成小范围 v0.2 模板需求。 |
 
 ## 每周维护节奏
 
 每周只需要做一次轻量更新：
 
-1. 用 `./scripts/check_ecosystem_triage_status.sh` 看三个仓库的开放 issue 和 PR。
+1. 用 `./scripts/check_ecosystem_triage_status.sh` 看当前 plotting 仓库的开放 issue 和 PR。
 2. 新事项先放 Inbox，确认范围、证据和下一步动作后移到 Triaged。
 3. In progress 保持少量，避免看板变成堆积清单。
 4. 如果事项主要卡在外部反馈，就放到 Awaiting feedback，并在超过两周前补一次 ping 或写清楚等待原因。
