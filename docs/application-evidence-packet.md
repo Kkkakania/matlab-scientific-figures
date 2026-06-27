@@ -1,6 +1,6 @@
 # Application Evidence Packet
 
-Snapshot date: 2026-06-22.
+Snapshot date: 2026-06-27.
 
 This packet gathers public evidence for reviewers who want to understand the
 current MATLAB figure ecosystem without reading every maintenance document. It
@@ -22,7 +22,7 @@ research diagrams, and `python-plotting-skill` is a small cross-language sibling
 
 ## Public Evidence To Cite
 
-Checked with GitHub CLI on 2026-06-22. Refresh this table before submitting an
+Checked with GitHub CLI on 2026-06-27. Refresh this table before submitting an
 application if time has passed.
 
 | Area | Evidence |
@@ -48,7 +48,7 @@ application if time has passed.
 
 These companion repositories are cited as maintenance workflow evidence, not as
 separate adoption claims. The snapshot below was checked with `gh` on
-2026-06-22 and should be refreshed before submitting an application.
+2026-06-27 and should be refreshed before submitting an application.
 Rows below are checked baselines, not latest-commit claims.
 
 | Repository | Checked commit | Workflow evidence | Annotation status |

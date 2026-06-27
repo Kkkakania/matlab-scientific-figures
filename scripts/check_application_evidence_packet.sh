@@ -27,7 +27,7 @@ reject_text() {
   fi
 }
 
-require_text "Snapshot date: 2026-06-22"
+require_text "Snapshot date: 2026-06-27"
 require_text "not a promise of Codex for Open Source eligibility"
 require_text "If the form asks for a single repository"
 require_text "Kkkakania/matlab-scientific-figures"

@@ -27,14 +27,14 @@ reject_text() {
   fi
 }
 
-require_text "Snapshot date: 2026-06-22"
+require_text "Snapshot date: 2026-06-27"
 require_text "not a promise of eligibility"
 require_text "Kkkakania/matlab-scientific-figures"
 require_text "v3.8.0"
 require_text "6 GitHub stars, 4 forks"
 require_text "three-phase"
 require_text "domain examples"
-require_text "Companion snapshot checked on 2026-06-22"
+require_text "Companion snapshot checked on 2026-06-27"
 require_text "checked baselines, not latest-commit claims"
 require_text "matlab-figure-ci"
 require_text "4f064fa"
