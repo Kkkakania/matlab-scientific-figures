@@ -71,6 +71,19 @@ show waveform shape without implying a measured feeder, machine, or converter.
 No adoption, download, or approval claims are implied by these examples. They
 are maintenance and design evidence only.
 
+## Next Candidate
+
+The current pack is intentionally capped at three electrical examples until
+more first-use feedback arrives. The smallest plausible next candidate is a
+`transformer-loading-heatmap` example: a deterministic synthetic load-factor by
+ambient-temperature grid rendered through the existing heatmap helper. It should
+stay deferred unless feedback shows the current PV, harmonic, and three-phase
+examples are not enough for a course-report or lab-report workflow.
+
+Do not add a fourth electrical figure just to make the pack look larger. If the
+transformer example becomes useful, it should arrive as one narrow PR with
+synthetic data, a standalone renderer, a shell entry point, docs, and tests.
+
 ## Frequency-Plot Boundary
 
 `harmonic-spectrum` is the current frequency-domain example. It is for comparing
