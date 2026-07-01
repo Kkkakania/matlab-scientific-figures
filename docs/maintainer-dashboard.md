@@ -16,9 +16,9 @@ scope, and where feedback should go.
 - MATLAB rendering in GitHub Actions: disabled by default because public
   runners normally do not include MATLAB.
 - Public gallery/API feedback channel:
-  [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9).
+  [gallery/API feedback form](https://github.com/Kkkakania/matlab-scientific-figures/issues/new?template=first_use_feedback.md).
 - Public agent-assisted rendering feedback channel:
-  [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11).
+  [rendering feedback form](https://github.com/Kkkakania/matlab-plotting-skill/issues/new?template=first_use_feedback.yml).
 - Cross-repository status view:
   [Ecosystem status](ecosystem-status.md).
 - Cross-repository planning board setup and seed queue:

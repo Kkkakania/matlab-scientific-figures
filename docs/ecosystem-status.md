@@ -38,10 +38,10 @@ enters a public repository.
 
 | Workflow | Public feedback path | Good feedback includes |
 |---|---|---|
-| Fresh clone of the main gallery/API | [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | OS, MATLAB version, commit, commands run, selected template, failure or confusing step |
-| Agent-assisted data-to-figure rendering | [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | Data shape summary, selected scheme, report summary, redacted command output |
-| Research diagram Skill first use | [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | Diagram type, Mermaid draft usefulness, whether `.drawio` source was needed, provenance or handoff confusion |
-| Python plotting Skill first use | [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | Python version, command run, chart tried, output readability, confusing setup step |
+| Fresh clone of the main gallery/API | [gallery/API feedback form](https://github.com/Kkkakania/matlab-scientific-figures/issues/new?template=first_use_feedback.md) | OS, MATLAB version, commit, commands run, selected template, failure or confusing step |
+| Agent-assisted data-to-figure rendering | [rendering feedback form](https://github.com/Kkkakania/matlab-plotting-skill/issues/new?template=first_use_feedback.yml) | Data shape summary, selected scheme, report summary, redacted command output |
+| Research diagram Skill first use | [diagram feedback form](https://github.com/Kkkakania/scientific-diagram-skill/issues/new?template=diagram_feedback.md) | Diagram type, Mermaid draft usefulness, whether `.drawio` source was needed, provenance or handoff confusion |
+| Python plotting Skill first use | [Python first-use feedback form](https://github.com/Kkkakania/python-plotting-skill/issues/new?template=first-use-feedback.yml) | Python version, command run, chart tried, output readability, confusing setup step |
 | CI or release preflight for figure repos | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | Package workflow result, preflight JSON summary, clean-install notes |
 
 Do not post private datasets, local account names, copied journal figures,
@@ -83,10 +83,10 @@ source packs, or full local paths in feedback.
 
 ## Next Useful Work
 
-1. Collect fresh-clone feedback through the two public feedback issues.
+1. Collect fresh-clone feedback through the public feedback forms.
 2. Keep `matlab-figure-ci` pinned to an intentional released tag in the main
    gallery workflow.
 3. Add new gallery templates only when they include reusable APIs, synthetic
    data, PNG/SVG outputs, documentation, and quality checks.
-4. Move recurring user pain points from feedback issues into focused template
+4. Move recurring user pain points from feedback forms into focused template
    requests or CI checks.
