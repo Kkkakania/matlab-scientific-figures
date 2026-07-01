@@ -35,7 +35,7 @@ fi
 
 grep -Fq "MATLAB Scientific Figure Ecosystem" "$DOC"
 grep -Fq "matlab-scientific-figures#31" "$DOC"
-grep -Fq "As of 2026-06-22" "$DOC"
+grep -Fq "As of 2026-07-01" "$DOC"
 grep -Fq "Token scopes: 'gist', 'read:org', 'repo', 'workflow'" "$DOC"
 grep -Fq "gh auth refresh -s read:project -s project" "$DOC"
 grep -Fq "https://github.com/projects" "$DOC"
@@ -48,17 +48,8 @@ grep -Fq "./scripts/check_ecosystem_issue_labels.sh" "$DOC"
 grep -Fq "Interim labels" "$DOC"
 grep -Fq '`documentation`, `ci`' "$DOC"
 grep -Fq '`template`, `enhancement`' "$DOC"
-grep -Fq '`first-use`, `help wanted`, `good first issue`, `question`' "$DOC"
-grep -Fq '`testing`, `feedback`' "$DOC"
-grep -Fq "matlab-scientific-figures#9" "$DOC"
 grep -Fq "matlab-scientific-figures#30" "$DOC"
 grep -Fq "matlab-figure-ci#1" "$DOC"
-grep -Fq "matlab-plotting-skill#11" "$DOC"
-grep -Fq "scientific-diagram-skill#1" "$DOC"
-grep -Fq "python-plotting-skill#1" "$DOC"
-grep -Fq "python-plotting-skill#2" "$DOC"
-grep -Fq "python-skill" "$DOC"
-grep -Fq "diagram-skill" "$DOC"
 grep -Fq "Inbox, Triaged, Accepted, In progress, Awaiting feedback, Done" "$DOC"
 grep -Fq "gallery, agent, ci, ecosystem-docs" "$DOC"
 grep -Fq "none, single-report, reproducible, ci-covered" "$DOC"
@@ -70,7 +61,7 @@ grep -Fq "PyPI candidate" "$DOC"
 grep -Fq "GitHub Project 看板设置说明" "$DOC_ZH"
 grep -Fq "MATLAB Scientific Figure Ecosystem" "$DOC_ZH"
 grep -Fq "matlab-scientific-figures#31" "$DOC_ZH"
-grep -Fq "截至 2026-06-22" "$DOC_ZH"
+grep -Fq "截至 2026-07-01" "$DOC_ZH"
 grep -Fq "Token scopes: 'gist', 'read:org', 'repo', 'workflow'" "$DOC_ZH"
 grep -Fq "gh auth refresh -s read:project -s project" "$DOC_ZH"
 grep -Fq "https://github.com/projects" "$DOC_ZH"
@@ -83,17 +74,8 @@ grep -Fq "./scripts/check_ecosystem_issue_labels.sh" "$DOC_ZH"
 grep -Fq "临时标签" "$DOC_ZH"
 grep -Fq '`documentation`, `ci`' "$DOC_ZH"
 grep -Fq '`template`, `enhancement`' "$DOC_ZH"
-grep -Fq '`first-use`, `help wanted`, `good first issue`, `question`' "$DOC_ZH"
-grep -Fq '`testing`, `feedback`' "$DOC_ZH"
-grep -Fq "matlab-scientific-figures#9" "$DOC_ZH"
 grep -Fq "matlab-scientific-figures#30" "$DOC_ZH"
 grep -Fq "matlab-figure-ci#1" "$DOC_ZH"
-grep -Fq "matlab-plotting-skill#11" "$DOC_ZH"
-grep -Fq "scientific-diagram-skill#1" "$DOC_ZH"
-grep -Fq "python-plotting-skill#1" "$DOC_ZH"
-grep -Fq "python-plotting-skill#2" "$DOC_ZH"
-grep -Fq "python-skill" "$DOC_ZH"
-grep -Fq "diagram-skill" "$DOC_ZH"
 grep -Fq "不要在没有公开 URL 或没有核验结果时关闭" "$DOC_ZH"
 grep -Fq "不用于承诺任何审核结果" "$DOC_ZH"
 grep -Fq "Inbox, Triaged, Accepted, In progress, Awaiting feedback, Done" "$DOC_ZH"
@@ -113,5 +95,17 @@ if grep -Fq "matlab-plotting-skill#16" "$DOC_ZH"; then
   echo "docs/github-project-board.zh-CN.md still references closed issue matlab-plotting-skill#16." >&2
   exit 1
 fi
+
+for stale in \
+  "matlab-scientific-figures#9" \
+  "matlab-plotting-skill#11" \
+  "scientific-diagram-skill#1" \
+  "python-plotting-skill#1" \
+  "python-plotting-skill#2"; do
+  if grep -Fq "$stale" "$DOC" "$DOC_ZH"; then
+    echo "GitHub Project board docs still reference closed seed issue $stale." >&2
+    exit 1
+  fi
+done
 
 echo "GitHub Project board documentation checks passed."

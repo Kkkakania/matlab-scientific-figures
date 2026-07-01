@@ -22,7 +22,7 @@ MATLAB Scientific Figure Ecosystem
 
 公开看板的创建任务记录在 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31)。
 
-截至 2026-06-22，本地维护用的 `gh` token 可以读写 issue，但仍然没有 GitHub Projects 权限。当前 `gh auth status` 显示的 scope 是：
+截至 2026-07-01，本地维护用的 `gh` token 可以读写 issue，但仍然没有 GitHub Projects 权限。当前 `gh auth status` 显示的 scope 是：
 
 ```text
 Token scopes: 'gist', 'read:org', 'repo', 'workflow'
@@ -63,12 +63,7 @@ gh project list --owner Kkkakania --limit 20
 |---|---|
 | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | `documentation`, `ci` |
 | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | `template`, `enhancement` |
-| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | `first-use`, `help wanted`, `good first issue`, `question` |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
-| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
-| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | `documentation`, `question` |
-| [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | `documentation`, `question` |
-| [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | `enhancement`, `good first issue` |
 
 维护者可以用下面的脚本核验这些标签是否还在：
 
@@ -163,12 +158,7 @@ field:"Release target" not empty
 |---|---|---|---|---|---|---|---|
 | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | scientific-figures | ecosystem-docs | In progress | P1 | reproducible | （留空） | 创建或核验公开 GitHub Project 看板。 |
 | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | Awaiting feedback | P2 | ci-covered | （留空） | 等待 PV、harmonic-spectrum 与 three-phase 示例反馈，再决定是否扩展电气工程 pack。 |
-| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | （留空） | 收集 fresh-clone 首次使用反馈。 |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | 等 package name 和安装检查都最新后，再准备 PyPI。 |
-| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | （留空） | 收集第一次 MATLAB 渲染反馈。 |
-| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | diagram-skill | agent | Awaiting feedback | P2 | single-report | （留空） | 收集 Mermaid 草图、`.drawio` 源文件和 diagram provenance 规则的首次使用反馈。 |
-| [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | python-skill | agent | Awaiting feedback | P2 | single-report | （留空） | 先收集 Python plotting 首次使用反馈，再决定是否扩展模板。 |
-| [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | python-skill | agent | Inbox | P2 | none | v0.2 candidate | 只有出现重复反馈后，才整理成小范围 v0.2 模板需求。 |
 
 ## 每周维护节奏
 
