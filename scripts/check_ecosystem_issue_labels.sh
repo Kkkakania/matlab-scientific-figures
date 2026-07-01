@@ -82,7 +82,7 @@ check_issue_labels() {
 
 check_issue_labels "matlab-scientific-figures" 31 documentation ci
 check_issue_labels "matlab-scientific-figures" 30 template enhancement
-check_issue_labels "matlab-figure-ci" 1 enhancement
+check_issue_labels "matlab-figure-ci" 1 enhancement ci
 
 if [[ "$missing" -ne 0 ]]; then
   echo "One or more interim triage labels are missing." >&2

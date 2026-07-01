@@ -98,7 +98,7 @@ pending:
 |---|---|
 | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | `documentation`, `ci` |
 | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | `template`, `enhancement` |
-| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
+| [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement`, `ci` |
 
 Maintainers can verify those labels with:
 
