@@ -120,7 +120,8 @@ Record:
 
 ## Feedback Template
 
-Paste a short report into issue #9:
+Paste a short report into the
+[first-use feedback form](https://github.com/Kkkakania/matlab-scientific-figures/issues/new?template=first_use_feedback.md):
 
 After running the checklist, you can generate a redacted Markdown draft from
 your scratch output directory:

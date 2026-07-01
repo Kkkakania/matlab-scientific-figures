@@ -31,7 +31,7 @@ Options:
   --rendering <text>      Rendering result.
   --helper <text>         CLI/helper script result.
 
-Creates a redacted Markdown draft for matlab-scientific-figures#9.
+Creates a redacted Markdown draft for the first-use feedback form.
 USAGE
 }
 

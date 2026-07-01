@@ -5,9 +5,15 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DOC="$ROOT_DIR/docs/first-use-test.md"
 TEMPLATE="$ROOT_DIR/.github/ISSUE_TEMPLATE/first_use_feedback.md"
 COLLECTOR="$ROOT_DIR/scripts/collect_first_use_feedback.sh"
+README="$ROOT_DIR/README.md"
+README_ZH="$ROOT_DIR/README.zh-CN.md"
+ECOSYSTEM="$ROOT_DIR/docs/ecosystem-status.md"
+MAINTAINER_DASHBOARD="$ROOT_DIR/docs/maintainer-dashboard.md"
 CLI_GUIDE="$ROOT_DIR/docs/matlab-cli-guide.md"
 QUALITY_GATES="$ROOT_DIR/docs/quality-gates.md"
 PROVENANCE_POLICY="$ROOT_DIR/docs/provenance-policy.md"
+GALLERY_FEEDBACK_FORM="https://github.com/Kkkakania/matlab-scientific-figures/issues/new?template=first_use_feedback.md"
+PLOTTING_FEEDBACK_FORM="https://github.com/Kkkakania/matlab-plotting-skill/issues/new?template=first_use_feedback.yml"
 
 for file in "$DOC" "$TEMPLATE"; do
   if [[ ! -s "$file" ]]; then
@@ -25,6 +31,15 @@ done
 
 grep -q "Do not paste private paths" "$DOC"
 grep -q "collect_first_use_feedback.sh" "$DOC"
+grep -q "$GALLERY_FEEDBACK_FORM" "$DOC"
+grep -q "$GALLERY_FEEDBACK_FORM" "$README"
+grep -q "$GALLERY_FEEDBACK_FORM" "$README_ZH"
+grep -q "$GALLERY_FEEDBACK_FORM" "$ECOSYSTEM"
+grep -q "$GALLERY_FEEDBACK_FORM" "$MAINTAINER_DASHBOARD"
+grep -q "$PLOTTING_FEEDBACK_FORM" "$README"
+grep -q "$PLOTTING_FEEDBACK_FORM" "$README_ZH"
+grep -q "$PLOTTING_FEEDBACK_FORM" "$ECOSYSTEM"
+grep -q "$PLOTTING_FEEDBACK_FORM" "$MAINTAINER_DASHBOARD"
 grep -q "I avoided private data" "$TEMPLATE"
 grep -q 'MATLAB_BIN="/c/Program Files/MATLAB/R2025a/bin/matlab.exe"' "$CLI_GUIDE"
 grep -q "include the \`.exe\` suffix" "$CLI_GUIDE"
@@ -35,6 +50,18 @@ grep -q ".mex*" "$QUALITY_GATES"
 grep -q "mfigci-report.md" "$QUALITY_GATES"
 grep -q "why the examples are synthetic" "$PROVENANCE_POLICY"
 bash -n "$COLLECTOR"
+
+if grep -Fq "matlab-scientific-figures/issues/9" \
+  "$DOC" "$README" "$README_ZH" "$ECOSYSTEM" "$MAINTAINER_DASHBOARD" "$COLLECTOR"; then
+  echo "stale gallery first-use feedback hub link remains" >&2
+  exit 1
+fi
+
+if grep -Fq "matlab-plotting-skill/issues/11" \
+  "$README" "$README_ZH" "$ECOSYSTEM" "$MAINTAINER_DASHBOARD"; then
+  echo "stale agent-assisted feedback hub link remains" >&2
+  exit 1
+fi
 
 TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TMP_DIR"' EXIT

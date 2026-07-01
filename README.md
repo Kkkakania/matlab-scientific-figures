@@ -39,11 +39,11 @@ chart-selection problem needs a Python example instead of MATLAB. The broader
 for template taxonomy, palette design, and large-gallery release checks; it is
 not the main application story.
 
-Feedback channels are split by workflow: use
-[`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9)
-for gallery/API first-use feedback, and
-[`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11)
-for agent-assisted data-to-figure rendering feedback.
+Feedback channels are split by workflow: use the
+[gallery/API first-use feedback form](https://github.com/Kkkakania/matlab-scientific-figures/issues/new?template=first_use_feedback.md)
+for gallery/API first-use feedback, and the
+[agent-assisted rendering feedback form](https://github.com/Kkkakania/matlab-plotting-skill/issues/new?template=first_use_feedback.yml)
+for data-to-figure rendering feedback.
 For a factual status view of the ecosystem repositories, see
 [Ecosystem status](docs/ecosystem-status.md), including the handoff contract
 for gallery artifacts, `mfigci` reports, and agent render reports.
@@ -100,7 +100,7 @@ The same path is available as a shareable
 [First 5 Minutes guide](docs/first-five-minutes.md).
 If you are reporting a fresh-clone result, use
 `./scripts/collect_first_use_feedback.sh --output-dir <scratch-output>` to
-generate a redacted Markdown draft for the first-use feedback issue.
+generate a redacted Markdown draft for the first-use feedback form.
 
 ## Find The Right Template
 
