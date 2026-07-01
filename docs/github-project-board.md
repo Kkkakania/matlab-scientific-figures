@@ -38,7 +38,7 @@ download volume, or external program eligibility.
 Live board creation is tracked in
 [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31).
 
-As of 2026-06-22, the local `gh` token used for repository maintenance can read
+As of 2026-07-01, the local `gh` token used for repository maintenance can read
 and update issues, but it does not have GitHub Projects scopes. The current
 `gh auth status` scope line is:
 
@@ -98,12 +98,7 @@ pending:
 |---|---|
 | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | `documentation`, `ci` |
 | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | `template`, `enhancement` |
-| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | `first-use`, `help wanted`, `good first issue`, `question` |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | `enhancement` |
-| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | `testing`, `feedback` |
-| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | `documentation`, `question` |
-| [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | `documentation`, `question` |
-| [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | `enhancement`, `good first issue` |
 
 Maintainers can verify those labels with:
 
@@ -243,13 +238,8 @@ maintenance questions rather than synthetic tasks.
 
 | Item | Repository | Track | Suggested priority | Evidence level |
 |---|---|---|---|---|
-| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | P1 | single-report |
 | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | P2 | ci-covered |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | P1 | ci-covered |
-| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | P1 | single-report |
-| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | diagram-skill | agent | P2 | single-report |
-| [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | python-skill | agent | P2 | single-report |
-| [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | python-skill | agent | P2 | none |
 
 When adding more items, prefer open issues or pull requests. Do not add private
 tasks, unreviewed source packs, copied examples, or benefit-program application
@@ -264,12 +254,7 @@ issues after the recent maintenance pass and avoids already-completed work.
 |---|---|---|---|---|---|---|---|
 | [`matlab-scientific-figures#31`](https://github.com/Kkkakania/matlab-scientific-figures/issues/31) | scientific-figures | ecosystem-docs | In progress | P1 | reproducible | (blank) | Create or verify the live GitHub Project board. |
 | [`matlab-scientific-figures#30`](https://github.com/Kkkakania/matlab-scientific-figures/issues/30) | scientific-figures | gallery | Awaiting feedback | P2 | ci-covered | (blank) | Wait for feedback on the PV, harmonic-spectrum, and three-phase examples before expanding the pack. |
-| [`matlab-scientific-figures#9`](https://github.com/Kkkakania/matlab-scientific-figures/issues/9) | scientific-figures | gallery | Awaiting feedback | P1 | single-report | (blank) | Collect a fresh-clone first-use report. |
 | [`matlab-figure-ci#1`](https://github.com/Kkkakania/matlab-figure-ci/issues/1) | figure-ci | ci | Triaged | P1 | ci-covered | PyPI candidate | Prepare PyPI only after package-name and install checks are current. |
-| [`matlab-plotting-skill#11`](https://github.com/Kkkakania/matlab-plotting-skill/issues/11) | plotting-skill | agent | Awaiting feedback | P1 | single-report | (blank) | Collect first-use MATLAB rendering feedback. |
-| [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1) | diagram-skill | agent | Awaiting feedback | P2 | single-report | (blank) | Collect first-use feedback on Mermaid drafts, `.drawio` source, and diagram provenance rules. |
-| [`python-plotting-skill#1`](https://github.com/Kkkakania/python-plotting-skill/issues/1) | python-skill | agent | Awaiting feedback | P2 | single-report | (blank) | Collect first-use Python plotting feedback before expanding templates. |
-| [`python-plotting-skill#2`](https://github.com/Kkkakania/python-plotting-skill/issues/2) | python-skill | agent | Inbox | P2 | none | v0.2 candidate | Turn recurring feedback into a small v0.2 template request only after evidence appears. |
 
 ## Maintenance Rhythm
 

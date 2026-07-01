@@ -36,6 +36,6 @@ TMP_GH_STATE="$TMP_DIR/state" GH_RETRY_DELAY_SECONDS=0 PATH="$TMP_DIR:$PATH" \
 
 grep -q "Ecosystem issue label checks passed." "$out"
 grep -q "OK label: documentation" "$out"
-grep -q "OK label: good first issue" "$out"
+grep -q "OK label: enhancement" "$out"
 
 echo "Ecosystem issue label retry check passed."
