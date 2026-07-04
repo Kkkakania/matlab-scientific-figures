@@ -25,7 +25,7 @@ reject_text() {
   fi
 }
 
-require_text "Snapshot date: 2026-06-22"
+require_text "Snapshot date: 2026-07-04"
 require_text "not an adoption claim"
 require_text "## Own Repositories"
 require_text "three electrical domain examples"
@@ -58,6 +58,9 @@ require_text "fieldtrip/website/pull/927"
 require_text "chebfun/chebfun/pull/2495"
 require_text "scottclowe/matlab-schemer/pull/47"
 require_text "PRML/PRMLT/pull/54"
+require_text "holoviz/panel/pull/8652"
+require_text "owenpkent/coverage-compass/pull/11"
+require_text "tim-fuchs/hiit-workout-planner/pull/12"
 require_text "Do not ask for status updates"
 require_text "show broad adoption"
 require_text "guaranteed program eligibility"

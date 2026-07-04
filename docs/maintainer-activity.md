@@ -1,6 +1,6 @@
 # Maintainer Activity
 
-Snapshot date: 2026-06-22
+Snapshot date: 2026-07-04
 
 This page records factual maintenance activity for the MATLAB plotting
 ecosystem. It is a reviewer aid, not an adoption claim.
@@ -50,11 +50,14 @@ default branches were behind upstream `main`.
 | Project | Pull request | Status at snapshot | Scope |
 |---|---|---|---|
 | `matlab2tikz/matlab2tikz` | [`#1158`](https://github.com/matlab2tikz/matlab2tikz/pull/1158) | Merged | Fix a stale CONTRIBUTING link in the changelog |
-| `fieldtrip/fieldtrip` | [`#2591`](https://github.com/fieldtrip/fieldtrip/pull/2591) | Open, mergeable | Clarify substantial feature contributions and extensions |
-| `fieldtrip/website` | [`#927`](https://github.com/fieldtrip/website/pull/927) | Open, mergeable | Add an extension author checklist |
-| `chebfun/chebfun` | [`#2495`](https://github.com/chebfun/chebfun/pull/2495) | Open, mergeable | Align workflow trigger and license link with the master branch |
-| `scottclowe/matlab-schemer` | [`#47`](https://github.com/scottclowe/matlab-schemer/pull/47) | Open, mergeable | Fix documentation and MATLAB help-text typos |
-| `PRML/PRMLT` | [`#54`](https://github.com/PRML/PRMLT/pull/54) | Open, mergeable | Fix README and MATLAB help-index typos |
+| `fieldtrip/fieldtrip` | [`#2591`](https://github.com/fieldtrip/fieldtrip/pull/2591) | Open | Clarify substantial feature contributions and extensions |
+| `fieldtrip/website` | [`#927`](https://github.com/fieldtrip/website/pull/927) | Open | Add an extension author checklist |
+| `chebfun/chebfun` | [`#2495`](https://github.com/chebfun/chebfun/pull/2495) | Open, unstable | Align workflow trigger and license link with the master branch |
+| `scottclowe/matlab-schemer` | [`#47`](https://github.com/scottclowe/matlab-schemer/pull/47) | Open, clean | Fix documentation and MATLAB help-text typos |
+| `PRML/PRMLT` | [`#54`](https://github.com/PRML/PRMLT/pull/54) | Open, clean | Fix README and MATLAB help-index typos |
+| `holoviz/panel` | [`#8652`](https://github.com/holoviz/panel/pull/8652) | Merged on 2026-07-02 | Fix Fast progress indicator height |
+| `owenpkent/coverage-compass` | [`#11`](https://github.com/owenpkent/coverage-compass/pull/11) | Merged on 2026-07-02 | Cover the LetterDropzone flow |
+| `tim-fuchs/hiit-workout-planner` | [`#12`](https://github.com/tim-fuchs/hiit-workout-planner/pull/12) | Closed on 2026-07-03 | Add initial service test coverage |
 
 ## Review Policy
 
