@@ -1,6 +1,6 @@
 # Maintainer Activity
 
-Snapshot date: 2026-07-04
+Snapshot date: 2026-07-09
 
 This page records factual maintenance activity for the MATLAB plotting
 ecosystem. It is a reviewer aid, not an adoption claim.
@@ -17,13 +17,12 @@ ecosystem. It is a reviewer aid, not an adoption claim.
 
 ## Fork And Pull Request Intake
 
-As of the snapshot date, the tracked repositories have no open pull requests.
-Recent public forks were checked against `main`; the visible fork branches for
-the MATLAB repositories were behind the upstream repositories and did not
-contain ahead commits to review or merge. `scientific-diagram-skill` and
-`python-plotting-skill` had no visible forks at the snapshot time. Treat forks
-and issue counts as maintenance context, not as adoption metrics or pending
-contribution evidence.
+As of the snapshot date, the tracked repositories have four merged maintenance
+pull requests from the current maintenance cycle. Recent public forks were
+checked against `main`; the visible fork branches for the MATLAB repositories
+were behind the upstream repositories and did not contain ahead commits to
+review or merge. Treat forks, issue counts, and own-repository pull requests as
+maintenance context, not as adoption metrics or pending contribution evidence.
 
 Live fork intake can be repeated with:
 
@@ -44,6 +43,15 @@ Latest visible-fork snapshot:
 The latest visible forks included `Fantastic-wil2`, `Fantastic-wil`,
 `Williamkakania`, and `Wppypepyyy` forks depending on repository. All checked
 default branches were behind upstream `main`.
+
+Recently merged own-repository pull request snapshot:
+
+| Repository | Pull request | Status at snapshot | Scope |
+|---|---|---|---|
+| `matlab-figure-ci` | [`#44`](https://github.com/Kkkakania/matlab-figure-ci/pull/44) | Merged on 2026-07-09 | Version the release-preflight JSON schema |
+| `matlab-plotting-skill` | [`#21`](https://github.com/Kkkakania/matlab-plotting-skill/pull/21) | Merged on 2026-07-09 | Add a manifest for the bundled diagram example |
+| `scientific-diagram-skill` | [`#4`](https://github.com/Kkkakania/scientific-diagram-skill/pull/4) | Merged on 2026-07-09 | Add a manifest for the standalone diagram example |
+| `python-plotting-skill` | [`#12`](https://github.com/Kkkakania/python-plotting-skill/pull/12) | Merged on 2026-07-09 | Add a machine-readable gallery manifest |
 
 ## External Pull Requests
 
