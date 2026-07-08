@@ -26,13 +26,13 @@ reject_text() {
   fi
 }
 
-require_text "Snapshot date: 2026-06-22"
+require_text "Snapshot date: 2026-07-09"
 require_text "Approval is not promised"
 require_text "https://github.com/Kkkakania/matlab-scientific-figures"
-require_text "Do not submit three repositories"
+require_text "Do not submit multiple repositories"
 require_text "v3.8.0"
 require_text "6 stars, 4 forks"
-require_text "Checked with GitHub CLI on 2026-06-22"
+require_text "Checked with GitHub CLI on 2026-07-09"
 require_text "Quality checks"
 require_text "Figure quality"
 require_text "annotation-free"
@@ -67,5 +67,7 @@ reject_text "official endorsement"
 reject_text "widely adopted"
 reject_text "thousands of downloads"
 reject_text "申请一定通过"
+reject_text "2026-06-22"
+reject_text "Do not submit three repositories"
 
 echo "Codex application draft checks passed."

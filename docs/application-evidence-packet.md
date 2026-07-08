@@ -1,6 +1,6 @@
 # Application Evidence Packet
 
-Snapshot date: 2026-06-27.
+Snapshot date: 2026-07-09.
 
 This packet gathers public evidence for reviewers who want to understand the
 current MATLAB figure ecosystem without reading every maintenance document. It
@@ -22,7 +22,7 @@ research diagrams, and `python-plotting-skill` is a small cross-language sibling
 
 ## Public Evidence To Cite
 
-Checked with GitHub CLI on 2026-06-27. Refresh this table before submitting an
+Checked with GitHub CLI on 2026-07-09. Refresh this table before submitting an
 application if time has passed.
 
 | Area | Evidence |
@@ -30,7 +30,7 @@ application if time has passed.
 | Current release | [`v3.8.0`](https://github.com/Kkkakania/matlab-scientific-figures/releases/tag/v3.8.0) |
 | Gallery and examples | [Gallery reference](gallery-reference.md), [template manifest](template-manifest.json), and committed PNG/SVG outputs |
 | Quality gates | [Quality gates](quality-gates.md), [release checklist](release-checklist.md), and `./scripts/check_static_quality.sh` |
-| CI | [`Quality checks`](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/quality.yml) and [`Figure quality`](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/figure-quality.yml), green and annotation-free at snapshot time |
+| CI | [`Quality checks`](https://github.com/Kkkakania/matlab-scientific-figures/actions/runs/28958347024) and [`Figure quality`](https://github.com/Kkkakania/matlab-scientific-figures/actions/runs/28958347031), green and annotation-free at snapshot time |
 | PR review | [Pull request template](../.github/pull_request_template.md) with review evidence, local checks, risk/provenance, and release-note prompts |
 | Issue intake | [Issue templates](../.github/ISSUE_TEMPLATE), [release readiness template](../.github/ISSUE_TEMPLATE/release_readiness.md), and [`issue-triage.yml`](../.github/workflows/issue-triage.yml) |
 | Maintainer workflow | [Maintainer workflow](openai-codex-workflow.md), [maintainer dashboard](maintainer-dashboard.md), and [release cadence](release-cadence.md) |
@@ -48,15 +48,15 @@ application if time has passed.
 
 These companion repositories are cited as maintenance workflow evidence, not as
 separate adoption claims. The snapshot below was checked with `gh` on
-2026-06-27 and should be refreshed before submitting an application.
+2026-07-09 and should be refreshed before submitting an application.
 Rows below are checked baselines, not latest-commit claims.
 
 | Repository | Checked commit | Workflow evidence | Annotation status |
 |---|---|---|---|
-| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `4f064fa` | [`CI` run `27937231749`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231749) and [`Package` run `27937231695`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231695) | 0 annotations |
-| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `5dfe425` | [`Quality` run `27937069270`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27937069270), including Diagram example validation and refreshed application-evidence CI snapshot | 0 annotations |
-| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | `519efa7` | [`Quality` run `27940671971`](https://github.com/Kkkakania/scientific-diagram-skill/actions/runs/27940671971), including `.drawio` XML, SVG preview, provenance, skill metadata, contribution/security entrypoint, README badge checks, issue triage checklist, and public triage comment on [`#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1#issuecomment-4766539967) | 0 annotations |
-| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `8292dd2` | [`Quality` run `27937426099`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27937426099) | 0 annotations |
+| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `8f1da7b` | [`CI` run `28958094368`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/28958094368) and [`Package` run `28958093804`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/28958093804), after the release-preflight schema PR landed | 0 annotations |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `28238d4` | [`Quality` run `28958092056`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/28958092056), including Diagram example validation and the bundled diagram manifest | 0 annotations |
+| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | `dd25f3a` | [`Quality` run `28958093569`](https://github.com/Kkkakania/scientific-diagram-skill/actions/runs/28958093569), including `.drawio` XML, SVG preview, provenance, manifest, skill metadata, contribution/security entrypoint, README badge checks, issue triage checklist, and public triage comment on [`#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1#issuecomment-4766539967) | 0 annotations |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `165b78e` | [`Quality` run `28958092895`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/28958092895), including the gallery manifest | 0 annotations |
 
 ## Verification Commands
 

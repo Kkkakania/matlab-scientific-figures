@@ -1,6 +1,6 @@
 # Codex for OSS application draft
 
-Snapshot date: 2026-06-22.
+Snapshot date: 2026-07-09.
 
 This page is a copy-ready draft for a future Codex for Open Source application.
 Approval is not promised. Update the public stats and CI links before
@@ -14,7 +14,7 @@ Use this repository if the form asks for one GitHub repository:
 https://github.com/Kkkakania/matlab-scientific-figures
 ```
 
-Do not submit three repositories as if they were separate adoption signals. The
+Do not submit multiple repositories as if they were separate adoption signals. The
 supporting repositories are useful evidence, but the application should have one
 main object:
 
@@ -26,7 +26,7 @@ main object:
 
 ## Verified public snapshot
 
-Checked with GitHub CLI on 2026-06-22:
+Checked with GitHub CLI on 2026-07-09:
 
 | Item | Evidence |
 |---|---|
@@ -46,13 +46,13 @@ Companion repository rows in the evidence packet are checked baselines, not late
 Use this as a starting point, then adjust to the exact form limit:
 
 ```text
-matlab-scientific-figures is a clean-room MATLAB scientific figure library with deterministic gallery and domain examples, reusable plotting APIs, committed PNG/SVG outputs, provenance/privacy checks, issue and PR templates, release checklists, and green CI. It is maintained with companion tooling: matlab-figure-ci for figure QA, matlab-plotting-skill for agent-assisted data-to-figure workflows, and scientific-diagram-skill for clean Mermaid/draw.io research diagrams.
+matlab-scientific-figures is a clean-room MATLAB scientific figure library with deterministic gallery and domain examples, reusable plotting APIs, committed PNG/SVG outputs, provenance/privacy checks, issue and PR templates, release checklists, and green CI. It is maintained with companion tooling: matlab-figure-ci for figure QA, matlab-plotting-skill for agent-assisted data-to-figure workflows, scientific-diagram-skill for clean Mermaid/draw.io research diagrams, and python-plotting-skill as an early cross-language sibling.
 ```
 
 Shorter version:
 
 ```text
-matlab-scientific-figures is a clean-room MATLAB figure library with reproducible gallery and domain examples, reusable plotting APIs, committed gallery outputs, provenance/privacy checks, issue/PR templates, release gates, and green CI. It is paired with matlab-figure-ci, matlab-plotting-skill, and scientific-diagram-skill for real maintainer workflows.
+matlab-scientific-figures is a clean-room MATLAB figure library with reproducible gallery and domain examples, reusable plotting APIs, committed gallery outputs, provenance/privacy checks, issue/PR templates, release gates, and green CI. It is paired with matlab-figure-ci, matlab-plotting-skill, scientific-diagram-skill, and python-plotting-skill for real maintainer workflows.
 ```
 
 ## Form answer: how API credits or Codex would be used

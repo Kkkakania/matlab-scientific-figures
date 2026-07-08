@@ -21,7 +21,7 @@ those as companion repositories, not as separate adoption claims.
 
 ## Current Public Signals
 
-Snapshot date: 2026-06-27.
+Snapshot date: 2026-07-09.
 
 | Signal | Current evidence |
 |---|---|
@@ -37,14 +37,14 @@ Snapshot date: 2026-06-27.
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) covers clean Mermaid/draw.io research diagrams, including checked `.drawio` and `.svg` examples |
 | Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) is public, green on CI, and has a 15-template Matplotlib gallery plus first-use/template-request issue surfaces |
 
-Companion snapshot checked on 2026-06-27. These are checked baselines, not latest-commit claims:
+Companion snapshot checked on 2026-07-09. These are checked baselines, not latest-commit claims:
 
 | Repository | Evidence boundary |
 |---|---|
-| `matlab-figure-ci` | commit `4f064fa`; `CI` run `27937231749` and `Package` run `27937231695`, both successful with 0 annotations; release-preflight JSON now includes package name and version |
-| `matlab-plotting-skill` | commit `5dfe425`; `Quality` run `27937069270`, successful with 0 annotations; refreshed the application-evidence CI snapshot and kept scientific diagram checks, including Diagram example validation, in the public workflow |
-| `scientific-diagram-skill` | commit `519efa7`; `Quality` run `27940671971`, successful with 0 annotations; publishes the diagram Skill as its own public repository with checked `.drawio`, SVG, provenance, skill metadata, contribution/security entrypoints, README badge checks, an issue triage checklist, and a public triage comment on [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1#issuecomment-4766539967) |
-| `python-plotting-skill` | commit `8292dd2`; `Quality` run `27937426099`, successful with 0 annotations; records the README template-count guard after `category_small_multiples` became the 15th template and refreshes the Python application-evidence snapshot |
+| `matlab-figure-ci` | commit `8f1da7b`; `CI` run `28958094368` and `Package` run `28958093804`, both successful with 0 annotations; release-preflight JSON now includes package name, version, and schema version |
+| `matlab-plotting-skill` | commit `28238d4`; `Quality` run `28958092056`, successful with 0 annotations; keeps scientific diagram checks, including Diagram example validation and the bundled diagram manifest, in the public workflow |
+| `scientific-diagram-skill` | commit `dd25f3a`; `Quality` run `28958093569`, successful with 0 annotations; publishes the diagram Skill as its own public repository with checked `.drawio`, SVG, provenance, manifest, skill metadata, contribution/security entrypoints, README badge checks, an issue triage checklist, and a public triage comment on [`scientific-diagram-skill#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1#issuecomment-4766539967) |
+| `python-plotting-skill` | commit `165b78e`; `Quality` run `28958092895`, successful with 0 annotations; records the README template-count guard and gallery manifest after `category_small_multiples` became the 15th template |
 
 Do not present these numbers as broad adoption. They are early public signals.
 Run `./scripts/check_codex_application_live_snapshot.sh` before copying any
