@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PATTERN='([Aa]uthor:|GNU General Public License|[Gg][Pp][Ll]|MatPlotLib|MathWorks|Columbia|Potsdam|UBC|[Aa][Kk][Uu][Nn]|zhuanlan|bilibili|Nature论文|Science论文|珞研|阿昆|公众号|微信|知乎|小红书|[Cc][Ss][Dd][Nn]|/Users/wi/Documents/Study)'
+PATTERN='([Aa]uthor:|GNU General Public License|[Gg][Pp][Ll]|MatPlotLib|MathWorks|[Ss]tack [Oo]verflow|[Ss]tack[Ee]xchange|[Gg]it[Hh]ub [Gg]ist|gist\.github\.com|[Kk]aggle|Columbia|Potsdam|UBC|[Aa][Kk][Uu][Nn]|zhuanlan|bilibili|Nature论文|Science论文|珞研|阿昆|公众号|微信|知乎|小红书|[Cc][Ss][Dd][Nn]|/Users/wi/Documents/Study)'
 MATCHES_FILE="$(mktemp)"
 trap 'rm -f "$MATCHES_FILE"' EXIT
 
