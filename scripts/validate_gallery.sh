@@ -8,6 +8,16 @@ SFT_MATLAB_TIMEOUT_SECONDS="${SFT_MATLAB_TIMEOUT_SECONDS:-600}"
 
 source "$ROOT_DIR/scripts/_run_with_timeout.sh"
 
+if [[ "$OUT_DIR" == *"'"* ]]; then
+  echo "Output directory may not contain single quotes." >&2
+  exit 2
+fi
+
+if [[ "$OUT_DIR" =~ [[:cntrl:]] ]]; then
+  echo "Output directory may not contain control characters." >&2
+  exit 2
+fi
+
 if [[ "$MATLAB_BIN" == */* ]]; then
   if [[ ! -x "$MATLAB_BIN" ]]; then
     echo "MATLAB executable not found: $MATLAB_BIN" >&2
