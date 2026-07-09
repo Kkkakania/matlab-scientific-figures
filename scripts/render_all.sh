@@ -187,6 +187,13 @@ case "${1:-}" in
       echo "Data file path may not contain control characters." >&2
       exit 2
     fi
+    case "$1" in
+      *.[cC][sS][vV]|*.[xX][lL][sS]|*.[xX][lL][sS][xX]) ;;
+      *)
+        echo "Data file path must end with .csv, .xls, or .xlsx." >&2
+        exit 2
+        ;;
+    esac
     set -- data-file "$@"
     ;;
   "")
