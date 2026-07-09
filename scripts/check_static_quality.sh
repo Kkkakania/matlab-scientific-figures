@@ -19,6 +19,7 @@ run_step "maintainer activity bounds" ./scripts/check_maintainer_activity.sh
 run_step "citation metadata" ./scripts/check_citation.sh
 run_step "bilingual README" ./scripts/check_bilingual_readme.sh
 run_step "documentation links" ./scripts/check_docs_links.sh
+run_step "documentation link self-test" ./scripts/check_docs_links_selftest.sh
 run_step "first-use feedback docs" ./scripts/check_first_use_docs.sh
 run_step "domain examples docs" ./scripts/check_domain_examples_doc.sh
 run_step "local resource intake docs" ./scripts/check_local_resource_intake.sh
