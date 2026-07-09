@@ -75,6 +75,8 @@ Selected template: `line_plot`
 Recommended alternatives: heatmap, radar_chart
 REPORT
 printf 'Source file: %s\n' "$PRIVATE_PATH" >>"$TMP_DIR/figure_report.md"
+printf 'Scratch report: /tmp/private-sft/render/figure_report.json\n' >>"$TMP_DIR/figure_report.md"
+printf 'macOS cache: /var/folders/zz/private-sft/cache/heatmap.png\n' >>"$TMP_DIR/figure_report.md"
 touch "$TMP_DIR/heatmap.png" "$TMP_DIR/heatmap.svg"
 
 feedback="$("$COLLECTOR" \
@@ -101,6 +103,12 @@ grep -q "<redacted-path>" <<<"$feedback"
 
 if grep -q "$PRIVATE_GALLERY" <<<"$feedback"; then
   echo "first-use feedback collector leaked a local absolute path" >&2
+  echo "$feedback" >&2
+  exit 1
+fi
+
+if grep -q "/tmp/private-sft\\|/var/folders/zz/private-sft" <<<"$feedback"; then
+  echo "first-use feedback collector leaked a temporary absolute path" >&2
   echo "$feedback" >&2
   exit 1
 fi
