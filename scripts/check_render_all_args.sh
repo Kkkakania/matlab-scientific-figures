@@ -77,4 +77,7 @@ grep -q '\["pdf"\]' "$CAPTURED_ARGS"
 env CAPTURED_ARGS="$CAPTURED_ARGS" MATLAB_BIN="$FAKE_MATLAB" "$SCRIPT" heatmap >/dev/null
 grep -q '\["png","svg"\]' "$CAPTURED_ARGS"
 
+env CAPTURED_ARGS="$CAPTURED_ARGS" SFT_FORMATS=png,png,svg MATLAB_BIN="$FAKE_MATLAB" "$SCRIPT" heatmap >/dev/null
+grep -q '\["png","svg"\]' "$CAPTURED_ARGS"
+
 echo "render_all argument checks passed."
