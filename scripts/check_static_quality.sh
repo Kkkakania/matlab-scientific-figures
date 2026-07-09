@@ -42,6 +42,7 @@ run_step "tag gallery" ./scripts/check_tag_gallery.sh
 run_step "examples README table" ./scripts/check_examples_readme_table.sh
 run_step "MATLAB help text" ./scripts/check_matlab_help.sh
 run_step "README gallery preview" ./scripts/check_readme_gallery.sh
+run_step "toolbox independence self-test" ./scripts/check_toolbox_independence_selftest.sh
 run_step "toolbox independence" ./scripts/check_toolbox_independence.sh
 run_step "compatibility docs" ./scripts/check_compatibility_docs.sh
 run_step "JSON contract docs" ./scripts/check_json_contract_docs.sh
