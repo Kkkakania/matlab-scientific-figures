@@ -18,14 +18,27 @@ state on machines that have repository scopes but not read:project/project.
 USAGE
 }
 
+require_value() {
+  local option="$1"
+  local value="${2:-}"
+
+  if [[ -z "$value" || "$value" == --* ]]; then
+    echo "$option requires a value." >&2
+    usage >&2
+    exit 2
+  fi
+}
+
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --owner)
-      OWNER="${2:?missing owner}"
+      require_value "$1" "${2:-}"
+      OWNER="$2"
       shift 2
       ;;
     --board)
-      BOARD_NAME="${2:?missing board name}"
+      require_value "$1" "${2:-}"
+      BOARD_NAME="$2"
       shift 2
       ;;
     --allow-pending)
@@ -85,4 +98,3 @@ if [[ -z "$project_url" ]]; then
 fi
 
 echo "Project board found: $project_url"
-
