@@ -21,7 +21,24 @@ jobs:
         run: |
           set -euo pipefail
 
-          if gh issue view "$ISSUE_URL" --comments --json comments --jq '.comments[].body' | grep -Fq "$TRIAGE_MARKER"; then
+          run_gh() {
+            local output status attempt max_attempts=3
+            for attempt in $(seq 1 "$max_attempts"); do
+              if output="$(gh "$@" 2>&1)"; then
+                printf '%s\n' "$output"
+                return 0
+              fi
+              status=$?
+              if [[ "$output" != *"EOF"* && "$output" != *"HTTP 5"* && "$output" != *"timeout"* ]] || [[ "$attempt" -ge "$max_attempts" ]]; then
+                printf '%s\n' "$output" >&2
+                return "$status"
+              fi
+              sleep "$attempt"
+            done
+          }
+
+          existing_comments="$(run_gh issue view "$ISSUE_URL" --comments --json comments --jq '.comments[].body')"
+          if grep -Fq "$TRIAGE_MARKER" <<<"$existing_comments"; then
             echo "Triage checklist already exists."
             exit 0
           fi
@@ -42,4 +59,4 @@ jobs:
           Project-board setup is tracked in Kkkakania/matlab-scientific-figures#31. Until the live board exists, this checklist and repository labels are the public fallback triage surface.
           COMMENT
 
-          gh issue comment "$ISSUE_URL" --body-file /tmp/triage-comment.md
+          run_gh issue comment "$ISSUE_URL" --body-file /tmp/triage-comment.md
