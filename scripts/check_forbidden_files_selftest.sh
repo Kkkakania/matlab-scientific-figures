@@ -5,7 +5,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SANDBOX="$ROOT_DIR/.forbidden-file-selftest"
 
 rm -rf "$SANDBOX"
-mkdir -p "$SANDBOX/.venv" "$SANDBOX/work" "$SANDBOX/package.egg-info"
+mkdir -p "$SANDBOX/.venv" "$SANDBOX/RAW" "$SANDBOX/work" "$SANDBOX/package.egg-info"
 touch \
   "$SANDBOX/.mfigci-results.json" \
   "$SANDBOX/example.mexmaci64" \
@@ -28,7 +28,7 @@ if [[ "$status" -eq 0 ]]; then
   exit 1
 fi
 
-for expected in ".venv" "work" ".mfigci-results.json" "mfigci-report.md" "package.egg-info" "example.mexmaci64" "origin-project.opju"; do
+for expected in ".venv" "RAW" "work" ".mfigci-results.json" "mfigci-report.md" "package.egg-info" "example.mexmaci64" "origin-project.opju"; do
   if [[ "$output" != *"$expected"* ]]; then
     echo "forbidden-file self-test missing expected marker: $expected" >&2
     printf '%s\n' "$output" >&2

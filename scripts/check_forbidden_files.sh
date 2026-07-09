@@ -66,7 +66,7 @@ for dir_name in "${forbidden_dirs[@]}"; do
   while IFS= read -r dir; do
     echo "Forbidden source-material directory found: ${dir#$ROOT_DIR/}" >&2
     found=1
-  done < <(find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type d -name "$dir_name" -print)
+  done < <(find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type d -iname "$dir_name" -print)
 done
 
 for file_name in "${forbidden_names[@]}"; do
