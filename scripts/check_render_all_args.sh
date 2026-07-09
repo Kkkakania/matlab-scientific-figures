@@ -34,6 +34,9 @@ expect_failure() {
 expect_failure "Invalid SFT_FORMATS entry: jpg" \
   env SFT_FORMATS=png,jpg MATLAB_BIN=/no/such/matlab "$SCRIPT" list
 
+expect_failure "Invalid SFT_FORMATS entry: p ng" \
+  env "SFT_FORMATS=p ng" MATLAB_BIN=/no/such/matlab "$SCRIPT" list
+
 expect_failure "SFT_FORMATS must include at least one" \
   env SFT_FORMATS=, MATLAB_BIN=/no/such/matlab "$SCRIPT" list
 
