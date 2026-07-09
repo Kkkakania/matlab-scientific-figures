@@ -14,6 +14,7 @@ sed -nE 's/^[[:space:]]*makeTemplate\("([^"]+)".*/\1/p' \
 
 registry_count="$(wc -l < "$registry_list" | tr -d ' ')"
 readme_count="$(sed -nE 's/^The gallery on `main` contains ([0-9]+) examples\..*/\1/p' "$ROOT_DIR/README.md")"
+readme_zh_count="$(sed -nE 's/^主 gallery 目前有 ([0-9]+) 个 clean-room 模板.*/\1/p' "$ROOT_DIR/README.zh-CN.md")"
 
 if [[ -z "$readme_count" ]]; then
   echo "README gallery count sentence is missing or malformed." >&2
@@ -22,6 +23,16 @@ fi
 
 if [[ "$readme_count" != "$registry_count" ]]; then
   echo "README gallery count is $readme_count but registry has $registry_count templates." >&2
+  exit 1
+fi
+
+if [[ -z "$readme_zh_count" ]]; then
+  echo "README.zh-CN gallery count sentence is missing or malformed." >&2
+  exit 1
+fi
+
+if [[ "$readme_zh_count" != "$registry_count" ]]; then
+  echo "README.zh-CN gallery count is $readme_zh_count but registry has $registry_count templates." >&2
   exit 1
 fi
 
