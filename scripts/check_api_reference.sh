@@ -16,7 +16,7 @@ fi
 missing=0
 while IFS= read -r file; do
   function_name="$(basename "$file" .m)"
-  if ! grep -Fq "\`$function_name" "$API_DOC"; then
+  if ! grep -Eq "\`$function_name(\\(|\`)" "$API_DOC"; then
     echo "API reference is missing public function: $function_name" >&2
     missing=1
   fi

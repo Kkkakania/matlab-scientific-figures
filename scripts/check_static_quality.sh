@@ -34,6 +34,7 @@ run_step "Codex evidence note" ./scripts/check_codex_evidence_note.sh
 run_step "application evidence packet" ./scripts/check_application_evidence_packet.sh
 run_step "GitHub templates" ./scripts/check_issue_templates.sh
 run_step "README first steps" ./scripts/check_readme_first_steps.sh
+run_step "API reference self-test" ./scripts/check_api_reference_selftest.sh
 run_step "API reference coverage" ./scripts/check_api_reference.sh
 run_step "template manifest schema" ./scripts/check_template_manifest_schema.sh
 run_step "template reference table" ./scripts/check_template_reference_table.sh
