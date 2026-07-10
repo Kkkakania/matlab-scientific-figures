@@ -44,12 +44,33 @@ check_target() {
   fi
 }
 
+strip_markdown_code() {
+  awk '
+    /^[[:space:]]*```/ {
+      in_fence = !in_fence
+      next
+    }
+    in_fence {
+      next
+    }
+    {
+      line = $0
+      while (match(line, /`[^`]*`/)) {
+        line = substr(line, 1, RSTART - 1) substr(line, RSTART + RLENGTH)
+      }
+      print line
+    }
+  ' "$1"
+}
+
 while IFS= read -r md_file; do
   : > "$TMP_LINKS"
 
-  grep -Eo '\[[^]]+\]\([^)]+\)' "$md_file" \
+  strip_markdown_code "$md_file" \
+    | grep -Eo '\[[^]]+\]\([^)]+\)' \
     | sed -E 's/^.*\]\(([^)]+)\)$/\1/' >> "$TMP_LINKS" || true
-  grep -Eo 'src="[^"]+"' "$md_file" \
+  strip_markdown_code "$md_file" \
+    | grep -Eo 'src="[^"]+"' \
     | sed -E 's/^src="([^"]+)"$/\1/' >> "$TMP_LINKS" || true
 
   while IFS= read -r target; do
