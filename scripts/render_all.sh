@@ -81,6 +81,7 @@ if [[ "$SFT_OUTPUT_DIR" =~ [[:cntrl:]] ]]; then
 fi
 
 formats=()
+seen_formats=","
 IFS=',' read -r -a requested_formats <<<"$SFT_FORMATS"
 for format in "${requested_formats[@]}"; do
   format="${format//[[:space:]]/}"
@@ -92,6 +93,10 @@ for format in "${requested_formats[@]}"; do
     echo "Use a comma-separated list containing png, svg, and/or pdf." >&2
     exit 2
   fi
+  if [[ "$seen_formats" == *",$format,"* ]]; then
+    continue
+  fi
+  seen_formats+="$format,"
   formats+=("\"$format\"")
 done
 
