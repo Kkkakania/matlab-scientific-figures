@@ -10,6 +10,12 @@ const path = require('path');
 const root = process.env.ROOT_DIR;
 const manifestPath = path.join(root, 'docs/template-manifest.json');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+const registryPath = path.join(root, 'src/sftTemplateRegistry.m');
+const registryText = fs.readFileSync(registryPath, 'utf8');
+const registryNames = Array.from(
+  registryText.matchAll(/makeTemplate\("([^"]+)"/g),
+  (match) => match[1]
+);
 
 const requiredFields = [
   'Name',
@@ -37,6 +43,13 @@ function existsNonEmpty(relativePath) {
 if (!Array.isArray(manifest)) {
   errors.push('Manifest root must be an array.');
 } else {
+  const manifestNames = manifest.map((item) => item.Name);
+  if (registryNames.length === 0) {
+    errors.push('Could not read template names from src/sftTemplateRegistry.m.');
+  } else if (manifestNames.join('\n') !== registryNames.join('\n')) {
+    errors.push('Manifest Name order must match src/sftTemplateRegistry.m.');
+  }
+
   manifest.forEach((item, index) => {
     requiredFields.forEach((field) => {
       if (!(field in item)) {
