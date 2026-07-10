@@ -55,6 +55,9 @@ expect_failure "Usage: ./scripts/render_all.sh info <template>" \
 expect_failure "Invalid template name: Heatmap" \
   env MATLAB_BIN=/no/such/matlab "$SCRIPT" Heatmap
 
+expect_failure "Data file path must end with .csv, .xls, or .xlsx" \
+  env MATLAB_BIN=/no/such/matlab "$SCRIPT" data-file private.mat
+
 help_output="$(env SFT_FORMATS=bad MATLAB_BIN=/no/such/matlab "$SCRIPT" help)"
 grep -q "Usage: ./scripts/render_all.sh" <<<"$help_output"
 grep -q "SFT_FORMATS" <<<"$help_output"
