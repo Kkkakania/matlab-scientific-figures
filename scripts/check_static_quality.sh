@@ -56,6 +56,7 @@ run_step "forbidden file self-test" ./scripts/check_forbidden_files_selftest.sh
 run_step "privacy self-test" ./scripts/check_privacy_selftest.sh
 run_step "forbidden file scan" ./scripts/check_forbidden_files.sh
 run_step "privacy scan" ./scripts/check_privacy.sh
+run_step "provenance pattern self-test" ./scripts/check_provenance_patterns_selftest.sh
 run_step "provenance scan" ./scripts/check_provenance.sh
 
 echo "Static quality checks passed."
