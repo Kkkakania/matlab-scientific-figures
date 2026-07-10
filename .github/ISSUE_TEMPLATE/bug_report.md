@@ -35,6 +35,7 @@ addpath(genpath('examples'));
 ## Evidence
 
 Attach a minimal command, error message, or generated figure if possible.
+- [ ] I am not attaching private data, local project files, or private paths.
 
 ## Checks Tried
 
