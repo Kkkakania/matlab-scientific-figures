@@ -84,7 +84,8 @@ formats=()
 seen_formats=","
 IFS=',' read -r -a requested_formats <<<"$SFT_FORMATS"
 for format in "${requested_formats[@]}"; do
-  format="${format//[[:space:]]/}"
+  format="${format#"${format%%[![:space:]]*}"}"
+  format="${format%"${format##*[![:space:]]}"}"
   if [[ -z "$format" ]]; then
     continue
   fi
