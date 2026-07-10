@@ -17,6 +17,16 @@ if [[ "$timeout_status" -ne 124 ]]; then
 fi
 
 set +e
+run_with_timeout 0.0 bash -c 'sleep 0.1; exit 0'
+zero_timeout_status=$?
+set -e
+
+if [[ "$zero_timeout_status" -ne 0 ]]; then
+  echo "Expected decimal zero timeout to disable the guard, got $zero_timeout_status" >&2
+  exit 1
+fi
+
+set +e
 run_with_timeout bad bash -c 'exit 0'
 invalid_status=$?
 set -e

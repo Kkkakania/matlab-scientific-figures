@@ -4,14 +4,14 @@ run_with_timeout() {
   local seconds="$1"
   shift
 
-  if [[ "$seconds" == "0" ]]; then
-    "$@"
-    return
-  fi
-
   if [[ ! "$seconds" =~ ^[0-9]+([.][0-9]+)?$ ]]; then
     echo "Invalid timeout seconds: $seconds" >&2
     return 2
+  fi
+
+  if [[ "$seconds" =~ ^0+([.]0+)?$ ]]; then
+    "$@"
+    return
   fi
 
   if ! command -v python3 >/dev/null 2>&1; then
