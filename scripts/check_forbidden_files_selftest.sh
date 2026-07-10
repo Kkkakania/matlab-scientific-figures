@@ -9,6 +9,7 @@ mkdir -p "$SANDBOX/.venv" "$SANDBOX/work" "$SANDBOX/package.egg-info"
 touch \
   "$SANDBOX/.mfigci-results.json" \
   "$SANDBOX/example.mexmaci64" \
+  "$SANDBOX/origin-project.opju" \
   "$SANDBOX/mfigci-report.md" \
   "$SANDBOX/package.egg-info/PKG-INFO"
 
@@ -27,7 +28,7 @@ if [[ "$status" -eq 0 ]]; then
   exit 1
 fi
 
-for expected in ".venv" "work" ".mfigci-results.json" "mfigci-report.md" "package.egg-info" "example.mexmaci64"; do
+for expected in ".venv" "work" ".mfigci-results.json" "mfigci-report.md" "package.egg-info" "example.mexmaci64" "origin-project.opju"; do
   if [[ "$output" != *"$expected"* ]]; then
     echo "forbidden-file self-test missing expected marker: $expected" >&2
     printf '%s\n' "$output" >&2

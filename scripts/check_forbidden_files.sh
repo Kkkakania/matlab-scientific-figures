@@ -11,6 +11,7 @@ forbidden_extensions=(
   "*.mat"
   "*.mex*"
   "*.mlx"
+  "*.opju"
   "*.p"
   "*.pdf"
   "*.rar"
