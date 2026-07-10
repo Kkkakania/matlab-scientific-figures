@@ -48,6 +48,7 @@ run_step "JSON contract docs" ./scripts/check_json_contract_docs.sh
 run_step "color accessibility audit" ./scripts/check_color_accessibility_audit.sh
 run_step "CLI script static checks" ./scripts/check_cli_script_static.sh
 run_step "render_all argument checks" ./scripts/check_render_all_args.sh
+run_step "validate_gallery argument checks" ./scripts/check_validate_gallery_args.sh
 run_step "timeout helper" ./scripts/check_timeout_helper.sh
 run_step "scan script tempfiles" ./scripts/check_scan_script_tempfiles.sh
 run_step "workflow maintenance settings" ./scripts/check_workflows.sh
