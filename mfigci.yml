@@ -17,6 +17,7 @@ scan:
     - ".pytest_cache"
     - "LICENSE"
     - "scripts/check_privacy.sh"
+    - "scripts/check_privacy_selftest.sh"
     - "scripts/check_provenance.sh"
 
 gallery:

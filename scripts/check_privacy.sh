@@ -2,14 +2,14 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PATTERN='([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|/Users/|WeChat|wechat|微信|公众号|知乎|小红书|CSDN|B站|哔哩|手机号|身份证|银行卡|家庭住址|三峡大学|China Three Gorges)'
+PATTERN='([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|/[Uu]sers/|/[Hh]ome/|/[Mm]nt/[A-Za-z]/|[A-Za-z]:\\[Uu]sers\\|%USERPROFILE%[\\/]|/workspaces/|/Volumes/|WeChat|wechat|微信|公众号|知乎|小红书|CSDN|B站|哔哩|手机号|身份证|银行卡|家庭住址|三峡大学|China Three Gorges)'
 MATCHES_FILE="$(mktemp)"
 trap 'rm -f "$MATCHES_FILE"' EXIT
 
 found=0
 while IFS= read -r file; do
   case "$file" in
-    */.git/*|*/scripts/check_privacy.sh|*/scripts/check_provenance.sh) continue ;;
+    */.git/*|*/scripts/check_privacy.sh|*/scripts/check_privacy_selftest.sh|*/scripts/check_provenance.sh) continue ;;
   esac
 
   if grep -nE "$PATTERN" "$file" 2>/dev/null \
