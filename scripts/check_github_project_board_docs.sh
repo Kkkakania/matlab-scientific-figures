@@ -33,6 +33,32 @@ if [[ ! -x "$LABEL_HELPER" ]]; then
   exit 1
 fi
 
+check_missing_value() {
+  local option="$1"
+  local output
+  local status
+
+  set +e
+  output="$("$HELPER" "$option" 2>&1)"
+  status=$?
+  set -e
+
+  if [[ "$status" -ne 2 ]]; then
+    echo "Expected $option without a value to exit 2, got $status." >&2
+    echo "$output" >&2
+    exit 1
+  fi
+
+  if [[ "$output" != *"$option requires a value"* ]]; then
+    echo "Expected clear missing-value message for $option." >&2
+    echo "$output" >&2
+    exit 1
+  fi
+}
+
+check_missing_value --owner
+check_missing_value --board
+
 grep -Fq "MATLAB Scientific Figure Ecosystem" "$DOC"
 grep -Fq "matlab-scientific-figures#31" "$DOC"
 grep -Fq "As of 2026-07-01" "$DOC"
