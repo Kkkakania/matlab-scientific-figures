@@ -1,11 +1,11 @@
 # Application Evidence Packet
 
-Snapshot date: 2026-06-27.
+Snapshot date: 2026-07-15.
 
 This packet gathers public evidence for reviewers who want to understand the
 current MATLAB figure ecosystem without reading every maintenance document. It
-is not a promise of Codex for Open Source eligibility, approval, credits, or
-ChatGPT Pro access.
+is not a promise of Claude for Open Source eligibility, approval, or
+subscription access.
 
 ## Main Repository
 
@@ -22,7 +22,7 @@ research diagrams, and `python-plotting-skill` is a small cross-language sibling
 
 ## Public Evidence To Cite
 
-Checked with GitHub CLI on 2026-06-27. Refresh this table before submitting an
+Checked with GitHub CLI on 2026-07-15. Refresh this table before submitting an
 application if time has passed.
 
 | Area | Evidence |
@@ -30,7 +30,7 @@ application if time has passed.
 | Current release | [`v3.8.0`](https://github.com/Kkkakania/matlab-scientific-figures/releases/tag/v3.8.0) |
 | Gallery and examples | [Gallery reference](gallery-reference.md), [template manifest](template-manifest.json), and committed PNG/SVG outputs |
 | Quality gates | [Quality gates](quality-gates.md), [release checklist](release-checklist.md), and `./scripts/check_static_quality.sh` |
-| CI | [`Quality checks`](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/quality.yml) and [`Figure quality`](https://github.com/Kkkakania/matlab-scientific-figures/actions/workflows/figure-quality.yml), green and annotation-free at snapshot time |
+| CI | Commit `d01a86c`; [`Quality checks` run `29073068893`](https://github.com/Kkkakania/matlab-scientific-figures/actions/runs/29073068893) and [`Figure quality` run `29073068866`](https://github.com/Kkkakania/matlab-scientific-figures/actions/runs/29073068866), green and annotation-free (0 annotations) |
 | PR review | [Pull request template](../.github/pull_request_template.md) with review evidence, local checks, risk/provenance, and release-note prompts |
 | Issue intake | [Issue templates](../.github/ISSUE_TEMPLATE), [release readiness template](../.github/ISSUE_TEMPLATE/release_readiness.md), and [`issue-triage.yml`](../.github/workflows/issue-triage.yml) |
 | Maintainer workflow | [Maintainer workflow](openai-codex-workflow.md), [maintainer dashboard](maintainer-dashboard.md), and [release cadence](release-cadence.md) |
@@ -42,21 +42,21 @@ application if time has passed.
 | Companion CI tool | [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) for gallery, privacy, provenance, risky-file, and report checks |
 | Primary skill repo | [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) for agent-facing data-to-figure guidance, with a 51-scheme catalog, unit-aware `stacked_time_series`, and redacted data-shape feedback summaries |
 | Diagram skill | [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) for Mermaid/draw.io research diagrams, with checked `.drawio` and `.svg` examples |
-| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib Skill with a 15-template synthetic gallery including `lollipop_ranking`, `paired_before_after`, and `category_small_multiples`, plus first-use feedback issues and a README template-count guard |
+| Python sibling skill | [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill), an early Matplotlib skill with a 20-template synthetic gallery including `lollipop_ranking`, `paired_before_after`, and `category_small_multiples`, plus structured first-use/template-request intake and a README template-count guard |
 
 ## Companion Workflow Snapshot
 
 These companion repositories are cited as maintenance workflow evidence, not as
 separate adoption claims. The snapshot below was checked with `gh` on
-2026-06-27 and should be refreshed before submitting an application.
+2026-07-15 and should be refreshed before submitting an application.
 Rows below are checked baselines, not latest-commit claims.
 
 | Repository | Checked commit | Workflow evidence | Annotation status |
 |---|---|---|---|
-| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `4f064fa` | [`CI` run `27937231749`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231749) and [`Package` run `27937231695`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/27937231695) | 0 annotations |
-| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `5dfe425` | [`Quality` run `27937069270`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/27937069270), including Diagram example validation and refreshed application-evidence CI snapshot | 0 annotations |
-| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | `519efa7` | [`Quality` run `27940671971`](https://github.com/Kkkakania/scientific-diagram-skill/actions/runs/27940671971), including `.drawio` XML, SVG preview, provenance, skill metadata, contribution/security entrypoint, README badge checks, issue triage checklist, and public triage comment on [`#1`](https://github.com/Kkkakania/scientific-diagram-skill/issues/1#issuecomment-4766539967) | 0 annotations |
-| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `8292dd2` | [`Quality` run `27937426099`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/27937426099) | 0 annotations |
+| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | `f3ba856` | [`CI` run `29096995948`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/29096995948) and [`Package` run `29096996024`](https://github.com/Kkkakania/matlab-figure-ci/actions/runs/29096996024) | 0 annotations |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | `1f82b1d` | [`Quality` run `29387457191`](https://github.com/Kkkakania/matlab-plotting-skill/actions/runs/29387457191), including the 51-scheme release gate, Diagram example validation, and refreshed Claude evidence | 0 annotations |
+| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | `b48540e` | [`Quality` run `29386480417`](https://github.com/Kkkakania/scientific-diagram-skill/actions/runs/29386480417), including `.drawio` XML, SVG preview, provenance, skill metadata, contribution/security/conduct entrypoints, README badge checks, and issue triage checklist | 0 annotations |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | `72e569e` | [`Quality` run `29387445582`](https://github.com/Kkkakania/python-plotting-skill/actions/runs/29387445582), including the 20-template gallery, repository scan, and refreshed Claude evidence | 0 annotations |
 
 ## Verification Commands
 
@@ -70,11 +70,13 @@ Then refresh the public GitHub snapshot before copying release, star, fork, or
 CI wording into a form:
 
 ```bash
-./scripts/check_codex_application_live_snapshot.sh
+./scripts/check_application_live_snapshot.sh
 ```
 
-The live snapshot also checks the current `scientific-diagram-skill` Quality
-workflow because this packet cites it as companion evidence.
+The live snapshot checks both main-repository workflows and the current
+`matlab-figure-ci`, `matlab-plotting-skill`, `scientific-diagram-skill`, and
+`python-plotting-skill` workflows because this packet cites them as companion
+evidence.
 
 When MATLAB is available, run the release gate with MATLAB enforced:
 
@@ -102,10 +104,10 @@ Keep the framing factual and narrow:
   MATLAB figures from data and preparing clean research diagrams without
   copying paper figures or private screenshots. The diagram skill is now a
   separate public repository with its own quality workflow and first-use issue.
-- The Python plotting Skill is now public as a small sibling project with 15
+- The Python plotting skill is public as a small sibling project with 20
   synthetic Matplotlib templates. It should be cited as early cross-language
   evidence, not as proof of adoption.
-- API credits or Codex would be used for PR review, issue triage, release-note
+- A Claude subscription would be used for PR review, issue triage, release-note
   drafting, CI failure analysis, and compact summaries of `matlab-figure-ci`
   reports.
 

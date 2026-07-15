@@ -30,7 +30,7 @@ run_step "ecosystem issue label retry" ./scripts/check_ecosystem_issue_labels_re
 run_step "ecosystem triage status retry" ./scripts/check_ecosystem_triage_status_retry.sh
 run_step "maintainer workflow docs" ./scripts/check_maintainer_workflow.sh
 run_step "Codex application draft" ./scripts/check_codex_application_draft.sh
-run_step "Codex application live snapshot retry" ./scripts/check_codex_application_live_snapshot_retry.sh
+run_step "application live snapshot retry" ./scripts/check_application_live_snapshot_retry.sh
 run_step "Codex evidence note" ./scripts/check_codex_evidence_note.sh
 run_step "application evidence packet" ./scripts/check_application_evidence_packet.sh
 run_step "GitHub templates" ./scripts/check_issue_templates.sh
