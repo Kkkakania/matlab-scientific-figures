@@ -14,6 +14,7 @@ docs if you want to change the project.
 - [API reference](api-reference.md)
 - [Template manifest JSON](template-manifest.json)
 - [Template manifest schema](template-manifest-schema.md)
+- Query the manifest with `python3 scripts/query_templates.py --manifest docs/template-manifest.json --tag uncertainty --json`.
 - [Chart selection guide](chart-selection-guide.md)
 - [Use with your data](use-with-your-data.md)
 - [Domain examples](domain-examples.md)
