@@ -136,46 +136,21 @@ The hosted CI does not render MATLAB figures by default because public runners
 normally do not include MATLAB. MATLAB-required checks remain a local release
 responsibility.
 
-## Candidate API Credit Uses
+## Review Evidence
 
-API credits or Codex should be used for real maintainer work:
-
-- summarize new issues into triage notes and missing-evidence questions;
-- review pull requests for docs, manifest, provenance, and risky-file drift;
-- draft release notes from merged commits for maintainer editing;
-- compare README, template reference, gallery outputs, and manifest entries;
-- prepare clean research-diagram drafts for documentation while keeping
-  `.drawio` source, SVG/PNG exports, and provenance notes separate from MATLAB
-  data plots;
-- generate first-pass comments for incomplete bug reports or first-use reports;
-- inspect CI failures and propose the smallest reproducible fix.
-
-Do not use automation to manufacture stars, forks, comments, usage claims, or
-fake adoption.
-
-## Evidence Boundary
-
-When describing this repository in an application or public maintainer note,
-keep claims tied to evidence that can be checked:
+Keep public maintenance claims tied to evidence that can be checked:
 
 - public repository and release links;
 - committed gallery outputs and template manifest;
 - local release-gate commands and results;
 - GitHub Actions workflow results;
 - dogfooding of `matlab-figure-ci`;
-- companion agent workflows for data-to-figure planning and clean research
+- companion automation workflows for data-to-figure planning and clean research
   diagrams;
 - issue links for first-use feedback and accepted maintenance work;
 - public PR review or issue triage comments.
 
-Do not present internal dogfooding as broad adoption. Do not invent stars,
-downloads, user counts, or guaranteed program eligibility. If the project is
-still early, say it is early and explain the maintenance system that already
-exists.
-
-## Evidence Packet
-
-A maintainer can prepare a small evidence packet without turning it into a
+A maintainer can prepare a small review packet without turning it into a
 marketing page:
 
 1. Link the current release tag and the green `Quality checks` and
@@ -187,13 +162,11 @@ marketing page:
    `docs/local-resource-intake.md` so reviewers can see the clean-room boundary.
 4. Link active issue-triage surfaces such as first-use feedback, the electrical
    example proposal, and the GitHub Project-board task.
-5. Keep application text factual: "dogfooded by companion repositories" is
+5. Keep public text factual: "dogfooded by companion repositories" is
    acceptable when linked; "widely adopted" is not unless public usage evidence
    exists.
 
-Use two packet shapes, depending on the job.
-
-For a review packet, collect the commit, the relevant workflow run URL, the
+Collect the commit, the relevant workflow run URL, the
 local command summary, the issue or PR that motivated the change, and the files
 that changed. If the change touches the ecosystem handoff, include
 `mfigci-report.md` or `render_report.md` only as redacted summaries or CI
@@ -212,11 +185,5 @@ workflow until a later `matlab-figure-ci` release is intentionally adopted.
 Do not commit mfigci-evidence.md by default; keep the filled packet as a local
 note or CI artifact unless it is deliberately reviewed for public release.
 
-For an application packet, keep the same evidence but remove maintainer-only
-noise. Link the public repository, current release, green workflow run URL,
-dogfooding workflow, clean-room policy, and one redacted issue or PR link that
-shows real maintenance. This is not an approval argument. It is a compact way
-to show what has been built and how it is checked.
-
 Do not include private local folder paths, private screenshots, raw research
-data, unreviewed prototype images, or claims about benefit-program approval.
+data, or unreviewed prototype images.

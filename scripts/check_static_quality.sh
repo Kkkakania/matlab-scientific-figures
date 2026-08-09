@@ -29,10 +29,6 @@ run_step "ecosystem handoff docs" ./scripts/check_ecosystem_handoff.sh
 run_step "ecosystem issue label retry" ./scripts/check_ecosystem_issue_labels_retry.sh
 run_step "ecosystem triage status retry" ./scripts/check_ecosystem_triage_status_retry.sh
 run_step "maintainer workflow docs" ./scripts/check_maintainer_workflow.sh
-run_step "Codex application draft" ./scripts/check_codex_application_draft.sh
-run_step "application live snapshot retry" ./scripts/check_application_live_snapshot_retry.sh
-run_step "Codex evidence note" ./scripts/check_codex_evidence_note.sh
-run_step "application evidence packet" ./scripts/check_application_evidence_packet.sh
 run_step "GitHub templates" ./scripts/check_issue_templates.sh
 run_step "README first steps" ./scripts/check_readme_first_steps.sh
 run_step "API reference self-test" ./scripts/check_api_reference_selftest.sh
