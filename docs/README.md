@@ -48,13 +48,9 @@ docs if you want to change the project.
 - [GitHub Project board plan, Chinese](github-project-board.zh-CN.md)
 - [Maintainer activity](maintainer-activity.md)
 - [Ecosystem status](ecosystem-status.md)
-- [Application evidence packet](application-evidence-packet.md) (current Claude
-  for Open Source reviewer snapshot)
-- [Codex for OSS evidence note](codex-for-oss-evidence.md) (legacy)
-- [Codex for OSS application draft](codex-for-oss-application-draft.md) (legacy)
 - [JSON envelope compatibility](json-envelope-compatibility.md)
 - [Provenance policy](provenance-policy.md)
-- [Maintainer workflow](openai-codex-workflow.md)
+- [Maintainer workflow](maintainer-workflow.md)
 - [Roadmap](../ROADMAP.md)
 - [Version plan](version-plan.md)
 

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DOC="$ROOT_DIR/docs/openai-codex-workflow.md"
+DOC="$ROOT_DIR/docs/maintainer-workflow.md"
 README="$ROOT_DIR/README.md"
 README_ZH="$ROOT_DIR/README.zh-CN.md"
 DOC_INDEX="$ROOT_DIR/docs/README.md"
@@ -23,28 +23,28 @@ require_text "$DOC" "## Pull Request Review"
 require_text "$DOC" "## Release Workflow"
 require_text "$DOC" "## Security, Privacy, And Provenance"
 require_text "$DOC" "## Code Quality Gates"
-require_text "$DOC" "Candidate API Credit Uses"
-require_text "$DOC" "## Evidence Packet"
+require_text "$DOC" "## Review Evidence"
 require_text "$DOC" "review packet"
-require_text "$DOC" "application packet"
 require_text "$DOC" "workflow run URL"
 require_text "$DOC" "mfigci report --style evidence --output mfigci-evidence.md"
 require_text "$DOC" "Do not commit mfigci-evidence.md by default"
 require_text "$DOC" "available on matlab-figure-ci main after v2.5.0"
 require_text "$DOC" "mfigci-report.md"
 require_text "$DOC" "render_report.md"
-require_text "$DOC" "redacted issue or PR link"
-require_text "$DOC" "not an approval argument"
 require_text "$DOC" "dogfooded by companion repositories"
 require_text "$DOC" "Do not include private local folder paths"
 require_text "$DOC" "Do not use external accounts to manufacture activity"
 require_text "$DOC" "./scripts/check_static_quality.sh"
 require_text "$DOC" "./scripts/check_release_ready.sh"
 require_text "$DOC" "matlab-figure-ci"
-require_text "$DOC" "fake adoption"
-require_text "$README" "docs/openai-codex-workflow.md"
-require_text "$README_ZH" "docs/openai-codex-workflow.md"
-require_text "$DOC_INDEX" "openai-codex-workflow.md"
+require_text "$README" "docs/maintainer-workflow.md"
+require_text "$README_ZH" "docs/maintainer-workflow.md"
+require_text "$DOC_INDEX" "maintainer-workflow.md"
 require_text "$STATIC_GATE" "check_maintainer_workflow.sh"
+
+if grep -Eiq "for (open source|oss)|application (draft|packet)|candidate api credit" "$DOC"; then
+  echo "Maintainer workflow contains application-specific material" >&2
+  exit 1
+fi
 
 echo "Maintainer workflow check passed."

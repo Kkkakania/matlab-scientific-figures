@@ -287,20 +287,15 @@ New users usually need only a few pages:
 | [MATLAB CLI guide](docs/matlab-cli-guide.md) | Render figures in scripts and CI-like workflows |
 | [Quality gates](docs/quality-gates.md) | Understand what local checks and CI actually verify |
 | [Local resource intake](docs/local-resource-intake.md) | Understand how private/local plotting resources are converted into clean-room requirements |
-| [Maintainer workflow](docs/openai-codex-workflow.md) | See how PR review, issue triage, release workflow, security, and code quality are handled |
+| [Maintainer workflow](docs/maintainer-workflow.md) | See how PR review, issue triage, release workflow, security, and code quality are handled |
 
 The full grouped index lives in [docs/README.md](docs/README.md). Maintainer
 notes, release plans, migration notes, and historical reports are kept there so
 the README stays focused on using the library.
 
-For reviewers and OSS-program evaluators, [Maintainer workflow](docs/openai-codex-workflow.md)
+For reviewers and contributors, [Maintainer workflow](docs/maintainer-workflow.md)
 summarizes the public maintenance loop: PR review, issue triage, release
 workflow, security/provenance review, and code-quality gates.
-The current [application evidence packet](docs/application-evidence-packet.md)
-tracks how this repository can be cited as the main Claude for Open Source
-application repo while the skill and CI repositories provide the surrounding
-workflow evidence. It is kept out of the main usage sections so the project page
-does not turn into a benefits-program pitch.
 
 ## License And Provenance
 

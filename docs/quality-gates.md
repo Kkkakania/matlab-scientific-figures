@@ -61,7 +61,6 @@ SFT_MATLAB_TIMEOUT_SECONDS=900 MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/ma
 | Privacy scan | `./scripts/check_privacy.sh` | Emails, local paths, personal identifiers, and platform traces |
 | Provenance scan | `./scripts/check_provenance.sh` | Third-party author, license, platform, or source-pack traces |
 | Local resource intake | `./scripts/check_local_resource_intake.sh` | Drift in private-prototype boundaries, backlog intake language, and clean-room promotion rules |
-| Application evidence packet | `./scripts/check_application_evidence_packet.sh` | Missing or overstated public evidence for application/reviewer packets |
 | Workflow maintenance | `./scripts/check_workflows.sh` | GitHub Actions versions, artifact settings, issue-triage permissions, Dependabot coverage, and Project-scope drift |
 | Generated asset placement | `mfigci scan` | Rendered images or PDFs that accidentally appear beside source/template files |
 | CLI discovery | `./scripts/check_cli_commands.sh` | Broken `render_all.sh list`, `tags`, `search`, `tag`, or `match` commands |
