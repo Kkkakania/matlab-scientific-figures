@@ -36,6 +36,7 @@ run_step "API reference coverage" ./scripts/check_api_reference.sh
 run_step "template manifest schema" ./scripts/check_template_manifest_schema.sh
 run_step "template reference table" ./scripts/check_template_reference_table.sh
 run_step "template reference sync self-test" ./scripts/check_template_reference_sync_selftest.sh
+run_step "template query self-test" ./scripts/check_query_templates_selftest.sh
 run_step "tag reference" ./scripts/check_tag_reference.sh
 run_step "tag gallery" ./scripts/check_tag_gallery.sh
 run_step "examples README table" ./scripts/check_examples_readme_table.sh
