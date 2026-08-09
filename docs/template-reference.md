@@ -36,6 +36,15 @@ For tools that need metadata without running MATLAB, use
 sftWriteTemplateManifest()
 ```
 
+Then synchronize this Markdown table without hand-editing rows:
+
+```bash
+python3 scripts/sync_template_reference.py \
+  --manifest docs/template-manifest.json \
+  --reference docs/template-reference.md \
+  --write
+```
+
 | Template | Renderer | Task | Tags |
 |---|---|---|---|
 | `line_plot` | `renderLinePlot` | Show time trend | `trend`, `line` |
