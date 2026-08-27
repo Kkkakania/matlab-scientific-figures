@@ -61,6 +61,24 @@ expect_failure "Invalid template name: Heatmap" \
 expect_failure "Data file path must end with .csv, .xls, or .xlsx" \
   env MATLAB_BIN=/no/such/matlab "$SCRIPT" data-file private.mat
 
+set +e
+env MATLAB_BIN=/no/such/matlab "$SCRIPT" data-file "$TMP_DIR/missing.csv" \
+  >"$TMP_DIR/missing-data.out" 2>"$TMP_DIR/missing-data.err"
+missing_data_status=$?
+set -e
+
+if [[ "$missing_data_status" -ne 66 ]]; then
+  echo "expected a missing data file to exit 66 before MATLAB lookup, got $missing_data_status" >&2
+  cat "$TMP_DIR/missing-data.err" >&2
+  exit 1
+fi
+
+if ! grep -q "Data file not found: $TMP_DIR/missing.csv" "$TMP_DIR/missing-data.err"; then
+  echo "expected a clear missing data file message" >&2
+  cat "$TMP_DIR/missing-data.err" >&2
+  exit 1
+fi
+
 help_output="$(env SFT_FORMATS=bad MATLAB_BIN=/no/such/matlab "$SCRIPT" help)"
 grep -q "Usage: ./scripts/render_all.sh" <<<"$help_output"
 grep -q "SFT_FORMATS" <<<"$help_output"

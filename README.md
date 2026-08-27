@@ -242,6 +242,10 @@ Use [MATLAB CLI guide](docs/matlab-cli-guide.md) for Linux and Windows
 executable paths. The helper scripts expect Bash; Windows users can use Git
 Bash/WSL or call MATLAB directly with `-batch`.
 
+`data-file` checks the path and supported extension before MATLAB starts. A
+missing CSV or Excel file exits with a direct file-not-found message instead of
+falling through to MATLAB discovery.
+
 Check the examples without touching the committed gallery:
 
 ```bash

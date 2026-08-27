@@ -200,6 +200,10 @@ case "${1:-}" in
         exit 2
         ;;
     esac
+    if [[ ! -f "$1" ]]; then
+      echo "Data file not found: $1" >&2
+      exit 66
+    fi
     set -- data-file "$@"
     ;;
   "")

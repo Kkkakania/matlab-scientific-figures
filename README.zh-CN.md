@@ -46,6 +46,8 @@ SFT_OUTPUT_DIR=/tmp/sft-csv-example MATLAB_BIN=/Applications/MATLAB_R2025a.app/b
 SFT_OUTPUT_DIR=/tmp/sft-data MATLAB_BIN=/Applications/MATLAB_R2025a.app/bin/matlab ./scripts/render_all.sh data-file examples/data/experiment_signal.csv
 ```
 
+`data-file` 会在启动 MATLAB 前检查路径和扩展名。CSV 或 Excel 文件不存在时会直接指出缺失文件，不会先报 MATLAB 查找失败。
+
 如果你只想看 standalone domain examples：
 
 ```bash

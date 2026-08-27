@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Made `render_all.sh data-file` check that its CSV or Excel input exists
+  before looking up MATLAB, so first-use failures point to the missing file.
 - Added the clean-room `stacked_time_series` template, reusable
   `sftPlotStackedTimeSeries` API, gallery outputs, manifest metadata, and
   tests for synchronized multi-signal time-series figures.
