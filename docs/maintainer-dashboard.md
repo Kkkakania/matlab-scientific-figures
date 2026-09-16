@@ -6,7 +6,7 @@ scope, and where feedback should go.
 
 ## Current Public State
 
-- Current released line: `v3.8.0`.
+- Current released line: `v3.9.0`.
 - Main branch gallery: 31 clean-room examples with committed PNG and SVG
   outputs.
 - Domain examples: three deterministic synthetic electrical examples
@@ -96,7 +96,7 @@ notes agree. It should not look maintained because tags are produced quickly.
    palette, export, and manifest system.
 3. Use the static preflight bundle for documentation and metadata pull
    requests.
-4. Keep post-`v3.8.0` changes on `main` until another coherent user-visible
+4. Keep post-`v3.9.0` changes on `main` until another coherent user-visible
    release is ready.
 5. Keep `matlab-figure-ci` dogfooding aligned with the latest released tag.
 6. Prepare the next release only when examples, docs, gallery outputs, and

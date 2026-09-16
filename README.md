@@ -48,7 +48,7 @@ For a factual status view of the ecosystem repositories, see
 [Ecosystem status](docs/ecosystem-status.md), including the handoff contract
 for gallery artifacts, `mfigci` reports, and agent render reports.
 
-Current public release: `v3.8.0`. This is still an early public project: the
+Current public release: `v3.9.0`. This is still an early public project: the
 gallery and CLI are usable, but adoption claims should stay conservative until
 more external feedback arrives. The fast early version jumps mark API and
 workflow stabilization milestones from the first public hardening pass; future
@@ -336,7 +336,7 @@ through CI artifacts without blocking gallery checks.
 
 ## Project Status
 
-Current public release: `v3.8.0`.
+Current public release: `v3.9.0`.
 
 Project maturity: early public project. The examples, CLI workflow, and checks
 are usable today, but the repository is still collecting feedback before

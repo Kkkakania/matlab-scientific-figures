@@ -5,14 +5,13 @@ It should agree with README, CHANGELOG, and GitHub releases.
 
 ## Current State
 
-- Current public release: `v3.8.0`.
+- Current public release: `v3.9.0`.
 - Maturity: early public project; the gallery is usable, but adoption claims
   should stay conservative until real external use appears.
-- Gallery size on `main`: 30 clean-room templates. The current public release
-  `v3.8.0` keeps that gallery stable while adding bilingual onboarding,
-  CSV/Excel data-to-figure workflow, extended standalone examples, portable
-  mixed-script font fallback, domain-example intake guidance, and synthetic
-  data provenance metadata.
+- Gallery size on `main`: 31 clean-room templates. The current public release
+  `v3.9.0` adds stacked time-series plotting, manifest-backed discovery tools,
+  a standalone three-phase electrical example, and stronger input and
+  maintenance checks while preserving the clean-room boundary.
 - Public workflows: MATLAB API, MATLAB CLI, committed gallery, JSON manifest,
   citation metadata, privacy/provenance scans, static contributor preflight,
   first-use smoke test, and figure-quality CI.
@@ -157,9 +156,19 @@ Delivered:
   the template manifest.
 - JSON envelope compatibility notes for the MATLAB figure ecosystem.
 
-## Post-v3.8.0 Hardening On Main
+### v3.9.0: Plotting And Discovery Workflows
 
-No post-`v3.8.0` hardening is listed yet. Accumulate small fixes on `main`
+Delivered:
+
+- `stacked_time_series` clean-room template and reusable plotting API.
+- Standalone synthetic `three-phase` electrical example.
+- Manifest-backed template query and template-reference synchronization tools.
+- Earlier data-file validation before MATLAB startup.
+- Stronger workflow, privacy, provenance, toolbox, and release checks.
+
+## Post-v3.9.0 Hardening On Main
+
+No post-`v3.9.0` hardening is listed yet. Accumulate small fixes on `main`
 until there is a user-visible reason for another tag.
 
 ## Next Candidates

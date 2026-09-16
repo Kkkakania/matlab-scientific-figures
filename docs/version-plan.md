@@ -6,7 +6,7 @@ together.
 
 ## Current State
 
-- `v3.8.0` is the current release.
+- `v3.9.0` is the current release.
 - The gallery has 31 examples on `main`.
 - Open work is tracked in GitHub issues and milestones.
 - Future tags should follow `docs/release-cadence.md`; small maintenance
@@ -266,3 +266,22 @@ Release conditions:
 - MATLAB core tests pass locally.
 - Template manifest consistency and CLI command checks pass.
 - GitHub Actions pass on `main` and the release tag.
+
+## v3.9.0 Released
+
+Goal: turn the post-v3.8 maintenance work into a coherent plotting and
+discovery release without expanding the clean-room boundary.
+
+Delivered changes:
+
+- A reusable stacked time-series template with committed PNG and SVG outputs.
+- A standalone synthetic three-phase voltage example for electrical reports.
+- Manifest-backed template query and template-reference synchronization tools.
+- Earlier CSV and Excel input validation before MATLAB startup.
+- Stronger workflow, privacy, provenance, toolbox, and release checks.
+
+Release conditions:
+
+- Static quality and MATLAB release-readiness checks pass.
+- The 31-template manifest, reference table, gallery outputs, and docs agree.
+- GitHub Actions pass on the release pull request and merged release commit.
