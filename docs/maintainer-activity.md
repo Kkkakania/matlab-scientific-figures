@@ -1,6 +1,6 @@
 # Maintainer Activity
 
-Snapshot date: 2026-07-09
+Snapshot date: 2026-09-16
 
 This page records factual maintenance activity for the MATLAB plotting
 ecosystem. It is a reviewer aid, not an adoption claim.
@@ -9,16 +9,16 @@ ecosystem. It is a reviewer aid, not an adoption claim.
 
 | Repository | Current maintenance evidence |
 |---|---|
-| [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | 31 clean-room gallery examples, three electrical domain examples, static quality gates, figure-quality dogfooding, first-use feedback issue, release-cadence policy, `render_all.sh help examples` for shell users |
-| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | CLI/package tests, release-preflight checks, package artifact workflow, downstream dogfooding report, `init verification guidance` through `doctor` and `check` next steps |
-| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | first-render walkthrough, scheme readiness matrix, `stable first-use scheme list`, privacy/provenance checks, maintenance cadence |
-| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | public diagram Skill, checked `.drawio` and SVG example, provenance note, quality workflow, contribution/security entrypoints, first-use feedback issue |
-| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | early public Python Skill, synthetic Matplotlib gallery, repository quality check, first-use feedback issue, v0.2 template request issue |
+| [`matlab-scientific-figures`](https://github.com/Kkkakania/matlab-scientific-figures) | 31 clean-room gallery examples, three electrical domain examples, manifest-backed discovery and reference-sync tools, release checks, and figure-quality dogfooding |
+| [`matlab-figure-ci`](https://github.com/Kkkakania/matlab-figure-ci) | CLI/package tests, release-preflight checks, package artifact workflow, downstream dogfooding report, and release artifact version validation |
+| [`matlab-plotting-skill`](https://github.com/Kkkakania/matlab-plotting-skill) | first-render walkthrough, scheme readiness matrix, privacy/provenance checks, and plotting data-extension validation before MATLAB startup |
+| [`scientific-diagram-skill`](https://github.com/Kkkakania/scientific-diagram-skill) | public diagram Skill, checked `.drawio` and SVG example, manifest validation, provenance note, quality workflow, and contribution/security entrypoints |
+| [`python-plotting-skill`](https://github.com/Kkkakania/python-plotting-skill) | early public Python Skill, synthetic Matplotlib gallery, malformed-manifest handling, repository quality checks, and a first-use feedback surface |
 
 ## Fork And Pull Request Intake
 
-As of the snapshot date, the tracked repositories have four merged maintenance
-pull requests from the current maintenance cycle. Recent public forks were
+As of the snapshot date, the tracked repositories have five recent merged
+maintenance pull requests in the snapshot below. Recent public forks were
 checked against `main`; the visible fork branches for the MATLAB repositories
 were behind the upstream repositories and did not contain ahead commits to
 review or merge. Treat forks, issue counts, and own-repository pull requests as
@@ -48,24 +48,23 @@ Recently merged own-repository pull request snapshot:
 
 | Repository | Pull request | Status at snapshot | Scope |
 |---|---|---|---|
-| `matlab-figure-ci` | [`#44`](https://github.com/Kkkakania/matlab-figure-ci/pull/44) | Merged on 2026-07-09 | Version the release-preflight JSON schema |
-| `matlab-plotting-skill` | [`#21`](https://github.com/Kkkakania/matlab-plotting-skill/pull/21) | Merged on 2026-07-09 | Add a manifest for the bundled diagram example |
-| `scientific-diagram-skill` | [`#4`](https://github.com/Kkkakania/scientific-diagram-skill/pull/4) | Merged on 2026-07-09 | Add a manifest for the standalone diagram example |
-| `python-plotting-skill` | [`#12`](https://github.com/Kkkakania/python-plotting-skill/pull/12) | Merged on 2026-07-09 | Add a machine-readable gallery manifest |
+| `matlab-scientific-figures` | [`#72`](https://github.com/Kkkakania/matlab-scientific-figures/pull/72) | Merged on 2026-08-27 | Check data files before MATLAB startup |
+| `matlab-figure-ci` | [`#77`](https://github.com/Kkkakania/matlab-figure-ci/pull/77) | Merged on 2026-09-11 | Validate release artifact versions |
+| `matlab-plotting-skill` | [`#49`](https://github.com/Kkkakania/matlab-plotting-skill/pull/49) | Merged on 2026-08-27 | Validate plotting data extensions before MATLAB startup |
+| `scientific-diagram-skill` | [`#23`](https://github.com/Kkkakania/scientific-diagram-skill/pull/23) | Merged on 2026-09-11 | Validate diagram manifest structure |
+| `python-plotting-skill` | [`#38`](https://github.com/Kkkakania/python-plotting-skill/pull/38) | Merged on 2026-09-11 | Handle malformed gallery manifests without a traceback |
 
 ## External Pull Requests
 
 | Project | Pull request | Status at snapshot | Scope |
 |---|---|---|---|
-| `matlab2tikz/matlab2tikz` | [`#1158`](https://github.com/matlab2tikz/matlab2tikz/pull/1158) | Merged | Fix a stale CONTRIBUTING link in the changelog |
-| `fieldtrip/fieldtrip` | [`#2591`](https://github.com/fieldtrip/fieldtrip/pull/2591) | Open | Clarify substantial feature contributions and extensions |
-| `fieldtrip/website` | [`#927`](https://github.com/fieldtrip/website/pull/927) | Open | Add an extension author checklist |
-| `chebfun/chebfun` | [`#2495`](https://github.com/chebfun/chebfun/pull/2495) | Open, unstable | Align workflow trigger and license link with the master branch |
-| `scottclowe/matlab-schemer` | [`#47`](https://github.com/scottclowe/matlab-schemer/pull/47) | Open, clean | Fix documentation and MATLAB help-text typos |
-| `PRML/PRMLT` | [`#54`](https://github.com/PRML/PRMLT/pull/54) | Open, clean | Fix README and MATLAB help-index typos |
-| `holoviz/panel` | [`#8652`](https://github.com/holoviz/panel/pull/8652) | Merged on 2026-07-02 | Fix Fast progress indicator height |
-| `owenpkent/coverage-compass` | [`#11`](https://github.com/owenpkent/coverage-compass/pull/11) | Merged on 2026-07-02 | Cover the LetterDropzone flow |
-| `tim-fuchs/hiit-workout-planner` | [`#12`](https://github.com/tim-fuchs/hiit-workout-planner/pull/12) | Closed on 2026-07-03 | Add initial service test coverage |
+| `bokeh/bokeh` | [`#15216`](https://github.com/bokeh/bokeh/pull/15216) | Approved and merged on 2026-09-11 | Prune stale selections across data replacement, streaming, and patching, with synchronization and linked-selection regressions |
+| `pyvista/pyvista` | [`#8845`](https://github.com/pyvista/pyvista/pull/8845) | Approved and merged on 2026-08-05 | Register the top-level `pyvista` documentation target with regression coverage |
+| `xarray-contrib/cf-xarray` | [`#659`](https://github.com/xarray-contrib/cf-xarray/pull/659) | Merged on 2026-07-29 | Fix custom criteria membership checks |
+| `xarray-contrib/cf-xarray` | [`#661`](https://github.com/xarray-contrib/cf-xarray/pull/661) | Merged on 2026-07-29 | Support dictionary-style CF indexing |
+| `arviz-devs/arviz-plots` | [`#542`](https://github.com/arviz-devs/arviz-plots/pull/542) | Open, clean | Fix rug rendering for Bokeh and Plotly backends |
+| `pyqtgraph/pyqtgraph` | [`#3507`](https://github.com/pyqtgraph/pyqtgraph/pull/3507) | Open, clean | Fix FFT autorange with automatic downsampling |
+| `pyqtgraph/pyqtgraph` | [`#3538`](https://github.com/pyqtgraph/pyqtgraph/pull/3538) | Open, clean | Preserve ImageView histogram range across frames |
 
 ## Review Policy
 

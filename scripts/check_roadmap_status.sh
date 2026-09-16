@@ -21,13 +21,14 @@ reject_text() {
 }
 
 require_text "## Current State"
-require_text "- Current public release: \`v3.8.0\`."
+require_text "- Current public release: \`v3.9.0\`."
 require_text "## Completed Release Tracks"
 require_text "### v3.7.0: Bilingual Data-To-Figure Expansion"
 require_text "### v3.7.1: Mixed-Script Font Fallback"
 require_text "### v3.8.0: Provenance And Intake Hardening"
-require_text "## Post-v3.8.0 Hardening On Main"
-require_text "No post-\`v3.8.0\` hardening is listed yet."
+require_text "### v3.9.0: Plotting And Discovery Workflows"
+require_text "## Post-v3.9.0 Hardening On Main"
+require_text "No post-\`v3.9.0\` hardening is listed yet."
 require_text "Accumulate small fixes on \`main\`"
 require_text "## Next Candidates"
 require_text "## Versioning Pace"

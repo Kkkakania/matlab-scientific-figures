@@ -2,30 +2,27 @@
 
 ## Unreleased
 
+No unreleased changes yet.
+
+## v3.9.0 - 2026-09-16
+
+- Added the clean-room `stacked_time_series` template, reusable
+  `sftPlotStackedTimeSeries` API, gallery outputs, manifest metadata, and tests
+  for synchronized multi-signal time-series figures.
+- Added the standalone synthetic `three_phase` electrical example and shell
+  rendering command without expanding the core gallery registry.
+- Added manifest-backed template query and template-reference synchronization
+  tools with self-tests.
 - Made `render_all.sh data-file` check that its CSV or Excel input exists
   before looking up MATLAB, so first-use failures point to the missing file.
-- Added the clean-room `stacked_time_series` template, reusable
-  `sftPlotStackedTimeSeries` API, gallery outputs, manifest metadata, and
-  tests for synchronized multi-signal time-series figures.
-- Added Dependabot coverage for GitHub Actions and guarded it in the workflow
-  maintenance check so action dependency updates become ordinary reviewed PRs.
-- Relaxed workflow-version guards to reject outdated action majors without
-  blocking reviewed Dependabot upgrades to newer supported majors.
-- Added a release-readiness issue template so future releases can track the
-  user-visible reason, local checks, workflow URLs, gallery/docs/manifest
-  review, risk boundaries, and release-note draft before tagging.
-- Added an application evidence packet and static check so public application
-  materials cite current release, workflow, PR/issue, companion-tool, and
-  boundary evidence without overstating adoption.
-- Strengthened the pull request template with review evidence, local checks,
-  risk/provenance, and release-note prompts so PR review has a clearer public
-  audit trail.
-- Added an issue-triage checklist workflow so new issues get a bounded
-  maintainer checklist for track, evidence level, next state, and synthetic
-  reproducer needs while the live GitHub Project board remains pending.
-- Updated the Codex for OSS evidence note so the current application story can
-  use the agent-facing `matlab-plotting-skill` as the primary repo while this
-  gallery remains the clean-room MATLAB evidence surface.
+- Added Dependabot coverage for GitHub Actions and guarded reviewed action
+  upgrades in the workflow maintenance check.
+- Added release-readiness, issue-triage, and pull-request review surfaces for
+  tracking evidence, checks, provenance, and release-note scope.
+- Hardened privacy, provenance, forbidden-file, toolbox, CLI argument, timeout,
+  documentation-link, and workflow checks, including focused self-tests.
+- Retired application-specific evidence artifacts after they stopped serving
+  the reusable maintenance workflow.
 
 ## v3.8.0 - 2026-06-10
 
